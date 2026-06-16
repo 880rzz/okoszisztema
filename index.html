@@ -343,6 +343,44 @@ html,body{max-width:100%;overflow-x:hidden}*{min-width:0}a,.h-node>a,.hierarchy-
   .root-press-links a{font-size:12.5px!important}
 }
 
+
+
+/* ===== v22 · VIPACH community-financed positioning ===== */
+.h-node li .info-line{
+  display:flex;
+  align-items:flex-start;
+  gap:8px;
+  border:1px solid var(--apple-line, rgba(0,0,0,.08));
+  background:#fff;
+  border-radius:18px;
+  padding:13px 15px;
+  color:var(--apple-ink,#1d1d1f);
+}
+.h-node li .info-line::before{
+  content:"";
+  width:7px;
+  height:7px;
+  border-radius:999px;
+  background:var(--apple-link,#06c);
+  flex:0 0 auto;
+  margin-top:7px;
+}
+.h-node li .info-line strong{
+  display:block;
+  font-size:15px;
+  font-weight:600;
+  line-height:1.25;
+  color:var(--apple-ink,#1d1d1f);
+  letter-spacing:-.018em;
+}
+.h-node li .info-line span{
+  display:block;
+  margin-top:3px;
+  font-size:13px;
+  line-height:1.38;
+  color:#6e6e73;
+}
+
 </style>
 </head>
 <body>
@@ -360,8 +398,7 @@ html,body{max-width:100%;overflow-x:hidden}*{min-width:0}a,.h-node>a,.hierarchy-
         <small>A fő weboldal fogja össze a bemutatkozást, híreket, programokat, tagszervezeteket és a hivatalos kapcsolati pontokat. Innen értelmezhető a teljes online hálózat.</small>
         <div class="root-press-links" aria-label="Központi sajtófigyelő linkek">
           <a href="https://rolunk.at/tag/kozponti-szovetseg/" target="_blank" rel="noopener">Központi Szövetség sajtófigyelő</a>
-          <a href="https://rolunk.at/tag/seidler-andrea/" target="_blank" rel="noopener">Elnöki sajtófigyelő · Seidler Andrea</a>
-          <a href="https://rolunk.at/tag/banhalmi-norbert/" target="_blank" rel="noopener">Bánhalmi Norbert sajtófigyelő</a>
+          <a href="https://rolunk.at/tag/seidler-andrea/" target="_blank" rel="noopener">Elnöki sajtófigyelő · ao. Univ.-Prof. Dr. Seidler Andrea</a>
         </div>
       </div>
 
@@ -404,13 +441,16 @@ html,body{max-width:100%;overflow-x:hidden}*{min-width:0}a,.h-node>a,.hierarchy-
         </article>
 
         <article class="h-node">
-          <span class="node-label">Kreatív, vizuális és üzleti ág</span>
+          <span class="node-label">Kreatív, vizuális és közösségi ág</span>
           <a href="https://www.vipach.at" target="_blank" rel="noopener">www.vipach.at</a>
-          <p class="node-explain">A VIPACH a kreatív és vizuális közösségi ág: fotó, alkotóközösség, vizuális identitás, digitális jelenlét és üzleti pozicionálás. A hálózatban azt mutatja meg, hogyan válhat egy közösségi kezdeményezés professzionális digitális szereplővé.</p>
+          <p class="node-explain">A VIPACH a kreatív és vizuális közösségi ág: fotó, alkotóközösség, vizuális kultúra és digitális jelenlét. Nem külső üzleti finanszírozásra épülő projektként, hanem közösségi finanszírozásból önfenntartó közösségként működik: saját maga finanszírozza saját működését, programjait és láthatóságát.</p>
           <ul>
-            <li><a href="https://business.vipach.at" target="_blank" rel="noopener"><strong>business.vipach.at</strong><span>Üzleti és stratégiai aloldal: vállalkozói, márkaépítési, vizuális és digitális pozicionálási irány.</span></a></li>
+            <li><a href="https://business.vipach.at" target="_blank" rel="noopener"><strong>business.vipach.at</strong><span>Stratégiai és szolgáltatási aloldal: megmutatja, hogyan kapcsolódhat a közösségi kreatív tudás professzionális vizuális és digitális feladatokhoz.</span></a></li>
+            <li><span class="info-line"><strong>AmCham Austria kapcsolódás</strong><span>A VIPACH Bánhalmi Norberten keresztül az AmCham Austria, az Osztrák–Amerikai Kereskedelmi Kamara szakmai közegéhez is kapcsolódik.</span></span></li>
             <li><a href="https://photoshop.vipach.at" target="_blank" rel="noopener"><strong>photoshop.vipach.at</strong><span>Kreatív / képfeldolgozási alrendszer: digitális eszköz és szolgáltatási kiterjesztés a VIPACH alatt.</span></a></li>
             <li><a href="https://hu.wikipedia.org/wiki/VIPACH" target="_blank" rel="noopener"><strong>Wikipédia · VIPACH</strong><span>Strukturált entitásréteg: a szervezet nyilvánosan azonosítható, kereshető és hivatkozható.</span></a></li>
+            <li><a href="https://www.vipach.at/media-megjelenesek" target="_blank" rel="noopener"><strong>VIPACH sajtófigyelő</strong><span>A VIPACH saját média- és sajtómegjelenéseinek gyűjtőfelülete: külső láthatóság, cikkek és nyilvános visszaigazolások egy helyen.</span></a></li>
+            <li><a href="https://rolunk.at/tag/banhalmi-norbert/" target="_blank" rel="noopener"><strong>Bánhalmi Norbert sajtófigyelő</strong><span>A VIPACH-hoz kapcsolódó alapítói és kreatív-stratégiai láthatóság Rólunk.at-megjelenéseinek gyűjtőfelülete.</span></a></li>
             <li><a href="https://www.facebook.com/groups/vipach/" target="_blank" rel="noopener"><strong>VIPACH Facebook-csoport</strong><span>Alkotói közösség, programkommunikáció, tagsági aktivitás és közösségi láthatóság.</span></a></li>
           </ul>
         </article>
@@ -428,7 +468,7 @@ html,body{max-width:100%;overflow-x:hidden}*{min-width:0}a,.h-node>a,.hierarchy-
 
     <div class="hierarchy-summary">
       <div><b>Belső rendszer</b><span>A főoldal, intézményi oldalak, aloldalak, Wikipédia-jelenlét, sajtófigyelő és közösségi felületek egy közös digitális gerincre rendezve.</span></div>
-      <div><b>Sajtófigyelő réteg</b><span>A Központi Szövetség, az elnöki jelenlét és a kulcsszereplők Rólunk.at-címkéken keresztül visszakereshető nyilvános médiafelületet kapnak.</span></div>
+      <div><b>Sajtófigyelő réteg</b><span>A Központi Szövetség és az elnöki jelenlét Rólunk.at-címkéken keresztül visszakereshető nyilvános médiafelületet kap; a projektspecifikus szereplők saját alrendszerük alatt jelennek meg.</span></div>
       <div><b>Közösségi struktúra</b><span>A Facebook-oldal alatt saját projektcsoportok futnak, így a kommunikáció központilag strukturálható, de projektszinten aktív marad.</span></div>
       <div><b>DÖR logika</b><span>Ehhez a belső rendszerhez kapcsolódik a tagszervezeti térkép: így válik a diaszpóra látható, frissíthető és döntéstámogató működési hálózattá.</span></div>
       <div><b>Mobil működtetés</b><span>Minden oldal Wix-alapon fut, ezért a média, események, fizetés, tagok, hírlevél és jogosultságok egy központi mobil alkalmazásból is kezelhetők.</span></div>
