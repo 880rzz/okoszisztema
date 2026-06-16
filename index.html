@@ -804,6 +804,197 @@ footer .foot-in a[href^="mailto"]::before{
 .wixops-hero p strong,
 .dor-hero p strong{color:#fff!important}
 
+
+
+/* ===== v29 · DESKTOP CENTERING + APPLE-LIKE SECTION SEPARATION ===== */
+/* Kérés: asztali nézetben minden fő blokk középre rendezve, a főbb szekciók pedig Apple.com-szerű, váltakozó háttérrel legyenek elválasztva. */
+:root{
+  --page-max:1180px;
+  --page-pad-desktop:28px;
+  --section-white:#ffffff;
+  --section-soft:#f5f5f7;
+  --section-line:rgba(0,0,0,.06);
+}
+
+body{
+  background:var(--section-white)!important;
+}
+
+/* Teljes szélességű, Apple-szerű szekcióváltások */
+.hierarchy-hero{
+  background:var(--section-white)!important;
+}
+.wixops{
+  background:var(--section-soft)!important;
+  border-top:0!important;
+}
+.dor{
+  background:var(--section-white)!important;
+}
+.mapsec{
+  background:var(--section-soft)!important;
+}
+.help{
+  background:var(--section-white)!important;
+}
+.contact-section{
+  background:var(--section-soft)!important;
+  border-top:0!important;
+}
+footer{
+  background:var(--section-soft)!important;
+}
+
+/* A szürke szekciókön belül a nagy panelek legyenek fehérek, hogy valódi blokk-elválasztás jöjjön létre. */
+.wixops .ops-card,
+.mapsec .executive-map,
+.mapsec .map-side,
+.contact-section .contact-card{
+  background:#fff!important;
+}
+.mapsec .region-panel,
+.mapsec .stat,
+.mapsec .filter-result,
+.mapsec .topic-toggle,
+.contact-section .contact-list li{
+  background:#f5f5f7!important;
+}
+.wixops .wixops-hero,
+.dor .dor-hero{
+  background:#1d1d1f!important;
+}
+
+/* Desktop középre rendezés: minden fő wrapper azonos max-szélességgel, auto margóval. */
+.hero-inner,
+.hierarchy-inner,
+.hierarchy-board,
+.hierarchy-grid,
+.hierarchy-summary,
+.wixops-wrap,
+.dor-wrap,
+.map-wrap,
+.exec-strip,
+.map-panel,
+.member-grid,
+.help-grid,
+.contact-wrap,
+.contact-grid,
+.source-note,
+.foot-in{
+  width:min(100%, var(--page-max))!important;
+  max-width:var(--page-max)!important;
+  margin-left:auto!important;
+  margin-right:auto!important;
+}
+
+/* A kártyarácsok ne tudjanak balra csúszni nagy monitoron sem. */
+.hierarchy-grid,
+.hierarchy-summary,
+.ops-grid,
+.dor-grid,
+.exec-strip,
+.map-panel,
+.member-grid,
+.help-grid,
+.contact-grid{
+  justify-content:center!important;
+}
+
+/* Apple.com jellegű tágas, tiszta szekcióritmus desktopon. */
+@media (min-width:901px){
+  .hierarchy-hero,
+  .wixops,
+  .dor,
+  .mapsec,
+  .help,
+  .contact-section{
+    padding-left:var(--page-pad-desktop)!important;
+    padding-right:var(--page-pad-desktop)!important;
+  }
+
+  .hierarchy-hero{
+    padding-top:82px!important;
+    padding-bottom:74px!important;
+  }
+  .wixops,
+  .dor,
+  .mapsec,
+  .help,
+  .contact-section{
+    padding-top:76px!important;
+    padding-bottom:76px!important;
+  }
+
+  .hierarchy-board{
+    display:block!important;
+  }
+  .hierarchy-root{
+    margin-left:auto!important;
+    margin-right:auto!important;
+  }
+  .hierarchy-grid{
+    margin-top:28px!important;
+  }
+  .hierarchy-summary{
+    margin-top:18px!important;
+  }
+
+  .wixops-wrap,
+  .dor-wrap,
+  .map-panel,
+  .contact-grid{
+    display:grid!important;
+  }
+
+  .member-grid{
+    margin-top:28px!important;
+  }
+
+  /* A fő “tile”-ok egységesebb Apple-kártyaként viselkedjenek. */
+  .h-node,
+  .ops-card,
+  .dor-card,
+  .help-card,
+  .member,
+  .contact-card,
+  .executive-map,
+  .map-side{
+    border-radius:30px!important;
+  }
+}
+
+/* Mobilon maradjon a meglévő egyoszlopos logika, csak a szekcióváltás marad tiszta. */
+@media (max-width:900px){
+  .hero-inner,
+  .hierarchy-inner,
+  .hierarchy-board,
+  .hierarchy-grid,
+  .hierarchy-summary,
+  .wixops-wrap,
+  .dor-wrap,
+  .map-wrap,
+  .exec-strip,
+  .map-panel,
+  .member-grid,
+  .help-grid,
+  .contact-wrap,
+  .contact-grid,
+  .source-note,
+  .foot-in{
+    width:100%!important;
+    max-width:100%!important;
+  }
+
+  .wixops,
+  .dor,
+  .mapsec,
+  .help,
+  .contact-section{
+    padding-top:50px!important;
+    padding-bottom:50px!important;
+  }
+}
+
 </style>
 </head>
 <body>
