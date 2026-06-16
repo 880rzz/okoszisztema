@@ -133,6 +133,110 @@ html,body{max-width:100%;overflow-x:hidden}*{min-width:0}a,.h-node>a,.hierarchy-
 :root{--font:-apple-system,BlinkMacSystemFont,"SF Pro Display","SF Pro Text","Helvetica Neue",Helvetica,Arial,sans-serif!important}html,body,button,input,select,textarea,a,p,li,span,small,strong,b,em,label,dt,dd,h1,h2,h3,h4,h5,h6,.nav,.nav *, .hierarchy-hero *, .h-node *, .wixops *, .dor *, .mapsec *, .help *, .contact-section *, footer *{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","SF Pro Text","Helvetica Neue",Helvetica,Arial,sans-serif!important}.node-label,.k,.eyebrow,.shead .k{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Helvetica,Arial,sans-serif!important}.hierarchy-hero h1,.shead h2,.wixops-hero h2,.dor-hero h2,.contact-card h3{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Helvetica Neue",Helvetica,Arial,sans-serif!important}
 
 
+/* ===== v24 · NÉV ELŐRE, WEBCÍM HÁTRA + IKONOK · Apple.com tipográfiai rendszer (Tim Cook pass) ===== */
+/* Cél: a csomópontok elsődleges címe a honlap NEVE legyen (nagy, súlyozott), a webcím alatta apró, halvány másodlagos sor. Minden főcsomópont kap egy finom, vékonyvonalas SF-stílusú ikont. */
+
+/* — Apple SF típuslépcső finomhangolása — */
+.hierarchy-root .node-title,
+.h-node .node-title{
+  display:block;
+  font-weight:600!important;
+  letter-spacing:-.022em!important;
+  line-height:1.07!important;
+}
+.hierarchy-root .node-title{font-size:clamp(26px,3vw,40px)!important;color:#fff!important}
+.h-node .node-title{font-size:clamp(21px,2.2vw,28px)!important;color:#1d1d1f!important}
+
+/* — A webcím: kicsi, halvány, másodlagos sor (link marad) — */
+.h-node>a.node-link,
+.hierarchy-root a.node-link{
+  display:block!important;
+  margin:0!important;
+  font-size:inherit!important;
+  font-weight:inherit!important;
+  letter-spacing:inherit!important;
+  color:inherit!important;
+}
+.h-node>a.node-link:hover .node-title{color:#06c!important}
+.node-url{
+  display:inline-flex;
+  align-items:center;
+  gap:5px;
+  margin-top:6px!important;
+  font-size:15px!important;
+  font-weight:580!important;
+  letter-spacing:-.01em!important;
+  line-height:1.2!important;
+  color:var(--blue2)!important;
+  transition:color .18s ease;
+}
+.hierarchy-root .node-url{color:#a1a1a6!important}
+.node-url:hover{color:#06c!important;text-decoration:underline}
+.hierarchy-root .node-url:hover{color:#fff!important;text-decoration:underline}
+.node-url::before{
+  content:"";
+  width:11px;height:11px;flex:0 0 auto;
+  background:currentColor;
+  -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round' d='M10 14a5 5 0 0 0 7.07 0l3-3A5 5 0 0 0 13 4l-1.5 1.5M14 10a5 5 0 0 0-7.07 0l-3 3A5 5 0 0 0 11 20l1.5-1.5'/%3E%3C/svg%3E") center/contain no-repeat;
+          mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round' d='M10 14a5 5 0 0 0 7.07 0l3-3A5 5 0 0 0 13 4l-1.5 1.5M14 10a5 5 0 0 0-7.07 0l-3 3A5 5 0 0 0 11 20l1.5-1.5'/%3E%3C/svg%3E") center/contain no-repeat;
+}
+
+/* — Főcsomópont ikon: kerek, finom háttér, vékonyvonalas SF-glyph — */
+.node-icon{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:46px;height:46px;
+  border-radius:14px;
+  margin-bottom:4px;
+  flex:0 0 auto;
+  background:rgba(0,0,0,.05);
+  color:#1d1d1f;
+}
+.hierarchy-root .node-icon{background:rgba(255,255,255,.14);color:#fff}
+.node-icon svg{width:24px;height:24px;display:block}
+.node-icon svg path,
+.node-icon svg circle,
+.node-icon svg rect,
+.node-icon svg line,
+.node-icon svg polyline,
+.node-icon svg polygon{stroke:currentColor!important;fill:none}
+.core-social .node-icon{background:rgba(0,102,204,.10);color:#06c}
+
+/* — Témaszínes ikoncsempék: minden négyzet egyedi, odaillő grafikai háttérrel + fehér ikonnal — */
+.node-icon.ic-root,
+.node-icon.ic-social,
+.node-icon.ic-school,
+.node-icon.ic-news,
+.node-icon.ic-creative,
+.node-icon.ic-stage{
+  color:#fff!important;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.25), 0 6px 16px rgba(0,0,0,.16);
+}
+.node-icon.ic-root{background:linear-gradient(145deg,#3a3f47,#0a2540)!important}
+.node-icon.ic-social{background:linear-gradient(145deg,#3ea0ff,#0a84ff)!important}
+.node-icon.ic-school{background:linear-gradient(145deg,#ffcf4a,#ff9500)!important}
+.node-icon.ic-news{background:linear-gradient(145deg,#7d8794,#3f4853)!important}
+.node-icon.ic-creative{background:linear-gradient(145deg,#bf6bff,#7a3cff)!important}
+.node-icon.ic-stage{background:linear-gradient(145deg,#ff6f8b,#ff2d55)!important}
+.node-icon.ic-root svg path,.node-icon.ic-root svg circle,.node-icon.ic-root svg rect,
+.node-icon.ic-social svg path,.node-icon.ic-social svg circle,
+.node-icon.ic-school svg path,
+.node-icon.ic-news svg path,
+.node-icon.ic-creative svg path,.node-icon.ic-creative svg circle,.node-icon.ic-creative svg rect,
+.node-icon.ic-stage svg path,.node-icon.ic-stage svg circle{stroke:#fff!important}
+
+/* — node-label mellé igazítás, hogy az ikon + címke egy sorba kerüljön — */
+.node-head{display:flex;flex-direction:row-reverse;align-items:center;gap:10px;margin-bottom:10px}
+.node-head .node-label{margin:0!important}
+
+@media(max-width:560px){
+  .node-icon{width:40px;height:40px;border-radius:12px}
+  .node-icon svg{width:21px;height:21px}
+  .node-url{font-size:12px!important}
+}
+
+
 
 /* ===== v17 · Elon Musk telemetry pass: regional coverage ===== */
 /* cél: gyorsan olvasható, tömör, döntéshozói műszerfal; nincs felesleges függőleges távolság */
@@ -428,21 +532,305 @@ html,body{max-width:100%;overflow-x:hidden}*{min-width:0}a,.h-node>a,.hierarchy-
   .h-node li .info-line span{font-size:12.5px!important;line-height:1.35!important}
 }
 
+
+/* ===== v25 · EGYSÉGES BELSŐ BLOKK-STÍLUS + SZIVÁRVÁNY CÍMEK + MÉLYSÉG ===== */
+/* 1) Minden belső blokk (link és info-line) ugyanazt a kék-pöttyös, emelt fehér kártyát kapja, mint az AmCham. */
+.h-node li a,
+.h-node li .info-line{
+  position:relative!important;
+  display:block!important;
+  background:#fff!important;
+  border:1px solid rgba(0,0,0,.07)!important;
+  border-radius:18px!important;
+  padding:14px 16px 14px 34px!important;
+  box-shadow:0 1px 2px rgba(0,0,0,.04), 0 6px 16px rgba(0,0,0,.05)!important;
+  transition:transform .18s ease, box-shadow .22s ease, border-color .18s ease!important;
+}
+.h-node li a::before,
+.h-node li .info-line::before{
+  content:""!important;
+  position:absolute!important;
+  left:16px!important;
+  top:19px!important;
+  width:7px!important;
+  height:7px!important;
+  border-radius:999px!important;
+  background:var(--apple-link,#06c)!important;
+  flex:0 0 auto!important;
+  margin:0!important;
+  display:block!important;
+}
+.h-node li a:hover{
+  background:#fff!important;
+  border-color:rgba(0,102,204,.35)!important;
+  box-shadow:0 2px 4px rgba(0,0,0,.05), 0 14px 30px rgba(0,102,204,.12)!important;
+  transform:translateY(-2px)!important;
+  text-decoration:none!important;
+}
+.h-node li a strong,
+.h-node li .info-line strong{
+  display:block!important;
+  font-size:15px!important;
+  font-weight:600!important;
+  line-height:1.22!important;
+  letter-spacing:-.018em!important;
+  color:#1d1d1f!important;
+  margin:0!important;
+}
+.h-node li a span,
+.h-node li .info-line span{
+  display:block!important;
+  margin-top:4px!important;
+  font-size:13px!important;
+  line-height:1.4!important;
+  color:#6e6e73!important;
+  font-weight:400!important;
+}
+.h-node ul{gap:12px!important}
+
+/* 2) A teljes h-node és a többi tartalmi kártya kap mélységet — ne olvadjon a háttérbe. */
+.h-node,
+.ops-card,.dor-card,.help-card,.member,
+.hierarchy-summary div,
+.contact-card,
+.exec-metric,
+.region-panel,
+.map-callout{
+  background:#fff!important;
+  border:1px solid rgba(0,0,0,.06)!important;
+  box-shadow:0 1px 3px rgba(0,0,0,.04), 0 12px 32px rgba(0,0,0,.07)!important;
+}
+.h-node:hover,
+.member:hover,.help-card:hover,.ops-card:hover,.dor-card:hover{
+  box-shadow:0 2px 6px rgba(0,0,0,.05), 0 22px 50px rgba(0,0,0,.10)!important;
+  transform:translateY(-2px)!important;
+}
+/* finom világos keret a sötét hero-kártyákon, hogy elváljanak a fehér háttértől */
+.hierarchy-root,
+.wixops-hero,.dor-hero{
+  border:1px solid rgba(255,255,255,.08)!important;
+  box-shadow:0 2px 8px rgba(10,37,64,.18), 0 30px 70px rgba(10,37,64,.28)!important;
+}
+/* a belső fehér kártyák a sötét gyökérpontban (sajtófigyelő linkek) is kapjanak finom élt */
+.root-press-links a{
+  border:1px solid rgba(255,255,255,.14)!important;
+  box-shadow:0 1px 2px rgba(0,0,0,.15)!important;
+}
+
+/* 3) Szivárvány-animáció a nagy címeken (hero h1 + csomópont-nevek + szekciócímek). */
+@keyframes vipach-rainbow{
+  0%{background-position:0% 50%}
+  100%{background-position:300% 50%}
+}
+@media(prefers-reduced-motion:no-preference){
+  .hierarchy-hero h1,
+  .node-title,
+  .shead h2,
+  .wixops-hero h2,
+  .dor-hero h2{
+    background-image:linear-gradient(90deg,#ff3b30,#ff9500,#ffcc00,#34c759,#0a84ff,#5e5ce6,#bf5af2,#ff3b30)!important;
+    background-size:300% 100%!important;
+    -webkit-background-clip:text!important;
+    background-clip:text!important;
+    -webkit-text-fill-color:transparent!important;
+    color:transparent!important;
+    animation:vipach-rainbow 9s linear infinite!important;
+  }
+  /* a sötét kártyák címei kicsit telítettebb, vidámabb paletta, hogy sötét háttéren is ragyogjon */
+  .hierarchy-root .node-title,
+  .wixops-hero h2,
+  .dor-hero h2{
+    background-image:linear-gradient(90deg,#ff6961,#ffb340,#ffe066,#5ee08a,#54b9ff,#9a8cff,#e07bff,#ff6961)!important;
+  }
+}
+/* reduced-motion: statikus, de még mindig finom színátmenetes cím */
+@media(prefers-reduced-motion:reduce){
+  .hierarchy-hero h1,.node-title{
+    background-image:linear-gradient(90deg,#0a84ff,#5e5ce6,#bf5af2)!important;
+    background-size:100% 100%!important;
+    -webkit-background-clip:text!important;background-clip:text!important;
+    -webkit-text-fill-color:transparent!important;color:transparent!important;
+  }
+}
+
+/* ===== v26 · HAMBURGER MENÜ ===== */
+.nav-burger{
+  display:none;
+  position:relative;
+  width:34px;height:34px;
+  border:0;
+  background:transparent;
+  cursor:pointer;
+  padding:0;
+  margin-left:auto;
+  -webkit-tap-highlight-color:transparent;
+}
+.nav-burger span{
+  position:absolute;
+  left:7px;right:7px;
+  height:1.6px;
+  border-radius:2px;
+  background:#1d1d1f;
+  transition:transform .28s cubic-bezier(.4,.01,.2,1), opacity .2s ease, top .28s cubic-bezier(.4,.01,.2,1);
+}
+.nav-burger span:nth-child(1){top:11px}
+.nav-burger span:nth-child(2){top:16.2px}
+.nav-burger span:nth-child(3){top:21.4px}
+.nav-burger.open span:nth-child(1){top:16.2px;transform:rotate(45deg)}
+.nav-burger.open span:nth-child(2){opacity:0}
+.nav-burger.open span:nth-child(3){top:16.2px;transform:rotate(-45deg)}
+
+.mobile-menu{
+  position:fixed;
+  top:44px;left:0;right:0;
+  z-index:999;
+  background:rgba(255,255,255,.92);
+  backdrop-filter:saturate(180%) blur(20px);
+  -webkit-backdrop-filter:saturate(180%) blur(20px);
+  border-bottom:1px solid rgba(0,0,0,.07);
+  display:flex;
+  flex-direction:column;
+  gap:2px;
+  padding:8px 22px 16px;
+  transform:translateY(-12px);
+  opacity:0;
+  visibility:hidden;
+  pointer-events:none;
+  transition:transform .3s cubic-bezier(.4,.01,.2,1), opacity .25s ease, visibility .3s;
+}
+.mobile-menu.open{
+  transform:translateY(0);
+  opacity:1;
+  visibility:visible;
+  pointer-events:auto;
+}
+.mobile-menu a{
+  font-size:19px;
+  font-weight:500;
+  letter-spacing:-.022em;
+  color:#1d1d1f;
+  padding:13px 4px;
+  border-bottom:1px solid rgba(0,0,0,.06);
+  transition:color .18s ease;
+}
+.mobile-menu a:last-child{border-bottom:0}
+.mobile-menu a:active,.mobile-menu a:hover{color:#06c;text-decoration:none}
+
+@media(max-width:900px){
+  .nav-burger{display:block}
+  .nav-in{justify-content:space-between}
+}
+@media(min-width:901px){
+  .mobile-menu{display:none}
+}
+
+/* ===== v27 · LINK-IKON MINDEN MEGOSZTOTT LINK ELÉ ===== */
+/* Közös, finom lánc/link-glyph. A currentColor révén a link saját színét veszi fel. */
+.lnk-ico::before,
+.textlink::before,
+.primary::before,
+.pill.gold::before,
+.root-press-links a::before,
+.contact-link::before,
+.contact-list a::before,
+.contact-card dd a[href^="http"]::before,
+.contact-card dd a[href^="mailto"]::before,
+.contact-card dd a[href^="tel"]::before,
+footer .foot-in a::before{
+  content:""!important;
+  display:inline-block!important;
+  width:1em;height:1em;
+  vertical-align:-.12em;
+  margin-right:.42em;
+  flex:0 0 auto;
+  background:currentColor;
+  -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round' d='M10 14a5 5 0 0 0 7.07 0l3-3A5 5 0 0 0 13 4l-1.5 1.5M14 10a5 5 0 0 0-7.07 0l-3 3A5 5 0 0 0 11 20l1.5-1.5'/%3E%3C/svg%3E") center/contain no-repeat;
+          mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round' d='M10 14a5 5 0 0 0 7.07 0l3-3A5 5 0 0 0 13 4l-1.5 1.5M14 10a5 5 0 0 0-7.07 0l-3 3A5 5 0 0 0 11 20l1.5-1.5'/%3E%3C/svg%3E") center/contain no-repeat;
+}
+/* e-mail linkekre borítékikon (találóbb, mint a lánc) */
+.contact-list a[href^="mailto"]::before,
+.contact-card dd a[href^="mailto"]::before,
+footer .foot-in a[href^="mailto"]::before{
+  -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round' d='M3 7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z'/%3E%3Cpath fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round' d='m3.5 7 8.5 6 8.5-6'/%3E%3C/svg%3E") center/contain no-repeat!important;
+          mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round' d='M3 7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z'/%3E%3Cpath fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round' d='m3.5 7 8.5 6 8.5-6'/%3E%3C/svg%3E") center/contain no-repeat!important;
+}
+/* telefon linkre telefonikon */
+.contact-card dd a[href^="tel"]::before{
+  -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round' d='M5 4h3l2 5-2.5 1.5a11 11 0 0 0 5 5L19 18l1 3v0a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z'/%3E%3C/svg%3E") center/contain no-repeat!important;
+          mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round' d='M5 4h3l2 5-2.5 1.5a11 11 0 0 0 5 5L19 18l1 3v0a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z'/%3E%3C/svg%3E") center/contain no-repeat!important;
+}
+/* a kontaktlistában a link blokk-szinten áll: igazítsuk az ikont a szöveghez */
+.contact-list a{display:inline-flex!important;align-items:center}
+.contact-card dd a{display:inline-flex!important;align-items:center}
+.contact-link,.textlink,.primary{align-items:center}
+
+/* Belső blokk-linkek: a kék pöttyöt cseréljük link-ikonra (a strong+span miatt abszolút pozíció marad) */
+.h-node li a::before{
+  background:var(--apple-link,#06c)!important;
+  border-radius:0!important;
+  width:13px!important;height:13px!important;
+  top:16px!important;left:14px!important;
+  -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' d='M10 14a5 5 0 0 0 7.07 0l3-3A5 5 0 0 0 13 4l-1.5 1.5M14 10a5 5 0 0 0-7.07 0l-3 3A5 5 0 0 0 11 20l1.5-1.5'/%3E%3C/svg%3E") center/contain no-repeat!important;
+          mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' d='M10 14a5 5 0 0 0 7.07 0l3-3A5 5 0 0 0 13 4l-1.5 1.5M14 10a5 5 0 0 0-7.07 0l-3 3A5 5 0 0 0 11 20l1.5-1.5'/%3E%3C/svg%3E") center/contain no-repeat!important;
+  padding-left:0!important;
+}
+.h-node li a{padding-left:36px!important}
+/* az info-line (AmCham) nem link → marad a kék pötty, hogy elkülönüljön a kattinthatóktól */
+.h-node li .info-line::before{
+  -webkit-mask:none!important;mask:none!important;
+  border-radius:999px!important;
+  width:7px!important;height:7px!important;
+  background:var(--apple-link,#06c)!important;
+}
+
+/* ===== v28 · FONTOS SZAVAK KIEMELÉSE ===== */
+.node-explain strong,
+.hierarchy-hero .sub strong,
+.hierarchy-root small strong,
+.wixops-hero p strong,
+.dor-hero p strong,
+.dor-card p strong,
+.ops-card span strong,
+.help-card p strong,
+.member p strong,
+.shead p strong,
+.hierarchy-summary span strong{
+  font-weight:600!important;
+  color:#1d1d1f!important;
+  letter-spacing:-.02em;
+}
+/* sötét hátterű kártyákon világos kiemelés */
+.hierarchy-root small strong,
+.wixops-hero p strong,
+.dor-hero p strong{color:#fff!important}
+
 </style>
 </head>
 <body>
-<nav class="nav"><div class="nav-in"><div class="nav-brand">Központi Szövetség <span>· online hierarchia</span></div><div class="nav-links"><a href="#hierarchia">Hierarchia</a><a href="#wix-mukodtetes">Mobil működtetés</a><a href="#dor">DÖR</a><a href="#terkep">Térkép</a><a href="#miben-segit">Miben segít</a><a href="#kapcsolat">Kapcsolat</a></div></div></nav>
+<nav class="nav"><div class="nav-in"><div class="nav-brand">Központi Szövetség <span>· online hierarchia</span></div><div class="nav-links"><a href="#hierarchia">Szervezetünk</a><a href="#wix-mukodtetes">Online működtetés</a><a href="#dor">DÖR projekt</a><a href="#terkep">Tagszervezetek</a><a href="#miben-segit">Előnyeink</a><a href="#kapcsolat">Kapcsolat</a></div><button class="nav-burger" id="navBurger" aria-label="Menü megnyitása" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button></div></nav>
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <a href="#hierarchia">Szervezetünk</a>
+  <a href="#wix-mukodtetes">Online működtetés</a>
+  <a href="#dor">DÖR projekt</a>
+  <a href="#terkep">Tagszervezetek</a>
+  <a href="#miben-segit">Előnyeink</a>
+  <a href="#kapcsolat">Kapcsolat</a>
+</div>
 <header class="hero hierarchy-hero" id="hierarchia">
   <div class="hero-inner hierarchy-inner">
     <div class="eyebrow">Online hierarchia · belső digitális rendszer</div>
     <h1>A Központi Szövetség online működési gerince.</h1>
-    <p class="sub">A központi weboldal nem önmagában áll: ez a digitális gyökérpont, amelyhez az oktatás, média, kreatív közösség, színház, közösségi kommunikáció és sajtómegjelenések rendszere kapcsolódik. Ehhez a belső struktúrához tagozódik be az összes tagszervezet online jelenléte.</p>
+    <p class="sub">Egy <strong>digitális gyökérpont</strong>, amelyhez az <strong>oktatás</strong>, a <strong>média</strong>, a <strong>kreatív közösség</strong>, a <strong>színház</strong> és a <strong>sajtómegjelenések</strong> kapcsolódnak — és amelybe <strong>minden tagszervezet</strong> online jelenléte betagozódik.</p>
 
     <div class="hierarchy-board" aria-label="A Központi Szövetség online hierarchiája">
       <div class="hierarchy-root">
-        <span class="node-label">Központi szervezet · digitális gyökérpont</span>
-        <a href="https://www.kozpontiszovetseg.at" target="_blank" rel="noopener">www.kozpontiszovetseg.at</a>
-        <small>A fő weboldal fogja össze a bemutatkozást, híreket, programokat, tagszervezeteket és a hivatalos kapcsolati pontokat. Innen értelmezhető a teljes online hálózat.</small>
+        <div class="node-head">
+          <span class="node-icon ic-root"><svg viewBox="0 0 24 24" fill="none"><path stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M3 11.5 12 4l9 7.5M5 10v9a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-9M9.5 20v-6h5v6"/></svg></span>
+          <span class="node-label">Központi szervezet · digitális gyökérpont</span>
+        </div>
+        <a class="node-link" href="https://www.kozpontiszovetseg.at" target="_blank" rel="noopener"><span class="node-title">Központi Szövetség</span></a>
+        <a class="node-url" href="https://www.kozpontiszovetseg.at" target="_blank" rel="noopener">kozpontiszovetseg.at</a>
+        <small>A fő weboldal <strong>fogja össze</strong> a bemutatkozást, híreket, programokat, tagszervezeteket és a <strong>hivatalos kapcsolati pontokat</strong>. Innen értelmezhető a <strong>teljes online hálózat</strong>.</small>
         <div class="root-press-links" aria-label="Központi sajtófigyelő linkek">
           <a href="https://rolunk.at/tag/kozponti-szovetseg/" target="_blank" rel="noopener">Központi Szövetség sajtófigyelő</a>
           <a href="https://rolunk.at/tag/seidler-andrea/" target="_blank" rel="noopener">Elnöki sajtófigyelő · ao. Univ.-Prof. Dr. Seidler Andrea</a>
@@ -451,10 +839,14 @@ html,body{max-width:100%;overflow-x:hidden}*{min-width:0}a,.h-node>a,.hierarchy-
 
       <div class="hierarchy-grid">
         <article class="h-node core-social">
-          <span class="node-label">Közösségi belépési pont · Facebook-struktúra</span>
-          <a href="https://www.facebook.com/kozpontiszovetseg" target="_blank" rel="noopener">facebook.com/kozpontiszovetseg</a>
-          <p class="node-explain">A fő Facebook-oldal alatt csoportok formájában kapcsolódnak a saját projektek közösségei. Nincs külön Facebook-oldala minden projektnek: a közösséget így lehet egy központi logika szerint strukturálni, miközben a projekteknek saját, aktív csoportterük marad.</p>
-          <p class="node-explain">Aki a központi Facebook-oldal adminja, az közvetlenül hozzáfér a projektekhez kapcsolódó csoportokhoz is. Az online kommunikáció teljes struktúrája kialakítás alatt van; a felületek már működnek.</p>
+          <div class="node-head">
+            <span class="node-icon ic-social"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke-width="1.7"/><path stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M14.5 8h-1.6a1.9 1.9 0 0 0-1.9 1.9V12m-1.5 0h4.5M12 12v4.8"/></svg></span>
+            <span class="node-label">Közösségi belépési pont · Facebook-struktúra</span>
+          </div>
+          <a class="node-link" href="https://www.facebook.com/kozpontiszovetseg" target="_blank" rel="noopener"><span class="node-title">Központi Facebook-oldal</span></a>
+          <a class="node-url" href="https://www.facebook.com/kozpontiszovetseg" target="_blank" rel="noopener">facebook.com/kozpontiszovetseg</a>
+          <p class="node-explain">A projektek <strong>nem külön Facebook-oldalakon</strong> szóródnak szét, hanem a <strong>központi oldal alatt</strong>, csoportokként kapcsolódnak. <strong>Egy logika, sok aktív közösségi tér.</strong></p>
+          <p class="node-explain">A központi oldal adminja <strong>minden projektcsoporthoz hozzáfér</strong>. A struktúra még épül, de a <strong>felületek már működnek</strong>.</p>
           <ul>
             <li><a href="https://www.facebook.com/groups/becsimagyariskola/" target="_blank" rel="noopener"><strong>Bécsi Magyar Iskola Facebook-csoport</strong><span>Szülői, iskolai és közösségi kommunikáció.</span></a></li>
             <li><a href="https://www.facebook.com/groups/becsinaplo/" target="_blank" rel="noopener"><strong>Bécsi Napló Facebook-csoport</strong><span>Cikkmegosztás, olvasói kapcsolódás és közösségi visszacsatolás.</span></a></li>
@@ -464,9 +856,13 @@ html,body{max-width:100%;overflow-x:hidden}*{min-width:0}a,.h-node>a,.hierarchy-
         </article>
 
         <article class="h-node">
-          <span class="node-label">Oktatási és családi alrendszer</span>
-          <a href="https://www.magyariskola.at" target="_blank" rel="noopener">www.magyariskola.at</a>
-          <p class="node-explain">A Bécsi Magyar Iskola a közösség egyik legfontosabb utánpótlás- és családi pillére: hétvégi magyar oktatás, korosztályos foglalkozások, szülői kommunikáció, beszámolók, kérdőívek és sajtófigyelés.</p>
+          <div class="node-head">
+            <span class="node-icon ic-school"><svg viewBox="0 0 24 24" fill="none"><path stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M3 8.5 12 4l9 4.5-9 4.5-9-4.5Z"/><path stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M7 10.5v5c0 1 2.2 2.5 5 2.5s5-1.5 5-2.5v-5M21 8.5V14"/></svg></span>
+            <span class="node-label">Oktatási és családi alrendszer</span>
+          </div>
+          <a class="node-link" href="https://www.magyariskola.at" target="_blank" rel="noopener"><span class="node-title">Bécsi Magyar Iskola</span></a>
+          <a class="node-url" href="https://www.magyariskola.at" target="_blank" rel="noopener">magyariskola.at</a>
+          <p class="node-explain">A közösség <strong>utánpótlás- és családi pillére</strong>: <strong>hétvégi magyar oktatás</strong>, korosztályos foglalkozások, szülői kommunikáció, beszámolók és kérdőívek.</p>
           <ul>
             <li><a href="https://2026.magyariskola.at" target="_blank" rel="noopener"><strong>2026.magyariskola.at</strong><span>Tanévbeszámoló és eredménykommunikáció: megmutatja, mi történt, kik dolgoztak, milyen közösségi érték jött létre.</span></a></li>
             <li><a href="https://kerdoiv.magyariskola.at" target="_blank" rel="noopener"><strong>kerdoiv.magyariskola.at</strong><span>Visszajelzési és kapcsolatfelvételi felület: adatot ad a működés javításához és a családok igényeinek megértéséhez.</span></a></li>
@@ -479,22 +875,30 @@ html,body{max-width:100%;overflow-x:hidden}*{min-width:0}a,.h-node>a,.hierarchy-
         </article>
 
         <article class="h-node">
-          <span class="node-label">Szerkesztett magyar médiafelület</span>
-          <a href="https://www.becsinaplo.at" target="_blank" rel="noopener">www.becsinaplo.at</a>
-          <p class="node-explain">A Bécsi Napló a közösség szerkesztett nyilvánossága: cikkekkel, közéleti és kulturális tartalmakkal dokumentálja, értelmezi és visszakereshetővé teszi az ausztriai magyar élet eseményeit.</p>
+          <div class="node-head">
+            <span class="node-icon ic-news"><svg viewBox="0 0 24 24" fill="none"><path stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M4 5h11a2 2 0 0 1 2 2v11a1 1 0 0 0 1 1h0a1 1 0 0 0 1-1V8M4 5v13a1 1 0 0 0 1 1h13M7 9h7M7 12.5h7M7 16h4"/></svg></span>
+            <span class="node-label">Szerkesztett magyar médiafelület</span>
+          </div>
+          <a class="node-link" href="https://www.becsinaplo.at" target="_blank" rel="noopener"><span class="node-title">Bécsi Napló</span></a>
+          <a class="node-url" href="https://www.becsinaplo.at" target="_blank" rel="noopener">becsinaplo.at</a>
+          <p class="node-explain">A közösség <strong>szerkesztett nyilvánossága</strong>: cikkek <strong>dokumentálják</strong> és <strong>visszakereshetővé teszik</strong> az ausztriai magyar élet eseményeit.</p>
           <ul>
             <li><a href="https://www.facebook.com/groups/becsinaplo/" target="_blank" rel="noopener"><strong>Bécsi Napló Facebook-csoport</strong><span>Közösségi elérés, olvasói kapcsolódás, cikkmegosztás és gyors visszacsatolás.</span></a></li>
           </ul>
         </article>
 
         <article class="h-node">
-          <span class="node-label">Kreatív, vizuális és közösségi ág</span>
-          <a href="https://www.vipach.at" target="_blank" rel="noopener">www.vipach.at</a>
-          <p class="node-explain">A VIPACH a kreatív és vizuális közösségi ág: fotó, alkotóközösség, vizuális kultúra és digitális jelenlét. Nem külső üzleti finanszírozásra épülő projektként, hanem közösségi finanszírozásból önfenntartó közösségként működik: saját maga finanszírozza saját működését, programjait és láthatóságát.</p>
+          <div class="node-head">
+            <span class="node-icon ic-creative"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2.5" stroke-width="1.7"/><circle cx="9" cy="10" r="1.8" stroke-width="1.7"/><path stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="m4 17 4.5-4.5a1.5 1.5 0 0 1 2 0L16 18M14 14l1.8-1.8a1.5 1.5 0 0 1 2 0L20 14.5"/></svg></span>
+            <span class="node-label">Kreatív, vizuális és közösségi ág</span>
+          </div>
+          <a class="node-link" href="https://www.vipach.at" target="_blank" rel="noopener"><span class="node-title">VIPACH</span></a>
+          <a class="node-url" href="https://www.vipach.at" target="_blank" rel="noopener">vipach.at</a>
+          <p class="node-explain">A <strong>kreatív és vizuális ág</strong>: fotó, alkotóközösség, digitális jelenlét. <strong>Nem külső befektetésből</strong>, hanem <strong>közösségi finanszírozásból</strong> tartja fenn magát, programjait és láthatóságát.</p>
           <ul>
             <li><a href="https://business.vipach.at" target="_blank" rel="noopener"><strong>business.vipach.at</strong><span>Stratégiai és szolgáltatási aloldal: megmutatja, hogyan kapcsolódhat a közösségi kreatív tudás professzionális vizuális és digitális feladatokhoz.</span></a></li>
-            <li><span class="info-line"><strong>AmCham Austria kapcsolódás</strong><span>A VIPACH Bánhalmi Norberten keresztül az AmCham Austria, az Osztrák–Amerikai Kereskedelmi Kamara szakmai közegéhez is kapcsolódik.</span></span></li>
-            <li><a href="https://photoshop.vipach.at" target="_blank" rel="noopener"><strong>photoshop.vipach.at</strong><span>Kreatív / képfeldolgozási alrendszer: digitális eszköz és szolgáltatási kiterjesztés a VIPACH alatt.</span></a></li>
+            <li><a href="https://amcham.at/members-list/" target="_blank" rel="noopener"><strong>AmCham Austria kapcsolódás</strong><span>A VIPACH Bánhalmi Norberten keresztül az AmCham Austria, az Osztrák–Amerikai Kereskedelmi Kamara szakmai közegéhez is kapcsolódik.</span></a></li>
+            <li><a href="https://photostudio.vipach.at" target="_blank" rel="noopener"><strong>photostudio.vipach.at</strong><span>Kreatív / képfeldolgozási alrendszer: digitális eszköz és szolgáltatási kiterjesztés a VIPACH alatt.</span></a></li>
             <li><a href="https://hu.wikipedia.org/wiki/VIPACH" target="_blank" rel="noopener"><strong>Wikipédia · VIPACH</strong><span>Strukturált entitásréteg: a szervezet nyilvánosan azonosítható, kereshető és hivatkozható.</span></a></li>
             <li><a href="https://www.vipach.at/media-megjelenesek" target="_blank" rel="noopener"><strong>VIPACH sajtófigyelő</strong><span>A VIPACH saját média- és sajtómegjelenéseinek gyűjtőfelülete: külső láthatóság, cikkek és nyilvános visszaigazolások egy helyen.</span></a></li>
             <li><a href="https://rolunk.at/tag/banhalmi-norbert/" target="_blank" rel="noopener"><strong>Bánhalmi Norbert sajtófigyelő</strong><span>A VIPACH-hoz kapcsolódó alapítói és kreatív-stratégiai láthatóság Rólunk.at-megjelenéseinek gyűjtőfelülete.</span></a></li>
@@ -503,9 +907,13 @@ html,body{max-width:100%;overflow-x:hidden}*{min-width:0}a,.h-node>a,.hierarchy-
         </article>
 
         <article class="h-node">
-          <span class="node-label">Színházi és ifjúsági kulturális ág</span>
-          <a href="https://www.musicaltarsulat.at" target="_blank" rel="noopener">www.musicaltarsulat.at</a>
-          <p class="node-explain">A Bécsi Magyar Musical Társulat a magyar nyelvű színpadi, zenei és gyerek-ifjúsági alkotómunka felülete. A rendszerben azt mutatja meg, hogy a magyar nyelv nemcsak oktatási, hanem élő kulturális élmény is.</p>
+          <div class="node-head">
+            <span class="node-icon ic-stage"><svg viewBox="0 0 24 24" fill="none"><path stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M9 18V6l10-2v12"/><circle cx="6" cy="18" r="3" stroke-width="1.7"/><circle cx="16" cy="16" r="3" stroke-width="1.7"/></svg></span>
+            <span class="node-label">Színházi és ifjúsági kulturális ág</span>
+          </div>
+          <a class="node-link" href="https://www.musicaltarsulat.at" target="_blank" rel="noopener"><span class="node-title">Bécsi Magyar Musical Társulat</span></a>
+          <a class="node-url" href="https://www.musicaltarsulat.at" target="_blank" rel="noopener">musicaltarsulat.at</a>
+          <p class="node-explain"><strong>Magyar nyelvű színpadi, zenei és gyerek-ifjúsági</strong> alkotómunka. Itt a magyar nyelv <strong>nem tananyag, hanem élő kulturális élmény</strong>.</p>
           <ul>
             <li><a href="https://www.facebook.com/groups/musicaltarsulat" target="_blank" rel="noopener"><strong>Musical Társulat Facebook-csoport</strong><span>Közösségi szervezés, próbák, előadások, szülői és nézői kapcsolódás.</span></a></li>
           </ul>
@@ -514,11 +922,11 @@ html,body{max-width:100%;overflow-x:hidden}*{min-width:0}a,.h-node>a,.hierarchy-
     </div>
 
     <div class="hierarchy-summary">
-      <div><b>Belső rendszer</b><span>A főoldal, intézményi oldalak, aloldalak, Wikipédia-jelenlét, sajtófigyelő és közösségi felületek egy közös digitális gerincre rendezve.</span></div>
-      <div><b>Sajtófigyelő réteg</b><span>A Központi Szövetség és az elnöki jelenlét Rólunk.at-címkéken keresztül visszakereshető nyilvános médiafelületet kap; a projektspecifikus szereplők saját alrendszerük alatt jelennek meg.</span></div>
-      <div><b>Közösségi struktúra</b><span>A Facebook-oldal alatt saját projektcsoportok futnak, így a kommunikáció központilag strukturálható, de projektszinten aktív marad.</span></div>
-      <div><b>DÖR logika</b><span>Ehhez a belső rendszerhez kapcsolódik a tagszervezeti térkép: így válik a diaszpóra látható, frissíthető és döntéstámogató működési hálózattá.</span></div>
-      <div><b>Mobil működtetés</b><span>Minden oldal Wix-alapon fut, ezért a média, események, fizetés, tagok, hírlevél és jogosultságok egy központi mobil alkalmazásból is kezelhetők.</span></div>
+      <div><b>Belső rendszer</b><span>A főoldal, intézményi oldalak, aloldalak, Wikipédia-jelenlét, sajtófigyelő és közösségi felületek <strong>egy közös digitális gerincre</strong> rendezve.</span></div>
+      <div><b>Sajtófigyelő réteg</b><span>A Központi Szövetség és az elnöki jelenlét Rólunk.at-címkéken keresztül <strong>visszakereshető nyilvános médiafelületet</strong> kap; a projektspecifikus szereplők saját alrendszerük alatt jelennek meg.</span></div>
+      <div><b>Közösségi struktúra</b><span>A Facebook-oldal alatt saját projektcsoportok futnak, így a kommunikáció <strong>központilag strukturálható, de projektszinten aktív marad</strong>.</span></div>
+      <div><b>DÖR logika</b><span>Ehhez a belső rendszerhez kapcsolódik a tagszervezeti térkép: így válik a diaszpóra <strong>látható, frissíthető és döntéstámogató</strong> működési hálózattá.</span></div>
+      <div><b>Mobil működtetés</b><span><strong>Minden oldal Wix-alapon fut</strong>, ezért a média, események, fizetés, tagok, hírlevél és jogosultságok <strong>egy központi mobil alkalmazásból</strong> is kezelhetők.</span></div>
     </div>
   </div>
 </header>
@@ -528,22 +936,22 @@ html,body{max-width:100%;overflow-x:hidden}*{min-width:0}a,.h-node>a,.hierarchy-
     <div class="wixops-hero">
       <div class="k">Wix-alapú központi működtetés</div>
       <h2>A teljes online ökoszisztéma mobilról is irányítható.</h2>
-      <p>Ez nem különálló honlapok gyűjteménye, hanem egy egységes Wix-alapú működési környezet. A média kezelését, eseményrendszert, online fizetést, tagokat, hírleveleket és jogosultságokat egy központi mobil alkalmazásból is lehet kezelni.</p>
-      <p>A rendszerben különböző jogosultsági szintek vannak: szerkesztő, eseménykezelő, kommunikációs felelős, pénzügyi / fizetési felelős, tagsági kezelő vagy adminisztrátor. Így nem egy ember viszi a teljes terhet, hanem világos, hogy kinek mi a feladata. A teljes kommunikációs struktúra még kialakítás alatt van, de a fő felületek már működnek.</p>
+      <p><strong>Nem különálló honlapok gyűjteménye</strong>, hanem egy <strong>egységes Wix-környezet</strong>. Média, események, online fizetés, tagok, hírlevelek és jogosultságok — <strong>mind egy mobil alkalmazásból</strong> kezelhető.</p>
+      <p>A jogosultsági szintek elkülönülnek: szerkesztő, eseménykezelő, kommunikációs és pénzügyi felelős, tagsági kezelő, adminisztrátor. <strong>Nem egy ember viszi a terhet</strong> — mindenki azt látja, ami a feladata. A struktúra még épül, a <strong>fő felületek már működnek</strong>.</p>
     </div>
     <div class="ops-grid">
       <div class="ops-card"><b>Média és tartalom</b><span>Hírek, cikkek, képek, közösségi megjelenések és sajtófigyelők kezelése a megfelelő felelősökkel.</span></div>
-      <div class="ops-card"><b>Facebook-csoport architektúra</b><span>A központi Facebook-oldal alá tartoznak a saját projektcsoportok. Így nem párhuzamos oldalak széttartó rendszere jön létre, hanem egy kezelhető közösségi struktúra.</span></div>
+      <div class="ops-card"><b>Facebook-csoport architektúra</b><span>A központi Facebook-oldal alá tartoznak a saját projektcsoportok. Így <strong>nem párhuzamos oldalak</strong> széttartó rendszere jön létre, hanem egy <strong>kezelhető közösségi struktúra</strong>.</span></div>
       <div class="ops-card"><b>Eseményrendszer</b><span>Programok, eseményoldalak, jelentkezések, frissítések és közösségi kommunikáció egy szervezett rendszerben.</span></div>
       <div class="ops-card"><b>Online fizetés</b><span>Jegyek, részvételi díjak, támogatások vagy szolgáltatások kezelése a Wix által adott lehetőségek szerint.</span></div>
       <div class="ops-card"><b>Tagok és közösség</b><span>Tagok, érdeklődők, családok, szervezeti szereplők és kapcsolati körök kezelése átlátható módon.</span></div>
       <div class="ops-card"><b>Hírlevél és kommunikáció</b><span>Célzott tájékoztatás, meghívók, beszámolók és közösségi üzenetek előkészítése és kiküldése.</span></div>
-      <div class="ops-card"><b>Jogosultság és feladat</b><span>Minden szereplő csak ahhoz fér hozzá, ami a feladata. Ez adja a rendszer működési biztonságát és skálázhatóságát.</span></div>
+      <div class="ops-card"><b>Jogosultság és feladat</b><span><strong>Minden szereplő csak ahhoz fér hozzá, ami a feladata.</strong> Ez adja a rendszer működési biztonságát és skálázhatóságát.</span></div>
     </div>
   </div>
 </section>
-<section class="dor" id="dor"><div class="dor-wrap"><div class="dor-hero"><div class="k">A belső rendszer skálázása · DÖR 2026</div><h2>Innen skálázható a diaszpóra működési térképe.</h2><p>A fenti online hierarchia és a Wix-alapú mobil működtetés a működő bécsi minta. A DÖR 2026 ennek a logikának a tesztelhető kiterjesztése: 120 nap alatt megmutatja, hol vannak aktív közösségek, milyen események futnak, kik kapcsolhatók be fiatal működtetőként, és hol keletkezik kulturális, gazdasági vagy diplomáciai kapcsolódási pont.</p><p>Az érték egyszerű: a külügy nem statikus listát kap, hanem élő, frissíthető kapcsolati térképet — úgy, hogy a szervezetek autonómiája sértetlen marad.</p><div class="root-actions"><a class="pill gold" href="https://diaszpora.vipach.at" target="_blank" rel="noopener">diaszpora.vipach.at</a><span class="pill ghost">Jelszóval védett bemutató · a jelszót kérésre megküldjük</span></div></div><div class="dor-grid"><div class="dor-card"><h3>Mit old meg?</h3><p>A működő külhoni magyar közösségek sokszor láthatatlanok vagy széttagoltak. A DÖR egy közös térképre hozza a szervezeteket, eseményeket és kapcsolódási pontokat.</p></div><div class="dor-card"><h3>Mi az első termék?</h3><p>Szervezeti profil, eseménynaptár, fiatal szerkesztői hozzáférés és alap aktivitási visszajelzés. Nem nagy rendszer, hanem a legkisebb tesztelhető működési mag.</p></div><div class="dor-card"><h3>Miért védhető?</h3><p>Önkéntes, kiléphető és auditálható. Nem rangsorol, nem oszt támogatást, nem jelöl ki képviselőt és nem gyűjt politikai adatot.</p></div><div class="dor-card"><h3>Mi a döntés?</h3><p>120 nap után tényalapú Go / Modify / Stop döntés. Ha működik, skálázható. Ha módosítani kell, mérhető. Ha nem hoz értéket, leállítható.</p></div></div></div></section>
-<section class="mapsec" id="terkep"><div class="map-wrap"><div class="shead" style="padding-top:0"><div class="k">Tagszervezeti térkép</div><h2>Ausztriában nem egyetlen pont van. Hálózat van.</h2><p>A térkép C-level szinten mutatja meg, hogy a Központi Szövetség nem csak saját projekteket működtet, hanem egy több régióra, több funkcióra és több generációra kiterjedő tagszervezeti ökoszisztémát fog össze. A szervezetek egyenként is láthatók, régió és szerep szerint rendezve.</p></div><div class="exec-strip">
+<section class="dor" id="dor"><div class="dor-wrap"><div class="dor-hero"><div class="k">A belső rendszer skálázása · DÖR 2026</div><h2>Innen skálázható a diaszpóra működési térképe.</h2><p><strong>A bécsi minta már működik.</strong> A DÖR 2026 ennek tesztelhető kiterjesztése: <strong>120 nap alatt</strong> megmutatja, hol vannak aktív közösségek, milyen események futnak, kik kapcsolhatók be <strong>fiatal működtetőként</strong>, és hol nyílik kulturális, gazdasági vagy diplomáciai kapcsolódási pont.</p><p>A külügy <strong>nem statikus listát</strong> kap, hanem <strong>élő, frissíthető kapcsolati térképet</strong> — a szervezetek <strong>autonómiájának sérülése nélkül</strong>.</p><div class="root-actions"><a class="pill gold" href="https://diaszpora.vipach.at" target="_blank" rel="noopener">diaszpora.vipach.at</a><span class="pill ghost">Jelszóval védett bemutató · a jelszót kérésre megküldjük</span></div></div><div class="dor-grid"><div class="dor-card"><h3>Mit old meg?</h3><p>A működő külhoni magyar közösségek sokszor <strong>láthatatlanok vagy széttagoltak</strong>. A DÖR <strong>egy közös térképre</strong> hozza a szervezeteket, eseményeket és kapcsolódási pontokat.</p></div><div class="dor-card"><h3>Mi az első termék?</h3><p>Szervezeti profil, eseménynaptár, fiatal szerkesztői hozzáférés és alap aktivitási visszajelzés. <strong>Nem nagy rendszer</strong>, hanem a <strong>legkisebb tesztelhető működési mag</strong>.</p></div><div class="dor-card"><h3>Miért védhető?</h3><p><strong>Önkéntes, kiléphető és auditálható.</strong> Nem rangsorol, nem oszt támogatást, nem jelöl ki képviselőt és <strong>nem gyűjt politikai adatot</strong>.</p></div><div class="dor-card"><h3>Mi a döntés?</h3><p>120 nap után tényalapú <strong>Go / Modify / Stop</strong> döntés. Ha működik, skálázható. Ha módosítani kell, mérhető. Ha nem hoz értéket, leállítható.</p></div></div></div></section>
+<section class="mapsec" id="terkep"><div class="map-wrap"><div class="shead" style="padding-top:0"><div class="k">Tagszervezeti térkép</div><h2>Ausztriában nem egyetlen pont van. Hálózat van.</h2><p>A Központi Szövetség <strong>nem csak saját projekteket</strong> működtet: <strong>több régiót, több funkciót és több generációt</strong> összefogó tagszervezeti hálózatot. Itt <strong>minden szervezet külön látható</strong>, régió és szerep szerint.</p></div><div class="exec-strip">
   <div class="exec-metric"><b>28</b><span>egyenként látható tagszervezet</span></div>
   <div class="exec-metric"><b>7</b><span>régiós klaszter Ausztriában</span></div>
   <div class="exec-metric"><b>6</b><span>fő működési típus: oktatás, kultúra, média, egyház, ifjúság, szakmai közeg</span></div>
@@ -710,7 +1118,7 @@ html,body{max-width:100%;overflow-x:hidden}*{min-width:0}a,.h-node>a,.hierarchy-
       <h3>Magyarház</h3>
       <p class="place">Innsbruck · ZVR-Zahl: 768679342</p>
       <p>Innsbrucki Magyar Diákotthon és Kultúrcentrum, a tiroli magyar közösség egyik fizikai és intézményi központja.</p>
-      <a class="textlink" href="https://ugarnheim.at" target="_blank" rel="noopener">Kapcsolódó felület megnyitása →</a>
+      <a class="textlink" href="https://huheim.at" target="_blank" rel="noopener">Kapcsolódó felület megnyitása →</a>
     </article>
     <article class="member" data-region="Tirol" data-name="imike">
       <div class="member-top"><span class="num">23</span><span class="tag">Tirol</span><span class="tag soft">Ifjúság · kultúra · néptánc</span></div>
@@ -811,6 +1219,23 @@ function filterCards(){
   updateResultCount(visibleCount);
 }
 window.addEventListener('DOMContentLoaded', () => {
+  // — Hamburger menü —
+  const burger = document.getElementById('navBurger');
+  const menu = document.getElementById('mobileMenu');
+  if (burger && menu){
+    const setOpen = (open) => {
+      burger.classList.toggle('open', open);
+      menu.classList.toggle('open', open);
+      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+      menu.setAttribute('aria-hidden', open ? 'false' : 'true');
+      burger.setAttribute('aria-label', open ? 'Menü bezárása' : 'Menü megnyitása');
+    };
+    burger.addEventListener('click', () => setOpen(!menu.classList.contains('open')));
+    menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setOpen(false)));
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') setOpen(false); });
+    window.addEventListener('resize', () => { if (window.innerWidth > 900) setOpen(false); });
+  }
+
   document.getElementById('filters')?.addEventListener('click', e => {
     if (!e.target.matches('.control')) return;
     document.querySelectorAll('.control').forEach(b=>b.classList.remove('active'));
