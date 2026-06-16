@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Központi Szövetség · Online hierarchia · Wix működtetés · DÖR · Tagszervezeti térkép</title>
+<meta name="description" content="A Központi Szövetség online hierarchiája, Wix-alapú mobil működtetése, DÖR 2026 háttérprojektje és az ausztriai magyar tagszervezetek térképe."/>
+<link rel="preconnect" href="https://unpkg.com" crossorigin>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#ffffff;--bg2:#f5f5f7;--ink:#1d1d1f;--muted:#6e6e73;--line:#d2d2d7;
+  --blue:#0a4b8f;--blue2:#0071e3;--gold:#b08d57;--card:#fbfbfd;--dark:#071b33;
+  --radius:24px;--radiussm:15px;--max:1120px;
+  --font:-apple-system,BlinkMacSystemFont,"SF Pro Display","SF Pro Text","Segoe UI",Helvetica,Arial,sans-serif;
+}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--font);background:var(--bg);color:var(--ink);line-height:1.5;-webkit-font-smoothing:antialiased;letter-spacing:-.01em}
+a{color:inherit;text-decoration:none} img{max-width:100%}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 28px}
+.nav{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,.78);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid rgba(0,0,0,.07)}
+.nav-in{max-width:var(--max);margin:0 auto;height:56px;display:flex;align-items:center;justify-content:space-between;padding:0 28px}
+.nav-brand{font-size:17px;font-weight:650;letter-spacing:-.02em} .nav-brand span{color:var(--muted);font-weight:450}
+.nav-links{display:flex;gap:24px;align-items:center} .nav-links a{font-size:13px;color:var(--muted);transition:color .2s} .nav-links a:hover{color:var(--ink)}
+@media(max-width:850px){.nav-links{display:none}}
+.hero{text-align:center;padding:104px 28px 74px;background:radial-gradient(circle at 50% 0%,#eef6ff 0,#fff 45%,#fff 100%)}
+.eyebrow{font-size:18px;font-weight:650;color:var(--blue);letter-spacing:0;margin-bottom:10px}
+.hero h1{font-size:clamp(42px,7vw,78px);font-weight:750;letter-spacing:-.045em;line-height:1.04;max-width:930px;margin:0 auto}
+.hero .sub{font-size:clamp(19px,2.35vw,27px);color:var(--muted);font-weight:420;max-width:760px;margin:22px auto 0;line-height:1.38}
+.hero .meta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:30px;font-size:14px;color:var(--muted)}
+.hero .meta a{color:var(--blue2)}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;max-width:880px;margin:42px auto 0}
+.kpi{background:rgba(255,255,255,.75);border:1px solid var(--line);border-radius:18px;padding:18px 16px;box-shadow:0 12px 32px rgba(0,0,0,.04)}
+.kpi b{display:block;font-size:30px;letter-spacing:-.03em;color:var(--ink)} .kpi span{display:block;font-size:13px;color:var(--muted);margin-top:2px}
+@media(max-width:760px){.kpis{grid-template-columns:repeat(2,1fr)}}
+.root{padding:6px 28px 46px;background:#fff}
+.root-card{max-width:820px;margin:0 auto;background:linear-gradient(180deg,#0b2341,#061426);color:#f5f5f7;border-radius:30px;padding:50px 44px;text-align:center;position:relative;overflow:hidden;box-shadow:0 28px 70px rgba(7,27,51,.22)}
+.root-card::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 0%,rgba(255,255,255,.16),transparent 62%);pointer-events:none}
+.root-card>*{position:relative;z-index:1} .root-k{font-size:12px;font-weight:700;letter-spacing:.055em;text-transform:uppercase;color:#c9d7e6;margin-bottom:14px}
+.root-card h2{font-size:clamp(30px,4vw,44px);font-weight:760;letter-spacing:-.028em;line-height:1.08}
+.root-card p{color:#c9d7e6;font-size:17px;margin:14px auto 0;max-width:620px}
+.root-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:28px}
+.pill{display:inline-flex;align-items:center;gap:7px;padding:11px 21px;border-radius:980px;font-size:15px;font-weight:550;transition:transform .15s ease,opacity .2s ease}
+.pill:hover{opacity:.88;transform:translateY(-1px)} .pill.solid{background:var(--blue2);color:#fff} .pill.ghost{background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.22)} .pill.gold{background:var(--gold);color:#fff}
+.shead{text-align:center;padding:62px 28px 0} .shead .k{font-size:12px;font-weight:750;letter-spacing:.055em;text-transform:uppercase;color:var(--blue)}
+.shead h2{font-size:clamp(31px,4.1vw,50px);font-weight:760;letter-spacing:-.035em;margin-top:8px;line-height:1.08}
+.shead p{color:var(--muted);font-size:19px;max-width:700px;margin:14px auto 0}
+.portfolio{padding:40px 28px 22px;background:#fff} .pf-grid{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media(max-width:860px){.pf-grid{grid-template-columns:1fr}}
+.entity,.member,.dor-card,.help-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:32px 30px;transition:box-shadow .25s ease,transform .25s ease}
+.entity:hover,.member:hover,.help-card:hover{box-shadow:0 18px 48px rgba(0,0,0,.10);transform:translateY(-2px)}
+.role{font-size:12px;font-weight:750;letter-spacing:.055em;text-transform:uppercase;color:var(--blue)} .entity h3,.member h3{font-size:26px;font-weight:740;letter-spacing:-.025em;margin-top:10px;line-height:1.14}
+.domain,.place{font-size:14px;color:var(--muted);margin-top:3px} .desc,.entity p,.member p{font-size:16px;color:#424245;margin-top:14px;line-height:1.55}
+.primary,.textlink{display:inline-flex;align-items:center;gap:5px;color:var(--blue2);font-size:15px;font-weight:580;margin-top:18px} .primary:hover,.textlink:hover{text-decoration:underline}
+.sublabel{font-size:12px;font-weight:700;letter-spacing:.055em;text-transform:uppercase;color:var(--muted);margin:22px 0 10px}
+.sublinks{display:flex;flex-wrap:wrap;gap:8px} .chip{display:inline-flex;align-items:center;gap:6px;padding:7px 13px;border-radius:980px;background:#fff;border:1px solid var(--line);font-size:13px;font-weight:520;color:#1d1d1f;transition:background .18s ease,border-color .18s ease} .chip:hover{background:#f0f0f3;border-color:#c7c7cc} .chip .dot{width:6px;height:6px;border-radius:50%;background:var(--blue2)}
+.dor{padding:48px 28px 34px;background:linear-gradient(180deg,#fff,#f5f5f7)} .dor-wrap{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:1.05fr .95fr;gap:22px;align-items:stretch}
+@media(max-width:900px){.dor-wrap{grid-template-columns:1fr}}
+.dor-hero{background:linear-gradient(180deg,#071b33,#0d2f58);color:#fff;border-radius:30px;padding:42px 38px;position:relative;overflow:hidden;box-shadow:0 30px 80px rgba(7,27,51,.22)}
+.dor-hero::before{content:"";position:absolute;width:360px;height:360px;border-radius:50%;background:radial-gradient(circle,rgba(176,141,87,.42),rgba(176,141,87,0) 65%);top:-140px;right:-120px}
+.dor-hero>*{position:relative;z-index:1} .dor-hero .k{font-size:12px;font-weight:750;letter-spacing:.055em;text-transform:uppercase;color:#d7c4a6}
+.dor-hero h2{font-size:clamp(32px,4.3vw,54px);font-weight:780;letter-spacing:-.04em;line-height:1.05;margin-top:8px}
+.dor-hero p{color:#d9e3ee;font-size:18px;margin-top:16px;max-width:610px}
+.dor-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px} @media(max-width:600px){.dor-grid{grid-template-columns:1fr}}
+.dor-card h3{font-size:18px;letter-spacing:-.02em} .dor-card p{font-size:15px;color:#424245;margin-top:8px}
+.mapsec{padding:54px 28px;background:#fff} .map-wrap{max-width:var(--max);margin:0 auto}
+.map-panel{display:grid;grid-template-columns:1.2fr .8fr;gap:20px;align-items:stretch;margin-top:34px}
+@media(max-width:980px){.map-panel{grid-template-columns:1fr}}
+.static-map{min-height:760px;border-radius:28px;border:1px solid var(--line);overflow:hidden;background:radial-gradient(circle at 30% 8%,#fff 0,#f7fbff 28%,#eef3f8 100%);box-shadow:0 16px 50px rgba(0,0,0,.08);position:relative;padding:28px}
+.austria-svg{position:absolute;inset:5% 4% auto 4%;width:92%;height:66%;opacity:.98}.map-callout{position:absolute;width:min(245px,38%);background:rgba(255,255,255,.94);border:1px solid rgba(10,75,143,.16);border-radius:18px;padding:14px 15px 13px 18px;box-shadow:0 16px 38px rgba(7,27,51,.12);backdrop-filter:blur(12px);transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease}.map-callout:hover{transform:translateY(-2px);box-shadow:0 22px 52px rgba(7,27,51,.18);border-color:rgba(176,141,87,.38)}.map-callout h4{font-size:14px;letter-spacing:-.01em;margin:0 0 6px;color:#071b33}.map-callout p{font-size:12px;line-height:1.45;color:#424245;margin:0}.pin{position:absolute;left:-7px;top:18px;width:14px;height:14px;border-radius:999px;background:var(--blue2);border:2px solid #fff;box-shadow:0 0 0 7px rgba(0,113,227,.12)}.c-vorarlberg{left:4%;top:43%}.c-tirol{left:18%;top:59%;width:300px}.c-salzburg{left:37%;top:25%;width:230px}.c-felso{left:49%;top:7%;width:315px}.c-styria{left:49%;top:59%;width:300px}.c-burgenland{right:5%;top:57%;width:280px}.c-vienna{right:4%;top:17%;width:320px}
+.map-side{background:var(--bg2);border:1px solid var(--line);border-radius:28px;padding:24px;display:flex;flex-direction:column;gap:18px}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px} .stat{background:#fff;border:1px solid var(--line);border-radius:16px;padding:15px 14px} .stat b{font-size:25px} .stat span{display:block;color:var(--muted);font-size:13px}
+.controls{display:flex;gap:10px;flex-wrap:wrap} .control{border:1px solid var(--line);background:#fff;border-radius:999px;padding:9px 13px;font-size:13px;cursor:pointer;color:#424245} .control.active{background:var(--blue);color:#fff;border-color:var(--blue)}
+.search{width:100%;border:1px solid var(--line);border-radius:14px;padding:13px 14px;font:inherit;font-size:15px;background:#fff;color:var(--ink)}
+.member-grid{max-width:var(--max);margin:24px auto 0;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:1000px){.member-grid{grid-template-columns:repeat(2,1fr)}.static-map{min-height:980px}.map-callout{width:42%}.c-vienna{right:3%;top:13%}.c-felso{left:47%;top:32%}.c-styria{left:47%;top:62%}.c-burgenland{right:3%;top:78%}.c-tirol{left:5%;top:64%}.c-salzburg{left:28%;top:45%}.c-vorarlberg{left:5%;top:35%}} @media(max-width:680px){.member-grid{grid-template-columns:1fr}.static-map{min-height:auto;padding:18px}.austria-svg{position:relative;inset:auto;width:100%;height:230px;margin-bottom:10px}.map-callout{position:relative;left:auto!important;right:auto!important;top:auto!important;width:100%!important;margin:10px 0}.pin{left:14px;top:-7px}}
+.member{padding:24px} .member-top{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:10px} .num{font-size:12px;font-weight:700;color:var(--muted)} .tag{display:inline-flex;border:1px solid #cbd8e6;background:#eef6ff;color:var(--blue);border-radius:999px;padding:4px 9px;font-size:12px;font-weight:620} .tag.soft{background:#fff;color:#6e6e73;border-color:var(--line)}
+.help{padding:64px 28px;background:var(--bg2)} .help-grid{max-width:var(--max);margin:32px auto 0;display:grid;grid-template-columns:repeat(3,1fr);gap:16px} @media(max-width:900px){.help-grid{grid-template-columns:1fr}}
+.help-card h3{font-size:20px;letter-spacing:-.02em} .help-card p{margin-top:9px;color:#424245;font-size:15px}
+.source-note{max-width:var(--max);margin:34px auto 0;color:var(--muted);font-size:13px;line-height:1.6}
+
+footer{background:#fff;color:var(--muted);font-size:12px;line-height:1.7;padding:34px 28px;border-top:1px solid var(--line)} .foot-in{max-width:var(--max);margin:0 auto} footer a{color:var(--muted)} footer a:hover{color:var(--ink)} .foot-top{color:var(--ink);font-weight:650;font-size:13px;margin-bottom:6px}
+
+/* ===== ONLINE HIERARCHY HERO ===== */
+.hierarchy-hero{padding:96px 28px 74px;background:radial-gradient(circle at 50% 0%,#eef6ff 0,#fff 42%,#fff 100%);text-align:center}.hierarchy-inner{max-width:1180px}.hierarchy-hero h1{font-size:clamp(42px,6.6vw,76px);font-weight:760;letter-spacing:-.045em;line-height:1.04;max-width:920px;margin:0 auto}.hierarchy-hero .sub{font-size:clamp(19px,2.25vw,26px);color:var(--muted);font-weight:420;max-width:880px;margin:22px auto 0;line-height:1.38}.hierarchy-board{margin:42px auto 0;position:relative}.hierarchy-board::before{content:"";position:absolute;left:50%;top:98px;bottom:calc(100% - 150px);width:2px;background:linear-gradient(180deg,var(--blue2),rgba(0,113,227,0));transform:translateX(-50%)}.hierarchy-root{max-width:540px;margin:0 auto 28px;padding:28px 26px;border-radius:28px;background:linear-gradient(180deg,#071b33,#0d2f58);color:#fff;box-shadow:0 30px 80px rgba(7,27,51,.22);position:relative;z-index:2}.hierarchy-root a{display:block;color:#fff;font-size:clamp(24px,3vw,34px);font-weight:760;letter-spacing:-.03em;margin-top:8px}.hierarchy-root small{display:block;color:#c9d7e6;font-size:14px;margin-top:6px}.node-label{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;background:rgba(176,141,87,.14);border:1px solid rgba(176,141,87,.22);color:var(--gold);font-size:11px;font-weight:760;letter-spacing:.06em;text-transform:uppercase;padding:6px 10px}.hierarchy-root .node-label{background:rgba(255,255,255,.12);color:#d7c4a6;border-color:rgba(255,255,255,.2)}.hierarchy-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;text-align:left;position:relative}.hierarchy-grid::before{content:"";position:absolute;left:7%;right:7%;top:-14px;height:2px;background:linear-gradient(90deg,rgba(0,113,227,0),rgba(0,113,227,.32),rgba(0,113,227,0))}.h-node{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:24px 24px 22px;box-shadow:0 18px 48px rgba(0,0,0,.06);transition:transform .2s ease,box-shadow .2s ease}.h-node:hover{transform:translateY(-2px);box-shadow:0 24px 60px rgba(0,0,0,.10)}.h-node>a{display:inline-flex;color:var(--blue2);font-size:22px;font-weight:720;letter-spacing:-.025em;margin-top:12px}.h-node small{display:block;color:var(--muted);font-size:14px;margin-top:8px}.h-node ul{list-style:none;padding:0;margin:17px 0 0;display:grid;gap:8px}.h-node li{margin:0}.h-node li a{display:flex;align-items:center;gap:8px;border:1px solid var(--line);background:#fff;border-radius:13px;padding:9px 12px;color:#424245;font-size:14px;font-weight:560}.h-node li a::before{content:"";width:7px;height:7px;border-radius:999px;background:var(--blue2);flex:0 0 auto}.h-node li a:hover{background:#f0f6ff;border-color:#cbd8e6}.core-social{grid-column:1 / -1;background:linear-gradient(180deg,#fbfbfd,#f5f5f7)}.core-social>a{font-size:24px}.hierarchy-summary{margin:24px auto 0;display:grid;grid-template-columns:repeat(3,1fr);gap:14px;text-align:left}.hierarchy-summary div{background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px 18px}.hierarchy-summary b{display:block;color:var(--ink);font-size:15px;margin-bottom:6px}.hierarchy-summary span{display:block;color:var(--muted);font-size:14px;line-height:1.55}@media(max-width:900px){.hierarchy-grid,.hierarchy-summary{grid-template-columns:1fr}.core-social{grid-column:auto}.hierarchy-board::before,.hierarchy-grid::before{display:none}.h-node>a{font-size:20px}.hierarchy-hero{padding:74px 20px 54px}}@media(max-width:560px){.hierarchy-root{padding:24px 18px}.h-node{padding:20px 18px}.h-node li a{font-size:13px}.hierarchy-root a{font-size:22px;word-break:break-word}.hierarchy-hero h1{font-size:clamp(36px,11vw,54px)}}
+
+
+/* ===== HERO UNIT EXPLANATION PASS ===== */
+.h-node .node-explain{font-size:15px;line-height:1.62;color:#424245;margin:12px 0 2px}.h-node li a{align-items:flex-start;flex-direction:column;gap:3px}.h-node li a::before{display:none}.h-node li a strong{display:block;color:#1d1d1f;font-size:14px;line-height:1.25}.h-node li a span{display:block;color:var(--muted);font-size:12.5px;line-height:1.45;font-weight:430}.core-social .node-explain{max-width:760px}.hierarchy-root small{max-width:760px;margin-left:auto;margin-right:auto;line-height:1.55}.hierarchy-grid{grid-template-columns:1fr 1fr}.h-node:nth-child(2){grid-row:span 2}@media(max-width:900px){.h-node:nth-child(2){grid-row:auto}.h-node li a strong{font-size:13.5px}.h-node li a span{font-size:12px}}
+
+
+/* ===== WIX MOBILE OPERATIONS SECTION ===== */
+.wixops{padding:54px 28px;background:linear-gradient(180deg,#fff,#f5f5f7);border-top:1px solid var(--line)}.wixops-wrap{max-width:1120px;margin:0 auto;display:grid;grid-template-columns:.95fr 1.05fr;gap:22px;align-items:stretch}.wixops-hero{background:linear-gradient(180deg,#071b33,#0d2f58);color:#fff;border-radius:30px;padding:38px 36px;box-shadow:0 30px 80px rgba(7,27,51,.20)}.wixops-hero .k{font-size:12px;font-weight:750;letter-spacing:.055em;text-transform:uppercase;color:#d7c4a6}.wixops-hero h2{font-size:clamp(30px,3.7vw,46px);line-height:1.06;letter-spacing:-.035em;margin-top:10px;color:#fff}.wixops-hero p{color:#d9e3ee;font-size:17px;line-height:1.62;margin-top:14px}.ops-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.ops-card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:20px 19px;box-shadow:0 14px 40px rgba(0,0,0,.06)}.ops-card b{display:block;color:#071b33;font-size:16px;letter-spacing:-.01em;margin-bottom:7px}.ops-card span{display:block;color:#424245;font-size:14px;line-height:1.55}.hierarchy-summary{grid-template-columns:repeat(4,1fr)}@media(max-width:1000px){.wixops-wrap{grid-template-columns:1fr}.hierarchy-summary{grid-template-columns:repeat(2,1fr)}}@media(max-width:680px){.ops-grid,.hierarchy-summary{grid-template-columns:1fr}.wixops{padding:42px 18px}.wixops-hero{padding:30px 24px}}
+
+
+/* ===== FACEBOOK COMMUNITY ARCHITECTURE PASS ===== */
+.core-social{border-color:rgba(0,113,227,.20);background:linear-gradient(180deg,#ffffff,#f3f8ff)}.core-social ul{grid-template-columns:repeat(2,1fr)}.core-social .node-explain + .node-explain{margin-top:8px}.core-social .node-label{background:rgba(0,113,227,.08);color:var(--blue);border-color:rgba(0,113,227,.16)}@media(max-width:760px){.core-social ul{grid-template-columns:1fr}}
+
+</style>
+</head>
+<body>
+<nav class="nav"><div class="nav-in"><div class="nav-brand">Központi Szövetség <span>· online hierarchia</span></div><div class="nav-links"><a href="#hierarchia">Hierarchia</a><a href="#wix-mukodtetes">Mobil működtetés</a><a href="#dor">DÖR</a><a href="#terkep">Térkép</a><a href="#miben-segit">Miben segít</a></div></div></nav>
+<header class="hero hierarchy-hero" id="hierarchia">
+  <div class="hero-inner hierarchy-inner">
+    <div class="eyebrow">Online hierarchia · belső digitális rendszer</div>
+    <h1>A Központi Szövetség online működési gerince.</h1>
+    <p class="sub">A központi weboldal nem önmagában áll: ez a digitális gyökérpont, amelyhez az oktatás, média, kreatív közösség, színház, közösségi kommunikáció és sajtómegjelenések rendszere kapcsolódik. Ehhez a belső struktúrához tagozódik be az összes tagszervezet online jelenléte.</p>
+
+    <div class="hierarchy-board" aria-label="A Központi Szövetség online hierarchiája">
+      <div class="hierarchy-root">
+        <span class="node-label">Központi szervezet · digitális gyökérpont</span>
+        <a href="https://www.kozpontiszovetseg.at" target="_blank" rel="noopener">www.kozpontiszovetseg.at</a>
+        <small>A fő weboldal fogja össze a bemutatkozást, híreket, programokat, tagszervezeteket és a hivatalos kapcsolati pontokat. Innen értelmezhető a teljes online hálózat.</small>
+      </div>
+
+      <div class="hierarchy-grid">
+        <article class="h-node core-social">
+          <span class="node-label">Közösségi belépési pont · Facebook-struktúra</span>
+          <a href="https://www.facebook.com/kozpontiszovetseg" target="_blank" rel="noopener">facebook.com/kozpontiszovetseg</a>
+          <p class="node-explain">A fő Facebook-oldal alatt csoportok formájában kapcsolódnak a saját projektek közösségei. Nincs külön Facebook-oldala minden projektnek: a közösséget így lehet egy központi logika szerint strukturálni, miközben a projekteknek saját, aktív csoportterük marad.</p>
+          <p class="node-explain">Aki a központi Facebook-oldal adminja, az közvetlenül hozzáfér a projektekhez kapcsolódó csoportokhoz is. Az online kommunikáció teljes struktúrája kialakítás alatt van; a felületek már működnek.</p>
+          <ul>
+            <li><a href="https://www.facebook.com/groups/becsimagyariskola/" target="_blank" rel="noopener"><strong>Bécsi Magyar Iskola Facebook-csoport</strong><span>Szülői, iskolai és közösségi kommunikáció.</span></a></li>
+            <li><a href="https://www.facebook.com/groups/becsinaplo/" target="_blank" rel="noopener"><strong>Bécsi Napló Facebook-csoport</strong><span>Cikkmegosztás, olvasói kapcsolódás és közösségi visszacsatolás.</span></a></li>
+            <li><a href="https://www.facebook.com/groups/vipach/" target="_blank" rel="noopener"><strong>VIPACH Facebook-csoport</strong><span>Alkotói közösség, programkommunikáció és aktivitás.</span></a></li>
+            <li><a href="https://www.facebook.com/groups/musicaltarsulat" target="_blank" rel="noopener"><strong>Musical Társulat Facebook-csoport</strong><span>Próbák, előadások, családi és nézői kapcsolódás.</span></a></li>
+          </ul>
+        </article>
+
+        <article class="h-node">
+          <span class="node-label">Oktatási és családi alrendszer</span>
+          <a href="https://www.magyariskola.at" target="_blank" rel="noopener">www.magyariskola.at</a>
+          <p class="node-explain">A Bécsi Magyar Iskola a közösség egyik legfontosabb utánpótlás- és családi pillére: hétvégi magyar oktatás, korosztályos foglalkozások, szülői kommunikáció, beszámolók, kérdőívek és sajtófigyelés.</p>
+          <ul>
+            <li><a href="https://2026.magyariskola.at" target="_blank" rel="noopener"><strong>2026.magyariskola.at</strong><span>Tanévbeszámoló és eredménykommunikáció: megmutatja, mi történt, kik dolgoztak, milyen közösségi érték jött létre.</span></a></li>
+            <li><a href="https://kerdoiv.magyariskola.at" target="_blank" rel="noopener"><strong>kerdoiv.magyariskola.at</strong><span>Visszajelzési és kapcsolatfelvételi felület: adatot ad a működés javításához és a családok igényeinek megértéséhez.</span></a></li>
+            <li><a href="https://www.magyariskola.at/orf-at" target="_blank" rel="noopener"><strong>ORF Magyarok sajtófigyelő</strong><span>Az iskola ORF Magyarok-megjelenéseinek gyűjtőfelülete, amely bizonyítja a közösségi munka nyilvános láthatóságát.</span></a></li>
+            <li><a href="https://rolunk.at/tag/becsi-magyar-iskola/" target="_blank" rel="noopener"><strong>rolunk.at sajtófigyelő</strong><span>Rólunk.at cikkek és megjelenések: külső média-visszaigazolás az iskola közösségi szerepéről.</span></a></li>
+            <li><a href="https://hu.wikipedia.org/wiki/Bécsi_Magyar_Iskola" target="_blank" rel="noopener"><strong>Wikipédia · Bécsi Magyar Iskola</strong><span>Strukturált, kereshető közismertségi réteg: a közösség nemcsak működik, hanem online entitásként is azonosítható.</span></a></li>
+            <li><a href="https://www.facebook.com/groups/becsimagyariskola/" target="_blank" rel="noopener"><strong>Facebook-csoport</strong><span>Napi szülői és közösségi kapcsolódás, programmegosztás és közösségi aktivitás.</span></a></li>
+            <li><a href="https://www.facebook.com/groups/becsimagyariskola/" target="_blank" rel="noopener"><strong>WhatsApp csoportrendszer</strong><span>Gyors, csoportszintű belső kommunikáció; a belépési információk a közösségi felületeken keresztül érhetők el.</span></a></li>
+          </ul>
+        </article>
+
+        <article class="h-node">
+          <span class="node-label">Szerkesztett magyar médiafelület</span>
+          <a href="https://www.becsinaplo.at" target="_blank" rel="noopener">www.becsinaplo.at</a>
+          <p class="node-explain">A Bécsi Napló a közösség szerkesztett nyilvánossága: cikkekkel, közéleti és kulturális tartalmakkal dokumentálja, értelmezi és visszakereshetővé teszi az ausztriai magyar élet eseményeit.</p>
+          <ul>
+            <li><a href="https://www.facebook.com/groups/becsinaplo/" target="_blank" rel="noopener"><strong>Bécsi Napló Facebook-csoport</strong><span>Közösségi elérés, olvasói kapcsolódás, cikkmegosztás és gyors visszacsatolás.</span></a></li>
+          </ul>
+        </article>
+
+        <article class="h-node">
+          <span class="node-label">Kreatív, vizuális és üzleti ág</span>
+          <a href="https://www.vipach.at" target="_blank" rel="noopener">www.vipach.at</a>
+          <p class="node-explain">A VIPACH a kreatív és vizuális közösségi ág: fotó, alkotóközösség, vizuális identitás, digitális jelenlét és üzleti pozicionálás. A hálózatban azt mutatja meg, hogyan válhat egy közösségi kezdeményezés professzionális digitális szereplővé.</p>
+          <ul>
+            <li><a href="https://business.vipach.at" target="_blank" rel="noopener"><strong>business.vipach.at</strong><span>Üzleti és stratégiai aloldal: vállalkozói, márkaépítési, vizuális és digitális pozicionálási irány.</span></a></li>
+            <li><a href="https://photoshop.vipach.at" target="_blank" rel="noopener"><strong>photoshop.vipach.at</strong><span>Kreatív / képfeldolgozási alrendszer: digitális eszköz és szolgáltatási kiterjesztés a VIPACH alatt.</span></a></li>
+            <li><a href="https://hu.wikipedia.org/wiki/VIPACH" target="_blank" rel="noopener"><strong>Wikipédia · VIPACH</strong><span>Strukturált entitásréteg: a szervezet nyilvánosan azonosítható, kereshető és hivatkozható.</span></a></li>
+            <li><a href="https://www.facebook.com/groups/vipach/" target="_blank" rel="noopener"><strong>VIPACH Facebook-csoport</strong><span>Alkotói közösség, programkommunikáció, tagsági aktivitás és közösségi láthatóság.</span></a></li>
+          </ul>
+        </article>
+
+        <article class="h-node">
+          <span class="node-label">Színházi és ifjúsági kulturális ág</span>
+          <a href="https://www.musicaltarsulat.at" target="_blank" rel="noopener">www.musicaltarsulat.at</a>
+          <p class="node-explain">A Bécsi Magyar Musical Társulat a magyar nyelvű színpadi, zenei és gyerek-ifjúsági alkotómunka felülete. A rendszerben azt mutatja meg, hogy a magyar nyelv nemcsak oktatási, hanem élő kulturális élmény is.</p>
+          <ul>
+            <li><a href="https://www.facebook.com/groups/musicaltarsulat" target="_blank" rel="noopener"><strong>Musical Társulat Facebook-csoport</strong><span>Közösségi szervezés, próbák, előadások, szülői és nézői kapcsolódás.</span></a></li>
+          </ul>
+        </article>
+      </div>
+    </div>
+
+    <div class="hierarchy-summary">
+      <div><b>Belső rendszer</b><span>A főoldal, intézményi oldalak, aloldalak, Wikipédia-jelenlét, sajtófigyelő és közösségi felületek egy közös digitális gerincre rendezve.</span></div>
+      <div><b>Közösségi struktúra</b><span>A Facebook-oldal alatt saját projektcsoportok futnak, így a kommunikáció központilag strukturálható, de projektszinten aktív marad.</span></div>
+      <div><b>DÖR logika</b><span>Ehhez a belső rendszerhez kapcsolódik a tagszervezeti térkép: így válik a diaszpóra látható, frissíthető és döntéstámogató működési hálózattá.</span></div>
+      <div><b>Mobil működtetés</b><span>Minden oldal Wix-alapon fut, ezért a média, események, fizetés, tagok, hírlevél és jogosultságok egy központi mobil alkalmazásból is kezelhetők.</span></div>
+    </div>
+  </div>
+</header>
+
+<section class="wixops" id="wix-mukodtetes">
+  <div class="wixops-wrap">
+    <div class="wixops-hero">
+      <div class="k">Wix-alapú központi működtetés</div>
+      <h2>A teljes online ökoszisztéma mobilról is irányítható.</h2>
+      <p>Ez nem különálló honlapok gyűjteménye, hanem egy egységes Wix-alapú működési környezet. A média kezelését, eseményrendszert, online fizetést, tagokat, hírleveleket és jogosultságokat egy központi mobil alkalmazásból is lehet kezelni.</p>
+      <p>A rendszerben különböző jogosultsági szintek vannak: szerkesztő, eseménykezelő, kommunikációs felelős, pénzügyi / fizetési felelős, tagsági kezelő vagy adminisztrátor. Így nem egy ember viszi a teljes terhet, hanem világos, hogy kinek mi a feladata. A teljes kommunikációs struktúra még kialakítás alatt van, de a fő felületek már működnek.</p>
+    </div>
+    <div class="ops-grid">
+      <div class="ops-card"><b>Média és tartalom</b><span>Hírek, cikkek, képek, közösségi megjelenések és sajtófigyelők kezelése a megfelelő felelősökkel.</span></div>
+      <div class="ops-card"><b>Facebook-csoport architektúra</b><span>A központi Facebook-oldal alá tartoznak a saját projektcsoportok. Így nem párhuzamos oldalak széttartó rendszere jön létre, hanem egy kezelhető közösségi struktúra.</span></div>
+      <div class="ops-card"><b>Eseményrendszer</b><span>Programok, eseményoldalak, jelentkezések, frissítések és közösségi kommunikáció egy szervezett rendszerben.</span></div>
+      <div class="ops-card"><b>Online fizetés</b><span>Jegyek, részvételi díjak, támogatások vagy szolgáltatások kezelése a Wix által adott lehetőségek szerint.</span></div>
+      <div class="ops-card"><b>Tagok és közösség</b><span>Tagok, érdeklődők, családok, szervezeti szereplők és kapcsolati körök kezelése átlátható módon.</span></div>
+      <div class="ops-card"><b>Hírlevél és kommunikáció</b><span>Célzott tájékoztatás, meghívók, beszámolók és közösségi üzenetek előkészítése és kiküldése.</span></div>
+      <div class="ops-card"><b>Jogosultság és feladat</b><span>Minden szereplő csak ahhoz fér hozzá, ami a feladata. Ez adja a rendszer működési biztonságát és skálázhatóságát.</span></div>
+    </div>
+  </div>
+</section>
+<section class="dor" id="dor"><div class="dor-wrap"><div class="dor-hero"><div class="k">A belső rendszer skálázása · DÖR 2026</div><h2>Innen skálázható a diaszpóra működési térképe.</h2><p>A fenti online hierarchia és a Wix-alapú mobil működtetés a működő bécsi minta. A DÖR 2026 ennek a logikának a tesztelhető kiterjesztése: 120 nap alatt megmutatja, hol vannak aktív közösségek, milyen események futnak, kik kapcsolhatók be fiatal működtetőként, és hol keletkezik kulturális, gazdasági vagy diplomáciai kapcsolódási pont.</p><p>Az érték egyszerű: a külügy nem statikus listát kap, hanem élő, frissíthető kapcsolati térképet — úgy, hogy a szervezetek autonómiája sértetlen marad.</p><div class="root-actions"><a class="pill gold" href="https://diaszpora.vipach.at" target="_blank" rel="noopener">diaszpora.vipach.at</a><span class="pill ghost">Jelszóval védett bemutató · a jelszót kérésre megküldjük</span></div></div><div class="dor-grid"><div class="dor-card"><h3>Mit old meg?</h3><p>A működő külhoni magyar közösségek sokszor láthatatlanok vagy széttagoltak. A DÖR egy közös térképre hozza a szervezeteket, eseményeket és kapcsolódási pontokat.</p></div><div class="dor-card"><h3>Mi az első termék?</h3><p>Szervezeti profil, eseménynaptár, fiatal szerkesztői hozzáférés és alap aktivitási visszajelzés. Nem nagy rendszer, hanem a legkisebb tesztelhető működési mag.</p></div><div class="dor-card"><h3>Miért védhető?</h3><p>Önkéntes, kiléphető és auditálható. Nem rangsorol, nem oszt támogatást, nem jelöl ki képviselőt és nem gyűjt politikai adatot.</p></div><div class="dor-card"><h3>Mi a döntés?</h3><p>120 nap után tényalapú Go / Modify / Stop döntés. Ha működik, skálázható. Ha módosítani kell, mérhető. Ha nem hoz értéket, leállítható.</p></div></div></div></section>
+<section class="mapsec" id="terkep"><div class="map-wrap"><div class="shead" style="padding-top:0"><div class="k">Tagszervezeti térkép</div><h2>Ausztriában nem egyetlen pont van. Hálózat van.</h2><p>A térkép névvel mutatja a tagszervezeteket, hogy látható legyen: a Központi Szövetség saját projektjei mellett egy sokrétű, aktívan dolgozó civil, kulturális, oktatási, ifjúsági és egyházi mezőt fog össze.</p></div><div class="map-panel"><div class="static-map" aria-label="Tagszervezeti térkép">
+  <svg class="austria-svg" viewBox="0 0 1000 520" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+    <defs>
+      <linearGradient id="mapGrad" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#eef6ff"/><stop offset="1" stop-color="#f7f2e7"/></linearGradient>
+      <filter id="softShadow"><feDropShadow dx="0" dy="14" stdDeviation="14" flood-color="#071b33" flood-opacity=".14"/></filter>
+    </defs>
+    <path d="M92,287 C142,245 190,246 232,222 C285,191 341,178 398,190 C456,203 498,151 560,165 C604,175 628,205 675,198 C726,190 758,160 806,180 C849,199 890,228 921,269 C885,311 832,318 783,333 C724,352 670,342 617,366 C566,389 505,383 447,360 C386,337 330,347 272,373 C219,397 167,384 128,350 C108,333 92,313 92,287 Z" fill="url(#mapGrad)" stroke="#cbd8e6" stroke-width="2" filter="url(#softShadow)"/>
+    <path d="M108,292 C160,268 207,260 263,236 C325,210 384,210 441,222 C490,233 534,192 589,199 C638,205 664,228 710,222 C761,215 805,210 860,235" fill="none" stroke="#d8c08b" stroke-width="3" stroke-linecap="round" opacity=".55"/>
+  </svg>
+  <div class="map-callout c-vorarlberg" data-map-region="Vorarlberg"><span class="pin"></span><h4>Vorarlberg · 2</h4><p>Vorarlbergi Magyar Egyesület<br/>Mi Magyarok Egymásért</p></div>
+  <div class="map-callout c-tirol" data-map-region="Tirol"><span class="pin"></span><h4>Tirol · 5</h4><p>Magyarház · IMIKE · 79. sz. Dr. Kozma György SJ cserkészcsapat · IMEASZ · Innsbrucki Magyar Katolikus Közösség</p></div>
+  <div class="map-callout c-salzburg" data-map-region="Salzburg"><span class="pin"></span><h4>Salzburg · 1</h4><p>SalzUng – Salzburgi Magyar Egyesület</p></div>
+  <div class="map-callout c-felso" data-map-region="Felső-Ausztria"><span class="pin"></span><h4>Felső-Ausztria · 4</h4><p>Felső-Ausztriai Magyarok Kultúregyesülete · Linzi Magyar Katolikus Közösség · Felső-Ausztriai Hétvégi Magyar Óvoda és Iskola · 80. sz. Árpád cserkészcsapat</p></div>
+  <div class="map-callout c-styria" data-map-region="Stájerország"><span class="pin"></span><h4>Stájerország · 4</h4><p>Grázi Magyar Egyesület · MEÖK · Gráci Magyar Katolikus Közösség · FemConnect Graz</p></div>
+  <div class="map-callout c-burgenland" data-map-region="Burgenland"><span class="pin"></span><h4>Burgenland · 2</h4><p>Alsóőri Magyar Kultúr- és Táncegyesület<br/>Közép-Burgenlandi Magyar Kultúregyesület</p></div>
+  <div class="map-callout c-vienna" data-map-region="Bécs"><span class="pin"></span><h4>Bécs · 10</h4><p>Ausztriai Magyar Kutatóintézet · Lean In Femspace · SVUNG · 72. sz. Széchenyi István cserkészcsapat · BIM · Kaláka Club · Napraforgók · Szent István Egylet · Bornemisza Péter Társaság · Nemzetközi Duna Filharmónia Baráti kör</p></div>
+</div><aside class="map-side"><h3>Régiós lefedettség</h3><div class="stats"><div class="stat"><b>10</b><span>Bécs</span></div><div class="stat"><b>2</b><span>Burgenland</span></div><div class="stat"><b>4</b><span>Felső-Ausztria</span></div><div class="stat"><b>1</b><span>Salzburg</span></div><div class="stat"><b>4</b><span>Stájerország</span></div><div class="stat"><b>5</b><span>Tirol</span></div><div class="stat"><b>2</b><span>Vorarlberg</span></div></div><input class="search" id="search" placeholder="Keresés név, régió vagy tevékenység szerint…"/><div class="controls" id="filters"><button class="control active" data-region="all">Mind</button><button class="control" data-region="Bécs">Bécs</button><button class="control" data-region="Burgenland">Burgenland</button><button class="control" data-region="Felső-Ausztria">Felső-Ausztria</button><button class="control" data-region="Salzburg">Salzburg</button><button class="control" data-region="Stájerország">Stájerország</button><button class="control" data-region="Tirol">Tirol</button><button class="control" data-region="Vorarlberg">Vorarlberg</button></div><p style="color:var(--muted);font-size:14px">A térkép most teljesen beágyazott, ezért nem függ külső térképcsempéktől vagy CDN-betöltéstől. A nevek régiós csomópontokban, olvashatóan jelennek meg.</p></aside></div><div class="member-grid" id="memberGrid">
+    <article class="member" data-region="Bécs" data-name="ausztriai magyar kutatóintézet">
+      <div class="member-top"><span class="num">01</span><span class="tag">Bécs</span><span class="tag soft">Kutatás · tudásközvetítés</span></div>
+      <h3>Ausztriai Magyar Kutatóintézet</h3>
+      <p class="place">Wien · ZVR-Zahl: 884465843</p>
+      <p>Tudományos-kulturális intézmény, amely előadásokkal, kerekasztalokkal, adatbázis-építéssel és az ausztriai magyar kisebbség kutatásával erősíti a bécsi magyar értelmiségi közeget.</p>
+      <a class="textlink" href="https://oeius.univie.ac.at" target="_blank" rel="noopener">Kapcsolódó felület megnyitása →</a>
+    </article>
+    <article class="member" data-region="Bécs" data-name="lean in femspace">
+      <div class="member-top"><span class="num">02</span><span class="tag">Bécs</span><span class="tag soft">Női szakmai hálózat</span></div>
+      <h3>Lean In Femspace</h3>
+      <p class="place">Wien · ZVR-Zahl: 1179703987</p>
+      <p>Nonprofit szakmai-közösségi platform külföldön újrakezdő magyar nőknek, mentorprogramokkal, workshopokkal és háromnyelvű közösségi jelenléttel.</p>
+      <a class="textlink" href="https://leaninfemspace.at" target="_blank" rel="noopener">Kapcsolódó felület megnyitása →</a>
+    </article>
+    <article class="member" data-region="Bécs" data-name="svung – bécsi magyar színház">
+      <div class="member-top"><span class="num">03</span><span class="tag">Bécs</span><span class="tag soft">Színház · kultúra</span></div>
+      <h3>SVUNG – Bécsi Magyar Színház</h3>
+      <p class="place">Wien · ZVR-Zahl: 825911870</p>
+      <p>Független magyar színtársulat Bécsben, amely repertoárelőadásokkal, közösségi színházi jelenléttel és magyar nyelvű kulturális megszólítással dolgozik.</p>
+      <a class="textlink" href="https://www.svung.at" target="_blank" rel="noopener">Kapcsolódó felület megnyitása →</a>
+    </article>
+    <article class="member" data-region="Bécs" data-name="72. sz. széchenyi istván cserkészcsapat">
+      <div class="member-top"><span class="num">04</span><span class="tag">Bécs</span><span class="tag soft">Cserkészet · ifjúság</span></div>
+      <h3>72. sz. Széchenyi István cserkészcsapat</h3>
+      <p class="place">Wien · ZVR-Zahl: 047300458</p>
+      <p>A bécsi magyar diaszpóra egyik stabil ifjúsági szervezete, rendszeres foglalkozásokkal, táborokkal és többgenerációs közösségépítéssel.</p>
+      <a class="textlink" href="https://cserkesz.at" target="_blank" rel="noopener">Kapcsolódó felület megnyitása →</a>
+    </article>
+    <article class="member" data-region="Bécs" data-name="bim – bécsi irodalmi műhely">
+      <div class="member-top"><span class="num">05</span><span class="tag">Bécs</span><span class="tag soft">Irodalom · műfordítás</span></div>
+      <h3>BIM – Bécsi Irodalmi Műhely</h3>
+      <p class="place">Wien · ZVR-Zahl: 1650444929</p>
+      <p>Új, műhelytípusú irodalmi közeg íróknak és műfordítóknak; szakmai készségfejlesztést és bécsi magyar kulturális kapcsolódást kínál.</p>
+      <a class="textlink" href="https://www.kozpontiszovetseg.at/tagszervezetek" target="_blank" rel="noopener">Kapcsolódó felület megnyitása →</a>
+    </article>
+    <article class="member" data-region="Bécs" data-name="kaláka club">
+      <div class="member-top"><span class="num">06</span><span class="tag">Bécs</span><span class="tag soft">Gazdasági-kulturális közösség</span></div>
+      <h3>Kaláka Club</h3>
+      <p class="place">Wien · ZVR-Zahl: 778587523</p>
+      <p>Régi bécsi magyar gazdasági és kulturális érdekközösség, előadásokkal, évkönyvekkel, konferenciákkal és közösségi programokkal.</p>
+      <a class="textlink" href="https://kalaka-club.at" target="_blank" rel="noopener">Kapcsolódó felület megnyitása →</a>
+    </article>
+    <article class="member" data-region="Bécs" data-name="napraforgók">
+      <div class="member-top"><span class="num">07</span><span class="tag">Bécs</span><span class="tag soft">Néptánc · népzene</span></div>
+      <h3>Napraforgók</h3>
+      <p class="place">Wien · ZVR-Zahl: 566523345</p>
+      <p>Bécsi magyar néptánc- és népzenei közösség, gyermek- és családi fókuszú hagyományőrző programstruktúrával.</p>
+      <a class="textlink" href="https://www.napraforgok.at" target="_blank" rel="noopener">Kapcsolódó felület megnyitása →</a>
+    </article>
+    <article class="member" data-region="Bécs" data-name="szent istván egylet">
+      <div class="member-top"><span class="num">08</span><span class="tag">Bécs</span><span class="tag soft">Jótékonyság · ösztöndíj</span></div>
+      <h3>Szent István Egylet</h3>
+      <p class="place">Wien · ZVR-Zahl: 246575229</p>
+      <p>1918-ban alapított bécsi jótékonysági szervezet, amely ösztöndíjalappal, adományokkal és a magyar bál karitatív erejével támogat külhoni magyar diákokat.</p>
+      <a class="textlink" href="https://ungarball.at" target="_blank" rel="noopener">Kapcsolódó felület megnyitása →</a>
+    </article>
+    <article class="member" data-region="Bécs" data-name="bornemisza péter társaság">
+      <div class="member-top"><span class="num">09</span><span class="tag">Bécs</span><span class="tag soft">Irodalom · közélet</span></div>
+      <h3>Bornemisza Péter Társaság</h3>
+      <p class="place">Wien · ZVR-Zahl: 250671590</p>
+      <p>A bécsi magyar irodalmi és közéleti nyilvánosság történeti szereplője, estekkel, közösségi programokkal és a Bécsi Naplóhoz kapcsolódó médiaközeggel.</p>
+      <a class="textlink" href="https://www.kozpontiszovetseg.at" target="_blank" rel="noopener">Kapcsolódó felület megnyitása →</a>
+    </article>
+    <article class="member" data-region="Bécs" data-name="nemzetközi duna filharmónia baráti kör">
+      <div class="member-top"><span class="num">10</span><span class="tag">Bécs</span><span class="tag soft">Zene · kulturális platform</span></div>
+      <h3>Nemzetközi Duna Filharmónia Baráti kör</h3>
+      <p class="place">Wien · ZVR-Zahl: 1137618189</p>
+      <p>Klasszikus zenei és közép-európai kulturális találkozásokat szervező platform, amely koncertprogramokon keresztül kapcsolja össze a közösségeket.</p>
+      <a class="textlink" href="https://www.kozpontiszovetseg.at/tagszervezetek" target="_blank" rel="noopener">Kapcsolódó felület megnyitása →</a>
+    </article>
+    <article class="member" data-region="Burgenland" data-name="alsóőri magyar kultúr- és táncegyesület">
+      <div class="member-top"><span class="num">11</span><span class="tag">Burgenland</span><span class="tag soft">Néptánc · hagyományőrzés</span></div>
+      <h3>Alsóőri Magyar Kultúr- és Táncegyesület</h3>
+      <p class="place">Unterwart / Alsóőr · ZVR-Zahl: 1847607707</p>
+      <p>Helyi, néptánc-központú hagyományőrző egyesület Alsóőrben, amely tánccal, bálokkal és közösségi szereplésekkel erősíti a burgenlandi magyar identitást.</p>
+      <a class="textlink" href="https://www.kozpontiszovetseg.at/tagszervezetek" target="_blank" rel="noopener">Kapcsolódó felület megnyitása →</a>
+    </article>
+    <article class="member" data-region="Burgenland" data-name="közép-burgenlandi magyar kultúregyesület">
+      <div class="member-top"><span class="num">12</span><span class="tag">Burgenland</span><span class="tag soft">Nyelv · folklór · közösség</span></div>
+      <h3>Közép-Burgenlandi Magyar Kultúregyesület</h3>
+      <p class="place">Oberpullendorf / Felsőpulya · ZVR-Zahl: 352107517</p>
+      <p>Közép-burgenlandi nyelvi és folklórközpontú egyesület, gyermek-, családi és szeniorprogramokkal, a helyi magyar örökség továbbadására építve.</p>
+      <a class="textlink" href="https://www.kozpontiszovetseg.at/tagszervezetek" target="_blank" rel="noopener">Kapcsolódó felület megnyitása →</a>
+    </article>
+    <article class="member" data-region="Felső-Ausztria" data-name="felső-ausztriai magyarok kultúregyesülete">
+      <div class="member-top"><span class="num">13</span><span class="tag">Felső-Ausztria</span><span class="tag soft">Kultúra · közösség</span></div>
+      <h3>Felső-Ausztriai Magyarok Kultúregyesülete</h3>
+      <p class="place">Linz · ZVR-Zahl: 520691483</p>
+      <p>A felső-ausztriai magyarok régi kulturális szervezete, amely a linzi és környékbeli közösség összetartását és a hétvégi magyar oktatás hátterét támogatja.</p>
+      <a class="textlink" href="https://www.kozpontiszovetseg.at/tagszervezetek" target="_blank" rel="noopener">Kapcsolódó felület megnyitása →</a>
+    </article>
+    <article class="member" data-region="Felső-Ausztria" data-name="linzi magyar katolikus közösség">
+      <div class="member-top"><span class="num">14</span><span class="tag">Felső-Ausztria</span><span class="tag soft">Egyházi közösség</span></div>
+      <h3>Linzi Magyar Katolikus Közösség</h3>
+      <p class="place">Linz</p>
+      <p>Magyar nyelvű liturgiát, lelkipásztori jelenlétet és közösségi alkalmakat biztosító egyházi közösség Linzben és a régióban.</p>
+      <a class="textlink" href="https://ausztria.katolikus.at" target="_blank" rel="noopener">Kapcsolódó felület megnyitása →</a>
+    </article>
+    <article class="member" data-region="Felső-Ausztria" data-name="felső-ausztriai hétvégi magyar óvoda és iskola">
+      <div class="member-top"><span class="num">15</span><span class="tag">Felső-Ausztria</span><span class="tag soft">Oktatás · anyanyelv</span></div>
+      <h3>Felső-Ausztriai Hétvégi Magyar Óvoda és Iskola</h3>
+      <p class="place">Wels / Linz · ZVR-Zahl: 520691483</p>
+      <p>Hétvégi magyar óvoda és iskola, amely a felső-ausztriai gyermekek anyanyelvi fejlődését és családi közösségbe kapcsolódását segíti.</p>
+      <a class="textlink" href="https://www.kozpontiszovetseg.at/tagszervezetek" target="_blank" rel="noopener">Kapcsolódó felület megnyitása →</a>
+    </article>
+    <article class="member" data-region="Felső-Ausztria" data-name="80. sz. árpád cserkészcsapat">
+      <div class="member-top"><span class="num">16</span><span class="tag">Felső-Ausztria</span><span class="tag soft">Cserkészet · ifjúság</span></div>
+      <h3>80. sz. Árpád cserkészcsapat</h3>
+      <p class="place">Wels · ZVR-Zahl: 422269350</p>
+      <p>Wels környéki magyar cserkészcsapat, amely ifjúsági neveléssel, közösségi programokkal és magyar identitásőrző tevékenységgel van jelen.</p>
+      <a class="textlink" href="https://arpadcscslinz.jimdofree.com" target="_blank" rel="noopener">Kapcsolódó felület megnyitása →</a>
+    </article>
+    <article class="member" data-region="Salzburg" data-name="salzung – salzburgi magyar egyesület">
+      <div class="member-top"><span class="num">17</span><span class="tag">Salzburg</span><span class="tag soft">Kultúra · oktatás · táborok</span></div>
+      <h3>SalzUng – Salzburgi Magyar Egyesület</h3>
+      <p class="place">Salzburg · ZVR-Zahl: 641989795</p>
+      <p>Salzburgi magyar kulturális és oktatási egyesület, amely anyanyelvi programokkal, művészeti eseményekkel, táborokkal és közösségi alkalmak szervezésével dolgozik.</p>
+      <a class="textlink" href="https://salzung.com" target="_blank" rel="noopener">Kapcsolódó felület megnyitása →</a>
+    </article>
+    <article class="member" data-region="Stájerország" data-name="grázi magyar egyesület">
+      <div class="member-top"><span class="num">18</span><span class="tag">Stájerország</span><span class="tag soft">Történeti közösségi egyesület</span></div>
+      <h3>Grázi Magyar Egyesület</h3>
+      <p class="place">Graz · ZVR-Zahl: 986510073</p>
+      <p>1888-ban alapított, nagy történeti mélységű gráci magyar szervezet, amely bálokkal, programokkal, anyanyelvi aktivitásokkal és közösségi háttérrel működik.</p>
+      <a class="textlink" href="https://www.grazimagyaregyesuelet.at" target="_blank" rel="noopener">Kapcsolódó felület megnyitása →</a>
+    </article>
+    <article class="member" data-region="Stájerország" data-name="magyar egyetemisták és öregdiákok klubja">
+      <div class="member-top"><span class="num">19</span><span class="tag">Stájerország</span><span class="tag soft">Egyetemisták · sajtó · közösség</span></div>
+      <h3>Magyar Egyetemisták és Öregdiákok Klubja</h3>
+      <p class="place">Graz · ZVR-Zahl: 771855885</p>
+      <p>A gráci magyar diákság és öregdiák-közösség platformja; közösségszervező, sajtókiadói és intézményi háttérszerepet lát el.</p>
+      <a class="textlink" href="https://www.meoek.at" target="_blank" rel="noopener">Kapcsolódó felület megnyitása →</a>
+    </article>
+    <article class="member" data-region="Stájerország" data-name="gráci magyar katolikus közösség">
+      <div class="member-top"><span class="num">20</span><span class="tag">Stájerország</span><span class="tag soft">Egyházi közösség</span></div>
+      <h3>Gráci Magyar Katolikus Közösség</h3>
+      <p class="place">Graz</p>
+      <p>Magyar nyelvű miséket, lelki programokat és közösségi alkalmakat szervező katolikus közösség a Graz-Seckaui Egyházmegye területén.</p>
+      <a class="textlink" href="https://www.grazimagyaregyesuelet.at" target="_blank" rel="noopener">Kapcsolódó felület megnyitása →</a>
+    </article>
+    <article class="member" data-region="Stájerország" data-name="femconnect graz">
+      <div class="member-top"><span class="num">21</span><span class="tag">Stájerország</span><span class="tag soft">Női · kulturális közösség</span></div>
+      <h3>FemConnect Graz</h3>
+      <p class="place">Graz · ZVR-Zahl: 1550405774</p>
+      <p>Új, dinamikus gráci magyar kultúregyesület, amely nőket érintő témákkal, kulturális programokkal és közösségi kapcsolódással szólítja meg a stájerországi magyarokat.</p>
+      <a class="textlink" href="https://femconnectgraz.at" target="_blank" rel="noopener">Kapcsolódó felület megnyitása →</a>
+    </article>
+    <article class="member" data-region="Tirol" data-name="magyarház">
+      <div class="member-top"><span class="num">22</span><span class="tag">Tirol</span><span class="tag soft">Diákotthon · kultúrcentrum</span></div>
+      <h3>Magyarház</h3>
+      <p class="place">Innsbruck · ZVR-Zahl: 768679342</p>
+      <p>Innsbrucki Magyar Diákotthon és Kultúrcentrum, a tiroli magyar közösség egyik fizikai és intézményi központja.</p>
+      <a class="textlink" href="https://ugarnheim.at" target="_blank" rel="noopener">Kapcsolódó felület megnyitása →</a>
+    </article>
+    <article class="member" data-region="Tirol" data-name="imike">
+      <div class="member-top"><span class="num">23</span><span class="tag">Tirol</span><span class="tag soft">Ifjúság · kultúra · néptánc</span></div>
+      <h3>IMIKE</h3>
+      <p class="place">Innsbruck · ZVR-Zahl: 1109648674</p>
+      <p>Innsbrucki magyar ifjúsági és kultúregyesület, amely családos, fiatal és kulturális közösségi programokkal kapcsolja össze a tiroli magyarokat.</p>
+      <a class="textlink" href="https://imike.org" target="_blank" rel="noopener">Kapcsolódó felület megnyitása →</a>
+    </article>
+    <article class="member" data-region="Tirol" data-name="79. sz. dr. kozma györgy sj cserkészcsapat">
+      <div class="member-top"><span class="num">24</span><span class="tag">Tirol</span><span class="tag soft">Cserkészet · ifjúság</span></div>
+      <h3>79. sz. Dr. Kozma György SJ cserkészcsapat</h3>
+      <p class="place">Innsbruck · ZVR-Zahl: 1109648674</p>
+      <p>Tiroli magyar cserkészcsapat, amely a Magyarházzal, az IMIKE-val és az egyházi közösséggel együtt erősíti az ifjúsági hálózatot.</p>
+      <a class="textlink" href="https://www.kozpontiszovetseg.at/tagszervezetek" target="_blank" rel="noopener">Kapcsolódó felület megnyitása →</a>
+    </article>
+    <article class="member" data-region="Tirol" data-name="imeasz">
+      <div class="member-top"><span class="num">25</span><span class="tag">Tirol</span><span class="tag soft">Akadémiai · egyetemista közösség</span></div>
+      <h3>IMEASZ</h3>
+      <p class="place">Innsbruck · ZVR-Zahl: 397763991</p>
+      <p>Innsbrucki Magyar Egyetemisták és Akadémikusok Szövetsége; történeti akadémiai és értelmiségi szervezet, 1958-as alapítási háttérrel.</p>
+      <a class="textlink" href="https://www.imeasz.at" target="_blank" rel="noopener">Kapcsolódó felület megnyitása →</a>
+    </article>
+    <article class="member" data-region="Tirol" data-name="innsbrucki magyar katolikus közösség">
+      <div class="member-top"><span class="num">26</span><span class="tag">Tirol</span><span class="tag soft">Egyházi közösség</span></div>
+      <h3>Innsbrucki Magyar Katolikus Közösség</h3>
+      <p class="place">Innsbruck</p>
+      <p>Liturgikus és közösségi tér a tiroli magyaroknak, amely a Magyarház környezetével és a helyi civil hálóval is összekapcsolódik.</p>
+      <a class="textlink" href="https://ausztria.katolikus.at" target="_blank" rel="noopener">Kapcsolódó felület megnyitása →</a>
+    </article>
+    <article class="member" data-region="Vorarlberg" data-name="vorarlbergi magyar egyesület">
+      <div class="member-top"><span class="num">27</span><span class="tag">Vorarlberg</span><span class="tag soft">Anyanyelvi oktatás · kultúra</span></div>
+      <h3>Vorarlbergi Magyar Egyesület</h3>
+      <p class="place">Altach / Feldkirch · ZVR-Zahl: 1582502393</p>
+      <p>Fiatal regionális szervezet, amely a Vorarlbergben élő magyarok kulturális identitását és a gyermekek anyanyelvi oktatását támogatja.</p>
+      <a class="textlink" href="https://www.kozpontiszovetseg.at/tagszervezetek" target="_blank" rel="noopener">Kapcsolódó felület megnyitása →</a>
+    </article>
+    <article class="member" data-region="Vorarlberg" data-name="mi magyarok egymásért">
+      <div class="member-top"><span class="num">28</span><span class="tag">Vorarlberg</span><span class="tag soft">Közösség · oktatás · szociális támogatás</span></div>
+      <h3>Mi Magyarok Egymásért</h3>
+      <p class="place">Feldkirch · ZVR-Zahl: 1802432708</p>
+      <p>Vorarlbergi magyar közösségi pólus, anyanyelvi programokkal, közösségi szervezéssel és szociális érzékenységű támogatási logikával.</p>
+      <a class="textlink" href="https://www.kozpontiszovetseg.at/tagszervezetek" target="_blank" rel="noopener">Kapcsolódó felület megnyitása →</a>
+    </article></div><p class="source-note">Forrásalap: a Központi Szövetség nyilvános tagszervezeti oldala és a csatolt tagszervezeti feltáró dosszié. A térképpontok a városi vagy régiós működési központot jelölik, nem minden esetben pontos postacímet.</p></div></section>
+<section class="help" id="miben-segit"><div class="shead" style="padding-top:0"><div class="k">Miben tud segíteni a DÖR?</div><h2>A láthatóságból működési erő lesz.</h2><p>A cél nem az, hogy a rendszer „felülről” megmondja, ki mit képvisel. A cél az, hogy a már működő közösségi munka látható, kereshető, támogatható és generációváltásra alkalmas legyen.</p></div><div class="help-grid"><div class="help-card"><h3>Közös adatlap és frissíthető profil</h3><p>Minden tagszervezetnek egységes minimum-adatlapja lehet: tevékenység, programok, régió, kapcsolat, nyelvek és működési fókusz.</p></div><div class="help-card"><h3>Közös programnaptár és programszállítás</h3><p>A szervezetek eseményei nem elszigetelten jelennek meg. Láthatóvá válik, mit lehet Bécsből Grazba, Salzburgba, Linzbe vagy Tirolba továbbvinni.</p></div><div class="help-card"><h3>Fiatal szerkesztők és utánpótlás</h3><p>A fiatalok nem csak célcsoportként, hanem működtetőként kapcsolódhatnak be: tartalom, archívum, esemény, digitális profil és közösségi visszajelzés.</p></div><div class="help-card"><h3>Átláthatóbb döntés-előkészítés</h3><p>A hálózat erősségei, hiányzó adatai és régiós kapcsolódásai egy felületen láthatók. Ez támogatási, szakmai és szervezeti döntéseknél is erős alap.</p></div><div class="help-card"><h3>Autonómia és adatvédelmi tűzfal</h3><p>A rendszer nem gyűjt politikai adatot, nem jelöl ki képviselőt és nem oszt támogatást. A szervezeti kontroll és az önkéntesség alapelv.</p></div><div class="help-card"><h3>Forrás- és együttműködési térkép</h3><p>Megmutatja, hol vannak erős oktatási, kulturális, egyházi, ifjúsági vagy szakmai csomópontok, és hol érdemes közös fejlesztést indítani.</p></div></div></section>
+<footer><div class="foot-in"><div class="foot-top">Zentralverband Ungarischer Vereine und Organisationen in Österreich</div>Ausztriai Magyar Egyesületek és Szervezetek Központi Szövetsége · ZVR-Zahl: 079797621 · A-1010 Wien, Schwedenplatz 2.<br/><a href="https://www.kozpontiszovetseg.at" target="_blank" rel="noopener">kozpontiszovetseg.at</a> · <a href="mailto:iroda@kozpontiszovetseg.at">iroda@kozpontiszovetseg.at</a> · DÖR bemutató: <a href="https://diaszpora.vipach.at" target="_blank" rel="noopener">diaszpora.vipach.at</a><br/>© 2026 Zentralverband Ungarischer Vereine und Organisationen in Österreich. Alle Rechte vorbehalten.</div></footer>
+<script>
+function normalizeText(value){return (value || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'');}
+function filterCards(region='all'){
+  const q = normalizeText(document.getElementById('search')?.value || '');
+  document.querySelectorAll('.member').forEach(card => {
+    const okRegion = region === 'all' || card.dataset.region === region;
+    const okText = !q || normalizeText(card.textContent).includes(q);
+    card.style.display = okRegion && okText ? '' : 'none';
+  });
+  document.querySelectorAll('.map-callout').forEach(node => {
+    const okRegion = region === 'all' || node.dataset.mapRegion === region;
+    const okText = !q || normalizeText(node.textContent).includes(q) || region !== 'all';
+    node.style.opacity = okRegion && okText ? '1' : '.24';
+    node.style.transform = okRegion && okText ? '' : 'scale(.98)';
+  });
+}
+window.addEventListener('DOMContentLoaded', () => {
+  document.getElementById('filters').addEventListener('click', e => {
+    if (!e.target.matches('.control')) return;
+    document.querySelectorAll('.control').forEach(b=>b.classList.remove('active'));
+    e.target.classList.add('active');
+    filterCards(e.target.dataset.region);
+  });
+  document.getElementById('search').addEventListener('input', () => {
+    const active = document.querySelector('.control.active')?.dataset.region || 'all';
+    filterCards(active);
+  });
+});
+</script>
+</body>
+</html>
