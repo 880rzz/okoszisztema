@@ -2106,6 +2106,194 @@ html.pdf-export details{
   }
 }
 
+
+/* ===== v43 · ASZTALI BLOKKRENDEZÉS: BÉCSI NAPLÓ + MUSICAL EGYMÁS MELLÉ ===== */
+/* Desktopon a két rövidebb blokk egy sorba kerül, így megszűnik a hosszú üres terület. */
+@media(min-width:901px){
+  .hierarchy-grid{
+    display:grid!important;
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    grid-auto-flow:row dense!important;
+    align-items:start!important;
+  }
+  .hierarchy-grid > .h-node{
+    align-self:start!important;
+    height:auto!important;
+    min-height:0!important;
+  }
+  .hierarchy-grid > .h-node.core-social{
+    order:1!important;
+    grid-column:1 / -1!important;
+  }
+  /* 2. blokk: Bécsi Magyar Iskola */
+  .hierarchy-grid > .h-node:nth-child(2){
+    order:2!important;
+    grid-column:auto!important;
+    grid-row:auto!important;
+  }
+  /* 4. blokk: VIPACH — az iskola mellé kerül, mert hasonlóan hosszabb blokk */
+  .hierarchy-grid > .h-node:nth-child(4){
+    order:3!important;
+    grid-column:auto!important;
+    grid-row:auto!important;
+  }
+  /* 3. blokk: Bécsi Napló */
+  .hierarchy-grid > .h-node:nth-child(3){
+    order:4!important;
+    grid-column:auto!important;
+    grid-row:auto!important;
+  }
+  /* 5. blokk: Musical Társulat — a Bécsi Napló mellé kerül */
+  .hierarchy-grid > .h-node:nth-child(5){
+    order:5!important;
+    grid-column:auto!important;
+    grid-row:auto!important;
+  }
+}
+
+
+/* ===== v44 · TAGSZERVEZETI KATALÓGUS CÍM SZIVÁRVÁNY ===== */
+/* "28 tagszervezet: regionális jelenlét..." cím szivárványos, animált minden nézetben. */
+.directory-head h3{
+  background-image:linear-gradient(90deg,#ff3b30,#ff9500,#ffcc00,#34c759,#0a84ff,#5e5ce6,#bf5af2,#ff3b30)!important;
+  background-size:300% 100%!important;
+  -webkit-background-clip:text!important;
+  background-clip:text!important;
+  -webkit-text-fill-color:transparent!important;
+  color:transparent!important;
+  animation:vipach-rainbow 9s linear infinite!important;
+}
+@media(prefers-reduced-motion:reduce){
+  .directory-head h3{
+    animation:none!important;
+    background-size:100% 100%!important;
+  }
+}
+
+
+/* ===== v45 · ASZTALI LINKMÉRET + FACEBOOK BLOKK EGYSÉGES SORKÖZ ===== */
+/* Desktopon a hero utáni blokkok linkjei olvashatóbb, nagyobb betűméretet kapnak. */
+@media(min-width:901px){
+  .hierarchy-grid .h-node .node-url{
+    font-size:18px!important;
+    line-height:1.45!important;
+    font-weight:650!important;
+    letter-spacing:-.018em!important;
+    margin-top:12px!important;
+    margin-bottom:38px!important;
+  }
+  .hierarchy-grid .h-node .node-url::before{
+    width:14px!important;
+    height:14px!important;
+    margin-right:8px!important;
+  }
+  .hierarchy-grid .h-node li a strong{
+    font-size:18px!important;
+    line-height:1.36!important;
+    letter-spacing:-.022em!important;
+    margin-bottom:8px!important;
+  }
+  .hierarchy-grid .h-node li a span{
+    font-size:15.5px!important;
+    line-height:1.58!important;
+  }
+  .hierarchy-grid .h-node li a{
+    padding-top:20px!important;
+    padding-bottom:20px!important;
+  }
+}
+
+/* A Központi Facebook-oldal blokk ugyanazt a vertikális ritmust kapja, mint a többi hero utáni blokk. */
+.core-social .node-head{
+  margin-bottom:26px!important;
+}
+.core-social .node-link{
+  margin-bottom:10px!important;
+}
+.core-social .node-url{
+  margin-top:12px!important;
+  margin-bottom:38px!important;
+  line-height:1.45!important;
+}
+.core-social .node-explain{
+  line-height:1.72!important;
+  margin:0 0 30px 0!important;
+}
+.core-social .node-explain + .node-explain{
+  margin-top:12px!important;
+  margin-bottom:36px!important;
+}
+.core-social ul{
+  margin-top:38px!important;
+  gap:18px!important;
+}
+@media(max-width:900px){
+  .core-social .node-url{
+    margin-top:10px!important;
+    margin-bottom:30px!important;
+  }
+  .core-social .node-explain{
+    line-height:1.68!important;
+    margin-bottom:30px!important;
+  }
+  .core-social .node-explain + .node-explain{
+    margin-top:10px!important;
+    margin-bottom:34px!important;
+  }
+}
+
+
+/* ===== v46 · FACEBOOK BLOKK AZONOS SZÉLESSÉG + BÉCSI NAPLÓ SZÖVEGREND ===== */
+/* A Központi Facebook blokk ne legyen teljes szélességű: asztali nézetben ugyanakkora kártya, mint a többi h-node blokk. */
+@media(min-width:1200px){
+  .hierarchy-grid{
+    grid-template-columns:repeat(3,minmax(0,1fr))!important;
+    grid-auto-flow:row!important;
+    align-items:start!important;
+  }
+  .hierarchy-grid > .h-node.core-social{
+    grid-column:auto!important;
+    grid-row:auto!important;
+    order:1!important;
+    width:auto!important;
+  }
+  .hierarchy-grid > .h-node:nth-child(2){order:2!important;grid-column:auto!important;grid-row:auto!important;}
+  .hierarchy-grid > .h-node:nth-child(4){order:3!important;grid-column:auto!important;grid-row:auto!important;}
+  .hierarchy-grid > .h-node:nth-child(3){order:4!important;grid-column:auto!important;grid-row:auto!important;}
+  .hierarchy-grid > .h-node:nth-child(5){order:5!important;grid-column:auto!important;grid-row:auto!important;}
+}
+@media(min-width:901px) and (max-width:1199px){
+  .hierarchy-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    grid-auto-flow:row!important;
+    align-items:start!important;
+  }
+  .hierarchy-grid > .h-node.core-social{
+    grid-column:auto!important;
+    grid-row:auto!important;
+    order:1!important;
+    width:auto!important;
+  }
+  .hierarchy-grid > .h-node:nth-child(2){order:2!important;grid-column:auto!important;grid-row:auto!important;}
+  .hierarchy-grid > .h-node:nth-child(3){order:3!important;grid-column:auto!important;grid-row:auto!important;}
+  .hierarchy-grid > .h-node:nth-child(5){order:4!important;grid-column:auto!important;grid-row:auto!important;}
+  .hierarchy-grid > .h-node:nth-child(4){order:5!important;grid-column:auto!important;grid-row:auto!important;}
+}
+
+/* A Bécsi Napló Facebook-csoport belső kártyája pontosan úgy rendeződjön, mint az alatta lévő VIPACH kártya. */
+.core-social li:nth-child(2) a{
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:flex-start!important;
+  justify-content:flex-start!important;
+  text-align:left!important;
+}
+.core-social li:nth-child(2) a strong,
+.core-social li:nth-child(2) a span{
+  text-align:left!important;
+  align-self:stretch!important;
+}
+
 </style>
 <meta content="#ffffff" name="theme-color"/><meta content="website" property="og:type"/><meta content="Központi Szövetség · Döntéshozói áttekintés · Online ökoszisztéma · DÖR 2026" property="og:title"/><meta content="Döntéshozói áttekintés az Ausztriai Magyar Egyesületek és Szervezetek Központi Szövetségéről, online ökoszisztémájáról, tagszervezeti hálózatáról és a DÖR 2026 pilotról." property="og:description"/><meta content="hu_HU" property="og:locale"/><meta content="summary_large_image" name="twitter:card"/><link href="?lang=hu" hreflang="hu" rel="alternate"/><link href="?lang=en" hreflang="en" rel="alternate"/><link href="?lang=de" hreflang="de" rel="alternate"/><link href="?lang=hu" hreflang="x-default" rel="alternate"/><script type="application/ld+json">{
   "@context": "https://schema.org",
