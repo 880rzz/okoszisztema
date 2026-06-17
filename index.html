@@ -8,7 +8,7 @@
 <meta content="index, follow" name="googlebot"/>
 <title>Központi Szövetség · Döntéshozói áttekintés · Online ökoszisztéma · DÖR 2026</title>
 <meta content="Döntéshozói áttekintés az Ausztriai Magyar Egyesületek és Szervezetek Központi Szövetségéről, online ökoszisztémájáról, tagszervezeti hálózatáról és a DÖR 2026 pilotról." name="description"/>
-
+<link crossorigin="" href="https://unpkg.com" rel="preconnect"/>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -1350,6 +1350,192 @@ html.pdf-export details{
   .pdf-trigger::before{content:"PDF";font-size:12px}
   .pdf-panel{right:-74px}
 }
+
+
+/* ===== v32 · DESKTOP CENTERING + EXECUTIVE HERO RAINBOW ===== */
+@media (min-width: 901px){
+  .wrap,.wrap-wide,.map-wrap,.hero-inner,.hierarchy-inner,
+  .executive-intro-wrap,.wixops-wrap,.dor-wrap,.contact-wrap,
+  .member-directory-box,.source-note{
+    margin-left:auto!important;
+    margin-right:auto!important;
+    text-align:center!important;
+  }
+  .executive-grid,.hierarchy-grid,.hierarchy-summary,.pf-grid,
+  .ops-grid,.dor-grid,.help-grid,.member-grid,.contact-grid,
+  .grid2,.grid3,.grid4,.exec-strip,.stats,.controls,.topic-grid,
+  .sublinks,.root-actions,.hero-actions{
+    justify-content:center!important;
+    text-align:center!important;
+  }
+  .h-node,.entity,.member,.dor-card,.ops-card,.help-card,
+  .executive-card,.stat,.exec-metric,.contact-card,.region-panel,
+  .map-side,.map-callout,.hierarchy-summary div{
+    text-align:center!important;
+    align-items:center!important;
+  }
+  .h-node ul,.core-social ul,.member-top,.member-cats,.category-pills,
+  .member-directory-box .member .textlink,.primary,.textlink,
+  .sublinks,.controls,.topic-grid{
+    justify-content:center!important;
+    align-self:center!important;
+    text-align:center!important;
+  }
+  .member-directory-box .member .textlink{
+    width:auto!important;
+    margin-left:auto!important;
+    margin-right:auto!important;
+  }
+  .map-title-row{
+    justify-content:center!important;
+    text-align:center!important;
+  }
+  .contact-card dl{
+    max-width:760px!important;
+    margin-left:auto!important;
+    margin-right:auto!important;
+  }
+}
+@media(prefers-reduced-motion:no-preference){
+  .executive-intro h1{
+    background-image:linear-gradient(90deg,#ff3b30,#ff9500,#ffcc00,#34c759,#0a84ff,#5e5ce6,#bf5af2,#ff3b30)!important;
+    background-size:300% 100%!important;
+    -webkit-background-clip:text!important;
+    background-clip:text!important;
+    -webkit-text-fill-color:transparent!important;
+    color:transparent!important;
+    animation:vipach-rainbow 9s linear infinite!important;
+  }
+}
+@media(prefers-reduced-motion:reduce){
+  .executive-intro h1{
+    background-image:linear-gradient(90deg,#0a84ff,#5e5ce6,#bf5af2)!important;
+    background-size:100% 100%!important;
+    -webkit-background-clip:text!important;
+    background-clip:text!important;
+    -webkit-text-fill-color:transparent!important;
+    color:transparent!important;
+  }
+}
+
+
+
+/* ===== v33 · DISPLAY TYPE SCALE -25% + RESPONSIVE HARDENING ===== */
+:root{
+  --display-xl-final:clamp(30px,4.35vw,57px);
+  --display-lg-final:clamp(28px,3.65vw,48px);
+  --display-md-final:clamp(24px,2.8vw,36px);
+}
+.executive-intro h1,
+.hierarchy-hero h1,
+.shead h2,
+.wixops-hero h2,
+.dor-hero h2,
+.root-card h2{
+  font-size:var(--display-xl-final)!important;
+  line-height:1.06!important;
+  letter-spacing:-.048em!important;
+}
+.h-node>a,
+.h-node .node-title,
+.entity h3,
+.member h3,
+.contact-card h3,
+.directory-head h3{
+  font-size:var(--display-md-final)!important;
+  line-height:1.12!important;
+}
+@media(max-width:900px){
+  .executive-intro h1,
+  .hierarchy-hero h1,
+  .shead h2,
+  .wixops-hero h2,
+  .dor-hero h2,
+  .root-card h2{
+    font-size:clamp(30px,8.5vw,44px)!important;
+    line-height:1.08!important;
+  }
+  .executive-intro .lead,
+  .hierarchy-hero .sub,
+  .shead p{
+    font-size:clamp(16px,4.3vw,19px)!important;
+    line-height:1.42!important;
+  }
+}
+@media(max-width:430px){
+  .executive-intro h1,
+  .hierarchy-hero h1,
+  .shead h2,
+  .wixops-hero h2,
+  .dor-hero h2,
+  .root-card h2{
+    font-size:32px!important;
+    line-height:1.1!important;
+    letter-spacing:-.04em!important;
+  }
+}
+
+
+
+/* ===== v35 · HAMBURGER MENU IN EVERY VIEW ===== */
+.nav .nav-links,
+.nav-in > .nav-links{
+  display:none!important;
+  visibility:hidden!important;
+}
+.nav-burger{
+  display:block!important;
+  visibility:visible!important;
+  flex:0 0 auto!important;
+}
+.nav-actions{
+  display:flex!important;
+  align-items:center!important;
+  gap:10px!important;
+  margin-left:auto!important;
+}
+.mobile-menu{
+  position:fixed!important;
+  top:56px!important;
+  left:0!important;
+  right:0!important;
+  z-index:1999!important;
+  display:none!important;
+}
+.mobile-menu.open{
+  display:block!important;
+}
+@media(max-width:900px){
+  .mobile-menu{top:52px!important;}
+}
+
+
+
+/* ===== v36 · INTERACTIVE MEMBER MAP HIGHLIGHT ===== */
+.region-panel li{cursor:pointer;border-radius:12px;transition:background .18s ease,opacity .18s ease,transform .18s ease,box-shadow .18s ease;}
+.region-panel li.topic-hit{background:rgba(0,102,204,.10)!important;box-shadow:inset 0 0 0 1px rgba(0,102,204,.26)!important;transform:translateY(-1px);}
+.region-panel li.topic-dim{opacity:.32;}
+.region-panel li.map-selected{background:#0a2540!important;color:#fff!important;box-shadow:0 12px 28px rgba(10,37,64,.18)!important;}
+.region-panel li.map-selected small,.region-panel li.map-selected::before{color:rgba(255,255,255,.72)!important;}
+.member.member-focus{outline:3px solid rgba(0,102,204,.42)!important;outline-offset:5px!important;box-shadow:0 18px 52px rgba(0,102,204,.18)!important;transform:translateY(-2px)!important;}
+
+
+
+/* ===== v37 · NON-OVERLAPPING MEMBER MAP GRID ===== */
+.executive-map{display:grid!important;grid-template-columns:repeat(2,minmax(220px,1fr))!important;grid-auto-rows:auto!important;gap:20px!important;align-items:start!important;min-height:auto!important;overflow:visible!important;}
+.executive-map::before{opacity:.55!important;}
+.map-title-row{grid-column:1 / -1!important;}
+.region-panel,.r-vorarlberg,.r-tirol,.r-salzburg,.r-felso,.r-vienna,.r-burgenland,.r-styria{grid-column:auto!important;grid-row:auto!important;width:100%!important;min-width:0!important;max-width:100%!important;align-self:start!important;}
+.r-vienna,.r-tirol{grid-column:span 1!important;}
+.region-panel header{display:grid!important;grid-template-columns:minmax(0,1fr) auto!important;align-items:start!important;gap:8px 12px!important;}
+.region-panel header strong{min-width:0!important;max-width:100%!important;overflow-wrap:anywhere!important;word-break:normal!important;}
+.region-panel header em{justify-self:end!important;align-self:start!important;white-space:nowrap!important;margin-left:8px!important;}
+.region-panel ol{min-width:0!important;}
+.region-panel li{min-width:0!important;overflow-wrap:anywhere!important;}
+.region-panel small{overflow-wrap:anywhere!important;}
+@media(max-width:1180px){.executive-map{grid-template-columns:1fr!important}.region-panel header{grid-template-columns:minmax(0,1fr) auto!important}}
+@media(max-width:520px){.region-panel header{grid-template-columns:1fr!important}.region-panel header em{justify-self:start!important;margin-left:0!important}}
+
 </style>
 <meta content="#ffffff" name="theme-color"/><meta content="website" property="og:type"/><meta content="Központi Szövetség · Döntéshozói áttekintés · Online ökoszisztéma · DÖR 2026" property="og:title"/><meta content="Döntéshozói áttekintés az Ausztriai Magyar Egyesületek és Szervezetek Központi Szövetségéről, online ökoszisztémájáról, tagszervezeti hálózatáról és a DÖR 2026 pilotról." property="og:description"/><meta content="hu_HU" property="og:locale"/><meta content="summary_large_image" name="twitter:card"/><link href="?lang=hu" hreflang="hu" rel="alternate"/><link href="?lang=en" hreflang="en" rel="alternate"/><link href="?lang=de" hreflang="de" rel="alternate"/><link href="?lang=hu" hreflang="x-default" rel="alternate"/><script type="application/ld+json">{
   "@context": "https://schema.org",
@@ -1373,8 +1559,8 @@ html.pdf-export details{
 }</script></head>
 <body>
 <nav class="nav"><div class="nav-in">
-<a aria-label="Központi Szövetség – kezdőlap" class="nav-brand" data-i18n="nav.brand" href="#attekintes">Központi Szövetség <span>· online hierarchia</span></a>
-<div class="nav-links"><a data-i18n="nav.structure" href="#attekintes">Áttekintés</a><a data-i18n="nav.operations" href="#wix-mukodtetes">Online működtetés</a><a data-i18n="nav.dor" href="#dor">DÖR projekt</a><a data-i18n="nav.members" href="#terkep">Tagszervezetek</a><a data-i18n="nav.benefits" href="#miben-segit">Előnyeink</a><a data-i18n="nav.contact" href="#kapcsolat">Kapcsolat</a></div>
+<a aria-label="Központi Szövetség – kezdőlap" class="nav-brand" data-i18n="nav.brand" href="#hierarchia">Központi Szövetség <span>· online hierarchia</span></a>
+<div class="nav-links"><a data-i18n="nav.structure" href="#hierarchia">Áttekintés</a><a data-i18n="nav.operations" href="#wix-mukodtetes">Online működtetés</a><a data-i18n="nav.dor" href="#dor">DÖR projekt</a><a data-i18n="nav.members" href="#terkep">Tagszervezetek</a><a data-i18n="nav.benefits" href="#miben-segit">Előnyeink</a><a data-i18n="nav.contact" href="#kapcsolat">Kapcsolat</a></div>
 <div class="nav-actions">
 <div aria-label="Nyelvválasztó" class="language-switcher" data-i18n-aria-label="aria.langswitch" role="group">
 <button aria-pressed="true" class="lang-btn active" data-lang="hu" type="button">HU</button>
@@ -1399,35 +1585,14 @@ html.pdf-export details{
 </div>
 </div></nav>
 <div aria-hidden="true" class="mobile-menu" id="mobileMenu">
-<a data-i18n="nav.structure" href="#attekintes">Áttekintés</a>
+<a data-i18n="nav.structure" href="#hierarchia">Áttekintés</a>
 <a data-i18n="nav.operations" href="#wix-mukodtetes">Online működtetés</a>
 <a data-i18n="nav.dor" href="#dor">DÖR projekt</a>
 <a data-i18n="nav.members" href="#terkep">Tagszervezetek</a>
 <a data-i18n="nav.benefits" href="#miben-segit">Előnyeink</a>
 <a data-i18n="nav.contact" href="#kapcsolat">Kapcsolat</a>
 </div>
-<section aria-label="Döntéshozói áttekintés" class="executive-intro" id="attekintes">
-<div class="executive-intro-wrap">
-<div class="k" data-i18n="intro.k">Döntéshozói áttekintés</div>
-<h1 data-i18n="intro.h">Az ausztriai magyar közösségi infrastruktúra központi ernyőszervezete.</h1>
-<p class="lead" data-i18n="intro.lead">Az Ausztriai Magyar Egyesületek és Szervezetek Központi Szövetsége 1980. február 9-én alakult, eredetileg 21 ausztriai magyar egyesület csúcsszervezeteként. Feladata a tagegyesületek együttműködésének összehangolása, a magyar népcsoport érdekképviselete, valamint olyan központi feladatok működtetése, amelyek egy-egy tagszervezet erejét meghaladják: magyar nyelvű oktatás, sajtó és kiadás, kulturális programok, tanácskozások és közös emlékezet.</p>
-<p class="lead secondary" data-i18n="intro.lead2">Ez az oldal ennek a szervezeti szerepnek a mai, digitális működési rétegét mutatja be: az online ökoszisztémát, a tagszervezeti hálózatot és a DÖR 2026 pilotot.</p>
-<div class="executive-grid">
-<article class="executive-card">
-<b data-i18n="intro.card1.h">Szervezeti mandátum</b>
-<span data-i18n="intro.card1.p">A Központi Szövetség érdekképviseleti és koordinációs szerepet lát el: összekapcsolja a tagszervezeteket, közös ügyeket szervez, és központi infrastruktúrát biztosít a magyar közösségi életnek.</span>
-</article>
-<article class="executive-card">
-<b data-i18n="intro.card2.h">Online ökoszisztéma</b>
-<span data-i18n="intro.card2.p">A weboldalak, sajtófelületek, közösségi csoportok, események és tagszervezeti adatok egy közös digitális gerincre rendezhetők, amely gyorsabb kommunikációt és átláthatóbb működtetést ad.</span>
-</article>
-<article class="executive-card">
-<b data-i18n="intro.card3.h">DÖR 2026 pilot</b>
-<span data-i18n="intro.card3.p">A DÖR nem statikus lista, hanem <strong>élő diaszpóra-kapcsolati pilot</strong>: 90–120 nap alatt bizonyítja, hogy a szervezetek, események, fiatal működtetők és helyi kapcsolódási pontok autonómia-sérelem nélkül láthatóvá tehetők.</span>
-</article>
-</div>
-</div>
-</section><header class="hero hierarchy-hero" id="hierarchia">
+<header class="hero hierarchy-hero" id="hierarchia">
 <div class="hero-inner hierarchy-inner">
 <div class="eyebrow" data-i18n="hero.eyebrow">Online hierarchia · belső digitális rendszer</div>
 <h1 data-i18n="hero.h1">A Központi Szövetség online működési gerince.</h1>
@@ -1474,6 +1639,7 @@ html.pdf-export details{
 <p class="node-explain" data-i18n="node.school.p1">A közösség <strong>utánpótlás- és családi pillére</strong>: <strong>hétvégi magyar oktatás</strong>, korosztályos foglalkozások, szülői kommunikáció, beszámolók és kérdőívek.</p>
 <ul>
 <li><a href="https://2026.magyariskola.at" rel="noopener" target="_blank"><strong data-i18n="linkstrong.31">2026.magyariskola.at</strong><span data-i18n="linkspan.32">Tanévbeszámoló és eredménykommunikáció: megmutatja, mi történt, kik dolgoztak, milyen közösségi érték jött létre.</span></a></li>
+<li><a href="https://www.becsiszelet.at" rel="noopener" target="_blank"><strong data-i18n="linkstrong.becsi.szelet">Bécsi Szelet · kulturális és művészeti online magazin</strong><span data-i18n="linkspan.becsi.szelet">2026 októberében induló új online magazinunk, kifejezetten a kultúra és a művészet jegyében.</span></a></li>
 <li><a href="https://kerdoiv.magyariskola.at" rel="noopener" target="_blank"><strong data-i18n="linkstrong.33">kerdoiv.magyariskola.at</strong><span data-i18n="linkspan.34">Visszajelzési és kapcsolatfelvételi felület: adatot ad a működés javításához és a családok igényeinek megértéséhez.</span></a></li>
 <li><a href="https://www.magyariskola.at/orf-at" rel="noopener" target="_blank"><strong data-i18n="linkstrong.35">ORF Magyarok sajtófigyelő</strong><span data-i18n="linkspan.36">Az iskola ORF Magyarok-megjelenéseinek gyűjtőfelülete, amely bizonyítja a közösségi munka nyilvános láthatóságát.</span></a></li>
 <li><a href="https://rolunk.at/tag/becsi-magyar-iskola/" rel="noopener" target="_blank"><strong data-i18n="linkstrong.37">rolunk.at sajtófigyelő</strong><span data-i18n="linkspan.38">Rólunk.at cikkek és megjelenések: külső média-visszaigazolás az iskola közösségi szerepéről.</span></a></li>
@@ -1485,19 +1651,20 @@ html.pdf-export details{
 <article class="h-node">
 <div class="node-head">
 <span class="node-icon ic-news"><svg fill="none" viewbox="0 0 24 24"><path d="M4 5h11a2 2 0 0 1 2 2v11a1 1 0 0 0 1 1h0a1 1 0 0 0 1-1V8M4 5v13a1 1 0 0 0 1 1h13M7 9h7M7 12.5h7M7 16h4" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></span>
-<span class="node-label" data-i18n="node.news.label">Szerkesztett magyar médiafelület</span>
+<span class="node-label" data-i18n="linkstrong.becsi.szelet":{"en":"Bécsi Szelet · cultural and arts online magazine","de":"Bécsi Szelet · Online-Magazin für Kultur und Kunst"},"linkspan.becsi.szelet":{"en":"Our new online magazine launches in October 2026, dedicated specifically to culture and the arts.","de":"Unser neues Online-Magazin startet im Oktober 2026 und widmet sich gezielt Kultur und Kunst."},"node.news.label">Szerkesztett magyar médiafelület</span>
 </div>
 <a class="node-link" href="https://www.becsinaplo.at" rel="noopener" target="_blank"><span class="node-title" data-i18n="node.news.title">Bécsi Napló</span></a>
 <a class="node-url" href="https://www.becsinaplo.at" rel="noopener" target="_blank">becsinaplo.at</a>
 <p class="node-explain" data-i18n="node.news.p1">A közösség <strong>szerkesztett nyilvánossága</strong>: cikkek <strong>dokumentálják</strong> és <strong>visszakereshetővé teszik</strong> az ausztriai magyar élet eseményeit.</p>
 <ul>
 <li><a href="https://www.facebook.com/groups/becsinaplo/" rel="noopener" target="_blank"><strong data-i18n="linkstrong.48">Bécsi Napló Facebook-csoport</strong><span data-i18n="linkspan.49">Közösségi elérés, olvasói kapcsolódás, cikkmegosztás és gyors visszacsatolás.</span></a></li>
+<li><a href="https://www.becsinaplo.eu/ujsag-archivum" rel="noopener" target="_blank"><strong data-i18n="linkstrong.becsi.archive">Bécsi Napló újságarchívum</strong><span data-i18n="linkspan.becsi.archive">Korábbi lapszámok és archív kiadványok visszakeresése.</span></a></li>
 </ul>
 </article>
 <article class="h-node">
 <div class="node-head">
 <span class="node-icon ic-creative"><svg fill="none" viewbox="0 0 24 24"><rect height="14" rx="2.5" stroke-width="1.7" width="18" x="3" y="5"></rect><circle cx="9" cy="10" r="1.8" stroke-width="1.7"></circle><path d="m4 17 4.5-4.5a1.5 1.5 0 0 1 2 0L16 18M14 14l1.8-1.8a1.5 1.5 0 0 1 2 0L20 14.5" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></span>
-<span class="node-label" data-i18n="node.vipach.label">Kreatív, vizuális és közösségi ág</span>
+<span class="node-label" data-i18n="linkstrong.becsi.archive":{"en":"Bécsi Napló archive","de":"Bécsi Napló Archiv"},"linkspan.becsi.archive":{"en":"Previous issues and archived publications.","de":"Frühere Ausgaben und archivierte Publikationen."},"node.vipach.label">Kreatív, vizuális és közösségi ág</span>
 </div>
 <a class="node-link" href="https://www.vipach.at" rel="noopener" target="_blank"><span class="node-title" data-i18n="node.vipach.title">VIPACH <span class="node-subtitle">(Vienna Photo Art &amp; Creative Hub)</span></span></a>
 <a class="node-url" href="https://www.vipach.at" rel="noopener" target="_blank">vipach.at</a>
@@ -1559,7 +1726,7 @@ html.pdf-export details{
 </div>
 </div>
 </section>
-<section class="dor" id="dor"><div class="dor-wrap"><div class="dor-hero"><div class="k" data-i18n="dor.k">DÖR 2026 · Diaszpóra Ökoszisztéma Rendszer</div><h2 data-i18n="dor.h2">Önkéntes pilot a diaszpóra láthatóságára, fiatalítására és autonómiájának erősítésére.</h2><p data-i18n="dor.p1"><strong>A DÖR 2026 egy élő diaszpóra-kapcsolati pilot.</strong> Nem a diaszpóráról gyűjt adatot, hanem <strong>a diaszpórával épít élő kapcsolatot</strong>: szervezeti profilokat, eseményeket, közösségi történeteket, fiatal működtetőket és helyi kapcsolódási pontokat tesz láthatóvá.</p><p data-i18n="dor.p2"><strong>A kiindulópont nem elméleti.</strong> A bécsi minta kicsiben már működési tapasztalatot adott; a pilot célja, hogy ezt <strong>90–120 nap alatt</strong> auditálható, önkéntes, kiléphető és skálázható rendszerlogikává tegye.</p><div class="root-actions"><a class="pill gold" data-dor-link="true" data-dor-hu="dor-2026.html" data-dor-en="dor-2026-en.html" data-dor-de="dor-2026-de.html" data-i18n="dor.pilot" href="dor-2026.html" rel="noopener">DÖR 2026 részletes oldal megnyitása</a><div class="password-note" data-i18n="dor.password">jelszó nélkül megnyitható döntés-előkészítő oldal</div></div></div><div class="dor-grid"><div class="dor-card"><h3 data-i18n="dorcard.h.107">Milyen fájdalmat old?</h3><p data-i18n="dorcard.p.108">A diaszpóra sok helyen <strong>láthatatlanul dolgozik</strong>: események, iskolák, klubok, közösségi történetek és önkéntes teljesítmények gyakran helyi csatornákban maradnak. A DÖR ezekből <strong>élő, kereshető és frissíthető működési képet</strong> épít.</p></div><div class="dor-card"><h3 data-i18n="dorcard.h.109">Mi az első termék?</h3><p data-i18n="dorcard.p.110"><strong>Szervezeti profil, eseménynaptár, Junior Hub-hozzáférés és alap aktivitási visszajelzés.</strong> Nem teljes globális rendszer, hanem a <strong>legkisebb bizonyítható pilotmag</strong>, amely megmutatja, használják-e a szervezetek és bevonhatók-e fiatal működtetők.</p></div><div class="dor-card"><h3 data-i18n="dorcard.h.111">Mi védi az autonómiát?</h3><p data-i18n="dorcard.p.112"><strong>Önkéntes, kiléphető és nem kontrolláló.</strong> Nem rangsorol, nem oszt támogatást, nem jelöl ki képviselőt, nem dönt legitimációról, és <strong>nem gyűjt politikai vagy világnézeti adatot</strong>.</p></div><div class="dor-card"><h3 data-i18n="dorcard.h.113">Mi a döntési kapu?</h3><p data-i18n="dorcard.p.114"><strong>90–120 nap után Go / Modify / Stop döntés.</strong> Ha működik, skálázható; ha javítani kell, módosítható; ha nem bizonyít közösségi értéket vagy nem zárható a kockázat, <strong>leállítható</strong>.</p></div></div></div></section>
+<section class="dor" id="dor"><div class="dor-wrap"><div class="dor-hero"><div class="k" data-i18n="dor.k">DÖR 2026 · Diaszpóra Ökoszisztéma Rendszer</div><h2 data-i18n="dor.h2">Önkéntes pilot a diaszpóra láthatóságára, fiatalítására és autonómiájának erősítésére.</h2><p data-i18n="dor.p1"><strong>A DÖR 2026 egy élő diaszpóra-kapcsolati pilot.</strong> Nem a diaszpóráról gyűjt adatot, hanem <strong>a diaszpórával épít élő kapcsolatot</strong>: szervezeti profilokat, eseményeket, közösségi történeteket, fiatal működtetőket és helyi kapcsolódási pontokat tesz láthatóvá.</p><p data-i18n="dor.p2"><strong>A kiindulópont nem elméleti.</strong> A bécsi minta kicsiben már működési tapasztalatot adott; a pilot célja, hogy ezt <strong>90–120 nap alatt</strong> auditálható, önkéntes, kiléphető és skálázható rendszerlogikává tegye.</p><div class="root-actions"><a class="pill gold" data-i18n="dor.pilot" href="dor-2026.html" rel="noopener">DÖR 2026 részletes oldal megnyitása</a><div class="password-note" data-i18n="dor.password">jelszó nélkül megnyitható döntés-előkészítő oldal</div></div></div><div class="dor-grid"><div class="dor-card"><h3 data-i18n="dorcard.h.107">Milyen fájdalmat old?</h3><p data-i18n="dorcard.p.108">A diaszpóra sok helyen <strong>láthatatlanul dolgozik</strong>: események, iskolák, klubok, közösségi történetek és önkéntes teljesítmények gyakran helyi csatornákban maradnak. A DÖR ezekből <strong>élő, kereshető és frissíthető működési képet</strong> épít.</p></div><div class="dor-card"><h3 data-i18n="dorcard.h.109">Mi az első termék?</h3><p data-i18n="dorcard.p.110"><strong>Szervezeti profil, eseménynaptár, Junior Hub-hozzáférés és alap aktivitási visszajelzés.</strong> Nem teljes globális rendszer, hanem a <strong>legkisebb bizonyítható pilotmag</strong>, amely megmutatja, használják-e a szervezetek és bevonhatók-e fiatal működtetők.</p></div><div class="dor-card"><h3 data-i18n="dorcard.h.111">Mi védi az autonómiát?</h3><p data-i18n="dorcard.p.112"><strong>Önkéntes, kiléphető és nem kontrolláló.</strong> Nem rangsorol, nem oszt támogatást, nem jelöl ki képviselőt, nem dönt legitimációról, és <strong>nem gyűjt politikai vagy világnézeti adatot</strong>.</p></div><div class="dor-card"><h3 data-i18n="dorcard.h.113">Mi a döntési kapu?</h3><p data-i18n="dorcard.p.114"><strong>90–120 nap után Go / Modify / Stop döntés.</strong> Ha működik, skálázható; ha javítani kell, módosítható; ha nem bizonyít közösségi értéket vagy nem zárható a kockázat, <strong>leállítható</strong>.</p></div></div></div></section>
 <section class="mapsec" id="terkep"><div class="map-wrap"><div class="shead" style="padding-top:0"><div class="k" data-i18n="map.k">Tagszervezeti térkép</div><h2 data-i18n="map.h2">Ausztriában nem egyetlen pont van. Hálózat van.</h2><p data-i18n="map.p">A Központi Szövetség <strong>nem csak saját projekteket</strong> működtet: <strong>több régiót, több funkciót és több generációt</strong> összefogó tagszervezeti hálózatot. Itt <strong>minden szervezet külön látható</strong>, régió és szerep szerint.</p></div><div class="exec-strip">
 <div class="exec-metric"><b>28</b><span data-i18n="exec.118">egyenként látható tagszervezet</span></div>
 <div class="exec-metric"><b>7</b><span data-i18n="exec.119">régiós klaszter Ausztriában</span></div>
@@ -1873,6 +2040,7 @@ window.addEventListener('DOMContentLoaded', () => {
   filterCards();
 });
 </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 <script>
 (function(){
   function openAllForPdf(){
@@ -2035,16 +2203,41 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
-</script><script>(function(){
-  function syncDorLink(){
-    const link=document.querySelector('[data-dor-link]');
-    if(!link)return;
-    const lang=(document.documentElement.lang||'hu').toLowerCase();
-    link.setAttribute('href',link.getAttribute('data-dor-'+lang)||link.getAttribute('data-dor-hu')||'dor-2026.html');
-  }
-  document.addEventListener('DOMContentLoaded',function(){
-    syncDorLink();
-    document.querySelectorAll('.lang-btn').forEach(btn=>btn.addEventListener('click',function(){setTimeout(syncDorLink,80)}));
-  });
-})();</script></body>
+</script>
+<script id="autoKeywordEmphasisScript">
+(function(){
+  const KEYWORDS={
+    hu:['közösségi infrastruktúra','tagszervezeti hálózat','Központi Szövetség','online ökoszisztéma','működési kapacitás','aktivitási visszajelzés','eseménynaptár','tagszervezetek','DÖR 2026','Junior Hub','döntéshozói','külügyi','digitális','oktatás','kultúra','cserkészet','ifjúság','média','egyházi','szakmai','jótékonyság','autonómia','anyanyelv','fiatalok'],
+    en:['community infrastructure','member-organisation network','Central Association','online ecosystem','operating capacity','activity feedback','event calendar','member organisations','DÖR 2026','Junior Hub','foreign-policy','decision-makers','digital','education','culture','scouting','youth','media','church','professional','charity','autonomy','mother tongue','young people'],
+    de:['Community-Infrastruktur','Netzwerk der Mitgliedsorganisationen','Zentralverband','Online-Ökosystem','operative Kapazität','Aktivitätsrückmeldung','Veranstaltungskalender','Mitgliedsorganisationen','DÖR-2026','DÖR 2026','Junior Hub','außenpolitisch','Entscheider','digital','Bildung','Kultur','Pfadfinder','Jugend','Medien','Kirche','beruflich','Wohltätigkeit','Autonomie','Muttersprache','junge']
+  };
+  const SELECTOR='.sub,.node-explain,.hierarchy-root small,.hierarchy-summary span,.wixops-hero p,.ops-card span,.dor-hero p,.dor-card p,.shead p,.map-side p,.map-callout p,.member p,.source-note,.help-card p,.contact-card p,.contact-card dd,.domain,.place,.desc,.entity p,.password-note';
+  function esc(s){return s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');}
+  function lang(){return (document.documentElement.lang||'hu').slice(0,2).toLowerCase();}
+  function words(){return (KEYWORDS[lang()]||KEYWORDS.hu).slice().sort((a,b)=>b.length-a.length);}
+  function skip(n){const p=n.parentElement;return !p||!!p.closest('strong,b,a,script,style,textarea,code,pre,.language-switcher,.pdf-download-menu');}
+  function emph(el,phrases){if(!el)return;const w=document.createTreeWalker(el,NodeFilter.SHOW_TEXT,{acceptNode(n){return(!skip(n)&&n.nodeValue&&n.nodeValue.trim())?NodeFilter.FILTER_ACCEPT:NodeFilter.FILTER_REJECT;}});const nodes=[];while(w.nextNode())nodes.push(w.currentNode);nodes.forEach(n=>{let t=n.nodeValue,c=false;phrases.forEach(ph=>{const r=new RegExp('('+esc(ph)+')','gi');if(r.test(t)){t=t.replace(r,'<strong>$1</strong>');c=true;}});if(c){const span=document.createElement('span');span.innerHTML=t;n.replaceWith(...Array.from(span.childNodes));}});}
+  let timer=null;function run(){clearTimeout(timer);timer=setTimeout(()=>{const ps=words();document.querySelectorAll(SELECTOR).forEach(el=>emph(el,ps));},30);}
+  document.addEventListener('DOMContentLoaded',()=>{run();const orig=window.KSZ_i18n&&window.KSZ_i18n.setLanguage;if(typeof orig==='function'){window.KSZ_i18n.setLanguage=function(l){const r=orig.call(window.KSZ_i18n,l);setTimeout(run,0);return r;};}new MutationObserver(run).observe(document.documentElement,{childList:true,subtree:true,characterData:true,attributes:true,attributeFilter:['lang']});});
+})();
+</script>
+
+
+<script id="interactiveMemberMapScript">
+(function(){
+  function normalize(value){return(value||'').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/\s+/g,' ').trim();}
+  function firstLabel(li){const clone=li.cloneNode(true);clone.querySelectorAll('small').forEach(s=>s.remove());return clone.textContent.trim();}
+  function topics(){return Array.from(document.querySelectorAll('.topic-toggle.active')).map(btn=>btn.dataset.topic||'').filter(Boolean);}
+  function activeRegion(){return document.querySelector('.control.active')?.dataset.region||'all';}
+  function topicMatch(text,topic){if(!topic)return true;const hay=normalize(text);return normalize(topic).split(/\s+/).filter(Boolean).some(word=>hay.includes(word));}
+  function findMemberByName(label){const n=normalize(label);let best=null;document.querySelectorAll('.member').forEach(card=>{const name=normalize(card.dataset.name||card.querySelector('h3')?.textContent||'');if(name&&(name===n||name.includes(n)||n.includes(name)))best=card;});return best;}
+  function buildLinks(){document.querySelectorAll('.region-panel li').forEach(li=>{if(li.dataset.mapReady==='1')return;const label=firstLabel(li);const card=findMemberByName(label);if(card){li.dataset.orgName=card.dataset.name||normalize(label);li.dataset.search=(card.textContent+' '+li.textContent).trim();li.setAttribute('role','button');li.setAttribute('tabindex','0');li.setAttribute('title','Tagszervezeti box megnyitása');}li.dataset.mapReady='1';});}
+  function refreshHighlights(){buildLinks();const selectedTopics=topics();const region=activeRegion();document.querySelectorAll('.region-panel li[data-org-name]').forEach(li=>{const panel=li.closest('.region-panel');const regionOk=region==='all'||!panel||panel.dataset.mapRegion===region;const topicOk=!selectedTopics.length||selectedTopics.some(t=>topicMatch(li.dataset.search,t));li.classList.toggle('topic-hit',selectedTopics.length>0&&topicOk&&regionOk);li.classList.toggle('topic-dim',selectedTopics.length>0&&(!topicOk||!regionOk));});}
+  function focusMember(li){const name=li.dataset.orgName;if(!name)return;const target=Array.from(document.querySelectorAll('.member')).find(card=>normalize(card.dataset.name||card.querySelector('h3')?.textContent||'')===normalize(name));if(!target)return;document.querySelectorAll('.region-panel li.map-selected').forEach(x=>x.classList.remove('map-selected'));document.querySelectorAll('.member.member-focus').forEach(x=>x.classList.remove('member-focus'));li.classList.add('map-selected');if(target.style.display==='none')target.style.display='';target.classList.add('member-focus');target.scrollIntoView({behavior:'smooth',block:'center'});setTimeout(()=>target.classList.remove('member-focus'),4200);}
+  function attachClicks(){buildLinks();document.querySelectorAll('.region-panel li[data-org-name]').forEach(li=>{if(li.dataset.clickReady==='1')return;li.addEventListener('click',()=>focusMember(li));li.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();focusMember(li);}});li.dataset.clickReady='1';});}
+  document.addEventListener('DOMContentLoaded',()=>{attachClicks();refreshHighlights();const original=window.filterCards;if(typeof original==='function'){window.filterCards=function(){const result=original.apply(this,arguments);setTimeout(refreshHighlights,0);return result;};}document.addEventListener('click',e=>{if(e.target.closest('.topic-toggle,.control,.clear-topics'))setTimeout(refreshHighlights,0);});const originalLang=window.KSZ_i18n&&window.KSZ_i18n.setLanguage;if(typeof originalLang==='function'){window.KSZ_i18n.setLanguage=function(lang){const result=originalLang.call(window.KSZ_i18n,lang);setTimeout(()=>{buildLinks();attachClicks();refreshHighlights();},0);return result;};}});
+})();
+</script>
+
+</body>
 </html>
