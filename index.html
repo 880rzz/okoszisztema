@@ -1521,503 +1521,78 @@ html.pdf-export details{
 
 
 
-/* ===== v52 · EXACT MOBILE CARD WIDTH ON DESKTOP + DOWNWARD HAMBURGER ===== */
-:root{--ksz-desktop-mobile-width:520px;}
-@media (min-width:761px){
-  .hierarchy-inner,
-  .hierarchy-board,
-  .hierarchy-grid,
-  .hierarchy-summary,
-  .wixops-wrap,
-  .dor-wrap,
-  .map-wrap,
-  .map-panel,
-  .member-directory-box,
-  .member-grid,
-  .help-grid,
-  .contact-wrap,
-  .contact-grid,
-  .foot-in{
-    max-width:var(--ksz-desktop-mobile-width)!important;
-    width:100%!important;
-    margin-left:auto!important;
-    margin-right:auto!important;
-  }
-  .hierarchy-root,
-  .h-node,
-  .core-social,
-  .wixops-hero,
-  .ops-card,
-  .dor-hero,
-  .dor-card,
-  .map-side,
-  .member,
-  .help-card,
-  .main-contact,
-  .contact-list,
-  .contact-card,
-  .exec-metric,
-  .stat{
-    width:100%!important;
-    max-width:var(--ksz-desktop-mobile-width)!important;
-    justify-self:center!important;
-    align-self:start!important;
-  }
-  .hierarchy-grid .core-social,
-  .hierarchy-grid .h-node{
-    padding:clamp(24px,3vw,34px) clamp(20px,3vw,28px)!important;
-    border-radius:28px!important;
-  }
-  .core-social .node-link,
-  .h-node .node-link,
-  .h-node>a:not(.node-url){
-    max-width:100%!important;
-    font-size:clamp(28px,3vw,38px)!important;
-    line-height:1.06!important;
-    margin-left:auto!important;
-    margin-right:auto!important;
-  }
-  .h-node .node-explain,
-  .core-social .node-explain{
-    max-width:430px!important;
-    margin-left:auto!important;
-    margin-right:auto!important;
-  }
-  .h-node ul,
-  .root-press-links,
-  .node-details-panel{
-    max-width:430px!important;
-  }
-  .h-node li a,
-  .root-press-links a,
-  .node-details-panel a{
-    max-width:430px!important;
-    margin-left:auto!important;
-    margin-right:auto!important;
-  }
+/* ===== v37 · NON-OVERLAPPING MEMBER MAP GRID ===== */
+.executive-map{
+  display:grid!important;
+  grid-template-columns:repeat(2,minmax(220px,1fr))!important;
+  grid-auto-rows:auto!important;
+  gap:20px!important;
+  align-items:start!important;
+  min-height:auto!important;
+  overflow:visible!important;
 }
-
-/* A hamburger minden nézetben lefelé, a fejléc alól nyíljon, ne oldalról és ne teljesen széthúzva. */
-.mobile-menu{
-  position:fixed!important;
-  top:56px!important;
-  left:50%!important;
-  right:auto!important;
-  width:min(520px,calc(100vw - 28px))!important;
-  max-height:calc(100dvh - 68px)!important;
-  overflow:auto!important;
-  transform:translate(-50%,-10px)!important;
-  opacity:0!important;
-  visibility:hidden!important;
-  pointer-events:none!important;
-  display:flex!important;
-  flex-direction:column!important;
-  border-radius:0 0 24px 24px!important;
-  border:1px solid rgba(0,0,0,.08)!important;
-  border-top:0!important;
-  box-shadow:0 24px 70px rgba(0,0,0,.16)!important;
-  background:rgba(255,255,255,.96)!important;
-  backdrop-filter:saturate(180%) blur(22px)!important;
-  -webkit-backdrop-filter:saturate(180%) blur(22px)!important;
-  transition:transform .24s ease, opacity .2s ease, visibility .2s ease!important;
+.executive-map::before{
+  opacity:.55!important;
 }
-.mobile-menu.open{
-  display:flex!important;
-  transform:translate(-50%,0)!important;
-  opacity:1!important;
-  visibility:visible!important;
-  pointer-events:auto!important;
+.map-title-row{
+  grid-column:1 / -1!important;
 }
-@media(max-width:900px){
-  .mobile-menu{
-    top:52px!important;
-    width:calc(100vw - 24px)!important;
-    border-radius:0 0 22px 22px!important;
-  }
+.region-panel,
+.r-vorarlberg,.r-tirol,.r-salzburg,.r-felso,.r-vienna,.r-burgenland,.r-styria{
+  grid-column:auto!important;
+  grid-row:auto!important;
+  width:100%!important;
+  min-width:0!important;
+  max-width:100%!important;
+  align-self:start!important;
 }
-
-
-
-/* ===== v53 · SAME RAINBOW TARGETS ON MOBILE AND DESKTOP ===== */
-@keyframes ksz-rainbow-unified{
-  0%{background-position:0% 50%}
-  50%{background-position:100% 50%}
-  100%{background-position:0% 50%}
+.r-vienna,
+.r-tirol{
+  grid-column:span 1!important;
 }
-:root{
-  --ksz-rainbow-unified:linear-gradient(90deg,#ff3b30,#ff9500,#ffcc00,#34c759,#0a84ff,#5e5ce6,#bf5af2,#ff3b30);
+.region-panel header{
+  display:grid!important;
+  grid-template-columns:minmax(0,1fr) auto!important;
+  align-items:start!important;
+  gap:8px 12px!important;
 }
-/* Pontosan ezek a főcímek legyenek szivárványosak minden nézetben. */
-.hierarchy-hero h1,
-.hierarchy-root .node-link,
-.hierarchy-grid .h-node .node-link,
-.h-node > a:not(.node-url):not(.node-details-trigger),
-.shead h2,
-.directory-head h3,
-.member h3,
-.wixops-hero h2,
-.ops-card b,
-.dor-hero h2,
-.dor-card h3,
-.help-card h3,
-.contact-section .shead h2,
-.main-contact h3,
-.contact-list h3{
-  background-image:var(--ksz-rainbow-unified)!important;
-  background-size:320% 100%!important;
-  background-clip:text!important;
-  -webkit-background-clip:text!important;
-  color:transparent!important;
-  -webkit-text-fill-color:transparent!important;
-  animation:ksz-rainbow-unified 8s ease infinite!important;
-  text-decoration:none!important;
-}
-/* Ne színezze át a linkeket, URL-eket, domaineket és kezelőgombokat. */
-a.node-url,
-.node-url,
-.node-subtitle,
-.node-details-trigger,
-.node-details-trigger *,
-.h-node li a,
-.h-node li a *,
-.root-press-links a,
-.root-press-links a *,
-.textlink,
-.textlink *,
-.pill,
-.pill *,
-.pdf-trigger,
-.pdf-trigger *,
-.lang-btn,
-.lang-btn *,
-.mobile-menu a,
-.mobile-menu a *{
-  background-image:none!important;
-  background-clip:border-box!important;
-  -webkit-background-clip:border-box!important;
-  -webkit-text-fill-color:currentColor!important;
-  color:inherit;
-  animation:none!important;
-}
-@media(max-width:760px){
-  .hierarchy-hero h1,
-  .hierarchy-root .node-link,
-  .hierarchy-grid .h-node .node-link,
-  .h-node > a:not(.node-url):not(.node-details-trigger),
-  .shead h2,
-  .directory-head h3,
-  .member h3,
-  .wixops-hero h2,
-  .ops-card b,
-  .dor-hero h2,
-  .dor-card h3,
-  .help-card h3,
-  .contact-section .shead h2,
-  .main-contact h3,
-  .contact-list h3{
-    background-image:var(--ksz-rainbow-unified)!important;
-    background-size:320% 100%!important;
-    background-clip:text!important;
-    -webkit-background-clip:text!important;
-    color:transparent!important;
-    -webkit-text-fill-color:transparent!important;
-    animation:ksz-rainbow-unified 8s ease infinite!important;
-  }
-}
-
-
-
-/* ===== v54 · DESKTOP NODE URL POSITION + CENTERED TEXT + FRONT HAMBURGER ===== */
-/* A domain/URL sor minden alrendszer-kártyában a title és a description között, mobilos méretlogikával. */
-.h-node,
-.core-social{
-  text-align:center!important;
-}
-.h-node .node-label,
-.h-node .node-link,
-.h-node .node-title,
-.h-node .node-explain,
-.core-social .node-label,
-.core-social .node-link,
-.core-social .node-title,
-.core-social .node-explain{
-  text-align:center!important;
-}
-.h-node .node-link,
-.core-social .node-link,
-.h-node > a:not(.node-url):not(.node-details-trigger){
-  display:block!important;
-  margin:10px auto 10px!important;
-}
-.h-node > a.node-url,
-.core-social > a.node-url,
-.hierarchy-grid .h-node > a.node-url{
-  display:block!important;
-  width:auto!important;
-  max-width:82%!important;
-  margin:0 auto 34px!important;
-  padding:0!important;
-  font-size:13px!important;
-  line-height:1.24!important;
-  font-weight:500!important;
-  letter-spacing:-.01em!important;
-  color:#0066cc!important;
-  -webkit-text-fill-color:#0066cc!important;
-  background:none!important;
-  background-image:none!important;
-  -webkit-background-clip:border-box!important;
-  background-clip:border-box!important;
-  animation:none!important;
-  text-decoration:none!important;
+.region-panel header strong{
+  min-width:0!important;
+  max-width:100%!important;
   overflow-wrap:anywhere!important;
-  word-break:break-word!important;
+  word-break:normal!important;
 }
-.h-node .node-explain,
-.core-social .node-explain{
-  margin-top:0!important;
-  margin-bottom:38px!important;
-  text-align:center!important;
+.region-panel header em{
+  justify-self:end!important;
+  align-self:start!important;
+  white-space:nowrap!important;
+  margin-left:8px!important;
 }
-.h-node li a,
-.h-node li .info-line,
-.root-press-links a{
-  text-align:center!important;
+.region-panel ol{
+  min-width:0!important;
 }
-.h-node li a strong,
-.h-node li a span,
-.h-node li .info-line strong,
-.h-node li .info-line span{
-  text-align:center!important;
+.region-panel li{
+  min-width:0!important;
+  overflow-wrap:anywhere!important;
 }
-
-/* A hamburger menü mindig legelöl, a fejléc alól nyíljon. */
-.nav{
-  z-index:99990!important;
+.region-panel small{
+  overflow-wrap:anywhere!important;
 }
-.nav-burger{
-  z-index:99992!important;
-}
-.mobile-menu{
-  z-index:99999!important;
-}
-.mobile-menu.open{
-  z-index:99999!important;
-}
-
-@media(max-width:760px){
-  .h-node > a.node-url,
-  .core-social > a.node-url,
-  .hierarchy-grid .h-node > a.node-url{
-    max-width:86%!important;
-    margin:2px auto 28px!important;
-    font-size:10px!important;
-    line-height:1.25!important;
-  }
-  .h-node .node-link,
-  .core-social .node-link,
-  .h-node > a:not(.node-url):not(.node-details-trigger){
-    margin-bottom:8px!important;
-  }
-  .h-node .node-explain,
-  .core-social .node-explain{
-    margin-bottom:30px!important;
-  }
-}
-
-
-
-/* ===== v55 · PREMIUM WIDE DESKTOP LAYOUT ===== */
-/* Mobilon megmarad a jó egyoszlopos logika, asztalon viszont újra kihasználjuk a képernyőt. */
-@media (min-width:1024px){
-  :root{
-    --ksz-wide-max:min(1480px, calc(100vw - 96px));
-    --ksz-wide-gap:clamp(24px,2.3vw,38px);
-  }
-  .hierarchy-inner,
-  .hierarchy-board,
-  .hierarchy-grid,
-  .hierarchy-summary,
-  .wixops-wrap,
-  .dor-wrap,
-  .map-wrap,
-  .map-panel,
-  .member-directory-box,
-  .member-grid,
-  .help-grid,
-  .contact-wrap,
-  .contact-grid,
-  .foot-in{
-    max-width:var(--ksz-wide-max)!important;
-    width:100%!important;
-    margin-left:auto!important;
-    margin-right:auto!important;
-  }
-
-  .hierarchy-hero,
-  .wixops,
-  .dor,
-  .mapsec,
-  .help,
-  .contact-section{
-    padding-left:clamp(48px,5vw,84px)!important;
-    padding-right:clamp(48px,5vw,84px)!important;
-  }
-
-  /* Felső rendszerblokkok: széles, szellős 2 oszlopos rács, egyforma kártyaméretekkel. */
-  .hierarchy-grid{
-    display:grid!important;
-    grid-template-columns:repeat(2,minmax(0,1fr))!important;
-    gap:var(--ksz-wide-gap)!important;
-    align-items:stretch!important;
-    text-align:center!important;
-  }
-  .hierarchy-grid .h-node,
-  .hierarchy-grid .core-social{
-    max-width:none!important;
-    width:100%!important;
-    min-height:360px!important;
-    padding:clamp(34px,3vw,54px)!important;
-    display:flex!important;
-    flex-direction:column!important;
-    justify-content:flex-start!important;
-  }
-  .hierarchy-grid .h-node:nth-child(n),
-  .hierarchy-grid .core-social{
-    grid-column:auto!important;
-    grid-row:auto!important;
-  }
-  .hierarchy-root{
-    max-width:min(900px,80vw)!important;
-    padding:clamp(38px,3.3vw,58px)!important;
-  }
-  .h-node .node-explain,
-  .core-social .node-explain{
-    max-width:720px!important;
-    margin-left:auto!important;
-    margin-right:auto!important;
-  }
-  .h-node ul,
-  .root-press-links,
-  .node-details-panel{
-    max-width:720px!important;
-    width:100%!important;
-    margin-left:auto!important;
-    margin-right:auto!important;
-  }
-  .h-node li a,
-  .root-press-links a,
-  .node-details-panel a{
-    max-width:720px!important;
-    width:100%!important;
-  }
-
-  /* Működési és DÖR blokkok: nagy asztali rácsok, nem mobil-szűk szélesség. */
-  .wixops-wrap{
-    display:grid!important;
-    grid-template-columns:.95fr 1.05fr!important;
-    gap:var(--ksz-wide-gap)!important;
-    align-items:stretch!important;
-  }
-  .ops-grid{
-    display:grid!important;
-    grid-template-columns:repeat(2,minmax(0,1fr))!important;
-    gap:22px!important;
-    max-width:none!important;
-  }
-  .dor-wrap{
-    display:grid!important;
-    grid-template-columns:.92fr 1.08fr!important;
-    gap:var(--ksz-wide-gap)!important;
-    align-items:stretch!important;
-  }
-  .dor-grid{
-    display:grid!important;
-    grid-template-columns:repeat(2,minmax(0,1fr))!important;
-    gap:22px!important;
-    max-width:none!important;
-  }
-  .wixops-hero,
-  .ops-card,
-  .dor-hero,
-  .dor-card,
-  .help-card{
-    max-width:none!important;
-    width:100%!important;
-  }
-
-  /* Tagszervezeti térkép: széles képernyőn külön térkép + vezérlőpanel. */
-  .map-panel{
-    display:grid!important;
-    grid-template-columns:minmax(0,1.18fr) minmax(360px,.82fr)!important;
-    gap:var(--ksz-wide-gap)!important;
-    align-items:start!important;
-  }
+@media(max-width:1180px){
   .executive-map{
-    display:grid!important;
-    grid-template-columns:repeat(3,minmax(0,1fr))!important;
-    grid-auto-rows:auto!important;
-    gap:18px!important;
-    min-height:0!important;
-    height:auto!important;
-    padding:clamp(24px,2.4vw,38px)!important;
+    grid-template-columns:1fr!important;
   }
-  .map-title-row{
-    grid-column:1/-1!important;
-  }
-  .region-panel{
-    grid-column:auto!important;
-    grid-row:auto!important;
-    min-height:0!important;
-    height:auto!important;
-  }
-  .r-vienna{grid-column:span 2!important;}
-  .r-tirol{grid-column:span 2!important;}
-  .r-salzburg{grid-column:auto!important;}
-  .map-side{
-    max-width:none!important;
-    width:100%!important;
-    position:sticky!important;
-    top:84px!important;
-  }
-  .stats{
-    grid-template-columns:repeat(2,minmax(0,1fr))!important;
-  }
-
-  /* Tagszervezeti katalógus: nagy asztali nézetben három oszlop, levegős térközzel. */
-  .member-grid{
-    display:grid!important;
-    grid-template-columns:repeat(3,minmax(0,1fr))!important;
-    gap:clamp(20px,1.8vw,30px)!important;
-  }
-  .member{
-    max-width:none!important;
-    width:100%!important;
-  }
-
-  /* Segítő és kapcsolat blokkok: nagy képernyőn szélesebb, rendezett rács. */
-  .help-grid{
-    display:grid!important;
-    grid-template-columns:repeat(3,minmax(0,1fr))!important;
-    gap:clamp(20px,1.8vw,28px)!important;
-  }
-  .contact-grid{
-    display:grid!important;
-    grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;
-    gap:var(--ksz-wide-gap)!important;
-    align-items:start!important;
-  }
-  .main-contact,
-  .contact-list{
-    max-width:none!important;
-    width:100%!important;
+  .region-panel header{
+    grid-template-columns:minmax(0,1fr) auto!important;
   }
 }
-
-@media (min-width:1500px){
-  :root{--ksz-wide-max:1520px;}
-  .hierarchy-grid .h-node,
-  .hierarchy-grid .core-social{
-    min-height:390px!important;
+@media(max-width:520px){
+  .region-panel header{
+    grid-template-columns:1fr!important;
+  }
+  .region-panel header em{
+    justify-self:start!important;
+    margin-left:0!important;
   }
 }
 
