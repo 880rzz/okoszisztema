@@ -1536,54 +1536,6 @@ html.pdf-export details{
 @media(max-width:1180px){.executive-map{grid-template-columns:1fr!important}.region-panel header{grid-template-columns:minmax(0,1fr) auto!important}}
 @media(max-width:520px){.region-panel header{grid-template-columns:1fr!important}.region-panel header em{justify-self:start!important;margin-left:0!important}}
 
-
-
-/* ===== v39 · COMPACT COLLAPSIBLE LINK BLOCKS + HERO INTRO RESTORE ===== */
-.hero-intro{max-width:920px;margin:0 auto 36px;padding:18px 22px;border-radius:22px;background:rgba(245,245,247,.88);border:1px solid rgba(0,0,0,.06);color:#4b4b50;font-size:clamp(16px,1.35vw,19px);line-height:1.55;letter-spacing:-.025em;text-align:center;}
-.hero-intro strong{color:#1d1d1f;font-weight:700;}
-.node-url{display:none!important;}
-.h-node{display:flex!important;flex-direction:column!important;align-items:center!important;text-align:center!important;overflow:hidden!important;}
-.h-node .node-head{width:100%;justify-content:center!important;}
-.h-node .node-link{margin-bottom:18px!important;}
-.h-node .node-explain{max-width:820px;margin-left:auto!important;margin-right:auto!important;margin-bottom:18px!important;}
-.h-node .node-links,.hierarchy-root .root-press-links{display:none!important;width:100%!important;margin-top:14px!important;padding:0!important;gap:10px!important;}
-.h-node.links-open .node-links{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;}
-.hierarchy-root.links-open .root-press-links{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;}
-.links-toggle{appearance:none;border:1px solid rgba(0,0,0,.08);background:#f5f5f7;color:#1d1d1f;border-radius:999px;padding:10px 16px;font:600 13px/1.2 -apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",sans-serif;letter-spacing:-.01em;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:8px;margin:4px auto 0;transition:background .18s ease,transform .18s ease,border-color .18s ease;}
-.links-toggle::after{content:"+";display:inline-grid;place-items:center;width:18px;height:18px;border-radius:50%;background:#fff;color:#06c;font-weight:700;}
-.links-toggle[aria-expanded="true"]::after{content:"–";}
-.links-toggle:hover{background:#e8e8ed;transform:translateY(-1px);}
-.hierarchy-root .links-toggle{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.18);color:#fff;}
-.hierarchy-root .links-toggle::after{background:rgba(255,255,255,.16);color:#fff;}
-.h-node .node-links li{list-style:none;margin:0!important;}
-.h-node .node-links li a,.hierarchy-root .root-press-links a{height:100%;min-height:72px;display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;text-align:center!important;padding:14px 16px!important;border-radius:18px!important;background:#fff!important;border:1px solid rgba(0,0,0,.07)!important;box-shadow:0 6px 20px rgba(0,0,0,.035)!important;overflow-wrap:anywhere!important;}
-.hierarchy-root .root-press-links a{background:rgba(255,255,255,.10)!important;border-color:rgba(255,255,255,.16)!important;color:#fff!important;}
-.h-node .node-links li a strong{font-size:15px!important;line-height:1.25!important;margin-bottom:4px!important;}
-.h-node .node-links li a span{font-size:13px!important;line-height:1.35!important;max-width:580px;}
-.core-social .node-links li a::before,.h-node .node-links li a::before{content:"↗";font-size:13px;color:#06c;margin-bottom:6px;}
-.hierarchy-root .root-press-links a::before{content:"↗";font-size:13px;color:#fff;margin-bottom:6px;}
-@media(max-width:980px){.h-node.links-open .node-links,.hierarchy-root.links-open .root-press-links{grid-template-columns:1fr!important}.hierarchy-grid{grid-template-columns:1fr!important}.hero-intro{margin-bottom:28px}.h-node .node-links li a,.hierarchy-root .root-press-links a{min-height:64px}}
-@media(max-width:560px){.hero-intro{padding:16px 14px;border-radius:18px;font-size:15.5px;line-height:1.5}.h-node{padding:20px 16px!important}.h-node .node-explain{font-size:15px!important;line-height:1.55!important}.links-toggle{width:100%;max-width:280px}.h-node .node-links li a,.hierarchy-root .root-press-links a{padding:13px 12px!important}.h-node .node-links li a strong{font-size:14px!important}.h-node .node-links li a span{font-size:12.5px!important}}
-
-
-
-/* ===== v42 · LINK ICON SPACING FIX + ROOT LINK BUTTON DISTANCE ===== */
-/* A láncszem ikon saját, fix helyet kap a linkkártyákban, így nem lóghat bele a szövegbe. */
-.h-node li a,.h-node .node-links li a{position:relative!important;padding-left:52px!important;padding-right:18px!important;align-items:flex-start!important;text-align:left!important;overflow:hidden!important;}
-.h-node li a::before,.h-node .node-links li a::before{content:""!important;position:absolute!important;left:20px!important;top:50%!important;transform:translateY(-50%)!important;display:block!important;width:16px!important;height:16px!important;margin:0!important;flex:0 0 16px!important;background:#06c!important;border-radius:0!important;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='black' stroke-width='1.9' stroke-linecap='round' stroke-linejoin='round' d='M10 14a5 5 0 0 0 7.07 0l3-3A5 5 0 0 0 13 4l-1.5 1.5M14 10a5 5 0 0 0-7.07 0l-3 3A5 5 0 0 0 11 20l1.5-1.5'/%3E%3C/svg%3E") center/contain no-repeat!important;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='black' stroke-width='1.9' stroke-linecap='round' stroke-linejoin='round' d='M10 14a5 5 0 0 0 7.07 0l3-3A5 5 0 0 0 13 4l-1.5 1.5M14 10a5 5 0 0 0-7.07 0l-3 3A5 5 0 0 0 11 20l1.5-1.5'/%3E%3C/svg%3E") center/contain no-repeat!important;}
-.h-node li a strong,.h-node .node-links li a strong{display:block!important;width:100%!important;line-height:1.28!important;margin:0 0 5px!important;}
-.h-node li a span,.h-node .node-links li a span{display:block!important;width:100%!important;line-height:1.42!important;}
-.core-social .node-links li a::before{color:transparent!important;}
-/* Root / Központi Szövetség: a gomb távolabb kerül a bevezető szövegtől. */
-.hierarchy-root .links-toggle{margin-top:34px!important;}
-.hierarchy-root .root-press-links{margin-top:18px!important;}
-.hierarchy-root .root-press-links a{position:relative!important;padding:18px 16px!important;text-align:center!important;}
-.hierarchy-root .root-press-links a::before{display:block!important;position:static!important;transform:none!important;width:17px!important;height:17px!important;margin:0 auto 10px!important;flex:0 0 17px!important;}
-/* Inline linkeknél az ikon és a szöveg között fix rés legyen. */
-.textlink,.primary,.contact-link,.contact-list a,.contact-card dd a,footer .foot-in a{display:inline-flex!important;align-items:center!important;gap:.48em!important;}
-.textlink::before,.primary::before,.contact-link::before,.contact-list a::before,.contact-card dd a::before,footer .foot-in a::before{margin-right:0!important;flex:0 0 1em!important;}
-@media(max-width:560px){.h-node li a,.h-node .node-links li a{padding-left:46px!important;padding-right:14px!important}.h-node li a::before,.h-node .node-links li a::before{left:16px!important;width:15px!important;height:15px!important}.hierarchy-root .links-toggle{margin-top:28px!important}}
-
 </style>
 <meta content="#ffffff" name="theme-color"/><meta content="website" property="og:type"/><meta content="Központi Szövetség · Döntéshozói áttekintés · Online ökoszisztéma · DÖR 2026" property="og:title"/><meta content="Döntéshozói áttekintés az Ausztriai Magyar Egyesületek és Szervezetek Központi Szövetségéről, online ökoszisztémájáról, tagszervezeti hálózatáról és a DÖR 2026 pilotról." property="og:description"/><meta content="hu_HU" property="og:locale"/><meta content="summary_large_image" name="twitter:card"/><link href="?lang=hu" hreflang="hu" rel="alternate"/><link href="?lang=en" hreflang="en" rel="alternate"/><link href="?lang=de" hreflang="de" rel="alternate"/><link href="?lang=hu" hreflang="x-default" rel="alternate"/><script type="application/ld+json">{
   "@context": "https://schema.org",
@@ -1645,12 +1597,11 @@ html.pdf-export details{
 <div class="eyebrow" data-i18n="hero.eyebrow">Online hierarchia · belső digitális rendszer</div>
 <h1 data-i18n="hero.h1">A Központi Szövetség online működési gerince.</h1>
 <p class="sub" data-i18n="hero.sub">Egy <strong>digitális gyökérpont</strong>, amelyhez az <strong data-i18n="term.oktatás.124">oktatás</strong>, a <strong>média</strong>, a <strong>kreatív közösség</strong>, a <strong>színház</strong> és a <strong>sajtómegjelenések</strong> kapcsolódnak — és amelybe <strong>minden tagszervezet</strong> online jelenléte betagozódik.</p>
-<p class="hero-intro" data-i18n="hero.intro">Az Ausztriai Magyar Egyesületek és Szervezetek Központi Szövetsége az ausztriai magyar közösségi élet <strong>ernyőszervezeti, oktatási, kulturális és digitális koordinációs pontja</strong>. Ez az oldal azt mutatja meg, hogyan kapcsolódnak egymáshoz a fő intézményi felületek, a tagszervezetek, a sajtómegjelenések és a DÖR 2026 pilot.</p>
 <div aria-label="A Központi Szövetség online hierarchiája" class="hierarchy-board" data-i18n-aria-label="aria.hierarchy">
 <div class="hierarchy-root">
 <div class="node-head">
 <span class="node-icon ic-root"><svg fill="none" viewbox="0 0 24 24"><path d="M3 11.5 12 4l9 7.5M5 10v9a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-9M9.5 20v-6h5v6" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></span>
-<span class="node-label" data-i18n="hero.intro":{"en":"The Central Association of Hungarian Associations and Organisations in Austria is the <strong>umbrella, educational, cultural and digital coordination point</strong> of Hungarian community life in Austria. This page shows how the main institutional surfaces, member organisations, press visibility and the DÖR 2026 pilot connect.","de":"Der Zentralverband Ungarischer Vereine und Organisationen in Österreich ist der <strong>Dach-, Bildungs-, Kultur- und digitale Koordinationspunkt</strong> des ungarischen Gemeinschaftslebens in Österreich. Diese Seite zeigt, wie die zentralen institutionellen Flächen, Mitgliedsorganisationen, Pressepräsenz und der DÖR-2026-Pilot zusammenhängen."},"root.label">Központi szervezet · digitális gyökérpont</span>
+<span class="node-label" data-i18n="root.label">Központi szervezet · digitális gyökérpont</span>
 </div>
 <a class="node-link" href="https://www.kozpontiszovetseg.at" rel="noopener" target="_blank"><span class="node-title" data-i18n="root.title">Központi Szövetség</span></a>
 <a class="node-url" href="https://www.kozpontiszovetseg.at" rel="noopener" target="_blank">kozpontiszovetseg.at</a>
@@ -1689,7 +1640,7 @@ html.pdf-export details{
 <ul>
 <li><a href="https://2026.magyariskola.at" rel="noopener" target="_blank"><strong data-i18n="linkstrong.31">2026.magyariskola.at</strong><span data-i18n="linkspan.32">Tanévbeszámoló és eredménykommunikáció: megmutatja, mi történt, kik dolgoztak, milyen közösségi érték jött létre.</span></a></li>
 <li><a href="https://www.becsiszelet.at" rel="noopener" target="_blank"><strong data-i18n="linkstrong.becsi.szelet">Bécsi Szelet · kulturális és művészeti online magazin</strong><span data-i18n="linkspan.becsi.szelet">2026 októberében induló új online magazinunk, kifejezetten a kultúra és a művészet jegyében.</span></a></li>
-<li><a href="https://kerdoiv.magyariskola.at" rel="noopener" target="_blank"><strong data-i18n="linkstrong.becsi.szelet":{"en":"Bécsi Szelet · cultural and arts online magazine","de":"Bécsi Szelet · Online-Magazin für Kultur und Kunst"},"linkspan.becsi.szelet":{"en":"Our new online magazine launches in October 2026, dedicated specifically to culture and the arts.","de":"Unser neues Online-Magazin startet im Oktober 2026 und widmet sich gezielt Kultur und Kunst."},"linkstrong.33">kerdoiv.magyariskola.at</strong><span data-i18n="linkspan.34">Visszajelzési és kapcsolatfelvételi felület: adatot ad a működés javításához és a családok igényeinek megértéséhez.</span></a></li>
+<li><a href="https://kerdoiv.magyariskola.at" rel="noopener" target="_blank"><strong data-i18n="linkstrong.33">kerdoiv.magyariskola.at</strong><span data-i18n="linkspan.34">Visszajelzési és kapcsolatfelvételi felület: adatot ad a működés javításához és a családok igényeinek megértéséhez.</span></a></li>
 <li><a href="https://www.magyariskola.at/orf-at" rel="noopener" target="_blank"><strong data-i18n="linkstrong.35">ORF Magyarok sajtófigyelő</strong><span data-i18n="linkspan.36">Az iskola ORF Magyarok-megjelenéseinek gyűjtőfelülete, amely bizonyítja a közösségi munka nyilvános láthatóságát.</span></a></li>
 <li><a href="https://rolunk.at/tag/becsi-magyar-iskola/" rel="noopener" target="_blank"><strong data-i18n="linkstrong.37">rolunk.at sajtófigyelő</strong><span data-i18n="linkspan.38">Rólunk.at cikkek és megjelenések: külső média-visszaigazolás az iskola közösségi szerepéről.</span></a></li>
 <li><a href="https://hu.wikipedia.org/wiki/Bécsi_Magyar_Iskola" rel="noopener" target="_blank"><strong data-i18n="linkstrong.39">Wikipédia · Bécsi Magyar Iskola</strong><span data-i18n="linkspan.40">Strukturált, kereshető közismertségi réteg: a közösség nemcsak működik, hanem online entitásként is azonosítható.</span></a></li>
@@ -1700,7 +1651,7 @@ html.pdf-export details{
 <article class="h-node">
 <div class="node-head">
 <span class="node-icon ic-news"><svg fill="none" viewbox="0 0 24 24"><path d="M4 5h11a2 2 0 0 1 2 2v11a1 1 0 0 0 1 1h0a1 1 0 0 0 1-1V8M4 5v13a1 1 0 0 0 1 1h13M7 9h7M7 12.5h7M7 16h4" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></span>
-<span class="node-label" data-i18n="node.news.label">Szerkesztett magyar médiafelület</span>
+<span class="node-label" data-i18n="linkstrong.becsi.szelet":{"en":"Bécsi Szelet · cultural and arts online magazine","de":"Bécsi Szelet · Online-Magazin für Kultur und Kunst"},"linkspan.becsi.szelet":{"en":"Our new online magazine launches in October 2026, dedicated specifically to culture and the arts.","de":"Unser neues Online-Magazin startet im Oktober 2026 und widmet sich gezielt Kultur und Kunst."},"node.news.label">Szerkesztett magyar médiafelület</span>
 </div>
 <a class="node-link" href="https://www.becsinaplo.at" rel="noopener" target="_blank"><span class="node-title" data-i18n="node.news.title">Bécsi Napló</span></a>
 <a class="node-url" href="https://www.becsinaplo.at" rel="noopener" target="_blank">becsinaplo.at</a>
@@ -2285,39 +2236,6 @@ document.addEventListener('DOMContentLoaded', () => {
   function focusMember(li){const name=li.dataset.orgName;if(!name)return;const target=Array.from(document.querySelectorAll('.member')).find(card=>normalize(card.dataset.name||card.querySelector('h3')?.textContent||'')===normalize(name));if(!target)return;document.querySelectorAll('.region-panel li.map-selected').forEach(x=>x.classList.remove('map-selected'));document.querySelectorAll('.member.member-focus').forEach(x=>x.classList.remove('member-focus'));li.classList.add('map-selected');if(target.style.display==='none')target.style.display='';target.classList.add('member-focus');target.scrollIntoView({behavior:'smooth',block:'center'});setTimeout(()=>target.classList.remove('member-focus'),4200);}
   function attachClicks(){buildLinks();document.querySelectorAll('.region-panel li[data-org-name]').forEach(li=>{if(li.dataset.clickReady==='1')return;li.addEventListener('click',()=>focusMember(li));li.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();focusMember(li);}});li.dataset.clickReady='1';});}
   document.addEventListener('DOMContentLoaded',()=>{attachClicks();refreshHighlights();const original=window.filterCards;if(typeof original==='function'){window.filterCards=function(){const result=original.apply(this,arguments);setTimeout(refreshHighlights,0);return result;};}document.addEventListener('click',e=>{if(e.target.closest('.topic-toggle,.control,.clear-topics'))setTimeout(refreshHighlights,0);});const originalLang=window.KSZ_i18n&&window.KSZ_i18n.setLanguage;if(typeof originalLang==='function'){window.KSZ_i18n.setLanguage=function(lang){const result=originalLang.call(window.KSZ_i18n,lang);setTimeout(()=>{buildLinks();attachClicks();refreshHighlights();},0);return result;};}});
-})();
-</script>
-
-
-<script id="compactLinkBlocksScript">
-(function(){
-  const LABELS={hu:{open:'Kapcsolódó linkek megnyitása',close:'Linkek elrejtése'},en:{open:'Show related links',close:'Hide links'},de:{open:'Verknüpfte Links anzeigen',close:'Links ausblenden'}};
-  function lang(){return (document.documentElement.lang||'hu').slice(0,2).toLowerCase();}
-  function label(open){const l=LABELS[lang()]||LABELS.hu;return open?l.close:l.open;}
-  function setupContainer(container, list){
-    if(!container||!list||container.dataset.compactLinks==='1')return;
-    list.classList.add('node-links');
-    const btn=document.createElement('button');
-    btn.type='button';
-    btn.className='links-toggle';
-    btn.setAttribute('aria-expanded','false');
-    btn.textContent=label(false);
-    list.parentNode.insertBefore(btn,list);
-    btn.addEventListener('click',function(e){
-      e.stopPropagation();
-      const open=container.classList.toggle('links-open');
-      btn.setAttribute('aria-expanded',open?'true':'false');
-      btn.textContent=label(open);
-    });
-    container.dataset.compactLinks='1';
-  }
-  function init(){
-    document.querySelectorAll('.h-node').forEach(node=>setupContainer(node,node.querySelector('ul')));
-    document.querySelectorAll('.hierarchy-root').forEach(root=>setupContainer(root,root.querySelector('.root-press-links')));
-    refreshLabels();
-  }
-  function refreshLabels(){document.querySelectorAll('.links-toggle').forEach(btn=>btn.textContent=label(btn.getAttribute('aria-expanded')==='true'));}
-  document.addEventListener('DOMContentLoaded',()=>{init();const orig=window.KSZ_i18n&&window.KSZ_i18n.setLanguage;if(typeof orig==='function'){window.KSZ_i18n.setLanguage=function(l){const r=orig.call(window.KSZ_i18n,l);setTimeout(()=>{init();refreshLabels();},0);return r;};}new MutationObserver(()=>setTimeout(refreshLabels,0)).observe(document.documentElement,{attributes:true,attributeFilter:['lang']});});
 })();
 </script>
 
