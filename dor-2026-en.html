@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>DÖR 2026 · Diaspora Ecosystem Framework</title>
+<meta content="DÖR 2026 decision-preparation pilot page: a voluntary and auditable diaspora ecosystem framework with autonomy safeguards and a 90-120 day Go / Modify / Stop decision gate." name="description"/>
+<meta content="noindex, nofollow, noarchive, nosnippet" name="robots"/>
+<meta content="noindex, nofollow, noarchive, nosnippet" http-equiv="X-Robots-Tag"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --cream:#f8f4ed;--paper:#fffdf8;--warm:#f0ead9;--warm2:#e8e0cc;
+  --ink:#171915;--muted:#55584f;--muted2:#6c6f65;
+  --forest:#14251b;--forest2:#1e3928;--forest3:#2f563f;
+  --gold:#9a7a3a;--gold2:#c9a55a;--red:#CE2939;--blue:#1B4F8A;--teal:#0F6E56;
+  --border:rgba(23,25,21,.12);--max:1060px;--narrow:900px;--pad:clamp(20px,5vw,58px);
+  --font:-apple-system,BlinkMacSystemFont,"SF Pro Display","SF Pro Text","Helvetica Neue",Helvetica,Arial,sans-serif;
+  --serif:Georgia,"Times New Roman",serif;
+}
+html{scroll-behavior:smooth}
+body{background:var(--cream);color:var(--ink);font-family:var(--font);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+p{margin:0 0 14px;color:#2d3029;line-height:1.78}
+p:last-child{margin-bottom:0}
+strong{font-weight:800;color:inherit}
+ul{padding-left:1.15rem;margin:8px 0 0}
+li{margin:6px 0;color:#2d3029;line-height:1.65}
+h1,h2,h3{font-family:var(--serif);line-height:1.08;color:var(--ink);font-weight:600;letter-spacing:-.025em;text-wrap:balance}
+h1{font-size:clamp(2.45rem,7vw,5.2rem)}
+h2{font-size:clamp(2rem,4vw,3.15rem);margin-bottom:18px}
+h3{font-size:clamp(1.3rem,2.4vw,1.85rem);margin:24px 0 10px}
+.hu-stripe{height:4px;background:linear-gradient(90deg,var(--red) 33.3%,#fff 33.3% 66.6%,#477050 66.6%);position:sticky;top:0;z-index:200}
+.topbar{position:sticky;top:4px;z-index:190;background:rgba(20,37,27,.97);backdrop-filter:blur(18px);border-bottom:1px solid rgba(201,165,90,.22);box-shadow:0 10px 35px rgba(0,0,0,.16)}
+.nav-inner{max-width:1280px;margin:0 auto;padding:0 var(--pad);height:64px;display:flex;align-items:center;gap:14px;position:relative;justify-content:space-between}
+.nav-brand{font-family:var(--serif);font-size:1.15rem;color:var(--gold2);font-weight:700;white-space:nowrap;display:flex;align-items:center;gap:10px}
+.nav-brand::before{content:"";width:10px;height:10px;border-radius:999px;background:var(--gold2);box-shadow:0 0 0 5px rgba(201,165,90,.12)}
+.back-link{display:inline-flex;align-items:center;height:34px;border-radius:999px;padding:0 14px;background:rgba(255,255,255,.08);border:1px solid rgba(201,165,90,.24);color:#f8f4ed;font-size:13px;font-weight:700}
+.nav-toggle{display:inline-flex;align-items:center;justify-content:center;width:46px;height:46px;border-radius:16px;border:1px solid rgba(201,165,90,.28);background:linear-gradient(180deg,rgba(255,255,255,.09),rgba(255,255,255,.035));color:#f8f4ed;cursor:pointer;box-shadow:0 10px 28px rgba(0,0,0,.18)}
+.nav-toggle svg{width:20px;height:20px;display:block}
+.nav-links{display:none;position:absolute;top:calc(100% + 12px);right:var(--pad);width:min(520px,calc(100vw - 32px));max-height:74vh;overflow:auto;grid-template-columns:1fr 1fr;gap:8px;background:linear-gradient(180deg,rgba(20,37,27,.992),rgba(11,23,16,.992));border:1px solid rgba(234,216,167,.24);border-radius:22px;padding:14px;box-shadow:0 28px 80px rgba(0,0,0,.34)}
+.nav-links.open{display:grid}
+.nav-links button{border:1px solid rgba(255,255,255,.055);background:rgba(255,255,255,.035);color:rgba(248,244,237,.82);font-size:10px;font-weight:800;letter-spacing:.13em;text-transform:uppercase;padding:12px 14px;border-radius:14px;text-align:left;cursor:pointer}
+.nav-links button:hover,.nav-links button.active{background:rgba(201,165,90,.14);border-color:rgba(201,165,90,.28);color:var(--gold2)}
+.hero{min-height:72vh;display:flex;align-items:center;background:radial-gradient(circle at 85% 12%,rgba(234,216,167,.20),transparent 32%),radial-gradient(circle at 15% 95%,rgba(15,110,86,.28),transparent 34%),linear-gradient(140deg,#0b1710 0%,#14251b 45%,#243f2d 100%);color:#f8f4ed;padding:clamp(62px,9vw,120px) var(--pad) clamp(54px,7vw,86px);position:relative;overflow:hidden}
+.hero::after{content:'DÖR';position:absolute;right:-20px;bottom:-55px;font-family:var(--serif);font-size:clamp(110px,21vw,260px);font-weight:700;color:rgba(255,255,255,.035);line-height:1;pointer-events:none}
+.hero-inner{max-width:var(--max);margin:0 auto;position:relative;z-index:1;width:100%}
+.ey{display:inline-flex;align-items:center;color:var(--gold2);font-size:13px;font-weight:900;letter-spacing:.16em;text-transform:uppercase;margin-bottom:16px;padding:8px 13px;border:1px solid rgba(201,165,90,.25);border-radius:999px;background:rgba(255,255,255,.055)}
+.hero h1{color:#fff;max-width:980px;letter-spacing:-.04em}
+.hero-lead{font-size:clamp(1.08rem,2.1vw,1.32rem);line-height:1.78;color:rgba(248,244,237,.86);max-width:940px;margin:22px 0 0;border-left:1px solid rgba(201,165,90,.42);padding-left:20px}
+.hero-lead strong{color:#fff}
+.pitch-card{margin-top:28px;background:linear-gradient(135deg,rgba(255,255,255,.115),rgba(255,255,255,.055));border:1px solid rgba(201,165,90,.3);border-left:1px solid rgba(201,165,90,.34);border-radius:24px;padding:22px 24px;box-shadow:0 28px 90px rgba(0,0,0,.22);backdrop-filter:blur(14px)}
+.pitch-card p{color:rgba(255,255,255,.9);font-size:1.02rem;line-height:1.72}
+.hero-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;margin-top:24px}
+.hero-mini{background:linear-gradient(180deg,rgba(255,255,255,.10),rgba(255,255,255,.055));border:1px solid rgba(201,165,90,.18);border-radius:18px;padding:16px;box-shadow:0 16px 40px rgba(0,0,0,.10)}
+.hero-mini b{display:block;color:#ead8a7;font-size:12px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px}
+.hero-mini span{display:block;color:rgba(248,244,237,.78);font-size:14px;line-height:1.55}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 20px;border-radius:999px;border:1px solid rgba(201,165,90,.42);font-weight:900;font-size:13px;letter-spacing:.09em;text-transform:uppercase;cursor:pointer;transition:transform .18s ease, box-shadow .18s ease}
+.btn:hover{transform:translateY(-2px);box-shadow:0 14px 32px rgba(0,0,0,.18)}
+.btn.primary{background:var(--gold2);color:#172317;border-color:var(--gold2)}
+.btn.secondary{color:#f8f4ed;background:transparent}
+.sec{padding:clamp(54px,7vw,92px) var(--pad);border-top:1px solid var(--border);position:relative}
+.sec::before{content:"";position:absolute;inset:0 auto auto 50%;width:min(900px,80vw);height:1px;transform:translateX(-50%);background:linear-gradient(90deg,transparent,rgba(154,122,58,.20),transparent)}
+.wrap{max-width:var(--narrow);margin:0 auto;position:relative}
+.wrap-wide{max-width:var(--max);margin:0 auto;position:relative}
+.s-warm{background:var(--warm)}
+.s-dark{background:radial-gradient(circle at 15% 0%,rgba(201,165,90,.12),transparent 32%),radial-gradient(circle at 90% 88%,rgba(15,110,86,.22),transparent 36%),linear-gradient(145deg,#0d1a12 0%,#14251b 62%,#1f3728 100%);color:#f8f4ed;border-top:1px solid rgba(201,165,90,.2)}
+.s-dark h2,.s-dark h3{color:#fff}
+.s-dark p,.s-dark li{color:rgba(248,244,237,.84)}
+.muted{color:var(--muted2)}
+.s-dark .muted{color:rgba(248,244,237,.72)}
+.lead{font-family:var(--serif);font-style:italic;font-size:clamp(1.15rem,2.1vw,1.45rem);line-height:1.55;color:#56594f;margin:0 0 24px;max-width:940px}
+.kicker{display:inline-flex;align-items:center;gap:10px;padding:7px 12px;border-radius:999px;background:rgba(154,122,58,.09);font-size:13px;font-weight:900;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
+.s-dark .kicker{background:rgba(201,165,90,.12);color:#ead8a7}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.card,.board-card,.journey,.metric,.risk-card,.lens-card,.product-step,.faq-item,.acc,.score-item,.pain-box,.answer-box,.priority-card,.kpi{background:rgba(255,253,248,.88);border:1px solid var(--border);border-radius:24px;padding:20px;box-shadow:0 18px 55px rgba(20,37,27,.10);backdrop-filter:blur(10px)}
+.s-dark .card,.s-dark .board-card,.s-dark .journey,.s-dark .metric,.s-dark .risk-card,.s-dark .lens-card,.s-dark .product-step,.s-dark .faq-item,.s-dark .acc,.s-dark .score-item{background:linear-gradient(180deg,rgba(255,255,255,.095),rgba(255,255,255,.045));border-color:rgba(234,216,167,.18);box-shadow:0 22px 60px rgba(0,0,0,.18);backdrop-filter:blur(12px)}
+.card.emph{border-left:5px solid var(--teal)}
+.card.warn{border-left:5px solid var(--red)}
+.ct,.board-title{font-family:var(--serif);font-size:1.28rem;color:var(--ink);font-weight:700;margin-bottom:8px;letter-spacing:-.015em}
+.s-dark .ct,.s-dark .board-title,.s-dark b,.s-dark strong{color:#fff}
+.cd,.pa-text,.board-sub,.lens-a,.product-step span{font-size:clamp(15px,1.05vw,16.5px);color:#4a4d43;line-height:1.65}
+.s-dark .cd,.s-dark .pa-text,.s-dark .board-sub,.s-dark .lens-a,.s-dark .product-step span{color:rgba(248,244,237,.84)}
+.tag{display:inline-block;border-radius:999px;padding:4px 10px;font-size:11px;font-weight:900;letter-spacing:.10em;text-transform:uppercase;background:rgba(15,110,86,.1);color:var(--teal);margin:0 6px 6px 0}
+.tag.red{background:rgba(206,41,57,.1);color:var(--red)}
+.tag.blue{background:rgba(27,79,138,.1);color:var(--blue)}
+.tag.gold{background:rgba(154,122,58,.12);color:var(--gold)}
+.pain-answer{display:grid;grid-template-columns:.95fr 1.05fr;gap:18px;margin:20px 0;border-radius:28px;overflow:hidden;box-shadow:0 18px 55px rgba(20,37,27,.10)}
+.pain-box,.answer-box{border-radius:0!important;box-shadow:none}
+.pain-box{border-left:5px solid var(--red)}
+.answer-box{border-left:5px solid var(--teal);background:linear-gradient(180deg,#fffdf8,#f7f0e3)}
+.pa-label{font-size:12px;font-weight:900;letter-spacing:.14em;text-transform:uppercase;margin-bottom:8px}
+.pain-box .pa-label{color:var(--red)}
+.answer-box .pa-label{color:var(--teal)}
+.pa-title{font-family:var(--serif);font-size:1.35rem;font-weight:800;color:var(--ink);margin-bottom:8px}
+.mvp-strip,.not-list,.guard-grid,.hardline-grid,.product-grid,.score-strip{display:grid;gap:12px;margin:18px 0}
+.mvp-strip{grid-template-columns:repeat(4,1fr)}
+.not-list,.guard-grid,.hardline-grid{grid-template-columns:repeat(2,1fr)}
+.product-grid{grid-template-columns:repeat(4,1fr)}
+.score-strip{grid-template-columns:repeat(5,1fr)}
+.mvp-item,.not-item,.guard-card,.hardline-item,.decision,.product-step,.lens-card,.risk-card{border-radius:16px;padding:18px;background:var(--paper);border:1px solid var(--border)}
+.mvp-item{background:rgba(15,110,86,.07);border-color:rgba(15,110,86,.18)}
+.mvp-item b,.seat b{display:block;color:var(--teal);font-size:12px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px}
+.mvp-item span,.not-item,.hardline-item{display:block;color:#394038;font-size:14px;line-height:1.5}
+.not-item{background:rgba(206,41,57,.055);border-color:rgba(206,41,57,.15)}
+.not-item b{display:block;color:var(--red);margin-bottom:4px}
+.metric{text-align:center}
+.metric strong{display:block;font-family:var(--serif);font-size:2.25rem;line-height:1;color:var(--teal);margin-bottom:8px}
+.metric.fail strong{color:var(--red)}
+.metric p{font-size:14px;line-height:1.45;color:#4a4d43}
+.journey b{display:block;color:var(--ink);font-size:13px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px}
+.steps{counter-reset:s;display:grid;gap:8px}
+.step{position:relative;padding:10px 12px 10px 44px;background:rgba(15,110,86,.06);border:1px solid rgba(15,110,86,.13);border-radius:10px;color:#2d3029;font-size:14px;line-height:1.5}
+.step::before{counter-increment:s;content:counter(s);position:absolute;left:12px;top:50%;transform:translateY(-50%);width:22px;height:22px;border-radius:50%;background:var(--teal);color:#fff;display:grid;place-items:center;font-size:12px;font-weight:900}
+.board-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:18px;margin:18px 0}
+.board-card.strong{border-left:5px solid var(--teal)}
+.roundtable{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:16px}
+.seat{background:rgba(15,110,86,.07);border:1px solid rgba(15,110,86,.18);border-radius:14px;padding:14px}
+.seat span{font-size:14px;color:#3c4038;line-height:1.5}
+.s-dark .seat{background:rgba(255,255,255,.08);border-color:rgba(201,165,90,.18)}
+.s-dark .seat span{color:rgba(248,244,237,.78)}
+.guard-list{list-style:none;padding:0;margin:12px 0 0;display:grid;gap:8px}
+.guard-list li{position:relative;padding-left:28px;margin:0;color:#2d3029}
+.guard-list li::before{content:'✓';position:absolute;left:0;top:0;width:20px;height:20px;border-radius:50%;background:rgba(15,110,86,.12);color:var(--teal);display:grid;place-items:center;font-size:12px;font-weight:900}
+.legal-choice{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:14px}
+.choice{background:rgba(255,255,255,.72);border:1px solid var(--border);border-radius:14px;padding:16px}
+.choice.recommended{border-left:4px solid var(--teal)}
+.choice.no{border-left:4px solid var(--red)}
+.guard-card{border-left:4px solid var(--teal)}
+.guard-card.warn{border-left-color:var(--red)}
+.guard-card.gold{border-left-color:var(--gold)}
+.guard-card.blue{border-left-color:var(--blue)}
+.guard-k,.lens-k{font-size:12px;font-weight:900;letter-spacing:.13em;text-transform:uppercase;color:var(--teal);margin-bottom:7px}
+.guard-t,.lens-q{font-family:var(--serif);font-size:1.28rem;font-weight:700;color:var(--ink);margin-bottom:7px;line-height:1.18}
+.decision-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:20px 0}
+.decision{text-align:center;background:#fff}
+.decision strong{display:block;font-family:var(--serif);font-size:1.35rem;margin-bottom:4px}
+.decision small{display:block;color:#55584f;line-height:1.5}
+.decision.go{border-top:4px solid var(--teal)}
+.decision.modify{border-top:4px solid var(--gold)}
+.decision.stop{border-top:4px solid var(--red)}
+.lens-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:20px 0}
+.lens-card{position:relative;overflow:hidden}
+.lens-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:var(--teal)}
+.hardline{background:#111b14;color:#fff;border-radius:20px;padding:24px;margin:24px 0;border:1px solid rgba(201,165,90,.22)}
+.hardline h3{color:#fff;margin-top:0}
+.hardline p,.hardline li{color:rgba(255,255,255,.84)}
+.hardline-item{border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.06);color:rgba(255,255,255,.84)}
+.hardline-item b{display:block;color:var(--gold2);margin-bottom:6px}
+.compliance-table,.audit-table{width:100%;border-collapse:collapse;margin:18px 0;background:var(--paper);border-radius:14px;overflow:hidden;border:1px solid var(--border);box-shadow:0 18px 55px rgba(20,37,27,.10)}
+.compliance-table th,.audit-table th{background:var(--forest);color:#fff;text-align:left;padding:12px;font-size:12px;letter-spacing:.09em;text-transform:uppercase}
+.compliance-table td,.audit-table td{padding:12px;border-bottom:1px solid var(--border);vertical-align:top;color:#30342d;font-size:15px;line-height:1.55}
+.acc{overflow:hidden;margin:12px 0}
+.acc-btn,.faq-q{width:100%;display:flex;align-items:center;justify-content:space-between;gap:14px;background:transparent;border:0;padding:17px 20px;text-align:left;cursor:pointer;font-family:var(--font);font-size:15px;font-weight:900;color:var(--ink);line-height:1.45;min-height:58px}
+.acc-ico,.faq-ico{width:26px;height:26px;border-radius:50%;border:1px solid var(--gold);color:var(--gold);display:grid;place-items:center;flex:0 0 auto;font-weight:900}
+.acc-btn[aria-expanded="true"] .acc-ico,.faq-q[aria-expanded="true"] .faq-ico{transform:rotate(45deg)}
+.acc-body,.faq-a{display:none;border-top:1px solid rgba(154,122,58,.14);padding:20px;background:#fff;color:#3b3f37;font-size:15px;line-height:1.7}
+.acc-body.open,.faq-a.open{display:block}
+.s-dark .acc-btn,.s-dark .faq-q{color:#fff}
+.s-dark .acc-body,.s-dark .faq-a{background:rgba(0,0,0,.18);border-color:rgba(201,165,90,.18)}
+details.inline-faq{background:var(--paper);border:1px solid var(--border);border-radius:14px;padding:0;overflow:hidden;margin-top:10px}
+details.inline-faq summary{list-style:none;cursor:pointer;padding:16px 18px;font-family:var(--font);font-size:15px;font-weight:900;color:var(--ink);display:flex;align-items:flex-start;justify-content:space-between;gap:14px;line-height:1.45}
+details.inline-faq summary::-webkit-details-marker{display:none}
+details.inline-faq summary::after{content:"+";color:var(--gold);font-weight:900;flex:0 0 auto}
+details.inline-faq[open] summary::after{transform:rotate(45deg)}
+details.inline-faq p{padding:0 18px 16px;color:#3b3f37;font-size:15px;line-height:1.7}
+.timeline{display:grid;gap:12px;margin-top:16px}
+.tl{display:grid;grid-template-columns:150px 1fr;gap:18px;background:var(--paper);border:1px solid var(--border);border-radius:16px;padding:16px}
+.tl-time{font-weight:900;color:var(--teal);font-size:14px;letter-spacing:.08em;text-transform:uppercase}
+.calc-row{display:grid;grid-template-columns:210px 1fr 90px;gap:12px;align-items:center;margin:12px 0}
+.calc-row label{font-weight:800;color:#32362f;font-size:14px}
+.calc-row input[type=range]{width:100%;accent-color:var(--teal)}
+.calc-val{text-align:right;font-weight:900;color:var(--ink)}
+.calc-note{background:var(--warm);border-left:4px solid var(--gold);border-radius:0 12px 12px 0;padding:16px 18px;color:#3b3f37;font-size:14px;line-height:1.7;margin-top:20px}
+.chart-outer{height:260px;position:relative;margin:18px 0;border-radius:24px;background:rgba(255,253,248,.72);border:1px solid rgba(154,122,58,.14);padding:12px}
+.kpi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:12px}
+.kpi{background:#fff;text-align:center}
+.kpi strong{display:block;color:var(--teal);font-family:var(--serif);font-size:1.7rem}
+.kpi span{font-size:12px;color:#55584f;letter-spacing:.04em;text-transform:uppercase}
+footer{background:#0f1c14;color:#f8f4ed;padding:40px var(--pad);text-align:center;border-top:4px solid var(--gold2)}
+footer p{color:rgba(248,244,237,.75);font-size:14px}
+footer strong{color:#fff}
+.contact-box{max-width:900px;margin:0 auto;background:rgba(255,255,255,.08);border:1px solid rgba(201,165,90,.22);border-radius:20px;padding:24px}
+.contact-box h2{color:#fff;margin-bottom:12px}
+@media(max-width:1100px){.hero-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.grid4,.product-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:900px){:root{--pad:24px}.hero{min-height:auto;padding-top:76px}.board-grid,.pain-answer,.legal-choice{grid-template-columns:1fr!important}.ministerial-map,.grid3,.lens-grid{grid-template-columns:1fr 1fr}.roundtable{grid-template-columns:1fr 1fr}.nav-links{right:14px;left:14px;width:auto;max-width:none}.back-link{display:none}}
+@media(max-width:620px){body{font-size:15px}:root{--pad:18px}.nav-inner{height:60px}.hero{padding-top:58px;padding-bottom:46px}.hero-grid,.grid2,.grid3,.grid4,.ministerial-map,.score-strip,.kpi-grid,.mvp-strip,.not-list,.guard-grid,.hardline-grid,.product-grid,.lens-grid,.decision-strip{grid-template-columns:1fr!important}.hero-actions{gap:10px}.btn{width:100%;padding:13px 16px}.sec{padding-top:46px;padding-bottom:46px}.card,.board-card,.journey,.metric,.risk-card,.lens-card,.product-step,.faq-item,.acc,.score-item,.kpi{border-radius:18px!important}.calc-row{grid-template-columns:1fr}.calc-val{text-align:left}.nav-links.open{display:flex;flex-direction:column}.tl{grid-template-columns:1fr}}
+
+
+.lang-mini{display:flex;gap:6px;align-items:center}
+.lang-mini a{display:inline-flex;align-items:center;justify-content:center;height:30px;min-width:34px;padding:0 9px;border-radius:999px;border:1px solid rgba(201,165,90,.24);background:rgba(255,255,255,.06);color:rgba(248,244,237,.86);font-size:12px;font-weight:800;letter-spacing:.04em}
+.lang-mini a.active{background:var(--gold2);color:#14251b;border-color:var(--gold2)}
+@media(max-width:900px){.lang-mini{display:none}}
+</style>
+</head>
+<body>
+<div class="hu-stripe"></div>
+<nav class="topbar">
+<div class="nav-inner">
+<a class="nav-brand" href="#hero">DÖR 2026</a>
+<a class="back-link" href="index_with_dor_page.html">Back to Central page</a>
+<div class="lang-mini"><a href="dor-2026.html">HU</a><a class="active" href="dor-2026-en.html">EN</a><a class="" href="dor-2026-de.html">DE</a></div>
+<button aria-expanded="false" aria-label="Menu" class="nav-toggle" onclick="toggleNav()"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24"><path d="M4 7h16"></path><path d="M4 12h16"></path><path d="M4 17h16"></path></svg></button>
+<div class="nav-links" id="navLinks"><button onclick="go('hero',this)">Pitch</button><button onclick="go('vezetoi-garancia',this)">Principle</button><button onclick="go('autonomia-zaro-garancia',this)">Autonomy</button><button onclick="go('kulkapcsolati-haszon',this)">Foreign relations</button><button onclick="go('problem',this)">Pain points</button><button onclick="go('pilot',this)">Pilot</button><button onclick="go('wixpilot',this)">Wix pilot</button><button onclick="go('success',this)">Metrics</button><button onclick="go('journeys',this)">User journey</button><button onclick="go('vision',this)">Strategic fit</button><button onclick="go('governance',this)">Governance</button><button onclick="go('garanciak',this)">Firewalls</button><button onclick="go('stressfix',this)">Stress test</button><button onclick="go('proof',this)">Proof</button><button onclick="go('appendix',this)">Appendices</button><button onclick="go('contact',this)">Contact</button></div>
+</div>
+</nav>
+<header class="hero" id="hero"><div class="hero-inner">
+<div class="ey">30-second executive pitch</div>
+<h1>DÖR 2026: a <em>voluntary pilot</em> for diaspora visibility, renewal through young operators and stronger community autonomy.</h1>
+<p class="hero-lead"><strong>DÖR 2026 is a living diaspora-relationship pilot.</strong> Its purpose is to make Hungarian communities abroad visible, reachable and operable as a Hungarian partner network with young contributors - while fully preserving their own autonomy. <strong>It does not collect data about the diaspora; it builds living relationships with the diaspora:</strong> events, community stories, young operators, cultural presence and local connection points become visible.</p>
+<div class="pitch-card"><p><strong>Important starting point:</strong> this is not a purely theoretical model. A small-scale Vienna experience has already provided operational evidence: events, community communication, youth involvement, online payment, volunteer work, institutional cooperation and visible Hungarian community presence worked in a real environment.</p></div>
+<div class="pitch-card"><p><strong>In 30 seconds:</strong> the first DÖR pilot shows how 10-20 diaspora organisations can be connected into one voluntary, visible Hungarian community space that can be operated with young contributors. The first operating elements are: <strong>organisation profile, event calendar, Junior Hub access and activity feedback</strong>. The system does not appoint representatives, does not rank communities, does not distribute funding and does not collect political data.</p></div>
+<div class="hero-grid"><div class="hero-mini"><b>Which pain does it solve?</b><span>Organisations are often invisible, overloaded, short of succession and without a shared operating picture.</span></div>
+<div class="hero-mini"><b>What is the first product?</b><span>Profile + event calendar + Junior Hub + basic activity feedback in a Wix-based pilot environment.</span></div>
+<div class="hero-mini"><b>Why is it defensible?</b><span>Voluntary, non-personalised, not ranking, not distributing funding and not collecting political data.</span></div>
+<div class="hero-mini"><b>What is the decision?</b><span>A factual Go / Modify / Stop decision after 90-120 days.</span></div>
+<div class="hero-mini"><b>What proves it?</b><span>The operating principle already exists on a small scale, so the logic can be demonstrated in person.</span></div></div>
+<div class="hero-actions"><button class="btn primary" onclick="go('pilot')">Pilot core</button><button class="btn secondary" onclick="go('garanciak')">Safeguards</button></div>
+</div></header>
+<section class="sec" id="vezetoi-garancia"><div class="wrap-wide">
+<div class="kicker">Executive interpretation</div>
+<h2>Two principles: <em>autonomy and living connection.</em></h2>
+<div class="grid3"><div class="card"><div class="ct">Autonomy safeguard</div><div class="cd">DÖR does not appoint representatives, rank communities, distribute funding, penalise non-participation or collect political/worldview data. Participation is voluntary, reversible and does not affect the organisation’s own operation.</div></div>
+<div class="card"><div class="ct">Living diaspora relationship</div><div class="cd">DÖR does not collect data about the diaspora; it builds a living relationship with the diaspora by making active organisations, events, young operators, local knowledge and community stories visible.</div></div></div>
+<div class="calc-note"><strong>Executive sentence:</strong> DÖR 2026 is designed to make Hungarian communities abroad visible as reachable, youth-operated partner networks while preserving their autonomy.</div>
+</div></section>
+<section class="sec s-dark" id="autonomia-zaro-garancia"><div class="wrap-wide">
+<div class="kicker">Autonomy clause</div>
+<h2>Not a system above communities, but a <em>voluntary operating infrastructure</em>.</h2>
+<div class="grid3"><div class="card"><div class="ct">Operating feedback, not state classification</div><div class="cd">Activity feedback is primarily a self-development tool for the organisation. The programme owner can only see aggregated operating signals for pilot evaluation.</div></div>
+<div class="card"><div class="ct">No funding pre-filter</div><div class="cd">The pilot result cannot be used directly for funding decisions, withdrawal of support, political classification or community ranking.</div></div>
+<div class="card"><div class="ct">No legitimacy decision</div><div class="cd">DÖR does not decide which organisation is the “real” Hungarian community in a city or country.</div></div></div>
+<div class="calc-note"><strong>Final autonomy sentence:</strong> We do not control. We do not rank. We do not distribute funding. We do not decide legitimacy. We do not collect political data.</div>
+</div></section>
+<section class="sec" id="kulkapcsolati-haszon"><div class="wrap-wide">
+<div class="kicker">Foreign-relations value</div>
+<h2>The diaspora should not be administered; it should be brought into <em>living relationship</em>.</h2>
+<div class="grid3"><div class="card"><div class="ct">Visible Hungarian presence</div><div class="cd">Organisational profiles, events, schools, clubs, cultural programmes and community stories become searchable in one place.</div></div>
+<div class="card"><div class="ct">Youth connection points</div><div class="cd">The Junior Hub treats young people as operators, not as a passive target group: content, events, archives, interviews, translations and digital profiles.</div></div>
+<div class="card"><div class="ct">Cultural and community diplomacy</div><div class="cd">DÖR does not replace diplomatic missions, but helps identify active community nodes and organisations suitable for dialogue.</div></div></div>
+<div class="calc-note"><strong>Summary sentence:</strong> DÖR 2026 is not designed to administer the diaspora, but to create living relationships with it.</div>
+</div></section>
+<section class="sec" id="problem"><div class="wrap-wide">
+<div class="kicker">01</div><h2>The diaspora problem is not technological. <em>It is a visibility, succession and operating problem.</em></h2>
+<p class="lead">The project is understandable only if every level is clear: who has the pain, why it hurts, and what DÖR solves.</p>
+<div class="pain-answer"><div class="pain-box"><div class="pa-label">Pain 1 · community autonomy</div><div class="pa-title">Organisations do not want central control.</div><div class="pa-text">Many diaspora communities are sensitive to systems that define from above who represents whom.</div></div><div class="answer-box"><div class="pa-label">DÖR</div><div class="pa-title">Voluntary infrastructure, not control.</div><div class="pa-text">The organisation decides on joining, its profile, delegate, exit and communication.</div></div></div>
+<div class="pain-answer"><div class="pain-box"><div class="pa-label">Pain 2 · living connection</div><div class="pa-title">Diaspora work is often invisible.</div><div class="pa-text">Events, stories and volunteer work often remain inside local channels.</div></div><div class="answer-box"><div class="pa-label">DÖR</div><div class="pa-title">A shared digital space with local autonomy.</div><div class="pa-text">The pilot provides profiles, an event calendar and a community news layer without replacing existing channels.</div></div></div>
+</div></section>
+<section class="sec s-dark" id="pilot"><div class="wrap-wide">
+<div class="kicker">02</div><h2>The first 90-120 days prove one thing only: <em>does the minimum viable system work?</em></h2><p class="lead muted">The pilot is not the full DÖR, not a funding system, not a global database and not a business platform. It tests four basic functions with real communities.</p>
+<div class="mvp-strip"><div class="mvp-item"><b>1 · Organisation profile</b><span>Who the organisation is, where it operates, what channels it uses and who the contact person is.</span></div>
+<div class="mvp-item"><b>2 · Event calendar</b><span>At least one event or news item uploaded through a simple publishing process.</span></div>
+<div class="mvp-item"><b>3 · Junior Hub</b><span>A young editor is appointed, receives a mentored task list and portfolio confirmation.</span></div>
+<div class="mvp-item"><b>4 · Activity report</b><span>Not a score and not a ranking, but operating feedback at the end of the pilot.</span></div></div>
+<h3>What is not part of the first pilot?</h3>
+<div class="not-list"><div class="not-item"><b>No funding score</b><span>Activity feedback does not distribute money and does not rank communities.</span></div>
+<div class="not-item"><b>No political data</b><span>No party preference, worldview, voting data or loyalty information.</span></div>
+<div class="not-item"><b>No mandatory participation</b><span>Non-participating organisations may not suffer any disadvantage.</span></div>
+<div class="not-item"><b>No global roll-out</b><span>Every continuation requires a separate decision.</span></div>
+<div class="not-item"><b>No live business module</b><span>The Market Bridge can only be examined in a later validated phase.</span></div>
+<div class="not-item"><b>No supplier lock-in</b><span>The technical structure must be documented, transferable and auditable.</span></div></div>
+</div></section>
+<section class="sec s-warm" id="wixpilot"><div class="wrap-wide">
+<div class="kicker">03/A</div><h2>Do not build a final state system first. <em>Prove the operating principle quickly.</em></h2>
+<p class="lead">The goal is not to build a final global platform, but to prove whether organisations can manage their profiles, publish events, involve young editors and operate within controlled legal and financial frames.</p>
+<div class="grid4">
+<div class="card"><div class="ct">100 editor access</div><div class="cd">At least one person per organisation can be trained.</div></div>
+<div class="card"><div class="ct">Central money flow</div><div class="cd">Revenues may arrive on an auditable technical account separated by organisation codes.</div></div>
+<div class="card"><div class="ct">Trained local owners</div><div class="cd">The operation does not depend on one person; local editor roles are created.</div></div>
+<div class="card"><div class="ct">Transferable operation</div><div class="cd">The structure can be documented, trained and later transferred to mentored teams.</div></div>
+</div>
+<div class="acc"><button aria-expanded="false" class="acc-btn" onclick="toggleAcc(this)"><span>Budget slider</span><span class="acc-ico">+</span></button><div class="acc-body"><p>The calculator is an estimate, not an offer or commitment.</p><div class="calc-row"><label>Number of organisations</label><input id="sl-org" max="1000" min="10" oninput="calcAll()" step="10" type="range" value="100"/><span class="calc-val" id="out-org">100</span></div><div class="calc-row"><label>Active Wix plan logic</label><span class="calc-val" id="out-rate">Business Elite / Studio</span></div><div class="kpi-grid"><div class="kpi"><strong id="kpi-month">178€</strong><span>estimated monthly platform cost</span></div><div class="kpi"><strong id="kpi-year">2,132€</strong><span>estimated annual platform cost</span></div><div class="kpi"><strong id="kpi-pilot">711€</strong><span>90-120 day pilot scale</span></div></div><div class="chart-outer"><canvas id="ecoChart"></canvas></div></div></div>
+</div></section>
+<section class="sec" id="success"><div class="wrap-wide"><div class="kicker">03</div><h2>After 90-120 days, the decision should be <em>measurable, not impression-based</em>.</h2><div class="grid4">
+<div class="metric"><strong>10-20</strong><p>voluntary participating organisations</p></div><div class="metric"><strong>60%</strong><p>upload at least one news item or event</p></div><div class="metric"><strong>15-30</strong><p>Junior Hub participants</p></div><div class="metric"><strong>70%</strong><p>leaders consider it useful</p></div><div class="metric"><strong>1</strong><p>executive dashboard and closing report</p></div><div class="metric"><strong>0</strong><p>data protection or political incidents</p></div><div class="metric"><strong>100%</strong><p>voluntary participation and exit right</p></div><div class="metric fail"><strong>STOP</strong><p>if the minimums are not met</p></div>
+</div></div></section>
+<section class="sec s-warm" id="journeys"><div class="wrap-wide"><div class="kicker">04</div><h2>What does each participant do after pilot launch?</h2><div class="grid3">
+<div class="journey"><b>Organisation leader</b><div class="steps"><div class="step">Receives invitation.</div><div class="step">Accepts the Autonomy Charter.</div><div class="step">Profile is created.</div><div class="step">Designates a contact and a young editor.</div></div></div>
+<div class="journey"><b>Young participant</b><div class="steps"><div class="step">Joins the Junior Hub.</div><div class="step">Receives a concrete task list.</div><div class="step">Uploads event, article or archive material.</div><div class="step">Receives mentored feedback.</div></div></div>
+<div class="journey"><b>Programme owner</b><div class="steps"><div class="step">Sees participating organisations.</div><div class="step">Follows activity and risks.</div><div class="step">Receives aggregated operating data.</div><div class="step">Decides: Go, Modify or Stop.</div></div></div>
+</div></div></section>
+<section class="sec" id="vision"><div class="wrap-wide"><div class="kicker">05</div><h2>DÖR is strong when it serves <em>autonomy and living connection</em> at the same time.</h2><div class="grid2">
+<div class="card"><div class="ct">Autonomy and dialogue</div><div class="cd">The community is a partner, not a controlled actor.</div></div>
+<div class="card"><div class="ct">Living diaspora relationship</div><div class="cd">Not a beneficiary list, but an operating community network.</div></div>
+<div class="card"><div class="ct">Youth renewal</div><div class="cd">Young people are operators, not targets.</div></div>
+<div class="card"><div class="ct">Government defensibility</div><div class="cd">Transparent, measurable, but not controlling.</div></div>
+</div></div></section>
+<section class="sec s-dark" id="governance"><div class="wrap-wide"><div class="kicker">06</div><h2>Not a new foundation. <em>A ministry-supervised pilot programme.</em></h2><p class="lead muted">The most defensible model is a time-limited, auditable pilot programme structure: policy supervision, a programme office, steering board and diaspora roundtable.</p><div class="board-grid"><div class="board-card strong"><div class="board-title">Recommended form: DÖR Pilot Programme Office + Steering Board</div><p class="board-sub">Daily execution is coordinated by a small office and supervised by a multi-stakeholder board.</p></div><div class="board-card"><div class="board-title">Supervision logic</div><p class="board-sub">The mandate is not operational interference, but a guarantee: responsible owner, budget line, data protection frame, decision gate and stop right.</p></div></div></div></section>
+<section class="sec s-warm" id="garanciak"><div class="wrap"><div class="ey">07</div><h2>The pilot can only start if structural safeguards close the attack surfaces.</h2><div class="guard-grid">
+<div class="card"><div class="ct">Public-finance firewall</div><div class="cd">No automatic extension, no automatic roll-out and no supplier privilege.</div></div>
+<div class="card"><div class="ct">Data protection-political firewall</div><div class="cd">No political opinions, party preference, worldview data or loyalty information.</div></div>
+<div class="card"><div class="ct">Voluntariness firewall</div><div class="cd">Non-participation may not cause any disadvantage.</div></div>
+<div class="card"><div class="ct">Autonomy firewall</div><div class="cd">The platform does not decide legitimacy.</div></div>
+</div><div class="decision-strip"><div class="decision go"><strong>GO</strong><small>Continue only with validated use, voluntary participation and clean audit.</small></div><div class="decision modify"><strong>MODIFY</strong><small>Modify if there is value but scope, cost, data protection or governance need correction.</small></div><div class="decision stop"><strong>STOP</strong><small>Stop if community value is not proven or risk cannot be closed.</small></div></div></div></section>
+<section class="sec" id="stressfix"><div class="wrap-wide"><div class="kicker">07/B</div><h2>The project is defensible when seven decision-making logics lead to the same conclusion: <em>small, measurable, clean, voluntary and stoppable.</em></h2><div class="lens-grid">
+<div class="card"><div class="ct">Transparency control</div><div class="cd">Who receives money, why, for how long and with what control?</div></div>
+<div class="card"><div class="ct">Autonomy control</div><div class="cd">Will this become central diaspora control?</div></div>
+<div class="card"><div class="ct">Living connection control</div><div class="cd">Does the diaspora receive an actual role?</div></div>
+<div class="card"><div class="ct">Startup control</div><div class="cd">What is the smallest provable product?</div></div>
+<div class="card"><div class="ct">Product / fintech control</div><div class="cd">Does it work for payments and permissions?</div></div>
+<div class="card"><div class="ct">Reputation control</div><div class="cd">Could it look like an influence or data-collection system?</div></div>
+</div></div></section>
+<section class="sec" id="proof"><div class="wrap"><div class="kicker">08</div><h2>It does not start from theory. <em>There is an operating sample.</em></h2><p class="lead">The Vienna experience shows that a small team, community trust and digital structure can create measurable growth, multi-generational involvement and media-visible results.</p></div></section>
+<section class="sec" id="appendix"><div class="wrap-wide"><div class="kicker">10</div><h2>Cost, staffing and timeline - expandable.</h2><div class="acc"><button aria-expanded="false" class="acc-btn" onclick="toggleAcc(this)"><span>Wix base fee and pilot cost logic</span><span class="acc-ico">+</span></button><div class="acc-body"><p>The Wix fee is only one technical base cost. Build, training, operation, data protection documentation, bookkeeping control and support must be planned separately.</p></div></div></div></section>
+<section class="sec s-dark" id="contact"><div class="wrap"><div class="kicker">Contact</div><h2>The operating principle can be demonstrated in person.</h2><p class="lead muted">The Vienna experience can be presented not only as a concept, but as operating logic, interface and pilot process.</p><div class="card" style="background:rgba(255,255,255,.09);border-color:rgba(201,165,90,.24)"><div class="ct" style="color:#fff">Bánhalmi Norbert</div><p style="color:rgba(248,244,237,.86);font-weight:700">Central Association of Hungarian Associations and Organisations in Austria</p><p style="color:#fff;font-size:1.15rem;font-weight:900;letter-spacing:.02em">+43 677 616 55592</p></div></div></section>
+<footer><div class="contact-box"><h2>DÖR 2026</h2><p>Diaspora Ecosystem Framework · password-free decision-preparation page</p></div></footer>
+
+<script>
+function toggleNav(){var links=document.getElementById('navLinks');var t=document.querySelector('.nav-toggle');if(!links||!t)return;var open=links.classList.toggle('open');t.setAttribute('aria-expanded',open?'true':'false')}
+function closeNav(){var links=document.getElementById('navLinks');var t=document.querySelector('.nav-toggle');if(links)links.classList.remove('open');if(t)t.setAttribute('aria-expanded','false')}
+function go(id,btn){var el=document.getElementById(id); if(el)el.scrollIntoView({behavior:'smooth',block:'start'}); if(btn){document.querySelectorAll('.nav-links button').forEach(b=>b.classList.remove('active'));btn.classList.add('active')} closeNav()}
+function toggleAcc(btn){var open=btn.getAttribute('aria-expanded')==='true';btn.setAttribute('aria-expanded',!open);var body=btn.nextElementSibling;if(body)body.classList.toggle('open',!open)}
+function toggleFaq(btn){var open=btn.getAttribute('aria-expanded')==='true';btn.setAttribute('aria-expanded',!open);var body=btn.nextElementSibling;if(body)body.classList.toggle('open',!open)}
+function euro2(n){return n.toLocaleString(document.documentElement.lang==='de'?'de-DE':'en-US',{minimumFractionDigits:0,maximumFractionDigits:2})+'€'}
+function wixAnnualCost(org){if(org<=10)return 34*12;return Math.ceil(org/100)*2131.93}
+function wixPlanLabel(org){if(org<=10)return 'Business up to 10'; if(org<=100)return 'Business Elite / Studio up to 100'; return Math.ceil(org/100)+'× Business Elite / Studio'}
+var ecoChart=null;
+function calcAll(){var org=+document.getElementById('sl-org')?.value||100;var outOrg=document.getElementById('out-org');if(outOrg)outOrg.textContent=org;var year=wixAnnualCost(org), month=year/12, pilot=year/3;var outRate=document.getElementById('out-rate');if(outRate)outRate.textContent=wixPlanLabel(org);var m=document.getElementById('kpi-month'), y=document.getElementById('kpi-year'), p=document.getElementById('kpi-pilot');if(m)m.textContent=euro2(month);if(y)y.textContent=euro2(year);if(p)p.textContent=euro2(pilot);if(ecoChart){ecoChart.data.datasets[0].data=[wixAnnualCost(10),wixAnnualCost(100),wixAnnualCost(500),wixAnnualCost(1000)];ecoChart.update()}}
+function initCharts(){if(!window.Chart)return;var e=document.getElementById('ecoChart');if(e&&!ecoChart){ecoChart=new Chart(e,{type:'bar',data:{labels:['10','100','500','1000'],datasets:[{label:'Estimated annual platform cost (EUR)',data:[408,2131.93,10659.65,21319.3]}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{y:{ticks:{callback:function(v){return v.toLocaleString()+'€';}}}}}})}calcAll()}
+document.addEventListener('DOMContentLoaded',()=>{try{calcAll()}catch(e){};window.addEventListener('resize',closeNav);document.addEventListener('click',function(e){var links=document.getElementById('navLinks');var toggle=document.querySelector('.nav-toggle');if(!links||!toggle)return;if(!links.contains(e.target)&&!toggle.contains(e.target)){closeNav();}});});
+</script>
+</body></html>
