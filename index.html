@@ -2294,6 +2294,140 @@ html.pdf-export details{
   align-self:stretch!important;
 }
 
+
+/* ===== v47 · ASZTALI TAGSZERVEZETI TÉRKÉP: ÜRES RÉSZEK KIVÁGÁSA ===== */
+/* A desktop térkép masonry/column elrendezést kap, így a különböző magasságú régiókártyák nem hagynak nagy üres sávokat. */
+@media(min-width:901px){
+  .executive-map{
+    display:block!important;
+    columns:2!important;
+    column-gap:18px!important;
+    min-height:0!important;
+    height:auto!important;
+    padding:22px!important;
+    overflow:visible!important;
+  }
+  .executive-map::before{
+    display:none!important;
+  }
+  .map-title-row{
+    display:flex!important;
+    column-span:all!important;
+    -webkit-column-span:all!important;
+    width:100%!important;
+    margin:0 0 18px 0!important;
+    break-inside:avoid!important;
+    page-break-inside:avoid!important;
+  }
+  .region-panel,
+  .r-vorarlberg,
+  .r-tirol,
+  .r-salzburg,
+  .r-felso,
+  .r-vienna,
+  .r-burgenland,
+  .r-styria{
+    display:inline-block!important;
+    width:100%!important;
+    margin:0 0 18px 0!important;
+    grid-column:auto!important;
+    grid-row:auto!important;
+    break-inside:avoid!important;
+    page-break-inside:avoid!important;
+    vertical-align:top!important;
+  }
+}
+@media(min-width:1500px){
+  .executive-map{
+    columns:2!important;
+  }
+}
+
+
+/* ===== v48 · HERO UTÁNI 5 BLOKK: ELEGÁNS LENYITHATÓ LINKEK ===== */
+/* A fő tartalom azonnal olvasható marad, a kapcsolódó linkek kártyánként nyithatók. */
+.hierarchy-grid .h-node{
+  position:relative!important;
+}
+.hierarchy-grid .h-node .links-toggle{
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  gap:8px!important;
+  min-height:42px!important;
+  margin:10px 0 0 0!important;
+  padding:10px 16px!important;
+  border:1px solid rgba(0,0,0,.10)!important;
+  border-radius:999px!important;
+  background:#fff!important;
+  color:#1d1d1f!important;
+  font-size:14px!important;
+  line-height:1!important;
+  font-weight:600!important;
+  letter-spacing:-.018em!important;
+  cursor:pointer!important;
+  box-shadow:0 6px 18px rgba(0,0,0,.045)!important;
+  transition:background .18s ease, transform .18s ease, box-shadow .18s ease!important;
+}
+.hierarchy-grid .h-node .links-toggle:hover{
+  background:#f8f8fa!important;
+  transform:translateY(-1px)!important;
+  box-shadow:0 10px 24px rgba(0,0,0,.07)!important;
+}
+.hierarchy-grid .h-node .links-toggle::after{
+  content:"+"!important;
+  width:20px!important;
+  height:20px!important;
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  border-radius:999px!important;
+  background:#f5f5f7!important;
+  color:#1d1d1f!important;
+  font-size:18px!important;
+  font-weight:400!important;
+  line-height:1!important;
+  transition:transform .22s ease!important;
+}
+.hierarchy-grid .h-node.links-open .links-toggle::after{
+  transform:rotate(45deg)!important;
+}
+.hierarchy-grid .h-node ul{
+  max-height:0!important;
+  opacity:0!important;
+  overflow:hidden!important;
+  margin-top:0!important;
+  padding-top:0!important;
+  padding-bottom:0!important;
+  transform:translateY(-6px)!important;
+  transition:max-height .34s ease, opacity .24s ease, transform .24s ease, margin-top .24s ease!important;
+}
+.hierarchy-grid .h-node.links-open ul{
+  max-height:1200px!important;
+  opacity:1!important;
+  overflow:visible!important;
+  margin-top:24px!important;
+  transform:translateY(0)!important;
+}
+.hierarchy-grid .h-node.links-open li a{
+  animation:vipach-link-reveal .28s ease both!important;
+}
+@keyframes vipach-link-reveal{
+  from{opacity:0;transform:translateY(6px)}
+  to{opacity:1;transform:translateY(0)}
+}
+@media(max-width:900px){
+  .hierarchy-grid .h-node .links-toggle{
+    width:100%!important;
+    min-height:46px!important;
+    font-size:15px!important;
+    margin-top:12px!important;
+  }
+  .hierarchy-grid .h-node.links-open ul{
+    margin-top:22px!important;
+  }
+}
+
 </style>
 <meta content="#ffffff" name="theme-color"/><meta content="website" property="og:type"/><meta content="Központi Szövetség · Döntéshozói áttekintés · Online ökoszisztéma · DÖR 2026" property="og:title"/><meta content="Döntéshozói áttekintés az Ausztriai Magyar Egyesületek és Szervezetek Központi Szövetségéről, online ökoszisztémájáról, tagszervezeti hálózatáról és a DÖR 2026 pilotról." property="og:description"/><meta content="hu_HU" property="og:locale"/><meta content="summary_large_image" name="twitter:card"/><link href="?lang=hu" hreflang="hu" rel="alternate"/><link href="?lang=en" hreflang="en" rel="alternate"/><link href="?lang=de" hreflang="de" rel="alternate"/><link href="?lang=hu" hreflang="x-default" rel="alternate"/><script type="application/ld+json">{
   "@context": "https://schema.org",
@@ -2380,7 +2514,7 @@ html.pdf-export details{
 <a class="node-url" href="https://www.facebook.com/kozpontiszovetseg" rel="noopener" target="_blank">facebook.com/kozpontiszovetseg</a>
 <p class="node-explain" data-i18n="node.social.p1">A projektek <strong>nem külön Facebook-oldalakon</strong> szóródnak szét, hanem a <strong>központi oldal alatt</strong>, csoportokként kapcsolódnak. <strong>Egy logika, sok aktív közösségi tér.</strong></p>
 <p class="node-explain" data-i18n="node.social.p2">A központi oldal adminja <strong>minden projektcsoporthoz hozzáfér</strong>. A struktúra még épül, de a <strong>felületek már működnek</strong>.</p>
-<ul>
+<button aria-expanded="false" class="links-toggle" data-i18n="links.toggle" type="button">Kapcsolódó linkek</button><ul>
 <li><a href="https://www.facebook.com/groups/becsimagyariskola/" rel="noopener" target="_blank"><strong data-i18n="linkstrong.20">Bécsi Magyar Iskola Facebook-csoport</strong><span data-i18n="linkspan.21">Szülői, iskolai és közösségi kommunikáció.</span></a></li>
 <li><a href="https://www.facebook.com/groups/becsinaplo/" rel="noopener" target="_blank"><strong data-i18n="linkstrong.22">Bécsi Napló Facebook-csoport</strong><span data-i18n="linkspan.23">Cikkmegosztás, olvasói kapcsolódás és közösségi visszacsatolás.</span></a></li>
 <li><a href="https://www.facebook.com/groups/vipach/" rel="noopener" target="_blank"><strong data-i18n="linkstrong.24">VIPACH Facebook-csoport</strong><span data-i18n="linkspan.25">Alkotói közösség, programkommunikáció és aktivitás.</span></a></li>
@@ -2395,7 +2529,7 @@ html.pdf-export details{
 <a class="node-link" href="https://www.magyariskola.at" rel="noopener" target="_blank"><span class="node-title" data-i18n="node.school.title">Bécsi Magyar Iskola</span></a>
 <a class="node-url" href="https://www.magyariskola.at" rel="noopener" target="_blank">magyariskola.at</a>
 <p class="node-explain" data-i18n="node.school.p1">A közösség <strong>utánpótlás- és családi pillére</strong>: <strong>hétvégi magyar oktatás</strong>, korosztályos foglalkozások, szülői kommunikáció, beszámolók és kérdőívek.</p>
-<ul>
+<button aria-expanded="false" class="links-toggle" data-i18n="links.toggle" type="button">Kapcsolódó linkek</button><ul>
 <li><a href="https://2026.magyariskola.at" rel="noopener" target="_blank"><strong data-i18n="linkstrong.31">2026.magyariskola.at</strong><span data-i18n="linkspan.32">Tanévbeszámoló és eredménykommunikáció: megmutatja, mi történt, kik dolgoztak, milyen közösségi érték jött létre.</span></a></li>
 <li><a href="https://kerdoiv.magyariskola.at" rel="noopener" target="_blank"><strong data-i18n="linkstrong.33">kerdoiv.magyariskola.at</strong><span data-i18n="linkspan.34">Visszajelzési és kapcsolatfelvételi felület: adatot ad a működés javításához és a családok igényeinek megértéséhez.</span></a></li>
 <li><a href="https://www.magyariskola.at/orf-at" rel="noopener" target="_blank"><strong data-i18n="linkstrong.35">ORF Magyarok sajtófigyelő</strong><span data-i18n="linkspan.36">Az iskola ORF Magyarok-megjelenéseinek gyűjtőfelülete, amely bizonyítja a közösségi munka nyilvános láthatóságát.</span></a></li>
@@ -2413,7 +2547,7 @@ html.pdf-export details{
 <a class="node-link" href="https://www.becsinaplo.at" rel="noopener" target="_blank"><span class="node-title" data-i18n="node.news.title">Bécsi Napló</span></a>
 <a class="node-url" href="https://www.becsinaplo.at" rel="noopener" target="_blank">becsinaplo.at</a>
 <p class="node-explain" data-i18n="node.news.p1">A közösség <strong>szerkesztett nyilvánossága</strong>: cikkek <strong>dokumentálják</strong> és <strong>visszakereshetővé teszik</strong> az ausztriai magyar élet eseményeit.</p>
-<ul>
+<button aria-expanded="false" class="links-toggle" data-i18n="links.toggle" type="button">Kapcsolódó linkek</button><ul>
 <li><a href="https://www.facebook.com/groups/becsinaplo/" rel="noopener" target="_blank"><strong data-i18n="linkstrong.48">Bécsi Napló Facebook-csoport</strong><span data-i18n="linkspan.49">Közösségi elérés, olvasói kapcsolódás, cikkmegosztás és gyors visszacsatolás.</span></a></li>
 </ul>
 </article>
@@ -2425,7 +2559,7 @@ html.pdf-export details{
 <a class="node-link" href="https://www.vipach.at" rel="noopener" target="_blank"><span class="node-title" data-i18n="node.vipach.title">VIPACH <span class="node-subtitle">(Vienna Photo Art &amp; Creative Hub)</span></span></a>
 <a class="node-url" href="https://www.vipach.at" rel="noopener" target="_blank">vipach.at</a>
 <p class="node-explain" data-i18n="node.vipach.p1">A <strong>kreatív és vizuális ág</strong>: fotó, alkotóközösség, digitális jelenlét. <strong>Nem külső befektetésből</strong>, hanem <strong>közösségi finanszírozásból</strong> tartja fenn magát, programjait és láthatóságát.</p>
-<ul>
+<button aria-expanded="false" class="links-toggle" data-i18n="links.toggle" type="button">Kapcsolódó linkek</button><ul>
 <li><a href="https://business.vipach.at" rel="noopener" target="_blank"><strong data-i18n="linkstrong.53">business.vipach.at</strong><span data-i18n="linkspan.54">Stratégiai és szolgáltatási aloldal: megmutatja, hogyan kapcsolódhat a közösségi kreatív tudás professzionális vizuális és digitális feladatokhoz.</span></a></li>
 <li><a href="https://amcham.at/members-list/" rel="noopener" target="_blank"><strong data-i18n="linkstrong.55">AmCham Austria kapcsolódás</strong><span data-i18n="linkspan.56">A VIPACH Bánhalmi Norberten keresztül az AmCham Austria, az Osztrák–Amerikai Kereskedelmi Kamara szakmai közegéhez is kapcsolódik.</span></a></li>
 <li><a href="https://photostudio.vipach.at" rel="noopener" target="_blank"><strong data-i18n="linkstrong.57">photostudio.vipach.at</strong><span data-i18n="linkspan.58">Kreatív / képfeldolgozási alrendszer: digitális eszköz és szolgáltatási kiterjesztés a VIPACH alatt.</span></a></li>
@@ -2443,7 +2577,7 @@ html.pdf-export details{
 <a class="node-link" href="https://www.musicaltarsulat.at" rel="noopener" target="_blank"><span class="node-title" data-i18n="node.stage.title">Bécsi Magyar Musical Társulat</span></a>
 <a class="node-url" href="https://www.musicaltarsulat.at" rel="noopener" target="_blank">musicaltarsulat.at</a>
 <p class="node-explain" data-i18n="node.stage.p1"><strong>Magyar nyelvű színpadi, zenei és gyerek-ifjúsági</strong> alkotómunka. Itt a magyar nyelv <strong>nem tananyag, hanem élő kulturális élmény</strong>.</p>
-<ul>
+<button aria-expanded="false" class="links-toggle" data-i18n="links.toggle" type="button">Kapcsolódó linkek</button><ul>
 <li><a href="https://www.facebook.com/groups/musicaltarsulat" rel="noopener" target="_blank"><strong data-i18n="linkstrong.70">Musical Társulat Facebook-csoport</strong><span data-i18n="linkspan.71">Közösségi szervezés, próbák, előadások, szülői és nézői kapcsolódás.</span></a></li>
 </ul>
 </article>
@@ -2991,8 +3125,6 @@ document.addEventListener('DOMContentLoaded', () => {
   document.addEventListener('DOMContentLoaded',()=>{run();const orig=window.KSZ_i18n&&window.KSZ_i18n.setLanguage;if(typeof orig==='function'){window.KSZ_i18n.setLanguage=function(l){const r=orig.call(window.KSZ_i18n,l);setTimeout(run,0);return r;};}new MutationObserver(run).observe(document.documentElement,{childList:true,subtree:true,characterData:true,attributes:true,attributeFilter:['lang']});});
 })();
 </script>
-
-
 <script id="interactiveMemberMapScript">
 (function(){
   function normalize(value){return(value||'').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/\s+/g,' ').trim();}
@@ -3006,6 +3138,33 @@ document.addEventListener('DOMContentLoaded', () => {
   function focusMember(li){const name=li.dataset.orgName;if(!name)return;const target=Array.from(document.querySelectorAll('.member')).find(card=>normalize(card.dataset.name||card.querySelector('h3')?.textContent||'')===normalize(name));if(!target)return;document.querySelectorAll('.region-panel li.map-selected').forEach(x=>x.classList.remove('map-selected'));document.querySelectorAll('.member.member-focus').forEach(x=>x.classList.remove('member-focus'));li.classList.add('map-selected');if(target.style.display==='none')target.style.display='';target.classList.add('member-focus');target.scrollIntoView({behavior:'smooth',block:'center'});setTimeout(()=>target.classList.remove('member-focus'),4200);}
   function attachClicks(){buildLinks();document.querySelectorAll('.region-panel li[data-org-name]').forEach(li=>{if(li.dataset.clickReady==='1')return;li.addEventListener('click',()=>focusMember(li));li.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();focusMember(li);}});li.dataset.clickReady='1';});}
   document.addEventListener('DOMContentLoaded',()=>{attachClicks();refreshHighlights();const original=window.filterCards;if(typeof original==='function'){window.filterCards=function(){const result=original.apply(this,arguments);setTimeout(refreshHighlights,0);return result;};}document.addEventListener('click',e=>{if(e.target.closest('.topic-toggle,.control,.clear-topics'))setTimeout(refreshHighlights,0);});document.addEventListener('change',e=>{if(e.target&&e.target.id==='regionSelect')setTimeout(refreshHighlights,0);});const originalLang=window.KSZ_i18n&&window.KSZ_i18n.setLanguage;if(typeof originalLang==='function'){window.KSZ_i18n.setLanguage=function(lang){const result=originalLang.call(window.KSZ_i18n,lang);setTimeout(()=>{buildLinks();attachClicks();refreshHighlights();},0);return result;};}});
+})();
+</script>
+<script>
+(function(){
+  function initHeroLinkToggles(){
+    document.querySelectorAll('.hierarchy-grid .h-node').forEach(function(card, index){
+      var btn = card.querySelector(':scope > .links-toggle');
+      var list = card.querySelector(':scope > ul');
+      if(!btn || !list || btn.dataset.ready === '1') return;
+      var id = list.id || ('hero-links-' + index);
+      list.id = id;
+      btn.setAttribute('aria-controls', id);
+      btn.setAttribute('aria-expanded', 'false');
+      btn.dataset.ready = '1';
+      btn.addEventListener('click', function(ev){
+        ev.preventDefault();
+        ev.stopPropagation();
+        var open = card.classList.toggle('links-open');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+    });
+  }
+  if(document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', initHeroLinkToggles);
+  } else {
+    initHeroLinkToggles();
+  }
 })();
 </script>
 
