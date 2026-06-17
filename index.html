@@ -1522,19 +1522,79 @@ html.pdf-export details{
 
 
 /* ===== v37 · NON-OVERLAPPING MEMBER MAP GRID ===== */
-.executive-map{display:grid!important;grid-template-columns:repeat(2,minmax(220px,1fr))!important;grid-auto-rows:auto!important;gap:20px!important;align-items:start!important;min-height:auto!important;overflow:visible!important;}
-.executive-map::before{opacity:.55!important;}
-.map-title-row{grid-column:1 / -1!important;}
-.region-panel,.r-vorarlberg,.r-tirol,.r-salzburg,.r-felso,.r-vienna,.r-burgenland,.r-styria{grid-column:auto!important;grid-row:auto!important;width:100%!important;min-width:0!important;max-width:100%!important;align-self:start!important;}
-.r-vienna,.r-tirol{grid-column:span 1!important;}
-.region-panel header{display:grid!important;grid-template-columns:minmax(0,1fr) auto!important;align-items:start!important;gap:8px 12px!important;}
-.region-panel header strong{min-width:0!important;max-width:100%!important;overflow-wrap:anywhere!important;word-break:normal!important;}
-.region-panel header em{justify-self:end!important;align-self:start!important;white-space:nowrap!important;margin-left:8px!important;}
-.region-panel ol{min-width:0!important;}
-.region-panel li{min-width:0!important;overflow-wrap:anywhere!important;}
-.region-panel small{overflow-wrap:anywhere!important;}
-@media(max-width:1180px){.executive-map{grid-template-columns:1fr!important}.region-panel header{grid-template-columns:minmax(0,1fr) auto!important}}
-@media(max-width:520px){.region-panel header{grid-template-columns:1fr!important}.region-panel header em{justify-self:start!important;margin-left:0!important}}
+.executive-map{
+  display:grid!important;
+  grid-template-columns:repeat(2,minmax(220px,1fr))!important;
+  grid-auto-rows:auto!important;
+  gap:20px!important;
+  align-items:start!important;
+  min-height:auto!important;
+  overflow:visible!important;
+}
+.executive-map::before{
+  opacity:.55!important;
+}
+.map-title-row{
+  grid-column:1 / -1!important;
+}
+.region-panel,
+.r-vorarlberg,.r-tirol,.r-salzburg,.r-felso,.r-vienna,.r-burgenland,.r-styria{
+  grid-column:auto!important;
+  grid-row:auto!important;
+  width:100%!important;
+  min-width:0!important;
+  max-width:100%!important;
+  align-self:start!important;
+}
+.r-vienna,
+.r-tirol{
+  grid-column:span 1!important;
+}
+.region-panel header{
+  display:grid!important;
+  grid-template-columns:minmax(0,1fr) auto!important;
+  align-items:start!important;
+  gap:8px 12px!important;
+}
+.region-panel header strong{
+  min-width:0!important;
+  max-width:100%!important;
+  overflow-wrap:anywhere!important;
+  word-break:normal!important;
+}
+.region-panel header em{
+  justify-self:end!important;
+  align-self:start!important;
+  white-space:nowrap!important;
+  margin-left:8px!important;
+}
+.region-panel ol{
+  min-width:0!important;
+}
+.region-panel li{
+  min-width:0!important;
+  overflow-wrap:anywhere!important;
+}
+.region-panel small{
+  overflow-wrap:anywhere!important;
+}
+@media(max-width:1180px){
+  .executive-map{
+    grid-template-columns:1fr!important;
+  }
+  .region-panel header{
+    grid-template-columns:minmax(0,1fr) auto!important;
+  }
+}
+@media(max-width:520px){
+  .region-panel header{
+    grid-template-columns:1fr!important;
+  }
+  .region-panel header em{
+    justify-self:start!important;
+    margin-left:0!important;
+  }
+}
 
 </style>
 <meta content="#ffffff" name="theme-color"/><meta content="website" property="og:type"/><meta content="Központi Szövetség · Döntéshozói áttekintés · Online ökoszisztéma · DÖR 2026" property="og:title"/><meta content="Döntéshozói áttekintés az Ausztriai Magyar Egyesületek és Szervezetek Központi Szövetségéről, online ökoszisztémájáról, tagszervezeti hálózatáról és a DÖR 2026 pilotról." property="og:description"/><meta content="hu_HU" property="og:locale"/><meta content="summary_large_image" name="twitter:card"/><link href="?lang=hu" hreflang="hu" rel="alternate"/><link href="?lang=en" hreflang="en" rel="alternate"/><link href="?lang=de" hreflang="de" rel="alternate"/><link href="?lang=hu" hreflang="x-default" rel="alternate"/><script type="application/ld+json">{
@@ -1639,7 +1699,6 @@ html.pdf-export details{
 <p class="node-explain" data-i18n="node.school.p1">A közösség <strong>utánpótlás- és családi pillére</strong>: <strong>hétvégi magyar oktatás</strong>, korosztályos foglalkozások, szülői kommunikáció, beszámolók és kérdőívek.</p>
 <ul>
 <li><a href="https://2026.magyariskola.at" rel="noopener" target="_blank"><strong data-i18n="linkstrong.31">2026.magyariskola.at</strong><span data-i18n="linkspan.32">Tanévbeszámoló és eredménykommunikáció: megmutatja, mi történt, kik dolgoztak, milyen közösségi érték jött létre.</span></a></li>
-<li><a href="https://www.becsiszelet.at" rel="noopener" target="_blank"><strong data-i18n="linkstrong.becsi.szelet">Bécsi Szelet · kulturális és művészeti online magazin</strong><span data-i18n="linkspan.becsi.szelet">2026 októberében induló új online magazinunk, kifejezetten a kultúra és a művészet jegyében.</span></a></li>
 <li><a href="https://kerdoiv.magyariskola.at" rel="noopener" target="_blank"><strong data-i18n="linkstrong.33">kerdoiv.magyariskola.at</strong><span data-i18n="linkspan.34">Visszajelzési és kapcsolatfelvételi felület: adatot ad a működés javításához és a családok igényeinek megértéséhez.</span></a></li>
 <li><a href="https://www.magyariskola.at/orf-at" rel="noopener" target="_blank"><strong data-i18n="linkstrong.35">ORF Magyarok sajtófigyelő</strong><span data-i18n="linkspan.36">Az iskola ORF Magyarok-megjelenéseinek gyűjtőfelülete, amely bizonyítja a közösségi munka nyilvános láthatóságát.</span></a></li>
 <li><a href="https://rolunk.at/tag/becsi-magyar-iskola/" rel="noopener" target="_blank"><strong data-i18n="linkstrong.37">rolunk.at sajtófigyelő</strong><span data-i18n="linkspan.38">Rólunk.at cikkek és megjelenések: külső média-visszaigazolás az iskola közösségi szerepéről.</span></a></li>
@@ -1651,20 +1710,19 @@ html.pdf-export details{
 <article class="h-node">
 <div class="node-head">
 <span class="node-icon ic-news"><svg fill="none" viewbox="0 0 24 24"><path d="M4 5h11a2 2 0 0 1 2 2v11a1 1 0 0 0 1 1h0a1 1 0 0 0 1-1V8M4 5v13a1 1 0 0 0 1 1h13M7 9h7M7 12.5h7M7 16h4" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></span>
-<span class="node-label" data-i18n="linkstrong.becsi.szelet":{"en":"Bécsi Szelet · cultural and arts online magazine","de":"Bécsi Szelet · Online-Magazin für Kultur und Kunst"},"linkspan.becsi.szelet":{"en":"Our new online magazine launches in October 2026, dedicated specifically to culture and the arts.","de":"Unser neues Online-Magazin startet im Oktober 2026 und widmet sich gezielt Kultur und Kunst."},"node.news.label">Szerkesztett magyar médiafelület</span>
+<span class="node-label" data-i18n="node.news.label">Szerkesztett magyar médiafelület</span>
 </div>
 <a class="node-link" href="https://www.becsinaplo.at" rel="noopener" target="_blank"><span class="node-title" data-i18n="node.news.title">Bécsi Napló</span></a>
 <a class="node-url" href="https://www.becsinaplo.at" rel="noopener" target="_blank">becsinaplo.at</a>
 <p class="node-explain" data-i18n="node.news.p1">A közösség <strong>szerkesztett nyilvánossága</strong>: cikkek <strong>dokumentálják</strong> és <strong>visszakereshetővé teszik</strong> az ausztriai magyar élet eseményeit.</p>
 <ul>
 <li><a href="https://www.facebook.com/groups/becsinaplo/" rel="noopener" target="_blank"><strong data-i18n="linkstrong.48">Bécsi Napló Facebook-csoport</strong><span data-i18n="linkspan.49">Közösségi elérés, olvasói kapcsolódás, cikkmegosztás és gyors visszacsatolás.</span></a></li>
-<li><a href="https://www.becsinaplo.eu/ujsag-archivum" rel="noopener" target="_blank"><strong data-i18n="linkstrong.becsi.archive">Bécsi Napló újságarchívum</strong><span data-i18n="linkspan.becsi.archive">Korábbi lapszámok és archív kiadványok visszakeresése.</span></a></li>
 </ul>
 </article>
 <article class="h-node">
 <div class="node-head">
 <span class="node-icon ic-creative"><svg fill="none" viewbox="0 0 24 24"><rect height="14" rx="2.5" stroke-width="1.7" width="18" x="3" y="5"></rect><circle cx="9" cy="10" r="1.8" stroke-width="1.7"></circle><path d="m4 17 4.5-4.5a1.5 1.5 0 0 1 2 0L16 18M14 14l1.8-1.8a1.5 1.5 0 0 1 2 0L20 14.5" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></span>
-<span class="node-label" data-i18n="linkstrong.becsi.archive":{"en":"Bécsi Napló archive","de":"Bécsi Napló Archiv"},"linkspan.becsi.archive":{"en":"Previous issues and archived publications.","de":"Frühere Ausgaben und archivierte Publikationen."},"node.vipach.label">Kreatív, vizuális és közösségi ág</span>
+<span class="node-label" data-i18n="node.vipach.label">Kreatív, vizuális és közösségi ág</span>
 </div>
 <a class="node-link" href="https://www.vipach.at" rel="noopener" target="_blank"><span class="node-title" data-i18n="node.vipach.title">VIPACH <span class="node-subtitle">(Vienna Photo Art &amp; Creative Hub)</span></span></a>
 <a class="node-url" href="https://www.vipach.at" rel="noopener" target="_blank">vipach.at</a>
