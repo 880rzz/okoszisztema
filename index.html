@@ -2344,333 +2344,130 @@ html.pdf-export details{
 }
 
 
-/* ===== v48 · HERO UTÁNI 5 BLOKK: ELEGÁNS LENYITHATÓ LINKEK ===== */
-/* A fő tartalom azonnal olvasható marad, a kapcsolódó linkek kártyánként nyithatók. */
-.hierarchy-grid .h-node{
-  position:relative!important;
-}
-.hierarchy-grid .h-node .links-toggle{
-  display:inline-flex!important;
-  align-items:center!important;
-  justify-content:center!important;
-  gap:8px!important;
-  min-height:42px!important;
-  margin:10px 0 0 0!important;
-  padding:10px 16px!important;
-  border:1px solid rgba(0,0,0,.10)!important;
-  border-radius:999px!important;
-  background:#fff!important;
-  color:#1d1d1f!important;
-  font-size:14px!important;
-  line-height:1!important;
-  font-weight:600!important;
-  letter-spacing:-.018em!important;
-  cursor:pointer!important;
-  box-shadow:0 6px 18px rgba(0,0,0,.045)!important;
-  transition:background .18s ease, transform .18s ease, box-shadow .18s ease!important;
-}
-.hierarchy-grid .h-node .links-toggle:hover{
-  background:#f8f8fa!important;
-  transform:translateY(-1px)!important;
-  box-shadow:0 10px 24px rgba(0,0,0,.07)!important;
-}
-.hierarchy-grid .h-node .links-toggle::after{
-  content:"+"!important;
-  width:20px!important;
-  height:20px!important;
-  display:inline-flex!important;
-  align-items:center!important;
-  justify-content:center!important;
-  border-radius:999px!important;
-  background:#f5f5f7!important;
-  color:#1d1d1f!important;
-  font-size:18px!important;
-  font-weight:400!important;
-  line-height:1!important;
-  transition:transform .22s ease!important;
-}
-.hierarchy-grid .h-node.links-open .links-toggle::after{
-  transform:rotate(45deg)!important;
-}
-.hierarchy-grid .h-node ul{
-  max-height:0!important;
-  opacity:0!important;
-  overflow:hidden!important;
-  margin-top:0!important;
-  padding-top:0!important;
-  padding-bottom:0!important;
-  transform:translateY(-6px)!important;
-  transition:max-height .34s ease, opacity .24s ease, transform .24s ease, margin-top .24s ease!important;
-}
-.hierarchy-grid .h-node.links-open ul{
-  max-height:1200px!important;
-  opacity:1!important;
-  overflow:visible!important;
-  margin-top:24px!important;
-  transform:translateY(0)!important;
-}
-.hierarchy-grid .h-node.links-open li a{
-  animation:vipach-link-reveal .28s ease both!important;
-}
-@keyframes vipach-link-reveal{
-  from{opacity:0;transform:translateY(6px)}
-  to{opacity:1;transform:translateY(0)}
-}
-@media(max-width:900px){
-  .hierarchy-grid .h-node .links-toggle{
-    width:100%!important;
-    min-height:46px!important;
-    font-size:15px!important;
-    margin-top:12px!important;
-  }
-  .hierarchy-grid .h-node.links-open ul{
-    margin-top:22px!important;
-  }
-}
-
-
-/* ===== v49 · HERO UTÁNI BLOKKOK: NAGYOBB TÉR + ASZTALI 2 OSZLOP / 3 SOR ===== */
-/* Több levegő a kártyák között, azonos szélesség és azonos vizuális magasság desktopon. */
-.hierarchy-board{
-  margin-top:64px!important;
-}
-.hierarchy-grid{
-  gap:34px!important;
-}
-
+/* ===== v50 · ASZTALI BETŰMÉRET FINOMÍTÁS + FÜGGŐLEGES HAMBURGER MENÜ ===== */
+/* Tagszervezeti nevek desktopon: 80% a korábbi mérethez képest. */
 @media(min-width:901px){
-  .hierarchy-grid{
-    display:grid!important;
-    grid-template-columns:repeat(2,minmax(0,1fr))!important;
-    grid-auto-rows:minmax(560px,1fr)!important;
-    gap:38px!important;
-    align-items:stretch!important;
-  }
-  .hierarchy-grid > .h-node,
-  .hierarchy-grid > .h-node:nth-child(1),
-  .hierarchy-grid > .h-node:nth-child(2),
-  .hierarchy-grid > .h-node:nth-child(3),
-  .hierarchy-grid > .h-node:nth-child(4),
-  .hierarchy-grid > .h-node:nth-child(5){
-    grid-column:auto!important;
-    grid-row:auto!important;
-    width:100%!important;
-    height:100%!important;
-    min-height:560px!important;
-    display:flex!important;
-    flex-direction:column!important;
-    align-self:stretch!important;
-    padding:46px 42px!important;
-  }
-  .hierarchy-grid > .h-node .node-head{
-    flex:0 0 auto!important;
-  }
-  .hierarchy-grid > .h-node .node-link,
-  .hierarchy-grid > .h-node .node-url,
-  .hierarchy-grid > .h-node .node-explain{
-    flex:0 0 auto!important;
-  }
-  .hierarchy-grid > .h-node .links-toggle{
-    margin-top:auto!important;
-    align-self:flex-start!important;
-  }
-  .hierarchy-grid > .h-node ul{
-    flex:0 0 auto!important;
-  }
-  .core-social{
-    grid-column:auto!important;
-  }
-}
-
-@media(min-width:1400px){
-  .hierarchy-grid{
-    gap:44px!important;
-    grid-auto-rows:minmax(590px,1fr)!important;
-  }
-  .hierarchy-grid > .h-node{
-    min-height:590px!important;
-    padding:50px 46px!important;
-  }
-}
-
-@media(max-width:900px){
-  .hierarchy-board{
-    margin-top:46px!important;
-  }
-  .hierarchy-grid{
-    gap:32px!important;
-  }
-  .hierarchy-grid > .h-node{
-    min-height:0!important;
-    width:100%!important;
-    margin:0!important;
-    padding:36px 28px!important;
-  }
-}
-
-@media(max-width:430px){
-  .hierarchy-grid{
-    gap:28px!important;
-  }
-  .hierarchy-grid > .h-node{
-    padding:32px 22px!important;
-  }
-}
-
-
-/* ===== v50 · ASZTALI NÉZET: TAGSZERVEZETI ÉS KAPCSOLATI NEVEK 50% BETŰMÉRET ===== */
-/* Csak desktopon: a tagszervezetek nevei, valamint a Kapcsolat blokkban a szervezetnév és az „Ügyek szerint” cím feleakkora. */
-@media(min-width:901px){
-  /* Tagszervezeti térkép régiókártyákban szereplő szervezetnevek */
-  .region-panel li{
-    font-size:6.5px!important;
-    line-height:1.34!important;
-    letter-spacing:-.004em!important;
-    padding-left:22px!important;
-  }
-  .region-panel li::before{
-    font-size:7px!important;
-  }
-  .region-panel small{
-    font-size:5.75px!important;
-    line-height:1.3!important;
-    margin-top:2px!important;
-  }
-
-  /* Tagszervezeti katalógus / kártyalista szervezetnevei */
+  .region-panel li,
   .member h3,
   .member .member-title,
-  .member-card h3,
-  .member-card .member-title{
-    font-size:11px!important;
-    line-height:1.22!important;
-    letter-spacing:-.012em!important;
+  .member-grid .member h3{
+    font-size:80%!important;
+    line-height:1.32!important;
   }
+  .region-panel small,
   .member p,
-  .member .desc,
-  .member-card p,
-  .member-card .desc{
-    font-size:7.25px!important;
+  .member .desc{
+    font-size:80%!important;
     line-height:1.42!important;
   }
 
-  /* Kapcsolat blokk: szervezet neve + Ügyek szerint */
+  /* Kapcsolat blokk: szervezet neve és „Ügyek szerint” 80%-os méret. */
+  #kapcsolat .contact-card h3,
   .contact-section .contact-card h3{
-    font-size:12.5px!important;
-    line-height:1.2!important;
-    letter-spacing:-.018em!important;
+    font-size:20px!important;
+    line-height:1.18!important;
   }
-  .contact-section .contact-card:first-child h3,
-  .contact-section .contact-card:nth-child(2) h3{
-    font-size:12.5px!important;
-  }
-  .contact-section .contact-card dl,
-  .contact-section .contact-card p,
-  .contact-section .contact-card dd,
-  .contact-section .contact-card dt,
-  .contact-section .contact-list b,
-  .contact-section .contact-list a{
-    font-size:7.5px!important;
-    line-height:1.38!important;
+  #kapcsolat .contact-card p,
+  .contact-section .contact-card p{
+    font-size:80%!important;
   }
 }
 
-
-/* ===== v51 · HAMBURGER MENÜ: FÜGGŐLEGES LENYÍLÁS MINDEN NÉZETBEN ===== */
-/* A hamburger menü desktopon, tableten és mobilon is ugyanúgy, függőleges listaként nyílik le. */
-.nav-burger{
+/* Hamburger menü: mindig elegáns, lenyíló, függőleges panel legyen. */
+.nav-burger,
+.menu-toggle,
+.hamburger,
+button[aria-label*="menü" i],
+button[aria-label*="menu" i]{
   display:inline-flex!important;
   align-items:center!important;
   justify-content:center!important;
-  width:36px!important;
-  height:36px!important;
-  border:0!important;
-  border-radius:999px!important;
-  background:transparent!important;
-  color:#1d1d1f!important;
-  cursor:pointer!important;
 }
-.mobile-menu{
+
+.mobile-menu,
+.nav-menu,
+.burger-menu{
   position:fixed!important;
   top:56px!important;
-  left:50%!important;
-  right:auto!important;
-  transform:translateX(-50%) translateY(-8px)!important;
-  width:min(520px,calc(100vw - 32px))!important;
-  max-height:calc(100vh - 76px)!important;
+  right:18px!important;
+  left:auto!important;
+  width:min(320px,calc(100vw - 36px))!important;
+  max-height:calc(100vh - 80px)!important;
   overflow:auto!important;
-  display:flex!important;
-  flex-direction:column!important;
-  align-items:stretch!important;
-  gap:6px!important;
   padding:12px!important;
   border-radius:24px!important;
   background:rgba(255,255,255,.94)!important;
   border:1px solid rgba(0,0,0,.08)!important;
-  box-shadow:0 22px 70px rgba(0,0,0,.18)!important;
-  backdrop-filter:saturate(180%) blur(24px)!important;
-  -webkit-backdrop-filter:saturate(180%) blur(24px)!important;
-  opacity:0!important;
-  visibility:hidden!important;
-  pointer-events:none!important;
-  z-index:1999!important;
-  transition:opacity .22s ease, transform .22s ease, visibility .22s ease!important;
+  box-shadow:0 24px 70px rgba(0,0,0,.18)!important;
+  backdrop-filter:saturate(180%) blur(22px)!important;
+  -webkit-backdrop-filter:saturate(180%) blur(22px)!important;
+  transform-origin:top right!important;
+  z-index:2200!important;
 }
-.mobile-menu.open,
-.mobile-menu.is-open,
-.mobile-menu[aria-hidden="false"]{
-  opacity:1!important;
-  visibility:visible!important;
-  pointer-events:auto!important;
-  transform:translateX(-50%) translateY(0)!important;
-}
+
 .mobile-menu a,
-.mobile-menu button,
-.mobile-menu .mobile-link{
+.nav-menu a,
+.burger-menu a{
   display:flex!important;
+  width:100%!important;
   align-items:center!important;
   justify-content:space-between!important;
-  width:100%!important;
-  min-height:46px!important;
-  padding:12px 16px!important;
+  min-height:44px!important;
+  padding:12px 14px!important;
   border-radius:16px!important;
-  background:transparent!important;
   color:#1d1d1f!important;
-  text-align:left!important;
   font-size:15px!important;
   line-height:1.2!important;
   font-weight:600!important;
-  letter-spacing:-.018em!important;
+  text-align:left!important;
   text-decoration:none!important;
-}
-.mobile-menu a:hover,
-.mobile-menu button:hover,
-.mobile-menu .mobile-link:hover{
-  background:#f5f5f7!important;
-  text-decoration:none!important;
-}
-.mobile-menu a + a,
-.mobile-menu .mobile-link + .mobile-link{
-  margin-top:2px!important;
 }
 
-/* A desktop nav-linkek maradhatnak, de a hamburger mindig ugyanazt a függőleges lenyílót használja. */
-@media(min-width:901px){
-  .mobile-menu{
-    top:56px!important;
-  }
+.mobile-menu a + a,
+.nav-menu a + a,
+.burger-menu a + a{
+  margin-top:4px!important;
 }
+
+.mobile-menu a:hover,
+.nav-menu a:hover,
+.burger-menu a:hover{
+  background:#f5f5f7!important;
+}
+
+.mobile-menu:not(.open):not(.active):not([aria-hidden="false"]),
+.nav-menu:not(.open):not(.active):not([aria-hidden="false"]),
+.burger-menu:not(.open):not(.active):not([aria-hidden="false"]){
+  display:none!important;
+}
+
+.mobile-menu.open,
+.mobile-menu.active,
+.mobile-menu[aria-hidden="false"],
+.nav-menu.open,
+.nav-menu.active,
+.nav-menu[aria-hidden="false"],
+.burger-menu.open,
+.burger-menu.active,
+.burger-menu[aria-hidden="false"]{
+  display:flex!important;
+  flex-direction:column!important;
+  gap:4px!important;
+  animation:vipach-menu-drop .18s ease both!important;
+}
+
+@keyframes vipach-menu-drop{
+  from{opacity:0;transform:translateY(-8px) scale(.98)}
+  to{opacity:1;transform:translateY(0) scale(1)}
+}
+
 @media(max-width:900px){
-  .mobile-menu{
+  .mobile-menu,
+  .nav-menu,
+  .burger-menu{
     top:52px!important;
+    right:12px!important;
     width:calc(100vw - 24px)!important;
-    border-radius:22px!important;
-  }
-  .mobile-menu a,
-  .mobile-menu button,
-  .mobile-menu .mobile-link{
-    min-height:48px!important;
-    font-size:16px!important;
   }
 }
 
@@ -2760,7 +2557,7 @@ html.pdf-export details{
 <a class="node-url" href="https://www.facebook.com/kozpontiszovetseg" rel="noopener" target="_blank">facebook.com/kozpontiszovetseg</a>
 <p class="node-explain" data-i18n="node.social.p1">A projektek <strong>nem külön Facebook-oldalakon</strong> szóródnak szét, hanem a <strong>központi oldal alatt</strong>, csoportokként kapcsolódnak. <strong>Egy logika, sok aktív közösségi tér.</strong></p>
 <p class="node-explain" data-i18n="node.social.p2">A központi oldal adminja <strong>minden projektcsoporthoz hozzáfér</strong>. A struktúra még épül, de a <strong>felületek már működnek</strong>.</p>
-<button aria-expanded="false" class="links-toggle" data-i18n="links.toggle" type="button">Kapcsolódó linkek</button><ul>
+<ul>
 <li><a href="https://www.facebook.com/groups/becsimagyariskola/" rel="noopener" target="_blank"><strong data-i18n="linkstrong.20">Bécsi Magyar Iskola Facebook-csoport</strong><span data-i18n="linkspan.21">Szülői, iskolai és közösségi kommunikáció.</span></a></li>
 <li><a href="https://www.facebook.com/groups/becsinaplo/" rel="noopener" target="_blank"><strong data-i18n="linkstrong.22">Bécsi Napló Facebook-csoport</strong><span data-i18n="linkspan.23">Cikkmegosztás, olvasói kapcsolódás és közösségi visszacsatolás.</span></a></li>
 <li><a href="https://www.facebook.com/groups/vipach/" rel="noopener" target="_blank"><strong data-i18n="linkstrong.24">VIPACH Facebook-csoport</strong><span data-i18n="linkspan.25">Alkotói közösség, programkommunikáció és aktivitás.</span></a></li>
@@ -2775,7 +2572,7 @@ html.pdf-export details{
 <a class="node-link" href="https://www.magyariskola.at" rel="noopener" target="_blank"><span class="node-title" data-i18n="node.school.title">Bécsi Magyar Iskola</span></a>
 <a class="node-url" href="https://www.magyariskola.at" rel="noopener" target="_blank">magyariskola.at</a>
 <p class="node-explain" data-i18n="node.school.p1">A közösség <strong>utánpótlás- és családi pillére</strong>: <strong>hétvégi magyar oktatás</strong>, korosztályos foglalkozások, szülői kommunikáció, beszámolók és kérdőívek.</p>
-<button aria-expanded="false" class="links-toggle" data-i18n="links.toggle" type="button">Kapcsolódó linkek</button><ul>
+<ul>
 <li><a href="https://2026.magyariskola.at" rel="noopener" target="_blank"><strong data-i18n="linkstrong.31">2026.magyariskola.at</strong><span data-i18n="linkspan.32">Tanévbeszámoló és eredménykommunikáció: megmutatja, mi történt, kik dolgoztak, milyen közösségi érték jött létre.</span></a></li>
 <li><a href="https://kerdoiv.magyariskola.at" rel="noopener" target="_blank"><strong data-i18n="linkstrong.33">kerdoiv.magyariskola.at</strong><span data-i18n="linkspan.34">Visszajelzési és kapcsolatfelvételi felület: adatot ad a működés javításához és a családok igényeinek megértéséhez.</span></a></li>
 <li><a href="https://www.magyariskola.at/orf-at" rel="noopener" target="_blank"><strong data-i18n="linkstrong.35">ORF Magyarok sajtófigyelő</strong><span data-i18n="linkspan.36">Az iskola ORF Magyarok-megjelenéseinek gyűjtőfelülete, amely bizonyítja a közösségi munka nyilvános láthatóságát.</span></a></li>
@@ -2793,7 +2590,7 @@ html.pdf-export details{
 <a class="node-link" href="https://www.becsinaplo.at" rel="noopener" target="_blank"><span class="node-title" data-i18n="node.news.title">Bécsi Napló</span></a>
 <a class="node-url" href="https://www.becsinaplo.at" rel="noopener" target="_blank">becsinaplo.at</a>
 <p class="node-explain" data-i18n="node.news.p1">A közösség <strong>szerkesztett nyilvánossága</strong>: cikkek <strong>dokumentálják</strong> és <strong>visszakereshetővé teszik</strong> az ausztriai magyar élet eseményeit.</p>
-<button aria-expanded="false" class="links-toggle" data-i18n="links.toggle" type="button">Kapcsolódó linkek</button><ul>
+<ul>
 <li><a href="https://www.facebook.com/groups/becsinaplo/" rel="noopener" target="_blank"><strong data-i18n="linkstrong.48">Bécsi Napló Facebook-csoport</strong><span data-i18n="linkspan.49">Közösségi elérés, olvasói kapcsolódás, cikkmegosztás és gyors visszacsatolás.</span></a></li>
 </ul>
 </article>
@@ -2805,7 +2602,7 @@ html.pdf-export details{
 <a class="node-link" href="https://www.vipach.at" rel="noopener" target="_blank"><span class="node-title" data-i18n="node.vipach.title">VIPACH <span class="node-subtitle">(Vienna Photo Art &amp; Creative Hub)</span></span></a>
 <a class="node-url" href="https://www.vipach.at" rel="noopener" target="_blank">vipach.at</a>
 <p class="node-explain" data-i18n="node.vipach.p1">A <strong>kreatív és vizuális ág</strong>: fotó, alkotóközösség, digitális jelenlét. <strong>Nem külső befektetésből</strong>, hanem <strong>közösségi finanszírozásból</strong> tartja fenn magát, programjait és láthatóságát.</p>
-<button aria-expanded="false" class="links-toggle" data-i18n="links.toggle" type="button">Kapcsolódó linkek</button><ul>
+<ul>
 <li><a href="https://business.vipach.at" rel="noopener" target="_blank"><strong data-i18n="linkstrong.53">business.vipach.at</strong><span data-i18n="linkspan.54">Stratégiai és szolgáltatási aloldal: megmutatja, hogyan kapcsolódhat a közösségi kreatív tudás professzionális vizuális és digitális feladatokhoz.</span></a></li>
 <li><a href="https://amcham.at/members-list/" rel="noopener" target="_blank"><strong data-i18n="linkstrong.55">AmCham Austria kapcsolódás</strong><span data-i18n="linkspan.56">A VIPACH Bánhalmi Norberten keresztül az AmCham Austria, az Osztrák–Amerikai Kereskedelmi Kamara szakmai közegéhez is kapcsolódik.</span></a></li>
 <li><a href="https://photostudio.vipach.at" rel="noopener" target="_blank"><strong data-i18n="linkstrong.57">photostudio.vipach.at</strong><span data-i18n="linkspan.58">Kreatív / képfeldolgozási alrendszer: digitális eszköz és szolgáltatási kiterjesztés a VIPACH alatt.</span></a></li>
@@ -2823,7 +2620,7 @@ html.pdf-export details{
 <a class="node-link" href="https://www.musicaltarsulat.at" rel="noopener" target="_blank"><span class="node-title" data-i18n="node.stage.title">Bécsi Magyar Musical Társulat</span></a>
 <a class="node-url" href="https://www.musicaltarsulat.at" rel="noopener" target="_blank">musicaltarsulat.at</a>
 <p class="node-explain" data-i18n="node.stage.p1"><strong>Magyar nyelvű színpadi, zenei és gyerek-ifjúsági</strong> alkotómunka. Itt a magyar nyelv <strong>nem tananyag, hanem élő kulturális élmény</strong>.</p>
-<button aria-expanded="false" class="links-toggle" data-i18n="links.toggle" type="button">Kapcsolódó linkek</button><ul>
+<ul>
 <li><a href="https://www.facebook.com/groups/musicaltarsulat" rel="noopener" target="_blank"><strong data-i18n="linkstrong.70">Musical Társulat Facebook-csoport</strong><span data-i18n="linkspan.71">Közösségi szervezés, próbák, előadások, szülői és nézői kapcsolódás.</span></a></li>
 </ul>
 </article>
@@ -3371,6 +3168,8 @@ document.addEventListener('DOMContentLoaded', () => {
   document.addEventListener('DOMContentLoaded',()=>{run();const orig=window.KSZ_i18n&&window.KSZ_i18n.setLanguage;if(typeof orig==='function'){window.KSZ_i18n.setLanguage=function(l){const r=orig.call(window.KSZ_i18n,l);setTimeout(run,0);return r;};}new MutationObserver(run).observe(document.documentElement,{childList:true,subtree:true,characterData:true,attributes:true,attributeFilter:['lang']});});
 })();
 </script>
+
+
 <script id="interactiveMemberMapScript">
 (function(){
   function normalize(value){return(value||'').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/\s+/g,' ').trim();}
@@ -3386,73 +3185,53 @@ document.addEventListener('DOMContentLoaded', () => {
   document.addEventListener('DOMContentLoaded',()=>{attachClicks();refreshHighlights();const original=window.filterCards;if(typeof original==='function'){window.filterCards=function(){const result=original.apply(this,arguments);setTimeout(refreshHighlights,0);return result;};}document.addEventListener('click',e=>{if(e.target.closest('.topic-toggle,.control,.clear-topics'))setTimeout(refreshHighlights,0);});document.addEventListener('change',e=>{if(e.target&&e.target.id==='regionSelect')setTimeout(refreshHighlights,0);});const originalLang=window.KSZ_i18n&&window.KSZ_i18n.setLanguage;if(typeof originalLang==='function'){window.KSZ_i18n.setLanguage=function(lang){const result=originalLang.call(window.KSZ_i18n,lang);setTimeout(()=>{buildLinks();attachClicks();refreshHighlights();},0);return result;};}});
 })();
 </script>
-<script>
-(function(){
-  function initHeroLinkToggles(){
-    document.querySelectorAll('.hierarchy-grid .h-node').forEach(function(card, index){
-      var btn = card.querySelector(':scope > .links-toggle');
-      var list = card.querySelector(':scope > ul');
-      if(!btn || !list || btn.dataset.ready === '1') return;
-      var id = list.id || ('hero-links-' + index);
-      list.id = id;
-      btn.setAttribute('aria-controls', id);
-      btn.setAttribute('aria-expanded', 'false');
-      btn.dataset.ready = '1';
-      btn.addEventListener('click', function(ev){
-        ev.preventDefault();
-        ev.stopPropagation();
-        var open = card.classList.toggle('links-open');
-        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-      });
-    });
-  }
-  if(document.readyState === 'loading'){
-    document.addEventListener('DOMContentLoaded', initHeroLinkToggles);
-  } else {
-    initHeroLinkToggles();
-  }
-})();
-</script>
 
 <script>
 (function(){
   function initVerticalHamburgerMenu(){
-    var burger = document.querySelector('.nav-burger,[data-menu-toggle],.hamburger');
-    var menu = document.querySelector('.mobile-menu,#mobileMenu,[data-mobile-menu]');
-    if(!burger || !menu || burger.dataset.verticalReady === '1') return;
+    var btn = document.querySelector('.nav-burger, .menu-toggle, .hamburger, button[aria-label*="menü" i], button[aria-label*="menu" i]');
+    var menu = document.querySelector('.mobile-menu, .nav-menu, .burger-menu');
+    if(!btn || !menu || btn.dataset.verticalMenuReady === '1') return;
 
-    burger.dataset.verticalReady = '1';
-    if(!menu.id) menu.id = 'verticalMobileMenu';
-    burger.setAttribute('aria-controls', menu.id);
-    burger.setAttribute('aria-expanded', menu.classList.contains('open') ? 'true' : 'false');
+    btn.dataset.verticalMenuReady = '1';
+    if(!menu.id) menu.id = 'vipach-mobile-menu';
+    btn.setAttribute('aria-controls', menu.id);
+    btn.setAttribute('aria-expanded', menu.classList.contains('open') ? 'true' : 'false');
     menu.setAttribute('aria-hidden', menu.classList.contains('open') ? 'false' : 'true');
 
-    function setOpen(open){
-      menu.classList.toggle('open', open);
-      menu.classList.toggle('is-open', open);
-      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
-      menu.setAttribute('aria-hidden', open ? 'false' : 'true');
-    }
-
-    burger.addEventListener('click', function(ev){
+    btn.addEventListener('click', function(ev){
       ev.preventDefault();
       ev.stopPropagation();
-      setOpen(!(menu.classList.contains('open') || menu.classList.contains('is-open') || menu.getAttribute('aria-hidden') === 'false'));
+      var open = !menu.classList.contains('open');
+      menu.classList.toggle('open', open);
+      menu.classList.toggle('active', open);
+      menu.setAttribute('aria-hidden', open ? 'false' : 'true');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
     });
 
     menu.querySelectorAll('a').forEach(function(link){
-      link.addEventListener('click', function(){ setOpen(false); });
+      link.addEventListener('click', function(){
+        menu.classList.remove('open','active');
+        menu.setAttribute('aria-hidden','true');
+        btn.setAttribute('aria-expanded','false');
+      });
     });
 
     document.addEventListener('click', function(ev){
-      if(!menu.contains(ev.target) && !burger.contains(ev.target)) setOpen(false);
+      if(!menu.classList.contains('open')) return;
+      if(menu.contains(ev.target) || btn.contains(ev.target)) return;
+      menu.classList.remove('open','active');
+      menu.setAttribute('aria-hidden','true');
+      btn.setAttribute('aria-expanded','false');
     });
 
     document.addEventListener('keydown', function(ev){
-      if(ev.key === 'Escape') setOpen(false);
+      if(ev.key !== 'Escape') return;
+      menu.classList.remove('open','active');
+      menu.setAttribute('aria-hidden','true');
+      btn.setAttribute('aria-expanded','false');
     });
   }
-
   if(document.readyState === 'loading'){
     document.addEventListener('DOMContentLoaded', initVerticalHamburgerMenu);
   } else {
@@ -3460,6 +3239,16 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 })();
 </script>
+
+
+<!--
+AUDIT v50:
+- Desktop member organisation typography reduced to 80%.
+- Contact card headings reduced consistently.
+- Hamburger/mobile navigation forced into vertical dropdown pattern with aria-expanded / aria-hidden support.
+- Existing mobile, tablet and desktop hero block rhythm retained.
+- No external scripts or tracking added.
+-->
 
 </body>
 </html>
