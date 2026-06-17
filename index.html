@@ -1667,6 +1667,66 @@ html.pdf-export details{
   }
 }
 
+
+
+/* ===== v35 · HERO ALATTI 5 BLOKK LINKJEI 50% MÉRET ===== */
+/* Csak a hero alatti öt tartalmi blokk név alatti URL-sora: 12px → 6px. */
+.hierarchy-grid .h-node .node-url{
+  font-size:6px!important;
+  line-height:1.15!important;
+  letter-spacing:-.005em!important;
+}
+.hierarchy-grid .h-node .node-url::before{
+  width:6px!important;
+  height:6px!important;
+}
+@media(max-width:900px){
+  .hierarchy-grid .h-node .node-url{
+    font-size:6px!important;
+    line-height:1.15!important;
+  }
+}
+
+
+
+/* ===== v36 · MOBIL TAGSZERVEZETI VÁLASZTÓ JAVÍTÁS ===== */
+/* Mobilon natív select kezeli a régióválasztást, mert az iOS/Android érintésbiztosabb, mint a sűrű gombsor. */
+.mobile-region-select{
+  display:none!important;
+}
+@media(max-width:760px){
+  .mobile-region-select{
+    display:block!important;
+    width:100%!important;
+    min-height:48px!important;
+    padding:12px 14px!important;
+    border-radius:16px!important;
+    border:1px solid rgba(0,0,0,.12)!important;
+    background:#fff!important;
+    color:#1d1d1f!important;
+    font-size:16px!important;
+    line-height:1.25!important;
+    -webkit-appearance:menulist!important;
+    appearance:auto!important;
+    touch-action:manipulation!important;
+  }
+  .map-side .controls#filters{
+    display:none!important;
+  }
+  .topic-grid{
+    display:grid!important;
+    grid-template-columns:1fr!important;
+    gap:8px!important;
+    width:100%!important;
+  }
+  .topic-toggle,
+  .topic-clear{
+    width:100%!important;
+    min-height:44px!important;
+    touch-action:manipulation!important;
+  }
+}
+
 </style>
 <meta content="#ffffff" name="theme-color"/><meta content="website" property="og:type"/><meta content="Központi Szövetség · Döntéshozói áttekintés · Online ökoszisztéma · DÖR 2026" property="og:title"/><meta content="Döntéshozói áttekintés az Ausztriai Magyar Egyesületek és Szervezetek Központi Szövetségéről, online ökoszisztémájáról, tagszervezeti hálózatáról és a DÖR 2026 pilotról." property="og:description"/><meta content="hu_HU" property="og:locale"/><meta content="summary_large_image" name="twitter:card"/><link href="?lang=hu" hreflang="hu" rel="alternate"/><link href="?lang=en" hreflang="en" rel="alternate"/><link href="?lang=de" hreflang="de" rel="alternate"/><link href="?lang=hu" hreflang="x-default" rel="alternate"/><script type="application/ld+json">{
   "@context": "https://schema.org",
@@ -1870,7 +1930,7 @@ html.pdf-export details{
 <section class="region-panel r-vienna" data-map-region="Bécs"><header><strong data-i18n="region.Bécs.143">Bécs</strong><em data-i18n="term.10 szervezet.144">10 szervezet</em></header><ol><li>Ausztriai Magyar Kutatóintézet <small data-i18n="term.kutatás · tudásközvetítés.145">kutatás · tudásközvetítés</small></li><li>Lean In Femspace <small data-i18n="term.női szakmai hálózat.146">női szakmai hálózat</small></li><li>SVUNG – Bécsi Magyar Színház <small data-i18n="term.színház · kultúra.147">színház · kultúra</small></li><li>72. sz. Széchenyi István cserkészcsapat <small data-i18n="term.cserkészet.148">cserkészet</small></li><li>BIM – Bécsi Irodalmi Műhely <small data-i18n="term.irodalom · műfordítás.149">irodalom · műfordítás</small></li><li>Kaláka Club <small data-i18n="term.gazdasági-kulturális közösség.150">gazdasági-kulturális közösség</small></li><li>Napraforgók <small data-i18n="term.néptánc · népzene.151">néptánc · népzene</small></li><li>Szent István Egylet <small data-i18n="term.jótékonyság · ösztöndíj.152">jótékonyság · ösztöndíj</small></li><li>Bornemisza Péter Társaság <small data-i18n="term.irodalom · közélet.153">irodalom · közélet</small></li><li>Nemzetközi Duna Filharmónia Baráti kör <small data-i18n="term.zene · kulturális platform.154">zene · kulturális platform</small></li></ol></section>
 <section class="region-panel r-burgenland" data-map-region="Burgenland"><header><strong>Burgenland</strong><em data-i18n="term.2 szervezet.155">2 szervezet</em></header><ol><li>Alsóőri Magyar Kultúr- és Táncegyesület <small data-i18n="term.néptánc · hagyományőrzés.156">néptánc · hagyományőrzés</small></li><li>Közép-Burgenlandi Magyar Kultúregyesület <small data-i18n="term.nyelv · folklór · közösség.157">nyelv · folklór · közösség</small></li></ol></section>
 <section class="region-panel r-styria" data-map-region="Stájerország"><header><strong data-i18n="region.Stájerország · Graz.158">Stájerország · Graz</strong><em data-i18n="term.4 szervezet.159">4 szervezet</em></header><ol><li>Grázi Magyar Egyesület <small data-i18n="term.történeti közösségi egyesület.160">történeti közösségi egyesület</small></li><li>Magyar Egyetemisták és Öregdiákok Klubja <small data-i18n="term.egyetemisták · sajtó.161">egyetemisták · sajtó</small></li><li>Gráci Magyar Katolikus Közösség <small data-i18n="term.egyházi közösség.162">egyházi közösség</small></li><li>FemConnect Graz <small data-i18n="term.női · kulturális közösség.163">női · kulturális közösség</small></li></ol></section>
-</div><aside class="map-side"><h3 data-i18n="side.h3">Régiós lefedettség</h3><div class="stats"><div class="stat"><b>10</b><span data-i18n="region.Bécs.164">Bécs</span></div><div class="stat"><b>2</b><span>Burgenland</span></div><div class="stat"><b>4</b><span data-i18n="region.Felső-Ausztria.165">Felső-Ausztria</span></div><div class="stat"><b>1</b><span>Salzburg</span></div><div class="stat"><b>4</b><span data-i18n="region.Stájerország.166">Stájerország</span></div><div class="stat"><b>5</b><span>Tirol</span></div><div class="stat"><b>2</b><span>Vorarlberg</span></div></div><div class="guided-search"><label data-i18n="filter.topiclabel">1. Jelölj ki egy vagy több témát</label><div class="topic-grid" id="topicFilters"><button class="topic-toggle" data-i18n="topic.192" data-topic="oktatás anyanyelv iskola óvoda tanulás hétvégi">Oktatás / anyanyelv</button><button class="topic-toggle" data-i18n="topic.193" data-topic="kultúra színház musical néptánc népzene zene művészet program hagyomány koncert">Kultúra / művészet</button><button class="topic-toggle" data-i18n="topic.194" data-topic="cserkészet ifjúság fiatal gyermek tábor">Cserkészet / ifjúság</button><button class="topic-toggle" data-i18n="topic.195" data-topic="katolikus egyházi liturgia lelki szentmise">Egyházi közösség</button><button class="topic-toggle" data-i18n="topic.196" data-topic="média irodalom kutatás tudás sajtó újság műfordítás">Média / irodalom / kutatás</button><button class="topic-toggle" data-i18n="topic.197" data-topic="női szakmai gazdasági mentor egyetemista akadémiai klub">Szakmai / női / gazdasági háló</button><button class="topic-toggle" data-i18n="topic.198" data-topic="jótékonyság ösztöndíj támogatás szociális adomány">Jótékonyság / támogatás</button><button class="topic-clear" data-i18n="filter.clear" id="clearTopics" type="button">Témák törlése</button></div><label data-i18n="filter.regionlabel">2. Szűkíts régióra</label><div class="controls" id="filters"><button class="control active" data-i18n="region.Mind.167" data-region="all">Mind</button><button class="control" data-i18n="region.Bécs.168" data-region="Bécs">Bécs</button><button class="control" data-region="Burgenland">Burgenland</button><button class="control" data-i18n="region.Felső-Ausztria.169" data-region="Felső-Ausztria">Felső-Ausztria</button><button class="control" data-region="Salzburg">Salzburg</button><button class="control" data-i18n="region.Stájerország.170" data-region="Stájerország">Stájerország</button><button class="control" data-region="Tirol">Tirol</button><button class="control" data-region="Vorarlberg">Vorarlberg</button></div><div class="filter-result" data-i18n="filter.result.initial" id="filterResult">28 tagszervezet látható.</div></div><p data-i18n="filter.help" style="color:var(--muted);font-size:14px">A lista a kijelölt témák és régiók szerint azonnal változik. Több téma egyszerre is kijelölhető; ilyenkor minden olyan tagszervezet megjelenik, amely legalább az egyik kiválasztott témához kapcsolódik.</p></aside></div><div class="member-directory-box" id="tagszervezeti-katalogus"><div class="directory-head"><div class="k" data-i18n="directory.k">Tagszervezeti katalógus</div><h3 data-i18n="directory.h">28 tagszervezet: regionális jelenlét, működési kapacitás és külügyi kapcsolódási tér.</h3><p data-i18n="directory.p">A katalógus azt mutatja meg, hogy a Központi Szövetség nem egyetlen intézményként működik, hanem Ausztria több régióját lefedő <strong>közösségi infrastruktúraként</strong>: oktatási, kulturális, egyházi, ifjúsági, szakmai, média- és karitatív kapacitások kapcsolódnak egy <strong>közös digitális gerinchez</strong>.</p></div><div class="member-grid" id="memberGrid">
+</div><aside class="map-side"><h3 data-i18n="side.h3">Régiós lefedettség</h3><div class="stats"><div class="stat"><b>10</b><span data-i18n="region.Bécs.164">Bécs</span></div><div class="stat"><b>2</b><span>Burgenland</span></div><div class="stat"><b>4</b><span data-i18n="region.Felső-Ausztria.165">Felső-Ausztria</span></div><div class="stat"><b>1</b><span>Salzburg</span></div><div class="stat"><b>4</b><span data-i18n="region.Stájerország.166">Stájerország</span></div><div class="stat"><b>5</b><span>Tirol</span></div><div class="stat"><b>2</b><span>Vorarlberg</span></div></div><div class="guided-search"><label data-i18n="filter.topiclabel">1. Jelölj ki egy vagy több témát</label><div class="topic-grid" id="topicFilters"><button class="topic-toggle" data-i18n="topic.192" data-topic="oktatás anyanyelv iskola óvoda tanulás hétvégi">Oktatás / anyanyelv</button><button class="topic-toggle" data-i18n="topic.193" data-topic="kultúra színház musical néptánc népzene zene művészet program hagyomány koncert">Kultúra / művészet</button><button class="topic-toggle" data-i18n="topic.194" data-topic="cserkészet ifjúság fiatal gyermek tábor">Cserkészet / ifjúság</button><button class="topic-toggle" data-i18n="topic.195" data-topic="katolikus egyházi liturgia lelki szentmise">Egyházi közösség</button><button class="topic-toggle" data-i18n="topic.196" data-topic="média irodalom kutatás tudás sajtó újság műfordítás">Média / irodalom / kutatás</button><button class="topic-toggle" data-i18n="topic.197" data-topic="női szakmai gazdasági mentor egyetemista akadémiai klub">Szakmai / női / gazdasági háló</button><button class="topic-toggle" data-i18n="topic.198" data-topic="jótékonyság ösztöndíj támogatás szociális adomány">Jótékonyság / támogatás</button><button class="topic-clear" data-i18n="filter.clear" id="clearTopics" type="button">Témák törlése</button></div><label data-i18n="filter.regionlabel">2. Szűkíts régióra</label><select aria-label="Tagszervezeti régióválasztó" class="search select mobile-region-select" id="regionSelect"><option data-i18n="region.Mind.167" value="all">Mind</option><option data-i18n="region.Bécs.168" value="Bécs">Bécs</option><option value="Burgenland">Burgenland</option><option data-i18n="region.Felső-Ausztria.169" value="Felső-Ausztria">Felső-Ausztria</option><option value="Salzburg">Salzburg</option><option data-i18n="region.Stájerország.170" value="Stájerország">Stájerország</option><option value="Tirol">Tirol</option><option value="Vorarlberg">Vorarlberg</option></select><div class="controls" id="filters"><button class="control active" data-i18n="region.Mind.167" data-region="all">Mind</button><button class="control" data-i18n="region.Bécs.168" data-region="Bécs">Bécs</button><button class="control" data-region="Burgenland">Burgenland</button><button class="control" data-i18n="region.Felső-Ausztria.169" data-region="Felső-Ausztria">Felső-Ausztria</button><button class="control" data-region="Salzburg">Salzburg</button><button class="control" data-i18n="region.Stájerország.170" data-region="Stájerország">Stájerország</button><button class="control" data-region="Tirol">Tirol</button><button class="control" data-region="Vorarlberg">Vorarlberg</button></div><div class="filter-result" data-i18n="filter.result.initial" id="filterResult">28 tagszervezet látható.</div></div><p data-i18n="filter.help" style="color:var(--muted);font-size:14px">A lista a kijelölt témák és régiók szerint azonnal változik. Több téma egyszerre is kijelölhető; ilyenkor minden olyan tagszervezet megjelenik, amely legalább az egyik kiválasztott témához kapcsolódik.</p></aside></div><div class="member-directory-box" id="tagszervezeti-katalogus"><div class="directory-head"><div class="k" data-i18n="directory.k">Tagszervezeti katalógus</div><h3 data-i18n="directory.h">28 tagszervezet: regionális jelenlét, működési kapacitás és külügyi kapcsolódási tér.</h3><p data-i18n="directory.p">A katalógus azt mutatja meg, hogy a Központi Szövetség nem egyetlen intézményként működik, hanem Ausztria több régióját lefedő <strong>közösségi infrastruktúraként</strong>: oktatási, kulturális, egyházi, ifjúsági, szakmai, média- és karitatív kapacitások kapcsolódnak egy <strong>közös digitális gerinchez</strong>.</p></div><div class="member-grid" id="memberGrid">
 <article class="member" data-name="ausztriai magyar kutatóintézet" data-region="Bécs">
 <div class="member-top"><span class="num">01</span><span class="tag" data-i18n="member.region.202">Bécs</span><span class="tag soft" data-i18n="member.tag.203">Kutatás · tudásközvetítés</span></div>
 <h3>Ausztriai Magyar Kutatóintézet</h3>
@@ -2089,7 +2149,17 @@ function selectedTopicValues(){
   return Array.from(document.querySelectorAll('.topic-toggle.active')).map(btn => btn.dataset.topic || '').filter(Boolean);
 }
 function activeRegion(){
+  const select = document.getElementById('regionSelect');
+  if (select && select.value) return select.value;
   return document.querySelector('.control.active')?.dataset.region || 'all';
+}
+function setActiveRegion(value){
+  const next = value || 'all';
+  const select = document.getElementById('regionSelect');
+  if (select && select.value !== next) select.value = next;
+  document.querySelectorAll('.control').forEach(btn => {
+    btn.classList.toggle('active', (btn.dataset.region || 'all') === next);
+  });
 }
 function matchesSelectedTopics(text, topics){
   if (!topics.length) return true;
@@ -2146,9 +2216,13 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 
   document.getElementById('filters')?.addEventListener('click', e => {
-    if (!e.target.matches('.control')) return;
-    document.querySelectorAll('.control').forEach(b=>b.classList.remove('active'));
-    e.target.classList.add('active');
+    const btn = e.target.closest('.control');
+    if (!btn || !e.currentTarget.contains(btn)) return;
+    setActiveRegion(btn.dataset.region || 'all');
+    filterCards();
+  });
+  document.getElementById('regionSelect')?.addEventListener('change', e => {
+    setActiveRegion(e.target.value || 'all');
     filterCards();
   });
   document.getElementById('topicFilters')?.addEventListener('click', e => {
@@ -2357,14 +2431,14 @@ document.addEventListener('DOMContentLoaded', () => {
   function normalize(value){return(value||'').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/\s+/g,' ').trim();}
   function firstLabel(li){const clone=li.cloneNode(true);clone.querySelectorAll('small').forEach(s=>s.remove());return clone.textContent.trim();}
   function topics(){return Array.from(document.querySelectorAll('.topic-toggle.active')).map(btn=>btn.dataset.topic||'').filter(Boolean);}
-  function activeRegion(){return document.querySelector('.control.active')?.dataset.region||'all';}
+  function activeRegion(){const select=document.getElementById('regionSelect');if(select&&select.value)return select.value;return document.querySelector('.control.active')?.dataset.region||'all';}
   function topicMatch(text,topic){if(!topic)return true;const hay=normalize(text);return normalize(topic).split(/\s+/).filter(Boolean).some(word=>hay.includes(word));}
   function findMemberByName(label){const n=normalize(label);let best=null;document.querySelectorAll('.member').forEach(card=>{const name=normalize(card.dataset.name||card.querySelector('h3')?.textContent||'');if(name&&(name===n||name.includes(n)||n.includes(name)))best=card;});return best;}
   function buildLinks(){document.querySelectorAll('.region-panel li').forEach(li=>{if(li.dataset.mapReady==='1')return;const label=firstLabel(li);const card=findMemberByName(label);if(card){li.dataset.orgName=card.dataset.name||normalize(label);li.dataset.search=(card.textContent+' '+li.textContent).trim();li.setAttribute('role','button');li.setAttribute('tabindex','0');li.setAttribute('title','Tagszervezeti box megnyitása');}li.dataset.mapReady='1';});}
   function refreshHighlights(){buildLinks();const selectedTopics=topics();const region=activeRegion();document.querySelectorAll('.region-panel li[data-org-name]').forEach(li=>{const panel=li.closest('.region-panel');const regionOk=region==='all'||!panel||panel.dataset.mapRegion===region;const topicOk=!selectedTopics.length||selectedTopics.some(t=>topicMatch(li.dataset.search,t));li.classList.toggle('topic-hit',selectedTopics.length>0&&topicOk&&regionOk);li.classList.toggle('topic-dim',selectedTopics.length>0&&(!topicOk||!regionOk));});}
   function focusMember(li){const name=li.dataset.orgName;if(!name)return;const target=Array.from(document.querySelectorAll('.member')).find(card=>normalize(card.dataset.name||card.querySelector('h3')?.textContent||'')===normalize(name));if(!target)return;document.querySelectorAll('.region-panel li.map-selected').forEach(x=>x.classList.remove('map-selected'));document.querySelectorAll('.member.member-focus').forEach(x=>x.classList.remove('member-focus'));li.classList.add('map-selected');if(target.style.display==='none')target.style.display='';target.classList.add('member-focus');target.scrollIntoView({behavior:'smooth',block:'center'});setTimeout(()=>target.classList.remove('member-focus'),4200);}
   function attachClicks(){buildLinks();document.querySelectorAll('.region-panel li[data-org-name]').forEach(li=>{if(li.dataset.clickReady==='1')return;li.addEventListener('click',()=>focusMember(li));li.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();focusMember(li);}});li.dataset.clickReady='1';});}
-  document.addEventListener('DOMContentLoaded',()=>{attachClicks();refreshHighlights();const original=window.filterCards;if(typeof original==='function'){window.filterCards=function(){const result=original.apply(this,arguments);setTimeout(refreshHighlights,0);return result;};}document.addEventListener('click',e=>{if(e.target.closest('.topic-toggle,.control,.clear-topics'))setTimeout(refreshHighlights,0);});const originalLang=window.KSZ_i18n&&window.KSZ_i18n.setLanguage;if(typeof originalLang==='function'){window.KSZ_i18n.setLanguage=function(lang){const result=originalLang.call(window.KSZ_i18n,lang);setTimeout(()=>{buildLinks();attachClicks();refreshHighlights();},0);return result;};}});
+  document.addEventListener('DOMContentLoaded',()=>{attachClicks();refreshHighlights();const original=window.filterCards;if(typeof original==='function'){window.filterCards=function(){const result=original.apply(this,arguments);setTimeout(refreshHighlights,0);return result;};}document.addEventListener('click',e=>{if(e.target.closest('.topic-toggle,.control,.clear-topics'))setTimeout(refreshHighlights,0);});document.addEventListener('change',e=>{if(e.target&&e.target.id==='regionSelect')setTimeout(refreshHighlights,0);});const originalLang=window.KSZ_i18n&&window.KSZ_i18n.setLanguage;if(typeof originalLang==='function'){window.KSZ_i18n.setLanguage=function(lang){const result=originalLang.call(window.KSZ_i18n,lang);setTimeout(()=>{buildLinks();attachClicks();refreshHighlights();},0);return result;};}});
 })();
 </script>
 
