@@ -1824,6 +1824,203 @@ a.node-url,
   }
 }
 
+
+
+/* ===== v55 · PREMIUM WIDE DESKTOP LAYOUT ===== */
+/* Mobilon megmarad a jó egyoszlopos logika, asztalon viszont újra kihasználjuk a képernyőt. */
+@media (min-width:1024px){
+  :root{
+    --ksz-wide-max:min(1480px, calc(100vw - 96px));
+    --ksz-wide-gap:clamp(24px,2.3vw,38px);
+  }
+  .hierarchy-inner,
+  .hierarchy-board,
+  .hierarchy-grid,
+  .hierarchy-summary,
+  .wixops-wrap,
+  .dor-wrap,
+  .map-wrap,
+  .map-panel,
+  .member-directory-box,
+  .member-grid,
+  .help-grid,
+  .contact-wrap,
+  .contact-grid,
+  .foot-in{
+    max-width:var(--ksz-wide-max)!important;
+    width:100%!important;
+    margin-left:auto!important;
+    margin-right:auto!important;
+  }
+
+  .hierarchy-hero,
+  .wixops,
+  .dor,
+  .mapsec,
+  .help,
+  .contact-section{
+    padding-left:clamp(48px,5vw,84px)!important;
+    padding-right:clamp(48px,5vw,84px)!important;
+  }
+
+  /* Felső rendszerblokkok: széles, szellős 2 oszlopos rács, egyforma kártyaméretekkel. */
+  .hierarchy-grid{
+    display:grid!important;
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    gap:var(--ksz-wide-gap)!important;
+    align-items:stretch!important;
+    text-align:center!important;
+  }
+  .hierarchy-grid .h-node,
+  .hierarchy-grid .core-social{
+    max-width:none!important;
+    width:100%!important;
+    min-height:360px!important;
+    padding:clamp(34px,3vw,54px)!important;
+    display:flex!important;
+    flex-direction:column!important;
+    justify-content:flex-start!important;
+  }
+  .hierarchy-grid .h-node:nth-child(n),
+  .hierarchy-grid .core-social{
+    grid-column:auto!important;
+    grid-row:auto!important;
+  }
+  .hierarchy-root{
+    max-width:min(900px,80vw)!important;
+    padding:clamp(38px,3.3vw,58px)!important;
+  }
+  .h-node .node-explain,
+  .core-social .node-explain{
+    max-width:720px!important;
+    margin-left:auto!important;
+    margin-right:auto!important;
+  }
+  .h-node ul,
+  .root-press-links,
+  .node-details-panel{
+    max-width:720px!important;
+    width:100%!important;
+    margin-left:auto!important;
+    margin-right:auto!important;
+  }
+  .h-node li a,
+  .root-press-links a,
+  .node-details-panel a{
+    max-width:720px!important;
+    width:100%!important;
+  }
+
+  /* Működési és DÖR blokkok: nagy asztali rácsok, nem mobil-szűk szélesség. */
+  .wixops-wrap{
+    display:grid!important;
+    grid-template-columns:.95fr 1.05fr!important;
+    gap:var(--ksz-wide-gap)!important;
+    align-items:stretch!important;
+  }
+  .ops-grid{
+    display:grid!important;
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    gap:22px!important;
+    max-width:none!important;
+  }
+  .dor-wrap{
+    display:grid!important;
+    grid-template-columns:.92fr 1.08fr!important;
+    gap:var(--ksz-wide-gap)!important;
+    align-items:stretch!important;
+  }
+  .dor-grid{
+    display:grid!important;
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    gap:22px!important;
+    max-width:none!important;
+  }
+  .wixops-hero,
+  .ops-card,
+  .dor-hero,
+  .dor-card,
+  .help-card{
+    max-width:none!important;
+    width:100%!important;
+  }
+
+  /* Tagszervezeti térkép: széles képernyőn külön térkép + vezérlőpanel. */
+  .map-panel{
+    display:grid!important;
+    grid-template-columns:minmax(0,1.18fr) minmax(360px,.82fr)!important;
+    gap:var(--ksz-wide-gap)!important;
+    align-items:start!important;
+  }
+  .executive-map{
+    display:grid!important;
+    grid-template-columns:repeat(3,minmax(0,1fr))!important;
+    grid-auto-rows:auto!important;
+    gap:18px!important;
+    min-height:0!important;
+    height:auto!important;
+    padding:clamp(24px,2.4vw,38px)!important;
+  }
+  .map-title-row{
+    grid-column:1/-1!important;
+  }
+  .region-panel{
+    grid-column:auto!important;
+    grid-row:auto!important;
+    min-height:0!important;
+    height:auto!important;
+  }
+  .r-vienna{grid-column:span 2!important;}
+  .r-tirol{grid-column:span 2!important;}
+  .r-salzburg{grid-column:auto!important;}
+  .map-side{
+    max-width:none!important;
+    width:100%!important;
+    position:sticky!important;
+    top:84px!important;
+  }
+  .stats{
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  }
+
+  /* Tagszervezeti katalógus: nagy asztali nézetben három oszlop, levegős térközzel. */
+  .member-grid{
+    display:grid!important;
+    grid-template-columns:repeat(3,minmax(0,1fr))!important;
+    gap:clamp(20px,1.8vw,30px)!important;
+  }
+  .member{
+    max-width:none!important;
+    width:100%!important;
+  }
+
+  /* Segítő és kapcsolat blokkok: nagy képernyőn szélesebb, rendezett rács. */
+  .help-grid{
+    display:grid!important;
+    grid-template-columns:repeat(3,minmax(0,1fr))!important;
+    gap:clamp(20px,1.8vw,28px)!important;
+  }
+  .contact-grid{
+    display:grid!important;
+    grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;
+    gap:var(--ksz-wide-gap)!important;
+    align-items:start!important;
+  }
+  .main-contact,
+  .contact-list{
+    max-width:none!important;
+    width:100%!important;
+  }
+}
+
+@media (min-width:1500px){
+  :root{--ksz-wide-max:1520px;}
+  .hierarchy-grid .h-node,
+  .hierarchy-grid .core-social{
+    min-height:390px!important;
+  }
+}
+
 </style>
 <meta content="#ffffff" name="theme-color"/><meta content="website" property="og:type"/><meta content="Központi Szövetség · Döntéshozói áttekintés · Online ökoszisztéma · DÖR 2026" property="og:title"/><meta content="Döntéshozói áttekintés az Ausztriai Magyar Egyesületek és Szervezetek Központi Szövetségéről, online ökoszisztémájáról, tagszervezeti hálózatáról és a DÖR 2026 pilotról." property="og:description"/><meta content="hu_HU" property="og:locale"/><meta content="summary_large_image" name="twitter:card"/><link href="?lang=hu" hreflang="hu" rel="alternate"/><link href="?lang=en" hreflang="en" rel="alternate"/><link href="?lang=de" hreflang="de" rel="alternate"/><link href="?lang=hu" hreflang="x-default" rel="alternate"/><script type="application/ld+json">{
   "@context": "https://schema.org",
