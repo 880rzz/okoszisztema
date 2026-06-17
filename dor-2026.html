@@ -1,12 +1,13 @@
 <!DOCTYPE html>
+
 <html lang="hu">
 <head>
 <meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>DÖR 2026 · Diaszpóra Ökoszisztéma Rendszer</title>
-<meta name="description" content="DÖR 2026 döntés-előkészítő pilotoldal: önkéntes, auditálható diaszpóra-ökoszisztéma rendszer, autonómia-garanciával és 90–120 napos Go / Modify / Stop döntési kapuval."/>
-<meta name="robots" content="noindex, nofollow, noarchive, nosnippet"/>
-<meta http-equiv="X-Robots-Tag" content="noindex, nofollow, noarchive, nosnippet"/>
+<meta content="DÖR 2026 döntés-előkészítő pilotoldal: önkéntes, auditálható diaszpóra-ökoszisztéma rendszer, autonómia-garanciával és 90–120 napos Go / Modify / Stop döntési kapuval." name="description"/>
+<meta content="noindex, nofollow, noarchive, nosnippet" name="robots"/>
+<meta content="noindex, nofollow, noarchive, nosnippet" http-equiv="X-Robots-Tag"/>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -188,23 +189,51 @@ footer strong{color:#fff}
 @media(max-width:1100px){.hero-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.grid4,.product-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:900px){:root{--pad:24px}.hero{min-height:auto;padding-top:76px}.board-grid,.pain-answer,.legal-choice{grid-template-columns:1fr!important}.ministerial-map,.grid3,.lens-grid{grid-template-columns:1fr 1fr}.roundtable{grid-template-columns:1fr 1fr}.nav-links{right:14px;left:14px;width:auto;max-width:none}.back-link{display:none}}
 @media(max-width:620px){body{font-size:15px}:root{--pad:18px}.nav-inner{height:60px}.hero{padding-top:58px;padding-bottom:46px}.hero-grid,.grid2,.grid3,.grid4,.ministerial-map,.score-strip,.kpi-grid,.mvp-strip,.not-list,.guard-grid,.hardline-grid,.product-grid,.lens-grid,.decision-strip{grid-template-columns:1fr!important}.hero-actions{gap:10px}.btn{width:100%;padding:13px 16px}.sec{padding-top:46px;padding-bottom:46px}.card,.board-card,.journey,.metric,.risk-card,.lens-card,.product-step,.faq-item,.acc,.score-item,.kpi{border-radius:18px!important}.calc-row{grid-template-columns:1fr}.calc-val{text-align:left}.nav-links.open{display:flex;flex-direction:column}.tl{grid-template-columns:1fr}}
+
+
+.lang-mini{display:flex;gap:6px;align-items:center}
+.lang-mini a{display:inline-flex;align-items:center;justify-content:center;height:30px;min-width:34px;padding:0 9px;border-radius:999px;border:1px solid rgba(201,165,90,.24);background:rgba(255,255,255,.06);color:rgba(248,244,237,.86);font-size:12px;font-weight:800;letter-spacing:.04em}
+.lang-mini a.active{background:var(--gold2);color:#14251b;border-color:var(--gold2)}
+@media(max-width:900px){.lang-mini{display:none}}
+
+
+/* ===== v33 · DISPLAY TYPE SCALE -25% + RESPONSIVE HARDENING ===== */
+:root{
+  --dor-display-xl:clamp(1.85rem,5.25vw,3.9rem);
+  --dor-display-lg:clamp(1.5rem,3vw,2.36rem);
+  --dor-display-md:clamp(1.15rem,1.8vw,1.55rem);
+}
+h1{font-size:var(--dor-display-xl)!important;line-height:1.08!important;letter-spacing:-.032em!important;}
+h2{font-size:var(--dor-display-lg)!important;line-height:1.1!important;letter-spacing:-.028em!important;}
+h3,.ct,.board-title,.pa-title,.lens-q{font-size:var(--dor-display-md)!important;line-height:1.18!important;}
+@media(max-width:900px){
+  h1{font-size:clamp(2rem,9vw,3rem)!important;line-height:1.08!important;}
+  h2{font-size:clamp(1.55rem,7vw,2.15rem)!important;line-height:1.12!important;}
+  .hero-grid,.grid2,.grid3,.grid4,.ministerial-map,.mvp-strip,.not-list,.guard-grid,.lens-grid,.product-grid,.score-strip,.kpi-grid,.hardline-grid{grid-template-columns:1fr!important;}
+  .hero{min-height:auto!important;}
+}
+@media(max-width:430px){
+  h1{font-size:2rem!important;}
+  h2{font-size:1.6rem!important;}
+  .hero-lead,.lead{font-size:1rem!important;line-height:1.55!important;}
+}
+
 </style>
 </head>
 <body>
 <div class="hu-stripe"></div>
 <nav class="topbar">
-  <div class="nav-inner">
-    <a class="nav-brand" href="#hero">DÖR 2026</a>
-    <a class="back-link" href="index_apple_pdf_hu_en_de.html">Vissza a Központi oldalra</a>
-    <button class="nav-toggle" aria-expanded="false" aria-label="Menü megnyitása" onclick="toggleNav()">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16"></path><path d="M4 12h16"></path><path d="M4 17h16"></path></svg>
-    </button>
-    <div class="nav-links" id="navLinks">
-      <button onclick="go('hero',this)">Pitch</button><button onclick="go('vezetoi-garancia',this)">Alapelv</button><button onclick="go('autonomia-zaro-garancia',this)">Autonómia</button><button onclick="go('kulkapcsolati-haszon',this)">Külkapcsolat</button><button onclick="go('problem',this)">Fájdalom</button><button onclick="go('pilot',this)">Pilot</button><button onclick="go('wixpilot',this)">Wix pilot</button><button onclick="go('success',this)">Metrikák</button><button onclick="go('journeys',this)">User journey</button><button onclick="go('vision',this)">Illeszkedés</button><button onclick="go('governance',this)">Programirányítás</button><button onclick="go('garanciak',this)">Tűzfal</button><button onclick="go('stressfix',this)">7 stresszteszt</button><button onclick="go('proof',this)">Működő minta</button><button onclick="go('appendix',this)">Mellékletek</button><button onclick="go('contact',this)">Kapcsolat</button>
-    </div>
-  </div>
+<div class="nav-inner">
+<a class="nav-brand" href="#hero">DÖR 2026</a>
+<a class="back-link" href="index_with_dor_page.html">Vissza a Központi oldalra</a>
+<div class="lang-mini"><a class="active" href="dor-2026.html">HU</a><a href="dor-2026-en.html">EN</a><a href="dor-2026-de.html">DE</a></div><button aria-expanded="false" aria-label="Menü megnyitása" class="nav-toggle" onclick="toggleNav()">
+<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24"><path d="M4 7h16"></path><path d="M4 12h16"></path><path d="M4 17h16"></path></svg>
+</button>
+<div class="nav-links" id="navLinks">
+<button onclick="go('hero',this)">Pitch</button><button onclick="go('vezetoi-garancia',this)">Alapelv</button><button onclick="go('autonomia-zaro-garancia',this)">Autonómia</button><button onclick="go('kulkapcsolati-haszon',this)">Külkapcsolat</button><button onclick="go('problem',this)">Fájdalom</button><button onclick="go('pilot',this)">Pilot</button><button onclick="go('wixpilot',this)">Wix pilot</button><button onclick="go('success',this)">Metrikák</button><button onclick="go('journeys',this)">User journey</button><button onclick="go('vision',this)">Illeszkedés</button><button onclick="go('governance',this)">Programirányítás</button><button onclick="go('garanciak',this)">Tűzfal</button><button onclick="go('stressfix',this)">7 stresszteszt</button><button onclick="go('proof',this)">Működő minta</button><button onclick="go('appendix',this)">Mellékletek</button><button onclick="go('contact',this)">Kapcsolat</button>
+</div>
+</div>
 </nav>
-
 <header class="hero" id="hero">
 <div class="hero-inner">
 <div class="ey">30 másodperces döntéshozói pitch</div>
@@ -222,7 +251,6 @@ footer strong{color:#fff}
 <div class="hero-actions"><button class="btn primary" onclick="go('pilot')">A pilotmag</button><button class="btn secondary" onclick="go('garanciak')">Garanciák</button></div>
 </div>
 </header>
-
 <section class="sec" id="vezetoi-garancia"><div class="wrap-wide">
 <div class="kicker">Vezetői értelmezés</div>
 <h2>Két alapelv: <em>autonómia és élő kapcsolat.</em></h2>
@@ -232,7 +260,6 @@ footer strong{color:#fff}
 </div>
 <div class="calc-note"><strong>Vezetői mondat:</strong> a DÖR 2026 célja, hogy a külhoni magyar közösségek ne elszigetelt helyi csoportokként, hanem autonómiájukat megtartó, megszólítható, fiatalokkal működtetett magyar partnerhálózatként jelenjenek meg.</div>
 </div></section>
-
 <section class="sec s-dark" id="autonomia-zaro-garancia"><div class="wrap-wide">
 <div class="kicker">Autonómia-záradék</div>
 <h2>Nem a közösségek feletti rendszer, hanem <em>önként használható működési infrastruktúra.</em></h2>
@@ -248,7 +275,6 @@ footer strong{color:#fff}
 </div>
 <div class="calc-note"><strong>Végső autonómia-mondat:</strong> Nem irányítunk. Nem rangsorolunk. Nem osztunk támogatást. Nem döntünk legitimitásról. Nem gyűjtünk politikai adatot.</div>
 </div></section>
-
 <section class="sec" id="kulkapcsolati-haszon"><div class="wrap-wide">
 <div class="kicker">Külkapcsolati haszon</div>
 <h2>Nem adminisztrálni kell a diaszpórát, hanem <em>élő kapcsolatba hozni.</em></h2>
@@ -260,7 +286,6 @@ footer strong{color:#fff}
 </div>
 <div class="calc-note"><strong>Összefoglaló mondat:</strong> A DÖR 2026 nem a diaszpórát akarja adminisztrálni, hanem élő kapcsolatba hozni.</div>
 </div></section>
-
 <section class="sec" id="problem"><div class="wrap-wide">
 <div class="kicker">01 · Fájdalom → tűpontos válasz</div>
 <h2>A diaszpóra problémája nem technológiai. <em>Láthatósági, utánpótlási és működési probléma.</em></h2>
@@ -270,7 +295,6 @@ footer strong{color:#fff}
 <div class="pain-answer"><div class="pain-box"><div class="pa-label">Fájdalom 3 · generációváltás</div><div class="pa-title">Az alapítók elfáradnak, a fiatalok nem találnak vonzó szerepet.</div><div class="pa-text">A közösségeknek digitális tudásra, tartalomra, eseménykommunikációra és utánpótlásra van szükségük.</div></div><div class="answer-box"><div class="pa-label">DÖR-válasz</div><div class="pa-title">Junior Hub: identitásépítés feladaton keresztül.</div><div class="pa-text">A fiatal nem passzív közönség, hanem működtető: eseményt tölt fel, archív anyagot digitalizál, interjút készít és portfóliót épít.</div></div></div>
 <div class="pain-answer"><div class="pain-box"><div class="pa-label">Fájdalom 4 · kormányzati döntéstámogatás</div><div class="pa-title">A döntéshozó nem lát működési képet politikai kockázat nélkül.</div><div class="pa-text">Szükség van valós aktivitási képre, de ez nem válhat politikai adatbázissá vagy közösségi rangsorrá.</div></div><div class="answer-box"><div class="pa-label">DÖR-válasz</div><div class="pa-title">Működési jelek, nem személyes politikai adatok.</div><div class="pa-text">A pilot csak szervezeti működési jelzőket vizsgál: profilfrissítés, esemény, fiatal szerkesztő, tartalom és aktivitás.</div></div></div>
 </div></section>
-
 <section class="sec s-dark" id="pilot"><div class="wrap-wide">
 <div class="kicker">02 · A pilotmag</div>
 <h2>Az első 90–120 nap egyetlen dolgot bizonyít: <em>működik-e a legkisebb életképes rendszer?</em></h2>
@@ -295,7 +319,6 @@ footer strong{color:#fff}
 <div class="not-item"><b>Nincs beszállítói lock-in</b>Dokumentált, átadható, auditálható technikai működés kell.</div>
 </div>
 </div></section>
-
 <section class="sec s-warm" id="wixpilot"><div class="wrap-wide">
 <div class="kicker">03/A · Technológiai és pénzügyi pilotmodell</div>
 <h2>Ne végleges állami rendszert építsünk először. <em>Bizonyítsuk a működési elvet gyorsan.</em></h2>
@@ -310,7 +333,6 @@ footer strong{color:#fff}
 <div class="acc"><button aria-expanded="false" class="acc-btn" onclick="toggleAcc(this)"><span>💳 Központi bankszámla és szervezetenkénti elszámolás</span><span class="acc-ico">+</span></button><div class="acc-body"><p>A weboldalról érkező bevételek nem magánszámlára, hanem ellenőrzött technikai számlára érkeznek. Minden szervezet saját kódot kap, minden esemény szervezeti azonosítóval fut.</p><ul><li>havi szervezetenkénti bevételi riport;</li><li>banki / fizetési export;</li><li>tovább-utalási jegyzék;</li><li>vitás tételek és jóváhagyások pilotnaplóban.</li></ul></div></div>
 <div class="acc"><button aria-expanded="false" class="acc-btn" onclick="toggleAcc(this)"><span>🧑‍🏫 Rendszerépítés és betanítás</span><span class="acc-ico">+</span></button><div class="acc-body"><p>A cél nem személyfüggőség: minden részt vevő szervezet delegál legalább egy betanított felelőst. A betanítás után a szervezetek saját eseményt, hírt és alapadatot tudnak kezelni.</p></div></div>
 </div></section>
-
 <section class="sec" id="success"><div class="wrap-wide">
 <div class="kicker">03 · Go / No-Go</div>
 <h2>90–120 nap után ne vélemény, hanem <em>mérhető döntés</em> legyen.</h2>
@@ -326,7 +348,6 @@ footer strong{color:#fff}
 <div class="metric fail"><strong>STOP</strong><p>ha a minimumok nem teljesülnek</p></div>
 </div>
 </div></section>
-
 <section class="sec s-warm" id="journeys"><div class="wrap-wide">
 <div class="kicker">04 · Használati utak</div>
 <h2>Ki mit csinál a pilotindítás után?</h2>
@@ -337,7 +358,6 @@ footer strong{color:#fff}
 <div class="journey"><b>Projektgazda útja</b><div class="steps"><div class="step">Látja a csatlakozó szervezetek listáját.</div><div class="step">Követi az aktivitást és a kockázatokat.</div><div class="step">Aggregált működési adatokat lát.</div><div class="step">90–120 nap után pilotriportot kap.</div><div class="step">Dönt: folytatás, módosítás vagy stop.</div></div></div>
 </div>
 </div></section>
-
 <section class="sec" id="vision"><div class="wrap-wide">
 <div class="kicker">05 · Döntéshozói fókusz</div>
 <h2>A DÖR akkor erős, ha egyszerre szolgálja <em>az autonómiát és az élő kapcsolatot.</em></h2>
@@ -348,7 +368,6 @@ footer strong{color:#fff}
 <div class="priority-card"><b>Kormányzati védhetőség</b><strong>Átlátható, mérhető, de nem kontrolláló pilot.</strong><span>Nem támogatási automata, nem politikai adatbázis, nem rangsor és nem büntetőeszköz.</span></div>
 </div>
 </div></section>
-
 <section class="sec s-dark" id="governance"><div class="wrap-wide">
 <div class="kicker">06 · Programirányítás és közpénzügyi védelem</div>
 <h2>Nem új alapítvány. <em>Minisztériumi felügyeletű pilot-program.</em></h2>
@@ -360,7 +379,6 @@ footer strong{color:#fff}
 <h3>A kerekasztal összetétele</h3>
 <div class="roundtable"><div class="seat"><b>Minisztériumi felügyelet</b><span>Szakpolitikai gazda, kijelölt felelős és döntési kapuk.</span></div><div class="seat"><b>Pénzügyi kontroll</b><span>Költségkeret, tételes elszámolás, nyilvános pilotriport.</span></div><div class="seat"><b>Stratégiai vezetés</b><span>Scope, metrikák, skálázási döntés, kockázatkezelés.</span></div><div class="seat"><b>Szakmai vezetés</b><span>Diaszpóra-módszertan és közösségi onboarding.</span></div><div class="seat"><b>Technológiai csapat</b><span>Architekt, fejlesztők, adatbiztonsági felelős.</span></div><div class="seat"><b>Diaszpóra-delegáltak</b><span>A csatlakozó szervezetek kijelölt képviselői.</span></div></div>
 </div></section>
-
 <section class="sec s-warm" id="garanciak"><div class="wrap">
 <div class="ey">07 · Közpénzügyi, adatvédelmi és politikai tűzfal</div>
 <h2>A pilot csak akkor indítható, ha szerkezeti garanciák zárják le a támadási felületeket.</h2>
@@ -376,7 +394,6 @@ footer strong{color:#fff}
 <div class="not-list"><div class="not-item"><b>×</b>nem politikai adatbázis</div><div class="not-item"><b>×</b>nem támogatási automata</div><div class="not-item"><b>×</b>nem központi diaszpóra-irányítás</div><div class="not-item"><b>×</b>nem új alapítványi vagyonkivitel</div><div class="not-item"><b>×</b>nem kizárólagos beszállítói konstrukció</div><div class="not-item"><b>×</b>nem kötelező csatlakozási rendszer</div></div>
 <div class="decision-strip"><div class="decision go"><strong>GO</strong><small>Folytatás csak validált használat, önkéntes csatlakozás és tiszta audit esetén.</small></div><div class="decision modify"><strong>MODIFY</strong><small>Módosítás, ha van érték, de a scope, költség, adatvédelem vagy governance javítandó.</small></div><div class="decision stop"><strong>STOP</strong><small>Leállítás, ha a pilot nem bizonyít közösségi hasznosságot vagy nem zárható a kockázat.</small></div></div>
 </div></section>
-
 <section class="sec" id="stressfix"><div class="wrap-wide">
 <div class="kicker">07/B · Hét szempont szerinti stresszteszt</div>
 <h2>A projekt akkor védhető, ha hét döntéshozói logika szerint is ugyanarra jut: <em>kicsi, mérhető, tiszta, önkéntes és leállítható.</em></h2>
@@ -390,7 +407,6 @@ footer strong{color:#fff}
 <div class="lens-card"><div class="lens-k">Nemzetközi reputáció</div><div class="lens-q">Nem tűnik-e befolyási rendszernek?</div><div class="lens-a">Nincs politikai adat, nincs kötelező csatlakozás, nincs közösségi minősítés.</div></div>
 </div>
 </div></section>
-
 <section class="sec s-warm" id="product-compliance"><div class="wrap-wide">
 <div class="kicker">07/C · Termék és pénzügyi megfelelés</div>
 <h2>A Wix-pilot csak akkor jó ötlet, ha a fizetés, jogosultság, export és átadás <em>nem feketedoboz.</em></h2>
@@ -406,14 +422,12 @@ footer strong{color:#fff}
 <tr><td data-label="Kritikus kérdés">Mi történik, ha a pilot nem bizonyít?</td><td data-label="Lezáró szabály">Go / Modify / Stop döntési kapu; automatikus roll-out nincs.</td><td data-label="Bizonyíték">záróriport, döntési jegyzőkönyv</td></tr>
 </tbody></table>
 </div></section>
-
 <section class="sec" id="proof"><div class="wrap">
 <div class="kicker">07 · Bécsi proof-of-concept</div>
 <h2>Nem elméletből indul. <em>Van működő minta.</em></h2>
 <p class="lead">A bécsi magyar közösségi digitalizáció azt bizonyította, hogy kis csapattal, közösségi bizalommal és digitális rendszerrel mérhető növekedés, többgenerációs bevonás és sajtóképes eredmény hozható létre.</p>
 <div class="grid3"><div class="card"><div class="ct">Közösségi növekedés</div><div class="cd">Erősebb digitális jelenlét, hírlevél, közösségi hub, eseményszervezés.</div></div><div class="card"><div class="ct">Fiatalok bevonása</div><div class="cd">Digitális készségek, AI, web, médiatartalom, közösségi örökség dokumentálása.</div></div><div class="card"><div class="ct">Önfenntartási bizonyíték</div><div class="cd">Közösségi finanszírozás, rendezvénylogika, online beléptetés, projektalapú működés.</div></div></div>
 </div></section>
-
 <section class="sec s-warm" id="questions"><div class="wrap">
 <div class="kicker">08 · Felmerülő kérdések és válaszok</div>
 <h2>A legnehezebb kérdéseket előre kell megválaszolni.</h2>
@@ -426,7 +440,6 @@ footer strong{color:#fff}
 <details class="inline-faq"><summary>Használható-e a pilot eredménye támogatási döntésre?</summary><p>Nem. A pilot eredménye nem használható közvetlen támogatási döntésre, támogatásmegvonásra, politikai minősítésre vagy közösségi rangsorolásra.</p></details>
 <details class="inline-faq"><summary>Mi történik azokkal, akik nem csatlakoznak?</summary><p>Semmilyen hátrány nem érheti őket.</p></details>
 </div></section>
-
 <section class="sec s-dark" id="stress"><div class="wrap-wide">
 <div class="kicker">09 · Alapítói és végrehajtási stresszteszt</div>
 <h2>A projekt akkor erős, ha a legkeményebb kérdésekre is rövid, mérhető válasza van.</h2>
@@ -439,7 +452,6 @@ footer strong{color:#fff}
 <div class="risk-card"><div class="ct">06 · Ki viszi végig?</div><p>Stabil core team + mentorált hallgatói/friss diplomás rotáció.</p></div>
 </div>
 </div></section>
-
 <section class="sec" id="appendix"><div class="wrap-wide">
 <div class="kicker">10 · Vezetői mellékletek</div>
 <h2>Költség, emberigény, időterv — lenyithatóan.</h2>
@@ -447,12 +459,9 @@ footer strong{color:#fff}
 <div class="acc"><button aria-expanded="false" class="acc-btn" onclick="toggleAcc(this);setTimeout(initCharts,80)"><span>🔢 Költségvetési csúszkás kalkulátor</span><span class="acc-ico">+</span></button><div class="acc-body"><p>A kalkulátor becslő eszköz, nem ajánlat és nem kötelezettségvállalás.</p><div class="calc-row"><label>Szervezetek száma</label><input id="sl-org" max="1000" min="10" oninput="calcAll()" step="10" type="range" value="100"/><span class="calc-val" id="out-org">100</span></div><div class="calc-row"><label>Aktív Wix csomag logika</label><span class="calc-val" id="out-rate">100-ig: Business Elite / Studio</span></div><div class="kpi-grid"><div class="kpi"><strong id="kpi-month">178€</strong><span>becsült havi platformköltség</span></div><div class="kpi"><strong id="kpi-year">2 132€</strong><span>becsült éves platformköltség</span></div><div class="kpi"><strong id="kpi-pilot">711€</strong><span>90–120 napos pilot nagyságrend</span></div></div><div class="chart-outer"><canvas aria-label="Becsült éves költség" id="ecoChart" role="img"></canvas></div></div></div>
 <div class="acc"><button aria-expanded="false" class="acc-btn" onclick="toggleAcc(this)"><span>👥 Emberigény — pilot és skálázás</span><span class="acc-ico">+</span></button><div class="acc-body"><div class="grid3"><div class="card"><div class="ct">Minimum pilot</div><p>1 programvezető, 1 technikai architekt, 1 közösségi koordinátor, 1 adatvédelmi/jogi felelős részidőben, 4–8 hallgató/friss diplomás.</p></div><div class="card"><div class="ct">Validált pilot</div><p>+ oktatási/mentorálási felelős, support, UX/tartalom mentor, 8–12 hallgató/friss diplomás.</p></div><div class="card"><div class="ct">Skálázási előkészítés</div><p>Programiroda, dokumentációs felelős, országkoordinátorok, képzési rendszer, auditált supportfolyamat.</p></div></div></div></div>
 </div></section>
-
 <footer><div class="contact-box"><h2>Személyes bemutatás és bontott elemzés</h2><p>A projekt személyesen is bemutatható a kijelölt döntéshozói, szakmai, pénzügyi és közösségi szereplőknek. A javaslat elemeire bontható: pilot, működő minta, közösségi modell, hallgatói/friss diplomás működés, adatvédelmi keret, költséglogika és skálázási út.</p><p style="margin-top:18px">DÖR 2026 · Diaszpóra Ökoszisztéma Rendszer · jelszó nélküli döntéshozói oldal</p></div></footer>
-
 <section class="sec s-dark" id="contact"><div class="wrap"><div class="kicker">Kapcsolat</div><h2>A projekt működési elve személyesen bemutatható.</h2><p class="lead muted">A rendszer Bécsben kicsiben már éles tapasztalatokkal rendelkezik, ezért nem csak koncepcióként, hanem működési logikaként, felületként és pilotfolyamatként is bemutatható.</p><div class="card" style="background:rgba(255,255,255,.09);border-color:rgba(201,165,90,.24)"><div class="ct" style="color:#fff">Bánhalmi Norbert</div><p style="color:rgba(248,244,237,.86);font-weight:700">Ausztriai Magyar Egyesületek és Szervezetek Központi Szövetsége</p><p style="color:#fff;font-size:1.15rem;font-weight:900;letter-spacing:.02em">+43 677 616 55592</p></div></div></section>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 <script>
 function toggleNav(){var links=document.getElementById('navLinks');var t=document.querySelector('.nav-toggle');if(!links||!t)return;var open=links.classList.toggle('open');t.setAttribute('aria-expanded',open?'true':'false')}
 function closeNav(){var links=document.getElementById('navLinks');var t=document.querySelector('.nav-toggle');if(links)links.classList.remove('open');if(t)t.setAttribute('aria-expanded','false')}

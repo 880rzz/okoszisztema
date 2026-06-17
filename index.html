@@ -1521,127 +1521,20 @@ html.pdf-export details{
 
 
 
-/* ===== v46 · HARD RAINBOW RESTORE + URL BETWEEN TITLE AND DESCRIPTION ===== */
-@keyframes vipach-rainbow-restore{0%{background-position:0% 50%}100%{background-position:300% 50%}}
-.hierarchy-hero h1,.hierarchy-grid .node-title,.shead h2,.wixops-hero h2,.dor-hero h2,.contact-section .shead h2{background-image:linear-gradient(90deg,#ff3b30,#ff9500,#ffcc00,#34c759,#0a84ff,#5e5ce6,#bf5af2,#ff3b30)!important;background-size:300% 100%!important;-webkit-background-clip:text!important;background-clip:text!important;-webkit-text-fill-color:transparent!important;color:transparent!important;animation:vipach-rainbow-restore 9s linear infinite!important;}
-/* Mobilon is fusson a szivárvány; csak az URL-sorok maradnak normál kék/szürke szövegek. */
-@media(max-width:760px){.hierarchy-hero h1,.hierarchy-grid .node-title,.shead h2,.wixops-hero h2,.dor-hero h2,.contact-section .shead h2{background-image:linear-gradient(90deg,#ff3b30,#ff9500,#ffcc00,#34c759,#0a84ff,#5e5ce6,#bf5af2,#ff3b30)!important;background-size:300% 100%!important;-webkit-background-clip:text!important;background-clip:text!important;-webkit-text-fill-color:transparent!important;color:transparent!important;animation:vipach-rainbow-restore 8s linear infinite!important;}}
-.h-node>a.node-url,.hierarchy-root>a.node-url,a.node-url{background-image:none!important;-webkit-background-clip:border-box!important;background-clip:border-box!important;-webkit-text-fill-color:#0a66c2!important;color:#0a66c2!important;animation:none!important;font-size:clamp(10px,.95vw,12px)!important;line-height:1.18!important;font-weight:520!important;margin:-28px auto 30px!important;max-width:88%!important;}
-.h-node .node-explain{margin-top:0!important;}
-.hierarchy-grid .h-node .node-link{margin-bottom:42px!important;}
-@media(max-width:560px){.h-node>a.node-url,.hierarchy-root>a.node-url,a.node-url{font-size:10px!important;margin:-22px auto 28px!important;max-width:88%!important}.hierarchy-grid .h-node .node-link{margin-bottom:36px!important}.h-node .node-explain{margin-top:0!important;}}
-
-
-
-/* v47 · Mobile category filter reliability and Apple touch chips */
-.topic-grid,
-.guided-search,
-.map-side{
-  position:relative;
-  z-index:20;
-}
-.topic-grid{
-  pointer-events:auto!important;
-  touch-action:pan-y!important;
-  -webkit-overflow-scrolling:touch;
-}
-.topic-toggle,
-.topic-clear,
-.control{
-  pointer-events:auto!important;
-  touch-action:manipulation!important;
-  -webkit-tap-highlight-color:rgba(0,113,227,.12);
-  user-select:none;
-  -webkit-user-select:none;
-  position:relative;
-  z-index:22;
-}
-.topic-toggle{
-  display:flex!important;
-  align-items:center!important;
-  justify-content:flex-start!important;
-  gap:10px;
-  min-height:52px!important;
-  padding:14px 16px!important;
-  line-height:1.22!important;
-}
-.topic-toggle::after{
-  content:'+';
-  margin-left:auto;
-  width:24px;
-  height:24px;
-  border-radius:999px;
-  display:grid;
-  place-items:center;
-  background:rgba(0,0,0,.045);
-  color:#0071e3;
-  font-weight:800;
-  font-size:15px;
-  flex:0 0 24px;
-}
-.topic-toggle.active::after{
-  content:'✓';
-  background:rgba(255,255,255,.18);
-  color:currentColor;
-}
-.topic-toggle:focus-visible,
-.topic-clear:focus-visible,
-.control:focus-visible{
-  outline:3px solid rgba(0,113,227,.42)!important;
-  outline-offset:3px!important;
-}
-.topic-toggle.is-tapping{
-  transform:scale(.985);
-}
-@media(max-width:760px){
-  .guided-search label{
-    display:block;
-    margin:18px 0 10px!important;
-    font-size:13px!important;
-    line-height:1.4!important;
-  }
-  .topic-grid{
-    display:flex!important;
-    gap:10px!important;
-    overflow-x:auto!important;
-    overflow-y:hidden!important;
-    grid-template-columns:none!important;
-    padding:4px 2px 12px!important;
-    margin:0 -2px 18px!important;
-    scroll-snap-type:x proximity;
-    scrollbar-width:none;
-  }
-  .topic-grid::-webkit-scrollbar{display:none;}
-  .topic-toggle{
-    flex:0 0 min(76vw,320px)!important;
-    min-height:56px!important;
-    font-size:14px!important;
-    border-radius:18px!important;
-    scroll-snap-align:start;
-    box-shadow:0 10px 24px rgba(0,0,0,.045)!important;
-  }
-  .topic-clear{
-    flex:0 0 min(56vw,240px)!important;
-    min-height:56px!important;
-    border-radius:18px!important;
-    font-size:13px!important;
-    scroll-snap-align:start;
-  }
-  .filter-result{
-    margin-top:10px!important;
-  }
-}
-
-
-
-/* ===== v47 · ROOT DOMAIN NO-OVERLAP + MOBILE FILTER RESULT JUMP ===== */
-.hierarchy-root .node-link{margin-bottom:0!important;position:relative!important;z-index:2!important;}
-.hierarchy-root>a.node-url{margin:14px auto 38px!important;font-size:11px!important;line-height:1.2!important;position:relative!important;z-index:2!important;max-width:90%!important;color:#9fb7d4!important;-webkit-text-fill-color:#9fb7d4!important;}
-.hierarchy-root small{position:relative!important;z-index:2!important;margin-top:0!important;}
-@media(max-width:560px){.hierarchy-root .node-link{margin-bottom:0!important}.hierarchy-root>a.node-url{margin:12px auto 32px!important;font-size:10px!important;max-width:82%!important}.hierarchy-root small{font-size:15px!important;line-height:1.62!important}}
-.member.mobile-filter-target{outline:3px solid rgba(0,102,204,.34)!important;outline-offset:6px!important;box-shadow:0 20px 56px rgba(0,102,204,.16)!important;transition:outline .2s ease,box-shadow .2s ease!important;}
-.member-directory-box.mobile-filter-arrived{animation:filterArrivePulse .9s ease both;}
-@keyframes filterArrivePulse{0%{box-shadow:0 0 0 rgba(0,102,204,0)}35%{box-shadow:0 0 0 8px rgba(0,102,204,.10)}100%{box-shadow:0 0 0 rgba(0,102,204,0)}}
+/* ===== v37 · NON-OVERLAPPING MEMBER MAP GRID ===== */
+.executive-map{display:grid!important;grid-template-columns:repeat(2,minmax(220px,1fr))!important;grid-auto-rows:auto!important;gap:20px!important;align-items:start!important;min-height:auto!important;overflow:visible!important;}
+.executive-map::before{opacity:.55!important;}
+.map-title-row{grid-column:1 / -1!important;}
+.region-panel,.r-vorarlberg,.r-tirol,.r-salzburg,.r-felso,.r-vienna,.r-burgenland,.r-styria{grid-column:auto!important;grid-row:auto!important;width:100%!important;min-width:0!important;max-width:100%!important;align-self:start!important;}
+.r-vienna,.r-tirol{grid-column:span 1!important;}
+.region-panel header{display:grid!important;grid-template-columns:minmax(0,1fr) auto!important;align-items:start!important;gap:8px 12px!important;}
+.region-panel header strong{min-width:0!important;max-width:100%!important;overflow-wrap:anywhere!important;word-break:normal!important;}
+.region-panel header em{justify-self:end!important;align-self:start!important;white-space:nowrap!important;margin-left:8px!important;}
+.region-panel ol{min-width:0!important;}
+.region-panel li{min-width:0!important;overflow-wrap:anywhere!important;}
+.region-panel small{overflow-wrap:anywhere!important;}
+@media(max-width:1180px){.executive-map{grid-template-columns:1fr!important}.region-panel header{grid-template-columns:minmax(0,1fr) auto!important}}
+@media(max-width:520px){.region-panel header{grid-template-columns:1fr!important}.region-panel header em{justify-self:start!important;margin-left:0!important}}
 
 </style>
 <meta content="#ffffff" name="theme-color"/><meta content="website" property="og:type"/><meta content="Központi Szövetség · Döntéshozói áttekintés · Online ökoszisztéma · DÖR 2026" property="og:title"/><meta content="Döntéshozói áttekintés az Ausztriai Magyar Egyesületek és Szervezetek Központi Szövetségéről, online ökoszisztémájáról, tagszervezeti hálózatáról és a DÖR 2026 pilotról." property="og:description"/><meta content="hu_HU" property="og:locale"/><meta content="summary_large_image" name="twitter:card"/><link href="?lang=hu" hreflang="hu" rel="alternate"/><link href="?lang=en" hreflang="en" rel="alternate"/><link href="?lang=de" hreflang="de" rel="alternate"/><link href="?lang=hu" hreflang="x-default" rel="alternate"/><script type="application/ld+json">{
@@ -1746,6 +1639,7 @@ html.pdf-export details{
 <p class="node-explain" data-i18n="node.school.p1">A közösség <strong>utánpótlás- és családi pillére</strong>: <strong>hétvégi magyar oktatás</strong>, korosztályos foglalkozások, szülői kommunikáció, beszámolók és kérdőívek.</p>
 <ul>
 <li><a href="https://2026.magyariskola.at" rel="noopener" target="_blank"><strong data-i18n="linkstrong.31">2026.magyariskola.at</strong><span data-i18n="linkspan.32">Tanévbeszámoló és eredménykommunikáció: megmutatja, mi történt, kik dolgoztak, milyen közösségi érték jött létre.</span></a></li>
+<li><a href="https://www.becsiszelet.at" rel="noopener" target="_blank"><strong data-i18n="linkstrong.becsi.szelet">Bécsi Szelet · kulturális és művészeti online magazin</strong><span data-i18n="linkspan.becsi.szelet">2026 októberében induló új online magazinunk, kifejezetten a kultúra és a művészet jegyében.</span></a></li>
 <li><a href="https://kerdoiv.magyariskola.at" rel="noopener" target="_blank"><strong data-i18n="linkstrong.33">kerdoiv.magyariskola.at</strong><span data-i18n="linkspan.34">Visszajelzési és kapcsolatfelvételi felület: adatot ad a működés javításához és a családok igényeinek megértéséhez.</span></a></li>
 <li><a href="https://www.magyariskola.at/orf-at" rel="noopener" target="_blank"><strong data-i18n="linkstrong.35">ORF Magyarok sajtófigyelő</strong><span data-i18n="linkspan.36">Az iskola ORF Magyarok-megjelenéseinek gyűjtőfelülete, amely bizonyítja a közösségi munka nyilvános láthatóságát.</span></a></li>
 <li><a href="https://rolunk.at/tag/becsi-magyar-iskola/" rel="noopener" target="_blank"><strong data-i18n="linkstrong.37">rolunk.at sajtófigyelő</strong><span data-i18n="linkspan.38">Rólunk.at cikkek és megjelenések: külső média-visszaigazolás az iskola közösségi szerepéről.</span></a></li>
@@ -1757,19 +1651,20 @@ html.pdf-export details{
 <article class="h-node">
 <div class="node-head">
 <span class="node-icon ic-news"><svg fill="none" viewbox="0 0 24 24"><path d="M4 5h11a2 2 0 0 1 2 2v11a1 1 0 0 0 1 1h0a1 1 0 0 0 1-1V8M4 5v13a1 1 0 0 0 1 1h13M7 9h7M7 12.5h7M7 16h4" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></span>
-<span class="node-label" data-i18n="node.news.label">Szerkesztett magyar médiafelület</span>
+<span class="node-label" data-i18n="linkstrong.becsi.szelet":{"en":"Bécsi Szelet · cultural and arts online magazine","de":"Bécsi Szelet · Online-Magazin für Kultur und Kunst"},"linkspan.becsi.szelet":{"en":"Our new online magazine launches in October 2026, dedicated specifically to culture and the arts.","de":"Unser neues Online-Magazin startet im Oktober 2026 und widmet sich gezielt Kultur und Kunst."},"node.news.label">Szerkesztett magyar médiafelület</span>
 </div>
 <a class="node-link" href="https://www.becsinaplo.at" rel="noopener" target="_blank"><span class="node-title" data-i18n="node.news.title">Bécsi Napló</span></a>
 <a class="node-url" href="https://www.becsinaplo.at" rel="noopener" target="_blank">becsinaplo.at</a>
 <p class="node-explain" data-i18n="node.news.p1">A közösség <strong>szerkesztett nyilvánossága</strong>: cikkek <strong>dokumentálják</strong> és <strong>visszakereshetővé teszik</strong> az ausztriai magyar élet eseményeit.</p>
 <ul>
 <li><a href="https://www.facebook.com/groups/becsinaplo/" rel="noopener" target="_blank"><strong data-i18n="linkstrong.48">Bécsi Napló Facebook-csoport</strong><span data-i18n="linkspan.49">Közösségi elérés, olvasói kapcsolódás, cikkmegosztás és gyors visszacsatolás.</span></a></li>
+<li><a href="https://www.becsinaplo.eu/ujsag-archivum" rel="noopener" target="_blank"><strong data-i18n="linkstrong.becsi.archive">Bécsi Napló újságarchívum</strong><span data-i18n="linkspan.becsi.archive">Korábbi lapszámok és archív kiadványok visszakeresése.</span></a></li>
 </ul>
 </article>
 <article class="h-node">
 <div class="node-head">
 <span class="node-icon ic-creative"><svg fill="none" viewbox="0 0 24 24"><rect height="14" rx="2.5" stroke-width="1.7" width="18" x="3" y="5"></rect><circle cx="9" cy="10" r="1.8" stroke-width="1.7"></circle><path d="m4 17 4.5-4.5a1.5 1.5 0 0 1 2 0L16 18M14 14l1.8-1.8a1.5 1.5 0 0 1 2 0L20 14.5" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></span>
-<span class="node-label" data-i18n="node.vipach.label">Kreatív, vizuális és közösségi ág</span>
+<span class="node-label" data-i18n="linkstrong.becsi.archive":{"en":"Bécsi Napló archive","de":"Bécsi Napló Archiv"},"linkspan.becsi.archive":{"en":"Previous issues and archived publications.","de":"Frühere Ausgaben und archivierte Publikationen."},"node.vipach.label">Kreatív, vizuális és közösségi ág</span>
 </div>
 <a class="node-link" href="https://www.vipach.at" rel="noopener" target="_blank"><span class="node-title" data-i18n="node.vipach.title">VIPACH <span class="node-subtitle">(Vienna Photo Art &amp; Creative Hub)</span></span></a>
 <a class="node-url" href="https://www.vipach.at" rel="noopener" target="_blank">vipach.at</a>
@@ -2341,127 +2236,6 @@ document.addEventListener('DOMContentLoaded', () => {
   function focusMember(li){const name=li.dataset.orgName;if(!name)return;const target=Array.from(document.querySelectorAll('.member')).find(card=>normalize(card.dataset.name||card.querySelector('h3')?.textContent||'')===normalize(name));if(!target)return;document.querySelectorAll('.region-panel li.map-selected').forEach(x=>x.classList.remove('map-selected'));document.querySelectorAll('.member.member-focus').forEach(x=>x.classList.remove('member-focus'));li.classList.add('map-selected');if(target.style.display==='none')target.style.display='';target.classList.add('member-focus');target.scrollIntoView({behavior:'smooth',block:'center'});setTimeout(()=>target.classList.remove('member-focus'),4200);}
   function attachClicks(){buildLinks();document.querySelectorAll('.region-panel li[data-org-name]').forEach(li=>{if(li.dataset.clickReady==='1')return;li.addEventListener('click',()=>focusMember(li));li.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();focusMember(li);}});li.dataset.clickReady='1';});}
   document.addEventListener('DOMContentLoaded',()=>{attachClicks();refreshHighlights();const original=window.filterCards;if(typeof original==='function'){window.filterCards=function(){const result=original.apply(this,arguments);setTimeout(refreshHighlights,0);return result;};}document.addEventListener('click',e=>{if(e.target.closest('.topic-toggle,.control,.clear-topics'))setTimeout(refreshHighlights,0);});const originalLang=window.KSZ_i18n&&window.KSZ_i18n.setLanguage;if(typeof originalLang==='function'){window.KSZ_i18n.setLanguage=function(lang){const result=originalLang.call(window.KSZ_i18n,lang);setTimeout(()=>{buildLinks();attachClicks();refreshHighlights();},0);return result;};}});
-})();
-</script>
-
-
-<script id="mobileTopicFilterFixScript">
-(function(){
-  let lastHandled = 0;
-  function now(){return Date.now ? Date.now() : new Date().getTime();}
-  function runFilters(){
-    if (typeof window.filterCards === 'function') {
-      try { window.filterCards(); } catch(e) {}
-    }
-    document.dispatchEvent(new CustomEvent('ksz:filtersChanged'));
-    setTimeout(function(){
-      document.querySelectorAll('.topic-toggle').forEach(function(btn){
-        btn.setAttribute('aria-pressed', btn.classList.contains('active') ? 'true' : 'false');
-      });
-    }, 0);
-  }
-  function toggleTopic(btn){
-    if(!btn) return;
-    btn.classList.add('is-tapping');
-    setTimeout(function(){btn.classList.remove('is-tapping');}, 160);
-    btn.classList.toggle('active');
-    btn.setAttribute('aria-pressed', btn.classList.contains('active') ? 'true' : 'false');
-    runFilters();
-  }
-  function clearTopics(){
-    document.querySelectorAll('.topic-toggle.active').forEach(function(btn){
-      btn.classList.remove('active');
-      btn.setAttribute('aria-pressed','false');
-    });
-    runFilters();
-  }
-  function stop(e){
-    if(!e) return;
-    e.preventDefault();
-    e.stopPropagation();
-    if (typeof e.stopImmediatePropagation === 'function') e.stopImmediatePropagation();
-  }
-  function handleButton(btn, e){
-    const t = now();
-    if (t - lastHandled < 360) { stop(e); return; }
-    lastHandled = t;
-    stop(e);
-    toggleTopic(btn);
-  }
-  function handleClear(e){
-    const t = now();
-    if (t - lastHandled < 360) { stop(e); return; }
-    lastHandled = t;
-    stop(e);
-    clearTopics();
-  }
-  function setup(){
-    const grid = document.getElementById('topicFilters');
-    if(grid){
-      grid.setAttribute('data-mobile-filter-ready','true');
-    }
-    document.querySelectorAll('.topic-toggle').forEach(function(btn){
-      if(btn.dataset.mobileTopicReady === '1') return;
-      btn.dataset.mobileTopicReady = '1';
-      btn.type = 'button';
-      btn.setAttribute('role','button');
-      btn.setAttribute('aria-pressed', btn.classList.contains('active') ? 'true' : 'false');
-      btn.addEventListener('touchend', function(e){handleButton(btn,e);}, {capture:true, passive:false});
-      btn.addEventListener('pointerup', function(e){
-        if(e.pointerType === 'touch' || e.pointerType === 'pen') handleButton(btn,e);
-      }, {capture:true, passive:false});
-      btn.addEventListener('click', function(e){handleButton(btn,e);}, true);
-      btn.addEventListener('keydown', function(e){
-        if(e.key === 'Enter' || e.key === ' '){ handleButton(btn,e); }
-      }, true);
-    });
-    const clear = document.getElementById('clearTopics');
-    if(clear && clear.dataset.mobileTopicReady !== '1'){
-      clear.dataset.mobileTopicReady = '1';
-      clear.type = 'button';
-      clear.addEventListener('touchend', handleClear, {capture:true, passive:false});
-      clear.addEventListener('pointerup', function(e){
-        if(e.pointerType === 'touch' || e.pointerType === 'pen') handleClear(e);
-      }, {capture:true, passive:false});
-      clear.addEventListener('click', handleClear, true);
-      clear.addEventListener('keydown', function(e){
-        if(e.key === 'Enter' || e.key === ' '){ handleClear(e); }
-      }, true);
-    }
-  }
-  if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', setup);
-  else setup();
-  document.addEventListener('DOMContentLoaded', setup);
-  document.addEventListener('ksz:languageApplied', setup);
-})();
-</script>
-
-
-<script id="mobileFilterJumpScript">
-(function(){
-  function isMobile(){return window.matchMedia('(max-width: 760px)').matches;}
-  function visibleMember(){
-    return Array.from(document.querySelectorAll('.member')).find(card=>{
-      const cs=getComputedStyle(card);
-      const rect=card.getBoundingClientRect();
-      return cs.display!=='none' && cs.visibility!=='hidden' && rect.width>=0;
-    });
-  }
-  function jumpToResults(){
-    if(!isMobile()) return;
-    const directory=document.getElementById('tagszervezeti-katalogus') || document.getElementById('memberGrid');
-    const target=visibleMember() || directory;
-    if(!target) return;
-    document.querySelectorAll('.member.mobile-filter-target').forEach(el=>el.classList.remove('mobile-filter-target'));
-    if(directory){directory.classList.remove('mobile-filter-arrived');void directory.offsetWidth;directory.classList.add('mobile-filter-arrived');}
-    if(target.classList && target.classList.contains('member')){target.classList.add('mobile-filter-target');setTimeout(()=>target.classList.remove('mobile-filter-target'),2600);}
-    target.scrollIntoView({behavior:'smooth',block:'start'});
-  }
-  document.addEventListener('DOMContentLoaded',()=>{
-    document.querySelectorAll('.topic-toggle,.control,.topic-clear,#clearTopics').forEach(btn=>{
-      btn.addEventListener('click',()=>setTimeout(jumpToResults,260));
-    });
-  });
 })();
 </script>
 
