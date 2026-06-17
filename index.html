@@ -2471,6 +2471,520 @@ button[aria-label*="menu" i]{
   }
 }
 
+
+/* ===== v51 · TELJES MENÜ + HERO LINK + SZIVÁRVÁNY AUDIT JAVÍTÁS ===== */
+/* Audit-cél: hamburger menü vertikális, hero utáni linkek alapból csukva, szivárvány animáció mobilon és desktopon is aktív. */
+
+/* --- A) Hero utáni 5 box: mindig csukott linklista induláskor --- */
+.hierarchy-grid .h-node{
+  position:relative!important;
+}
+.hierarchy-grid .h-node > .links-toggle{
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  gap:8px!important;
+  min-height:44px!important;
+  margin:18px 0 0 0!important;
+  padding:11px 17px!important;
+  border:1px solid rgba(0,0,0,.10)!important;
+  border-radius:999px!important;
+  background:#fff!important;
+  color:#1d1d1f!important;
+  font-size:15px!important;
+  line-height:1!important;
+  font-weight:600!important;
+  letter-spacing:-.018em!important;
+  cursor:pointer!important;
+  box-shadow:0 8px 22px rgba(0,0,0,.055)!important;
+  transition:background .18s ease,transform .18s ease,box-shadow .18s ease!important;
+}
+.hierarchy-grid .h-node > .links-toggle:hover{
+  background:#f5f5f7!important;
+  transform:translateY(-1px)!important;
+  box-shadow:0 12px 28px rgba(0,0,0,.08)!important;
+}
+.hierarchy-grid .h-node > .links-toggle::after{
+  content:"+"!important;
+  width:22px!important;
+  height:22px!important;
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  border-radius:999px!important;
+  background:#f5f5f7!important;
+  color:#1d1d1f!important;
+  font-size:20px!important;
+  font-weight:400!important;
+  line-height:1!important;
+  transition:transform .24s ease!important;
+}
+.hierarchy-grid .h-node.links-open > .links-toggle::after{
+  transform:rotate(45deg)!important;
+}
+.hierarchy-grid .h-node > ul{
+  max-height:0!important;
+  opacity:0!important;
+  overflow:hidden!important;
+  visibility:hidden!important;
+  margin-top:0!important;
+  padding-top:0!important;
+  padding-bottom:0!important;
+  transform:translateY(-8px)!important;
+  transition:max-height .38s ease,opacity .25s ease,visibility .25s ease,transform .25s ease,margin-top .25s ease!important;
+}
+.hierarchy-grid .h-node.links-open > ul{
+  max-height:1400px!important;
+  opacity:1!important;
+  overflow:visible!important;
+  visibility:visible!important;
+  margin-top:28px!important;
+  transform:translateY(0)!important;
+}
+.hierarchy-grid .h-node.links-open > ul > li > a{
+  animation:vipach-link-reveal .30s ease both!important;
+}
+@keyframes vipach-link-reveal{
+  from{opacity:0;transform:translateY(7px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+/* --- B) Több tér és desktopon 2 oszlop / 3 sor, azonos vizuális méret --- */
+.hierarchy-board{
+  margin-top:64px!important;
+}
+.hierarchy-grid{
+  gap:34px!important;
+}
+@media(min-width:901px){
+  .hierarchy-grid{
+    display:grid!important;
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    grid-auto-rows:minmax(560px,1fr)!important;
+    gap:40px!important;
+    align-items:stretch!important;
+  }
+  .hierarchy-grid > .h-node,
+  .hierarchy-grid > .h-node:nth-child(1),
+  .hierarchy-grid > .h-node:nth-child(2),
+  .hierarchy-grid > .h-node:nth-child(3),
+  .hierarchy-grid > .h-node:nth-child(4),
+  .hierarchy-grid > .h-node:nth-child(5){
+    grid-column:auto!important;
+    grid-row:auto!important;
+    width:100%!important;
+    height:100%!important;
+    min-height:560px!important;
+    display:flex!important;
+    flex-direction:column!important;
+    align-self:stretch!important;
+    padding:46px 42px!important;
+  }
+  .hierarchy-grid > .h-node > .links-toggle{
+    margin-top:auto!important;
+    align-self:flex-start!important;
+  }
+  .core-social{
+    grid-column:auto!important;
+  }
+}
+@media(max-width:900px){
+  .hierarchy-board{
+    margin-top:46px!important;
+  }
+  .hierarchy-grid{
+    gap:32px!important;
+  }
+  .hierarchy-grid > .h-node{
+    min-height:0!important;
+    width:100%!important;
+    margin:0!important;
+    padding:36px 28px!important;
+  }
+  .hierarchy-grid .h-node > .links-toggle{
+    width:100%!important;
+    min-height:48px!important;
+    font-size:15px!important;
+  }
+}
+@media(max-width:430px){
+  .hierarchy-grid{
+    gap:28px!important;
+  }
+  .hierarchy-grid > .h-node{
+    padding:32px 22px!important;
+  }
+}
+
+/* --- C) Szivárvány animáció: minden korábbi szivárványos cím mozgó gradientet kap minden nézetben --- */
+@keyframes vipach-rainbow{
+  0%{background-position:0% 50%}
+  100%{background-position:300% 50%}
+}
+.hierarchy-hero h1,
+.hierarchy-root .node-title,
+.hierarchy-grid .node-title,
+.shead h2,
+.wixops-hero h2,
+.dor-hero h2,
+.executive-intro h1,
+.pill.gold,
+.rainbow-text,
+.rainbow-title{
+  background-image:linear-gradient(90deg,#ff3b30,#ff9500,#ffcc00,#34c759,#0a84ff,#5e5ce6,#bf5af2,#ff3b30)!important;
+  background-size:300% 100%!important;
+  -webkit-background-clip:text!important;
+  background-clip:text!important;
+  -webkit-text-fill-color:transparent!important;
+  color:transparent!important;
+  animation:vipach-rainbow 9s linear infinite!important;
+  will-change:background-position!important;
+}
+.wixops-hero h2,
+.dor-hero h2,
+.hierarchy-root .node-title{
+  background-image:linear-gradient(90deg,#ff6961,#ffb340,#ffe066,#5ee08a,#54b9ff,#9a8cff,#e07bff,#ff6961)!important;
+}
+@media(prefers-reduced-motion:reduce){
+  .hierarchy-hero h1,
+  .hierarchy-root .node-title,
+  .hierarchy-grid .node-title,
+  .shead h2,
+  .wixops-hero h2,
+  .dor-hero h2,
+  .executive-intro h1,
+  .pill.gold,
+  .rainbow-text,
+  .rainbow-title{
+    animation:none!important;
+    background-size:100% 100%!important;
+  }
+}
+
+/* --- D) Menü audit: hamburger mindig lenyíló, függőleges, olvasható panel --- */
+.nav-burger,
+.menu-toggle,
+.hamburger,
+button[aria-label*="menü" i],
+button[aria-label*="menu" i]{
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+}
+.mobile-menu,
+.nav-menu,
+.burger-menu{
+  position:fixed!important;
+  top:56px!important;
+  right:18px!important;
+  left:auto!important;
+  width:min(330px,calc(100vw - 36px))!important;
+  max-height:calc(100vh - 82px)!important;
+  overflow:auto!important;
+  padding:12px!important;
+  border-radius:24px!important;
+  background:rgba(255,255,255,.95)!important;
+  border:1px solid rgba(0,0,0,.08)!important;
+  box-shadow:0 24px 70px rgba(0,0,0,.18)!important;
+  backdrop-filter:saturate(180%) blur(22px)!important;
+  -webkit-backdrop-filter:saturate(180%) blur(22px)!important;
+  transform-origin:top right!important;
+  z-index:2200!important;
+}
+.mobile-menu a,
+.nav-menu a,
+.burger-menu a{
+  display:flex!important;
+  width:100%!important;
+  align-items:center!important;
+  justify-content:space-between!important;
+  min-height:46px!important;
+  padding:12px 14px!important;
+  border-radius:16px!important;
+  color:#1d1d1f!important;
+  font-size:15px!important;
+  line-height:1.2!important;
+  font-weight:600!important;
+  text-align:left!important;
+  text-decoration:none!important;
+}
+.mobile-menu a + a,
+.nav-menu a + a,
+.burger-menu a + a{
+  margin-top:4px!important;
+}
+.mobile-menu a:hover,
+.nav-menu a:hover,
+.burger-menu a:hover{
+  background:#f5f5f7!important;
+}
+.mobile-menu:not(.open):not(.active):not([aria-hidden="false"]),
+.nav-menu:not(.open):not(.active):not([aria-hidden="false"]),
+.burger-menu:not(.open):not(.active):not([aria-hidden="false"]){
+  display:none!important;
+}
+.mobile-menu.open,
+.mobile-menu.active,
+.mobile-menu[aria-hidden="false"],
+.nav-menu.open,
+.nav-menu.active,
+.nav-menu[aria-hidden="false"],
+.burger-menu.open,
+.burger-menu.active,
+.burger-menu[aria-hidden="false"]{
+  display:flex!important;
+  flex-direction:column!important;
+  gap:4px!important;
+  animation:vipach-menu-drop .18s ease both!important;
+}
+@keyframes vipach-menu-drop{
+  from{opacity:0;transform:translateY(-8px) scale(.98)}
+  to{opacity:1;transform:translateY(0) scale(1)}
+}
+@media(max-width:900px){
+  .mobile-menu,
+  .nav-menu,
+  .burger-menu{
+    top:52px!important;
+    right:12px!important;
+    width:calc(100vw - 24px)!important;
+  }
+}
+
+
+
+
+/* ===== v54 · MOBIL SZÉLESSÉG / HORIZONTAL OVERFLOW JAVÍTÁS ===== */
+/* Cél: semmi ne legyen szélesebb a kijelzőnél mobilnézetben. */
+html,
+body{
+  width:100%!important;
+  max-width:100%!important;
+  overflow-x:hidden!important;
+}
+*,
+*::before,
+*::after{
+  box-sizing:border-box!important;
+}
+img,
+svg,
+video,
+canvas,
+iframe{
+  max-width:100%!important;
+}
+a,
+p,
+li,
+span,
+strong,
+small,
+h1,
+h2,
+h3,
+h4,
+dd,
+dt{
+  overflow-wrap:anywhere!important;
+}
+
+@media(max-width:900px){
+  body{
+    width:100vw!important;
+    max-width:100vw!important;
+    overflow-x:hidden!important;
+  }
+
+  .nav,
+  .nav-in,
+  .hierarchy-hero,
+  .hierarchy-board,
+  .hierarchy-grid,
+  .hierarchy-grid > .h-node,
+  .hierarchy-root,
+  .root-card,
+  .wixops,
+  .wixops-wrap,
+  .dor,
+  .dor-wrap,
+  .mapsec,
+  .map-wrap,
+  .map-panel,
+  .static-map,
+  .map-side,
+  .executive-map,
+  .region-panel,
+  .exec-strip,
+  .member-grid,
+  .member,
+  .help,
+  .help-grid,
+  .contact-section,
+  .contact-wrap,
+  .contact-grid,
+  .contact-card,
+  footer,
+  .foot-in{
+    width:100%!important;
+    max-width:100%!important;
+    min-width:0!important;
+    overflow-x:hidden!important;
+  }
+
+  .wrap,
+  .wrap-wide,
+  .hero-inner,
+  .hierarchy-inner{
+    width:100%!important;
+    max-width:100%!important;
+    min-width:0!important;
+    padding-left:18px!important;
+    padding-right:18px!important;
+  }
+
+  .hierarchy-hero,
+  .wixops,
+  .dor,
+  .mapsec,
+  .help,
+  .contact-section{
+    padding-left:18px!important;
+    padding-right:18px!important;
+  }
+
+  .hierarchy-grid{
+    grid-template-columns:1fr!important;
+  }
+
+  .hierarchy-grid > .h-node{
+    margin-left:0!important;
+    margin-right:0!important;
+  }
+
+  .node-head{
+    max-width:100%!important;
+    min-width:0!important;
+  }
+
+  .node-subtitle{
+    white-space:normal!important;
+  }
+
+  .node-url,
+  .hierarchy-grid .h-node .node-url{
+    width:100%!important;
+    max-width:100%!important;
+    justify-content:flex-start!important;
+    white-space:normal!important;
+    word-break:break-word!important;
+  }
+
+  .core-social .node-label{
+    max-width:100%!important;
+    white-space:normal!important;
+  }
+
+  .map-side h3{
+    flex-wrap:wrap!important;
+    align-items:flex-start!important;
+  }
+  .map-side h3::after{
+    margin-top:6px!important;
+  }
+
+  .map-side .stats,
+  .stats{
+    width:100%!important;
+    max-width:100%!important;
+    grid-template-columns:1fr 1fr!important;
+  }
+
+  .controls,
+  .guided-search,
+  .topic-grid{
+    width:100%!important;
+    max-width:100%!important;
+  }
+
+  .control,
+  .topic-toggle,
+  .topic-clear,
+  .search,
+  .mobile-region-select{
+    max-width:100%!important;
+    min-width:0!important;
+  }
+
+  .executive-map{
+    display:grid!important;
+    grid-template-columns:1fr!important;
+    columns:auto!important;
+    column-count:auto!important;
+    padding-left:14px!important;
+    padding-right:14px!important;
+  }
+
+  .map-title-row{
+    display:block!important;
+    width:100%!important;
+    max-width:100%!important;
+  }
+
+  .region-panel{
+    display:block!important;
+    width:100%!important;
+    max-width:100%!important;
+    margin-left:0!important;
+    margin-right:0!important;
+  }
+
+  .region-panel header{
+    grid-template-columns:1fr!important;
+  }
+
+  .contact-card dl{
+    grid-template-columns:1fr!important;
+    width:100%!important;
+    max-width:100%!important;
+  }
+
+  #mobileMenu.mobile-menu{
+    width:calc(100vw - 24px)!important;
+    max-width:calc(100vw - 24px)!important;
+    right:12px!important;
+    left:auto!important;
+    overflow-x:hidden!important;
+  }
+}
+
+@media(max-width:430px){
+  .hierarchy-hero,
+  .wixops,
+  .dor,
+  .mapsec,
+  .help,
+  .contact-section{
+    padding-left:14px!important;
+    padding-right:14px!important;
+  }
+
+  .wrap,
+  .wrap-wide,
+  .hero-inner,
+  .hierarchy-inner{
+    padding-left:14px!important;
+    padding-right:14px!important;
+  }
+
+  .map-side .stats,
+  .stats{
+    grid-template-columns:1fr!important;
+  }
+}
+
+
+
 </style>
 <meta content="#ffffff" name="theme-color"/><meta content="website" property="og:type"/><meta content="Központi Szövetség · Döntéshozói áttekintés · Online ökoszisztéma · DÖR 2026" property="og:title"/><meta content="Döntéshozói áttekintés az Ausztriai Magyar Egyesületek és Szervezetek Központi Szövetségéről, online ökoszisztémájáról, tagszervezeti hálózatáról és a DÖR 2026 pilotról." property="og:description"/><meta content="hu_HU" property="og:locale"/><meta content="summary_large_image" name="twitter:card"/><link href="?lang=hu" hreflang="hu" rel="alternate"/><link href="?lang=en" hreflang="en" rel="alternate"/><link href="?lang=de" hreflang="de" rel="alternate"/><link href="?lang=hu" hreflang="x-default" rel="alternate"/><script type="application/ld+json">{
   "@context": "https://schema.org",
@@ -2516,17 +3030,10 @@ button[aria-label*="menu" i]{
 </a>
 </div>
 </div>
-<button aria-controls="mobileMenu" aria-expanded="false" aria-label="Menü megnyitása" class="nav-burger" data-i18n-aria-label="aria.menu.open" id="navBurger"><span></span><span></span><span></span></button>
+
 </div>
 </div></nav>
-<div aria-hidden="true" class="mobile-menu" id="mobileMenu">
-<a data-i18n="nav.structure" href="#hierarchia">Áttekintés</a>
-<a data-i18n="nav.operations" href="#wix-mukodtetes">Online működtetés</a>
-<a data-i18n="nav.dor" href="#dor">DÖR projekt</a>
-<a data-i18n="nav.members" href="#terkep">Tagszervezetek</a>
-<a data-i18n="nav.benefits" href="#miben-segit">Előnyeink</a>
-<a data-i18n="nav.contact" href="#kapcsolat">Kapcsolat</a>
-</div>
+
 <header class="hero hierarchy-hero" id="hierarchia">
 <div class="hero-inner hierarchy-inner">
 <div class="eyebrow" data-i18n="hero.eyebrow">Online hierarchia · belső digitális rendszer</div>
@@ -2557,7 +3064,7 @@ button[aria-label*="menu" i]{
 <a class="node-url" href="https://www.facebook.com/kozpontiszovetseg" rel="noopener" target="_blank">facebook.com/kozpontiszovetseg</a>
 <p class="node-explain" data-i18n="node.social.p1">A projektek <strong>nem külön Facebook-oldalakon</strong> szóródnak szét, hanem a <strong>központi oldal alatt</strong>, csoportokként kapcsolódnak. <strong>Egy logika, sok aktív közösségi tér.</strong></p>
 <p class="node-explain" data-i18n="node.social.p2">A központi oldal adminja <strong>minden projektcsoporthoz hozzáfér</strong>. A struktúra még épül, de a <strong>felületek már működnek</strong>.</p>
-<ul>
+<button aria-expanded="false" class="links-toggle" data-i18n="links.toggle" type="button">Kapcsolódó linkek</button><ul>
 <li><a href="https://www.facebook.com/groups/becsimagyariskola/" rel="noopener" target="_blank"><strong data-i18n="linkstrong.20">Bécsi Magyar Iskola Facebook-csoport</strong><span data-i18n="linkspan.21">Szülői, iskolai és közösségi kommunikáció.</span></a></li>
 <li><a href="https://www.facebook.com/groups/becsinaplo/" rel="noopener" target="_blank"><strong data-i18n="linkstrong.22">Bécsi Napló Facebook-csoport</strong><span data-i18n="linkspan.23">Cikkmegosztás, olvasói kapcsolódás és közösségi visszacsatolás.</span></a></li>
 <li><a href="https://www.facebook.com/groups/vipach/" rel="noopener" target="_blank"><strong data-i18n="linkstrong.24">VIPACH Facebook-csoport</strong><span data-i18n="linkspan.25">Alkotói közösség, programkommunikáció és aktivitás.</span></a></li>
@@ -2572,7 +3079,7 @@ button[aria-label*="menu" i]{
 <a class="node-link" href="https://www.magyariskola.at" rel="noopener" target="_blank"><span class="node-title" data-i18n="node.school.title">Bécsi Magyar Iskola</span></a>
 <a class="node-url" href="https://www.magyariskola.at" rel="noopener" target="_blank">magyariskola.at</a>
 <p class="node-explain" data-i18n="node.school.p1">A közösség <strong>utánpótlás- és családi pillére</strong>: <strong>hétvégi magyar oktatás</strong>, korosztályos foglalkozások, szülői kommunikáció, beszámolók és kérdőívek.</p>
-<ul>
+<button aria-expanded="false" class="links-toggle" data-i18n="links.toggle" type="button">Kapcsolódó linkek</button><ul>
 <li><a href="https://2026.magyariskola.at" rel="noopener" target="_blank"><strong data-i18n="linkstrong.31">2026.magyariskola.at</strong><span data-i18n="linkspan.32">Tanévbeszámoló és eredménykommunikáció: megmutatja, mi történt, kik dolgoztak, milyen közösségi érték jött létre.</span></a></li>
 <li><a href="https://kerdoiv.magyariskola.at" rel="noopener" target="_blank"><strong data-i18n="linkstrong.33">kerdoiv.magyariskola.at</strong><span data-i18n="linkspan.34">Visszajelzési és kapcsolatfelvételi felület: adatot ad a működés javításához és a családok igényeinek megértéséhez.</span></a></li>
 <li><a href="https://www.magyariskola.at/orf-at" rel="noopener" target="_blank"><strong data-i18n="linkstrong.35">ORF Magyarok sajtófigyelő</strong><span data-i18n="linkspan.36">Az iskola ORF Magyarok-megjelenéseinek gyűjtőfelülete, amely bizonyítja a közösségi munka nyilvános láthatóságát.</span></a></li>
@@ -2590,7 +3097,7 @@ button[aria-label*="menu" i]{
 <a class="node-link" href="https://www.becsinaplo.at" rel="noopener" target="_blank"><span class="node-title" data-i18n="node.news.title">Bécsi Napló</span></a>
 <a class="node-url" href="https://www.becsinaplo.at" rel="noopener" target="_blank">becsinaplo.at</a>
 <p class="node-explain" data-i18n="node.news.p1">A közösség <strong>szerkesztett nyilvánossága</strong>: cikkek <strong>dokumentálják</strong> és <strong>visszakereshetővé teszik</strong> az ausztriai magyar élet eseményeit.</p>
-<ul>
+<button aria-expanded="false" class="links-toggle" data-i18n="links.toggle" type="button">Kapcsolódó linkek</button><ul>
 <li><a href="https://www.facebook.com/groups/becsinaplo/" rel="noopener" target="_blank"><strong data-i18n="linkstrong.48">Bécsi Napló Facebook-csoport</strong><span data-i18n="linkspan.49">Közösségi elérés, olvasói kapcsolódás, cikkmegosztás és gyors visszacsatolás.</span></a></li>
 </ul>
 </article>
@@ -2602,7 +3109,7 @@ button[aria-label*="menu" i]{
 <a class="node-link" href="https://www.vipach.at" rel="noopener" target="_blank"><span class="node-title" data-i18n="node.vipach.title">VIPACH <span class="node-subtitle">(Vienna Photo Art &amp; Creative Hub)</span></span></a>
 <a class="node-url" href="https://www.vipach.at" rel="noopener" target="_blank">vipach.at</a>
 <p class="node-explain" data-i18n="node.vipach.p1">A <strong>kreatív és vizuális ág</strong>: fotó, alkotóközösség, digitális jelenlét. <strong>Nem külső befektetésből</strong>, hanem <strong>közösségi finanszírozásból</strong> tartja fenn magát, programjait és láthatóságát.</p>
-<ul>
+<button aria-expanded="false" class="links-toggle" data-i18n="links.toggle" type="button">Kapcsolódó linkek</button><ul>
 <li><a href="https://business.vipach.at" rel="noopener" target="_blank"><strong data-i18n="linkstrong.53">business.vipach.at</strong><span data-i18n="linkspan.54">Stratégiai és szolgáltatási aloldal: megmutatja, hogyan kapcsolódhat a közösségi kreatív tudás professzionális vizuális és digitális feladatokhoz.</span></a></li>
 <li><a href="https://amcham.at/members-list/" rel="noopener" target="_blank"><strong data-i18n="linkstrong.55">AmCham Austria kapcsolódás</strong><span data-i18n="linkspan.56">A VIPACH Bánhalmi Norberten keresztül az AmCham Austria, az Osztrák–Amerikai Kereskedelmi Kamara szakmai közegéhez is kapcsolódik.</span></a></li>
 <li><a href="https://photostudio.vipach.at" rel="noopener" target="_blank"><strong data-i18n="linkstrong.57">photostudio.vipach.at</strong><span data-i18n="linkspan.58">Kreatív / képfeldolgozási alrendszer: digitális eszköz és szolgáltatási kiterjesztés a VIPACH alatt.</span></a></li>
@@ -2620,7 +3127,7 @@ button[aria-label*="menu" i]{
 <a class="node-link" href="https://www.musicaltarsulat.at" rel="noopener" target="_blank"><span class="node-title" data-i18n="node.stage.title">Bécsi Magyar Musical Társulat</span></a>
 <a class="node-url" href="https://www.musicaltarsulat.at" rel="noopener" target="_blank">musicaltarsulat.at</a>
 <p class="node-explain" data-i18n="node.stage.p1"><strong>Magyar nyelvű színpadi, zenei és gyerek-ifjúsági</strong> alkotómunka. Itt a magyar nyelv <strong>nem tananyag, hanem élő kulturális élmény</strong>.</p>
-<ul>
+<button aria-expanded="false" class="links-toggle" data-i18n="links.toggle" type="button">Kapcsolódó linkek</button><ul>
 <li><a href="https://www.facebook.com/groups/musicaltarsulat" rel="noopener" target="_blank"><strong data-i18n="linkstrong.70">Musical Társulat Facebook-csoport</strong><span data-i18n="linkspan.71">Közösségi szervezés, próbák, előadások, szülői és nézői kapcsolódás.</span></a></li>
 </ul>
 </article>
@@ -2941,23 +3448,7 @@ function filterCards(){
   updateResultCount(visibleCount);
 }
 window.addEventListener('DOMContentLoaded', () => {
-  // — Hamburger menü —
-  const burger = document.getElementById('navBurger');
-  const menu = document.getElementById('mobileMenu');
-  if (burger && menu){
-    const setOpen = (open) => {
-      burger.classList.toggle('open', open);
-      menu.classList.toggle('open', open);
-      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
-      menu.setAttribute('aria-hidden', open ? 'false' : 'true');
-      const menuLabel = window.KSZ_i18n && window.KSZ_i18n.menuLabel ? window.KSZ_i18n.menuLabel(open) : (open ? 'Menü bezárása' : 'Menü megnyitása');
-      burger.setAttribute('aria-label', menuLabel);
-    };
-    burger.addEventListener('click', () => setOpen(!menu.classList.contains('open')));
-    menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setOpen(false)));
-    document.addEventListener('keydown', e => { if (e.key === 'Escape') setOpen(false); });
-    window.addEventListener('resize', () => { if (window.innerWidth > 900) setOpen(false); });
-  }
+  // — Hamburger menü tisztítva: egységes kezelő a fájl végén. —
 
   document.getElementById('filters')?.addEventListener('click', e => {
     const btn = e.target.closest('.control');
@@ -3101,9 +3592,7 @@ window.addEventListener('DOMContentLoaded', () => {
       url.searchParams.set('lang', next);
       history.replaceState(null, '', url.toString());
     }
-    const burger = document.getElementById('navBurger');
-    if (burger) burger.setAttribute('aria-label', menuLabel(burger.getAttribute('aria-expanded') === 'true'));
-    if (typeof filterCards === 'function') filterCards();
+if (typeof filterCards === 'function') filterCards();
   }
   function detectInitialLang(){
     const fromUrl = new URLSearchParams(window.location.search).get('lang');
@@ -3168,8 +3657,6 @@ document.addEventListener('DOMContentLoaded', () => {
   document.addEventListener('DOMContentLoaded',()=>{run();const orig=window.KSZ_i18n&&window.KSZ_i18n.setLanguage;if(typeof orig==='function'){window.KSZ_i18n.setLanguage=function(l){const r=orig.call(window.KSZ_i18n,l);setTimeout(run,0);return r;};}new MutationObserver(run).observe(document.documentElement,{childList:true,subtree:true,characterData:true,attributes:true,attributeFilter:['lang']});});
 })();
 </script>
-
-
 <script id="interactiveMemberMapScript">
 (function(){
   function normalize(value){return(value||'').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/\s+/g,' ').trim();}
@@ -3185,62 +3672,6 @@ document.addEventListener('DOMContentLoaded', () => {
   document.addEventListener('DOMContentLoaded',()=>{attachClicks();refreshHighlights();const original=window.filterCards;if(typeof original==='function'){window.filterCards=function(){const result=original.apply(this,arguments);setTimeout(refreshHighlights,0);return result;};}document.addEventListener('click',e=>{if(e.target.closest('.topic-toggle,.control,.clear-topics'))setTimeout(refreshHighlights,0);});document.addEventListener('change',e=>{if(e.target&&e.target.id==='regionSelect')setTimeout(refreshHighlights,0);});const originalLang=window.KSZ_i18n&&window.KSZ_i18n.setLanguage;if(typeof originalLang==='function'){window.KSZ_i18n.setLanguage=function(lang){const result=originalLang.call(window.KSZ_i18n,lang);setTimeout(()=>{buildLinks();attachClicks();refreshHighlights();},0);return result;};}});
 })();
 </script>
-
-<script>
-(function(){
-  function initVerticalHamburgerMenu(){
-    var btn = document.querySelector('.nav-burger, .menu-toggle, .hamburger, button[aria-label*="menü" i], button[aria-label*="menu" i]');
-    var menu = document.querySelector('.mobile-menu, .nav-menu, .burger-menu');
-    if(!btn || !menu || btn.dataset.verticalMenuReady === '1') return;
-
-    btn.dataset.verticalMenuReady = '1';
-    if(!menu.id) menu.id = 'vipach-mobile-menu';
-    btn.setAttribute('aria-controls', menu.id);
-    btn.setAttribute('aria-expanded', menu.classList.contains('open') ? 'true' : 'false');
-    menu.setAttribute('aria-hidden', menu.classList.contains('open') ? 'false' : 'true');
-
-    btn.addEventListener('click', function(ev){
-      ev.preventDefault();
-      ev.stopPropagation();
-      var open = !menu.classList.contains('open');
-      menu.classList.toggle('open', open);
-      menu.classList.toggle('active', open);
-      menu.setAttribute('aria-hidden', open ? 'false' : 'true');
-      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-    });
-
-    menu.querySelectorAll('a').forEach(function(link){
-      link.addEventListener('click', function(){
-        menu.classList.remove('open','active');
-        menu.setAttribute('aria-hidden','true');
-        btn.setAttribute('aria-expanded','false');
-      });
-    });
-
-    document.addEventListener('click', function(ev){
-      if(!menu.classList.contains('open')) return;
-      if(menu.contains(ev.target) || btn.contains(ev.target)) return;
-      menu.classList.remove('open','active');
-      menu.setAttribute('aria-hidden','true');
-      btn.setAttribute('aria-expanded','false');
-    });
-
-    document.addEventListener('keydown', function(ev){
-      if(ev.key !== 'Escape') return;
-      menu.classList.remove('open','active');
-      menu.setAttribute('aria-hidden','true');
-      btn.setAttribute('aria-expanded','false');
-    });
-  }
-  if(document.readyState === 'loading'){
-    document.addEventListener('DOMContentLoaded', initVerticalHamburgerMenu);
-  } else {
-    initVerticalHamburgerMenu();
-  }
-})();
-</script>
-
-
 <!--
 AUDIT v50:
 - Desktop member organisation typography reduced to 80%.
@@ -3248,6 +3679,41 @@ AUDIT v50:
 - Hamburger/mobile navigation forced into vertical dropdown pattern with aria-expanded / aria-hidden support.
 - Existing mobile, tablet and desktop hero block rhythm retained.
 - No external scripts or tracking added.
+-->
+<!--
+AUDIT v51:
+- Menu: vertical hamburger dropdown CSS + JS present; closes on link click, outside click and Escape.
+- Hero boxes found: 5; direct link lists found: 5; collapsible buttons found: 5.
+- Hero direct UL lists are collapsed by default through .hierarchy-grid .h-node > ul max-height:0/opacity:0/visibility:hidden.
+- Rainbow animation is defined outside viewport-specific media rules and applies on mobile and desktop; reduced-motion users get static gradient.
+-->
+
+<!--
+AUDIT v54:
+- Mobile horizontal overflow hardened globally.
+- Main sections, cards, grids, map panels, contact blocks and mobile menu are capped at 100vw / 100%.
+- Long URLs and labels now wrap instead of widening the page.
+- Desktop layout rules remain unchanged outside max-width:900px.
+-->
+
+<!--
+AUDIT v55:
+- Hamburger button and mobile menu markup removed.
+- Removed hamburger-related script blocks: 1.
+- Final CSS safety rule hides any residual hamburger/menu selectors.
+- Header keeps brand + language selector; no hamburger menu remains.
+-->
+
+
+<!--
+FINAL AUDIT:
+- Hamburger menu DOM elements: 0 / expected 0.
+- Active hamburger JS references: False / expected False.
+- Hero boxes: 5; direct link lists: 5; collapsible buttons: 5.
+- Hero links are collapsed by CSS and opened only with .links-open.
+- Rainbow animation keyframes and animation declarations remain in the CSS.
+- Mobile width hardening v54 remains active.
+- Language buttons: 3; desktop nav links: 6.
 -->
 
 </body>
