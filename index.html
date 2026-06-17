@@ -1727,6 +1727,182 @@ html.pdf-export details{
   }
 }
 
+
+
+/* ===== v37 · HERO ALATTI 5 BLOKK: LINK +50%, TITLE SZIVÁRVÁNY ===== */
+/* A név alatti URL-sor a korábbi 6px helyett 50%-kal nagyobb: 9px. */
+.hierarchy-grid .h-node .node-url{
+  font-size:9px!important;
+  line-height:1.18!important;
+  letter-spacing:-.008em!important;
+}
+.hierarchy-grid .h-node .node-url::before{
+  width:8px!important;
+  height:8px!important;
+}
+/* Az öt hero alatti blokk címe minden nézetben szivárványos. */
+.hierarchy-grid .h-node .node-title{
+  background-image:linear-gradient(90deg,#ff3b30,#ff9500,#ffcc00,#34c759,#0a84ff,#5e5ce6,#bf5af2,#ff3b30)!important;
+  background-size:300% 100%!important;
+  -webkit-background-clip:text!important;
+  background-clip:text!important;
+  -webkit-text-fill-color:transparent!important;
+  color:transparent!important;
+  animation:vipach-rainbow 9s linear infinite!important;
+}
+@media(prefers-reduced-motion:reduce){
+  .hierarchy-grid .h-node .node-title{
+    animation:none!important;
+    background-size:100% 100%!important;
+  }
+}
+@media(max-width:900px){
+  .hierarchy-grid .h-node .node-url{
+    font-size:9px!important;
+    line-height:1.18!important;
+  }
+}
+
+
+
+/* ===== v38 · HERO ALATTI 2. BLOKK ELRENDEZÉS EGYSÉGESÍTÉS ===== */
+/* A második hero alatti fő blokk ne kapjon külön grid-row span-t; ugyanúgy viselkedjen, mint az utána következők. */
+.hierarchy-grid > .h-node:nth-child(2){
+  grid-row:auto!important;
+  align-self:stretch!important;
+}
+/* Biztonsági egységesítés: a Facebook-blokk második belső linkkártyája is pontosan ugyanazt a középre rendezett layoutot kapja, mint az utána lévők. */
+.core-social li:nth-child(2) a{
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:center!important;
+  justify-content:center!important;
+  text-align:center!important;
+}
+
+
+/* ===== v39 · FACEBOOK BLOKK = BÉCSI MAGYAR ISKOLA ELRENDEZÉS ===== */
+/* A Facebook-blokk ugyanazt a balra épülő, ikon-jobbra, alcím-jobbra rendszert kapja, mint az iskola blokk. */
+.core-social{
+  text-align:left!important;
+  background:var(--apple-tile)!important;
+}
+.core-social .node-head{
+  width:100%!important;
+  display:flex!important;
+  flex-direction:row!important;
+  justify-content:space-between!important;
+  align-items:flex-start!important;
+  gap:16px!important;
+  text-align:left!important;
+  margin:0 0 18px 0!important;
+}
+.core-social .node-icon{
+  order:2!important;
+  flex:0 0 auto!important;
+  margin:0!important;
+}
+.core-social .node-label{
+  order:1!important;
+  flex:1 1 auto!important;
+  display:flex!important;
+  justify-content:flex-end!important;
+  text-align:right!important;
+  margin:8px 0 0 0!important;
+}
+.core-social .node-link,
+.core-social .node-url{
+  width:auto!important;
+  display:block!important;
+  text-align:left!important;
+  margin:0!important;
+}
+.core-social .node-link{margin-bottom:6px!important;}
+.core-social .node-title,
+.core-social .node-explain,
+.core-social li a strong,
+.core-social li a span{
+  text-align:left!important;
+}
+.core-social .node-explain{
+  max-width:none!important;
+  margin:0 0 22px 0!important;
+}
+.core-social .node-explain + .node-explain{
+  margin-top:-6px!important;
+  margin-bottom:28px!important;
+}
+.core-social ul{
+  grid-template-columns:1fr!important;
+  justify-items:stretch!important;
+  align-items:stretch!important;
+  gap:12px!important;
+}
+.core-social li,
+.core-social li a{
+  width:100%!important;
+}
+.core-social li a{
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:flex-start!important;
+  justify-content:flex-start!important;
+  text-align:left!important;
+  padding:16px 18px 16px 38px!important;
+}
+.core-social li a::before{
+  left:16px!important;
+}
+@media(max-width:760px){
+  .core-social .node-head{
+    flex-direction:row!important;
+    justify-content:space-between!important;
+    align-items:flex-start!important;
+    gap:14px!important;
+  }
+  .core-social .node-label{
+    justify-content:flex-end!important;
+    text-align:right!important;
+    margin-top:6px!important;
+  }
+  .core-social li a{
+    padding:14px 16px 14px 36px!important;
+  }
+}
+
+/* ===== v40 · MINDEN SZIVÁRVÁNYOS FELIRAT FOLYAMATOSAN ANIMÁLT MOBILON ÉS ASZTALON ===== */
+.hierarchy-hero h1,
+.hierarchy-grid .node-title,
+.shead h2,
+.wixops-hero h2,
+.dor-hero h2,
+.executive-intro h1,
+.pill.gold,
+.rainbow-text,
+.rainbow-title{
+  background-image:linear-gradient(90deg,#ff3b30,#ff9500,#ffcc00,#34c759,#0a84ff,#5e5ce6,#bf5af2,#ff3b30)!important;
+  background-size:300% 100%!important;
+  -webkit-background-clip:text!important;
+  background-clip:text!important;
+  -webkit-text-fill-color:transparent!important;
+  color:transparent!important;
+  animation:vipach-rainbow 9s linear infinite!important;
+}
+@media(prefers-reduced-motion:reduce){
+  .hierarchy-hero h1,
+  .hierarchy-grid .node-title,
+  .shead h2,
+  .wixops-hero h2,
+  .dor-hero h2,
+  .executive-intro h1,
+  .pill.gold,
+  .rainbow-text,
+  .rainbow-title{
+    animation:none!important;
+    background-size:100% 100%!important;
+  }
+}
+
 </style>
 <meta content="#ffffff" name="theme-color"/><meta content="website" property="og:type"/><meta content="Központi Szövetség · Döntéshozói áttekintés · Online ökoszisztéma · DÖR 2026" property="og:title"/><meta content="Döntéshozói áttekintés az Ausztriai Magyar Egyesületek és Szervezetek Központi Szövetségéről, online ökoszisztémájáról, tagszervezeti hálózatáról és a DÖR 2026 pilotról." property="og:description"/><meta content="hu_HU" property="og:locale"/><meta content="summary_large_image" name="twitter:card"/><link href="?lang=hu" hreflang="hu" rel="alternate"/><link href="?lang=en" hreflang="en" rel="alternate"/><link href="?lang=de" hreflang="de" rel="alternate"/><link href="?lang=hu" hreflang="x-default" rel="alternate"/><script type="application/ld+json">{
   "@context": "https://schema.org",
