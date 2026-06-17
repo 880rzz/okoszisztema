@@ -1,13 +1,12 @@
 <!DOCTYPE html>
-
 <html lang="de">
 <head>
 <meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>DÖR 2026 · Diaspora-Ökosystem</title>
-<meta content="DÖR 2026 entscheidungsvorbereitende Pilotseite: ein freiwilliges und auditierbares Diaspora-Ökosystem mit Autonomiegarantien und einem 90- bis 120-Tage-Entscheidungstor Go / Modify / Stop." name="description"/>
-<meta content="noindex, nofollow, noarchive, nosnippet" name="robots"/>
-<meta content="noindex, nofollow, noarchive, nosnippet" http-equiv="X-Robots-Tag"/>
+<meta name="description" content="DÖR 2026 entscheidungsvorbereitende Pilotseite: ein freiwilliges und auditierbares Diaspora-Ökosystem mit Autonomiegarantien und einem 90- bis 120-Tage-Entscheidungstor Go / Modify / Stop."/>
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet"/>
+<meta http-equiv="X-Robots-Tag" content="noindex, nofollow, noarchive, nosnippet"/>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -195,42 +194,196 @@ footer strong{color:#fff}
 .lang-mini a{display:inline-flex;align-items:center;justify-content:center;height:30px;min-width:34px;padding:0 9px;border-radius:999px;border:1px solid rgba(201,165,90,.24);background:rgba(255,255,255,.06);color:rgba(248,244,237,.86);font-size:12px;font-weight:800;letter-spacing:.04em}
 .lang-mini a.active{background:var(--gold2);color:#14251b;border-color:var(--gold2)}
 @media(max-width:900px){.lang-mini{display:none}}
+</style>
 
 
-/* ===== v33 · DISPLAY TYPE SCALE -25% + RESPONSIVE HARDENING ===== */
+<!-- FINAL OVERRIDE · only main titles rainbow, all other text black -->
+<style id="main-title-rainbow-black-text-lock">
+@keyframes mainTitleRainbowFinal{
+  0%{background-position:0% 50%}
+  100%{background-position:300% 50%}
+}
 :root{
-  --dor-display-xl:clamp(1.85rem,5.25vw,3.9rem);
-  --dor-display-lg:clamp(1.5rem,3vw,2.36rem);
-  --dor-display-md:clamp(1.15rem,1.8vw,1.55rem);
+  --main-title-rainbow-final:linear-gradient(90deg,#ff3b30,#ff9500,#ffcc00,#34c759,#0a84ff,#5e5ce6,#bf5af2,#ff3b30);
 }
-h1{font-size:var(--dor-display-xl)!important;line-height:1.08!important;letter-spacing:-.032em!important;}
-h2{font-size:var(--dor-display-lg)!important;line-height:1.1!important;letter-spacing:-.028em!important;}
-h3,.ct,.board-title,.pa-title,.lens-q{font-size:var(--dor-display-md)!important;line-height:1.18!important;}
-@media(max-width:900px){
-  h1{font-size:clamp(2rem,9vw,3rem)!important;line-height:1.08!important;}
-  h2{font-size:clamp(1.55rem,7vw,2.15rem)!important;line-height:1.12!important;}
-  .hero-grid,.grid2,.grid3,.grid4,.ministerial-map,.mvp-strip,.not-list,.guard-grid,.lens-grid,.product-grid,.score-strip,.kpi-grid,.hardline-grid{grid-template-columns:1fr!important;}
-  .hero{min-height:auto!important;}
+html,body{color:#000!important;}
+body :not(script):not(style):not(svg):not(path):not(h1):not(h2){
+  color:#000!important;
+  -webkit-text-fill-color:#000!important;
+  text-shadow:none!important;
 }
-@media(max-width:430px){
-  h1{font-size:2rem!important;}
-  h2{font-size:1.6rem!important;}
-  .hero-lead,.lead{font-size:1rem!important;line-height:1.55!important;}
+body :not(h1):not(h2){
+  animation-name:none!important;
+}
+/* Readability lock: if text is black, decorative dark panels must become light panels. */
+.hero,
+.s-dark,
+.hardline,
+footer,
+.topbar,
+.nav-links,
+.hierarchy-root,
+.wixops-hero,
+.dor-hero,
+.pitch-card,
+.hero-mini,
+.contact-box{
+  background:#fffdf8!important;
+  background-image:none!important;
+  color:#000!important;
+  border-color:rgba(0,0,0,.10)!important;
+}
+.nav,
+.topbar{
+  background:rgba(255,255,255,.94)!important;
+  -webkit-backdrop-filter:saturate(180%) blur(18px)!important;
+  backdrop-filter:saturate(180%) blur(18px)!important;
+}
+.card,
+.board-card,
+.journey,
+.metric,
+.risk-card,
+.lens-card,
+.product-step,
+.faq-item,
+.acc,
+.score-item,
+.pain-box,
+.answer-box,
+.priority-card,
+.kpi,
+.member,
+.h-node,
+.ops-card,
+.dor-card,
+.help-card,
+.contact-card,
+.hierarchy-summary div,
+.s-dark .card,
+.s-dark .board-card,
+.s-dark .journey,
+.s-dark .metric,
+.s-dark .risk-card,
+.s-dark .lens-card,
+.s-dark .product-step,
+.s-dark .faq-item,
+.s-dark .acc,
+.s-dark .score-item,
+.hardline-item,
+.mvp-item,
+.not-item,
+.guard-card,
+.decision,
+.seat,
+.map-callout{
+  background:#fff!important;
+  background-image:none!important;
+  color:#000!important;
+  border-color:rgba(0,0,0,.10)!important;
+}
+.hero::after{color:rgba(0,0,0,.035)!important;}
+.nav-brand::before{background:#000!important;box-shadow:0 0 0 5px rgba(0,0,0,.06)!important;}
+.nav-toggle,
+.nav-links button,
+.back-link,
+.btn,
+.pill,
+.textlink,
+.primary,
+.lang-mini a{
+  color:#000!important;
+  -webkit-text-fill-color:#000!important;
+  background:#fff!important;
+  background-image:none!important;
+  border-color:rgba(0,0,0,.14)!important;
+}
+.btn.primary,
+.pill.solid,
+.pill.gold,
+.lang-mini a.active{
+  background:#f5f5f7!important;
+  background-image:none!important;
+  color:#000!important;
+  -webkit-text-fill-color:#000!important;
+}
+/* The only rainbow elements: main page and section titles. */
+h1,
+h1 *,
+h2,
+h2 *{
+  background-image:var(--main-title-rainbow-final)!important;
+  background-size:300% 100%!important;
+  -webkit-background-clip:text!important;
+  background-clip:text!important;
+  -webkit-text-fill-color:transparent!important;
+  color:transparent!important;
+  animation:mainTitleRainbowFinal 9s linear infinite!important;
+  text-shadow:none!important;
+}
+@media(prefers-reduced-motion:reduce){
+  h1,h1 *,h2,h2 *{animation:none!important;}
+}
+
+/* Absolute final text-color lock with higher specificity. */
+html body *{
+  color:#000!important;
+  -webkit-text-fill-color:#000!important;
+  text-shadow:none!important;
+}
+html body h1,
+html body h1 *,
+html body h2,
+html body h2 *{
+  background-image:var(--main-title-rainbow-final)!important;
+  background-size:300% 100%!important;
+  -webkit-background-clip:text!important;
+  background-clip:text!important;
+  -webkit-text-fill-color:transparent!important;
+  color:transparent!important;
+  animation:mainTitleRainbowFinal 9s linear infinite!important;
+  text-shadow:none!important;
+}
+@media(prefers-reduced-motion:reduce){
+  html body h1,html body h1 *,html body h2,html body h2 *{animation:none!important;}
+}
+
+
+/* Specificity guard: all non-title text black even against older !important class rules. */
+html body *:not(#rainbow-title-specificity-guard){
+  color:#000!important;
+  -webkit-text-fill-color:#000!important;
+  text-shadow:none!important;
+}
+html body h1:not(#rainbow-title-specificity-guard),
+html body h1 *:not(#rainbow-title-specificity-guard),
+html body h2:not(#rainbow-title-specificity-guard),
+html body h2 *:not(#rainbow-title-specificity-guard){
+  background-image:var(--main-title-rainbow-final)!important;
+  background-size:300% 100%!important;
+  -webkit-background-clip:text!important;
+  background-clip:text!important;
+  -webkit-text-fill-color:transparent!important;
+  color:transparent!important;
+  animation:mainTitleRainbowFinal 9s linear infinite!important;
+  text-shadow:none!important;
 }
 
 </style>
+
 </head>
 <body>
 <div class="hu-stripe"></div>
 <nav class="topbar">
-<div class="nav-inner">
-<a class="nav-brand" href="#hero">DÖR 2026</a>
-<a class="back-link" href="index_with_dor_page.html">Zurück zur Zentralverbandsseite</a>
-<div class="lang-mini"><a href="dor-2026.html">HU</a><a class="" href="dor-2026-en.html">EN</a><a class="active" href="dor-2026-de.html">DE</a></div>
-<button aria-expanded="false" aria-label="Menu" class="nav-toggle" onclick="toggleNav()"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24"><path d="M4 7h16"></path><path d="M4 12h16"></path><path d="M4 17h16"></path></svg></button>
-<div class="nav-links" id="navLinks"><button onclick="go('hero',this)">Pitch</button><button onclick="go('vezetoi-garancia',this)">Prinzip</button><button onclick="go('autonomia-zaro-garancia',this)">Autonomie</button><button onclick="go('kulkapcsolati-haszon',this)">Außenbezug</button><button onclick="go('problem',this)">Schmerzpunkte</button><button onclick="go('pilot',this)">Pilot</button><button onclick="go('wixpilot',this)">Wix-Pilot</button><button onclick="go('success',this)">Metriken</button><button onclick="go('journeys',this)">User Journey</button><button onclick="go('vision',this)">Einordnung</button><button onclick="go('governance',this)">Governance</button><button onclick="go('garanciak',this)">Firewalls</button><button onclick="go('stressfix',this)">Stresstest</button><button onclick="go('proof',this)">Nachweis</button><button onclick="go('appendix',this)">Anhänge</button><button onclick="go('contact',this)">Kontakt</button></div>
-</div>
+  <div class="nav-inner">
+    <a class="nav-brand" href="#hero">DÖR 2026</a>
+    <a class="back-link" href="index_with_dor_page.html">Zurück zur Zentralverbandsseite</a>
+    <div class="lang-mini"><a href="dor-2026.html">HU</a><a href="dor-2026-en.html" class="">EN</a><a href="dor-2026-de.html" class="active">DE</a></div>
+    <button class="nav-toggle" aria-expanded="false" aria-label="Menu" onclick="toggleNav()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16"></path><path d="M4 12h16"></path><path d="M4 17h16"></path></svg></button>
+    <div class="nav-links" id="navLinks"><button onclick="go('hero',this)">Pitch</button><button onclick="go('vezetoi-garancia',this)">Prinzip</button><button onclick="go('autonomia-zaro-garancia',this)">Autonomie</button><button onclick="go('kulkapcsolati-haszon',this)">Außenbezug</button><button onclick="go('problem',this)">Schmerzpunkte</button><button onclick="go('pilot',this)">Pilot</button><button onclick="go('wixpilot',this)">Wix-Pilot</button><button onclick="go('success',this)">Metriken</button><button onclick="go('journeys',this)">User Journey</button><button onclick="go('vision',this)">Einordnung</button><button onclick="go('governance',this)">Governance</button><button onclick="go('garanciak',this)">Firewalls</button><button onclick="go('stressfix',this)">Stresstest</button><button onclick="go('proof',this)">Nachweis</button><button onclick="go('appendix',this)">Anhänge</button><button onclick="go('contact',this)">Kontakt</button></div>
+  </div>
 </nav>
+
 <header class="hero" id="hero"><div class="hero-inner">
 <div class="ey">30-Sekunden-Pitch für Entscheider</div>
 <h1>DÖR 2026: ein <em>freiwilliger Pilot</em> für Sichtbarkeit der Diaspora, Verjüngung durch junge Mitwirkende und stärkere Autonomie der Gemeinschaften.</h1>
@@ -244,6 +397,8 @@ h3,.ct,.board-title,.pa-title,.lens-q{font-size:var(--dor-display-md)!important;
 <div class="hero-mini"><b>Was beweist es?</b><span>Das Betriebsprinzip existiert im Kleinen bereits und kann daher persönlich demonstriert werden.</span></div></div>
 <div class="hero-actions"><button class="btn primary" onclick="go('pilot')">Pilotkern</button><button class="btn secondary" onclick="go('garanciak')">Garantien</button></div>
 </div></header>
+
+
 <section class="sec" id="vezetoi-garancia"><div class="wrap-wide">
 <div class="kicker">Führungsperspektive</div>
 <h2>Zwei Prinzipien: <em>Autonomie und lebendige Verbindung.</em></h2>
@@ -267,12 +422,14 @@ h3,.ct,.board-title,.pa-title,.lens-q{font-size:var(--dor-display-md)!important;
 <div class="card"><div class="ct">Kultur- und Community-Diplomatie</div><div class="cd">DÖR ersetzt keine Vertretungen, hilft aber zu erkennen, wo aktive Community-Knoten und dialogfähige Organisationen vorhanden sind.</div></div></div>
 <div class="calc-note"><strong>Zusammenfassung:</strong> DÖR 2026 soll die Diaspora nicht verwalten, sondern mit ihr lebendige Beziehungen schaffen.</div>
 </div></section>
+
 <section class="sec" id="problem"><div class="wrap-wide">
 <div class="kicker">01</div><h2>Das Problem der Diaspora ist nicht technologisch. <em>Es ist ein Sichtbarkeits-, Nachwuchs- und Betriebsproblem.</em></h2>
 <p class="lead">Das Projekt ist nur dann verständlich, wenn auf jeder Ebene klar ist: wem etwas fehlt, warum es fehlt und was DÖR konkret löst.</p>
 <div class="pain-answer"><div class="pain-box"><div class="pa-label">Schmerz 1 · Community-Autonomie</div><div class="pa-title">Organisationen wollen keine zentrale Steuerung.</div><div class="pa-text">Viele Diaspora-Gemeinschaften reagieren sensibel auf Systeme, die von oben festlegen, wer wen vertritt.</div></div><div class="answer-box"><div class="pa-label">DÖR</div><div class="pa-title">Freiwillige Infrastruktur, keine Steuerung.</div><div class="pa-text">Die Organisation entscheidet selbst über Beitritt, Profil, Delegierte, Ausstieg und Kommunikation.</div></div></div>
 <div class="pain-answer"><div class="pain-box"><div class="pa-label">Schmerz 2 · lebendige Verbindung</div><div class="pa-title">Diaspora-Arbeit bleibt oft unsichtbar.</div><div class="pa-text">Veranstaltungen, Geschichten und ehrenamtliche Arbeit bleiben oft in lokalen Kanälen.</div></div><div class="answer-box"><div class="pa-label">DÖR</div><div class="pa-title">Ein gemeinsamer digitaler Raum mit lokaler Autonomie.</div><div class="pa-text">Der Pilot bietet Profile, Veranstaltungskalender und Community-News, ohne bestehende Kanäle zu ersetzen.</div></div></div>
 </div></section>
+
 <section class="sec s-dark" id="pilot"><div class="wrap-wide">
 <div class="kicker">02</div><h2>Die ersten 90-120 Tage beweisen nur eines: <em>Funktioniert das kleinste tragfähige System?</em></h2><p class="lead muted">Der Pilot ist nicht der vollständige DÖR, kein Fördersystem, keine globale Datenbank und keine Business-Plattform. Er testet vier Grundfunktionen mit realen Gemeinschaften.</p>
 <div class="mvp-strip"><div class="mvp-item"><b>1 · Organisationsprofil</b><span>Wer die Organisation ist, wo sie tätig ist, welche Kanäle sie nutzt und wer die Kontaktperson ist.</span></div>
@@ -287,6 +444,7 @@ h3,.ct,.board-title,.pa-title,.lens-q{font-size:var(--dor-display-md)!important;
 <div class="not-item"><b>Kein Live-Business-Modul</b><span>Die Marktbrücke kann nur in einer späteren validierten Phase geprüft werden.</span></div>
 <div class="not-item"><b>Kein Supplier-Lock-in</b><span>Die technische Struktur muss dokumentiert, übertragbar und auditierbar sein.</span></div></div>
 </div></section>
+
 <section class="sec s-warm" id="wixpilot"><div class="wrap-wide">
 <div class="kicker">03/A</div><h2>Nicht zuerst ein endgültiges staatliches System bauen. <em>Zuerst das Betriebsprinzip schnell beweisen.</em></h2>
 <p class="lead">Ziel ist nicht der Aufbau einer endgültigen globalen Plattform, sondern der Nachweis, ob Organisationen Profile verwalten, Veranstaltungen publizieren, junge Redakteure einbinden und in kontrollierten rechtlichen und finanziellen Rahmen arbeiten können.</p>
@@ -298,27 +456,33 @@ h3,.ct,.board-title,.pa-title,.lens-q{font-size:var(--dor-display-md)!important;
 </div>
 <div class="acc"><button aria-expanded="false" class="acc-btn" onclick="toggleAcc(this)"><span>Budget-Schieberegler</span><span class="acc-ico">+</span></button><div class="acc-body"><p>Der Rechner ist eine Schätzung, kein Angebot und keine Verpflichtung.</p><div class="calc-row"><label>Anzahl der Organisationen</label><input id="sl-org" max="1000" min="10" oninput="calcAll()" step="10" type="range" value="100"/><span class="calc-val" id="out-org">100</span></div><div class="calc-row"><label>Aktive Wix-Paketlogik</label><span class="calc-val" id="out-rate">Business Elite / Studio</span></div><div class="kpi-grid"><div class="kpi"><strong id="kpi-month">178€</strong><span>geschätzte monatliche Plattformkosten</span></div><div class="kpi"><strong id="kpi-year">2,132€</strong><span>geschätzte jährliche Plattformkosten</span></div><div class="kpi"><strong id="kpi-pilot">711€</strong><span>90-120-Tage-Pilotgrößenordnung</span></div></div><div class="chart-outer"><canvas id="ecoChart"></canvas></div></div></div>
 </div></section>
+
 <section class="sec" id="success"><div class="wrap-wide"><div class="kicker">03</div><h2>Nach 90-120 Tagen soll die Entscheidung <em>messbar und nicht eindrucksbasiert</em> sein.</h2><div class="grid4">
 <div class="metric"><strong>10-20</strong><p>freiwillig teilnehmende Organisationen</p></div><div class="metric"><strong>60%</strong><p>mindestens eine Nachricht oder Veranstaltung hochgeladen</p></div><div class="metric"><strong>15-30</strong><p>Junior-Hub-Teilnehmende</p></div><div class="metric"><strong>70%</strong><p>Führungskräfte halten es für nutzbar</p></div><div class="metric"><strong>1</strong><p>Dashboard und Abschlussbericht</p></div><div class="metric"><strong>0</strong><p>Datenschutz- oder politische Vorfälle</p></div><div class="metric"><strong>100%</strong><p>Freiwilligkeit und Austrittsrecht</p></div><div class="metric fail"><strong>STOP</strong><p>wenn Mindestwerte nicht erfüllt werden</p></div>
 </div></div></section>
+
 <section class="sec s-warm" id="journeys"><div class="wrap-wide"><div class="kicker">04</div><h2>Was tun die Beteiligten nach dem Pilotstart?</h2><div class="grid3">
 <div class="journey"><b>Organisationsleitung</b><div class="steps"><div class="step">Erhält eine Einladung.</div><div class="step">Akzeptiert die Autonomie-Charta.</div><div class="step">Profil wird erstellt.</div><div class="step">Benennt Kontaktperson und jungen Redakteur.</div></div></div>
 <div class="journey"><b>Junge Teilnehmende</b><div class="steps"><div class="step">Tritt dem Junior Hub bei.</div><div class="step">Erhält eine konkrete Aufgabenliste.</div><div class="step">Lädt Veranstaltung, Artikel oder Archivmaterial hoch.</div><div class="step">Erhält mentoriertes Feedback.</div></div></div>
 <div class="journey"><b>Programmträger</b><div class="steps"><div class="step">Sieht teilnehmende Organisationen.</div><div class="step">Verfolgt Aktivität und Risiken.</div><div class="step">Erhält aggregierte Betriebsdaten.</div><div class="step">Entscheidet: Go, Modify oder Stop.</div></div></div>
 </div></div></section>
+
 <section class="sec" id="vision"><div class="wrap-wide"><div class="kicker">05</div><h2>DÖR ist stark, wenn es gleichzeitig <em>Autonomie und lebendige Verbindung</em> unterstützt.</h2><div class="grid2">
 <div class="card"><div class="ct">Autonomie und Dialog</div><div class="cd">Die Gemeinschaft ist Partner, kein gesteuerter Akteur.</div></div>
 <div class="card"><div class="ct">Lebendige Diaspora-Beziehung</div><div class="cd">Keine Förderliste, sondern ein funktionierendes Community-Netzwerk.</div></div>
 <div class="card"><div class="ct">Verjüngung</div><div class="cd">Junge Menschen sind Mitwirkende, keine Zielgruppe.</div></div>
 <div class="card"><div class="ct">Staatliche Vertretbarkeit</div><div class="cd">Transparent, messbar, aber nicht kontrollierend.</div></div>
 </div></div></section>
+
 <section class="sec s-dark" id="governance"><div class="wrap-wide"><div class="kicker">06</div><h2>Keine neue Stiftung. <em>Ein ministeriell beaufsichtigtes Pilotprogramm.</em></h2><p class="lead muted">Das vertretbarste Modell ist eine zeitlich begrenzte, auditierbare Pilotprogramm-Struktur: fachpolitische Aufsicht, Programmbüro, Steuerungsgremium und Diaspora-Rundtisch.</p><div class="board-grid"><div class="board-card strong"><div class="board-title">Empfohlene Form: DÖR-Pilot-Programmbüro + Steuerungsgremium</div><p class="board-sub">Die tägliche Umsetzung koordiniert ein kleines Büro, beaufsichtigt durch ein mehrseitiges Gremium.</p></div><div class="board-card"><div class="board-title">Aufsichtslogik</div><p class="board-sub">Das Mandat ist kein operativer Eingriff, sondern Garantie: Verantwortlicher, Kostenzeile, Datenschutzrahmen, Entscheidungstor und Stopprecht.</p></div></div></div></section>
+
 <section class="sec s-warm" id="garanciak"><div class="wrap"><div class="ey">07</div><h2>Der Pilot darf nur starten, wenn strukturelle Garantien die Angriffsflächen schließen.</h2><div class="guard-grid">
 <div class="card"><div class="ct">Közpénzügyi / Haushalts-Firewall</div><div class="cd">Keine automatische Verlängerung, kein automatischer Roll-out und kein Lieferantenvorrecht.</div></div>
 <div class="card"><div class="ct">Datenschutz-politische Firewall</div><div class="cd">Keine politischen Meinungen, Parteipräferenz, Weltanschauungsdaten oder Loyalitätsinformationen.</div></div>
 <div class="card"><div class="ct">Freiwilligkeits-Firewall</div><div class="cd">Nichtteilnahme darf keinen Nachteil verursachen.</div></div>
 <div class="card"><div class="ct">Autonomie-Firewall</div><div class="cd">Die Plattform entscheidet nicht über Legitimität.</div></div>
 </div><div class="decision-strip"><div class="decision go"><strong>GO</strong><small>Fortsetzung nur bei validierter Nutzung, Freiwilligkeit und sauberem Audit.</small></div><div class="decision modify"><strong>MODIFY</strong><small>Anpassen, wenn Wert vorhanden ist, aber Scope, Kosten, Datenschutz oder Governance zu korrigieren sind.</small></div><div class="decision stop"><strong>STOP</strong><small>Stoppen, wenn kein Community-Wert nachgewiesen wird oder Risiken offen bleiben.</small></div></div></div></section>
+
 <section class="sec" id="stressfix"><div class="wrap-wide"><div class="kicker">07/B</div><h2>Das Projekt ist vertretbar, wenn sieben Entscheidungslogiken zum selben Ergebnis führen: <em>klein, messbar, sauber, freiwillig und stoppbar.</em></h2><div class="lens-grid">
 <div class="card"><div class="ct">Transparenzkontrolle</div><div class="cd">Wer erhält Geld, warum, wie lange und mit welcher Kontrolle?</div></div>
 <div class="card"><div class="ct">Autonomiekontrolle</div><div class="cd">Wird daraus zentrale Diaspora-Steuerung?</div></div>
@@ -327,11 +491,16 @@ h3,.ct,.board-title,.pa-title,.lens-q{font-size:var(--dor-display-md)!important;
 <div class="card"><div class="ct">Produkt-/Fintech-Kontrolle</div><div class="cd">Funktioniert es bei Zahlungen und Berechtigungen?</div></div>
 <div class="card"><div class="ct">Reputationskontrolle</div><div class="cd">Könnte es wie ein Einfluss- oder Datensammelsystem wirken?</div></div>
 </div></div></section>
+
 <section class="sec" id="proof"><div class="wrap"><div class="kicker">08</div><h2>Es startet nicht aus der Theorie. <em>Es gibt ein funktionierendes Muster.</em></h2><p class="lead">Die Wiener Erfahrung zeigt, dass ein kleines Team, Community-Vertrauen und digitale Struktur messbares Wachstum, generationenübergreifende Einbindung und medienfähige Ergebnisse erzeugen können.</p></div></section>
+
 <section class="sec" id="appendix"><div class="wrap-wide"><div class="kicker">10</div><h2>Kosten, Personalbedarf und Zeitplan - aufklappbar.</h2><div class="acc"><button aria-expanded="false" class="acc-btn" onclick="toggleAcc(this)"><span>Wix-Grundgebühr und Pilotkostenlogik</span><span class="acc-ico">+</span></button><div class="acc-body"><p>Die Wix-Gebühr ist nur eine technische Grundkostenposition. Aufbau, Schulung, Betrieb, Datenschutzdokumentation, Buchhaltungskontrolle und Support sind gesondert zu planen.</p></div></div></div></section>
+
 <section class="sec s-dark" id="contact"><div class="wrap"><div class="kicker">Kontakt</div><h2>Das Betriebsprinzip kann persönlich demonstriert werden.</h2><p class="lead muted">Die Wiener Erfahrung kann nicht nur als Konzept, sondern als Betriebslogik, Oberfläche und Pilotprozess vorgestellt werden.</p><div class="card" style="background:rgba(255,255,255,.09);border-color:rgba(201,165,90,.24)"><div class="ct" style="color:#fff">Bánhalmi Norbert</div><p style="color:rgba(248,244,237,.86);font-weight:700">Central Association of Hungarian Associations and Organisations in Austria</p><p style="color:#fff;font-size:1.15rem;font-weight:900;letter-spacing:.02em">+43 677 616 55592</p></div></div></section>
+
 <footer><div class="contact-box"><h2>DÖR 2026</h2><p>Diaspora-Ökosystem · entscheidungsvorbereitende Seite ohne Passwort</p></div></footer>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 <script>
 function toggleNav(){var links=document.getElementById('navLinks');var t=document.querySelector('.nav-toggle');if(!links||!t)return;var open=links.classList.toggle('open');t.setAttribute('aria-expanded',open?'true':'false')}
 function closeNav(){var links=document.getElementById('navLinks');var t=document.querySelector('.nav-toggle');if(links)links.classList.remove('open');if(t)t.setAttribute('aria-expanded','false')}
