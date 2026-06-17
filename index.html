@@ -2517,6 +2517,163 @@ html.pdf-export details{
   }
 }
 
+
+/* ===== v50 · ASZTALI NÉZET: TAGSZERVEZETI ÉS KAPCSOLATI NEVEK 50% BETŰMÉRET ===== */
+/* Csak desktopon: a tagszervezetek nevei, valamint a Kapcsolat blokkban a szervezetnév és az „Ügyek szerint” cím feleakkora. */
+@media(min-width:901px){
+  /* Tagszervezeti térkép régiókártyákban szereplő szervezetnevek */
+  .region-panel li{
+    font-size:6.5px!important;
+    line-height:1.34!important;
+    letter-spacing:-.004em!important;
+    padding-left:22px!important;
+  }
+  .region-panel li::before{
+    font-size:7px!important;
+  }
+  .region-panel small{
+    font-size:5.75px!important;
+    line-height:1.3!important;
+    margin-top:2px!important;
+  }
+
+  /* Tagszervezeti katalógus / kártyalista szervezetnevei */
+  .member h3,
+  .member .member-title,
+  .member-card h3,
+  .member-card .member-title{
+    font-size:11px!important;
+    line-height:1.22!important;
+    letter-spacing:-.012em!important;
+  }
+  .member p,
+  .member .desc,
+  .member-card p,
+  .member-card .desc{
+    font-size:7.25px!important;
+    line-height:1.42!important;
+  }
+
+  /* Kapcsolat blokk: szervezet neve + Ügyek szerint */
+  .contact-section .contact-card h3{
+    font-size:12.5px!important;
+    line-height:1.2!important;
+    letter-spacing:-.018em!important;
+  }
+  .contact-section .contact-card:first-child h3,
+  .contact-section .contact-card:nth-child(2) h3{
+    font-size:12.5px!important;
+  }
+  .contact-section .contact-card dl,
+  .contact-section .contact-card p,
+  .contact-section .contact-card dd,
+  .contact-section .contact-card dt,
+  .contact-section .contact-list b,
+  .contact-section .contact-list a{
+    font-size:7.5px!important;
+    line-height:1.38!important;
+  }
+}
+
+
+/* ===== v51 · HAMBURGER MENÜ: FÜGGŐLEGES LENYÍLÁS MINDEN NÉZETBEN ===== */
+/* A hamburger menü desktopon, tableten és mobilon is ugyanúgy, függőleges listaként nyílik le. */
+.nav-burger{
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  width:36px!important;
+  height:36px!important;
+  border:0!important;
+  border-radius:999px!important;
+  background:transparent!important;
+  color:#1d1d1f!important;
+  cursor:pointer!important;
+}
+.mobile-menu{
+  position:fixed!important;
+  top:56px!important;
+  left:50%!important;
+  right:auto!important;
+  transform:translateX(-50%) translateY(-8px)!important;
+  width:min(520px,calc(100vw - 32px))!important;
+  max-height:calc(100vh - 76px)!important;
+  overflow:auto!important;
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:stretch!important;
+  gap:6px!important;
+  padding:12px!important;
+  border-radius:24px!important;
+  background:rgba(255,255,255,.94)!important;
+  border:1px solid rgba(0,0,0,.08)!important;
+  box-shadow:0 22px 70px rgba(0,0,0,.18)!important;
+  backdrop-filter:saturate(180%) blur(24px)!important;
+  -webkit-backdrop-filter:saturate(180%) blur(24px)!important;
+  opacity:0!important;
+  visibility:hidden!important;
+  pointer-events:none!important;
+  z-index:1999!important;
+  transition:opacity .22s ease, transform .22s ease, visibility .22s ease!important;
+}
+.mobile-menu.open,
+.mobile-menu.is-open,
+.mobile-menu[aria-hidden="false"]{
+  opacity:1!important;
+  visibility:visible!important;
+  pointer-events:auto!important;
+  transform:translateX(-50%) translateY(0)!important;
+}
+.mobile-menu a,
+.mobile-menu button,
+.mobile-menu .mobile-link{
+  display:flex!important;
+  align-items:center!important;
+  justify-content:space-between!important;
+  width:100%!important;
+  min-height:46px!important;
+  padding:12px 16px!important;
+  border-radius:16px!important;
+  background:transparent!important;
+  color:#1d1d1f!important;
+  text-align:left!important;
+  font-size:15px!important;
+  line-height:1.2!important;
+  font-weight:600!important;
+  letter-spacing:-.018em!important;
+  text-decoration:none!important;
+}
+.mobile-menu a:hover,
+.mobile-menu button:hover,
+.mobile-menu .mobile-link:hover{
+  background:#f5f5f7!important;
+  text-decoration:none!important;
+}
+.mobile-menu a + a,
+.mobile-menu .mobile-link + .mobile-link{
+  margin-top:2px!important;
+}
+
+/* A desktop nav-linkek maradhatnak, de a hamburger mindig ugyanazt a függőleges lenyílót használja. */
+@media(min-width:901px){
+  .mobile-menu{
+    top:56px!important;
+  }
+}
+@media(max-width:900px){
+  .mobile-menu{
+    top:52px!important;
+    width:calc(100vw - 24px)!important;
+    border-radius:22px!important;
+  }
+  .mobile-menu a,
+  .mobile-menu button,
+  .mobile-menu .mobile-link{
+    min-height:48px!important;
+    font-size:16px!important;
+  }
+}
+
 </style>
 <meta content="#ffffff" name="theme-color"/><meta content="website" property="og:type"/><meta content="Központi Szövetség · Döntéshozói áttekintés · Online ökoszisztéma · DÖR 2026" property="og:title"/><meta content="Döntéshozói áttekintés az Ausztriai Magyar Egyesületek és Szervezetek Központi Szövetségéről, online ökoszisztémájáról, tagszervezeti hálózatáról és a DÖR 2026 pilotról." property="og:description"/><meta content="hu_HU" property="og:locale"/><meta content="summary_large_image" name="twitter:card"/><link href="?lang=hu" hreflang="hu" rel="alternate"/><link href="?lang=en" hreflang="en" rel="alternate"/><link href="?lang=de" hreflang="de" rel="alternate"/><link href="?lang=hu" hreflang="x-default" rel="alternate"/><script type="application/ld+json">{
   "@context": "https://schema.org",
@@ -3253,6 +3410,53 @@ document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('DOMContentLoaded', initHeroLinkToggles);
   } else {
     initHeroLinkToggles();
+  }
+})();
+</script>
+
+<script>
+(function(){
+  function initVerticalHamburgerMenu(){
+    var burger = document.querySelector('.nav-burger,[data-menu-toggle],.hamburger');
+    var menu = document.querySelector('.mobile-menu,#mobileMenu,[data-mobile-menu]');
+    if(!burger || !menu || burger.dataset.verticalReady === '1') return;
+
+    burger.dataset.verticalReady = '1';
+    if(!menu.id) menu.id = 'verticalMobileMenu';
+    burger.setAttribute('aria-controls', menu.id);
+    burger.setAttribute('aria-expanded', menu.classList.contains('open') ? 'true' : 'false');
+    menu.setAttribute('aria-hidden', menu.classList.contains('open') ? 'false' : 'true');
+
+    function setOpen(open){
+      menu.classList.toggle('open', open);
+      menu.classList.toggle('is-open', open);
+      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+      menu.setAttribute('aria-hidden', open ? 'false' : 'true');
+    }
+
+    burger.addEventListener('click', function(ev){
+      ev.preventDefault();
+      ev.stopPropagation();
+      setOpen(!(menu.classList.contains('open') || menu.classList.contains('is-open') || menu.getAttribute('aria-hidden') === 'false'));
+    });
+
+    menu.querySelectorAll('a').forEach(function(link){
+      link.addEventListener('click', function(){ setOpen(false); });
+    });
+
+    document.addEventListener('click', function(ev){
+      if(!menu.contains(ev.target) && !burger.contains(ev.target)) setOpen(false);
+    });
+
+    document.addEventListener('keydown', function(ev){
+      if(ev.key === 'Escape') setOpen(false);
+    });
+  }
+
+  if(document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', initVerticalHamburgerMenu);
+  } else {
+    initVerticalHamburgerMenu();
   }
 })();
 </script>
