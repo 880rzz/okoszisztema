@@ -3030,10 +3030,8 @@ dt{
 </a>
 </div>
 </div>
-
 </div>
 </div></nav>
-
 <header class="hero hierarchy-hero" id="hierarchia">
 <div class="hero-inner hierarchy-inner">
 <div class="eyebrow" data-i18n="hero.eyebrow">Online hierarchia · belső digitális rendszer</div>
@@ -3687,7 +3685,6 @@ AUDIT v51:
 - Hero direct UL lists are collapsed by default through .hierarchy-grid .h-node > ul max-height:0/opacity:0/visibility:hidden.
 - Rainbow animation is defined outside viewport-specific media rules and applies on mobile and desktop; reduced-motion users get static gradient.
 -->
-
 <!--
 AUDIT v54:
 - Mobile horizontal overflow hardened globally.
@@ -3695,7 +3692,6 @@ AUDIT v54:
 - Long URLs and labels now wrap instead of widening the page.
 - Desktop layout rules remain unchanged outside max-width:900px.
 -->
-
 <!--
 AUDIT v55:
 - Hamburger button and mobile menu markup removed.
@@ -3703,8 +3699,6 @@ AUDIT v55:
 - Final CSS safety rule hides any residual hamburger/menu selectors.
 - Header keeps brand + language selector; no hamburger menu remains.
 -->
-
-
 <!--
 FINAL AUDIT:
 - Hamburger menu DOM elements: 0 / expected 0.
@@ -3714,6 +3708,48 @@ FINAL AUDIT:
 - Rainbow animation keyframes and animation declarations remain in the CSS.
 - Mobile width hardening v54 remains active.
 - Language buttons: 3; desktop nav links: 6.
+-->
+<script>
+(function(){
+  function initHeroAccordionLinks(){
+    document.querySelectorAll('.hierarchy-grid article.h-node').forEach(function(card, index){
+      var button = card.querySelector(':scope > button.links-toggle');
+      var list = card.querySelector(':scope > ul');
+      if(!button || !list || button.dataset.heroAccordionReady === '1') return;
+
+      var listId = list.id || ('hero-accordion-links-' + index);
+      list.id = listId;
+      button.setAttribute('aria-controls', listId);
+      button.setAttribute('aria-expanded', 'false');
+      card.classList.remove('links-open');
+
+      button.dataset.heroAccordionReady = '1';
+
+      button.addEventListener('click', function(event){
+        event.preventDefault();
+        event.stopPropagation();
+        var isOpen = card.classList.toggle('links-open');
+        button.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      });
+    });
+  }
+
+  if(document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', initHeroAccordionLinks);
+  } else {
+    initHeroAccordionLinks();
+  }
+})();
+</script>
+
+
+<!--
+AUDIT v56:
+- Hero boxes: 5.
+- Added missing link-toggle buttons: 0.
+- Removed old/broken link accordion scripts: 0.
+- Active handler: initHeroAccordionLinks.
+- Buttons now toggle .links-open on their own parent card.
 -->
 
 </body>
