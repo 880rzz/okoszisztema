@@ -2987,15 +2987,16 @@ dt{
 
 
 /* ===== v61 · DESKTOP LENYÍLÓ LINKPANEL MÉRETUGRÁS NÉLKÜL ===== */
-/* Csak asztali nézetben: a hero boxok linklistája lebegő panelként nyílik, nem növeli a grid-sort, ezért a többi box mérete nem változik. Mobilon a korábbi, jó működés érintetlen marad. */
+/* Csak asztali nézetben: a hero boxok linklistája lebegő panelként a GOMB ALÁ nyílik, abszolút pozícióval kilóghat a boxból, így nem növeli a grid-sort és a többi box mérete sem változik. Mobilon a korábbi, jó működés érintetlen marad. */
 @media(min-width:901px){
   .hierarchy-board,
   .hierarchy-grid{
     overflow:visible!important;
   }
+  /* A boxok engedik kilógni a panelt (nincs overflow:hidden), így a panel a box alá ér. */
   .hierarchy-grid > .h-node{
     position:relative!important;
-    overflow:hidden!important;
+    overflow:visible!important;
     isolation:isolate!important;
   }
   .hierarchy-grid > .h-node.links-open{
@@ -3005,12 +3006,13 @@ dt{
     position:relative!important;
     z-index:6!important;
   }
+  /* A panel abszolút, a box bal alsó sarkához igazítva, a gomb VONALÁTÓL lefelé nyílik. */
   .hierarchy-grid .h-node > ul{
     position:absolute!important;
     left:42px!important;
     right:42px!important;
-    top:auto!important;
-    bottom:104px!important;
+    bottom:auto!important;
+    top:calc(100% + 12px)!important;
     z-index:5!important;
     max-height:0!important;
     opacity:0!important;
@@ -3025,12 +3027,12 @@ dt{
     box-shadow:0 22px 60px rgba(0,0,0,.16)!important;
     backdrop-filter:saturate(180%) blur(18px)!important;
     -webkit-backdrop-filter:saturate(180%) blur(18px)!important;
-    transform:translateY(12px) scale(.985)!important;
-    transform-origin:bottom center!important;
+    transform:translateY(-8px) scale(.985)!important;
+    transform-origin:top center!important;
     transition:max-height .32s ease,opacity .22s ease,visibility .22s ease,transform .22s ease,padding .22s ease!important;
   }
   .hierarchy-grid .h-node.links-open > ul{
-    max-height:calc(100% - 150px)!important;
+    max-height:70vh!important;
     opacity:1!important;
     visibility:visible!important;
     overflow:auto!important;
