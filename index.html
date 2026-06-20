@@ -3042,6 +3042,91 @@ dt{
   }
 }
 
+
+/* ============================================================
+   DESKTOP = MOBIL ELRENDEZÉS a hierarchia-blokkoknál
+   Az 5 h-node kártya desktopon is EGY oszlopban, középre zárva,
+   kényelmes olvasási szélességgel — ugyanaz a tiszta megjelenés,
+   mint mobilon. Megszünteti a 2-oszlopos "5. kártya egyedül lóg"
+   problémát és a kártyákon belüli erőltetett üres helyet.
+   ============================================================ */
+@media(min-width:901px){
+  .hierarchy-grid{
+    display:grid!important;
+    grid-template-columns:1fr!important;
+    grid-auto-rows:auto!important;
+    gap:28px!important;
+    max-width:720px!important;
+    margin:0 auto!important;
+    align-items:stretch!important;
+  }
+  .hierarchy-grid > .h-node,
+  .hierarchy-grid > .h-node:nth-child(1),
+  .hierarchy-grid > .h-node:nth-child(2),
+  .hierarchy-grid > .h-node:nth-child(3),
+  .hierarchy-grid > .h-node:nth-child(4),
+  .hierarchy-grid > .h-node:nth-child(5){
+    grid-column:1 / -1!important;
+    grid-row:auto!important;
+    order:0!important;
+    width:100%!important;
+    height:auto!important;
+    min-height:0!important;
+    display:flex!important;
+    flex-direction:column!important;
+    align-self:stretch!important;
+    padding:40px 36px!important;
+  }
+  /* a sorrend maradjon a HTML szerinti természetes sorrend */
+  .hierarchy-grid > .h-node:nth-child(1){order:1!important}
+  .hierarchy-grid > .h-node:nth-child(2){order:2!important}
+  .hierarchy-grid > .h-node:nth-child(3){order:3!important}
+  .hierarchy-grid > .h-node:nth-child(4){order:4!important}
+  .hierarchy-grid > .h-node:nth-child(5){order:5!important}
+  .hierarchy-grid > .h-node > .links-toggle{
+    margin-top:20px!important;
+    align-self:flex-start!important;
+  }
+  .core-social{
+    grid-column:1 / -1!important;
+  }
+}
+
+
+/* ============================================================
+   FINOM MOZGÁSRÉTEG (a meglévő vipach-link-reveal stílusban)
+   - JS nélkül minden látható (no-JS fallback).
+   - A .js-reveal osztály a <html>-en aktiválja a kiindulást.
+   - prefers-reduced-motion: teljes kikapcsolás.
+   ============================================================ */
+html.js-reveal .reveal-up{
+  opacity:0;
+  transform:translateY(10px);
+  transition:opacity .7s cubic-bezier(.22,.61,.36,1),
+             transform .7s cubic-bezier(.22,.61,.36,1);
+  will-change:opacity,transform;
+}
+html.js-reveal .reveal-up.is-in{
+  opacity:1;
+  transform:none;
+}
+
+/* Finom hover-mélység az eddig kimaradt kártyákon (ops-card, dor-card).
+   A h-node/member/help-card/region-panel már kap hovert — azokhoz nem nyúlunk. */
+.ops-card,.dor-card{
+  transition:transform .26s cubic-bezier(.22,.61,.36,1),
+             box-shadow .26s cubic-bezier(.22,.61,.36,1);
+}
+.ops-card:hover,.dor-card:hover{
+  transform:translateY(-2px);
+  box-shadow:0 22px 56px rgba(0,0,0,.09);
+}
+
+@media(prefers-reduced-motion:reduce){
+  html.js-reveal .reveal-up{opacity:1!important;transform:none!important;transition:none!important}
+  .ops-card:hover,.dor-card:hover{transform:none}
+}
+
 </style>
 <meta content="#ffffff" name="theme-color"/><meta content="website" property="og:type"/><meta content="Központi Szövetség · Döntéshozói áttekintés · Online ökoszisztéma · DÖR 2026" property="og:title"/><meta content="Döntéshozói áttekintés az Ausztriai Magyar Egyesületek és Szervezetek Központi Szövetségéről, online ökoszisztémájáról, tagszervezeti hálózatáról és a DÖR 2026 pilotról." property="og:description"/><meta content="hu_HU" property="og:locale"/><meta content="summary_large_image" name="twitter:card"/><link href="?lang=hu" hreflang="hu" rel="alternate"/><link href="?lang=en" hreflang="en" rel="alternate"/><link href="?lang=de" hreflang="de" rel="alternate"/><link href="?lang=hu" hreflang="x-default" rel="alternate"/><script type="application/ld+json">{
   "@context": "https://schema.org",
@@ -3835,5 +3920,77 @@ AUDIT v61:
 - Accordion JS sibling-close patch applied: True.
 - Opening a desktop panel no longer changes grid row height or the size of the other cards.
 -->
+<script>
+/* Finom scroll-reveal — progresszív ráépülés. JS nélkül minden látható. */
+(function(){
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduce) return;
+  var root = document.documentElement;
+  root.classList.add('js-reveal');
+
+  var sels = ['.shead','.ops-card','.dor-card','.help-card','.h-node',
+              '.region-panel','.wixops-hero','.dor-hero','.contact-card'];
+  var nodes = [];
+  sels.forEach(function(s){
+    document.querySelectorAll(s).forEach(function(el){
+      if (el.closest('.hero, .hierarchy-hero')) return; // a hero kimarad
+      // szűrhető/lenyitható tartalom kimarad (member-lista, details): ott a
+      // szűrő vagy a megnyitás maga az átmenet, külön reveal beragadhatna
+      if (el.closest('.member-grid, details, [hidden]')) return;
+      el.classList.add('reveal-up');
+      nodes.push(el);
+    });
+  });
+
+  // lépcsőzött késleltetés a közös szülőn belül
+  var groups = {};
+  nodes.forEach(function(el){
+    var key = el.parentElement ? el.parentElement.className : 'x';
+    (groups[key] = groups[key] || []).push(el);
+  });
+  Object.keys(groups).forEach(function(k){
+    groups[k].forEach(function(el,i){ el.style.transitionDelay = Math.min(i*60,240)+'ms'; });
+  });
+
+  if (!('IntersectionObserver' in window)){
+    nodes.forEach(function(el){ el.classList.add('is-in'); });
+    return;
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if (e.isIntersecting){ e.target.classList.add('is-in'); io.unobserve(e.target); }
+    });
+  }, { threshold:0.12, rootMargin:'0px 0px -8% 0px' });
+  nodes.forEach(function(el){ io.observe(el); });
+
+  // Biztonsági háló: bármilyen görgetéskor (és induláskor) ami a nézetbe ért,
+  // azonnal megjelenik — így egyetlen elem sem ragadhat rejtve.
+  function sweep(){
+    var vh = window.innerHeight;
+    for (var i=nodes.length-1; i>=0; i--){
+      var el = nodes[i];
+      var top = el.getBoundingClientRect().top;
+      if (top < vh*0.92){
+        el.classList.add('is-in');
+        nodes.splice(i,1);
+      }
+    }
+  }
+  var ticking=false;
+  window.addEventListener('scroll', function(){
+    if (!ticking){ ticking=true; requestAnimationFrame(function(){ sweep(); ticking=false; }); }
+  }, {passive:true});
+  window.addEventListener('resize', sweep, {passive:true});
+  requestAnimationFrame(sweep);
+
+  // Végső biztonsági háló: 3 mp után bármi, ami még rejtve van, megjelenik.
+  // (pl. ha az IntersectionObserver valamiért nem tüzelt)
+  setTimeout(function(){
+    document.querySelectorAll('.reveal-up:not(.is-in)').forEach(function(el){
+      el.classList.add('is-in');
+    });
+  }, 3000);
+})();
+</script>
 </body>
 </html>
