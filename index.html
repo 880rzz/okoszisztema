@@ -3127,6 +3127,54 @@ html.js-reveal .reveal-up.is-in{
   .ops-card:hover,.dor-card:hover{transform:none}
 }
 
+
+/* ============================================================
+   DESKTOP LENYITÁS = MOBIL LOGIKA
+   A "Kapcsolódó linkek" lista desktopon NE lebegő abszolút panel
+   legyen (ami kilógott és feltekeredést okozott), hanem a boxon
+   BELÜL, a normál tartalomfolyamban nyíljon le — pontosan úgy,
+   mint mobilon. Így nem kell feltekerni.
+   ============================================================ */
+@media(min-width:901px){
+  .hierarchy-grid > .h-node{
+    overflow:hidden!important;        /* a panel a boxon belül marad */
+  }
+  .hierarchy-grid .h-node > ul{
+    position:static!important;        /* vissza a normál folyamba */
+    left:auto!important; right:auto!important; top:auto!important; bottom:auto!important;
+    z-index:auto!important;
+    max-height:0!important;
+    opacity:0!important;
+    visibility:hidden!important;
+    overflow:hidden!important;
+    pointer-events:none!important;
+    margin:0!important;
+    padding:0!important;
+    /* a lebegő panel díszítését elhagyjuk: nincs külön háttér/árnyék/blur */
+    background:transparent!important;
+    border:0!important;
+    box-shadow:none!important;
+    border-radius:0!important;
+    backdrop-filter:none!important;
+    -webkit-backdrop-filter:none!important;
+    transform:translateY(-6px)!important;
+    transform-origin:top center!important;
+    transition:max-height .38s ease,opacity .25s ease,visibility .25s ease,
+               transform .25s ease,margin-top .25s ease,padding .25s ease!important;
+  }
+  .hierarchy-grid .h-node.links-open > ul{
+    position:static!important;
+    max-height:1400px!important;      /* a tartalmat lefelé tolja a boxon belül */
+    opacity:1!important;
+    visibility:visible!important;
+    overflow:visible!important;
+    pointer-events:auto!important;
+    margin-top:24px!important;
+    padding:0!important;
+    transform:translateY(0)!important;
+  }
+}
+
 </style>
 <meta content="#ffffff" name="theme-color"/><meta content="website" property="og:type"/><meta content="Központi Szövetség · Döntéshozói áttekintés · Online ökoszisztéma · DÖR 2026" property="og:title"/><meta content="Döntéshozói áttekintés az Ausztriai Magyar Egyesületek és Szervezetek Központi Szövetségéről, online ökoszisztémájáról, tagszervezeti hálózatáról és a DÖR 2026 pilotról." property="og:description"/><meta content="hu_HU" property="og:locale"/><meta content="summary_large_image" name="twitter:card"/><link href="?lang=hu" hreflang="hu" rel="alternate"/><link href="?lang=en" hreflang="en" rel="alternate"/><link href="?lang=de" hreflang="de" rel="alternate"/><link href="?lang=hu" hreflang="x-default" rel="alternate"/><script type="application/ld+json">{
   "@context": "https://schema.org",
