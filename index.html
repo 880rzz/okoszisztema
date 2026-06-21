@@ -3179,7 +3179,10 @@ html.js-reveal .reveal-up.is-in{
 /* ============================================================
    INTERAKTÍV AUSZTRIA TÉRKÉP a tagszervezetekhez
    ============================================================ */
-.geo-austria{grid-column:1/-1!important;width:100%;margin:0 0 26px;display:grid;grid-template-columns:2.8fr .7fr;gap:16px;align-items:start}
+.geo-austria{grid-column:1/-1!important;width:100%;margin:0 0 26px;display:grid;grid-template-columns:1fr;gap:18px;align-items:stretch}
+/* A szervezet-panel a térkép ALATT, a szervezetek reszponzív rácsban */
+.geo-austria .geo-side{min-height:0}
+.geo-austria .geo-orgs{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}
 .geo-svg-box{position:relative;background:#fff;border-radius:26px;padding:20px;box-shadow:0 10px 30px rgba(0,0,0,.05);border:1px solid var(--apple-line)}
 .geo-svg{width:100%;height:auto;display:block}
 .geo-region{cursor:pointer;fill:#e9eef5;stroke:#fff;stroke-width:2.5;transition:fill .25s ease,opacity .25s ease}
