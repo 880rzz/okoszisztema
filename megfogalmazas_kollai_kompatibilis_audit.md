@@ -10,7 +10,7 @@ A főoldali döntéshozói szöveg finomítása úgy, hogy a rendszer ne közpon
 - „online hierarchia” → „online ökoszisztéma” / „közösségi online infrastruktúra”
 - „digitális gyökérpont” → „közös digitális infrastruktúra” / „közös digitális kapcsolódási pont”
 - „betagozódik” → „saját, autonóm online jelenléti pontot kap”
-- „minden projektcsoporthoz hozzáfér” → „szerepköralapú, átlátható hozzáféréskezelés”
+- „minden projektcsoporthoz hozzáfér” → „szerepköralapú, átlátható koordináció és feladatkezelés”
 
 ## Miért fontos?
 A módosítások csökkentik a központi kontroll, hierarchia és felügyeleti rendszer érzetét. A fő üzenet így: a Központi Szövetség nem ráépül a közösségekre, hanem láthatóvá, kapcsolhatóvá és értelmezhetővé teszi a már létező közösségi munkát.
