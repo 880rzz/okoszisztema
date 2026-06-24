@@ -194,6 +194,37 @@ footer strong{color:#fff}
 .lang-mini a{display:inline-flex;align-items:center;justify-content:center;height:30px;min-width:34px;padding:0 9px;border-radius:999px;border:1px solid rgba(201,165,90,.24);background:rgba(255,255,255,.06);color:rgba(248,244,237,.86);font-size:12px;font-weight:800;letter-spacing:.04em}
 .lang-mini a.active{background:var(--gold2);color:#14251b;border-color:var(--gold2)}
 @media(max-width:900px){.lang-mini{display:none}}
+
+/* PDF/readability fix for dark sections */
+.s-dark .guard-list li{color:rgba(248,244,237,.84)!important}
+.s-dark .guard-list li::before{background:rgba(15,110,86,.28)!important;color:#12b88d!important}
+@media print{.s-dark .guard-list li{color:rgba(248,244,237,.88)!important}#governance,#garanciak,#stressfix,#questions{break-before:page;page-break-before:always}}
+
+@media print{
+#dontohozoi-garanciak .grid2,#decision-guarantees .grid2,#entscheidungs-garantien .grid2{grid-template-columns:repeat(3,1fr)!important;gap:10px!important}
+#dontohozoi-garanciak .card,#decision-guarantees .card,#entscheidungs-garantien .card{padding:12px!important;border-radius:16px!important}
+#dontohozoi-garanciak .ct,#decision-guarantees .ct,#entscheidungs-garantien .ct{font-size:1.02rem!important;line-height:1.18!important}
+#dontohozoi-garanciak .cd,#decision-guarantees .cd,#entscheidungs-garantien .cd{font-size:12px!important;line-height:1.42!important}
+#dontohozoi-garanciak .lead,#decision-guarantees .lead,#entscheidungs-garantien .lead{font-size:1rem!important;line-height:1.35!important;margin-bottom:14px!important}
+#dontohozoi-garanciak h2,#decision-guarantees h2,#entscheidungs-garantien h2{font-size:2rem!important;margin-bottom:12px!important}
+}
+
+@media print{
+#governance{font-size:12px!important}
+#governance h2{font-size:1.65rem!important;margin-bottom:8px!important}
+#governance .lead{font-size:.95rem!important;line-height:1.32!important;margin-bottom:10px!important}
+#governance .board-grid{gap:10px!important;margin:10px 0!important}
+#governance .board-card{padding:12px!important;border-radius:16px!important}
+#governance .board-title{font-size:1.05rem!important;line-height:1.18!important}
+#governance .board-sub{font-size:12px!important;line-height:1.38!important}
+#governance .guard-list{gap:4px!important;margin-top:8px!important}
+#governance .guard-list li{font-size:11.5px!important;line-height:1.25!important;padding-left:22px!important}
+#governance h3{font-size:1.1rem!important;margin:10px 0 6px!important}
+#governance .roundtable{gap:8px!important;margin-top:6px!important}
+#governance .seat{padding:9px!important;border-radius:12px!important}
+#governance .seat b{font-size:10px!important;line-height:1.15!important;margin-bottom:3px!important}
+#governance .seat span{font-size:11px!important;line-height:1.25!important}
+}
 </style>
 </head>
 <body>
@@ -204,7 +235,7 @@ footer strong{color:#fff}
     <a class="back-link" href="index_with_dor_page.html">Back to Central page</a>
     <div class="lang-mini"><a href="dor-2026.html">HU</a><a href="dor-2026-en.html" class="active">EN</a><a href="dor-2026-de.html" class="">DE</a></div>
     <button class="nav-toggle" aria-expanded="false" aria-label="Menu" onclick="toggleNav()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16"></path><path d="M4 12h16"></path><path d="M4 17h16"></path></svg></button>
-    <div class="nav-links" id="navLinks"><button onclick="go('hero',this)">Pitch</button><button onclick="go('vezetoi-garancia',this)">Principle</button><button onclick="go('autonomia-zaro-garancia',this)">Autonomy</button><button onclick="go('kulkapcsolati-haszon',this)">Foreign relations</button><button onclick="go('problem',this)">Pain points</button><button onclick="go('pilot',this)">Pilot</button><button onclick="go('wixpilot',this)">Wix pilot</button><button onclick="go('success',this)">Metrics</button><button onclick="go('journeys',this)">User journey</button><button onclick="go('vision',this)">Strategic fit</button><button onclick="go('governance',this)">Governance</button><button onclick="go('garanciak',this)">Firewalls</button><button onclick="go('stressfix',this)">Stress test</button><button onclick="go('proof',this)">Proof</button><button onclick="go('appendix',this)">Appendices</button><button onclick="go('contact',this)">Contact</button></div>
+    <div class="nav-links" id="navLinks"><button onclick="go('hero',this)">Pitch</button><button onclick="go('vezetoi-garancia',this)">Principle</button><button onclick="go('autonomia-zaro-garancia',this)">Autonomy</button><button onclick="go('kulkapcsolati-haszon',this)">Foreign relations</button><button onclick="go('problem',this)">Pain points</button><button onclick="go('pilot',this)">Pilot</button><button onclick="go('wixpilot',this)">Wix pilot</button><button onclick="go('success',this)">Metrics</button><button onclick="go('journeys',this)">User journey</button><button onclick="go('vision',this)">Strategic fit</button><button onclick="go('decision-guarantees',this)">Guarantee questions</button><button onclick="go('governance',this)">Governance</button><button onclick="go('garanciak',this)">Firewalls</button><button onclick="go('stressfix',this)">Stress test</button><button onclick="go('proof',this)">Proof</button><button onclick="go('appendix',this)">Appendices</button><button onclick="go('contact',this)">Contact</button></div>
   </div>
 </nav>
 
@@ -298,7 +329,32 @@ footer strong{color:#fff}
 <div class="card"><div class="ct">Government defensibility</div><div class="cd">Transparent, measurable, but not controlling.</div></div>
 </div></div></section>
 
-<section class="sec s-dark" id="governance"><div class="wrap-wide"><div class="kicker">06</div><h2>Not a new foundation. <em>A ministry-supervised pilot programme.</em></h2><p class="lead muted">The most defensible model is a time-limited, auditable pilot programme structure: policy supervision, a programme office, steering board and diaspora roundtable.</p><div class="board-grid"><div class="board-card strong"><div class="board-title">Recommended form: DÖR Pilot Programme Office + Steering Board</div><p class="board-sub">Daily execution is coordinated by a small office and supervised by a multi-stakeholder board.</p></div><div class="board-card"><div class="board-title">Supervision logic</div><p class="board-sub">The mandate is not operational interference, but a guarantee: responsible owner, budget line, data protection frame, decision gate and stop right.</p></div></div></div></section>
+
+<section class="sec s-warm" id="decision-guarantees"><div class="wrap-wide">
+<div class="kicker">05/B · Expected professional questions</div>
+<h2>The difficult questions are answered through <em>built-in decision guarantees</em>.</h2>
+<p class="lead">DÖR 2026 does not create a new institution beside the existing ones. It adds a voluntary connection layer to already existing Hungarian community work, with data-protection and autonomy safeguards.</p>
+<div class="grid2">
+<div class="card"><div class="ct">Fit with existing institutions</div><div class="cd">DÖR is not a parallel institution, but a visibility and connection layer. It does not take over the role of Hungarian institutes, organisations or government programmes; it makes existing work more searchable and easier to connect.</div></div>
+<div class="card"><div class="ct">Aggregated feedback, not ranking</div><div class="cd">Operating feedback is not a funding ranking, not an evaluation system and not a political database. Only aggregated, purpose-bound feedback interpreting community operations may be used.</div></div>
+<div class="card"><div class="ct">Wix as pilot environment</div><div class="cd">The Wix-based setup is not a final technological commitment, but a fast, low-risk demonstration environment. The 90-120 day test validates the operating model; after a successful pilot, the technology can be handed over, replaced or integrated into a more robust infrastructure.</div></div>
+<div class="card"><div class="ct">Role of the ministry</div><div class="cd">The ministry’s role is not an operational intervention layer, but professional observation, strategic evaluation and decision preparation. Local community autonomy and operational freedom remain intact.</div></div>
+<div class="card"><div class="ct">Country-by-country legal adaptation</div><div class="cd">The Austrian pilot is not an automatic template. In other countries, the model may only be transferred after separate legal, data-protection, association-law and community adaptation.</div></div>
+<div class="card emph"><div class="ct">Executive summary</div><div class="cd">DÖR is not a central intervention system, not a funding pre-filter and not a legitimacy decision point. It is a voluntary community visibility and collaboration model from which professional leadership can make a fact-based decision after 90-120 days.</div></div>
+</div>
+</div></section>
+
+<section class="sec s-dark" id="governance"><div class="wrap-wide">
+<div class="kicker">06 · Programme frame and public-finance protection</div>
+<h2>Not a new foundation. <em>A time-limited pilot programme accompanied by professional evaluation.</em></h2>
+<p class="lead muted">The most defensible model is not an operational ministry intervention layer, but a time-limited, auditable pilot-programme structure: programme office, programme evaluation board, diaspora roundtable, data-protection frame and a 90-120 day decision gate.</p>
+<div class="board-grid">
+<div class="board-card strong"><div class="board-title">Recommended form: DÖR Pilot Programme Office + Programme Evaluation Board</div><p class="board-sub">Day-to-day implementation is coordinated by a small programme office, while a multi-stakeholder board evaluates the lessons and safeguards. The board includes professional, financial, strategic, technological and diaspora-delegate roles.</p><ul class="guard-list"><li>It does not create a new asset-holding structure.</li><li>It does not grant automatic exclusivity.</li><li>It does not bypass public-finance control.</li><li>Go / Modify / Stop decision after 90-120 days.</li></ul></div>
+<div class="board-card"><div class="board-title">Professional evaluation logic</div><p class="board-sub">The ministry role is not operational intervention, but a decision-preparation safeguard: responsible owner, budget line, data-protection frame, decision gate and stop right.</p><div class="tag">voluntary</div><div class="tag blue">audit</div><div class="tag gold">stop point</div><div class="tag red">no political data</div></div>
+</div>
+<h3>Composition of the roundtable</h3>
+<div class="roundtable"><div class="seat"><b>Ministerial professional evaluation</b><span>Policy owner, designated responsible role and decision gates.</span></div><div class="seat"><b>Financial control</b><span>Budget frame, itemised accounting and public pilot report.</span></div><div class="seat"><b>Strategic leadership</b><span>Scope, metrics, scaling decision and risk management.</span></div><div class="seat"><b>Professional leadership</b><span>Diaspora methodology and community onboarding.</span></div><div class="seat"><b>Technology team</b><span>Architect, developers and data-security role.</span></div><div class="seat"><b>Diaspora delegates</b><span>Designated representatives of participating organisations.</span></div></div>
+</div></section>
 
 <section class="sec s-warm" id="garanciak"><div class="wrap"><div class="ey">07</div><h2>The pilot can only start if structural safeguards close the attack surfaces.</h2><div class="guard-grid">
 <div class="card"><div class="ct">Public-finance firewall</div><div class="cd">No automatic extension, no automatic roll-out and no supplier privilege.</div></div>

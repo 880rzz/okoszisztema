@@ -194,6 +194,37 @@ footer strong{color:#fff}
 .lang-mini a{display:inline-flex;align-items:center;justify-content:center;height:30px;min-width:34px;padding:0 9px;border-radius:999px;border:1px solid rgba(201,165,90,.24);background:rgba(255,255,255,.06);color:rgba(248,244,237,.86);font-size:12px;font-weight:800;letter-spacing:.04em}
 .lang-mini a.active{background:var(--gold2);color:#14251b;border-color:var(--gold2)}
 @media(max-width:900px){.lang-mini{display:none}}
+
+/* PDF/readability fix for dark sections */
+.s-dark .guard-list li{color:rgba(248,244,237,.84)!important}
+.s-dark .guard-list li::before{background:rgba(15,110,86,.28)!important;color:#12b88d!important}
+@media print{.s-dark .guard-list li{color:rgba(248,244,237,.88)!important}#governance,#garanciak,#stressfix,#questions{break-before:page;page-break-before:always}}
+
+@media print{
+#dontohozoi-garanciak .grid2,#decision-guarantees .grid2,#entscheidungs-garantien .grid2{grid-template-columns:repeat(3,1fr)!important;gap:10px!important}
+#dontohozoi-garanciak .card,#decision-guarantees .card,#entscheidungs-garantien .card{padding:12px!important;border-radius:16px!important}
+#dontohozoi-garanciak .ct,#decision-guarantees .ct,#entscheidungs-garantien .ct{font-size:1.02rem!important;line-height:1.18!important}
+#dontohozoi-garanciak .cd,#decision-guarantees .cd,#entscheidungs-garantien .cd{font-size:12px!important;line-height:1.42!important}
+#dontohozoi-garanciak .lead,#decision-guarantees .lead,#entscheidungs-garantien .lead{font-size:1rem!important;line-height:1.35!important;margin-bottom:14px!important}
+#dontohozoi-garanciak h2,#decision-guarantees h2,#entscheidungs-garantien h2{font-size:2rem!important;margin-bottom:12px!important}
+}
+
+@media print{
+#governance{font-size:12px!important}
+#governance h2{font-size:1.65rem!important;margin-bottom:8px!important}
+#governance .lead{font-size:.95rem!important;line-height:1.32!important;margin-bottom:10px!important}
+#governance .board-grid{gap:10px!important;margin:10px 0!important}
+#governance .board-card{padding:12px!important;border-radius:16px!important}
+#governance .board-title{font-size:1.05rem!important;line-height:1.18!important}
+#governance .board-sub{font-size:12px!important;line-height:1.38!important}
+#governance .guard-list{gap:4px!important;margin-top:8px!important}
+#governance .guard-list li{font-size:11.5px!important;line-height:1.25!important;padding-left:22px!important}
+#governance h3{font-size:1.1rem!important;margin:10px 0 6px!important}
+#governance .roundtable{gap:8px!important;margin-top:6px!important}
+#governance .seat{padding:9px!important;border-radius:12px!important}
+#governance .seat b{font-size:10px!important;line-height:1.15!important;margin-bottom:3px!important}
+#governance .seat span{font-size:11px!important;line-height:1.25!important}
+}
 </style>
 </head>
 <body>
@@ -204,7 +235,7 @@ footer strong{color:#fff}
     <a class="back-link" href="index_with_dor_page.html">Zurück zur Zentralverbandsseite</a>
     <div class="lang-mini"><a href="dor-2026.html">HU</a><a href="dor-2026-en.html" class="">EN</a><a href="dor-2026-de.html" class="active">DE</a></div>
     <button class="nav-toggle" aria-expanded="false" aria-label="Menu" onclick="toggleNav()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16"></path><path d="M4 12h16"></path><path d="M4 17h16"></path></svg></button>
-    <div class="nav-links" id="navLinks"><button onclick="go('hero',this)">Pitch</button><button onclick="go('vezetoi-garancia',this)">Prinzip</button><button onclick="go('autonomia-zaro-garancia',this)">Autonomie</button><button onclick="go('kulkapcsolati-haszon',this)">Außenbezug</button><button onclick="go('problem',this)">Schmerzpunkte</button><button onclick="go('pilot',this)">Pilot</button><button onclick="go('wixpilot',this)">Wix-Pilot</button><button onclick="go('success',this)">Metriken</button><button onclick="go('journeys',this)">User Journey</button><button onclick="go('vision',this)">Einordnung</button><button onclick="go('governance',this)">Governance</button><button onclick="go('garanciak',this)">Firewalls</button><button onclick="go('stressfix',this)">Stresstest</button><button onclick="go('proof',this)">Nachweis</button><button onclick="go('appendix',this)">Anhänge</button><button onclick="go('contact',this)">Kontakt</button></div>
+    <div class="nav-links" id="navLinks"><button onclick="go('hero',this)">Pitch</button><button onclick="go('vezetoi-garancia',this)">Prinzip</button><button onclick="go('autonomia-zaro-garancia',this)">Autonomie</button><button onclick="go('kulkapcsolati-haszon',this)">Außenbezug</button><button onclick="go('problem',this)">Schmerzpunkte</button><button onclick="go('pilot',this)">Pilot</button><button onclick="go('wixpilot',this)">Wix-Pilot</button><button onclick="go('success',this)">Metriken</button><button onclick="go('journeys',this)">User Journey</button><button onclick="go('vision',this)">Einordnung</button><button onclick="go('entscheidungs-garantien',this)">Garantienfragen</button><button onclick="go('governance',this)">Governance</button><button onclick="go('garanciak',this)">Firewalls</button><button onclick="go('stressfix',this)">Stresstest</button><button onclick="go('proof',this)">Nachweis</button><button onclick="go('appendix',this)">Anhänge</button><button onclick="go('contact',this)">Kontakt</button></div>
   </div>
 </nav>
 
@@ -250,7 +281,7 @@ footer strong{color:#fff}
 <section class="sec" id="problem"><div class="wrap-wide">
 <div class="kicker">01</div><h2>Das Problem der Diaspora ist nicht technologisch. <em>Es ist ein Sichtbarkeits-, Nachwuchs- und Betriebsproblem.</em></h2>
 <p class="lead">Das Projekt ist nur dann verständlich, wenn auf jeder Ebene klar ist: wem etwas fehlt, warum es fehlt und was DÖR konkret löst.</p>
-<div class="pain-answer"><div class="pain-box"><div class="pa-label">Schmerz 1 · Community-Autonomie</div><div class="pa-title">Organisationen wollen keine von oben festgelegte Steuerung.</div><div class="pa-text">Viele Diaspora-Gemeinschaften reagieren sensibel auf Systeme, die von oben festlegen, wer wen vertritt.</div></div><div class="answer-box"><div class="pa-label">DÖR</div><div class="pa-title">Freiwillige Infrastruktur, keine von oben festgelegte Steuerung.</div><div class="pa-text">Die Organisation entscheidet selbst über Beitritt, Profil, Delegierte, Ausstieg und Kommunikation.</div></div></div>
+<div class="pain-answer"><div class="pain-box"><div class="pa-label">Schmerz 1 · Community-Autonomie</div><div class="pa-title">Organisationen wollen keine von oben festgelegte Vorgabe.</div><div class="pa-text">Viele Diaspora-Gemeinschaften reagieren sensibel auf Systeme, die von oben festlegen, wer wen vertritt.</div></div><div class="answer-box"><div class="pa-label">DÖR</div><div class="pa-title">Freiwillige Infrastruktur, keine von oben festgelegte Vorgabe.</div><div class="pa-text">Die Organisation entscheidet selbst über Beitritt, Profil, Delegierte, Ausstieg und Kommunikation.</div></div></div>
 <div class="pain-answer"><div class="pain-box"><div class="pa-label">Schmerz 2 · lebendige Verbindung</div><div class="pa-title">Diaspora-Arbeit bleibt oft unsichtbar.</div><div class="pa-text">Veranstaltungen, Geschichten und ehrenamtliche Arbeit bleiben oft in lokalen Kanälen.</div></div><div class="answer-box"><div class="pa-label">DÖR</div><div class="pa-title">Ein gemeinsamer digitaler Raum mit lokaler Autonomie.</div><div class="pa-text">Der Pilot bietet Profile, Veranstaltungskalender und Community-News, ohne bestehende Kanäle zu ersetzen.</div></div></div>
 </div></section>
 
@@ -298,7 +329,32 @@ footer strong{color:#fff}
 <div class="card"><div class="ct">Staatliche Vertretbarkeit</div><div class="cd">Transparent, messbar, aber nicht kontrollierend.</div></div>
 </div></div></section>
 
-<section class="sec s-dark" id="governance"><div class="wrap-wide"><div class="kicker">06</div><h2>Keine neue Stiftung. <em>Ein ministeriell beaufsichtigtes Pilotprogramm.</em></h2><p class="lead muted">Das vertretbarste Modell ist eine zeitlich begrenzte, auditierbare Pilotprogramm-Struktur: fachpolitische Aufsicht, Programmbüro, Steuerungsgremium und Diaspora-Rundtisch.</p><div class="board-grid"><div class="board-card strong"><div class="board-title">Empfohlene Form: DÖR-Pilot-Programmbüro + Steuerungsgremium</div><p class="board-sub">Die tägliche Umsetzung koordiniert ein kleines Büro, beaufsichtigt durch ein mehrseitiges Gremium.</p></div><div class="board-card"><div class="board-title">Aufsichtslogik</div><p class="board-sub">Das Mandat ist kein operativer Eingriff, sondern Garantie: Verantwortlicher, Kostenzeile, Datenschutzrahmen, Entscheidungstor und Stopprecht.</p></div></div></div></section>
+
+<section class="sec s-warm" id="entscheidungs-garantien"><div class="wrap-wide">
+<div class="kicker">05/B · Erwartbare Fachfragen</div>
+<h2>Die schwierigen Fragen werden durch <em>eingebaute Entscheidungsgarantien</em> beantwortet.</h2>
+<p class="lead">DÖR 2026 schafft keine neue Institution neben den bestehenden Strukturen. Es ergänzt die bereits vorhandene ungarische Gemeinschaftsarbeit um eine freiwillige Verbindungsschicht mit Datenschutz- und Autonomiegarantien.</p>
+<div class="grid2">
+<div class="card"><div class="ct">Einbindung in bestehende Institutionen</div><div class="cd">DÖR ist keine Parallelstruktur, sondern eine Sichtbarkeits- und Verbindungsschicht. Es übernimmt keine Aufgaben ungarischer Institute, Organisationen oder Regierungsprogramme, sondern macht bestehende Arbeit besser auffindbar und kooperationsfähiger.</div></div>
+<div class="card"><div class="ct">Aggregierte Rückmeldung, kein Ranking</div><div class="cd">Betriebsfeedback ist kein Förder-Ranking, kein Bewertungssystem und keine politische Datenbank. Verwendbar sind ausschließlich aggregierte, zweckgebundene Rückmeldungen zur Interpretation gemeinschaftlicher Arbeit.</div></div>
+<div class="card"><div class="ct">Wix als Pilotumgebung</div><div class="cd">Die Wix-basierte Umgebung ist keine endgültige technologische Festlegung, sondern eine schnelle, risikoarme Demonstrationsumgebung. Der 90- bis 120-Tage-Test validiert das Betriebsmodell; nach einem erfolgreichen Pilot kann die Technologie übergeben, abgelöst oder in eine robustere Infrastruktur integriert werden.</div></div>
+<div class="card"><div class="ct">Rolle des Ministeriums</div><div class="cd">Die Rolle des Ministeriums ist keine operative Eingriffsebene, sondern fachliche Beobachtung, strategische Bewertung und Entscheidungsvorbereitung. Die Autonomie und operative Freiheit der lokalen Gemeinschaften bleiben erhalten.</div></div>
+<div class="card"><div class="ct">Länderspezifische rechtliche Adaptation</div><div class="cd">Der österreichische Pilot ist keine automatisch übertragbare Vorlage. In anderen Ländern ist eine Übertragung nur nach gesonderter rechtlicher, datenschutzrechtlicher, vereinsrechtlicher und gemeinschaftlicher Anpassung sinnvoll.</div></div>
+<div class="card emph"><div class="ct">Zusammenfassung für Entscheider</div><div class="cd">DÖR ist keine zentrale Eingriffsstruktur, kein Förder-Vorfilter und keine Legitimationsentscheidung. Es ist ein freiwilliges Modell für Sichtbarkeit und Zusammenarbeit, aus dem die fachliche Leitung nach 90 bis 120 Tagen faktenbasiert entscheiden kann.</div></div>
+</div>
+</div></section>
+
+<section class="sec s-dark" id="governance"><div class="wrap-wide">
+<div class="kicker">06 · Programmrahmen und Schutz öffentlicher Mittel</div>
+<h2>Keine neue Stiftung. <em>Ein zeitlich begrenztes Pilotprogramm mit fachlicher Bewertung.</em></h2>
+<p class="lead muted">Das vertretbarste Modell ist keine operative Eingriffsebene des Ministeriums, sondern eine zeitlich begrenzte, auditierbare Pilotprogramm-Struktur: Programmbüro, Programmbewertungsgremium, Diaspora-Rundtisch, Datenschutzrahmen und 90- bis 120-Tage-Entscheidungstor.</p>
+<div class="board-grid">
+<div class="board-card strong"><div class="board-title">Empfohlene Form: DÖR-Pilotprogrammbüro + Programmbewertungsgremium</div><p class="board-sub">Die tägliche Umsetzung wird von einem kleinen Programmbüro koordiniert; ein Mehrakteursgremium bewertet Erkenntnisse und Garantien. Im Gremium sitzen fachliche, finanzielle, strategische, technologische und Diaspora-delegierte Rollen.</p><ul class="guard-list"><li>Es entsteht keine neue vermögensverwaltende Struktur.</li><li>Es entsteht keine automatische Exklusivität.</li><li>Die Kontrolle öffentlicher Mittel bleibt erhalten.</li><li>Go / Modify / Stop-Entscheidung nach 90 bis 120 Tagen.</li></ul></div>
+<div class="board-card"><div class="board-title">Fachliche Bewertungslogik</div><p class="board-sub">Die ministerielle Rolle ist kein operativer Eingriff, sondern eine Garantie für Entscheidungsvorbereitung: verantwortliche Stelle, Kostenlinie, Datenschutzrahmen, Entscheidungstor und Stopprecht.</p><div class="tag">Freiwilligkeit</div><div class="tag blue">Audit</div><div class="tag gold">Stop-Punkt</div><div class="tag red">keine politischen Daten</div></div>
+</div>
+<h3>Zusammensetzung des Rundtisches</h3>
+<div class="roundtable"><div class="seat"><b>Ministerielle fachliche Bewertung</b><span>Fachpolitischer Träger, definierte Verantwortung und Entscheidungstore.</span></div><div class="seat"><b>Finanzkontrolle</b><span>Kostenrahmen, Einzelabrechnung und öffentlicher Pilotbericht.</span></div><div class="seat"><b>Strategische Leitung</b><span>Scope, Metriken, Skalierungsentscheidung und Risikomanagement.</span></div><div class="seat"><b>Fachliche Leitung</b><span>Diaspora-Methodik und Community-Onboarding.</span></div><div class="seat"><b>Technologieteam</b><span>Architektur, Entwicklung und Datensicherheit.</span></div><div class="seat"><b>Diaspora-Delegierte</b><span>Benannte Vertreterinnen und Vertreter der teilnehmenden Organisationen.</span></div></div>
+</div></section>
 
 <section class="sec s-warm" id="garanciak"><div class="wrap"><div class="ey">07</div><h2>Der Pilot darf nur starten, wenn strukturelle Garantien die Angriffsflächen schließen.</h2><div class="guard-grid">
 <div class="card"><div class="ct">Közpénzügyi / Haushalts-Firewall</div><div class="cd">Keine automatische Verlängerung, kein automatischer Roll-out und kein Lieferantenvorrecht.</div></div>
