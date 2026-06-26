@@ -50,8 +50,24 @@ a{color:inherit;text-decoration:none} img{max-width:100%}
 .shead p{color:var(--muted);font-size:19px;max-width:700px;margin:14px auto 0}
 .portfolio{padding:40px 28px 22px;background:#fff} .pf-grid{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:20px}
 @media(max-width:860px){.pf-grid{grid-template-columns:1fr}}
-.entity,.member,.dor-card,.help-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:32px 30px;transition:box-shadow .25s ease,transform .25s ease}
-.entity:hover,.member:hover,.help-card:hover{box-shadow:0 18px 48px rgba(0,0,0,.10);transform:translateY(-2px)}
+.h-node{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:32px 30px;transition:box-shadow .25s ease,transform .25s ease}
+.h-node:hover{box-shadow:0 18px 48px rgba(0,0,0,.10);transform:translateY(-2px)}
+.h-node-collapsible .subnodes-container{max-height:1000px;opacity:1;overflow:hidden;transition:max-height .3s ease,opacity .3s ease;margin-top:32px}
+.h-node-collapsible.closed .subnodes-container{max-height:0;opacity:0;margin-top:0}
+.h-node-collapsible .node-toggle{background:none;border:none;cursor:pointer;font-size:16px;padding:4px 8px;color:var(--blue);transition:transform .2s ease;margin-left:auto}
+.h-node-collapsible.closed .node-toggle{transform:rotate(-90deg)}
+.h-node .node-head{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.subnodes-container .subnode{background:var(--bg2);border:1px solid var(--line);border-radius:var(--radiussm);padding:22px 24px;margin-bottom:18px}
+.subnodes-container .subnode:last-child{margin-bottom:0}
+.subnodes-container .subnode .node-head{margin-bottom:10px;display:flex;align-items:center;gap:8px}
+.subnodes-container .subnode .node-link{font-size:20px;font-weight:740;margin-top:8px}
+.subnodes-container .subnode .node-explain{font-size:15px;margin-top:12px}
+.subnode-collapsible .links-container{max-height:500px;opacity:1;overflow:hidden;transition:max-height .3s ease,opacity .3s ease;margin-top:16px}
+.subnode-collapsible .links-container.collapsed{max-height:0;opacity:0;margin-top:0}
+.links-toggle .toggle-arrow{display:inline-block;transition:transform .2s ease;margin-right:4px}
+.subnode-collapsible .links-container.collapsed .toggle-arrow{transform:rotate(-90deg)}
+.subnode-collapsible .subnode-toggle{background:none;border:none;cursor:pointer;font-size:14px;padding:2px 6px;color:var(--blue);transition:transform .2s ease;margin-left:auto;flex-shrink:0}
+.subnode-collapsible .subnode-toggle.rotated{transform:rotate(-90deg)}
 .role{font-size:12px;font-weight:750;letter-spacing:.055em;text-transform:uppercase;color:var(--blue)} .entity h3,.member h3{font-size:26px;font-weight:740;letter-spacing:-.025em;margin-top:10px;line-height:1.14}
 .domain,.place{font-size:14px;color:var(--muted);margin-top:0} .desc,.entity p,.member p{font-size:16px;color:#424245;margin-top:14px;line-height:1.55}
 .primary,.textlink{display:flex;align-items:center;justify-content:center;gap:5px;color:var(--blue2);font-size:15px;font-weight:580;margin-top:18px} .primary:hover,.textlink:hover{text-decoration:underline}
@@ -66,7 +82,7 @@ a{color:inherit;text-decoration:none} img{max-width:100%}
 .dor-hero p{color:#d9e3ee;font-size:18px;margin-top:32px;max-width:610px}
 .dor-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px} @media(max-width:600px){.dor-grid{grid-template-columns:1fr}}
 .dor-card h3{font-size:21px;font-weight:700;letter-spacing:-.035em;line-height:1.12;margin-bottom:8px}.dor-card p{font-size:15px;line-height:1.45;color:#6e6e73}
-.mapsec{padding:54px 28px;background:#f5f5f7} .map-wrap{max-width:var(--max);margin:0 auto}
+.mapsec{padding:54px 28px;background:#f5f5f7} .map-wrap{max-width:var(--max);margin:0 auto}.regions-grid-section{max-width:var(--max);margin:32px auto 0;padding:48px 32px;border-radius:28px;background:var(--bg2);border:1px solid var(--line)}.regions-grid-head h2{font-size:46px;font-weight:700;letter-spacing:-.04em;margin:0 0 12px;color:#1d1d1f}.regions-subtitle{font-size:16px;color:var(--muted);margin:0;line-height:1.5}.regions-blocks{display:grid;grid-template-columns:1fr;gap:24px;margin-top:32px}.region-block{background:#fff;border:1px solid var(--line);border-radius:20px;padding:28px;overflow:hidden}.region-block-header{display:flex;align-items:center;justify-content:space-between;gap:16px;border-bottom:1px solid var(--line);padding-bottom:18px;margin-bottom:24px}.region-block-header h3{font-size:24px;font-weight:700;letter-spacing:-.03em;margin:0;color:#1d1d1f;flex:1}.region-count{font-size:15px;color:var(--muted);white-space:nowrap}.region-block-list{display:grid;gap:16px}.region-item{display:flex;gap:20px;align-items:flex-start}.region-num{display:flex;align-items:center;justify-content:center;min-width:32px;height:32px;background:var(--bg2);border-radius:8px;font-size:12px;font-weight:700;color:var(--muted);letter-spacing:.05em}.region-item-content{flex:1}.region-item-content strong{display:block;font-size:15px;font-weight:700;letter-spacing:-.02em;color:#1d1d1f;margin-bottom:4px}.region-item-content p{font-size:13px;color:var(--muted);margin:0;line-height:1.4}@media(max-width:900px){.regions-grid-section{padding:28px 20px;border-radius:22px}.regions-grid-head h2{font-size:38px}.region-block{padding:24px}.region-block-header h3{font-size:20px}.region-block-list{gap:14px}.region-item{gap:16px}.region-item-content strong{font-size:14px}}
 .map-panel{display:grid;grid-template-columns:1.2fr .8fr;gap:20px;align-items:stretch;margin-top:34px}
 @media(max-width:980px){.map-panel{grid-template-columns:1fr}}
 .static-map{min-height:760px;border-radius:28px;border:1px solid var(--line);overflow:hidden;background:radial-gradient(circle at 30% 8%,#fff 0,#f7fbff 28%,#eef3f8 100%);box-shadow:0 16px 50px rgba(0,0,0,.08);position:relative;padding:28px}
@@ -3309,6 +3325,43 @@ a:focus-visible,button:focus-visible,
   box-shadow:var(--shadow-apple-dark) !important;
 }
 
+
+
+/* ===== v63 · Elon Musk audit · 28 kártya megtartva, ismétlés kivéve ===== */
+.lean-tagszervezetek{background:#fff!important;padding-top:88px!important;padding-bottom:88px!important;}
+.lean-tagszervezetek .shead h2{max-width:860px!important;}
+.lean-tagszervezetek .shead p{max-width:780px!important;}
+.lean-tagszervezetek .exec-strip{margin-top:30px!important;}
+.lean-tagszervezetek .exec-metric{background:#f5f5f7!important;border-radius:24px!important;padding:22px!important;box-shadow:none!important;}
+.lean-map-panel{grid-template-columns:minmax(0,1.25fr) minmax(300px,.75fr)!important;align-items:start!important;margin-top:34px!important;}
+.lean-filter-panel{position:sticky!important;top:68px!important;background:#f5f5f7!important;border:0!important;border-radius:30px!important;box-shadow:none!important;padding:24px!important;}
+.lean-filter-panel h3{font-size:24px!important;line-height:1.1!important;letter-spacing:-.04em!important;margin:0 0 8px!important;}
+.lean-filter-panel p{font-size:14px!important;line-height:1.42!important;margin:0 0 16px!important;color:#6e6e73!important;}
+.lean-tagszervezetek .stats{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important;margin-bottom:12px!important;}
+.lean-tagszervezetek .stat{background:#fff!important;border-radius:18px!important;min-height:74px!important;aspect-ratio:auto!important;padding:14px!important;}
+.lean-tagszervezetek .stat b{font-size:27px!important;}.lean-tagszervezetek .stat span{font-size:11.5px!important;}
+.lean-tagszervezetek .topic-grid{gap:7px!important;}
+.lean-tagszervezetek .topic-toggle,.lean-tagszervezetek .topic-clear,.lean-tagszervezetek .control{min-height:38px!important;border-radius:13px!important;font-size:12px!important;line-height:1.15!important;}
+.lean-tagszervezetek .controls{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:7px!important;}
+.lean-tagszervezetek .filter-result{background:#fff!important;text-align:center!important;border-radius:16px!important;}
+.lean-directory{margin-top:30px!important;padding:30px!important;border:0!important;border-radius:30px!important;background:#f5f5f7!important;box-shadow:none!important;}
+.lean-directory .directory-head{max-width:800px!important;margin:0 auto 24px!important;text-align:center!important;}
+.lean-directory .directory-head h3{font-size:clamp(28px,3.2vw,42px)!important;line-height:1.05!important;letter-spacing:-.052em!important;margin:8px 0 0!important;}
+.lean-directory .directory-head p{font-size:16px!important;line-height:1.42!important;margin:12px auto 0!important;color:#6e6e73!important;}
+.lean-directory .member-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:14px!important;margin-top:20px!important;}
+.lean-member{background:#fff!important;border-radius:22px!important;padding:22px!important;box-shadow:none!important;border:0!important;display:flex!important;flex-direction:column!important;align-items:stretch!important;text-align:left!important;}
+.lean-member .member-top{gap:6px!important;margin-bottom:12px!important;justify-content:flex-start!important;text-align:left!important;}
+.lean-member .num{font-size:11px!important;color:#86868b!important;}.lean-member .tag{font-size:11px!important;padding:4px 8px!important;background:#f5f5f7!important;color:#6e6e73!important;white-space:normal!important;}
+.lean-member h3,.lean-directory .member-grid .member h3{font-size:20px!important;line-height:1.12!important;letter-spacing:-.035em!important;margin:0 0 8px!important;color:#1d1d1f!important;}
+.lean-member .place{font-size:12px!important;line-height:1.3!important;color:#86868b!important;margin:0 0 12px!important;}
+.lean-member p:not(.place){font-size:14px!important;line-height:1.42!important;color:#6e6e73!important;margin:0 0 16px!important;}
+.lean-member p strong{color:#1d1d1f!important;font-weight:650!important;}
+.lean-member .activity-categories{margin:auto 0 12px!important;padding-top:12px!important;border-top:1px solid rgba(0,0,0,.06)!important;}
+.lean-member .activity-categories>b{font-size:11px!important;line-height:1.15!important;letter-spacing:-.01em!important;margin-bottom:8px!important;color:#86868b!important;}
+.lean-member .category-pills{gap:6px!important;justify-content:flex-start!important;text-align:left!important;}.lean-member .category-pill{font-size:11px!important;line-height:1.1!important;padding:5px 8px!important;background:#f5f5f7!important;color:#6e6e73!important;}
+.lean-member .textlink{justify-content:flex-start!important;align-self:flex-start!important;margin-top:0!important;font-size:13px!important;text-align:left!important;}
+@media(max-width:1100px){.lean-map-panel{grid-template-columns:1fr!important;}.lean-filter-panel{position:relative!important;top:auto!important;}}
+@media(max-width:900px){.lean-tagszervezetek{padding:48px 18px!important;}.lean-directory .member-grid{grid-template-columns:1fr!important;}.lean-directory{padding:18px!important;border-radius:24px!important;}.lean-tagszervezetek .controls{grid-template-columns:1fr!important;}.lean-member{padding:18px!important;border-radius:20px!important;}}
 </style>
 <meta content="#ffffff" name="theme-color"/><meta content="website" property="og:type"/><meta content="Központi Szövetség · Döntéshozói áttekintés · Online ökoszisztéma · DÖR 2026" property="og:title"/><meta content="Döntéshozói áttekintés az Ausztriai Magyar Egyesületek és Szervezetek Központi Szövetségéről, online ökoszisztémájáról, tagszervezeti hálózatáról és a DÖR 2026 pilotról." property="og:description"/><meta content="hu_HU" property="og:locale"/><meta content="summary_large_image" name="twitter:card"/><link href="?lang=hu" hreflang="hu" rel="alternate"/><link href="?lang=en" hreflang="en" rel="alternate"/><link href="?lang=de" hreflang="de" rel="alternate"/><link href="?lang=hu" hreflang="x-default" rel="alternate"/><script type="application/ld+json">{
   "@context": "https://schema.org",
@@ -3361,7 +3414,7 @@ a:focus-visible,button:focus-visible,
 <div class="eyebrow" data-i18n="hero.eyebrow">Közösségi online infrastruktúra · önkéntes kapcsolódási rendszer</div>
 <h1 data-i18n="hero.h1">A Központi Szövetség közös online kapcsolódási infrastruktúrája.</h1>
 <p class="sub" data-i18n="hero.sub">Egy <strong>közös digitális kapcsolódási infrastruktúra</strong>, amely összekapcsolja az <strong data-i18n="term.oktatás.124">oktatást</strong>, a <strong>médiát</strong>, a <strong>kreatív közösséget</strong>, a <strong>színházat</strong> és a <strong>sajtómegjelenéseket</strong> — miközben <strong>minden tagszervezet</strong> számára saját, autonóm online jelenléti pontot ad egy átlátható közösségi térben.</p>
-        <p class="hero-intro" data-i18n="hero.intro">1980 óta az ausztriai magyar közösség <strong>országos csúcsszervezete</strong>: a Bécs és környékén élő magyarság <strong>népcsoportkénti elismerésének</strong> kivívója, a <strong>Bécsi Napló</strong> — Nyugat-Európa egyetlen magyar nyelvű lapjának — kiadója, valamint a <strong>Bécsi Magyar Iskola</strong> és a tagszervezetek hálózatának összefogója. Küldetésünk változatlan: a magyar nyelv, kultúra és identitás <strong>élő, átörökíthető</strong> erőforrássá tétele Ausztriában.</p>
+<p class="hero-intro" data-i18n="hero.intro">1980 óta az ausztriai magyar közösség <strong>országos csúcsszervezete</strong>: a Bécs és környékén élő magyarság <strong>népcsoportkénti elismerésének</strong> kivívója, a <strong>Bécsi Napló</strong> — Nyugat-Európa egyetlen magyar nyelvű lapjának — kiadója, valamint a <strong>Bécsi Magyar Iskola</strong> és a tagszervezetek hálózatának összefogója. Küldetésünk változatlan: a magyar nyelv, kultúra és identitás <strong>élő, átörökíthető</strong> erőforrássá tétele Ausztriában.</p>
 <div aria-label="A Központi Szövetség online ökoszisztémája" class="hierarchy-board" data-i18n-aria-label="aria.hierarchy">
 <div class="hierarchy-root">
 <div class="node-head">
@@ -3394,10 +3447,11 @@ a:focus-visible,button:focus-visible,
 <li><a href="https://www.facebook.com/groups/musicaltarsulat" rel="noopener" target="_blank"><strong data-i18n="linkstrong.26">Musical Társulat Facebook-csoport</strong><span data-i18n="linkspan.27">Próbák, előadások, családi és nézői kapcsolódás.</span></a></li>
 </ul>
 </article>
-<article class="h-node">
+<article class="h-node h-node-collapsible">
 <div class="node-head">
 <span class="node-icon ic-school"><svg fill="none" viewbox="0 0 24 24"><path d="M3 8.5 12 4l9 4.5-9 4.5-9-4.5Z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path><path d="M7 10.5v5c0 1 2.2 2.5 5 2.5s5-1.5 5-2.5v-5M21 8.5V14" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></span>
 <span class="node-label" data-i18n="node.school.label">Oktatási és családi alrendszer</span>
+<button aria-expanded="true" aria-label="Alrendszer nyitva/csukva" class="node-toggle" type="button">▼</button>
 </div>
 <a class="node-link" href="https://www.magyariskola.at" rel="noopener" target="_blank"><span class="node-title" data-i18n="node.school.title">Bécsi Magyar Iskola</span></a>
 <a class="node-url" href="https://www.magyariskola.at" rel="noopener" target="_blank">magyariskola.at</a>
@@ -3411,6 +3465,45 @@ a:focus-visible,button:focus-visible,
 <li><a href="https://www.facebook.com/groups/becsimagyariskola/" rel="noopener" target="_blank"><strong data-i18n="linkstrong.41">Facebook-csoport</strong><span data-i18n="linkspan.42">Napi szülői és közösségi kapcsolódás, programmegosztás és közösségi aktivitás.</span></a></li>
 <li><a href="https://www.facebook.com/groups/becsimagyariskola/" rel="noopener" target="_blank"><strong data-i18n="linkstrong.43">WhatsApp csoportrendszer</strong><span data-i18n="linkspan.44">Gyors, csoportszintű belső kommunikáció; a belépési információk a közösségi felületeken keresztül érhetők el.</span></a></li>
 </ul>
+<!-- VIPACH és Musical Alrendszerek -->
+<div class="subnodes-container">
+<article class="subnode subnode-collapsible">
+<div class="node-head">
+<span class="node-icon ic-creative"><svg fill="none" viewbox="0 0 24 24"><rect height="14" rx="2.5" stroke-width="1.7" width="18" x="3" y="5"></rect><circle cx="9" cy="10" r="1.8" stroke-width="1.7"></circle><path d="m4 17 4.5-4.5a1.5 1.5 0 0 1 2 0L16 18M14 14l1.8-1.8a1.5 1.5 0 0 1 2 0L20 14.5" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></span>
+<span class="node-label" data-i18n="node.vipach.label">Kreatív, vizuális és közösségi ág</span>
+<button aria-expanded="true" aria-label="Linkek nyitva/csukva" class="subnode-toggle" type="button">▼</button>
+</div>
+<a class="node-link" href="https://www.vipach.at" rel="noopener" target="_blank"><span class="node-title" data-i18n="node.vipach.title">VIPACH <span class="node-subtitle">(Vienna Photo Art &amp; Creative Hub)</span></span></a>
+<a class="node-url" href="https://www.vipach.at" rel="noopener" target="_blank">vipach.at</a>
+<p class="node-explain" data-i18n="node.vipach.p1">A <strong>kreatív és vizuális ág</strong>: fotó, alkotóközösség, digitális jelenlét. <strong>Nem külső befektetésből</strong>, hanem <strong>közösségi finanszírozásból</strong> tartja fenn magát, programjait és láthatóságát.</p>
+<div class="links-container collapsed">
+<button aria-expanded="false" class="links-toggle" data-i18n="links.toggle" type="button"><span class="toggle-arrow">▼</span> Kapcsolódó linkek</button><ul>
+<li><a href="https://business.vipach.at" rel="noopener" target="_blank"><strong data-i18n="linkstrong.53">business.vipach.at</strong><span data-i18n="linkspan.54">Stratégiai és szolgáltatási aloldal: megmutatja, hogyan kapcsolódhat a közösségi kreatív tudás professzionális vizuális és digitális feladatokhoz.</span></a></li>
+<li><a href="https://amcham.at/members-list/" rel="noopener" target="_blank"><strong data-i18n="linkstrong.55">AmCham Austria kapcsolódás</strong><span data-i18n="linkspan.56">A VIPACH Bánhalmi Norberten keresztül az AmCham Austria, az Osztrák–Amerikai Kereskedelmi Kamara szakmai közegéhez is kapcsolódik.</span></a></li>
+<li><a href="https://photostudio.vipach.at" rel="noopener" target="_blank"><strong data-i18n="linkstrong.57">photostudio.vipach.at</strong><span data-i18n="linkspan.58">Kreatív / képfeldolgozási alrendszer: digitális eszköz és szolgáltatási kiterjesztés a VIPACH alatt.</span></a></li>
+<li><a href="https://hu.wikipedia.org/wiki/VIPACH" rel="noopener" target="_blank"><strong data-i18n="linkstrong.59">Wikipédia · VIPACH</strong><span data-i18n="linkspan.60">Strukturált entitásréteg: a szervezet nyilvánosan azonosítható, kereshető és hivatkozható.</span></a></li>
+<li><a href="https://www.vipach.at/media-megjelenesek" rel="noopener" target="_blank"><strong data-i18n="linkstrong.61">VIPACH sajtófigyelő</strong><span data-i18n="linkspan.62">A VIPACH saját média- és sajtómegjelenéseinek gyűjtőfelülete: külső láthatóság, cikkek és nyilvános visszaigazolások egy helyen.</span></a></li>
+<li><a href="https://rolunk.at/tag/banhalmi-norbert/" rel="noopener" target="_blank"><strong data-i18n="linkstrong.63">Bánhalmi Norbert sajtófigyelő</strong><span data-i18n="linkspan.64">A VIPACH-hoz kapcsolódó alapítói és kreatív-stratégiai láthatóság Rólunk.at-megjelenéseinek gyűjtőfelülete.</span></a></li>
+<li><a href="https://www.facebook.com/groups/vipach/" rel="noopener" target="_blank"><strong data-i18n="linkstrong.65">VIPACH Facebook-csoport</strong><span data-i18n="linkspan.66">Alkotói közösség, programkommunikáció, tagsági aktivitás és közösségi láthatóság.</span></a></li>
+</ul>
+</div>
+</article>
+<article class="subnode subnode-collapsible">
+<div class="node-head">
+<span class="node-icon ic-stage"><svg fill="none" viewbox="0 0 24 24"><path d="M9 18V6l10-2v12" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path><circle cx="6" cy="18" r="3" stroke-width="1.7"></circle><circle cx="16" cy="16" r="3" stroke-width="1.7"></circle></svg></span>
+<span class="node-label" data-i18n="node.stage.label">Színházi és ifjúsági kulturális ág</span>
+<button aria-expanded="true" aria-label="Linkek nyitva/csukva" class="subnode-toggle" type="button">▼</button>
+</div>
+<a class="node-link" href="https://www.musicaltarsulat.at" rel="noopener" target="_blank"><span class="node-title" data-i18n="node.stage.title">Bécsi Magyar Musical Társulat</span></a>
+<a class="node-url" href="https://www.musicaltarsulat.at" rel="noopener" target="_blank">musicaltarsulat.at</a>
+<p class="node-explain" data-i18n="node.stage.p1"><strong>Magyar nyelvű színpadi, zenei és gyerek-ifjúsági</strong> alkotómunka. Itt a magyar nyelv <strong>nem tananyag, hanem élő kulturális élmény</strong>.</p>
+<div class="links-container collapsed">
+<button aria-expanded="false" class="links-toggle" data-i18n="links.toggle" type="button"><span class="toggle-arrow">▼</span> Kapcsolódó linkek</button><ul>
+<li><a href="https://www.facebook.com/groups/musicaltarsulat" rel="noopener" target="_blank"><strong data-i18n="linkstrong.70">Musical Társulat Facebook-csoport</strong><span data-i18n="linkspan.71">Közösségi szervezés, próbák, előadások, szülői és nézői kapcsolódás.</span></a></li>
+</ul>
+</div>
+</article>
+</div>
 </article>
 <article class="h-node">
 <div class="node-head">
@@ -3422,36 +3515,6 @@ a:focus-visible,button:focus-visible,
 <p class="node-explain" data-i18n="node.news.p1">A közösség <strong>szerkesztett nyilvánossága</strong>: cikkek <strong>dokumentálják</strong> és <strong>visszakereshetővé teszik</strong> az ausztriai magyar élet eseményeit.</p>
 <button aria-expanded="false" class="links-toggle" data-i18n="links.toggle" type="button">Kapcsolódó linkek</button><ul>
 <li><a href="https://www.facebook.com/groups/becsinaplo/" rel="noopener" target="_blank"><strong data-i18n="linkstrong.48">Bécsi Napló Facebook-csoport</strong><span data-i18n="linkspan.49">Közösségi elérés, olvasói kapcsolódás, cikkmegosztás és gyors visszacsatolás.</span></a></li>
-</ul>
-</article>
-<article class="h-node">
-<div class="node-head">
-<span class="node-icon ic-creative"><svg fill="none" viewbox="0 0 24 24"><rect height="14" rx="2.5" stroke-width="1.7" width="18" x="3" y="5"></rect><circle cx="9" cy="10" r="1.8" stroke-width="1.7"></circle><path d="m4 17 4.5-4.5a1.5 1.5 0 0 1 2 0L16 18M14 14l1.8-1.8a1.5 1.5 0 0 1 2 0L20 14.5" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path></svg></span>
-<span class="node-label" data-i18n="node.vipach.label">Kreatív, vizuális és közösségi ág</span>
-</div>
-<a class="node-link" href="https://www.vipach.at" rel="noopener" target="_blank"><span class="node-title" data-i18n="node.vipach.title">VIPACH <span class="node-subtitle">(Vienna Photo Art &amp; Creative Hub)</span></span></a>
-<a class="node-url" href="https://www.vipach.at" rel="noopener" target="_blank">vipach.at</a>
-<p class="node-explain" data-i18n="node.vipach.p1">A <strong>kreatív és vizuális ág</strong>: fotó, alkotóközösség, digitális jelenlét. <strong>Nem külső befektetésből</strong>, hanem <strong>közösségi finanszírozásból</strong> tartja fenn magát, programjait és láthatóságát.</p>
-<button aria-expanded="false" class="links-toggle" data-i18n="links.toggle" type="button">Kapcsolódó linkek</button><ul>
-<li><a href="https://business.vipach.at" rel="noopener" target="_blank"><strong data-i18n="linkstrong.53">business.vipach.at</strong><span data-i18n="linkspan.54">Stratégiai és szolgáltatási aloldal: megmutatja, hogyan kapcsolódhat a közösségi kreatív tudás professzionális vizuális és digitális feladatokhoz.</span></a></li>
-<li><a href="https://amcham.at/members-list/" rel="noopener" target="_blank"><strong data-i18n="linkstrong.55">AmCham Austria kapcsolódás</strong><span data-i18n="linkspan.56">A VIPACH Bánhalmi Norberten keresztül az AmCham Austria, az Osztrák–Amerikai Kereskedelmi Kamara szakmai közegéhez is kapcsolódik.</span></a></li>
-<li><a href="https://photostudio.vipach.at" rel="noopener" target="_blank"><strong data-i18n="linkstrong.57">photostudio.vipach.at</strong><span data-i18n="linkspan.58">Kreatív / képfeldolgozási alrendszer: digitális eszköz és szolgáltatási kiterjesztés a VIPACH alatt.</span></a></li>
-<li><a href="https://hu.wikipedia.org/wiki/VIPACH" rel="noopener" target="_blank"><strong data-i18n="linkstrong.59">Wikipédia · VIPACH</strong><span data-i18n="linkspan.60">Strukturált entitásréteg: a szervezet nyilvánosan azonosítható, kereshető és hivatkozható.</span></a></li>
-<li><a href="https://www.vipach.at/media-megjelenesek" rel="noopener" target="_blank"><strong data-i18n="linkstrong.61">VIPACH sajtófigyelő</strong><span data-i18n="linkspan.62">A VIPACH saját média- és sajtómegjelenéseinek gyűjtőfelülete: külső láthatóság, cikkek és nyilvános visszaigazolások egy helyen.</span></a></li>
-<li><a href="https://rolunk.at/tag/banhalmi-norbert/" rel="noopener" target="_blank"><strong data-i18n="linkstrong.63">Bánhalmi Norbert sajtófigyelő</strong><span data-i18n="linkspan.64">A VIPACH-hoz kapcsolódó alapítói és kreatív-stratégiai láthatóság Rólunk.at-megjelenéseinek gyűjtőfelülete.</span></a></li>
-<li><a href="https://www.facebook.com/groups/vipach/" rel="noopener" target="_blank"><strong data-i18n="linkstrong.65">VIPACH Facebook-csoport</strong><span data-i18n="linkspan.66">Alkotói közösség, programkommunikáció, tagsági aktivitás és közösségi láthatóság.</span></a></li>
-</ul>
-</article>
-<article class="h-node">
-<div class="node-head">
-<span class="node-icon ic-stage"><svg fill="none" viewbox="0 0 24 24"><path d="M9 18V6l10-2v12" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path><circle cx="6" cy="18" r="3" stroke-width="1.7"></circle><circle cx="16" cy="16" r="3" stroke-width="1.7"></circle></svg></span>
-<span class="node-label" data-i18n="node.stage.label">Színházi és ifjúsági kulturális ág</span>
-</div>
-<a class="node-link" href="https://www.musicaltarsulat.at" rel="noopener" target="_blank"><span class="node-title" data-i18n="node.stage.title">Bécsi Magyar Musical Társulat</span></a>
-<a class="node-url" href="https://www.musicaltarsulat.at" rel="noopener" target="_blank">musicaltarsulat.at</a>
-<p class="node-explain" data-i18n="node.stage.p1"><strong>Magyar nyelvű színpadi, zenei és gyerek-ifjúsági</strong> alkotómunka. Itt a magyar nyelv <strong>nem tananyag, hanem élő kulturális élmény</strong>.</p>
-<button aria-expanded="false" class="links-toggle" data-i18n="links.toggle" type="button">Kapcsolódó linkek</button><ul>
-<li><a href="https://www.facebook.com/groups/musicaltarsulat" rel="noopener" target="_blank"><strong data-i18n="linkstrong.70">Musical Társulat Facebook-csoport</strong><span data-i18n="linkspan.71">Közösségi szervezés, próbák, előadások, szülői és nézői kapcsolódás.</span></a></li>
 </ul>
 </article>
 </div>
@@ -3490,38 +3553,37 @@ a:focus-visible,button:focus-visible,
 </div>
 </section>
 <section class="dor" id="dor"><div class="dor-wrap"><div class="dor-hero"><div class="k" data-i18n="dor.k">DÖR 2026 · Diaszpóra Ökoszisztéma Rendszer</div><h2 data-i18n="dor.h2">Önkéntes pilot a diaszpóra láthatóságára, fiatalítására és autonómiájának erősítésére.</h2><p data-i18n="dor.p1"><strong>A DÖR 2026 egy élő diaszpóra-kapcsolati pilot.</strong> Nem a diaszpóráról gyűjt adatot, hanem <strong>a diaszpórával épít élő kapcsolatot</strong>: szervezeti profilokat, eseményeket, közösségi történeteket, fiatal működtetőket és helyi kapcsolódási pontokat tesz láthatóvá.</p><p data-i18n="dor.p2"><strong>A kiindulópont nem elméleti.</strong> A bécsi minta kicsiben már működési tapasztalatot adott; a pilot célja, hogy ezt <strong>90–120 nap alatt</strong> auditálható, önkéntes, kiléphető és skálázható rendszerlogikává tegye.</p><div class="root-actions"><a class="pill gold" data-i18n="dor.pilot" href="https://diaszpora.vipach.at" rel="noopener" target="_blank">DÖR 2026 részletes oldal megnyitása</a><div class="password-note" data-i18n="dor.password">Jelszó: 20260514</div></div></div><div class="dor-grid"><div class="dor-card"><h3 data-i18n="dorcard.h.107">Milyen fájdalmat old?</h3><p data-i18n="dorcard.p.108">A diaszpóra sok helyen <strong>láthatatlanul dolgozik</strong>: események, iskolák, klubok, közösségi történetek és önkéntes teljesítmények gyakran helyi csatornákban maradnak. A DÖR ezekből <strong>élő, kereshető és frissíthető működési képet</strong> épít.</p></div><div class="dor-card"><h3 data-i18n="dorcard.h.109">Mi az első termék?</h3><p data-i18n="dorcard.p.110"><strong>Szervezeti profil, eseménynaptár, Junior Hub-kapcsolódás és alap működési visszajelzés.</strong> Nem teljes globális rendszer, hanem a <strong>legkisebb bizonyítható pilotmag</strong>, amely megmutatja, használják-e a szervezetek és bevonhatók-e fiatal működtetők.</p></div><div class="dor-card"><h3 data-i18n="dorcard.h.111">Mi védi az autonómiát?</h3><p data-i18n="dorcard.p.112"><strong>Önkéntes, kiléphető és nem kontrolláló.</strong> Nem rangsorol, nem oszt támogatást, nem jelöl ki képviselőt, nem dönt legitimációról, és <strong>nem gyűjt politikai vagy világnézeti adatot</strong>.</p></div><div class="dor-card"><h3 data-i18n="dorcard.h.113">Mi a döntési kapu?</h3><p data-i18n="dorcard.p.114"><strong>90–120 nap után Go / Modify / Stop döntés.</strong> Ha működik, skálázható; ha javítani kell, módosítható; ha nem bizonyít közösségi értéket vagy nem zárható a kockázat, <strong>leállítható</strong>.</p></div></div></div></section>
-
 <section class="help decision-guarantees" id="dontohozoi-garanciak"><div class="shead" style="padding-top:0"><div class="k" data-i18n="dq.k">Döntéshozói garanciák</div><h2 data-i18n="dq.h2">A várható szakmai kérdésekre előre válaszol a modell.</h2><p data-i18n="dq.p">A DÖR nem párhuzamos intézmény, hanem önkéntes kapcsolódási és láthatósági réteg: nem vesz át feladatot, nem rangsorol, nem oszt támogatást, és nem hoz legitimációs döntést.</p></div><div class="help-grid"><div class="help-card"><h3 data-i18n="dq.h.1">Illeszkedés meglévő programokhoz</h3><p data-i18n="dq.p.1">A modell a magyar intézetek, szervezetek és kormányzati programok mellé nem új struktúrát állít, hanem a már létező munkát teszi kereshetőbbé, láthatóbbá és együttműködésre alkalmasabbá.</p></div><div class="help-card"><h3 data-i18n="dq.h.2">Aggregált működési visszajelzés</h3><p data-i18n="dq.p.2">A visszajelzés nem támogatási rangsor és nem minősítés. Csak aggregált, célhoz kötött működési kép használható, amely a pilot tanulságait segíti értelmezni.</p></div><div class="help-card"><h3 data-i18n="dq.h.3">Wix mint leváltható pilotkörnyezet</h3><p data-i18n="dq.p.3">A Wix nem végleges állami technológiai választás, hanem gyors demonstrációs környezet. Sikeres pilot után a modell átadható, leváltható vagy robusztusabb infrastruktúrába integrálható.</p></div><div class="help-card"><h3 data-i18n="dq.h.4">Minisztériumi szerep</h3><p data-i18n="dq.p.4">A javasolt szerep szakmai megfigyelés, stratégiai értékelés és döntés-előkészítés, nem operatív beavatkozási szint. A helyi közösségek autonómiája megmarad.</p></div><div class="help-card"><h3 data-i18n="dq.h.5">Országonkénti jogi megfelelés</h3><p data-i18n="dq.p.5">Az osztrák pilot tanulságai nem másolhatók automatikusan. Más országokban külön adatvédelmi, egyesületi jogi és közösségi adaptáció szükséges.</p></div><div class="help-card"><h3 data-i18n="dq.h.6">Védhető összegzés</h3><p data-i18n="dq.p.6">A DÖR közösségi láthatósági és együttműködési modell, nem központi beavatkozási rendszer, nem támogatási előszűrő és nem politikai adatbázis.</p></div></div></section>
-<section class="mapsec" id="terkep"><div class="map-wrap"><div class="shead" style="padding-top:0"><div class="k" data-i18n="map.k">Tagszervezeti térkép</div><h2 data-i18n="map.h2">Ausztriában nem egyetlen pont van. Hálózat van.</h2><p data-i18n="map.p">A Központi Szövetség <strong>nem csak saját projekteket</strong> működtet: <strong>több régiót, több funkciót és több generációt</strong> összefogó tagszervezeti hálózatot. Itt <strong>minden szervezet külön látható</strong>, régió és szerep szerint.</p></div><div class="exec-strip">
+<section class="mapsec lean-tagszervezetek" id="terkep"><div class="map-wrap"><div class="shead" style="padding-top:0"><div class="k" data-i18n="map.k">Tagszervezeti térkép</div><h2 data-i18n="map.h2">28 tagszervezet. 7 régió. Egy áttekinthető hálózat.</h2><p data-i18n="map.p">A blokk célja nem a díszítés, hanem a döntéstámogatás: gyorsan látszik, <strong>hol</strong>, <strong>milyen funkcióval</strong> és <strong>milyen kapcsolódási ponttal</strong> működnek a tagszervezetek.</p></div><div class="exec-strip">
 <div class="exec-metric"><b>28</b><span data-i18n="exec.118">egyenként látható tagszervezet</span></div>
 <div class="exec-metric"><b>7</b><span data-i18n="exec.119">régiós klaszter Ausztriában</span></div>
 <div class="exec-metric"><b>6</b><span data-i18n="exec.120">fő működési típus: oktatás, kultúra, média, egyház, ifjúság, szakmai közeg</span></div>
 <div class="exec-metric"><b>1</b><span data-i18n="exec.121">közös láthatósági és együttműködési infrastruktúra, amelyhez a hálózat kapcsolódik</span></div>
-</div><div class="map-panel">
+</div><div class="map-panel lean-map-panel">
 <div class="geo-austria">
-  <div class="geo-svg-box">
-    <svg class="geo-svg" viewBox="0 0 1080 520" role="group" aria-label="Ausztria interaktív tagszervezeti térkép">
-      <defs><linearGradient id="geoRainbow" x1="0" y1="0" x2="1" y2="1">
-        <stop offset="0%" stop-color="#0a84ff"/><stop offset="55%" stop-color="#5e5ce6"/><stop offset="100%" stop-color="#bf5af2"/>
-      </linearGradient></defs>
-      <g class="geo-node" data-region="Vorarlberg"><path class="geo-region" d="M14,236 L86,108 L156,140 L148,304 L74,330 Z"/><text class="geo-label" x="90" y="214" style="font-size:18px">Vorarlberg</text><text class="geo-count" x="90" y="240" style="font-size:15px">2</text></g>
-      <g class="geo-node" data-region="Tirol"><path class="geo-region" d="M148,304 L156,140 L376,118 L420,224 L322,300 L222,282 Z"/><text class="geo-label" x="262" y="216" style="font-size:18px">Tirol</text><text class="geo-count" x="262" y="242" style="font-size:15px">5</text></g>
-      <g class="geo-node" data-region="Salzburg"><path class="geo-region" d="M376,118 L478,74 L546,182 L516,266 L420,224 Z"/><text class="geo-label" x="466" y="180" style="font-size:17px">Salzburg</text><text class="geo-count" x="466" y="205" style="font-size:15px">1</text></g>
-      <g class="geo-node" data-region="Felső-Ausztria"><path class="geo-region" d="M478,74 L652,42 L712,150 L572,206 L546,182 Z"/><text class="geo-label" x="592" y="124" style="font-size:16px">Felső-Au.</text><text class="geo-count" x="592" y="148" style="font-size:15px">4</text></g>
-      <g class="geo-node" data-region="Alsó-Ausztria" data-inactive="1"><path class="geo-region geo-inactive" d="M652,42 L968,38 L1014,176 L818,250 L712,150 Z"/><text class="geo-label lbl-inactive" x="812" y="140" style="font-size:16px">Alsó-Ausztria</text></g>
-      <g class="geo-node" data-region="Bécs"><circle class="geo-region" cx="916" cy="142" r="46"/><text class="geo-label" x="916" y="138" style="font-size:17px">Bécs</text><text class="geo-count" x="916" y="162" style="font-size:15px">10</text></g>
-      <g class="geo-node" data-region="Stájerország"><path class="geo-region" d="M516,266 L712,150 L818,250 L794,420 L600,426 L536,344 Z"/><text class="geo-label" x="660" y="330" style="font-size:18px">Stájerország</text><text class="geo-count" x="660" y="356" style="font-size:15px">4</text></g>
-      <g class="geo-node" data-region="Burgenland"><path class="geo-region" d="M1014,176 L1056,208 L1030,420 L880,426 L872,300 L968,250 Z"/><text class="geo-label" x="966" y="318" style="font-size:16px">Burgenland</text><text class="geo-count" x="966" y="342" style="font-size:15px">2</text></g>
-      <g class="geo-node" data-region="Kärnten" data-inactive="1"><path class="geo-region geo-inactive" d="M322,300 L536,344 L600,426 L496,474 L308,426 L286,338 Z"/><text class="geo-label lbl-inactive" x="440" y="398" style="font-size:16px">Karintia</text></g>
-    </svg>
-    <p class="geo-hint" id="geoHint">Kattintson egy tartományra a szervezetek megtekintéséhez</p>
-  </div>
-  <div class="geo-side" aria-live="polite">
-    <div class="geo-k">Tagszervezeti térkép</div>
-    <h3 id="geoTitle">Válasszon régiót</h3>
-    <p class="geo-sub" id="geoSub">7 régió · 28 tagszervezet</p>
-    <ul class="geo-orgs" id="geoOrgs"></ul>
-  </div>
+<div class="geo-svg-box">
+<svg aria-label="Ausztria interaktív tagszervezeti térkép" class="geo-svg" role="group" viewbox="0 0 1080 520">
+<defs><lineargradient id="geoRainbow" x1="0" x2="1" y1="0" y2="1">
+<stop offset="0%" stop-color="#0a84ff"></stop><stop offset="55%" stop-color="#5e5ce6"></stop><stop offset="100%" stop-color="#bf5af2"></stop>
+</lineargradient></defs>
+<g class="geo-node" data-region="Vorarlberg"><path class="geo-region" d="M14,236 L86,108 L156,140 L148,304 L74,330 Z"></path><text class="geo-label" style="font-size:18px" x="90" y="214">Vorarlberg</text><text class="geo-count" style="font-size:15px" x="90" y="240">2</text></g>
+<g class="geo-node" data-region="Tirol"><path class="geo-region" d="M148,304 L156,140 L376,118 L420,224 L322,300 L222,282 Z"></path><text class="geo-label" style="font-size:18px" x="262" y="216">Tirol</text><text class="geo-count" style="font-size:15px" x="262" y="242">5</text></g>
+<g class="geo-node" data-region="Salzburg"><path class="geo-region" d="M376,118 L478,74 L546,182 L516,266 L420,224 Z"></path><text class="geo-label" style="font-size:17px" x="466" y="180">Salzburg</text><text class="geo-count" style="font-size:15px" x="466" y="205">1</text></g>
+<g class="geo-node" data-region="Felső-Ausztria"><path class="geo-region" d="M478,74 L652,42 L712,150 L572,206 L546,182 Z"></path><text class="geo-label" style="font-size:16px" x="592" y="124">Felső-Au.</text><text class="geo-count" style="font-size:15px" x="592" y="148">4</text></g>
+<g class="geo-node" data-inactive="1" data-region="Alsó-Ausztria"><path class="geo-region geo-inactive" d="M652,42 L968,38 L1014,176 L818,250 L712,150 Z"></path><text class="geo-label lbl-inactive" style="font-size:16px" x="812" y="140">Alsó-Ausztria</text></g>
+<g class="geo-node" data-region="Bécs"><circle class="geo-region" cx="916" cy="142" r="46"></circle><text class="geo-label" style="font-size:17px" x="916" y="138">Bécs</text><text class="geo-count" style="font-size:15px" x="916" y="162">10</text></g>
+<g class="geo-node" data-region="Stájerország"><path class="geo-region" d="M516,266 L712,150 L818,250 L794,420 L600,426 L536,344 Z"></path><text class="geo-label" style="font-size:18px" x="660" y="330">Stájerország</text><text class="geo-count" style="font-size:15px" x="660" y="356">4</text></g>
+<g class="geo-node" data-region="Burgenland"><path class="geo-region" d="M1014,176 L1056,208 L1030,420 L880,426 L872,300 L968,250 Z"></path><text class="geo-label" style="font-size:16px" x="966" y="318">Burgenland</text><text class="geo-count" style="font-size:15px" x="966" y="342">2</text></g>
+<g class="geo-node" data-inactive="1" data-region="Kärnten"><path class="geo-region geo-inactive" d="M322,300 L536,344 L600,426 L496,474 L308,426 L286,338 Z"></path><text class="geo-label lbl-inactive" style="font-size:16px" x="440" y="398">Karintia</text></g>
+</svg>
+<p class="geo-hint" id="geoHint">Kattintson egy tartományra a szervezetek megtekintéséhez</p>
+</div>
+<div aria-live="polite" class="geo-side">
+<div class="geo-k">Tagszervezeti térkép</div>
+<h3 id="geoTitle">Válasszon régiót</h3>
+<p class="geo-sub" id="geoSub">7 régió · 28 tagszervezet</p>
+<ul class="geo-orgs" id="geoOrgs"></ul>
+</div>
 </div>
 <div aria-label="Tagszervezeti térkép egyenként látható tagszervezetekkel" class="executive-map" data-i18n-aria-label="aria.executiveMap">
 <div class="map-title-row"><b data-i18n="maptitle.b">Tagszervezeti térkép</b><span data-i18n="maptitle.span">Nyugat → Kelet · régiók szerint rendezve · minden szervezet külön sorban</span></div>
@@ -3532,202 +3594,202 @@ a:focus-visible,button:focus-visible,
 <section class="region-panel r-vienna" data-map-region="Bécs"><header><strong data-i18n="region.Bécs.143">Bécs</strong><em data-i18n="term.10 szervezet.144">10 szervezet</em></header><ol><li>Ausztriai Magyar Kutatóintézet <small data-i18n="term.kutatás · tudásközvetítés.145">kutatás · tudásközvetítés</small></li><li>Lean In Femspace <small data-i18n="term.női szakmai hálózat.146">női szakmai hálózat</small></li><li>SVUNG – Bécsi Magyar Színház <small data-i18n="term.színház · kultúra.147">színház · kultúra</small></li><li>72. sz. Széchenyi István cserkészcsapat <small data-i18n="term.cserkészet.148">cserkészet</small></li><li>BIM – Bécsi Irodalmi Műhely <small data-i18n="term.irodalom · műfordítás.149">irodalom · műfordítás</small></li><li>Kaláka Club <small data-i18n="term.gazdasági-kulturális közösség.150">gazdasági-kulturális közösség</small></li><li>Napraforgók <small data-i18n="term.néptánc · népzene.151">néptánc · népzene</small></li><li>Szent István Egylet <small data-i18n="term.jótékonyság · ösztöndíj.152">jótékonyság · ösztöndíj</small></li><li>Bornemisza Péter Társaság <small data-i18n="term.irodalom · közélet.153">irodalom · közélet</small></li><li>Nemzetközi Duna Filharmónia Baráti kör <small data-i18n="term.zene · kulturális platform.154">zene · kulturális platform</small></li></ol></section>
 <section class="region-panel r-burgenland" data-map-region="Burgenland"><header><strong>Burgenland</strong><em data-i18n="term.2 szervezet.155">2 szervezet</em></header><ol><li>Alsóőri Magyar Kultúr- és Táncegyesület <small data-i18n="term.néptánc · hagyományőrzés.156">néptánc · hagyományőrzés</small></li><li>Közép-Burgenlandi Magyar Kultúregyesület <small data-i18n="term.nyelv · folklór · közösség.157">nyelv · folklór · közösség</small></li></ol></section>
 <section class="region-panel r-styria" data-map-region="Stájerország"><header><strong data-i18n="region.Stájerország · Graz.158">Stájerország · Graz</strong><em data-i18n="term.4 szervezet.159">4 szervezet</em></header><ol><li>Grázi Magyar Egyesület <small data-i18n="term.történeti közösségi egyesület.160">történeti közösségi egyesület</small></li><li>Magyar Egyetemisták és Öregdiákok Klubja <small data-i18n="term.egyetemisták · sajtó.161">egyetemisták · sajtó</small></li><li>Gráci Magyar Katolikus Közösség <small data-i18n="term.egyházi közösség.162">egyházi közösség</small></li><li>FemConnect Graz <small data-i18n="term.női · kulturális közösség.163">női · kulturális közösség</small></li></ol></section>
-</div><aside class="map-side"><h3 data-i18n="side.h3">Régiós lefedettség</h3><div class="stats"><div class="stat"><b>10</b><span data-i18n="region.Bécs.164">Bécs</span></div><div class="stat"><b>2</b><span>Burgenland</span></div><div class="stat"><b>4</b><span data-i18n="region.Felső-Ausztria.165">Felső-Ausztria</span></div><div class="stat"><b>1</b><span>Salzburg</span></div><div class="stat"><b>4</b><span data-i18n="region.Stájerország.166">Stájerország</span></div><div class="stat"><b>5</b><span>Tirol</span></div><div class="stat"><b>2</b><span>Vorarlberg</span></div></div><div class="guided-search"><label data-i18n="filter.topiclabel">1. Jelölj ki egy vagy több témát</label><div class="topic-grid" id="topicFilters"><button class="topic-toggle" data-i18n="topic.192" data-topic="oktatás anyanyelv iskola óvoda tanulás hétvégi" type="button">Oktatás / anyanyelv</button><button class="topic-toggle" data-i18n="topic.193" data-topic="kultúra színház musical néptánc népzene zene művészet program hagyomány koncert" type="button">Kultúra / művészet</button><button class="topic-toggle" data-i18n="topic.194" data-topic="cserkészet ifjúság fiatal gyermek tábor" type="button">Cserkészet / ifjúság</button><button class="topic-toggle" data-i18n="topic.195" data-topic="katolikus egyházi liturgia lelki szentmise" type="button">Egyházi közösség</button><button class="topic-toggle" data-i18n="topic.196" data-topic="média irodalom kutatás tudás sajtó újság műfordítás" type="button">Média / irodalom / kutatás</button><button class="topic-toggle" data-i18n="topic.197" data-topic="női szakmai gazdasági mentor egyetemista akadémiai klub" type="button">Szakmai / női / gazdasági háló</button><button class="topic-toggle" data-i18n="topic.198" data-topic="jótékonyság ösztöndíj támogatás szociális adomány" type="button">Jótékonyság / támogatás</button><button class="topic-clear" data-i18n="filter.clear" id="clearTopics" type="button">Témák törlése</button></div><label data-i18n="filter.regionlabel">2. Szűkíts régióra</label><select aria-label="Tagszervezeti régióválasztó" class="search select mobile-region-select" id="regionSelect"><option data-i18n="region.Mind.167" value="all">Mind</option><option data-i18n="region.Bécs.168" value="Bécs">Bécs</option><option value="Burgenland">Burgenland</option><option data-i18n="region.Felső-Ausztria.169" value="Felső-Ausztria">Felső-Ausztria</option><option value="Salzburg">Salzburg</option><option data-i18n="region.Stájerország.170" value="Stájerország">Stájerország</option><option value="Tirol">Tirol</option><option value="Vorarlberg">Vorarlberg</option></select><div class="controls" id="filters"><button class="control active" data-i18n="region.Mind.167" data-region="all" type="button">Mind</button><button class="control" data-i18n="region.Bécs.168" data-region="Bécs" type="button">Bécs</button><button class="control" data-region="Burgenland" type="button">Burgenland</button><button class="control" data-i18n="region.Felső-Ausztria.169" data-region="Felső-Ausztria" type="button">Felső-Ausztria</button><button class="control" data-region="Salzburg" type="button">Salzburg</button><button class="control" data-i18n="region.Stájerország.170" data-region="Stájerország" type="button">Stájerország</button><button class="control" data-region="Tirol" type="button">Tirol</button><button class="control" data-region="Vorarlberg" type="button">Vorarlberg</button></div><div class="filter-result" data-i18n="filter.result.initial" id="filterResult">28 tagszervezet látható.</div></div><p data-i18n="filter.help" style="color:var(--muted);font-size:14px">A lista a kijelölt témák és régiók szerint azonnal változik. Több téma egyszerre is kijelölhető; ilyenkor minden olyan tagszervezet megjelenik, amely legalább az egyik kiválasztott témához kapcsolódik.</p></aside></div><div class="member-directory-box" id="tagszervezeti-katalogus"><div class="directory-head"><div class="k" data-i18n="directory.k">Tagszervezeti katalógus</div><h3 data-i18n="directory.h">28 tagszervezet: regionális jelenlét, működési kapacitás és külügyi kapcsolódási tér.</h3><p data-i18n="directory.p">A katalógus azt mutatja meg, hogy a Központi Szövetség nem egyetlen intézményként működik, hanem Ausztria több régióját lefedő <strong>közösségi infrastruktúraként</strong>: oktatási, kulturális, egyházi, ifjúsági, szakmai, média- és karitatív kapacitások kapcsolódnak egy <strong>közös láthatósági és együttműködési infrastruktúrához</strong>.</p></div><div class="member-grid" id="memberGrid">
-<article class="member" data-name="ausztriai magyar kutatóintézet" data-region="Bécs">
+</div><aside class="map-side lean-filter-panel"><h3>Szűrés</h3><div class="stats"><div class="stat"><b>10</b><span data-i18n="region.Bécs.164">Bécs</span></div><div class="stat"><b>2</b><span>Burgenland</span></div><div class="stat"><b>4</b><span data-i18n="region.Felső-Ausztria.165">Felső-Ausztria</span></div><div class="stat"><b>1</b><span>Salzburg</span></div><div class="stat"><b>4</b><span data-i18n="region.Stájerország.166">Stájerország</span></div><div class="stat"><b>5</b><span>Tirol</span></div><div class="stat"><b>2</b><span>Vorarlberg</span></div></div><div class="guided-search"><label data-i18n="filter.topiclabel">1. Jelölj ki egy vagy több témát</label><div class="topic-grid" id="topicFilters"><button class="topic-toggle" data-i18n="topic.192" data-topic="oktatás anyanyelv iskola óvoda tanulás hétvégi" type="button">Oktatás / anyanyelv</button><button class="topic-toggle" data-i18n="topic.193" data-topic="kultúra színház musical néptánc népzene zene művészet program hagyomány koncert" type="button">Kultúra / művészet</button><button class="topic-toggle" data-i18n="topic.194" data-topic="cserkészet ifjúság fiatal gyermek tábor" type="button">Cserkészet / ifjúság</button><button class="topic-toggle" data-i18n="topic.195" data-topic="katolikus egyházi liturgia lelki szentmise" type="button">Egyházi közösség</button><button class="topic-toggle" data-i18n="topic.196" data-topic="média irodalom kutatás tudás sajtó újság műfordítás" type="button">Média / irodalom / kutatás</button><button class="topic-toggle" data-i18n="topic.197" data-topic="női szakmai gazdasági mentor egyetemista akadémiai klub" type="button">Szakmai / női / gazdasági háló</button><button class="topic-toggle" data-i18n="topic.198" data-topic="jótékonyság ösztöndíj támogatás szociális adomány" type="button">Jótékonyság / támogatás</button><button class="topic-clear" data-i18n="filter.clear" id="clearTopics" type="button">Témák törlése</button></div><label data-i18n="filter.regionlabel">2. Szűkíts régióra</label><select aria-label="Tagszervezeti régióválasztó" class="search select mobile-region-select" id="regionSelect"><option data-i18n="region.Mind.167" value="all">Mind</option><option data-i18n="region.Bécs.168" value="Bécs">Bécs</option><option value="Burgenland">Burgenland</option><option data-i18n="region.Felső-Ausztria.169" value="Felső-Ausztria">Felső-Ausztria</option><option value="Salzburg">Salzburg</option><option data-i18n="region.Stájerország.170" value="Stájerország">Stájerország</option><option value="Tirol">Tirol</option><option value="Vorarlberg">Vorarlberg</option></select><div class="controls" id="filters"><button class="control active" data-i18n="region.Mind.167" data-region="all" type="button">Mind</button><button class="control" data-i18n="region.Bécs.168" data-region="Bécs" type="button">Bécs</button><button class="control" data-region="Burgenland" type="button">Burgenland</button><button class="control" data-i18n="region.Felső-Ausztria.169" data-region="Felső-Ausztria" type="button">Felső-Ausztria</button><button class="control" data-region="Salzburg" type="button">Salzburg</button><button class="control" data-i18n="region.Stájerország.170" data-region="Stájerország" type="button">Stájerország</button><button class="control" data-region="Tirol" type="button">Tirol</button><button class="control" data-region="Vorarlberg" type="button">Vorarlberg</button></div><div class="filter-result" data-i18n="filter.result.initial" id="filterResult">28 tagszervezet látható.</div></div><p>Válassz témát vagy régiót. A katalógus azonnal csak a releváns szervezeteket mutatja.</p></aside></div><div class="member-directory-box lean-directory" id="tagszervezeti-katalogus"><div class="directory-head"><div class="k">Tagszervezeti katalógus</div><h3>A 28 kártya marad. Az ismétlés kikerült.</h3><p>A kártyák adják a blokk értékét: név, régió, működési szerep, kategória és kapcsolódó felület. A külön régiós ismétlő lista törölve lett, mert ugyanazt mondta el még egyszer.</p></div><div class="member-grid" id="memberGrid">
+<article class="member lean-member" data-name="ausztriai magyar kutatóintézet" data-region="Bécs">
 <div class="member-top"><span class="num">01</span><span class="tag" data-i18n="member.region.202">Bécs</span><span class="tag soft" data-i18n="member.tag.203">Kutatás · tudásközvetítés</span></div>
 <h3>Ausztriai Magyar Kutatóintézet</h3>
 <p class="place">Wien · ZVR-Zahl: 884465843</p>
-<p data-i18n="member.desc.204">A bécsi magyar <strong>tudományos-kulturális infrastruktúra</strong> egyik leginkább intézményesedett eleme. Előadásokat, történész-kerekasztalokat, <strong>adatbázis-építést</strong> és az ausztriai magyar kisebbség kutatását kapcsolja össze; hálózati szerepe a Collegium Hungaricum és a Bécsi Egyetem finnugrisztikai közegéhez is kötődik.</p><div class="activity-categories"><b data-i18n="member.categories.label">Foglalkozási kategóriák</b><div class="category-pills"><span class="category-pill" data-i18n="cat.Média / irodalom / kutatás">Média / irodalom / kutatás</span><span class="category-pill" data-i18n="cat.Kultúra / művészet">Kultúra / művészet</span><span class="category-pill" data-i18n="cat.Szakmai / női / gazdasági háló">Szakmai / női / gazdasági háló</span></div></div>
-<a class="textlink" data-i18n="common.openRelated" href="https://oeius.univie.ac.at" rel="noopener" target="_blank">Kapcsolódó felület megnyitása →</a>
+<p data-i18n="member.desc.204">A bécsi magyar <strong>tudományos-kulturális infrastruktúra</strong> egyik leginkább intézményesedett eleme. Előadásokat, történész-kerekasztalokat, <strong>adatbázis-építést</strong> és az ausztriai magyar kisebbség kutatását kapcsolja össze; hálózati szerepe a Collegium Hungaricum és a Bécsi Egyetem finnugrisztikai közegéhez is kötődik.</p><div class="activity-categories"><b>Kategóriák</b><div class="category-pills"><span class="category-pill" data-i18n="cat.Média / irodalom / kutatás">Média / irodalom / kutatás</span><span class="category-pill" data-i18n="cat.Kultúra / művészet">Kultúra / művészet</span><span class="category-pill" data-i18n="cat.Szakmai / női / gazdasági háló">Szakmai / női / gazdasági háló</span></div></div>
+<a class="textlink" href="https://oeius.univie.ac.at" rel="noopener" target="_blank">Megnyitás →</a>
 </article>
-<article class="member" data-name="lean in femspace" data-region="Bécs">
+<article class="member lean-member" data-name="lean in femspace" data-region="Bécs">
 <div class="member-top"><span class="num">02</span><span class="tag" data-i18n="member.region.206">Bécs</span><span class="tag soft" data-i18n="member.tag.207">Női szakmai hálózat</span></div>
 <h3>Lean In Femspace</h3>
 <p class="place">Wien · ZVR-Zahl: 1179703987</p>
-<p data-i18n="member.desc.208">Nem klasszikus diaszpóraegyesület, hanem <strong>nonprofit szakmai-közösségi platform</strong> Ausztriában élő magyar nők számára. 2017 óta mentorprogramokkal, workshopokkal, bloggal és háromnyelvű jelenléttel épít <strong>karrier-, önbizalom- és kapcsolati hálót</strong>.</p><div class="activity-categories"><b data-i18n="member.categories.label">Foglalkozási kategóriák</b><div class="category-pills"><span class="category-pill" data-i18n="cat.Szakmai / női / gazdasági háló">Szakmai / női / gazdasági háló</span><span class="category-pill" data-i18n="cat.Kultúra / művészet">Kultúra / művészet</span></div></div>
-<a class="textlink" data-i18n="common.openRelated" href="https://leaninfemspace.at" rel="noopener" target="_blank">Kapcsolódó felület megnyitása →</a>
+<p data-i18n="member.desc.208">Nem klasszikus diaszpóraegyesület, hanem <strong>nonprofit szakmai-közösségi platform</strong> Ausztriában élő magyar nők számára. 2017 óta mentorprogramokkal, workshopokkal, bloggal és háromnyelvű jelenléttel épít <strong>karrier-, önbizalom- és kapcsolati hálót</strong>.</p><div class="activity-categories"><b>Kategóriák</b><div class="category-pills"><span class="category-pill" data-i18n="cat.Szakmai / női / gazdasági háló">Szakmai / női / gazdasági háló</span><span class="category-pill" data-i18n="cat.Kultúra / művészet">Kultúra / művészet</span></div></div>
+<a class="textlink" href="https://leaninfemspace.at" rel="noopener" target="_blank">Megnyitás →</a>
 </article>
-<article class="member" data-name="svung – bécsi magyar színház" data-region="Bécs">
+<article class="member lean-member" data-name="svung – bécsi magyar színház" data-region="Bécs">
 <div class="member-top"><span class="num">03</span><span class="tag" data-i18n="member.region.209">Bécs</span><span class="tag soft" data-i18n="member.tag.210">Színház · kultúra</span></div>
 <h3>SVUNG – Bécsi Magyar Színház</h3>
 <p class="place">Wien · ZVR-Zahl: 825911870</p>
-<p data-i18n="member.desc.211">A bécsi magyar kulturális mező egyik legismertebb tematikus szereplője: <strong>független magyar színtársulat</strong>, amely 2016 óta állandó repertoárral, vendégszereplésekkel és közösségi színházi jelenléttel működik. A színház <strong>közszolgálati kulturális funkciót</strong> tölt be a magyar nyelvű közönség felé.</p><div class="activity-categories"><b data-i18n="member.categories.label">Foglalkozási kategóriák</b><div class="category-pills"><span class="category-pill" data-i18n="cat.Kultúra / művészet">Kultúra / művészet</span><span class="category-pill" data-i18n="cat.Cserkészet / ifjúság">Cserkészet / ifjúság</span></div></div>
-<a class="textlink" data-i18n="common.openRelated" href="https://www.svung.at" rel="noopener" target="_blank">Kapcsolódó felület megnyitása →</a>
+<p data-i18n="member.desc.211">A bécsi magyar kulturális mező egyik legismertebb tematikus szereplője: <strong>független magyar színtársulat</strong>, amely 2016 óta állandó repertoárral, vendégszereplésekkel és közösségi színházi jelenléttel működik. A színház <strong>közszolgálati kulturális funkciót</strong> tölt be a magyar nyelvű közönség felé.</p><div class="activity-categories"><b>Kategóriák</b><div class="category-pills"><span class="category-pill" data-i18n="cat.Kultúra / művészet">Kultúra / művészet</span><span class="category-pill" data-i18n="cat.Cserkészet / ifjúság">Cserkészet / ifjúság</span></div></div>
+<a class="textlink" href="https://www.svung.at" rel="noopener" target="_blank">Megnyitás →</a>
 </article>
-<article class="member" data-name="72. sz. széchenyi istván cserkészcsapat" data-region="Bécs">
+<article class="member lean-member" data-name="72. sz. széchenyi istván cserkészcsapat" data-region="Bécs">
 <div class="member-top"><span class="num">04</span><span class="tag" data-i18n="member.region.212">Bécs</span><span class="tag soft" data-i18n="member.tag.213">Cserkészet · ifjúság</span></div>
 <h3>72. sz. Széchenyi István cserkészcsapat</h3>
 <p class="place">Wien · ZVR-Zahl: 047300458</p>
-<p data-i18n="member.desc.214">A bécsi magyar diaszpóra egyik <strong>legstabilabb ifjúsági szervezete</strong>, történeti gyökerei 1963/1965-ig nyúlnak vissza. Rendszeres kétheti foglalkozásokat, táborokat, hétvégéket és többgenerációs közösségépítést ad; mérete a nyilvános adatok szerint <strong>80–100 fő körüli</strong>.</p><div class="activity-categories"><b data-i18n="member.categories.label">Foglalkozási kategóriák</b><div class="category-pills"><span class="category-pill" data-i18n="cat.Cserkészet / ifjúság">Cserkészet / ifjúság</span><span class="category-pill" data-i18n="cat.Oktatás / anyanyelv">Oktatás / anyanyelv</span><span class="category-pill" data-i18n="cat.Kultúra / művészet">Kultúra / művészet</span></div></div>
-<a class="textlink" data-i18n="common.openRelated" href="https://cserkesz.at" rel="noopener" target="_blank">Kapcsolódó felület megnyitása →</a>
+<p data-i18n="member.desc.214">A bécsi magyar diaszpóra egyik <strong>legstabilabb ifjúsági szervezete</strong>, történeti gyökerei 1963/1965-ig nyúlnak vissza. Rendszeres kétheti foglalkozásokat, táborokat, hétvégéket és többgenerációs közösségépítést ad; mérete a nyilvános adatok szerint <strong>80–100 fő körüli</strong>.</p><div class="activity-categories"><b>Kategóriák</b><div class="category-pills"><span class="category-pill" data-i18n="cat.Cserkészet / ifjúság">Cserkészet / ifjúság</span><span class="category-pill" data-i18n="cat.Oktatás / anyanyelv">Oktatás / anyanyelv</span><span class="category-pill" data-i18n="cat.Kultúra / művészet">Kultúra / művészet</span></div></div>
+<a class="textlink" href="https://cserkesz.at" rel="noopener" target="_blank">Megnyitás →</a>
 </article>
-<article class="member" data-name="bim – bécsi irodalmi műhely" data-region="Bécs">
+<article class="member lean-member" data-name="bim – bécsi irodalmi műhely" data-region="Bécs">
 <div class="member-top"><span class="num">05</span><span class="tag" data-i18n="member.region.215">Bécs</span><span class="tag soft" data-i18n="member.tag.216">Irodalom · műfordítás</span></div>
 <h3>BIM – Bécsi Irodalmi Műhely</h3>
 <p class="place">Wien · ZVR-Zahl: 1650444929</p>
-<p data-i18n="member.desc.217">Új, 2024-ben indult <strong>író- és műfordító-műhely</strong>, amely a bécsi magyar kulturális mezőben kifejezetten szakmai készségfejlesztő szerepet tölt be. Nádori Lídia és Kiss Tibor Noé köré szerveződve <strong>irodalmi közösséget és alkotói műhelyt</strong> épít.</p><div class="activity-categories"><b data-i18n="member.categories.label">Foglalkozási kategóriák</b><div class="category-pills"><span class="category-pill" data-i18n="cat.Média / irodalom / kutatás">Média / irodalom / kutatás</span><span class="category-pill" data-i18n="cat.Kultúra / művészet">Kultúra / művészet</span><span class="category-pill" data-i18n="cat.Szakmai / női / gazdasági háló">Szakmai / női / gazdasági háló</span></div></div>
-<a class="textlink" data-i18n="common.openRelated" href="https://www.kozpontiszovetseg.at/tagszervezetek" rel="noopener" target="_blank">Kapcsolódó felület megnyitása →</a>
+<p data-i18n="member.desc.217">Új, 2024-ben indult <strong>író- és műfordító-műhely</strong>, amely a bécsi magyar kulturális mezőben kifejezetten szakmai készségfejlesztő szerepet tölt be. Nádori Lídia és Kiss Tibor Noé köré szerveződve <strong>irodalmi közösséget és alkotói műhelyt</strong> épít.</p><div class="activity-categories"><b>Kategóriák</b><div class="category-pills"><span class="category-pill" data-i18n="cat.Média / irodalom / kutatás">Média / irodalom / kutatás</span><span class="category-pill" data-i18n="cat.Kultúra / művészet">Kultúra / művészet</span><span class="category-pill" data-i18n="cat.Szakmai / női / gazdasági háló">Szakmai / női / gazdasági háló</span></div></div>
+<a class="textlink" href="https://www.kozpontiszovetseg.at/tagszervezetek" rel="noopener" target="_blank">Megnyitás →</a>
 </article>
-<article class="member" data-name="kaláka club" data-region="Bécs">
+<article class="member lean-member" data-name="kaláka club" data-region="Bécs">
 <div class="member-top"><span class="num">06</span><span class="tag" data-i18n="member.region.218">Bécs</span><span class="tag soft" data-i18n="member.tag.219">Gazdasági-kulturális közösség</span></div>
 <h3>Kaláka Club</h3>
 <p class="place">Wien · ZVR-Zahl: 778587523</p>
-<p data-i18n="member.desc.220">Régi, gazdasági-közösségi gyökerű bécsi magyar szervezet, amely az 1980-as évek eleje óta a <strong>magyar nyelv, kultúra és gazdasági kapcsolódás</strong> ápolására épít. Előadásokkal, konferenciákkal, évkönyvekkel és kulturális estekkel <strong>dokumentált közösségi emlékezetet</strong> is létrehoz.</p><div class="activity-categories"><b data-i18n="member.categories.label">Foglalkozási kategóriák</b><div class="category-pills"><span class="category-pill" data-i18n="cat.Szakmai / női / gazdasági háló">Szakmai / női / gazdasági háló</span><span class="category-pill" data-i18n="cat.Kultúra / művészet">Kultúra / művészet</span><span class="category-pill" data-i18n="cat.Média / irodalom / kutatás">Média / irodalom / kutatás</span></div></div>
-<a class="textlink" data-i18n="common.openRelated" href="https://kalaka-club.at" rel="noopener" target="_blank">Kapcsolódó felület megnyitása →</a>
+<p data-i18n="member.desc.220">Régi, gazdasági-közösségi gyökerű bécsi magyar szervezet, amely az 1980-as évek eleje óta a <strong>magyar nyelv, kultúra és gazdasági kapcsolódás</strong> ápolására épít. Előadásokkal, konferenciákkal, évkönyvekkel és kulturális estekkel <strong>dokumentált közösségi emlékezetet</strong> is létrehoz.</p><div class="activity-categories"><b>Kategóriák</b><div class="category-pills"><span class="category-pill" data-i18n="cat.Szakmai / női / gazdasági háló">Szakmai / női / gazdasági háló</span><span class="category-pill" data-i18n="cat.Kultúra / művészet">Kultúra / művészet</span><span class="category-pill" data-i18n="cat.Média / irodalom / kutatás">Média / irodalom / kutatás</span></div></div>
+<a class="textlink" href="https://kalaka-club.at" rel="noopener" target="_blank">Megnyitás →</a>
 </article>
-<article class="member" data-name="napraforgók" data-region="Bécs">
+<article class="member lean-member" data-name="napraforgók" data-region="Bécs">
 <div class="member-top"><span class="num">07</span><span class="tag" data-i18n="member.region.221">Bécs</span><span class="tag soft" data-i18n="member.tag.222">Néptánc · népzene</span></div>
 <h3>Napraforgók</h3>
 <p class="place">Wien · ZVR-Zahl: 566523345</p>
-<p data-i18n="member.desc.223">Bécsi magyar <strong>néptánc- és népzenei közösség</strong>, erős gyermek- és családi fókuszú programstruktúrával. A magyar hagyományőrzést nem múzeumi formában, hanem <strong>mozgásban, próbákban, fellépésekben és közösségi élményben</strong> tartja életben.</p><div class="activity-categories"><b data-i18n="member.categories.label">Foglalkozási kategóriák</b><div class="category-pills"><span class="category-pill" data-i18n="cat.Kultúra / művészet">Kultúra / művészet</span><span class="category-pill" data-i18n="cat.Cserkészet / ifjúság">Cserkészet / ifjúság</span><span class="category-pill" data-i18n="cat.Oktatás / anyanyelv">Oktatás / anyanyelv</span></div></div>
-<a class="textlink" data-i18n="common.openRelated" href="https://www.napraforgok.at" rel="noopener" target="_blank">Kapcsolódó felület megnyitása →</a>
+<p data-i18n="member.desc.223">Bécsi magyar <strong>néptánc- és népzenei közösség</strong>, erős gyermek- és családi fókuszú programstruktúrával. A magyar hagyományőrzést nem múzeumi formában, hanem <strong>mozgásban, próbákban, fellépésekben és közösségi élményben</strong> tartja életben.</p><div class="activity-categories"><b>Kategóriák</b><div class="category-pills"><span class="category-pill" data-i18n="cat.Kultúra / művészet">Kultúra / művészet</span><span class="category-pill" data-i18n="cat.Cserkészet / ifjúság">Cserkészet / ifjúság</span><span class="category-pill" data-i18n="cat.Oktatás / anyanyelv">Oktatás / anyanyelv</span></div></div>
+<a class="textlink" href="https://www.napraforgok.at" rel="noopener" target="_blank">Megnyitás →</a>
 </article>
-<article class="member" data-name="szent istván egylet" data-region="Bécs">
+<article class="member lean-member" data-name="szent istván egylet" data-region="Bécs">
 <div class="member-top"><span class="num">08</span><span class="tag" data-i18n="member.region.224">Bécs</span><span class="tag soft" data-i18n="member.tag.225">Jótékonyság · ösztöndíj</span></div>
 <h3>Szent István Egylet</h3>
 <p class="place">Wien · ZVR-Zahl: 246575229</p>
-<p data-i18n="member.desc.226">A bécsi magyar civil történet egyik <strong>legfontosabb karitatív szervezete</strong>, 1918-as alapítással. A jótékonysági bál és az ösztöndíjalap révén kisebbségi magyar diákokat támogat; a dosszié szerint 2025-ben <strong>legalább 69 360 eurónyi</strong> látható karitatív kihelyezés azonosítható.</p><div class="activity-categories"><b data-i18n="member.categories.label">Foglalkozási kategóriák</b><div class="category-pills"><span class="category-pill" data-i18n="cat.Jótékonyság / támogatás">Jótékonyság / támogatás</span><span class="category-pill" data-i18n="cat.Kultúra / művészet">Kultúra / művészet</span><span class="category-pill" data-i18n="cat.Szakmai / női / gazdasági háló">Szakmai / női / gazdasági háló</span></div></div>
-<a class="textlink" data-i18n="common.openRelated" href="https://ungarball.at" rel="noopener" target="_blank">Kapcsolódó felület megnyitása →</a>
+<p data-i18n="member.desc.226">A bécsi magyar civil történet egyik <strong>legfontosabb karitatív szervezete</strong>, 1918-as alapítással. A jótékonysági bál és az ösztöndíjalap révén kisebbségi magyar diákokat támogat; a dosszié szerint 2025-ben <strong>legalább 69 360 eurónyi</strong> látható karitatív kihelyezés azonosítható.</p><div class="activity-categories"><b>Kategóriák</b><div class="category-pills"><span class="category-pill" data-i18n="cat.Jótékonyság / támogatás">Jótékonyság / támogatás</span><span class="category-pill" data-i18n="cat.Kultúra / művészet">Kultúra / művészet</span><span class="category-pill" data-i18n="cat.Szakmai / női / gazdasági háló">Szakmai / női / gazdasági háló</span></div></div>
+<a class="textlink" href="https://ungarball.at" rel="noopener" target="_blank">Megnyitás →</a>
 </article>
-<article class="member" data-name="bornemisza péter társaság" data-region="Bécs">
+<article class="member lean-member" data-name="bornemisza péter társaság" data-region="Bécs">
 <div class="member-top"><span class="num">09</span><span class="tag" data-i18n="member.region.227">Bécs</span><span class="tag soft" data-i18n="member.tag.228">Irodalom · közélet</span></div>
 <h3>Bornemisza Péter Társaság</h3>
 <p class="place">Wien · ZVR-Zahl: 250671590</p>
-<p data-i18n="member.desc.229">A bécsi magyar <strong>irodalmi-közéleti nyilvánosság</strong> egyik kulcsszervezete, 1960-as alapítással. Irodalmi esteket, közösségi programokat és médiaközvetítő szerepet visz, miközben a fiatalabb generációk bevonása is <strong>látható stratégiai cél</strong>.</p><div class="activity-categories"><b data-i18n="member.categories.label">Foglalkozási kategóriák</b><div class="category-pills"><span class="category-pill" data-i18n="cat.Média / irodalom / kutatás">Média / irodalom / kutatás</span><span class="category-pill" data-i18n="cat.Kultúra / művészet">Kultúra / művészet</span></div></div>
-<a class="textlink" data-i18n="common.openRelated" href="https://www.kozpontiszovetseg.at" rel="noopener" target="_blank">Kapcsolódó felület megnyitása →</a>
+<p data-i18n="member.desc.229">A bécsi magyar <strong>irodalmi-közéleti nyilvánosság</strong> egyik kulcsszervezete, 1960-as alapítással. Irodalmi esteket, közösségi programokat és médiaközvetítő szerepet visz, miközben a fiatalabb generációk bevonása is <strong>látható stratégiai cél</strong>.</p><div class="activity-categories"><b>Kategóriák</b><div class="category-pills"><span class="category-pill" data-i18n="cat.Média / irodalom / kutatás">Média / irodalom / kutatás</span><span class="category-pill" data-i18n="cat.Kultúra / művészet">Kultúra / művészet</span></div></div>
+<a class="textlink" href="https://www.kozpontiszovetseg.at" rel="noopener" target="_blank">Megnyitás →</a>
 </article>
-<article class="member" data-name="nemzetközi duna filharmónia baráti kör" data-region="Bécs">
+<article class="member lean-member" data-name="nemzetközi duna filharmónia baráti kör" data-region="Bécs">
 <div class="member-top"><span class="num">10</span><span class="tag" data-i18n="member.region.230">Bécs</span><span class="tag soft" data-i18n="member.tag.231">Zene · kulturális platform</span></div>
 <h3>Nemzetközi Duna Filharmónia Baráti kör</h3>
 <p class="place">Wien · ZVR-Zahl: 1137618189</p>
-<p data-i18n="member.desc.232">A hálózatban inkább <strong>kulturális platformként</strong>, mint klasszikus tagsági egyesületként látható. Klasszikus zenei koncerteket és közép-európai kulturális találkozásokat szervez, ezzel <strong>zenei-diplomáciai kapcsolódási pontot</strong> teremt.</p><div class="activity-categories"><b data-i18n="member.categories.label">Foglalkozási kategóriák</b><div class="category-pills"><span class="category-pill" data-i18n="cat.Kultúra / művészet">Kultúra / művészet</span><span class="category-pill" data-i18n="cat.Szakmai / női / gazdasági háló">Szakmai / női / gazdasági háló</span></div></div>
-<a class="textlink" data-i18n="common.openRelated" href="https://www.kozpontiszovetseg.at/tagszervezetek" rel="noopener" target="_blank">Kapcsolódó felület megnyitása →</a>
+<p data-i18n="member.desc.232">A hálózatban inkább <strong>kulturális platformként</strong>, mint klasszikus tagsági egyesületként látható. Klasszikus zenei koncerteket és közép-európai kulturális találkozásokat szervez, ezzel <strong>zenei-diplomáciai kapcsolódási pontot</strong> teremt.</p><div class="activity-categories"><b>Kategóriák</b><div class="category-pills"><span class="category-pill" data-i18n="cat.Kultúra / művészet">Kultúra / művészet</span><span class="category-pill" data-i18n="cat.Szakmai / női / gazdasági háló">Szakmai / női / gazdasági háló</span></div></div>
+<a class="textlink" href="https://www.kozpontiszovetseg.at/tagszervezetek" rel="noopener" target="_blank">Megnyitás →</a>
 </article>
-<article class="member" data-name="alsóőri magyar kultúr- és táncegyesület" data-region="Burgenland">
+<article class="member lean-member" data-name="alsóőri magyar kultúr- és táncegyesület" data-region="Burgenland">
 <div class="member-top"><span class="num">11</span><span class="tag">Burgenland</span><span class="tag soft" data-i18n="member.tag.233">Néptánc · hagyományőrzés</span></div>
 <h3>Alsóőri Magyar Kultúr- és Táncegyesület</h3>
 <p class="place">Unterwart / Alsóőr · ZVR-Zahl: 1847607707</p>
-<p data-i18n="member.desc.234">Újabb alapítású, helyi <strong>hagyományőrző és néptánc-központú</strong> szervezet Alsóőrben. A dosszié szerint a tagok már az egyesületté válás előtt is együtt táncoltak; programjaik közt bálok, betlehemes szereplések és táncházas részvételek erősítik a <strong>burgenlandi magyar identitást</strong>.</p><div class="activity-categories"><b data-i18n="member.categories.label">Foglalkozási kategóriák</b><div class="category-pills"><span class="category-pill" data-i18n="cat.Kultúra / művészet">Kultúra / művészet</span><span class="category-pill" data-i18n="cat.Oktatás / anyanyelv">Oktatás / anyanyelv</span></div></div>
-<a class="textlink" data-i18n="common.openRelated" href="https://www.kozpontiszovetseg.at/tagszervezetek" rel="noopener" target="_blank">Kapcsolódó felület megnyitása →</a>
+<p data-i18n="member.desc.234">Újabb alapítású, helyi <strong>hagyományőrző és néptánc-központú</strong> szervezet Alsóőrben. A dosszié szerint a tagok már az egyesületté válás előtt is együtt táncoltak; programjaik közt bálok, betlehemes szereplések és táncházas részvételek erősítik a <strong>burgenlandi magyar identitást</strong>.</p><div class="activity-categories"><b>Kategóriák</b><div class="category-pills"><span class="category-pill" data-i18n="cat.Kultúra / művészet">Kultúra / művészet</span><span class="category-pill" data-i18n="cat.Oktatás / anyanyelv">Oktatás / anyanyelv</span></div></div>
+<a class="textlink" href="https://www.kozpontiszovetseg.at/tagszervezetek" rel="noopener" target="_blank">Megnyitás →</a>
 </article>
-<article class="member" data-name="közép-burgenlandi magyar kultúregyesület" data-region="Burgenland">
+<article class="member lean-member" data-name="közép-burgenlandi magyar kultúregyesület" data-region="Burgenland">
 <div class="member-top"><span class="num">12</span><span class="tag">Burgenland</span><span class="tag soft" data-i18n="member.tag.235">Nyelv · folklór · közösség</span></div>
 <h3>Közép-Burgenlandi Magyar Kultúregyesület</h3>
 <p class="place">Oberpullendorf / Felsőpulya · ZVR-Zahl: 352107517</p>
-<p data-i18n="member.desc.236">A burgenlandi magyar nyelv és folklór egyik <strong>fontos intézményes bázisa</strong>, 2003-as alapítással és közel 200 taggal. Gyermekprogramokat, nyugdíjasklubot, nyelvórákat, magyar mint idegen nyelv tanfolyamot, néptánc-kezdeményezéseket és kétnyelvű ünnepségeket szervez.</p><div class="activity-categories"><b data-i18n="member.categories.label">Foglalkozási kategóriák</b><div class="category-pills"><span class="category-pill" data-i18n="cat.Oktatás / anyanyelv">Oktatás / anyanyelv</span><span class="category-pill" data-i18n="cat.Kultúra / művészet">Kultúra / művészet</span><span class="category-pill" data-i18n="cat.Jótékonyság / támogatás">Jótékonyság / támogatás</span></div></div>
-<a class="textlink" data-i18n="common.openRelated" href="https://www.kozpontiszovetseg.at/tagszervezetek" rel="noopener" target="_blank">Kapcsolódó felület megnyitása →</a>
+<p data-i18n="member.desc.236">A burgenlandi magyar nyelv és folklór egyik <strong>fontos intézményes bázisa</strong>, 2003-as alapítással és közel 200 taggal. Gyermekprogramokat, nyugdíjasklubot, nyelvórákat, magyar mint idegen nyelv tanfolyamot, néptánc-kezdeményezéseket és kétnyelvű ünnepségeket szervez.</p><div class="activity-categories"><b>Kategóriák</b><div class="category-pills"><span class="category-pill" data-i18n="cat.Oktatás / anyanyelv">Oktatás / anyanyelv</span><span class="category-pill" data-i18n="cat.Kultúra / művészet">Kultúra / művészet</span><span class="category-pill" data-i18n="cat.Jótékonyság / támogatás">Jótékonyság / támogatás</span></div></div>
+<a class="textlink" href="https://www.kozpontiszovetseg.at/tagszervezetek" rel="noopener" target="_blank">Megnyitás →</a>
 </article>
-<article class="member" data-name="felső-ausztriai magyarok kultúregyesülete" data-region="Felső-Ausztria">
+<article class="member lean-member" data-name="felső-ausztriai magyarok kultúregyesülete" data-region="Felső-Ausztria">
 <div class="member-top"><span class="num">13</span><span class="tag" data-i18n="member.region.237">Felső-Ausztria</span><span class="tag soft" data-i18n="member.tag.238">Kultúra · közösség</span></div>
 <h3>Felső-Ausztriai Magyarok Kultúregyesülete</h3>
 <p class="place">Linz · ZVR-Zahl: 520691483</p>
-<p data-i18n="member.desc.239">A felső-ausztriai magyarok egyik <strong>legrégebbi kulturális szervezete</strong>, 1968-as alapítással. A linzi és környékbeli közösség összetartását, családi és irodalmi programokat, bálokat, kulturális esteket és a hétvégi magyar oktatás hátterét támogatja.</p><div class="activity-categories"><b data-i18n="member.categories.label">Foglalkozási kategóriák</b><div class="category-pills"><span class="category-pill" data-i18n="cat.Kultúra / művészet">Kultúra / művészet</span><span class="category-pill" data-i18n="cat.Oktatás / anyanyelv">Oktatás / anyanyelv</span><span class="category-pill" data-i18n="cat.Szakmai / női / gazdasági háló">Szakmai / női / gazdasági háló</span></div></div>
-<a class="textlink" data-i18n="common.openRelated" href="https://www.kozpontiszovetseg.at/tagszervezetek" rel="noopener" target="_blank">Kapcsolódó felület megnyitása →</a>
+<p data-i18n="member.desc.239">A felső-ausztriai magyarok egyik <strong>legrégebbi kulturális szervezete</strong>, 1968-as alapítással. A linzi és környékbeli közösség összetartását, családi és irodalmi programokat, bálokat, kulturális esteket és a hétvégi magyar oktatás hátterét támogatja.</p><div class="activity-categories"><b>Kategóriák</b><div class="category-pills"><span class="category-pill" data-i18n="cat.Kultúra / művészet">Kultúra / művészet</span><span class="category-pill" data-i18n="cat.Oktatás / anyanyelv">Oktatás / anyanyelv</span><span class="category-pill" data-i18n="cat.Szakmai / női / gazdasági háló">Szakmai / női / gazdasági háló</span></div></div>
+<a class="textlink" href="https://www.kozpontiszovetseg.at/tagszervezetek" rel="noopener" target="_blank">Megnyitás →</a>
 </article>
-<article class="member" data-name="linzi magyar katolikus közösség" data-region="Felső-Ausztria">
+<article class="member lean-member" data-name="linzi magyar katolikus közösség" data-region="Felső-Ausztria">
 <div class="member-top"><span class="num">14</span><span class="tag" data-i18n="member.region.240">Felső-Ausztria</span><span class="tag soft" data-i18n="member.tag.241">Egyházi közösség</span></div>
 <h3>Linzi Magyar Katolikus Közösség</h3>
 <p class="place">Linz</p>
-<p data-i18n="member.desc.242">A régió magyar egyházi és közösségi életének <strong>stabil alapintézménye</strong>. Magyar nyelvű miséket és lelkipásztori jelenlétet ad Linzben és Welsben, miközben az egyházi tér <strong>közösségi összekötő szerepet</strong> is betölt.</p><div class="activity-categories"><b data-i18n="member.categories.label">Foglalkozási kategóriák</b><div class="category-pills"><span class="category-pill" data-i18n="cat.Egyházi közösség">Egyházi közösség</span><span class="category-pill" data-i18n="cat.Kultúra / művészet">Kultúra / művészet</span><span class="category-pill" data-i18n="cat.Jótékonyság / támogatás">Jótékonyság / támogatás</span></div></div>
-<a class="textlink" data-i18n="common.openRelated" href="https://ausztria.katolikus.at" rel="noopener" target="_blank">Kapcsolódó felület megnyitása →</a>
+<p data-i18n="member.desc.242">A régió magyar egyházi és közösségi életének <strong>stabil alapintézménye</strong>. Magyar nyelvű miséket és lelkipásztori jelenlétet ad Linzben és Welsben, miközben az egyházi tér <strong>közösségi összekötő szerepet</strong> is betölt.</p><div class="activity-categories"><b>Kategóriák</b><div class="category-pills"><span class="category-pill" data-i18n="cat.Egyházi közösség">Egyházi közösség</span><span class="category-pill" data-i18n="cat.Kultúra / művészet">Kultúra / művészet</span><span class="category-pill" data-i18n="cat.Jótékonyság / támogatás">Jótékonyság / támogatás</span></div></div>
+<a class="textlink" href="https://ausztria.katolikus.at" rel="noopener" target="_blank">Megnyitás →</a>
 </article>
-<article class="member" data-name="felső-ausztriai hétvégi magyar óvoda és iskola" data-region="Felső-Ausztria">
+<article class="member lean-member" data-name="felső-ausztriai hétvégi magyar óvoda és iskola" data-region="Felső-Ausztria">
 <div class="member-top"><span class="num">15</span><span class="tag" data-i18n="member.region.243">Felső-Ausztria</span><span class="tag soft" data-i18n="member.tag.244">Oktatás · anyanyelv</span></div>
 <h3>Felső-Ausztriai Hétvégi Magyar Óvoda és Iskola</h3>
 <p class="place">Wels / Linz · ZVR-Zahl: 520691483</p>
-<p data-i18n="member.desc.245">A diaszpóra-oktatási hálózat egyik <strong>látványos eredményű intézménye</strong>; 2025-ben ünnepelte 25. évfordulóját. Óvodától tizenéves korig játékos, korosztályos magyar nyelvi és kulturális átadást nyújt, családi közösséggel és ünnepi programokkal.</p><div class="activity-categories"><b data-i18n="member.categories.label">Foglalkozási kategóriák</b><div class="category-pills"><span class="category-pill" data-i18n="cat.Oktatás / anyanyelv">Oktatás / anyanyelv</span><span class="category-pill" data-i18n="cat.Kultúra / művészet">Kultúra / művészet</span><span class="category-pill" data-i18n="cat.Cserkészet / ifjúság">Cserkészet / ifjúság</span></div></div>
-<a class="textlink" data-i18n="common.openRelated" href="https://www.kozpontiszovetseg.at/tagszervezetek" rel="noopener" target="_blank">Kapcsolódó felület megnyitása →</a>
+<p data-i18n="member.desc.245">A diaszpóra-oktatási hálózat egyik <strong>látványos eredményű intézménye</strong>; 2025-ben ünnepelte 25. évfordulóját. Óvodától tizenéves korig játékos, korosztályos magyar nyelvi és kulturális átadást nyújt, családi közösséggel és ünnepi programokkal.</p><div class="activity-categories"><b>Kategóriák</b><div class="category-pills"><span class="category-pill" data-i18n="cat.Oktatás / anyanyelv">Oktatás / anyanyelv</span><span class="category-pill" data-i18n="cat.Kultúra / művészet">Kultúra / művészet</span><span class="category-pill" data-i18n="cat.Cserkészet / ifjúság">Cserkészet / ifjúság</span></div></div>
+<a class="textlink" href="https://www.kozpontiszovetseg.at/tagszervezetek" rel="noopener" target="_blank">Megnyitás →</a>
 </article>
-<article class="member" data-name="80. sz. árpád cserkészcsapat" data-region="Felső-Ausztria">
+<article class="member lean-member" data-name="80. sz. árpád cserkészcsapat" data-region="Felső-Ausztria">
 <div class="member-top"><span class="num">16</span><span class="tag" data-i18n="member.region.246">Felső-Ausztria</span><span class="tag soft" data-i18n="member.tag.247">Cserkészet · ifjúság</span></div>
 <h3>80. sz. Árpád cserkészcsapat</h3>
 <p class="place">Wels · ZVR-Zahl: 422269350</p>
-<p data-i18n="member.desc.248">A felső-ausztriai magyar ifjúsági élet <strong>cserkészpillére</strong> Wels környékén. Portyák, békeláng-átvétel, közös farsangok, Kastl-rendezések és nyári táborok adják a klasszikus diaszpóra-cserkész működés <strong>élő programrendjét</strong>.</p><div class="activity-categories"><b data-i18n="member.categories.label">Foglalkozási kategóriák</b><div class="category-pills"><span class="category-pill" data-i18n="cat.Cserkészet / ifjúság">Cserkészet / ifjúság</span><span class="category-pill" data-i18n="cat.Oktatás / anyanyelv">Oktatás / anyanyelv</span><span class="category-pill" data-i18n="cat.Kultúra / művészet">Kultúra / művészet</span></div></div>
-<a class="textlink" data-i18n="common.openRelated" href="https://arpadcscslinz.jimdofree.com" rel="noopener" target="_blank">Kapcsolódó felület megnyitása →</a>
+<p data-i18n="member.desc.248">A felső-ausztriai magyar ifjúsági élet <strong>cserkészpillére</strong> Wels környékén. Portyák, békeláng-átvétel, közös farsangok, Kastl-rendezések és nyári táborok adják a klasszikus diaszpóra-cserkész működés <strong>élő programrendjét</strong>.</p><div class="activity-categories"><b>Kategóriák</b><div class="category-pills"><span class="category-pill" data-i18n="cat.Cserkészet / ifjúság">Cserkészet / ifjúság</span><span class="category-pill" data-i18n="cat.Oktatás / anyanyelv">Oktatás / anyanyelv</span><span class="category-pill" data-i18n="cat.Kultúra / művészet">Kultúra / művészet</span></div></div>
+<a class="textlink" href="https://arpadcscslinz.jimdofree.com" rel="noopener" target="_blank">Megnyitás →</a>
 </article>
-<article class="member" data-name="salzung – salzburgi magyar egyesület" data-region="Salzburg">
+<article class="member lean-member" data-name="salzung – salzburgi magyar egyesület" data-region="Salzburg">
 <div class="member-top"><span class="num">17</span><span class="tag">Salzburg</span><span class="tag soft" data-i18n="member.tag.249">Kultúra · oktatás · táborok</span></div>
 <h3>SalzUng – Salzburgi Magyar Egyesület</h3>
 <p class="place">Salzburg · ZVR-Zahl: 641989795</p>
-<p data-i18n="member.desc.250">Az egyik legerősebb <strong>program- és dokumentációs kapacitású</strong> regionális szervezet. 1993 óta a magyar kultúra és nyelv ápolását szolgálja; Brumi Ovi, Pitypang Suli, kamaszklub, művészeti projektek, Erasmus+, minikönyvtár, táborok és közösségi ünnepek alkotják a működését.</p><div class="activity-categories"><b data-i18n="member.categories.label">Foglalkozási kategóriák</b><div class="category-pills"><span class="category-pill" data-i18n="cat.Oktatás / anyanyelv">Oktatás / anyanyelv</span><span class="category-pill" data-i18n="cat.Kultúra / művészet">Kultúra / művészet</span><span class="category-pill" data-i18n="cat.Cserkészet / ifjúság">Cserkészet / ifjúság</span></div></div>
-<a class="textlink" data-i18n="common.openRelated" href="https://salzung.com" rel="noopener" target="_blank">Kapcsolódó felület megnyitása →</a>
+<p data-i18n="member.desc.250">Az egyik legerősebb <strong>program- és dokumentációs kapacitású</strong> regionális szervezet. 1993 óta a magyar kultúra és nyelv ápolását szolgálja; Brumi Ovi, Pitypang Suli, kamaszklub, művészeti projektek, Erasmus+, minikönyvtár, táborok és közösségi ünnepek alkotják a működését.</p><div class="activity-categories"><b>Kategóriák</b><div class="category-pills"><span class="category-pill" data-i18n="cat.Oktatás / anyanyelv">Oktatás / anyanyelv</span><span class="category-pill" data-i18n="cat.Kultúra / művészet">Kultúra / művészet</span><span class="category-pill" data-i18n="cat.Cserkészet / ifjúság">Cserkészet / ifjúság</span></div></div>
+<a class="textlink" href="https://salzung.com" rel="noopener" target="_blank">Megnyitás →</a>
 </article>
-<article class="member" data-name="grázi magyar egyesület" data-region="Stájerország">
+<article class="member lean-member" data-name="grázi magyar egyesület" data-region="Stájerország">
 <div class="member-top"><span class="num">18</span><span class="tag" data-i18n="member.region.251">Stájerország</span><span class="tag soft" data-i18n="member.tag.252">Történeti közösségi egyesület</span></div>
 <h3>Grázi Magyar Egyesület</h3>
 <p class="place">Graz · ZVR-Zahl: 986510073</p>
-<p data-i18n="member.desc.253">Az egész háló egyik <strong>legnagyobb történeti mélységű</strong> szereplője, 1888-as alapítással. Magyar bál, programok, fotóarchívum, életviteli tájékoztatók és anyanyelvi kezdeményezések révén egyszerre működik közösségi, kulturális és információs bázisként.</p><div class="activity-categories"><b data-i18n="member.categories.label">Foglalkozási kategóriák</b><div class="category-pills"><span class="category-pill" data-i18n="cat.Kultúra / művészet">Kultúra / művészet</span><span class="category-pill" data-i18n="cat.Oktatás / anyanyelv">Oktatás / anyanyelv</span><span class="category-pill" data-i18n="cat.Jótékonyság / támogatás">Jótékonyság / támogatás</span></div></div>
-<a class="textlink" data-i18n="common.openRelated" href="https://www.grazimagyaregyesuelet.at" rel="noopener" target="_blank">Kapcsolódó felület megnyitása →</a>
+<p data-i18n="member.desc.253">Az egész háló egyik <strong>legnagyobb történeti mélységű</strong> szereplője, 1888-as alapítással. Magyar bál, programok, fotóarchívum, életviteli tájékoztatók és anyanyelvi kezdeményezések révén egyszerre működik közösségi, kulturális és információs bázisként.</p><div class="activity-categories"><b>Kategóriák</b><div class="category-pills"><span class="category-pill" data-i18n="cat.Kultúra / művészet">Kultúra / művészet</span><span class="category-pill" data-i18n="cat.Oktatás / anyanyelv">Oktatás / anyanyelv</span><span class="category-pill" data-i18n="cat.Jótékonyság / támogatás">Jótékonyság / támogatás</span></div></div>
+<a class="textlink" href="https://www.grazimagyaregyesuelet.at" rel="noopener" target="_blank">Megnyitás →</a>
 </article>
-<article class="member" data-name="magyar egyetemisták és öregdiákok klubja" data-region="Stájerország">
+<article class="member lean-member" data-name="magyar egyetemisták és öregdiákok klubja" data-region="Stájerország">
 <div class="member-top"><span class="num">19</span><span class="tag" data-i18n="member.region.254">Stájerország</span><span class="tag soft" data-i18n="member.tag.255">Egyetemisták · sajtó · közösség</span></div>
 <h3>Magyar Egyetemisták és Öregdiákok Klubja</h3>
 <p class="place">Graz · ZVR-Zahl: 771855885</p>
-<p data-i18n="member.desc.256">A gráci magyar közélet <strong>központi háttérintézménye</strong>: diákszövetség, közösségszervező és sajtókiadói platform egyszerre. A Gráci Magyar Újság jogi-gazdasági hátterét adja, amely a dosszié szerint évente ötször, 420–460 példányban jelenik meg.</p><div class="activity-categories"><b data-i18n="member.categories.label">Foglalkozási kategóriák</b><div class="category-pills"><span class="category-pill" data-i18n="cat.Média / irodalom / kutatás">Média / irodalom / kutatás</span><span class="category-pill" data-i18n="cat.Szakmai / női / gazdasági háló">Szakmai / női / gazdasági háló</span><span class="category-pill" data-i18n="cat.Kultúra / művészet">Kultúra / művészet</span></div></div>
-<a class="textlink" data-i18n="common.openRelated" href="https://www.meoek.at" rel="noopener" target="_blank">Kapcsolódó felület megnyitása →</a>
+<p data-i18n="member.desc.256">A gráci magyar közélet <strong>központi háttérintézménye</strong>: diákszövetség, közösségszervező és sajtókiadói platform egyszerre. A Gráci Magyar Újság jogi-gazdasági hátterét adja, amely a dosszié szerint évente ötször, 420–460 példányban jelenik meg.</p><div class="activity-categories"><b>Kategóriák</b><div class="category-pills"><span class="category-pill" data-i18n="cat.Média / irodalom / kutatás">Média / irodalom / kutatás</span><span class="category-pill" data-i18n="cat.Szakmai / női / gazdasági háló">Szakmai / női / gazdasági háló</span><span class="category-pill" data-i18n="cat.Kultúra / művészet">Kultúra / művészet</span></div></div>
+<a class="textlink" href="https://www.meoek.at" rel="noopener" target="_blank">Megnyitás →</a>
 </article>
-<article class="member" data-name="gráci magyar katolikus közösség" data-region="Stájerország">
+<article class="member lean-member" data-name="gráci magyar katolikus közösség" data-region="Stájerország">
 <div class="member-top"><span class="num">20</span><span class="tag" data-i18n="member.region.257">Stájerország</span><span class="tag soft" data-i18n="member.tag.258">Egyházi közösség</span></div>
 <h3>Gráci Magyar Katolikus Közösség</h3>
 <p class="place">Graz</p>
-<p data-i18n="member.desc.259">A gráci magyarok <strong>stabil lelki és közösségi intézménye</strong>, amely magyar nyelvű miséket, kulturális előadásokat, gyermek- és ifjúsági rendezvényeket is szervez. A világi Pasztorális Tanács miatt nemcsak liturgikus, hanem <strong>közösségszervező térként</strong> is működik.</p><div class="activity-categories"><b data-i18n="member.categories.label">Foglalkozási kategóriák</b><div class="category-pills"><span class="category-pill" data-i18n="cat.Egyházi közösség">Egyházi közösség</span><span class="category-pill" data-i18n="cat.Kultúra / művészet">Kultúra / művészet</span><span class="category-pill" data-i18n="cat.Cserkészet / ifjúság">Cserkészet / ifjúság</span></div></div>
-<a class="textlink" data-i18n="common.openRelated" href="https://www.grazimagyaregyesuelet.at" rel="noopener" target="_blank">Kapcsolódó felület megnyitása →</a>
+<p data-i18n="member.desc.259">A gráci magyarok <strong>stabil lelki és közösségi intézménye</strong>, amely magyar nyelvű miséket, kulturális előadásokat, gyermek- és ifjúsági rendezvényeket is szervez. A világi Pasztorális Tanács miatt nemcsak liturgikus, hanem <strong>közösségszervező térként</strong> is működik.</p><div class="activity-categories"><b>Kategóriák</b><div class="category-pills"><span class="category-pill" data-i18n="cat.Egyházi közösség">Egyházi közösség</span><span class="category-pill" data-i18n="cat.Kultúra / művészet">Kultúra / művészet</span><span class="category-pill" data-i18n="cat.Cserkészet / ifjúság">Cserkészet / ifjúság</span></div></div>
+<a class="textlink" href="https://www.grazimagyaregyesuelet.at" rel="noopener" target="_blank">Megnyitás →</a>
 </article>
-<article class="member" data-name="femconnect graz" data-region="Stájerország">
+<article class="member lean-member" data-name="femconnect graz" data-region="Stájerország">
 <div class="member-top"><span class="num">21</span><span class="tag" data-i18n="member.region.260">Stájerország</span><span class="tag soft" data-i18n="member.tag.261">Női · kulturális közösség</span></div>
 <h3>FemConnect Graz</h3>
 <p class="place">Graz · ZVR-Zahl: 1550405774</p>
-<p data-i18n="member.desc.262">A legújabb és egyik <strong>legdinamikusabban brandelt</strong> tagszervezet, 2024-es alapítással. Kettős profilt épít: magyar kulturális programokat Graz és Stájerország közösségének, valamint <strong>nőket érintő beszélgetős esteket</strong>, partnerségekkel és támogató tagsági modellel.</p><div class="activity-categories"><b data-i18n="member.categories.label">Foglalkozási kategóriák</b><div class="category-pills"><span class="category-pill" data-i18n="cat.Szakmai / női / gazdasági háló">Szakmai / női / gazdasági háló</span><span class="category-pill" data-i18n="cat.Kultúra / művészet">Kultúra / művészet</span><span class="category-pill" data-i18n="cat.Média / irodalom / kutatás">Média / irodalom / kutatás</span></div></div>
-<a class="textlink" data-i18n="common.openRelated" href="https://femconnectgraz.at" rel="noopener" target="_blank">Kapcsolódó felület megnyitása →</a>
+<p data-i18n="member.desc.262">A legújabb és egyik <strong>legdinamikusabban brandelt</strong> tagszervezet, 2024-es alapítással. Kettős profilt épít: magyar kulturális programokat Graz és Stájerország közösségének, valamint <strong>nőket érintő beszélgetős esteket</strong>, partnerségekkel és támogató tagsági modellel.</p><div class="activity-categories"><b>Kategóriák</b><div class="category-pills"><span class="category-pill" data-i18n="cat.Szakmai / női / gazdasági háló">Szakmai / női / gazdasági háló</span><span class="category-pill" data-i18n="cat.Kultúra / művészet">Kultúra / művészet</span><span class="category-pill" data-i18n="cat.Média / irodalom / kutatás">Média / irodalom / kutatás</span></div></div>
+<a class="textlink" href="https://femconnectgraz.at" rel="noopener" target="_blank">Megnyitás →</a>
 </article>
-<article class="member" data-name="magyarház" data-region="Tirol">
+<article class="member lean-member" data-name="magyarház" data-region="Tirol">
 <div class="member-top"><span class="num">22</span><span class="tag">Tirol</span><span class="tag soft" data-i18n="member.tag.263">Diákotthon · kultúrcentrum</span></div>
 <h3>Magyarház</h3>
 <p class="place">Innsbruck · ZVR-Zahl: 768679342</p>
-<p data-i18n="member.desc.264">Az innsbrucki Magyarház a tiroli magyar közösség egyik <strong>központi fizikai infrastruktúrája</strong>: diákotthon, kultúrcentrum és közösségi rendezvénytér. Az IMEASZ, IMIKE, a cserkészek és a katolikus közösség programjai gyakran e tér köré szerveződnek.</p><div class="activity-categories"><b data-i18n="member.categories.label">Foglalkozási kategóriák</b><div class="category-pills"><span class="category-pill" data-i18n="cat.Kultúra / művészet">Kultúra / művészet</span><span class="category-pill" data-i18n="cat.Szakmai / női / gazdasági háló">Szakmai / női / gazdasági háló</span><span class="category-pill" data-i18n="cat.Oktatás / anyanyelv">Oktatás / anyanyelv</span></div></div>
-<a class="textlink" data-i18n="common.openRelated" href="https://huheim.at" rel="noopener" target="_blank">Kapcsolódó felület megnyitása →</a>
+<p data-i18n="member.desc.264">Az innsbrucki Magyarház a tiroli magyar közösség egyik <strong>központi fizikai infrastruktúrája</strong>: diákotthon, kultúrcentrum és közösségi rendezvénytér. Az IMEASZ, IMIKE, a cserkészek és a katolikus közösség programjai gyakran e tér köré szerveződnek.</p><div class="activity-categories"><b>Kategóriák</b><div class="category-pills"><span class="category-pill" data-i18n="cat.Kultúra / művészet">Kultúra / művészet</span><span class="category-pill" data-i18n="cat.Szakmai / női / gazdasági háló">Szakmai / női / gazdasági háló</span><span class="category-pill" data-i18n="cat.Oktatás / anyanyelv">Oktatás / anyanyelv</span></div></div>
+<a class="textlink" href="https://huheim.at" rel="noopener" target="_blank">Megnyitás →</a>
 </article>
-<article class="member" data-name="imike" data-region="Tirol">
+<article class="member lean-member" data-name="imike" data-region="Tirol">
 <div class="member-top"><span class="num">23</span><span class="tag">Tirol</span><span class="tag soft" data-i18n="member.tag.265">Ifjúság · kultúra · néptánc</span></div>
 <h3>IMIKE</h3>
 <p class="place">Innsbruck · ZVR-Zahl: 1109648674</p>
-<p data-i18n="member.desc.266">Az innsbrucki magyar <strong>ifjúsági és családos közösség</strong> egyik legaktívabb újabb szervezete. Néptáncpróbákat, gyerek- és ifjúsági programokat, kulturális esteket szervez, és szorosan együttműködik a Magyarházzal, a 79. sz. cserkészcsapattal és a NeveNincs Óvodával.</p><div class="activity-categories"><b data-i18n="member.categories.label">Foglalkozási kategóriák</b><div class="category-pills"><span class="category-pill" data-i18n="cat.Cserkészet / ifjúság">Cserkészet / ifjúság</span><span class="category-pill" data-i18n="cat.Kultúra / művészet">Kultúra / művészet</span><span class="category-pill" data-i18n="cat.Oktatás / anyanyelv">Oktatás / anyanyelv</span></div></div>
-<a class="textlink" data-i18n="common.openRelated" href="https://imike.org" rel="noopener" target="_blank">Kapcsolódó felület megnyitása →</a>
+<p data-i18n="member.desc.266">Az innsbrucki magyar <strong>ifjúsági és családos közösség</strong> egyik legaktívabb újabb szervezete. Néptáncpróbákat, gyerek- és ifjúsági programokat, kulturális esteket szervez, és szorosan együttműködik a Magyarházzal, a 79. sz. cserkészcsapattal és a NeveNincs Óvodával.</p><div class="activity-categories"><b>Kategóriák</b><div class="category-pills"><span class="category-pill" data-i18n="cat.Cserkészet / ifjúság">Cserkészet / ifjúság</span><span class="category-pill" data-i18n="cat.Kultúra / művészet">Kultúra / művészet</span><span class="category-pill" data-i18n="cat.Oktatás / anyanyelv">Oktatás / anyanyelv</span></div></div>
+<a class="textlink" href="https://imike.org" rel="noopener" target="_blank">Megnyitás →</a>
 </article>
-<article class="member" data-name="79. sz. dr. kozma györgy sj cserkészcsapat" data-region="Tirol">
+<article class="member lean-member" data-name="79. sz. dr. kozma györgy sj cserkészcsapat" data-region="Tirol">
 <div class="member-top"><span class="num">24</span><span class="tag">Tirol</span><span class="tag soft" data-i18n="member.tag.267">Cserkészet · ifjúság</span></div>
 <h3>79. sz. Dr. Kozma György SJ cserkészcsapat</h3>
 <p class="place">Innsbruck · ZVR-Zahl: 1109648674</p>
-<p data-i18n="member.desc.268">A tiroli magyar ifjúsági hálózat <strong>cserkészszervezete</strong>, amely a Magyarházzal, az IMIKE-val és a katolikus közösséggel együtt mozog. A dosszié szerint működésének fókusza a magyar cserkésznevelés, a közösségi alkalmak és a gyerek-fiatal korosztály <strong>identitásőrző programjai</strong>.</p><div class="activity-categories"><b data-i18n="member.categories.label">Foglalkozási kategóriák</b><div class="category-pills"><span class="category-pill" data-i18n="cat.Cserkészet / ifjúság">Cserkészet / ifjúság</span><span class="category-pill" data-i18n="cat.Oktatás / anyanyelv">Oktatás / anyanyelv</span><span class="category-pill" data-i18n="cat.Kultúra / művészet">Kultúra / művészet</span></div></div>
-<a class="textlink" data-i18n="common.openRelated" href="https://www.kozpontiszovetseg.at/tagszervezetek" rel="noopener" target="_blank">Kapcsolódó felület megnyitása →</a>
+<p data-i18n="member.desc.268">A tiroli magyar ifjúsági hálózat <strong>cserkészszervezete</strong>, amely a Magyarházzal, az IMIKE-val és a katolikus közösséggel együtt mozog. A dosszié szerint működésének fókusza a magyar cserkésznevelés, a közösségi alkalmak és a gyerek-fiatal korosztály <strong>identitásőrző programjai</strong>.</p><div class="activity-categories"><b>Kategóriák</b><div class="category-pills"><span class="category-pill" data-i18n="cat.Cserkészet / ifjúság">Cserkészet / ifjúság</span><span class="category-pill" data-i18n="cat.Oktatás / anyanyelv">Oktatás / anyanyelv</span><span class="category-pill" data-i18n="cat.Kultúra / művészet">Kultúra / művészet</span></div></div>
+<a class="textlink" href="https://www.kozpontiszovetseg.at/tagszervezetek" rel="noopener" target="_blank">Megnyitás →</a>
 </article>
-<article class="member" data-name="imeasz" data-region="Tirol">
+<article class="member lean-member" data-name="imeasz" data-region="Tirol">
 <div class="member-top"><span class="num">25</span><span class="tag">Tirol</span><span class="tag soft" data-i18n="member.tag.269">Akadémiai · egyetemista közösség</span></div>
 <h3>IMEASZ</h3>
 <p class="place">Innsbruck · ZVR-Zahl: 397763991</p>
-<p data-i18n="member.desc.270">A tiroli magyar <strong>akadémiai és értelmiségi infrastruktúra</strong> történetileg legerősebb szervezete, 1958-as alapítással és 1949-ig visszanyúló diákszövetségi előzményekkel. Célja a magyar öntudat, kulturális kapcsolat és egyetemi-közösségi háló fenntartása.</p><div class="activity-categories"><b data-i18n="member.categories.label">Foglalkozási kategóriák</b><div class="category-pills"><span class="category-pill" data-i18n="cat.Szakmai / női / gazdasági háló">Szakmai / női / gazdasági háló</span><span class="category-pill" data-i18n="cat.Média / irodalom / kutatás">Média / irodalom / kutatás</span><span class="category-pill" data-i18n="cat.Kultúra / művészet">Kultúra / művészet</span></div></div>
-<a class="textlink" data-i18n="common.openRelated" href="https://www.imeasz.at" rel="noopener" target="_blank">Kapcsolódó felület megnyitása →</a>
+<p data-i18n="member.desc.270">A tiroli magyar <strong>akadémiai és értelmiségi infrastruktúra</strong> történetileg legerősebb szervezete, 1958-as alapítással és 1949-ig visszanyúló diákszövetségi előzményekkel. Célja a magyar öntudat, kulturális kapcsolat és egyetemi-közösségi háló fenntartása.</p><div class="activity-categories"><b>Kategóriák</b><div class="category-pills"><span class="category-pill" data-i18n="cat.Szakmai / női / gazdasági háló">Szakmai / női / gazdasági háló</span><span class="category-pill" data-i18n="cat.Média / irodalom / kutatás">Média / irodalom / kutatás</span><span class="category-pill" data-i18n="cat.Kultúra / művészet">Kultúra / művészet</span></div></div>
+<a class="textlink" href="https://www.imeasz.at" rel="noopener" target="_blank">Megnyitás →</a>
 </article>
-<article class="member" data-name="innsbrucki magyar katolikus közösség" data-region="Tirol">
+<article class="member lean-member" data-name="innsbrucki magyar katolikus közösség" data-region="Tirol">
 <div class="member-top"><span class="num">26</span><span class="tag">Tirol</span><span class="tag soft" data-i18n="member.tag.271">Egyházi közösség</span></div>
 <h3>Innsbrucki Magyar Katolikus Közösség</h3>
 <p class="place">Innsbruck</p>
-<p data-i18n="member.desc.272">A tiroli magyar élet <strong>integráló egyházi eleme</strong>, amely liturgikus és közösségi téren is összeköti a régió szervezeteit. A Magyar Házhoz kapcsolódó jelenléte miatt a szentmisék mellett <strong>családi, ifjúsági és közösségi kapcsolódási pontként</strong> is működik.</p><div class="activity-categories"><b data-i18n="member.categories.label">Foglalkozási kategóriák</b><div class="category-pills"><span class="category-pill" data-i18n="cat.Egyházi közösség">Egyházi közösség</span><span class="category-pill" data-i18n="cat.Cserkészet / ifjúság">Cserkészet / ifjúság</span><span class="category-pill" data-i18n="cat.Kultúra / művészet">Kultúra / művészet</span></div></div>
-<a class="textlink" data-i18n="common.openRelated" href="https://ausztria.katolikus.at" rel="noopener" target="_blank">Kapcsolódó felület megnyitása →</a>
+<p data-i18n="member.desc.272">A tiroli magyar élet <strong>integráló egyházi eleme</strong>, amely liturgikus és közösségi téren is összeköti a régió szervezeteit. A Magyar Házhoz kapcsolódó jelenléte miatt a szentmisék mellett <strong>családi, ifjúsági és közösségi kapcsolódási pontként</strong> is működik.</p><div class="activity-categories"><b>Kategóriák</b><div class="category-pills"><span class="category-pill" data-i18n="cat.Egyházi közösség">Egyházi közösség</span><span class="category-pill" data-i18n="cat.Cserkészet / ifjúság">Cserkészet / ifjúság</span><span class="category-pill" data-i18n="cat.Kultúra / művészet">Kultúra / művészet</span></div></div>
+<a class="textlink" href="https://ausztria.katolikus.at" rel="noopener" target="_blank">Megnyitás →</a>
 </article>
-<article class="member" data-name="vorarlbergi magyar egyesület" data-region="Vorarlberg">
+<article class="member lean-member" data-name="vorarlbergi magyar egyesület" data-region="Vorarlberg">
 <div class="member-top"><span class="num">27</span><span class="tag">Vorarlberg</span><span class="tag soft" data-i18n="member.tag.273">Anyanyelvi oktatás · kultúra</span></div>
 <h3>Vorarlbergi Magyar Egyesület</h3>
 <p class="place">Altach / Feldkirch · ZVR-Zahl: 1582502393</p>
-<p data-i18n="member.desc.274">Fiatal regionális tagszervezet, amely <strong>nagyon világos misszióval</strong> lépett be a hálózatba: a fiatalok anyanyelvi oktatásának fejlesztése és a Vorarlbergben élő magyarok kulturális identitásának erősítése. A gyermekek és családok köré épített programlogikája <strong>generációs befektetés</strong>.</p><div class="activity-categories"><b data-i18n="member.categories.label">Foglalkozási kategóriák</b><div class="category-pills"><span class="category-pill" data-i18n="cat.Oktatás / anyanyelv">Oktatás / anyanyelv</span><span class="category-pill" data-i18n="cat.Kultúra / művészet">Kultúra / művészet</span><span class="category-pill" data-i18n="cat.Cserkészet / ifjúság">Cserkészet / ifjúság</span></div></div>
-<a class="textlink" data-i18n="common.openRelated" href="https://www.kozpontiszovetseg.at/tagszervezetek" rel="noopener" target="_blank">Kapcsolódó felület megnyitása →</a>
+<p data-i18n="member.desc.274">Fiatal regionális tagszervezet, amely <strong>nagyon világos misszióval</strong> lépett be a hálózatba: a fiatalok anyanyelvi oktatásának fejlesztése és a Vorarlbergben élő magyarok kulturális identitásának erősítése. A gyermekek és családok köré épített programlogikája <strong>generációs befektetés</strong>.</p><div class="activity-categories"><b>Kategóriák</b><div class="category-pills"><span class="category-pill" data-i18n="cat.Oktatás / anyanyelv">Oktatás / anyanyelv</span><span class="category-pill" data-i18n="cat.Kultúra / művészet">Kultúra / művészet</span><span class="category-pill" data-i18n="cat.Cserkészet / ifjúság">Cserkészet / ifjúság</span></div></div>
+<a class="textlink" href="https://www.kozpontiszovetseg.at/tagszervezetek" rel="noopener" target="_blank">Megnyitás →</a>
 </article>
-<article class="member" data-name="mi magyarok egymásért" data-region="Vorarlberg">
+<article class="member lean-member" data-name="mi magyarok egymásért" data-region="Vorarlberg">
 <div class="member-top"><span class="num">28</span><span class="tag">Vorarlberg</span><span class="tag soft" data-i18n="member.tag.275">Közösség · oktatás · szociális támogatás</span></div>
 <h3>Mi Magyarok Egymásért</h3>
 <p class="place">Feldkirch · ZVR-Zahl: 1802432708</p>
-<p data-i18n="member.desc.276">A vorarlbergi magyar közösségi intézményesülés másik <strong>új pólusa</strong>, 2023-as feldkirchi alapítással. Anyanyelvi programokat, közösségi szervezést és szociálisan érzékeny támogatási logikát visz; a dosszié 2024-re <strong>22 aktív résztvevőt</strong> és gyermekprogramokat említ.</p><div class="activity-categories"><b data-i18n="member.categories.label">Foglalkozási kategóriák</b><div class="category-pills"><span class="category-pill" data-i18n="cat.Oktatás / anyanyelv">Oktatás / anyanyelv</span><span class="category-pill" data-i18n="cat.Kultúra / művészet">Kultúra / művészet</span><span class="category-pill" data-i18n="cat.Jótékonyság / támogatás">Jótékonyság / támogatás</span></div></div>
-<a class="textlink" data-i18n="common.openRelated" href="https://www.kozpontiszovetseg.at/tagszervezetek" rel="noopener" target="_blank">Kapcsolódó felület megnyitása →</a>
+<p data-i18n="member.desc.276">A vorarlbergi magyar közösségi intézményesülés másik <strong>új pólusa</strong>, 2023-as feldkirchi alapítással. Anyanyelvi programokat, közösségi szervezést és szociálisan érzékeny támogatási logikát visz; a dosszié 2024-re <strong>22 aktív résztvevőt</strong> és gyermekprogramokat említ.</p><div class="activity-categories"><b>Kategóriák</b><div class="category-pills"><span class="category-pill" data-i18n="cat.Oktatás / anyanyelv">Oktatás / anyanyelv</span><span class="category-pill" data-i18n="cat.Kultúra / művészet">Kultúra / művészet</span><span class="category-pill" data-i18n="cat.Jótékonyság / támogatás">Jótékonyság / támogatás</span></div></div>
+<a class="textlink" href="https://www.kozpontiszovetseg.at/tagszervezetek" rel="noopener" target="_blank">Megnyitás →</a>
 </article></div></div><p class="source-note" data-i18n="source.note">Forrásalap: a Központi Szövetség nyilvános tagszervezeti oldala és a csatolt tagszervezeti feltáró dosszié. A térképpontok a városi vagy régiós működési központot jelölik, nem minden esetben pontos postacímet.</p></div></section>
 <section class="help" id="miben-segit"><div class="shead" style="padding-top:0"><div class="k" data-i18n="help.k">Miben tud segíteni a DÖR?</div><h2 data-i18n="help.h2">A láthatóságból működési erő lesz.</h2><p data-i18n="help.p">A cél nem az, hogy a rendszer „felülről” megmondja, ki mit képvisel. A cél az, hogy a már működő közösségi munka látható, kereshető, támogatható és generációváltásra alkalmas legyen.</p></div><div class="help-grid"><div class="help-card"><h3 data-i18n="help.h.280">Közös adatlap és frissíthető profil</h3><p data-i18n="help.p.281">Minden tagszervezetnek egységes minimum-adatlapja lehet: tevékenység, programok, régió, kapcsolat, nyelvek és működési fókusz.</p></div><div class="help-card"><h3 data-i18n="help.h.282">Közös programnaptár és programszállítás</h3><p data-i18n="help.p.283">A szervezetek eseményei nem elszigetelten jelennek meg. Láthatóvá válik, mit lehet Bécsből Grazba, Salzburgba, Linzbe vagy Tirolba továbbvinni.</p></div><div class="help-card"><h3 data-i18n="help.h.284">Fiatal szerkesztők és utánpótlás</h3><p data-i18n="help.p.285">A fiatalok nem csak célcsoportként, hanem működtetőként kapcsolódhatnak be: tartalom, archívum, esemény, digitális profil és működési visszajelzés.</p></div><div class="help-card"><h3 data-i18n="help.h.286">Átláthatóbb döntés-előkészítés</h3><p data-i18n="help.p.287">A hálózat erősségei, hiányzó adatai és régiós kapcsolódásai egy felületen láthatók. Ez szakmai és szervezeti döntés-előkészítésnél erős alap, de nem támogatási rangsor.</p></div><div class="help-card"><h3 data-i18n="help.h.288">Autonómia és adatvédelmi tűzfal</h3><p data-i18n="help.p.289">A rendszer nem gyűjt politikai adatot, nem jelöl ki képviselőt és nem oszt támogatást. A szervezeti kontroll és az önkéntesség alapelv.</p></div><div class="help-card"><h3 data-i18n="help.h.290">Forrás- és együttműködési térkép</h3><p data-i18n="help.p.291">Megmutatja, hol vannak erős oktatási, kulturális, egyházi, ifjúsági vagy szakmai csomópontok, és hol érdemes közös fejlesztést indítani.</p></div></div></section>
 <section class="contact-section" id="kapcsolat">
@@ -4109,7 +4171,6 @@ AUDIT v56:
 - Active handler: initHeroAccordionLinks.
 - Buttons now toggle .links-open on their own parent card.
 -->
-
 <!--
 FINAL FUNCTIONAL AUDIT:
 - Fixed buttons missing type="button": 15; remaining: 0.
@@ -4122,8 +4183,6 @@ FINAL FUNCTIONAL AUDIT:
 - Mobile width hardening present: True.
 - DÖR link and password present: True.
 -->
-
-
 <!--
 AUDIT v61:
 - Desktop-only floating hero link panels added.
@@ -4237,6 +4296,71 @@ AUDIT v61:
     n.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();select(r);}});
   });
   select('Bécs');
+})();
+</script>
+<script>
+(function(){
+  // Collapsible subnodes toggle functionality for both main and sub levels
+  
+  // Main level toggle (Magyar Iskola)
+  var mainToggles = document.querySelectorAll('.h-node-collapsible .node-toggle');
+  mainToggles.forEach(function(btn) {
+    btn.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      var article = btn.closest('.h-node-collapsible');
+      article.classList.toggle('closed');
+      btn.setAttribute('aria-expanded', !article.classList.contains('closed'));
+    });
+  });
+  
+  // Sub level toggle (VIPACH & Musical) - csak a linkeket nyissa/csukja
+  var subToggles = document.querySelectorAll('.subnode-collapsible .subnode-toggle');
+  subToggles.forEach(function(btn) {
+    btn.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      var subnode = btn.closest('.subnode-collapsible');
+      var linksContainer = subnode.querySelector('.links-container');
+      if (linksContainer) {
+        linksContainer.classList.toggle('collapsed');
+        btn.setAttribute('aria-expanded', !linksContainer.classList.contains('collapsed'));
+        btn.classList.toggle('rotated');
+      }
+    });
+  });
+  
+  // Links toggle (Kapcsolódó linkek gomb - nyíl forgatása)
+  var linksToggles = document.querySelectorAll('.subnode-collapsible .links-toggle');
+  linksToggles.forEach(function(btn) {
+    btn.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      var linksContainer = btn.closest('.links-container');
+      if (linksContainer) {
+        linksContainer.classList.toggle('collapsed');
+        btn.setAttribute('aria-expanded', !linksContainer.classList.contains('collapsed'));
+      }
+    });
+  });
+  
+  // Initialize regionSelect with Bécs selected
+  var regionSelect = document.getElementById('regionSelect');
+  if (regionSelect) {
+    regionSelect.addEventListener('change', function(e) {
+      var region = e.target.value;
+      var buttons = document.querySelectorAll('.controls .control');
+      buttons.forEach(function(btn) {
+        btn.classList.toggle('active', btn.getAttribute('data-region') === region);
+      });
+      if (region !== 'all') {
+        var geoNodes = document.querySelectorAll('.geo-node[data-region="' + region + '"]');
+        if (geoNodes.length > 0) {
+          geoNodes[0].click();
+        }
+      }
+    });
+  }
 })();
 </script>
 </body>
