@@ -1,0 +1,126 @@
+name: One-time DOR separation migration
+
+on:
+  push:
+    paths:
+      - '.github/workflows/remove-dor-from-ecosystem.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  migrate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Remove DOR-specific content from ecosystem page
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+
+          p = Path('index.html')
+          s = p.read_text(encoding='utf-8')
+          before = s
+
+          # Public metadata: ecosystem page is about the Central Association and member network only.
+          replacements = {
+            'Központi Szövetség · Döntéshozói áttekintés · Online ökoszisztéma · DÖR 2026': 'Központi Szövetség · Döntéshozói áttekintés · Online ökoszisztéma',
+            'Döntéshozói áttekintés az Ausztriai Magyar Egyesületek és Szervezetek Központi Szövetségéről, online ökoszisztémájáról, tagszervezeti hálózatáról és a DÖR 2026 pilotról.': 'Döntéshozói áttekintés az Ausztriai Magyar Egyesületek és Szervezetek Központi Szövetségéről, online ökoszisztémájáról és tagszervezeti hálózatáról.',
+            'Central Association · Executive Overview · Online Ecosystem · DÖR 2026': 'Central Association · Executive Overview · Online Ecosystem',
+            'Executive overview of the Central Association of Hungarian Associations and Organisations in Austria, its online ecosystem, member-organisation network and the DÖR 2026 pilot.': 'Executive overview of the Central Association of Hungarian Associations and Organisations in Austria, its online ecosystem and member-organisation network.',
+            'Zentralverband · Entscheiderüberblick · Online-Ökosystem · DÖR 2026': 'Zentralverband · Entscheiderüberblick · Online-Ökosystem',
+            'Entscheiderüberblick über den Zentralverband Ungarischer Vereine und Organisationen in Österreich, sein Online-Ökosystem, das Netzwerk der Mitgliedsorganisationen und den DÖR-2026-Pilot.': 'Entscheiderüberblick über den Zentralverband Ungarischer Vereine und Organisationen in Österreich, sein Online-Ökosystem und das Netzwerk der Mitgliedsorganisationen.',
+            'Ez az oldal ezt a szervezeti szerepet mutatja be a mai digitális működési rétegben: az online ökoszisztémát, a tagszervezeti hálózatot és a DÖR 2026 pilotot.': 'Ez az oldal ezt a szervezeti szerepet mutatja be a mai digitális működési rétegben: az online ökoszisztémát és a tagszervezeti hálózatot.',
+            'This page presents the organisation’s role in its current digital operating layer: the online ecosystem, the member-organisation network and the DÖR 2026 pilot.': 'This page presents the organisation’s role in its current digital operating layer: the online ecosystem and the member-organisation network.',
+            'Diese Seite zeigt diese organisatorische Rolle in ihrer heutigen digitalen Betriebsebene: das Online-Ökosystem, das Netzwerk der Mitgliedsorganisationen und den DÖR-2026-Pilot.': 'Diese Seite zeigt diese organisatorische Rolle in ihrer heutigen digitalen Betriebsebene: das Online-Ökosystem und das Netzwerk der Mitgliedsorganisationen.',
+            'Miben tud segíteni a DÖR?': 'Mit ad a közös online ökoszisztéma?',
+            'How can DÖR help?': 'What does the shared online ecosystem provide?',
+            'Wie kann DÖR helfen?': 'Was bietet das gemeinsame Online-Ökosystem?',
+          }
+          for a,b in replacements.items():
+              s = s.replace(a,b)
+
+          # Remove DOR-only navigation, summary, pilot and decision-guarantee sections.
+          s = re.sub(r'<a[^>]*data-i18n="nav\.dor"[^>]*>.*?</a>', '', s, flags=re.S)
+          s = re.sub(r'<a[^>]*data-i18n="nav\.guarantees"[^>]*>.*?</a>', '', s, flags=re.S)
+          s = re.sub(r'<div><b data-i18n="summary\.dor\.title">.*?</div>', '', s, flags=re.S)
+          s = re.sub(r'<section class="dor" id="dor">.*?</section>', '', s, flags=re.S)
+          s = re.sub(r'<section class="help decision-guarantees" id="dontohozoi-garanciak">.*?</section>', '', s, flags=re.S)
+
+          # Remove DOR-specific intro card if present.
+          s = re.sub(r'<div class="intro-card">\s*<h3[^>]*data-i18n="intro\.card3\.h".*?</div>', '', s, flags=re.S)
+
+          # Footer demo links: HU source and escaped translation variants.
+          s = re.sub(r'\s*·\s*DÖR bemutató:\s*<a[^>]*diaszpora\.vipach\.at[^>]*>diaszpora\.vipach\.at</a>', '', s, flags=re.S)
+          s = re.sub(r'\s*·\s*DÖR demo:\s*<a[^>]*diaszpora\.vipach\.at[^>]*>diaszpora\.vipach\.at</a>', '', s, flags=re.S)
+          s = re.sub(r'\s*·\s*DÖR-Demo:\s*<a[^>]*diaszpora\.vipach\.at[^>]*>diaszpora\.vipach\.at</a>', '', s, flags=re.S)
+          s = re.sub(r'\\s*·\\s*DÖR (?:bemutató|demo|Demo):.*?diaszpora\.vipach\.at.*?</a>', '', s, flags=re.S)
+
+          # Translation entries that exclusively belonged to removed DOR UI.
+          key_patterns = [
+            r'nav\.dor', r'nav\.guarantees', r'summary\.dor\.(?:title|text)',
+            r'dor(?:\.|card\.)[^"\\]*', r'dq(?:\.|$)[^"\\]*', r'intro\.card3\.[hp]'
+          ]
+          for kp in key_patterns:
+              s = re.sub(r'"' + kp + r'":\{"en":"(?:\\.|[^"\\])*","de":"(?:\\.|[^"\\])*"\},?', '', s)
+
+          # Dead styling/selectors and keyword-emphasis references from removed pilot UI.
+          s = re.sub(r'\.dor\{[^}]*\}', '', s)
+          s = re.sub(r'\.dor-wrap\{[^}]*\}', '', s)
+          s = re.sub(r'\.dor-hero\{[^}]*\}', '', s)
+          s = re.sub(r'\.dor-hero::before\{[^}]*\}', '', s)
+          s = re.sub(r'\.dor-hero>\*\{[^}]*\}', '', s)
+          s = re.sub(r'\.dor-hero \.k\{[^}]*\}', '', s)
+          s = re.sub(r'\.dor-hero h2\{[^}]*\}', '', s)
+          s = re.sub(r'\.dor-hero p\{[^}]*\}', '', s)
+          s = re.sub(r'\.dor-grid\{[^}]*\}', '', s)
+          s = re.sub(r'\.dor-card h3\{[^}]*\}', '', s)
+          s = re.sub(r'\.dor-card p\{[^}]*\}', '', s)
+          s = s.replace(',.dor-hero p,.dor-card p', '')
+          s = s.replace("'DÖR 2026',", '').replace("'DÖR-2026',", '')
+
+          # Remove audit-comment lines that referred only to the now-separated project.
+          s = '\n'.join(line for line in s.splitlines() if 'DÖR link and password' not in line)
+
+          # Strong safety gate: no DOR branding/project reference may remain in this ecosystem artifact.
+          leftovers = [(i+1,line[:500]) for i,line in enumerate(s.splitlines()) if 'dör' in line.lower() or 'diaszpora.vipach.at' in line.lower()]
+          if leftovers:
+              print('Residual DOR references remain; refusing to commit:')
+              for row in leftovers[:30]: print(row)
+              raise SystemExit(2)
+
+          # Basic structural smoke gates.
+          required = ['<title>', 'id="hierarchia"', 'id="terkep"', 'id="kapcsolat"', 'const TRANSLATIONS', '</html>']
+          missing = [x for x in required if x not in s]
+          if missing:
+              raise SystemExit('Structural smoke failed, missing: ' + ', '.join(missing))
+          if s == before:
+              raise SystemExit('No changes made')
+
+          p.write_text(s, encoding='utf-8')
+          print('Migration OK; bytes:', len(before.encode()), '->', len(s.encode()))
+          PY
+      - name: Validate HTML content
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          s=Path('index.html').read_text(encoding='utf-8')
+          assert 'DÖR' not in s and 'diaszpora.vipach.at' not in s
+          assert '<title>Központi Szövetség · Döntéshozói áttekintés · Online ökoszisztéma</title>' in s
+          assert s.count('<section') == s.count('</section>')
+          assert s.count('<script') == s.count('</script>')
+          print('Content gates passed')
+          PY
+      - name: Commit migration
+        run: |
+          if git diff --quiet -- index.html; then
+            echo 'No diff'; exit 1
+          fi
+          git config user.name 'ecosystem-steward[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add index.html
+          git commit -m 'Separate DOR from Central ecosystem overview'
+          git push
