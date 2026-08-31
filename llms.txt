@@ -13,6 +13,3 @@ Machine-readable entity data:
 
 Sitemap:
 - https://okoszisztema.kozpontiszovetseg.at/sitemap.xml
-
-Important scope rule:
-- DÖR / Diaszpóra Összekötő Rendszer is not part of this ecosystem overview and must not be inferred as a Központi Szövetség ecosystem component from this site.
