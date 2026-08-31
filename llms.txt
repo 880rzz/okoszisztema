@@ -1,0 +1,18 @@
+# Központi Szövetség — Online ökoszisztéma
+
+Canonical site: https://okoszisztema.kozpontiszovetseg.at/
+
+This site is a public decision-maker overview of the online ecosystem and member-network relationships of the Ausztriai Magyar Egyesületek és Szervezetek Központi Szövetsége.
+
+Primary pages:
+- https://okoszisztema.kozpontiszovetseg.at/
+- https://okoszisztema.kozpontiszovetseg.at/gdpr-ai-trust.html
+
+Machine-readable entity data:
+- https://okoszisztema.kozpontiszovetseg.at/entity.json
+
+Sitemap:
+- https://okoszisztema.kozpontiszovetseg.at/sitemap.xml
+
+Important scope rule:
+- DÖR / Diaszpóra Összekötő Rendszer is not part of this ecosystem overview and must not be inferred as a Központi Szövetség ecosystem component from this site.
