@@ -5,17 +5,43 @@
       "@type": "Organization",
       "@id": "https://www.kozpontiszovetseg.at/#organization",
       "name": "Ausztriai Magyar Egyesületek és Szervezetek Központi Szövetsége",
-      "url": "https://www.kozpontiszovetseg.at/"
+      "url": "https://www.kozpontiszovetseg.at/",
+      "subOrganization": [
+        {"@id": "https://www.magyariskola.at/#school"}
+      ]
+    },
+    {
+      "@type": "EducationalOrganization",
+      "@id": "https://www.magyariskola.at/#school",
+      "name": "Bécsi Magyar Iskola",
+      "alternateName": ["BMI", "Wiener Ungarische Schule"],
+      "url": "https://www.magyariskola.at/",
+      "parentOrganization": {"@id": "https://www.kozpontiszovetseg.at/#organization"},
+      "subjectOf": [
+        {"@id": "https://programvalaszto.magyariskola.at/#website"},
+        {"@id": "https://tanarok.magyariskola.at/#website"},
+        {"@id": "https://zenebona.magyariskola.at/#website"},
+        {"@id": "https://taltosdob.magyariskola.at/#website"},
+        {"@id": "https://2026.magyariskola.at/#website"},
+        {"@id": "https://www.vipach.at/#website"},
+        {"@id": "https://www.musicaltarsulat.at/#website"}
+      ]
     },
     {
       "@type": "WebSite",
       "@id": "https://okoszisztema.kozpontiszovetseg.at/#website",
       "url": "https://okoszisztema.kozpontiszovetseg.at/",
       "name": "Központi Szövetség · Online ökoszisztéma",
-      "publisher": {
-        "@id": "https://www.kozpontiszovetseg.at/#organization"
-      },
-      "inLanguage": "hu"
-    }
+      "publisher": {"@id": "https://www.kozpontiszovetseg.at/#organization"},
+      "inLanguage": "hu",
+      "about": {"@id": "https://www.kozpontiszovetseg.at/#organization"}
+    },
+    {"@type":"WebSite","@id":"https://programvalaszto.magyariskola.at/#website","url":"https://programvalaszto.magyariskola.at/","name":"Bécsi Magyar Iskola – Programválasztó","isPartOf":{"@id":"https://www.magyariskola.at/#school"}},
+    {"@type":"WebSite","@id":"https://tanarok.magyariskola.at/#website","url":"https://tanarok.magyariskola.at/","name":"Bécsi Magyar Iskola – Tanáraink","isPartOf":{"@id":"https://www.magyariskola.at/#school"}},
+    {"@type":"WebSite","@id":"https://zenebona.magyariskola.at/#website","url":"https://zenebona.magyariskola.at/","name":"ZENEBONA","isPartOf":{"@id":"https://www.magyariskola.at/#school"}},
+    {"@type":"WebSite","@id":"https://taltosdob.magyariskola.at/#website","url":"https://taltosdob.magyariskola.at/","name":"Világfa Sárkányai","isPartOf":{"@id":"https://www.magyariskola.at/#school"}},
+    {"@type":"WebSite","@id":"https://2026.magyariskola.at/#website","url":"https://2026.magyariskola.at/","name":"Bécsi Magyar Iskola – 2025/26-os tanév beszámoló","isPartOf":{"@id":"https://www.magyariskola.at/#school"}},
+    {"@type":"WebSite","@id":"https://www.vipach.at/#website","url":"https://www.vipach.at/","name":"VIPACH – Vienna Photo Art & Creative Hub","isPartOf":{"@id":"https://www.magyariskola.at/#school"}},
+    {"@type":"WebSite","@id":"https://www.musicaltarsulat.at/#website","url":"https://www.musicaltarsulat.at/","name":"Bécsi Magyar Musical Társulat","isPartOf":{"@id":"https://www.magyariskola.at/#school"}}
   ]
 }
