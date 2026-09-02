@@ -1,0 +1,27 @@
+name: Merge member press evidence 20260902
+
+on:
+  push:
+    paths:
+      - '.github/workflows/merge-member-press-evidence-20260902.yml'
+      - 'tools/merge_member_press_evidence.py'
+      - 'member-press-evidence.json'
+
+permissions:
+  contents: write
+
+jobs:
+  merge:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Merge ORF and Rólunk evidence into member data
+        run: python3 tools/merge_member_press_evidence.py
+      - name: Commit enriched member data
+        run: |
+          git config user.name "ecosystem-steward[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add member-organizations.json
+          git diff --cached --quiet && exit 0
+          git commit -m "Enrich member organizations from ORF and Rólunk press evidence"
+          git push
