@@ -1,0 +1,27 @@
+name: Apply full Központi ecosystem audit 20260902
+
+on:
+  push:
+    paths:
+      - '.github/workflows/apply-full-ecosystem-audit-20260902.yml'
+      - 'tools/apply_full_ecosystem_audit.py'
+      - 'member-research.json'
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Apply full ecosystem audit
+        run: python3 tools/apply_full_ecosystem_audit.py
+      - name: Commit audited ecosystem
+        run: |
+          git config user.name "ecosystem-steward[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html member-organizations.json central-association.json entity.json llms.txt
+          git diff --cached --quiet && exit 0
+          git commit -m "Apply full Központi ecosystem historical and press audit"
+          git push
