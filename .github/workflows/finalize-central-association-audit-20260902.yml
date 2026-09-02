@@ -1,0 +1,152 @@
+name: Finalize Central Association ecosystem audit 20260902
+on:
+  push:
+    paths:
+      - '.github/workflows/finalize-central-association-audit-20260902.yml'
+permissions:
+  contents: write
+jobs:
+  audit-and-fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Reconcile visible ecosystem with canonical member network
+        shell: python
+        run: |
+          from pathlib import Path
+          import json, re
+
+          p = Path('index.html')
+          s = p.read_text(encoding='utf-8')
+
+          # Austrian Hungarian locale for this Austrian organization.
+          s = s.replace('content="hu_HU" property="og:locale"', 'content="hu_AT" property="og:locale"')
+
+          # Official member directory currently contains 28 published entries; BMI is a separate educational subsystem.
+          s = s.replace('<strong data-i18n="region.Bécs.143">Bécs</strong><em data-i18n="term.11 szervezet.144">11 szervezet</em>',
+                        '<strong data-i18n="region.Bécs.143">Bécs</strong><em>10 szervezet</em>')
+          s = re.sub(r'<li>Bécsi Magyar Iskola\s*<small[^>]*>oktatás · anyanyelv</small></li>', '', s, count=1)
+          s = s.replace('<div class="stat"><b>11</b><span data-i18n="region.Bécs.164">Bécs</span></div>',
+                        '<div class="stat"><b>10</b><span data-i18n="region.Bécs.164">Bécs</span></div>')
+          s = s.replace('29 tagszervezet látható.', '28 tagszervezet látható.')
+          s = s.replace('A 29 kártya marad. Az ismétlés kikerült.', 'A 28 hivatalos tagszervezeti kártya.')
+          s = s.replace('29 member organisations', '28 member organisations')
+          s = s.replace('29 member organizations', '28 member organizations')
+          s = s.replace('29 Mitgliedsorganisationen', '28 Mitgliedsorganisationen')
+          s = s.replace('29 tagszervezet', '28 tagszervezet')
+
+          # Remove BMI only from the member catalogue, never from the educational ecosystem sections.
+          s, removed = re.subn(
+              r'\n?<article class="member lean-member" data-name="bécsi magyar iskola" data-region="Bécs">.*?</article>\n?',
+              '\n', s, count=1, flags=re.S)
+          if removed != 1:
+              raise SystemExit(f'Expected exactly one BMI member-card removal, got {removed}')
+
+          # Re-number all remaining directory cards sequentially.
+          article_pat = re.compile(r'(<article class="member lean-member".*?</article>)', re.S)
+          counter = 0
+          def renumber(match):
+              nonlocal_holder[0] += 1
+              block = match.group(1)
+              return re.sub(r'<span class="num">\d+</span>', f'<span class="num">{nonlocal_holder[0]:02d}</span>', block, count=1)
+          nonlocal_holder = [0]
+          s = article_pat.sub(renumber, s)
+
+          # Strengthen the embedded Organization JSON-LD while keeping the full 28-node graph in entity.json.
+          ld_pat = re.compile(r'<script type="application/ld\+json">(\{.*?\})</script>', re.S)
+          m = ld_pat.search(s)
+          if not m:
+              raise SystemExit('Embedded JSON-LD not found')
+          org = json.loads(m.group(1))
+          org['@id'] = 'https://www.kozpontiszovetseg.at/#organization'
+          org['foundingDate'] = '1980-02-09'
+          org['identifier'] = {'@type':'PropertyValue','propertyID':'ZVR-Zahl','value':'079797621'}
+          org['address'] = {
+              '@type':'PostalAddress',
+              'streetAddress':'Schwedenplatz 2; bejárat: Laurenzerberg 5; 1. em., 8-9. ajtó',
+              'postalCode':'1010',
+              'addressLocality':'Wien',
+              'addressCountry':'AT'
+          }
+          org['subjectOf'] = [
+              'https://okoszisztema.kozpontiszovetseg.at/central-association.json',
+              'https://okoszisztema.kozpontiszovetseg.at/member-organizations.json',
+              'https://okoszisztema.kozpontiszovetseg.at/entity.json'
+          ]
+          s = s[:m.start(1)] + json.dumps(org, ensure_ascii=False, separators=(',', ':')) + s[m.end(1):]
+
+          p.write_text(s, encoding='utf-8')
+
+          # Machine-data validation.
+          central = json.loads(Path('central-association.json').read_text(encoding='utf-8'))
+          members = json.loads(Path('member-organizations.json').read_text(encoding='utf-8'))
+          entity = json.loads(Path('entity.json').read_text(encoding='utf-8'))
+          html = p.read_text(encoding='utf-8')
+          assert central['organization']['foundingDate'] == '1980-02-09'
+          assert central['organization']['zvr'] == '079797621'
+          assert central['organization']['address']['addressCountry'] == 'AT'
+          assert members['publishedEntryCount'] == 28
+          assert len(members['members']) == 28
+          assert sum(members['regions'].values()) == 28
+          item_lists = [x for x in entity['@graph'] if x.get('@id') == 'https://okoszisztema.kozpontiszovetseg.at/#member-directory']
+          assert len(item_lists) == 1 and item_lists[0]['numberOfItems'] == 28
+          assert len(item_lists[0]['itemListElement']) == 28
+          assert 'data-name="bécsi magyar iskola"' not in html
+          assert len(re.findall(r'<article class="member lean-member"', html)) == 28
+          assert '29 tagszervezet' not in html
+          assert 'content="hu_AT" property="og:locale"' in html
+          assert '<div class="stat"><b>10</b><span data-i18n="region.Bécs.164">Bécs</span></div>' in html
+
+          audit = '''# Központi Szövetség teljes ökoszisztéma-audit — 2026-09-02
+
+## Eredmény
+
+A Központi Szövetség Ökoszisztéma repója össze lett vetve a jelenleg publikált hivatalos szervezeti, történeti, kapcsolati és tagszervezeti forrásokkal.
+
+## Canonical szervezeti tények
+
+- Hivatalos név: Ausztriai Magyar Egyesületek és Szervezetek Központi Szövetsége.
+- Német név: Zentralverband Ungarischer Vereine und Organisationen in Österreich.
+- ZVR: 079797621.
+- Alapítás: 1980. február 9.
+- Alapítási kontextus: eredetileg 21 ausztriai magyar egyesület csúcsszervezete.
+- Központ: Schwedenplatz 2; bejárat Laurenzerberg 5; 1. em.; 8-9. ajtó; 1010 Wien; AT.
+- 1992: a Bécsben és környékén élő osztrák honosságú magyarok népcsoporti elismerése a Központi Szövetség által kezdeményezett célként megvalósult.
+- 1999: saját közösségi helyiség a Schwedenplatzon.
+
+## Tagszervezeti korrekció
+
+A korábbi oldal 29 tagszervezeti kártyát mutatott, mert a Bécsi Magyar Iskolát a tagszervezeti katalógusban is megszámolta. A hivatalos Tagszervezeteink oldal jelenleg 28 külön hálózati bejegyzést közöl. A BMI továbbra is a Központi Szövetség oktatási alrendszerének része, de nem számít bele a 28-as tagszervezeti katalógusba.
+
+Régiós bontás: Bécs 10; Burgenland 2; Felső-Ausztria 4; Salzburg 1; Stájerország 4; Tirol 5; Vorarlberg 2.
+
+## LLM / Schema réteg
+
+- `central-association.json`: canonical szervezeti profil és történeti tények.
+- `member-organizations.json`: 28 hivatalosan publikált tagszervezeti/hálózati bejegyzés.
+- `entity.json`: Organization + member + ItemList kapcsolati gráf.
+- `llms.txt`: teljes forrásprioritás, történet, tagszervezetek és konfliktusfeloldási szabályok.
+- `ai.txt`: rövid machine-use szabályok.
+
+## Jogi/entitásbiztonsági szabály
+
+Azonos vagy hiányzó ZVR-szám esetén a rendszer nem következtet önálló jogi személyiségre. A hivatalos tagszervezeti oldal külön publikált bejegyzését hálózati egységként kezeli, a jogi státuszt csak külön forrás alapján állítja.
+
+## BMI idővonal
+
+A BMI canonical digitális alapítási éve 1987, 2027 a 40. évforduló. A Központi Szövetség történeti oldala külön azt írja, hogy az általa működtetett iskola 1988 őszén indult; ez nem írja felül a canonical 1987-es BMI-entitásadatot.
+
+## Vezetőség frissessége
+
+A hivatalos oldalon jelenleg 2024-2026 jelöléssel publikált vezetőségi névsor szerepel. Ezt a machine-data publikált állapotként kezeli, de új választás vagy honlapfrissítés után újraellenőrzendő.
+'''
+          Path('KOZPONTI_SZOVETSEG_ECOSYSTEM_AUDIT_2026-09-02.md').write_text(audit, encoding='utf-8')
+
+      - name: Commit reconciled ecosystem
+        run: |
+          git config user.name "ecosystem-steward[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html KOZPONTI_SZOVETSEG_ECOSYSTEM_AUDIT_2026-09-02.md
+          git diff --cached --quiet && exit 0
+          git commit -m "Reconcile Központi member network and visible ecosystem"
+          git push
