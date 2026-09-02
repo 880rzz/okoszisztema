@@ -1,0 +1,257 @@
+{
+  "documentType": "comprehensive-member-research",
+  "schemaVersion": "2026-09-02-v2",
+  "lastResearched": "2026-09-02",
+  "method": "Official organization/member-directory facts first; ORF Magyarok and Rólunk.at used as primary press evidence; organization-owned historical pages used where press did not provide sufficient historical context. No legal independence, employment or ownership is inferred from press coverage.",
+  "members": [
+    {
+      "id": "ausztriai-magyar-kutatointezet",
+      "history": "Az Ausztriai Magyar Kutatóintézet / Österreichisches Institut für Ungarische Studien (ÖIUS) 2010 óta működő bécsi tudományos-kulturális műhely. Kutatási, konferencia-, publikációs és adatbázis-építő munkája az ausztriai magyarság történetét, nyelvét, kulturális kapcsolatait és intézményi hálózatát dokumentálja. A Schwedenplatz 2/9 alatt működik, szoros kapcsolatban a Bécsi Egyetem finnugrisztikai közegével és a Collegium Hungaricummal. 2024/25-től a Schwedenplatzi beszélgetések irodalmi sorozata is a látható programjai közé tartozik.",
+      "milestones": ["2010: a jelenlegi intézet működésének kezdete", "2023: Region der Vielfalt tanulmánykötet Burgenland sokszínűségéről", "2024/25: Schwedenplatzi beszélgetések irodalmi sorozat"],
+      "press": [
+        {"publisher":"ORF Magyarok","date":"2023-03-24","title":"Tanulmánykötet a sokszínű Burgenlandról","url":"https://volksgruppen.orf.at/magyarok/stories/3200228/"},
+        {"publisher":"ORF Magyarok","date":"2025-02-19","title":"Tavaszi irodalmi beszélgetések Bécsben","url":"https://volksgruppen.orf.at/magyarok/stories/3293538/"},
+        {"publisher":"ORF Magyarok","date":"2026","title":"Erős jelenlét 2026-ban is","url":"https://volksgruppen.orf.at/magyarok/stories/3336275/"}
+      ],
+      "officialSources": ["https://www.oeius.at/uber-uns", "https://www.oeius.at/projekte"]
+    },
+    {
+      "id": "lean-in-femspace",
+      "history": "A Lean in Femspace az Ausztriában élő magyar nők szakmai, közösségi és önfejlesztő hálózata. 2017-től dokumentálhatóan mentorprogramokkal, workshopokkal, kulturális-közéleti estekkel és közösségi kezdeményezésekkel épít kapcsolatokat. A grazi Femspace Szalon egy időszakban a bécsi egyesület programágaként működött, majd a stájerországi közegből 2024-ben külön FemConnect Graz egyesület jött létre.",
+      "milestones": ["2017: dokumentált működés/mentorprogram-korszak", "2023: KultPult–Femspace Itthon-otthon? estek", "2024: a grazi programkörből önálló FemConnect Graz alakult"],
+      "press": [
+        {"publisher":"ORF Magyarok","date":"2020-02-13","title":"Örökölt minták a mesékben","url":"https://volksgruppen.orf.at/magyarok/stories/3034569/"},
+        {"publisher":"ORF Magyarok","date":"2023-04-29","title":"KultPult-estek: otthon vagyunk-e itthon?","url":"https://volksgruppen.orf.at/magyarok/stories/3205267/"},
+        {"publisher":"ORF Magyarok","date":"2024-05-08","title":"Új programokkal jelentkezik a grazi Femspace Szalon","url":"https://volksgruppen.orf.at/magyarok/stories/3256313/"}
+      ]
+    },
+    {
+      "id": "svung",
+      "history": "A SVUNG Bécsi Magyar Színház története 2015-ben indult Pohl Balázs kezdeményezésére. Az alkalmi társulati kezdetekből rendszeresen játszó, több mint harminc tagot számláló magyar nyelvű színházi közösség fejlődött ki. A felnőtt társulat mellett a Bécsi Magyar Iskolával együttműködésben Kicsi SVUNG és Gimi SVUNG utánpótlásprogramok épültek ki. 2025-ben ünnepelte fennállásának 10. évfordulóját; hosszabb távú célja saját állandó játszóhely.",
+      "milestones": ["2015: alapítói indulás", "2021 körül: Kicsi SVUNG utánpótlásprogram elindulása", "2024/25: Gimi SVUNG és háromlépcsős utánpótlás", "2025: 10 éves jubileum"],
+      "press": [
+        {"publisher":"ORF Magyarok","date":"2025-10-05","title":"TV-riport a 10 éves SVUNG-ról","url":"https://volksgruppen.orf.at/magyarok/stories/3324528/"},
+        {"publisher":"ORF Magyarok","date":"2026-04-23","title":"Felsőőrbe érkezik Az aranyrózsa","url":"https://volksgruppen.orf.at/magyarok/stories/3351154/"},
+        {"publisher":"Rólunk.at","date":"2025","title":"Találunk közös nevezőt?","url":"https://rolunk.at/nepcsoportunk/talalunk-kozos-nevezot/"}
+      ]
+    },
+    {
+      "id": "cserkesz-72-wien",
+      "history": "A bécsi 72. sz. Széchenyi István cserkészcsapat a magyar nyelvű ifjúsági nevelés, vezetőképzés, táborozás és közösségi hagyományőrzés stabil bécsi szereplője. Működésének hangsúlya a fiatalok közösségi felelősségére, természetközeli programokra és a magyar identitás átadására esik. A csapat a Központi Szövetség közös rendezvényein és szakmai együttműködési fórumain is rendszeresen megjelenik.",
+      "milestones": ["2020: dokumentált vezetői hétvége és vezetőképzés", "2022–2026: rendszeres részvétel országos/bécsi magyar közös eseményeken"],
+      "press": [
+        {"publisher":"ORF Magyarok","date":"2020-11-21","title":"Vezetői hétvégét tartottak a cserkészek az erdőben","url":"https://volksgruppen.orf.at/magyarok/stories/3077055/"},
+        {"publisher":"ORF Magyarok","date":"2025","title":"Közös gondolkodásra hívtak","url":"https://volksgruppen.orf.at/magyarok/stories/3331185/"}
+      ]
+    },
+    {
+      "id": "bim-becsi-irodalmi-muhely",
+      "history": "A BIM – Bécsi Irodalmi Műhely magyar–német irodalmi és műfordítói közösség. Nádori Lídia vezetésével szövegértelmezés, műfordítás és szakmai beszélgetés köré szervez műhelymunkát. A műhely résztvevői közül nőtt ki a 2025 novemberében indult Egy sima, egy fordított könyvklub alapítói köre; a könyvklub 2026-ban már havi rendszerességgel a Központi Szövetség Schwedenplatz 2. alatti központjában találkozott.",
+      "milestones": ["2024 körül: a jelenlegi fordítószeminárium dokumentált működése", "2025-11: Egy sima, egy fordított könyvklub első találkozó", "2026: havi klub a Központi Szövetség központjában"],
+      "press": [{"publisher":"ORF Magyarok","date":"2026-05-04","title":"Egy sima egy fordított – sikeres a könyvklub","url":"https://volksgruppen.orf.at/magyarok/stories/3352222/"}],
+      "officialSources": ["https://www.kozpontiszovetseg.at/post/ny%C3%A1ri-f%C3%A9l%C3%A9vz%C3%A1r%C3%B3-a-k%C3%B6zponti-sz%C3%B6vets%C3%A9gben"]
+    },
+    {
+      "id": "kalaka-club",
+      "history": "A Kaláka Club / Ausztriai Magyarok Gazdasági Érdekközössége több mint négy évtizede működő bécsi magyar hálózat. Közösségi, reprezentatív, gazdasági-kapcsolati és nemzeti ünnepi programok szervezője; kiemelkedő hagyománya a Stephansdomban megrendezett magyar Szent István-ünnep és kenyérszentelés. A szervezet pedagógus-továbbképzési és nyugat-európai diaszpórakapcsolatokban is jelen van. 2025-ben 40+1 éves jubileumi konferenciát rendezett.",
+      "milestones": ["1984 körül: a 2025-ös 40+1 jubileum alapján kialakult szervezeti korszak", "2025: 40+1 jubileumi konferencia", "2026: kb. 900 résztvevő a Stephansdom Szent István-ünnepén"],
+      "press": [
+        {"publisher":"ORF Magyarok","date":"2025-09-19","title":"Jubileumi konferenciával ünnepelt a bécsi Kaláka Klub","url":"https://volksgruppen.orf.at/magyarok/stories/3322469/"},
+        {"publisher":"ORF Magyarok","date":"2026-08-23","title":"Kenyérszentelés és ünnepi mise","url":"https://volksgruppen.orf.at/magyarok/stories/3368141/"},
+        {"publisher":"ORF Magyarok","date":"2023-04-13","title":"Magyarországi elismerés Wurst Erzsébetnek","url":"https://volksgruppen.orf.at/magyarok/stories/3202860/"}
+      ]
+    },
+    {
+      "id": "napraforgok",
+      "history": "A Napraforgók Bécsi Magyar Néptánc és Népzene Egyesület 1999-ben alakult néhány bécsi magyar lány kezdeményezésére. A kezdeti leánykarikázó-repertoárból teljes, páros- és férfitáncokat is ápoló együttes, gyermek-utánpótlás és rendszeres táncházi közösség fejlődött. A Napraforgócskák és további csoportok révén a szervezet a Bécsi Magyar Iskola egyik visszatérő kulturális partnere. 2024-ben a 25. Bécsi Magyar Táncháztalálkozóval ünnepelte 25 éves fennállását.",
+      "milestones": ["1999: alapítás", "2024: 25 éves jubileum", "2026: aktív szerep a Központi Szövetség felújított központjában és vezetőségében"],
+      "press": [
+        {"publisher":"ORF Magyarok","date":"2024-12-02","title":"25. Bécsi Magyar Táncháztalálkozó","url":"https://volksgruppen.orf.at/magyarok/stories/3283569/"},
+        {"publisher":"ORF Magyarok","date":"2026-06-02","title":"Központi szövetség éves közgyűlése","url":"https://volksgruppen.orf.at/magyarok/stories/3356526/"}
+      ]
+    },
+    {
+      "id": "szent-istvan-egylet",
+      "history": "A bécsi Szent István Egylet a 20. század elejére visszanyúló magyar karitatív szervezet. Az ORF hagyománya szerint 1920-ban Batthyány-Strattmann herceg alapította; a Magyar Katolikus Lexikon korábbi jogi előzményeket is rögzít 1918-ból, 1921-től számítva a folyamatos egyleti működést. Tevékenységében anyagi és szociális segítség, beteglátogatás, nyaraltatás, könyvtári-közösségi munka és határon túli magyar diákok ösztöndíjazása szerepelt. Hagyományos reprezentatív rendezvénye a Szent István bál.",
+      "milestones": ["1918: bejelentett szervezeti előzmény", "1920: ORF által közölt alapítási hagyomány", "1921: a Katolikus Lexikon szerint az egyleti működés kezdete", "1990-es évektől: több száz határon túli magyar diák ösztöndíjas támogatása"],
+      "press": [{"publisher":"ORF Magyarok","date":"2015","title":"Szent István bál Bécsben","url":"https://volksgruppen.orf.at/v2/magyarok/stories/2694653/"}],
+      "officialSources": ["https://lexikon.katolikus.hu/S/Szent%20Istv%C3%A1n%20Egylet.html"]
+    },
+    {
+      "id": "bornemisza-peter-tarsasag",
+      "history": "A Bornemisza Péter Társaság 1960 óta a bécsi magyar értelmiségi és kulturális élet egyik régi intézménye. Főként irodalmi és történelmi programokat szervez, és a Bécsi Posta kiadója. Több mint hat évtizeden keresztül a Capistrangasse 2. alatt működött; 2024-ben a régi bérleti helyzet megszűnése után új korszak kezdődött, és a társaság a Központi Szövetség égisze alatt folytatta munkáját.",
+      "milestones": ["1960: alapítás és Capistrangasse-korszak", "2024: a 64 éves székhely elvesztése", "2025-től: működés a Központi Szövetség intézményi környezetében"],
+      "press": [
+        {"publisher":"ORF Magyarok","date":"2024-06-24","title":"Bornemisza-társaság: kilakoltatás fenyeget","url":"https://volksgruppen.orf.at/magyarok/stories/3262490/"},
+        {"publisher":"ORF Magyarok","date":"2024-10-15","title":"A nagy múltú egyesületnek jövőre új székhelye lesz","url":"https://volksgruppen.orf.at/magyarok/stories/3277330/"}
+      ]
+    },
+    {
+      "id": "nemzetkozi-duna-filharmonia-barati-kor",
+      "history": "A Nemzetközi Duna Filharmónia Baráti Köre a Duna-régió kulturális kapcsolódását támogató fiatal hálózati szereplő. A kapcsolódó kulturális platform klasszikus, nép- és világzenei koncertekkel, emléknapokkal és jótékonysági rendezvényekkel épít határokon átívelő kapcsolatokat. A Központi Szövetség 2025-ös egyesületi konferenciáján újonnan alakult baráti körként jelent meg; 2026-ban már saját programbeszámolók is megjelentek a Központi Szövetség felületén.",
+      "milestones": ["2022–2024: a kapcsolódó Internationale Donauphilharmonie platform dokumentált koncerttevékenysége", "2025: újonnan alakult baráti körként jelenik meg a Központi Szövetség fórumán", "2026: önálló programmegjelenések"],
+      "press": [
+        {"publisher":"ORF Magyarok","date":"2022-11-06","title":"Gálakoncert határaink legyőzésére","url":"https://volksgruppen.orf.at/magyarok/stories/3180996/"},
+        {"publisher":"ORF Magyarok","date":"2025","title":"Közös gondolkodásra hívtak","url":"https://volksgruppen.orf.at/magyarok/stories/3331185/"}
+      ],
+      "officialSources": ["https://www.kozpontiszovetseg.at/"]
+    },
+    {
+      "id": "alsoori-magyar-kultur-es-tancegyesulet",
+      "history": "Az Alsóőri Magyar Kultúr- és Táncegyesület az őrvidéki magyar nyelv, néptánc és helyi hagyományok megőrzését szolgáló burgenlandi közösségi szereplő. Az alsóőri kulturális közeg több generáción keresztül kapcsolja össze az anyanyelvhasználatot, a néptáncot, az ünnepi megemlékezéseket és a helyi civil együttműködést. A sajtóban az Alsóőr–Jabing magyar táncos közösség és az alsóőri március 15-i programok révén látható a hagyományőrző szerep; a konkrét jogi egyesület történetét nem szabad automatikusan azonosítani a 2019-ben alakult táncegyüttessel.",
+      "milestones": ["2019: az Alsóőr–Jabing Magyar Táncegyüttes megalakulása – kapcsolódó, de nem automatikusan azonos jogi entitás", "2023–2026: rendszeres őrvidéki táncos és ünnepi sajtómegjelenések"],
+      "press": [
+        {"publisher":"ORF Magyarok","date":"2023-06-18","title":"Őrvidéki Mulatság: a megélt sokszínűség","url":"https://volksgruppen.orf.at/magyarok/stories/3212235/"},
+        {"publisher":"ORF Magyarok","date":"2026-03-22","title":"Megemlékezés és jubiláló iskola","url":"https://volksgruppen.orf.at/magyarok/stories/3346857/"}
+      ]
+    },
+    {
+      "id": "kozep-burgenlandi-magyar-kulturegyesulet",
+      "history": "A Közép-Burgenlandi Magyar Kultúregyesület 2003. március 13-án alakult. Küldetése a magyar nyelv, népi örökség, ének, zene és tánc megőrzése Közép-Burgenlandban, valamint a fiatal generáció bevonása. Hagyományos programjai közé bálok, anyák napi rendezvények, búcsúk, kórus- és táncprogramok tartoznak, miközben a szervezet a régió többnyelvű civil együttműködéseiben is aktív.",
+      "milestones": ["2003-03-13: alapítás", "2023: 20 éves jubileum", "2026: a Központi Szövetség tisztújító közgyűlésének házigazdája Felsőpulyán"],
+      "press": [
+        {"publisher":"Rólunk.at","date":"2023-09-06","title":"Húszéves a Középburgenlandi Magyar Kultúregyesület","url":"https://rolunk.at/nepcsoportunk/huszeves-a-kozepburgenlandi-magyar-kulturegyesulet/"},
+        {"publisher":"ORF Magyarok","date":"2026-06-02","title":"Központi szövetség éves közgyűlése","url":"https://volksgruppen.orf.at/magyarok/stories/3356526/"}
+      ]
+    },
+    {
+      "id": "felso-ausztriai-magyarok-kulturegyesulete",
+      "history": "A Felső-Ausztriai Magyarok Kultúregyesületét 1956-os menekültek alapították 1968-ban. A linzi és felső-ausztriai magyar közösség összetartását, a magyar nyelv, kultúra és hagyományok ápolását szolgálja irodalmi-történelmi estekkel, bálokkal, néptánccal, színjátszással és regionális civil programokkal. Kiemelt intézményi feladata a Welsben működő Felső-Ausztriai Hétvégi Magyar Óvoda és Iskola támogatása.",
+      "milestones": ["1968: alapítás", "2018: 50 éves jubileum", "2023: 55 éves jubileum és az iskola 20+ ünnepe"],
+      "press": [
+        {"publisher":"ORF Magyarok","date":"2018-04-16","title":"50 éves lett a Felső-Ausztriai Magyarok Kultúregyesülete","url":"https://volksgruppen.orf.at/v2/magyarok/stories/2907261/"},
+        {"publisher":"ORF Magyarok","date":"2023-04-03","title":"Dupla jubileum Felső-Ausztriában","url":"https://volksgruppen.orf.at/magyarok/stories/3201515/"},
+        {"publisher":"ORF Magyarok","date":"2023-05-26","title":"Magyar fesztivál Linzben civil összefogással","url":"https://volksgruppen.orf.at/magyarok/stories/3209121/"}
+      ]
+    },
+    {
+      "id": "linz-magyar-katolikus-kozosseg",
+      "history": "A Linzi Magyar Katolikus Közösség a felső-ausztriai magyar vallási és közösségi élet része. Magyar nyelvű lelkipásztori és közösségi kapcsolódást biztosít, és a régió kulturális-civil hálózatával együttműködésben jelenik meg. A jelenlegi kutatási körben nem találtunk olyan ORF/Rólunk cikket, amely megbízható pontos alapítási dátumot közölne, ezért alapítási év nem kerül kikövetkeztetésre.",
+      "milestones": ["Folyamatos magyar katolikus közösségi jelenlét Felső-Ausztriában", "2023: a felső-ausztriai magyar civil összefogás tágabb kontextusában dokumentált regionális aktivitás"],
+      "press": [{"publisher":"ORF Magyarok","date":"2023-05-26","title":"Magyar fesztivál Linzben civil összefogással","url":"https://volksgruppen.orf.at/magyarok/stories/3209121/"}],
+      "officialSources": ["https://ausztria.katolikus.at/"]
+    },
+    {
+      "id": "felso-ausztriai-hetvegi-magyar-ovoda-es-iskola",
+      "history": "A Felső-Ausztriai Hétvégi Magyar Óvoda és Iskola 2000 körül indult; 2025 májusában ünnepelte fennállásának 25. évfordulóját. Welsben, jellemzően kéthetente működő egyesületi oktatási forma, amely a magyar nyelv mellett néphagyományt, történelmet, földrajzot, éneket és közösségi identitást ad át. 2025-ben az ORF mintegy 60 gyermekről, öt pedagógusról és 500 kötetet meghaladó saját könyvtárról számolt be.",
+      "milestones": ["2000: indulás a 2025-ös 25 éves jubileum alapján", "2025-05-24: 25 éves jubileumi ünnepség", "2025/26: továbbra is jelentős regionális hétvégi magyar oktatási központ"],
+      "press": [
+        {"publisher":"ORF Magyarok","date":"2025-05-31","title":"25 éves az egyesületi magyaroktatás Felső-Ausztriában","url":"https://volksgruppen.orf.at/magyarok/stories/3307647/"},
+        {"publisher":"ORF Magyarok","date":"2025-11-09","title":"Hol lehet magyarul tanulni? 4. rész","url":"https://volksgruppen.orf.at/magyarok/stories/3327962/"}
+      ]
+    },
+    {
+      "id": "cserkesz-80-wels",
+      "history": "A welsi 80. sz. Árpád cserkészcsapat a felső-ausztriai magyar ifjúsági és hagyományőrző hálózat része. Cserkészneveléssel, közösségi programokkal és regionális civil együttműködéssel segíti a magyar identitás átadását a fiatal generációknak. A csapat a felső-ausztriai magyar fesztiválok és a helyi oktatási-kulturális hálózat visszatérő partnere.",
+      "milestones": ["2023: a Hamuban Sült Pogácsa Fesztivál és Táncháztalálkozó társszervezői körében"],
+      "press": [{"publisher":"ORF Magyarok","date":"2023-05-26","title":"Magyar fesztivál Linzben civil összefogással","url":"https://volksgruppen.orf.at/magyarok/stories/3209121/"}]
+    },
+    {
+      "id": "salzung",
+      "history": "A SalzUng – Salzburgi Magyar Egyesület 1993-ban alakult. Célja Salzburg városában és tartományában a magyar nyelv, kultúra és közösségi kötődés megőrzése; programjai között hétvégi magyar oktatás, könyvklub és minikönyvtár, családi rendezvények, zenei és irodalmi programok, táborok és nemzetközi ifjúsági projektek szerepelnek. A szervezet a nyugat-ausztriai magyar együttműködések egyik aktív csomópontja.",
+      "milestones": ["1993: alapítás", "2020 körül: Salzburgi Magyar Minikönyvtár létrehozása", "2022: Legyen a zene mindenkié! koncert", "2026: minikönyvtár és könyvklub újra aktív; új közösségi helyszínre költözés"],
+      "press": [
+        {"publisher":"ORF Magyarok","date":"2022-06-10","title":"Legyen a zene mindenkié!","url":"https://volksgruppen.orf.at/magyarok/stories/3160199/"},
+        {"publisher":"ORF Magyarok","date":"2026-05-31","title":"Élettel teli a salzburgi minikönyvtár","url":"https://volksgruppen.orf.at/magyarok/stories/3356535/"},
+        {"publisher":"ORF Magyarok","date":"2026-08-29","title":"Programkavalkád várta a gyerekeket","url":"https://volksgruppen.orf.at/magyarok/stories/3368990/"}
+      ],
+      "officialSources": ["https://www.salzung.com/hu/rolunk/"]
+    },
+    {
+      "id": "grazi-magyar-egyesulet",
+      "history": "A Grázi Magyar Egyesület 1888-ban alakult, ezért Európa egyik legrégebbi folyamatosan működő magyar diaszpóraegyesületeként tartja számon magát. Történetében az Osztrák–Magyar Monarchia korszakától az 1945-ös és 1956-os menekülthullámokon át az újabb EU-s mobilitásig több magyar generáció kapcsolódott össze. Kiemelt hagyománya a Grazi Magyar Bál; 2026-ban a 137. bált rendezték meg mintegy 350 vendéggel.",
+      "milestones": ["1888: alapítás", "1956: menekültek támogatása és új közösségi korszak", "2026: 137. Grazi Magyar Bál"],
+      "press": [{"publisher":"ORF Magyarok","date":"2026-05-12","title":"Csárdás nélkül nincs magyar bál Grazban","url":"https://volksgruppen.orf.at/magyarok/stories/3353931/"}],
+      "officialSources": ["https://www.grazimagyaregyesuelet.at/"]
+    },
+    {
+      "id": "magyar-egyetemistak-es-oregdiakok-klubja-graz",
+      "history": "A gráci Magyar Egyetemisták és Öregdiákok Klubjának előzménye az 1956-os forradalom után Grazba érkező magyar fiatalok önszerveződése. 1957 őszén Verband ungarischer Studenten in Graz néven kapott működési engedélyt. A szervezet történetileg a diák- és értelmiségi közösség, a Gráci Magyar Újság, az 1956-os emlékezet, kulturális rendezvények és Graz–Pécs egyetemi kapcsolatok egyik fontos hordozója. 2026 januárjában Nagy Zsuzsanna lett az új elnök, a hangsúly a fiatal generáció bevonásán és a Gráci Magyar Újság megújításán van.",
+      "milestones": ["1957: működési engedély Verband ungarischer Studenten in Graz néven", "2000-es évektől: Gráci Magyar Újság és szélesebb közösségi kommunikáció", "2026: Nagy Zsuzsanna elnökké választása"],
+      "press": [
+        {"publisher":"ORF Magyarok","date":"2022-02-19","title":"Új elnök a MEÖK élén Grácban","url":"https://volksgruppen.orf.at/magyarok/stories/3143883/"},
+        {"publisher":"ORF Magyarok","date":"2026-01-24","title":"Új elnököt választott a MEÖK","url":"https://volksgruppen.orf.at/magyarok/stories/3338990/"},
+        {"publisher":"ORF Magyarok","date":"2024-10","title":"Országszerte tartanak 1956-os eseményeket","url":"https://volksgruppen.orf.at/magyarok/stories/3278181/"}
+      ]
+    },
+    {
+      "id": "graci-magyar-katolikus-kozosseg",
+      "history": "A Gráci Magyar Katolikus Közösség a stájerországi magyar vallási és közösségi élet régi intézménye. Magyar nyelvű szentmiséket, ünnepi alkalmakat és közösségi együttléteket szervez; a vallási élet mellett történetileg szorosan kapcsolódott a Gráci Magyar Újság és a MEÖK kommunikációs-kulturális közegéhez. 2010-től Molnár Ottó prelátus dokumentáltan a közösség kinevezett lelkészeként működött; ez nem az alapítás dátuma, ezért külön alapítási év nem kerül megadásra.",
+      "milestones": ["2010: Molnár Ottó kinevezése a gráci magyar katolikus közösség lelkészévé", "2015: közös 1956-os megemlékezés a MEÖK-kel és rendszeres magyar misék"],
+      "press": [
+        {"publisher":"ORF Magyarok","date":"2017","title":"Magyar misék, istentiszteletek Grazban","url":"https://volksgruppen.orf.at/v2/magyarok/stories/2889845/"},
+        {"publisher":"ORF Magyarok","date":"2015-12-20","title":"Gráci Magyar Újság - az esztendő fordulójára","url":"https://volksgruppen.orf.at/v2/magyarok/stories/2748287/"}
+      ]
+    },
+    {
+      "id": "femconnect-graz",
+      "history": "A FemConnect Graz 2024 augusztusában alakult önálló magyar kultúregyesületként, részben a korábbi grazi Femspace Szalon közösségi tapasztalatára építve. Kortárs magyar kulturális programokat, irodalmi és társadalmi fórumokat, családi eseményeket, női témájú beszélgetéseket és magyar nyelvi táborokat szervez. Rövid idő alatt a stájerországi magyar közösség egyik aktív, együttműködés-orientált új szereplőjévé vált.",
+      "milestones": ["2024-08: önálló egyesület megalakulása", "2024-09: nyilvános bemutatkozás", "2026: bővülő kulturális és családi programkínálat"],
+      "press": [
+        {"publisher":"Rólunk.at","date":"2024-09-23","title":"FemConnect: új magyar kultúregyesület Grazban","url":"https://rolunk.at/kultura/femconnect-uj-magyar-kulturegyesulet-grazban/"},
+        {"publisher":"ORF Magyarok","date":"2026-05-28","title":"Színes a programkínálat Grazban","url":"https://volksgruppen.orf.at/magyarok/stories/3356076/"}
+      ]
+    },
+    {
+      "id": "magyarhaz-innsbruck",
+      "history": "Az Innsbrucki Magyarház története közvetlenül az 1956-os forradalom utáni menekülthullámhoz kapcsolódik: 1957 elején fiatal magyar menekült diákok kaptak itt otthont. Az épület Julianna holland királynő támogatásával került magyar közösségi használatba, és 1963 óta több innsbrucki magyar szervezet közös bázisa. Ma egyszerre diákotthon, történeti emlékhely és az innsbrucki magyar szervezeti élet fizikai központja.",
+      "milestones": ["1957: magyar menekült diákok otthona", "1963: több helyi magyar szervezet közös bázisa", "2022–2026: az 1956-os emlékezet és helyi szervezeti élet kiemelt helyszíne"],
+      "press": [
+        {"publisher":"ORF Magyarok","date":"2022-10-23","title":"Ahol a falak zárják magukba 1956 szellemét","url":"https://volksgruppen.orf.at/magyarok/stories/3179229/"},
+        {"publisher":"ORF Magyarok","date":"2026-07","title":"Die Themen der Sendung am 12. Juli","url":"https://volksgruppen.orf.at/magyarok/meldungen/stories/3102623/"}
+      ]
+    },
+    {
+      "id": "imike",
+      "history": "Az IMIKE – Innsbrucki Magyar Ifjúsági és Kultúregyesület a tiroli magyar családok, fiatalok és kulturális kezdeményezések aktív szervezete. Működése összekapcsolódik a magyar anyanyelvi neveléssel, óvodai kezdeményezésekkel, a 79. sz. Dr. Kozma György SJ cserkészcsapattal, kulturális pályázatokkal és a nyugat-ausztriai szervezetek közötti együttműködéssel. A jelenlegi kutatási kör nem szolgáltatott megbízható pontos alapítási dátumot, ezért ilyen adat nem kerül kikövetkeztetésre.",
+      "milestones": ["2023: aktív részvétel a nyugat-ausztriai diaszpóra-kerekasztalban", "2026: dokumentált kapcsolat a magyar anyanyelvi oktatással és cserkészettel"],
+      "press": [
+        {"publisher":"ORF Magyarok","date":"2023-03-27","title":"Diaszpóra-kerekasztal Innsbruckban","url":"https://volksgruppen.orf.at/magyarok/stories/3200580/"},
+        {"publisher":"ORF Magyarok","date":"2026-08-03","title":"Amerikában lettem magyar","url":"https://volksgruppen.orf.at/magyarok/stories/3361160/"}
+      ]
+    },
+    {
+      "id": "cserkesz-79-innsbruck",
+      "history": "A 79. sz. Dr. Kozma György SJ cserkészcsapat az innsbrucki magyar ifjúsági közösség egyik pillére. A cserkésznevelés, kirándulások, közösségi ünnepek és magyar kulturális identitás átadása mellett szorosan együttműködik az IMIKE-vel és a Magyarház más szervezeteivel. A közösség történetének pontos alapítási dátuma a mostani forráskörben nem volt megbízhatóan azonosítható.",
+      "milestones": ["2020: dokumentált családi piknik és szabadtéri cserkészprogramok", "2026: a helyi magyar oktatási-ifjúsági hálózat részeként jelenik meg"],
+      "press": [
+        {"publisher":"ORF Magyarok","date":"2020","title":"Családi piknik Innsbruckban","url":"https://volksgruppen.orf.at/magyarok/stories/3068208/"},
+        {"publisher":"ORF Magyarok","date":"2026-08-03","title":"Amerikában lettem magyar","url":"https://volksgruppen.orf.at/magyarok/stories/3361160/"}
+      ]
+    },
+    {
+      "id": "imeasz",
+      "history": "Az IMEASZ – Innsbrucki Magyar Egyetemisták és Akadémikusok Szövetsége az 1956 utáni tiroli magyar egyetemi és értelmiségi hagyomány egyik hordozója. Klubesteket, történelmi megemlékezéseket, kulturális előadásokat és közösségi programokat szervez, és a Magyarház történeti emlékezetének aktív őrzője. Az 1956-os forradalom emléknapjai és a Menekülés-szobor koszorúzása visszatérő programjai közé tartoznak.",
+      "milestones": ["1956/57: az innsbrucki magyar diák- és akadémikusközeg kialakulása", "1963-tól: Magyarház mint szervezeti bázis", "2022–2024: rendszeres 1956-os emlékező programok"],
+      "press": [
+        {"publisher":"ORF Magyarok","date":"2022-10-23","title":"Ahol a falak zárják magukba 1956 szellemét","url":"https://volksgruppen.orf.at/magyarok/stories/3179229/"},
+        {"publisher":"ORF Magyarok","date":"2024-10","title":"Országszerte tartanak 1956-os eseményeket","url":"https://volksgruppen.orf.at/magyarok/stories/3278181/"}
+      ]
+    },
+    {
+      "id": "innsbrucki-magyar-katolikus-kozosseg",
+      "history": "Az Innsbrucki Magyar Katolikus Közösség a tiroli magyar vallási és közösségi hálózat része, és a Magyarház szervezeti közegéhez is kapcsolódik. A közösség magyar nyelvű hitéleti, ünnepi és közösségi alkalmakat biztosít, miközben együttműködik az innsbrucki diák-, ifjúsági és cserkészszervezetekkel. A mostani kutatási körben nem találtunk megbízható pontos alapítási dátumot.",
+      "milestones": ["1963-tól: a Magyarház több helyi magyar szervezet, köztük az egyházi közösség bázisa", "2020: a Magyarházban működő magyar szervezetek között dokumentált"],
+      "press": [{"publisher":"ORF Magyarok","date":"2020","title":"Családi piknik Innsbruckban","url":"https://volksgruppen.orf.at/magyarok/stories/3068208/"}]
+    },
+    {
+      "id": "vorarlbergi-magyar-egyesulet",
+      "history": "A Vorarlbergi Magyar Egyesület a 2020-as évek elején szerveződött meg a tartomány első magyar egyesületi struktúrájaként. A magyar nyelv, nemzeti ünnepek, történelmi emlékezet és családi-kreatív hagyományőrzés áll működésének középpontjában. 2024-ben első alkalommal rendezett Szent István-ünnepet, miközben március 15-i és október 23-i megemlékezésekkel is rendszeresen összehívja a helyi közösséget.",
+      "milestones": ["2022 körül: az első vorarlbergi magyar egyesület létrejötte", "2023: dokumentált 1956-os megemlékezés", "2024: első Szent István-ünnep"],
+      "press": [
+        {"publisher":"ORF Magyarok","date":"2024-08-16","title":"Szent István-ünnep Vorarlbergben","url":"https://volksgruppen.orf.at/magyarok/stories/3269351/"},
+        {"publisher":"ORF Magyarok","date":"2023-10","title":"1956-os megemlékezések országszerte","url":"https://volksgruppen.orf.at/magyarok/stories/3229029/"}
+      ]
+    },
+    {
+      "id": "mi-magyarok-egymasert",
+      "history": "A Mi Magyarok Egymásért – Wir Ungarn Füreinander egyesület 2023. június 1-jén alakult Feldkirchben Fadgyas Erzsébet, Zoe Amann és Legény Annamária közösségi munkájára építve. Fő területe a magyar anyanyelvi oktatás gyakorlati támogatása, zenei és néptáncos gyermekprogramok, családi rendezvények és a Vorarlbergben letelepedő magyarok közösségi integrációja. A támogatott magyar elsőnyelvi oktatás néhány év alatt 30 körüli diákról 2025-re 60 fölötti jelentkezői szintre nőtt, több helyszínnel és online csoporttal.",
+      "milestones": ["2023-06-01: alapítás Feldkirchben", "2024: öt csoport és online oktatási forma támogatása", "2025: 63 előzetes jelentkező, három helyszín + online rendszer", "2026: országos hétvégi iskolai szakmai kapcsolódás"],
+      "press": [
+        {"publisher":"ORF Magyarok","date":"2024-01-29","title":"Itthon – otthon Vorarlbergben","url":"https://volksgruppen.orf.at/magyarok/stories/3242638/"},
+        {"publisher":"ORF Magyarok","date":"2024-10-22","title":"Vorarlberg: új lendület a magyaroktatásban","url":"https://volksgruppen.orf.at/magyarok/stories/3278283/"},
+        {"publisher":"ORF Magyarok","date":"2025-07-13","title":"Növekvő érdeklődés a magyaroktatás iránt Vorarlbergben","url":"https://volksgruppen.orf.at/magyarok/stories/3313367/"}
+      ]
+    }
+  ]
+}
