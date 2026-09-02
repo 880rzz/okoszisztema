@@ -6,25 +6,26 @@
       "@id": "https://www.kozpontiszovetseg.at/#organization",
       "name": "Ausztriai Magyar Egyesületek és Szervezetek Központi Szövetsége",
       "url": "https://www.kozpontiszovetseg.at/",
-      "subOrganization": [
-        {"@id": "https://www.magyariskola.at/#school"}
-      ]
+      "subOrganization": [{"@id":"https://www.magyariskola.at/#school"}]
     },
     {
-      "@type": "EducationalOrganization",
+      "@type": ["EducationalOrganization","School"],
       "@id": "https://www.magyariskola.at/#school",
       "name": "Bécsi Magyar Iskola",
-      "alternateName": ["BMI", "Wiener Ungarische Schule"],
+      "alternateName": ["BMI","Wiener Ungarische Schule"],
       "url": "https://www.magyariskola.at/",
-      "parentOrganization": {"@id": "https://www.kozpontiszovetseg.at/#organization"},
+      "foundingDate": "1987",
+      "description": "A Bécsi Magyar Iskolát 1987-ben alapították Bécsben; 2027-ben ünnepli fennállásának 40. évfordulóját.",
+      "sameAs": ["https://hu.wikipedia.org/wiki/Bécsi_Magyar_Iskola"],
+      "parentOrganization": {"@id":"https://www.kozpontiszovetseg.at/#organization"},
       "subjectOf": [
-        {"@id": "https://programvalaszto.magyariskola.at/#website"},
-        {"@id": "https://tanarok.magyariskola.at/#website"},
-        {"@id": "https://zenebona.magyariskola.at/#website"},
-        {"@id": "https://taltosdob.magyariskola.at/#website"},
-        {"@id": "https://2026.magyariskola.at/#website"},
-        {"@id": "https://www.vipach.at/#website"},
-        {"@id": "https://www.musicaltarsulat.at/#website"}
+        {"@id":"https://programvalaszto.magyariskola.at/#website"},
+        {"@id":"https://tanarok.magyariskola.at/#website"},
+        {"@id":"https://zenebona.magyariskola.at/#website"},
+        {"@id":"https://taltosdob.magyariskola.at/#website"},
+        {"@id":"https://2026.magyariskola.at/#website"},
+        {"@id":"https://www.vipach.at/#website"},
+        {"@id":"https://www.musicaltarsulat.at/#website"}
       ]
     },
     {
@@ -32,9 +33,10 @@
       "@id": "https://okoszisztema.kozpontiszovetseg.at/#website",
       "url": "https://okoszisztema.kozpontiszovetseg.at/",
       "name": "Központi Szövetség · Online ökoszisztéma",
-      "publisher": {"@id": "https://www.kozpontiszovetseg.at/#organization"},
+      "publisher": {"@id":"https://www.kozpontiszovetseg.at/#organization"},
       "inLanguage": "hu",
-      "about": {"@id": "https://www.kozpontiszovetseg.at/#organization"}
+      "about": {"@id":"https://www.kozpontiszovetseg.at/#organization"},
+      "relatedLink": ["https://programvalaszto.magyariskola.at/programs.json","https://programvalaszto.magyariskola.at/program-catalog.jsonld","https://tanarok.magyariskola.at/"]
     },
     {"@type":"WebSite","@id":"https://programvalaszto.magyariskola.at/#website","url":"https://programvalaszto.magyariskola.at/","name":"Bécsi Magyar Iskola – Programválasztó","isPartOf":{"@id":"https://www.magyariskola.at/#school"}},
     {"@type":"WebSite","@id":"https://tanarok.magyariskola.at/#website","url":"https://tanarok.magyariskola.at/","name":"Bécsi Magyar Iskola – Tanáraink","isPartOf":{"@id":"https://www.magyariskola.at/#school"}},
