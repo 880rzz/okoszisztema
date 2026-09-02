@@ -1,0 +1,106 @@
+{
+  "documentType": "canonical-central-association-profile",
+  "schemaVersion": "2026-09-02-v1",
+  "lastVerified": "2026-09-02",
+  "sourceAuthority": {
+    "organization": "https://www.kozpontiszovetseg.at/",
+    "about": "https://www.kozpontiszovetseg.at/r%C3%B3lunk",
+    "members": "https://www.kozpontiszovetseg.at/tagszervezetek",
+    "contact": "https://www.kozpontiszovetseg.at/kapcsolat",
+    "privacy": "https://www.kozpontiszovetseg.at/adatvedelem"
+  },
+  "organization": {
+    "name": "Ausztriai Magyar Egyesületek és Szervezetek Központi Szövetsége",
+    "alternateName": "Zentralverband Ungarischer Vereine und Organisationen in Österreich",
+    "shortName": "Központi Szövetség",
+    "url": "https://www.kozpontiszovetseg.at/",
+    "zvr": "079797621",
+    "foundingDate": "1980-02-09",
+    "foundingContext": "A szervezet eredetileg 21 ausztriai magyar egyesület csúcsszervezeteként alakult.",
+    "address": {
+      "streetAddress": "Schwedenplatz 2",
+      "entrance": "Laurenzerberg 5",
+      "floor": "1. em.",
+      "unit": "8-9. ajtó",
+      "postalCode": "1010",
+      "addressLocality": "Wien",
+      "addressCountry": "AT"
+    },
+    "telephone": "+43 1 532 60 48",
+    "email": "iroda@kozpontiszovetseg.at",
+    "officeHours": [
+      {"day": "Monday", "opens": "10:00", "closes": "16:00"},
+      {"day": "Thursday", "opens": "10:00", "closes": "16:00"}
+    ],
+    "purpose": [
+      "Az Ausztriában élő, osztrák honosságú magyar nemzetiségű személyeket összefogó jogi személyek képviselete.",
+      "A tagegyesületek és tagszervezetek közötti együttműködés összehangolása.",
+      "A valamennyi egyesületet érintő, központi tervezést vagy irányítást igénylő közös feladatok tervezése, kivitelezése és működtetése."
+    ],
+    "historicalMilestones": [
+      {"date": "1980-02-09", "event": "A Központi Szövetség megalakulása 21 ausztriai magyar egyesület csúcsszervezeteként."},
+      {"date": "1992", "event": "Az osztrák kormány a magyar népcsoport részeként ismerte el a Bécsben és környékén élő osztrák honosságú magyarokat; a Központi Szövetség ezt közvetlen célként kezdeményezte."},
+      {"date": "1993", "event": "A Magyar Népcsoporttanács létszáma 8-ról 16 főre emelkedett, fele-fele burgenlandi és bécsi magyar jelölti aránnyal."},
+      {"date": "1999", "event": "A Központi Szövetség Bécs belvárosában, a Schwedenplatzon saját közösségi helyiséghez jutott."}
+    ],
+    "publishedActivities": [
+      "magyar nyelvoktatás (óvoda, iskola)",
+      "felnőtt-továbbképzés magyar történelem, irodalom, kultúra és zenetörténet területén",
+      "sajtó- és kiadói tevékenység",
+      "színházi, néptánc- és népzenei programok",
+      "szavalóversenyek",
+      "tanulmányi napok és tanácskozások",
+      "nemzeti ünnepek és történelmi évfordulók közös megemlékezései"
+    ],
+    "publishing": {
+      "becsiNaplo": {
+        "name": "Bécsi Napló",
+        "relation": "A Központi Szövetség tulajdonosa és kiadója.",
+        "publishedSince": "1980-03",
+        "frequency": "kéthavonta",
+        "officialDescription": "Nyugat-Európa egyetlen magyar nyelvű lapja"
+      },
+      "orseg": {
+        "name": "Őrség falinaptár",
+        "publishedSince": "1985",
+        "languages": ["hu", "de", "hr"]
+      }
+    },
+    "schoolIdentityRule": {
+      "name": "Bécsi Magyar Iskola",
+      "canonicalFoundingYear": "1987",
+      "anniversaryYear": "2027",
+      "anniversary": "40. évforduló",
+      "note": "A Központi Szövetség történeti oldala külön azt írja, hogy az általa működtetett iskola 1988 őszén indult be. A digitális BMI-gráf canonical alapítási éve a felhasználó által megerősített 1987; ezt kell használni az iskola alapítási évére."
+    },
+    "membershipDirectory": {
+      "publishedEntryCount": 28,
+      "scopeNote": "A szám a Központi Szövetség hivatalos Tagszervezeteink oldalán jelenleg külön felsorolt hálózati egységeket jelenti. Azonos ZVR-szám vagy hiányzó ZVR esetén nem szabad önálló jogi személyiséget kikövetkeztetni.",
+      "data": "https://okoszisztema.kozpontiszovetseg.at/member-organizations.json"
+    },
+    "leadershipPublication": {
+      "termLabel": "2024-2026",
+      "source": "https://www.kozpontiszovetseg.at/r%C3%B3lunk",
+      "note": "A névsor az official site jelenleg publikált vezetőségi blokkja. A cikluscím miatt új választás vagy honlapfrissítés után újraellenőrzendő.",
+      "board": [
+        {"name": "ao. Univ.-Prof. Dr. Seidler Andrea", "role": "elnök / Präsidentin"},
+        {"name": "Hausmann - Farkas Elizabeth", "role": "főtitkár / Generalsekretärin"},
+        {"name": "Dipl.-Ing. Albert László", "role": "pénztáros / Kassier"},
+        {"name": "Dr. Blaskó Katalin", "role": "kultúrreferens / Kulturreferentin"},
+        {"name": "Mag. Csire Márta", "role": "sajtóreferens / Pressereferentin"},
+        {"name": "Dipl.-Ing. Sass Judit", "role": "szervezési referens / Koordinationsreferentin"},
+        {"name": "Schenk Angyalka", "role": "közösségi média referens / Social-Media-Referentin"},
+        {"name": "Dr. Deák Ernő", "role": "ülnök / Vorstandsmitglied"},
+        {"name": "Huszti Dávid", "role": "ülnök / Vorstandsmitglied"},
+        {"name": "Mag. Hollós József", "role": "ülnök / Vorstandsmitglied"}
+      ],
+      "advisoryAndOperationalRoles": [
+        {"name": "Dipl.-Ing. Sass Huba", "role": "tanácsnok / Beirat"},
+        {"name": "Dr. Kotolácsi Mikóczy Ilona", "role": "tanácsnok / Beirätin"},
+        {"name": "Bajka Kinga Csengele", "role": "tanácsnok / Beirätin"},
+        {"name": "Hierholcz Anna, MSc", "role": "Pénzügy / Pályázatok"},
+        {"name": "Bánhalmi Norbert", "role": "marketing és kommunikáció / marketing und kommunikation"}
+      ]
+    }
+  }
+}
