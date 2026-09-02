@@ -28,61 +28,150 @@
         "https://rolunk.at/tag/kozponti-szovetseg/"
       ],
       "subOrganization": [
-        {"@id":"https://www.magyariskola.at/#school"}
+        {
+          "@id": "https://www.magyariskola.at/#school"
+        }
       ],
       "member": [
-        {"@id":"https://okoszisztema.kozpontiszovetseg.at/#member-ausztriai-magyar-kutatointezet"},
-        {"@id":"https://okoszisztema.kozpontiszovetseg.at/#member-lean-in-femspace"},
-        {"@id":"https://okoszisztema.kozpontiszovetseg.at/#member-svung"},
-        {"@id":"https://okoszisztema.kozpontiszovetseg.at/#member-cserkesz-72-wien"},
-        {"@id":"https://okoszisztema.kozpontiszovetseg.at/#member-bim-becsi-irodalmi-muhely"},
-        {"@id":"https://okoszisztema.kozpontiszovetseg.at/#member-kalaka-club"},
-        {"@id":"https://okoszisztema.kozpontiszovetseg.at/#member-napraforgok"},
-        {"@id":"https://okoszisztema.kozpontiszovetseg.at/#member-szent-istvan-egylet"},
-        {"@id":"https://okoszisztema.kozpontiszovetseg.at/#member-bornemisza-peter-tarsasag"},
-        {"@id":"https://okoszisztema.kozpontiszovetseg.at/#member-nemzetkozi-duna-filharmonia-barati-kor"},
-        {"@id":"https://okoszisztema.kozpontiszovetseg.at/#member-alsoori-magyar-kultur-es-tancegyesulet"},
-        {"@id":"https://okoszisztema.kozpontiszovetseg.at/#member-kozep-burgenlandi-magyar-kulturegyesulet"},
-        {"@id":"https://okoszisztema.kozpontiszovetseg.at/#member-felso-ausztriai-magyarok-kulturegyesulete"},
-        {"@id":"https://okoszisztema.kozpontiszovetseg.at/#member-linz-magyar-katolikus-kozosseg"},
-        {"@id":"https://okoszisztema.kozpontiszovetseg.at/#member-felso-ausztriai-hetvegi-magyar-ovoda-es-iskola"},
-        {"@id":"https://okoszisztema.kozpontiszovetseg.at/#member-cserkesz-80-wels"},
-        {"@id":"https://okoszisztema.kozpontiszovetseg.at/#member-salzung"},
-        {"@id":"https://okoszisztema.kozpontiszovetseg.at/#member-grazi-magyar-egyesulet"},
-        {"@id":"https://okoszisztema.kozpontiszovetseg.at/#member-magyar-egyetemistak-es-oregdiakok-klubja-graz"},
-        {"@id":"https://okoszisztema.kozpontiszovetseg.at/#member-graci-magyar-katolikus-kozosseg"},
-        {"@id":"https://okoszisztema.kozpontiszovetseg.at/#member-femconnect-graz"},
-        {"@id":"https://okoszisztema.kozpontiszovetseg.at/#member-magyarhaz-innsbruck"},
-        {"@id":"https://okoszisztema.kozpontiszovetseg.at/#member-imike"},
-        {"@id":"https://okoszisztema.kozpontiszovetseg.at/#member-cserkesz-79-innsbruck"},
-        {"@id":"https://okoszisztema.kozpontiszovetseg.at/#member-imeasz"},
-        {"@id":"https://okoszisztema.kozpontiszovetseg.at/#member-innsbrucki-magyar-katolikus-kozosseg"},
-        {"@id":"https://okoszisztema.kozpontiszovetseg.at/#member-vorarlbergi-magyar-egyesulet"},
-        {"@id":"https://okoszisztema.kozpontiszovetseg.at/#member-mi-magyarok-egymasert"}
+        {
+          "@id": "https://okoszisztema.kozpontiszovetseg.at/#member-ausztriai-magyar-kutatointezet"
+        },
+        {
+          "@id": "https://okoszisztema.kozpontiszovetseg.at/#member-lean-in-femspace"
+        },
+        {
+          "@id": "https://okoszisztema.kozpontiszovetseg.at/#member-svung"
+        },
+        {
+          "@id": "https://okoszisztema.kozpontiszovetseg.at/#member-cserkesz-72-wien"
+        },
+        {
+          "@id": "https://okoszisztema.kozpontiszovetseg.at/#member-bim-becsi-irodalmi-muhely"
+        },
+        {
+          "@id": "https://okoszisztema.kozpontiszovetseg.at/#member-kalaka-club"
+        },
+        {
+          "@id": "https://okoszisztema.kozpontiszovetseg.at/#member-napraforgok"
+        },
+        {
+          "@id": "https://okoszisztema.kozpontiszovetseg.at/#member-szent-istvan-egylet"
+        },
+        {
+          "@id": "https://okoszisztema.kozpontiszovetseg.at/#member-bornemisza-peter-tarsasag"
+        },
+        {
+          "@id": "https://okoszisztema.kozpontiszovetseg.at/#member-nemzetkozi-duna-filharmonia-barati-kor"
+        },
+        {
+          "@id": "https://okoszisztema.kozpontiszovetseg.at/#member-alsoori-magyar-kultur-es-tancegyesulet"
+        },
+        {
+          "@id": "https://okoszisztema.kozpontiszovetseg.at/#member-kozep-burgenlandi-magyar-kulturegyesulet"
+        },
+        {
+          "@id": "https://okoszisztema.kozpontiszovetseg.at/#member-felso-ausztriai-magyarok-kulturegyesulete"
+        },
+        {
+          "@id": "https://okoszisztema.kozpontiszovetseg.at/#member-linz-magyar-katolikus-kozosseg"
+        },
+        {
+          "@id": "https://okoszisztema.kozpontiszovetseg.at/#member-felso-ausztriai-hetvegi-magyar-ovoda-es-iskola"
+        },
+        {
+          "@id": "https://okoszisztema.kozpontiszovetseg.at/#member-cserkesz-80-wels"
+        },
+        {
+          "@id": "https://okoszisztema.kozpontiszovetseg.at/#member-salzung"
+        },
+        {
+          "@id": "https://okoszisztema.kozpontiszovetseg.at/#member-grazi-magyar-egyesulet"
+        },
+        {
+          "@id": "https://okoszisztema.kozpontiszovetseg.at/#member-magyar-egyetemistak-es-oregdiakok-klubja-graz"
+        },
+        {
+          "@id": "https://okoszisztema.kozpontiszovetseg.at/#member-graci-magyar-katolikus-kozosseg"
+        },
+        {
+          "@id": "https://okoszisztema.kozpontiszovetseg.at/#member-femconnect-graz"
+        },
+        {
+          "@id": "https://okoszisztema.kozpontiszovetseg.at/#member-magyarhaz-innsbruck"
+        },
+        {
+          "@id": "https://okoszisztema.kozpontiszovetseg.at/#member-imike"
+        },
+        {
+          "@id": "https://okoszisztema.kozpontiszovetseg.at/#member-cserkesz-79-innsbruck"
+        },
+        {
+          "@id": "https://okoszisztema.kozpontiszovetseg.at/#member-imeasz"
+        },
+        {
+          "@id": "https://okoszisztema.kozpontiszovetseg.at/#member-innsbrucki-magyar-katolikus-kozosseg"
+        },
+        {
+          "@id": "https://okoszisztema.kozpontiszovetseg.at/#member-vorarlbergi-magyar-egyesulet"
+        },
+        {
+          "@id": "https://okoszisztema.kozpontiszovetseg.at/#member-mi-magyarok-egymasert"
+        }
       ],
       "subjectOf": [
-        {"@id":"https://okoszisztema.kozpontiszovetseg.at/#website"},
-        {"@id":"https://okoszisztema.kozpontiszovetseg.at/#member-directory"}
+        {
+          "@id": "https://okoszisztema.kozpontiszovetseg.at/#website"
+        },
+        {
+          "@id": "https://okoszisztema.kozpontiszovetseg.at/#member-directory"
+        },
+        {
+          "@id": "https://okoszisztema.kozpontiszovetseg.at/#member-research"
+        }
       ]
     },
     {
-      "@type": ["EducationalOrganization","School"],
+      "@type": [
+        "EducationalOrganization",
+        "School"
+      ],
       "@id": "https://www.magyariskola.at/#school",
       "name": "Bécsi Magyar Iskola",
-      "alternateName": ["BMI","Wiener Ungarische Schule"],
+      "alternateName": [
+        "BMI",
+        "Wiener Ungarische Schule"
+      ],
       "url": "https://www.magyariskola.at/",
       "foundingDate": "1987",
       "description": "A Bécsi Magyar Iskola canonical alapítási éve 1987; 2027-ben ünnepli fennállásának 40. évfordulóját.",
-      "sameAs": ["https://hu.wikipedia.org/wiki/Bécsi_Magyar_Iskola"],
-      "parentOrganization": {"@id":"https://www.kozpontiszovetseg.at/#organization"},
+      "sameAs": [
+        "https://hu.wikipedia.org/wiki/Bécsi_Magyar_Iskola"
+      ],
+      "parentOrganization": {
+        "@id": "https://www.kozpontiszovetseg.at/#organization"
+      },
       "subjectOf": [
-        {"@id":"https://programvalaszto.magyariskola.at/#website"},
-        {"@id":"https://tanarok.magyariskola.at/#website"},
-        {"@id":"https://zenebona.magyariskola.at/#website"},
-        {"@id":"https://taltosdob.magyariskola.at/#website"},
-        {"@id":"https://2026.magyariskola.at/#website"},
-        {"@id":"https://www.vipach.at/#website"},
-        {"@id":"https://www.musicaltarsulat.at/#website"}
+        {
+          "@id": "https://programvalaszto.magyariskola.at/#website"
+        },
+        {
+          "@id": "https://tanarok.magyariskola.at/#website"
+        },
+        {
+          "@id": "https://zenebona.magyariskola.at/#website"
+        },
+        {
+          "@id": "https://taltosdob.magyariskola.at/#website"
+        },
+        {
+          "@id": "https://2026.magyariskola.at/#website"
+        },
+        {
+          "@id": "https://www.vipach.at/#website"
+        },
+        {
+          "@id": "https://www.musicaltarsulat.at/#website"
+        }
       ]
     },
     {
@@ -90,9 +179,17 @@
       "@id": "https://okoszisztema.kozpontiszovetseg.at/#website",
       "url": "https://okoszisztema.kozpontiszovetseg.at/",
       "name": "Központi Szövetség · Online ökoszisztéma",
-      "publisher": {"@id":"https://www.kozpontiszovetseg.at/#organization"},
-      "inLanguage": ["hu","en","de"],
-      "about": {"@id":"https://www.kozpontiszovetseg.at/#organization"},
+      "publisher": {
+        "@id": "https://www.kozpontiszovetseg.at/#organization"
+      },
+      "inLanguage": [
+        "hu",
+        "en",
+        "de"
+      ],
+      "about": {
+        "@id": "https://www.kozpontiszovetseg.at/#organization"
+      },
       "relatedLink": [
         "https://www.kozpontiszovetseg.at/r%C3%B3lunk",
         "https://www.kozpontiszovetseg.at/tagszervezetek",
@@ -104,76 +201,789 @@
       ]
     },
     {
-      "@type":"ItemList",
-      "@id":"https://okoszisztema.kozpontiszovetseg.at/#member-directory",
-      "name":"A Központi Szövetség hivatalos tagszervezeti hálózata",
-      "numberOfItems":28,
-      "itemListOrder":"https://schema.org/ItemListUnordered",
-      "itemListElement":[
-        {"@type":"ListItem","position":1,"item":{"@id":"https://okoszisztema.kozpontiszovetseg.at/#member-ausztriai-magyar-kutatointezet"}},
-        {"@type":"ListItem","position":2,"item":{"@id":"https://okoszisztema.kozpontiszovetseg.at/#member-lean-in-femspace"}},
-        {"@type":"ListItem","position":3,"item":{"@id":"https://okoszisztema.kozpontiszovetseg.at/#member-svung"}},
-        {"@type":"ListItem","position":4,"item":{"@id":"https://okoszisztema.kozpontiszovetseg.at/#member-cserkesz-72-wien"}},
-        {"@type":"ListItem","position":5,"item":{"@id":"https://okoszisztema.kozpontiszovetseg.at/#member-bim-becsi-irodalmi-muhely"}},
-        {"@type":"ListItem","position":6,"item":{"@id":"https://okoszisztema.kozpontiszovetseg.at/#member-kalaka-club"}},
-        {"@type":"ListItem","position":7,"item":{"@id":"https://okoszisztema.kozpontiszovetseg.at/#member-napraforgok"}},
-        {"@type":"ListItem","position":8,"item":{"@id":"https://okoszisztema.kozpontiszovetseg.at/#member-szent-istvan-egylet"}},
-        {"@type":"ListItem","position":9,"item":{"@id":"https://okoszisztema.kozpontiszovetseg.at/#member-bornemisza-peter-tarsasag"}},
-        {"@type":"ListItem","position":10,"item":{"@id":"https://okoszisztema.kozpontiszovetseg.at/#member-nemzetkozi-duna-filharmonia-barati-kor"}},
-        {"@type":"ListItem","position":11,"item":{"@id":"https://okoszisztema.kozpontiszovetseg.at/#member-alsoori-magyar-kultur-es-tancegyesulet"}},
-        {"@type":"ListItem","position":12,"item":{"@id":"https://okoszisztema.kozpontiszovetseg.at/#member-kozep-burgenlandi-magyar-kulturegyesulet"}},
-        {"@type":"ListItem","position":13,"item":{"@id":"https://okoszisztema.kozpontiszovetseg.at/#member-felso-ausztriai-magyarok-kulturegyesulete"}},
-        {"@type":"ListItem","position":14,"item":{"@id":"https://okoszisztema.kozpontiszovetseg.at/#member-linz-magyar-katolikus-kozosseg"}},
-        {"@type":"ListItem","position":15,"item":{"@id":"https://okoszisztema.kozpontiszovetseg.at/#member-felso-ausztriai-hetvegi-magyar-ovoda-es-iskola"}},
-        {"@type":"ListItem","position":16,"item":{"@id":"https://okoszisztema.kozpontiszovetseg.at/#member-cserkesz-80-wels"}},
-        {"@type":"ListItem","position":17,"item":{"@id":"https://okoszisztema.kozpontiszovetseg.at/#member-salzung"}},
-        {"@type":"ListItem","position":18,"item":{"@id":"https://okoszisztema.kozpontiszovetseg.at/#member-grazi-magyar-egyesulet"}},
-        {"@type":"ListItem","position":19,"item":{"@id":"https://okoszisztema.kozpontiszovetseg.at/#member-magyar-egyetemistak-es-oregdiakok-klubja-graz"}},
-        {"@type":"ListItem","position":20,"item":{"@id":"https://okoszisztema.kozpontiszovetseg.at/#member-graci-magyar-katolikus-kozosseg"}},
-        {"@type":"ListItem","position":21,"item":{"@id":"https://okoszisztema.kozpontiszovetseg.at/#member-femconnect-graz"}},
-        {"@type":"ListItem","position":22,"item":{"@id":"https://okoszisztema.kozpontiszovetseg.at/#member-magyarhaz-innsbruck"}},
-        {"@type":"ListItem","position":23,"item":{"@id":"https://okoszisztema.kozpontiszovetseg.at/#member-imike"}},
-        {"@type":"ListItem","position":24,"item":{"@id":"https://okoszisztema.kozpontiszovetseg.at/#member-cserkesz-79-innsbruck"}},
-        {"@type":"ListItem","position":25,"item":{"@id":"https://okoszisztema.kozpontiszovetseg.at/#member-imeasz"}},
-        {"@type":"ListItem","position":26,"item":{"@id":"https://okoszisztema.kozpontiszovetseg.at/#member-innsbrucki-magyar-katolikus-kozosseg"}},
-        {"@type":"ListItem","position":27,"item":{"@id":"https://okoszisztema.kozpontiszovetseg.at/#member-vorarlbergi-magyar-egyesulet"}},
-        {"@type":"ListItem","position":28,"item":{"@id":"https://okoszisztema.kozpontiszovetseg.at/#member-mi-magyarok-egymasert"}}
+      "@type": "ItemList",
+      "@id": "https://okoszisztema.kozpontiszovetseg.at/#member-directory",
+      "name": "A Központi Szövetség hivatalos tagszervezeti hálózata",
+      "numberOfItems": 28,
+      "itemListOrder": "https://schema.org/ItemListUnordered",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@id": "https://okoszisztema.kozpontiszovetseg.at/#member-ausztriai-magyar-kutatointezet"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@id": "https://okoszisztema.kozpontiszovetseg.at/#member-lean-in-femspace"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@id": "https://okoszisztema.kozpontiszovetseg.at/#member-svung"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "item": {
+            "@id": "https://okoszisztema.kozpontiszovetseg.at/#member-cserkesz-72-wien"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "item": {
+            "@id": "https://okoszisztema.kozpontiszovetseg.at/#member-bim-becsi-irodalmi-muhely"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "item": {
+            "@id": "https://okoszisztema.kozpontiszovetseg.at/#member-kalaka-club"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "item": {
+            "@id": "https://okoszisztema.kozpontiszovetseg.at/#member-napraforgok"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "item": {
+            "@id": "https://okoszisztema.kozpontiszovetseg.at/#member-szent-istvan-egylet"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "item": {
+            "@id": "https://okoszisztema.kozpontiszovetseg.at/#member-bornemisza-peter-tarsasag"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 10,
+          "item": {
+            "@id": "https://okoszisztema.kozpontiszovetseg.at/#member-nemzetkozi-duna-filharmonia-barati-kor"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 11,
+          "item": {
+            "@id": "https://okoszisztema.kozpontiszovetseg.at/#member-alsoori-magyar-kultur-es-tancegyesulet"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 12,
+          "item": {
+            "@id": "https://okoszisztema.kozpontiszovetseg.at/#member-kozep-burgenlandi-magyar-kulturegyesulet"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 13,
+          "item": {
+            "@id": "https://okoszisztema.kozpontiszovetseg.at/#member-felso-ausztriai-magyarok-kulturegyesulete"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 14,
+          "item": {
+            "@id": "https://okoszisztema.kozpontiszovetseg.at/#member-linz-magyar-katolikus-kozosseg"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 15,
+          "item": {
+            "@id": "https://okoszisztema.kozpontiszovetseg.at/#member-felso-ausztriai-hetvegi-magyar-ovoda-es-iskola"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 16,
+          "item": {
+            "@id": "https://okoszisztema.kozpontiszovetseg.at/#member-cserkesz-80-wels"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 17,
+          "item": {
+            "@id": "https://okoszisztema.kozpontiszovetseg.at/#member-salzung"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 18,
+          "item": {
+            "@id": "https://okoszisztema.kozpontiszovetseg.at/#member-grazi-magyar-egyesulet"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 19,
+          "item": {
+            "@id": "https://okoszisztema.kozpontiszovetseg.at/#member-magyar-egyetemistak-es-oregdiakok-klubja-graz"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 20,
+          "item": {
+            "@id": "https://okoszisztema.kozpontiszovetseg.at/#member-graci-magyar-katolikus-kozosseg"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 21,
+          "item": {
+            "@id": "https://okoszisztema.kozpontiszovetseg.at/#member-femconnect-graz"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 22,
+          "item": {
+            "@id": "https://okoszisztema.kozpontiszovetseg.at/#member-magyarhaz-innsbruck"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 23,
+          "item": {
+            "@id": "https://okoszisztema.kozpontiszovetseg.at/#member-imike"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 24,
+          "item": {
+            "@id": "https://okoszisztema.kozpontiszovetseg.at/#member-cserkesz-79-innsbruck"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 25,
+          "item": {
+            "@id": "https://okoszisztema.kozpontiszovetseg.at/#member-imeasz"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 26,
+          "item": {
+            "@id": "https://okoszisztema.kozpontiszovetseg.at/#member-innsbrucki-magyar-katolikus-kozosseg"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 27,
+          "item": {
+            "@id": "https://okoszisztema.kozpontiszovetseg.at/#member-vorarlbergi-magyar-egyesulet"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 28,
+          "item": {
+            "@id": "https://okoszisztema.kozpontiszovetseg.at/#member-mi-magyarok-egymasert"
+          }
+        }
       ]
     },
-    {"@type":"Organization","@id":"https://okoszisztema.kozpontiszovetseg.at/#member-ausztriai-magyar-kutatointezet","name":"Ausztriai Magyar Kutatóintézet","alternateName":"Österreichisches Institut für ungarische Studien","url":"https://oeius.univie.ac.at/","identifier":{"@type":"PropertyValue","propertyID":"ZVR-Zahl","value":"884465843"},"areaServed":{"@type":"AdministrativeArea","name":"Wien"},"memberOf":{"@id":"https://www.kozpontiszovetseg.at/#organization"}},
-    {"@type":"Organization","@id":"https://okoszisztema.kozpontiszovetseg.at/#member-lean-in-femspace","name":"Lean in Femspace Külföldön újrakezdő magyar nők egyesülete","alternateName":"Verein der Ungarischen Frauen in Österreich","url":"https://leaninfemspace.at/","identifier":{"@type":"PropertyValue","propertyID":"ZVR-Zahl","value":"1179703987"},"areaServed":{"@type":"AdministrativeArea","name":"Wien"},"memberOf":{"@id":"https://www.kozpontiszovetseg.at/#organization"}},
-    {"@type":"Organization","@id":"https://okoszisztema.kozpontiszovetseg.at/#member-svung","name":"SVUNG Bécsi Magyarok Művészeti Egyesülete","alternateName":"Kunstverein der Wiener Ungarn","url":"https://www.svung.at/","identifier":{"@type":"PropertyValue","propertyID":"ZVR-Zahl","value":"825911870"},"areaServed":{"@type":"AdministrativeArea","name":"Wien"},"memberOf":{"@id":"https://www.kozpontiszovetseg.at/#organization"}},
-    {"@type":"Organization","@id":"https://okoszisztema.kozpontiszovetseg.at/#member-cserkesz-72-wien","name":"72 sz. Széchenyi István cserkészcsapat","alternateName":"Ungarische Pfadfindergruppe Széchenyi István Nr. 72, Wien","identifier":{"@type":"PropertyValue","propertyID":"ZVR-Zahl","value":"47300458"},"areaServed":{"@type":"AdministrativeArea","name":"Wien"},"memberOf":{"@id":"https://www.kozpontiszovetseg.at/#organization"}},
-    {"@type":"Organization","@id":"https://okoszisztema.kozpontiszovetseg.at/#member-bim-becsi-irodalmi-muhely","name":"BIM - Bécsi Irodalmi Műhely","alternateName":"WUL - Wiener Ungarische Literaturwerkstatt","identifier":{"@type":"PropertyValue","propertyID":"ZVR-Zahl","value":"1650444929"},"areaServed":{"@type":"AdministrativeArea","name":"Wien"},"memberOf":{"@id":"https://www.kozpontiszovetseg.at/#organization"}},
-    {"@type":"Organization","@id":"https://okoszisztema.kozpontiszovetseg.at/#member-kalaka-club","name":"Kaláka Club","alternateName":["Ausztriai Magyarok Gazdasági Érdekközössége","Ökonomische Interessengemeinschaft der Ungarn in Österreich"],"url":"https://kalaka-club.at/","identifier":{"@type":"PropertyValue","propertyID":"ZVR-Zahl","value":"778587523"},"areaServed":{"@type":"AdministrativeArea","name":"Wien"},"memberOf":{"@id":"https://www.kozpontiszovetseg.at/#organization"}},
-    {"@type":"Organization","@id":"https://okoszisztema.kozpontiszovetseg.at/#member-napraforgok","name":"Napraforgók Bécsi Magyar Néptánc és Népzene Egyesület","alternateName":"Verein zur Förderung von ungarischem Volkstanz","url":"https://www.napraforgok.at/","identifier":{"@type":"PropertyValue","propertyID":"ZVR-Zahl","value":"566523345"},"areaServed":{"@type":"AdministrativeArea","name":"Wien"},"memberOf":{"@id":"https://www.kozpontiszovetseg.at/#organization"}},
-    {"@type":"Organization","@id":"https://okoszisztema.kozpontiszovetseg.at/#member-szent-istvan-egylet","name":"Szent István Egylet","alternateName":"Sankt Stephan Verein","identifier":{"@type":"PropertyValue","propertyID":"ZVR-Zahl","value":"246575229"},"areaServed":{"@type":"AdministrativeArea","name":"Wien"},"memberOf":{"@id":"https://www.kozpontiszovetseg.at/#organization"}},
-    {"@type":"Organization","@id":"https://okoszisztema.kozpontiszovetseg.at/#member-bornemisza-peter-tarsasag","name":"Bornemisza Péter Társaság","alternateName":"Péter Bornemisza Gesellschaft","identifier":{"@type":"PropertyValue","propertyID":"ZVR-Zahl","value":"250671590"},"areaServed":{"@type":"AdministrativeArea","name":"Wien"},"memberOf":{"@id":"https://www.kozpontiszovetseg.at/#organization"}},
-    {"@type":"Organization","@id":"https://okoszisztema.kozpontiszovetseg.at/#member-nemzetkozi-duna-filharmonia-barati-kor","name":"Nemzetközi Duna Filharmónia Baráti kör","alternateName":"Freunde der Kulturplattform Internationale Donauphilharmonie","identifier":{"@type":"PropertyValue","propertyID":"ZVR-Zahl","value":"1137618189"},"areaServed":{"@type":"AdministrativeArea","name":"Wien"},"memberOf":{"@id":"https://www.kozpontiszovetseg.at/#organization"}},
-    {"@type":"Organization","@id":"https://okoszisztema.kozpontiszovetseg.at/#member-alsoori-magyar-kultur-es-tancegyesulet","name":"Alsóőri Magyar Kultúr- és Táncegyesület","alternateName":"Ungarischer Kultur- und Tanzverein Unterwart","identifier":{"@type":"PropertyValue","propertyID":"ZVR-Zahl","value":"1847607707"},"areaServed":{"@type":"AdministrativeArea","name":"Burgenland"},"memberOf":{"@id":"https://www.kozpontiszovetseg.at/#organization"}},
-    {"@type":"Organization","@id":"https://okoszisztema.kozpontiszovetseg.at/#member-kozep-burgenlandi-magyar-kulturegyesulet","name":"Közép–Burgenlandi Magyar Kultúregyesület","alternateName":"Mittelburgenländischer Ungarischer Kulturverein","identifier":{"@type":"PropertyValue","propertyID":"ZVR-Zahl","value":"352107517"},"areaServed":{"@type":"AdministrativeArea","name":"Burgenland"},"memberOf":{"@id":"https://www.kozpontiszovetseg.at/#organization"}},
-    {"@type":"Organization","@id":"https://okoszisztema.kozpontiszovetseg.at/#member-felso-ausztriai-magyarok-kulturegyesulete","name":"Felső-Ausztriai Magyarok Kultúregyesülete","alternateName":"Kulturverein der ungarischen Sprachgruppe in Oberösterreich","identifier":{"@type":"PropertyValue","propertyID":"ZVR-Zahl","value":"520691483"},"areaServed":{"@type":"AdministrativeArea","name":"Oberösterreich"},"memberOf":{"@id":"https://www.kozpontiszovetseg.at/#organization"}},
-    {"@type":"Organization","@id":"https://okoszisztema.kozpontiszovetseg.at/#member-linz-magyar-katolikus-kozosseg","name":"Linz Magyar Katolikus Közösség","alternateName":"Ungarische Katholische Gemeinde Linz","url":"https://ausztria.katolikus.at/","areaServed":{"@type":"AdministrativeArea","name":"Oberösterreich"},"memberOf":{"@id":"https://www.kozpontiszovetseg.at/#organization"}},
-    {"@type":"Organization","@id":"https://okoszisztema.kozpontiszovetseg.at/#member-felso-ausztriai-hetvegi-magyar-ovoda-es-iskola","name":"Felső-Ausztriai Hétvégi Magyar Óvoda és Iskola","alternateName":"Oberösterreichischer Wochenend-Ungarischer Kindergarten und Schule","identifier":{"@type":"PropertyValue","propertyID":"ZVR-Zahl","value":"520691483"},"areaServed":{"@type":"AdministrativeArea","name":"Oberösterreich"},"memberOf":{"@id":"https://www.kozpontiszovetseg.at/#organization"}},
-    {"@type":"Organization","@id":"https://okoszisztema.kozpontiszovetseg.at/#member-cserkesz-80-wels","name":"80 sz. Árpád cserkészcsapat","alternateName":"Ungarische Pfadfindergruppe Arpad Nr. 80, Wels","url":"https://arpadcscslinz.jimdofree.com/","identifier":{"@type":"PropertyValue","propertyID":"ZVR-Zahl","value":"422269350"},"areaServed":{"@type":"AdministrativeArea","name":"Oberösterreich"},"memberOf":{"@id":"https://www.kozpontiszovetseg.at/#organization"}},
-    {"@type":"Organization","@id":"https://okoszisztema.kozpontiszovetseg.at/#member-salzung","name":"SalzUng - Salzburgi Magyar Egyesület","alternateName":"Salzburger ungarischer Verein","url":"https://vukk.at/","identifier":{"@type":"PropertyValue","propertyID":"ZVR-Zahl","value":"641989795"},"areaServed":{"@type":"AdministrativeArea","name":"Salzburg"},"memberOf":{"@id":"https://www.kozpontiszovetseg.at/#organization"}},
-    {"@type":"Organization","@id":"https://okoszisztema.kozpontiszovetseg.at/#member-grazi-magyar-egyesulet","name":"Grázi Magyar Egyesület","alternateName":"Grazer Ungarischer Verein","url":"https://www.grazimagyaregyesuelet.at/","identifier":{"@type":"PropertyValue","propertyID":"ZVR-Zahl","value":"986510073"},"areaServed":{"@type":"AdministrativeArea","name":"Steiermark"},"memberOf":{"@id":"https://www.kozpontiszovetseg.at/#organization"}},
-    {"@type":"Organization","@id":"https://okoszisztema.kozpontiszovetseg.at/#member-magyar-egyetemistak-es-oregdiakok-klubja-graz","name":"Magyar Egyetemisták és Öregdiákok Klubja","alternateName":"Club Ungarischer Studenten und Akademiker in Graz","identifier":{"@type":"PropertyValue","propertyID":"ZVR-Zahl","value":"771855885"},"areaServed":{"@type":"AdministrativeArea","name":"Steiermark"},"memberOf":{"@id":"https://www.kozpontiszovetseg.at/#organization"}},
-    {"@type":"Organization","@id":"https://okoszisztema.kozpontiszovetseg.at/#member-graci-magyar-katolikus-kozosseg","name":"Gráci Magyar Katolikus Közösség","alternateName":"Ungarische Katholische Gemeinde Graz","url":"https://www.grazimagyaregyesuelet.at/","areaServed":{"@type":"AdministrativeArea","name":"Steiermark"},"memberOf":{"@id":"https://www.kozpontiszovetseg.at/#organization"}},
-    {"@type":"Organization","@id":"https://okoszisztema.kozpontiszovetseg.at/#member-femconnect-graz","name":"FemConnect Graz","alternateName":"Kulturverein der Ungarinnen und Ungarn in Graz","identifier":{"@type":"PropertyValue","propertyID":"ZVR-Zahl","value":"1550405774"},"areaServed":{"@type":"AdministrativeArea","name":"Steiermark"},"memberOf":{"@id":"https://www.kozpontiszovetseg.at/#organization"}},
-    {"@type":"Organization","@id":"https://okoszisztema.kozpontiszovetseg.at/#member-magyarhaz-innsbruck","name":"Magyarház - Innsbrucki Magyar Diákotthon és Kultúrcentrum Egyesület","alternateName":"Ungarisches Studentenheim und Kulturzentrum Innsbruck","identifier":{"@type":"PropertyValue","propertyID":"ZVR-Zahl","value":"768679342"},"areaServed":{"@type":"AdministrativeArea","name":"Tirol"},"memberOf":{"@id":"https://www.kozpontiszovetseg.at/#organization"}},
-    {"@type":"Organization","@id":"https://okoszisztema.kozpontiszovetseg.at/#member-imike","name":"IMIKE - Innsbrucki Magyar Ifjúsági és Kultúregyesület","alternateName":"Ungarischer Jugend- und Kulturverein Innsbruck","identifier":{"@type":"PropertyValue","propertyID":"ZVR-Zahl","value":"1109648674"},"areaServed":{"@type":"AdministrativeArea","name":"Tirol"},"memberOf":{"@id":"https://www.kozpontiszovetseg.at/#organization"}},
-    {"@type":"Organization","@id":"https://okoszisztema.kozpontiszovetseg.at/#member-cserkesz-79-innsbruck","name":"79 sz. Dr. Kozma György SJ cserkészcsapat","alternateName":"Ungarische Pfadfindergruppe Dr. Kozma György SJ, Nr. 79","identifier":{"@type":"PropertyValue","propertyID":"ZVR-Zahl","value":"1109648674"},"areaServed":{"@type":"AdministrativeArea","name":"Tirol"},"memberOf":{"@id":"https://www.kozpontiszovetseg.at/#organization"}},
-    {"@type":"Organization","@id":"https://okoszisztema.kozpontiszovetseg.at/#member-imeasz","name":"IMEASZ - Innsbrucki Magyar Egyetemisták és Akadémikusok Szövetsége","alternateName":"Verband Ungarischer Studenten und Akademiker Innsbruck","identifier":{"@type":"PropertyValue","propertyID":"ZVR-Zahl","value":"397763991"},"areaServed":{"@type":"AdministrativeArea","name":"Tirol"},"memberOf":{"@id":"https://www.kozpontiszovetseg.at/#organization"}},
-    {"@type":"Organization","@id":"https://okoszisztema.kozpontiszovetseg.at/#member-innsbrucki-magyar-katolikus-kozosseg","name":"Innsbrucki Magyar Katolikus Közösség","alternateName":"Ungarische Katholische Gemeinde Innsbruck","areaServed":{"@type":"AdministrativeArea","name":"Tirol"},"memberOf":{"@id":"https://www.kozpontiszovetseg.at/#organization"}},
-    {"@type":"Organization","@id":"https://okoszisztema.kozpontiszovetseg.at/#member-vorarlbergi-magyar-egyesulet","name":"Vorarlbergi Magyar Egyesület","alternateName":"Vorarlberger Ungarischer Verein","identifier":{"@type":"PropertyValue","propertyID":"ZVR-Zahl","value":"1582502393"},"areaServed":{"@type":"AdministrativeArea","name":"Vorarlberg"},"memberOf":{"@id":"https://www.kozpontiszovetseg.at/#organization"}},
-    {"@type":"Organization","@id":"https://okoszisztema.kozpontiszovetseg.at/#member-mi-magyarok-egymasert","name":"Mi Magyarok Egymásért","alternateName":"Wir Ungarn Füreinander","identifier":{"@type":"PropertyValue","propertyID":"ZVR-Zahl","value":"1802432708"},"areaServed":{"@type":"AdministrativeArea","name":"Vorarlberg"},"memberOf":{"@id":"https://www.kozpontiszovetseg.at/#organization"}},
-    {"@type":"WebSite","@id":"https://programvalaszto.magyariskola.at/#website","url":"https://programvalaszto.magyariskola.at/","name":"Bécsi Magyar Iskola – Programválasztó","isPartOf":{"@id":"https://www.magyariskola.at/#school"}},
-    {"@type":"WebSite","@id":"https://tanarok.magyariskola.at/#website","url":"https://tanarok.magyariskola.at/","name":"Bécsi Magyar Iskola – Tanáraink","isPartOf":{"@id":"https://www.magyariskola.at/#school"}},
-    {"@type":"WebSite","@id":"https://zenebona.magyariskola.at/#website","url":"https://zenebona.magyariskola.at/","name":"ZENEBONA","isPartOf":{"@id":"https://www.magyariskola.at/#school"}},
-    {"@type":"WebSite","@id":"https://taltosdob.magyariskola.at/#website","url":"https://taltosdob.magyariskola.at/","name":"Világfa Sárkányai","isPartOf":{"@id":"https://www.magyariskola.at/#school"}},
-    {"@type":"WebSite","@id":"https://2026.magyariskola.at/#website","url":"https://2026.magyariskola.at/","name":"Bécsi Magyar Iskola – 2025/26-os tanév beszámoló","isPartOf":{"@id":"https://www.magyariskola.at/#school"}},
-    {"@type":"WebSite","@id":"https://www.vipach.at/#website","url":"https://www.vipach.at/","name":"VIPACH – Vienna Photo Art & Creative Hub","isPartOf":{"@id":"https://www.magyariskola.at/#school"}},
-    {"@type":"WebSite","@id":"https://www.musicaltarsulat.at/#website","url":"https://www.musicaltarsulat.at/","name":"Bécsi Magyar Musical Társulat","isPartOf":{"@id":"https://www.magyariskola.at/#school"}}
+    {
+      "@type": "Organization",
+      "@id": "https://okoszisztema.kozpontiszovetseg.at/#member-ausztriai-magyar-kutatointezet",
+      "name": "Ausztriai Magyar Kutatóintézet",
+      "alternateName": "Österreichisches Institut für ungarische Studien",
+      "url": "https://oeius.univie.ac.at/",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "ZVR-Zahl",
+        "value": "884465843"
+      },
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Wien"
+      },
+      "memberOf": {
+        "@id": "https://www.kozpontiszovetseg.at/#organization"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://okoszisztema.kozpontiszovetseg.at/#member-lean-in-femspace",
+      "name": "Lean in Femspace Külföldön újrakezdő magyar nők egyesülete",
+      "alternateName": "Verein der Ungarischen Frauen in Österreich",
+      "url": "https://leaninfemspace.at/",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "ZVR-Zahl",
+        "value": "1179703987"
+      },
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Wien"
+      },
+      "memberOf": {
+        "@id": "https://www.kozpontiszovetseg.at/#organization"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://okoszisztema.kozpontiszovetseg.at/#member-svung",
+      "name": "SVUNG Bécsi Magyarok Művészeti Egyesülete",
+      "alternateName": "Kunstverein der Wiener Ungarn",
+      "url": "https://www.svung.at/",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "ZVR-Zahl",
+        "value": "825911870"
+      },
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Wien"
+      },
+      "memberOf": {
+        "@id": "https://www.kozpontiszovetseg.at/#organization"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://okoszisztema.kozpontiszovetseg.at/#member-cserkesz-72-wien",
+      "name": "72 sz. Széchenyi István cserkészcsapat",
+      "alternateName": "Ungarische Pfadfindergruppe Széchenyi István Nr. 72, Wien",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "ZVR-Zahl",
+        "value": "47300458"
+      },
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Wien"
+      },
+      "memberOf": {
+        "@id": "https://www.kozpontiszovetseg.at/#organization"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://okoszisztema.kozpontiszovetseg.at/#member-bim-becsi-irodalmi-muhely",
+      "name": "BIM - Bécsi Irodalmi Műhely",
+      "alternateName": "WUL - Wiener Ungarische Literaturwerkstatt",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "ZVR-Zahl",
+        "value": "1650444929"
+      },
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Wien"
+      },
+      "memberOf": {
+        "@id": "https://www.kozpontiszovetseg.at/#organization"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://okoszisztema.kozpontiszovetseg.at/#member-kalaka-club",
+      "name": "Kaláka Club",
+      "alternateName": [
+        "Ausztriai Magyarok Gazdasági Érdekközössége",
+        "Ökonomische Interessengemeinschaft der Ungarn in Österreich"
+      ],
+      "url": "https://kalaka-club.at/",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "ZVR-Zahl",
+        "value": "778587523"
+      },
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Wien"
+      },
+      "memberOf": {
+        "@id": "https://www.kozpontiszovetseg.at/#organization"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://okoszisztema.kozpontiszovetseg.at/#member-napraforgok",
+      "name": "Napraforgók Bécsi Magyar Néptánc és Népzene Egyesület",
+      "alternateName": "Verein zur Förderung von ungarischem Volkstanz",
+      "url": "https://www.napraforgok.at/",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "ZVR-Zahl",
+        "value": "566523345"
+      },
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Wien"
+      },
+      "memberOf": {
+        "@id": "https://www.kozpontiszovetseg.at/#organization"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://okoszisztema.kozpontiszovetseg.at/#member-szent-istvan-egylet",
+      "name": "Szent István Egylet",
+      "alternateName": "Sankt Stephan Verein",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "ZVR-Zahl",
+        "value": "246575229"
+      },
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Wien"
+      },
+      "memberOf": {
+        "@id": "https://www.kozpontiszovetseg.at/#organization"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://okoszisztema.kozpontiszovetseg.at/#member-bornemisza-peter-tarsasag",
+      "name": "Bornemisza Péter Társaság",
+      "alternateName": "Péter Bornemisza Gesellschaft",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "ZVR-Zahl",
+        "value": "250671590"
+      },
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Wien"
+      },
+      "memberOf": {
+        "@id": "https://www.kozpontiszovetseg.at/#organization"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://okoszisztema.kozpontiszovetseg.at/#member-nemzetkozi-duna-filharmonia-barati-kor",
+      "name": "Nemzetközi Duna Filharmónia Baráti kör",
+      "alternateName": "Freunde der Kulturplattform Internationale Donauphilharmonie",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "ZVR-Zahl",
+        "value": "1137618189"
+      },
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Wien"
+      },
+      "memberOf": {
+        "@id": "https://www.kozpontiszovetseg.at/#organization"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://okoszisztema.kozpontiszovetseg.at/#member-alsoori-magyar-kultur-es-tancegyesulet",
+      "name": "Alsóőri Magyar Kultúr- és Táncegyesület",
+      "alternateName": "Ungarischer Kultur- und Tanzverein Unterwart",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "ZVR-Zahl",
+        "value": "1847607707"
+      },
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Burgenland"
+      },
+      "memberOf": {
+        "@id": "https://www.kozpontiszovetseg.at/#organization"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://okoszisztema.kozpontiszovetseg.at/#member-kozep-burgenlandi-magyar-kulturegyesulet",
+      "name": "Közép–Burgenlandi Magyar Kultúregyesület",
+      "alternateName": "Mittelburgenländischer Ungarischer Kulturverein",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "ZVR-Zahl",
+        "value": "352107517"
+      },
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Burgenland"
+      },
+      "memberOf": {
+        "@id": "https://www.kozpontiszovetseg.at/#organization"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://okoszisztema.kozpontiszovetseg.at/#member-felso-ausztriai-magyarok-kulturegyesulete",
+      "name": "Felső-Ausztriai Magyarok Kultúregyesülete",
+      "alternateName": "Kulturverein der ungarischen Sprachgruppe in Oberösterreich",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "ZVR-Zahl",
+        "value": "520691483"
+      },
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Oberösterreich"
+      },
+      "memberOf": {
+        "@id": "https://www.kozpontiszovetseg.at/#organization"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://okoszisztema.kozpontiszovetseg.at/#member-linz-magyar-katolikus-kozosseg",
+      "name": "Linz Magyar Katolikus Közösség",
+      "alternateName": "Ungarische Katholische Gemeinde Linz",
+      "url": "https://ausztria.katolikus.at/",
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Oberösterreich"
+      },
+      "memberOf": {
+        "@id": "https://www.kozpontiszovetseg.at/#organization"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://okoszisztema.kozpontiszovetseg.at/#member-felso-ausztriai-hetvegi-magyar-ovoda-es-iskola",
+      "name": "Felső-Ausztriai Hétvégi Magyar Óvoda és Iskola",
+      "alternateName": "Oberösterreichischer Wochenend-Ungarischer Kindergarten und Schule",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "ZVR-Zahl",
+        "value": "520691483"
+      },
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Oberösterreich"
+      },
+      "memberOf": {
+        "@id": "https://www.kozpontiszovetseg.at/#organization"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://okoszisztema.kozpontiszovetseg.at/#member-cserkesz-80-wels",
+      "name": "80 sz. Árpád cserkészcsapat",
+      "alternateName": "Ungarische Pfadfindergruppe Arpad Nr. 80, Wels",
+      "url": "https://arpadcscslinz.jimdofree.com/",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "ZVR-Zahl",
+        "value": "422269350"
+      },
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Oberösterreich"
+      },
+      "memberOf": {
+        "@id": "https://www.kozpontiszovetseg.at/#organization"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://okoszisztema.kozpontiszovetseg.at/#member-salzung",
+      "name": "SalzUng - Salzburgi Magyar Egyesület",
+      "alternateName": "Salzburger ungarischer Verein",
+      "url": "https://vukk.at/",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "ZVR-Zahl",
+        "value": "641989795"
+      },
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Salzburg"
+      },
+      "memberOf": {
+        "@id": "https://www.kozpontiszovetseg.at/#organization"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://okoszisztema.kozpontiszovetseg.at/#member-grazi-magyar-egyesulet",
+      "name": "Grázi Magyar Egyesület",
+      "alternateName": "Grazer Ungarischer Verein",
+      "url": "https://www.grazimagyaregyesuelet.at/",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "ZVR-Zahl",
+        "value": "986510073"
+      },
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Steiermark"
+      },
+      "memberOf": {
+        "@id": "https://www.kozpontiszovetseg.at/#organization"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://okoszisztema.kozpontiszovetseg.at/#member-magyar-egyetemistak-es-oregdiakok-klubja-graz",
+      "name": "Magyar Egyetemisták és Öregdiákok Klubja",
+      "alternateName": "Club Ungarischer Studenten und Akademiker in Graz",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "ZVR-Zahl",
+        "value": "771855885"
+      },
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Steiermark"
+      },
+      "memberOf": {
+        "@id": "https://www.kozpontiszovetseg.at/#organization"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://okoszisztema.kozpontiszovetseg.at/#member-graci-magyar-katolikus-kozosseg",
+      "name": "Gráci Magyar Katolikus Közösség",
+      "alternateName": "Ungarische Katholische Gemeinde Graz",
+      "url": "https://www.grazimagyaregyesuelet.at/",
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Steiermark"
+      },
+      "memberOf": {
+        "@id": "https://www.kozpontiszovetseg.at/#organization"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://okoszisztema.kozpontiszovetseg.at/#member-femconnect-graz",
+      "name": "FemConnect Graz",
+      "alternateName": "Kulturverein der Ungarinnen und Ungarn in Graz",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "ZVR-Zahl",
+        "value": "1550405774"
+      },
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Steiermark"
+      },
+      "memberOf": {
+        "@id": "https://www.kozpontiszovetseg.at/#organization"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://okoszisztema.kozpontiszovetseg.at/#member-magyarhaz-innsbruck",
+      "name": "Magyarház - Innsbrucki Magyar Diákotthon és Kultúrcentrum Egyesület",
+      "alternateName": "Ungarisches Studentenheim und Kulturzentrum Innsbruck",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "ZVR-Zahl",
+        "value": "768679342"
+      },
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Tirol"
+      },
+      "memberOf": {
+        "@id": "https://www.kozpontiszovetseg.at/#organization"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://okoszisztema.kozpontiszovetseg.at/#member-imike",
+      "name": "IMIKE - Innsbrucki Magyar Ifjúsági és Kultúregyesület",
+      "alternateName": "Ungarischer Jugend- und Kulturverein Innsbruck",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "ZVR-Zahl",
+        "value": "1109648674"
+      },
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Tirol"
+      },
+      "memberOf": {
+        "@id": "https://www.kozpontiszovetseg.at/#organization"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://okoszisztema.kozpontiszovetseg.at/#member-cserkesz-79-innsbruck",
+      "name": "79 sz. Dr. Kozma György SJ cserkészcsapat",
+      "alternateName": "Ungarische Pfadfindergruppe Dr. Kozma György SJ, Nr. 79",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "ZVR-Zahl",
+        "value": "1109648674"
+      },
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Tirol"
+      },
+      "memberOf": {
+        "@id": "https://www.kozpontiszovetseg.at/#organization"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://okoszisztema.kozpontiszovetseg.at/#member-imeasz",
+      "name": "IMEASZ - Innsbrucki Magyar Egyetemisták és Akadémikusok Szövetsége",
+      "alternateName": "Verband Ungarischer Studenten und Akademiker Innsbruck",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "ZVR-Zahl",
+        "value": "397763991"
+      },
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Tirol"
+      },
+      "memberOf": {
+        "@id": "https://www.kozpontiszovetseg.at/#organization"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://okoszisztema.kozpontiszovetseg.at/#member-innsbrucki-magyar-katolikus-kozosseg",
+      "name": "Innsbrucki Magyar Katolikus Közösség",
+      "alternateName": "Ungarische Katholische Gemeinde Innsbruck",
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Tirol"
+      },
+      "memberOf": {
+        "@id": "https://www.kozpontiszovetseg.at/#organization"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://okoszisztema.kozpontiszovetseg.at/#member-vorarlbergi-magyar-egyesulet",
+      "name": "Vorarlbergi Magyar Egyesület",
+      "alternateName": "Vorarlberger Ungarischer Verein",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "ZVR-Zahl",
+        "value": "1582502393"
+      },
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Vorarlberg"
+      },
+      "memberOf": {
+        "@id": "https://www.kozpontiszovetseg.at/#organization"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://okoszisztema.kozpontiszovetseg.at/#member-mi-magyarok-egymasert",
+      "name": "Mi Magyarok Egymásért",
+      "alternateName": "Wir Ungarn Füreinander",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "ZVR-Zahl",
+        "value": "1802432708"
+      },
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Vorarlberg"
+      },
+      "memberOf": {
+        "@id": "https://www.kozpontiszovetseg.at/#organization"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://programvalaszto.magyariskola.at/#website",
+      "url": "https://programvalaszto.magyariskola.at/",
+      "name": "Bécsi Magyar Iskola – Programválasztó",
+      "isPartOf": {
+        "@id": "https://www.magyariskola.at/#school"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://tanarok.magyariskola.at/#website",
+      "url": "https://tanarok.magyariskola.at/",
+      "name": "Bécsi Magyar Iskola – Tanáraink",
+      "isPartOf": {
+        "@id": "https://www.magyariskola.at/#school"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://zenebona.magyariskola.at/#website",
+      "url": "https://zenebona.magyariskola.at/",
+      "name": "ZENEBONA",
+      "isPartOf": {
+        "@id": "https://www.magyariskola.at/#school"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://taltosdob.magyariskola.at/#website",
+      "url": "https://taltosdob.magyariskola.at/",
+      "name": "Világfa Sárkányai",
+      "isPartOf": {
+        "@id": "https://www.magyariskola.at/#school"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://2026.magyariskola.at/#website",
+      "url": "https://2026.magyariskola.at/",
+      "name": "Bécsi Magyar Iskola – 2025/26-os tanév beszámoló",
+      "isPartOf": {
+        "@id": "https://www.magyariskola.at/#school"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.vipach.at/#website",
+      "url": "https://www.vipach.at/",
+      "name": "VIPACH – Vienna Photo Art & Creative Hub",
+      "isPartOf": {
+        "@id": "https://www.magyariskola.at/#school"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.musicaltarsulat.at/#website",
+      "url": "https://www.musicaltarsulat.at/",
+      "name": "Bécsi Magyar Musical Társulat",
+      "isPartOf": {
+        "@id": "https://www.magyariskola.at/#school"
+      }
+    },
+    {
+      "@type": "Dataset",
+      "@id": "https://okoszisztema.kozpontiszovetseg.at/#member-research",
+      "name": "Központi Szövetség tagszervezeti történeti és sajtókutatási adatbázis",
+      "url": "https://okoszisztema.kozpontiszovetseg.at/member-research.json",
+      "inLanguage": "hu",
+      "about": {
+        "@id": "https://www.kozpontiszovetseg.at/#organization"
+      },
+      "isBasedOn": [
+        "https://www.kozpontiszovetseg.at/tagszervezetek",
+        "https://volksgruppen.orf.at/magyarok/",
+        "https://rolunk.at/"
+      ]
+    }
   ]
 }
