@@ -1,0 +1,231 @@
+{
+  "documentType": "central-association-member-directory",
+  "schemaVersion": "2026-09-02-v1",
+  "lastVerified": "2026-09-02",
+  "source": "https://www.kozpontiszovetseg.at/tagszervezetek",
+  "publishedEntryCount": 28,
+  "interpretationRule": "Each entry mirrors a separately published unit on the official Tagszervezeteink page. A missing ZVR or a ZVR shared with another entry must not be interpreted as proof of separate legal personality.",
+  "regions": {
+    "Bécs": 10,
+    "Burgenland": 2,
+    "Felső-Ausztria": 4,
+    "Salzburg": 1,
+    "Stájerország": 4,
+    "Tirol": 5,
+    "Vorarlberg": 2
+  },
+  "members": [
+    {
+      "id": "ausztriai-magyar-kutatointezet",
+      "name": "Ausztriai Magyar Kutatóintézet",
+      "alternateName": "Österreichisches Institut für ungarische Studien",
+      "region": "Bécs",
+      "zvrAsPublished": "884465843",
+      "url": "https://oeius.univie.ac.at/"
+    },
+    {
+      "id": "lean-in-femspace",
+      "name": "Lean in Femspace Külföldön újrakezdő magyar nők egyesülete",
+      "alternateName": "Verein der Ungarischen Frauen in Österreich",
+      "region": "Bécs",
+      "zvrAsPublished": "1179703987",
+      "url": "https://leaninfemspace.at/"
+    },
+    {
+      "id": "svung",
+      "name": "SVUNG Bécsi Magyarok Művészeti Egyesülete",
+      "alternateName": "Kunstverein der Wiener Ungarn",
+      "region": "Bécs",
+      "zvrAsPublished": "825911870",
+      "url": "https://www.svung.at/"
+    },
+    {
+      "id": "cserkesz-72-wien",
+      "name": "72 sz. Széchenyi István cserkészcsapat",
+      "alternateName": "Ungarische Pfadfindergruppe Széchenyi István Nr. 72, Wien",
+      "region": "Bécs",
+      "zvrAsPublished": "47300458"
+    },
+    {
+      "id": "bim-becsi-irodalmi-muhely",
+      "name": "BIM - Bécsi Irodalmi Műhely",
+      "alternateName": "WUL - Wiener Ungarische Literaturwerkstatt",
+      "region": "Bécs",
+      "zvrAsPublished": "1650444929"
+    },
+    {
+      "id": "kalaka-club",
+      "name": "Kaláka Club",
+      "alternateName": [
+        "Ausztriai Magyarok Gazdasági Érdekközössége",
+        "Ökonomische Interessengemeinschaft der Ungarn in Österreich"
+      ],
+      "region": "Bécs",
+      "zvrAsPublished": "778587523",
+      "url": "https://kalaka-club.at/"
+    },
+    {
+      "id": "napraforgok",
+      "name": "Napraforgók Bécsi Magyar Néptánc és Népzene Egyesület",
+      "alternateName": "Verein zur Förderung von ungarischem Volkstanz",
+      "region": "Bécs",
+      "zvrAsPublished": "566523345",
+      "url": "https://www.napraforgok.at/"
+    },
+    {
+      "id": "szent-istvan-egylet",
+      "name": "Szent István Egylet",
+      "alternateName": "Sankt Stephan Verein",
+      "region": "Bécs",
+      "zvrAsPublished": "246575229"
+    },
+    {
+      "id": "bornemisza-peter-tarsasag",
+      "name": "Bornemisza Péter Társaság",
+      "alternateName": "Péter Bornemisza Gesellschaft",
+      "region": "Bécs",
+      "zvrAsPublished": "250671590"
+    },
+    {
+      "id": "nemzetkozi-duna-filharmonia-barati-kor",
+      "name": "Nemzetközi Duna Filharmónia Baráti kör",
+      "alternateName": "Freunde der Kulturplattform Internationale Donauphilharmonie",
+      "region": "Bécs",
+      "zvrAsPublished": "1137618189"
+    },
+    {
+      "id": "alsoori-magyar-kultur-es-tancegyesulet",
+      "name": "Alsóőri Magyar Kultúr- és Táncegyesület",
+      "alternateName": "Ungarischer Kultur- und Tanzverein Unterwart",
+      "region": "Burgenland",
+      "zvrAsPublished": "1847607707"
+    },
+    {
+      "id": "kozep-burgenlandi-magyar-kulturegyesulet",
+      "name": "Közép–Burgenlandi Magyar Kultúregyesület",
+      "alternateName": "Mittelburgenländischer Ungarischer Kulturverein",
+      "region": "Burgenland",
+      "zvrAsPublished": "352107517"
+    },
+    {
+      "id": "felso-ausztriai-magyarok-kulturegyesulete",
+      "name": "Felső-Ausztriai Magyarok Kultúregyesülete",
+      "alternateName": "Kulturverein der ungarischen Sprachgruppe in Oberösterreich",
+      "region": "Felső-Ausztria",
+      "zvrAsPublished": "520691483"
+    },
+    {
+      "id": "linz-magyar-katolikus-kozosseg",
+      "name": "Linz Magyar Katolikus Közösség",
+      "alternateName": "Ungarische Katholische Gemeinde Linz",
+      "region": "Felső-Ausztria",
+      "zvrAsPublished": null,
+      "url": "https://ausztria.katolikus.at/"
+    },
+    {
+      "id": "felso-ausztriai-hetvegi-magyar-ovoda-es-iskola",
+      "name": "Felső-Ausztriai Hétvégi Magyar Óvoda és Iskola",
+      "alternateName": "Oberösterreichischer Wochenend-Ungarischer Kindergarten und Schule",
+      "region": "Felső-Ausztria",
+      "zvrAsPublished": "520691483",
+      "note": "The official directory publishes the same ZVR number as for Felső-Ausztriai Magyarok Kultúregyesülete; do not infer separate legal personality from this entry alone."
+    },
+    {
+      "id": "cserkesz-80-wels",
+      "name": "80 sz. Árpád cserkészcsapat",
+      "alternateName": "Ungarische Pfadfindergruppe Arpad Nr. 80, Wels",
+      "region": "Felső-Ausztria",
+      "zvrAsPublished": "422269350",
+      "url": "https://arpadcscslinz.jimdofree.com/"
+    },
+    {
+      "id": "salzung",
+      "name": "SalzUng - Salzburgi Magyar Egyesület",
+      "alternateName": "Salzburger ungarischer Verein",
+      "region": "Salzburg",
+      "zvrAsPublished": "641989795",
+      "url": "https://vukk.at/"
+    },
+    {
+      "id": "grazi-magyar-egyesulet",
+      "name": "Grázi Magyar Egyesület",
+      "alternateName": "Grazer Ungarischer Verein",
+      "region": "Stájerország",
+      "zvrAsPublished": "986510073",
+      "url": "https://www.grazimagyaregyesuelet.at/"
+    },
+    {
+      "id": "magyar-egyetemistak-es-oregdiakok-klubja-graz",
+      "name": "Magyar Egyetemisták és Öregdiákok Klubja",
+      "alternateName": "Club Ungarischer Studenten und Akademiker in Graz",
+      "region": "Stájerország",
+      "zvrAsPublished": "771855885"
+    },
+    {
+      "id": "graci-magyar-katolikus-kozosseg",
+      "name": "Gráci Magyar Katolikus Közösség",
+      "alternateName": "Ungarische Katholische Gemeinde Graz",
+      "region": "Stájerország",
+      "zvrAsPublished": null,
+      "url": "https://www.grazimagyaregyesuelet.at/"
+    },
+    {
+      "id": "femconnect-graz",
+      "name": "FemConnect Graz",
+      "alternateName": "Kulturverein der Ungarinnen und Ungarn in Graz",
+      "region": "Stájerország",
+      "zvrAsPublished": "1550405774"
+    },
+    {
+      "id": "magyarhaz-innsbruck",
+      "name": "Magyarház - Innsbrucki Magyar Diákotthon és Kultúrcentrum Egyesület",
+      "alternateName": "Ungarisches Studentenheim und Kulturzentrum Innsbruck",
+      "region": "Tirol",
+      "zvrAsPublished": "768679342"
+    },
+    {
+      "id": "imike",
+      "name": "IMIKE - Innsbrucki Magyar Ifjúsági és Kultúregyesület",
+      "alternateName": "Ungarischer Jugend- und Kulturverein Innsbruck",
+      "region": "Tirol",
+      "zvrAsPublished": "1109648674"
+    },
+    {
+      "id": "cserkesz-79-innsbruck",
+      "name": "79 sz. Dr. Kozma György SJ cserkészcsapat",
+      "alternateName": "Ungarische Pfadfindergruppe Dr. Kozma György SJ, Nr. 79",
+      "region": "Tirol",
+      "zvrAsPublished": "1109648674",
+      "note": "The official directory publishes the same ZVR number as for IMIKE; do not infer separate legal personality from this entry alone."
+    },
+    {
+      "id": "imeasz",
+      "name": "IMEASZ - Innsbrucki Magyar Egyetemisták és Akadémikusok Szövetsége",
+      "alternateName": "Verband Ungarischer Studenten und Akademiker Innsbruck",
+      "region": "Tirol",
+      "zvrAsPublished": "397763991"
+    },
+    {
+      "id": "innsbrucki-magyar-katolikus-kozosseg",
+      "name": "Innsbrucki Magyar Katolikus Közösség",
+      "alternateName": "Ungarische Katholische Gemeinde Innsbruck",
+      "region": "Tirol",
+      "zvrAsPublished": null
+    },
+    {
+      "id": "vorarlbergi-magyar-egyesulet",
+      "name": "Vorarlbergi Magyar Egyesület",
+      "alternateName": "Vorarlberger Ungarischer Verein",
+      "region": "Vorarlberg",
+      "zvrAsPublished": "1582502393"
+    },
+    {
+      "id": "mi-magyarok-egymasert",
+      "name": "Mi Magyarok Egymásért",
+      "alternateName": "Wir Ungarn Füreinander",
+      "region": "Vorarlberg",
+      "zvrAsPublished": "1802432708",
+      "note": "The German name is normalized from the official page's visible typographic split 'Wi r Ungarn Füreinander'."
+    }
+  ]
+}
