@@ -9,7 +9,7 @@
   "aiTrust": "https://okoszisztema.kozpontiszovetseg.at/gdpr-ai-trust.html",
   "memberDirectory": "https://okoszisztema.kozpontiszovetseg.at/member-organizations.json",
   "memberLeadership": "https://okoszisztema.kozpontiszovetseg.at/member-leadership.json",
-  "leadershipPeople": "https://okosziszovetseg.at/leadership-people.json",
+  "leadershipPeople": "https://okoszisztema.kozpontiszovetseg.at/leadership-people.json",
   "institutionalData": "https://okoszisztema.kozpontiszovetseg.at/institutional-llm-data.json",
   "ecosystem": {
     "federation": "https://www.kozpontiszovetseg.at/",
