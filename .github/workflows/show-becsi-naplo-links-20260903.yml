@@ -3,6 +3,7 @@ on:
   push:
     paths:
       - '.github/workflows/show-becsi-naplo-links-20260903.yml'
+      - 'scripts/show_becsi_naplo_links.py'
 permissions:
   contents: write
 jobs:
