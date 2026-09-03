@@ -1,0 +1,135 @@
+name: Enrich member contacts and profile articles
+
+on:
+  push:
+    paths:
+      - '.github/workflows/enrich-member-contacts-articles-20260903.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  enrich:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Enrich member data and visible cards
+        shell: python
+        run: |
+          import json
+          from pathlib import Path
+
+          p = Path('member-organizations.json')
+          data = json.loads(p.read_text(encoding='utf-8'))
+
+          contacts = {
+            'ausztriai-magyar-kutatointezet': ['andrea.seidler@univie.ac.at','marta.csire@univie.ac.at'],
+            'lean-in-femspace': ['leaninfemspace@gmail.com'],
+            'svung': ['svung.tarsulat@gmx.at','Katalin.Blasko@univie.ac.at'],
+            'cserkesz-72-wien': ['becs@cserkesz.at','ildiko.piroska@cserkesz.at'],
+            'bim-becsi-irodalmi-muhely': ['nadori.lidia@gmail.com'],
+            'kalaka-club': ['elisabeth.wurst@gmx.at'],
+            'napraforgok': ['napraforgok.tancegyuttes@gmail.com','mizseirichard@gmail.com'],
+            'szent-istvan-egylet': ['ladislaus.batthyany@gmx.at'],
+            'bornemisza-peter-tarsasag': ['bornemiszapetertarsasag@gmail.com'],
+            'nemzetkozi-duna-filharmonia-barati-kor': ['agnes.katona@gmx.org'],
+            'alsoori-magyar-kultur-es-tancegyesulet': ['magyaregyesulet.unterwart@gmail.com'],
+            'irottko-sportegyesulet': ['beata.nemeth@gmx.at'],
+            'kozep-burgenlandi-magyar-kulturegyesulet': ['lizafarkas@icloud.com','mbukv@gmx.at'],
+            'felso-ausztriai-magyarok-kulturegyesulete': ['enikoe.toekes@gmail.com'],
+            'linz-magyar-katolikus-kozosseg': ['ernest.szabo@dioezese-linz.at'],
+            'felso-ausztriai-hetvegi-magyar-ovoda-es-iskola': ['magyariskola.wels@gmx.at','monikakladek@gmx.at'],
+            'cserkesz-80-wels': ['wels@cserkesz.eu','istvan.altordai@evonik.com'],
+            'salzung': ['salzburgerhunverein@gmail.com','ilonamikoczy@gmail.com'],
+            'grazi-magyar-egyesulet': ['GME1888@gmx.at','molnar.a@gmx.at'],
+            'magyar-egyetemistak-es-oregdiakok-klubja-graz': ['info@laszlovari.at'],
+            'graci-magyar-katolikus-kozosseg': ['otto.molnar@laposte.net','e.solymos@hotmail.com'],
+            'femconnect-graz': ['verein@femconnectgraz.at'],
+            'magyarhaz-innsbruck': ['mail@ugarnheim.at','pepat@ikbnet.at'],
+            'imike': ['ujkv.ibk@gmail.com'],
+            'cserkesz-79-innsbruck': ['pfadfinder.ibk79@gmail.com'],
+            'imeasz': ['info@imeasz.at'],
+            'innsbrucki-magyar-katolikus-kozosseg': ['pepat@ikbnet.at'],
+            'vorarlbergi-magyar-egyesulet': ['vorarlberg.ungverein@gmail.com','fugedi.henriette@gmail.com'],
+            'mi-magyarok-egymasert': ['mime.vorarlberg@gmail.com','mazsi0810@gmail.com']
+          }
+
+          featured = {
+            'napraforgok': {'publisher':'ORF Magyarok','title':'Napraforgók és táncháztalálkozó Bécsben','url':'https://volksgruppen.orf.at/magyarok/stories/3154928/','date':'2022-05-05'},
+            'kozep-burgenlandi-magyar-kulturegyesulet': {'publisher':'ORF Magyarok','title':'Vezetőváltás a 20 éves MBUKV élén','url':'https://volksgruppen.orf.at/magyarok/stories/3204769/','date':'2023-04-26'},
+            'femconnect-graz': {'publisher':'Rólunk.at','title':'FemConnect: új magyar kultúregyesület Grazban','url':'https://rolunk.at/kultura/femconnect-uj-magyar-kulturegyesulet-grazban/','date':'2024-09-23'},
+            'imike': {'publisher':'Rólunk.at','title':'Okos(k)odni egy jó pofa sör mellett?','url':'https://rolunk.at/magazin/okoskodni-egy-jo-pofa-sor-mellett/','date':'2025-03-21'},
+            'vorarlbergi-magyar-egyesulet': {'publisher':'ORF Magyarok','title':'Új tavasz, új remények Vorarlbergben','url':'https://volksgruppen.orf.at/magyarok/stories/3197605/','date':'2023-03-06'},
+            'mi-magyarok-egymasert': {'publisher':'ORF Magyarok','title':'Itthon – otthon Vorarlbergben','url':'https://volksgruppen.orf.at/magyarok/stories/3242638/','date':'2024-01-29'},
+            'irottko-sportegyesulet': {'publisher':'TISZTAZÖLD / Írottkő Natúrpark','title':'Gratulálunk a zero waste Írottkő Futóverseny szervezőjének az osztrák Green Events díjhoz!','url':'https://tisztazold.naturpark.hu/tag/dij/','date':'2024-06-13'}
+          }
+
+          official_source = 'https://www.kozpontiszovetseg.at/tagszervezetek'
+          for m in data.get('members', []):
+              mid = m.get('id')
+              if mid in contacts:
+                  m['contact'] = {
+                      'emails': contacts[mid],
+                      'source': official_source if mid != 'irottko-sportegyesulet' else 'https://www.vdksz.hu/fogado-intezmenyek/p12',
+                      'verified': '2026-09-03'
+                  }
+              if mid in featured:
+                  m['featuredProfileArticle'] = featured[mid]
+              elif m.get('pressEvidence'):
+                  m['featuredProfileArticle'] = m['pressEvidence'][0]
+
+          data['schemaVersion'] = '2026-09-03-v6'
+          data['contactResearch'] = {
+              'lastVerified': '2026-09-03',
+              'primarySource': official_source,
+              'rule': 'Contact details mirror the official Központi Szövetség member directory where available. External fallback sources are explicitly identified and do not override official legal identity.'
+          }
+          p.write_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+
+          htmlp = Path('index.html')
+          html = htmlp.read_text(encoding='utf-8')
+          marker = 'member-contact-article-enrichment-v1'
+          if marker not in html:
+              addon = r'''
+<script id="member-contact-article-enrichment-v1">
+(function(){
+  const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  async function enrich(){
+    try{
+      const r=await fetch('member-organizations.json',{cache:'no-store'}); if(!r.ok)return;
+      const d=await r.json();
+      const byName=new Map((d.members||[]).map(m=>[String(m.name||'').trim(),m]));
+      document.querySelectorAll('.member').forEach(card=>{
+        const h=card.querySelector('h3'); if(!h)return;
+        const m=byName.get(h.textContent.trim()); if(!m||card.querySelector('.member-enrichment'))return;
+        const box=document.createElement('div'); box.className='member-enrichment';
+        let out='';
+        const emails=(m.contact&&m.contact.emails)||[];
+        if(emails.length){out+='<div class="member-contact"><strong>Kapcsolat:</strong> '+emails.map(e=>'<a href="mailto:'+esc(e)+'">'+esc(e)+'</a>').join(' · ')+'</div>'}
+        const a=m.featuredProfileArticle;
+        if(a&&a.url){out+='<div class="member-profile-article"><strong>Bemutató / háttéranyag:</strong> <a href="'+esc(a.url)+'" target="_blank" rel="noopener">'+esc(a.title||a.publisher||'Cikk')+'</a>'+(a.publisher?' <span>('+esc(a.publisher)+')</span>':'')+'</div>'}
+        box.innerHTML=out; if(out)card.appendChild(box);
+      });
+    }catch(e){}
+  }
+  document.addEventListener('DOMContentLoaded',()=>{setTimeout(enrich,100);setTimeout(enrich,900)});
+})();
+</script>
+<style id="member-contact-article-enrichment-style-v1">
+.member-enrichment{margin-top:14px;padding-top:13px;border-top:1px solid #ececec;font-size:13px;line-height:1.55;color:#626262}.member-enrichment strong{color:#333}.member-enrichment>div+div{margin-top:6px}.member-enrichment a{overflow-wrap:anywhere}.member-profile-article span{color:#858585}
+</style>
+'''
+              html = html.replace('</body>', addon + '\n</body>')
+              htmlp.write_text(html, encoding='utf-8')
+      - name: Commit enrichment
+        run: |
+          git config user.name "ecosystem-steward"
+          git config user.email "actions@users.noreply.github.com"
+          git add member-organizations.json index.html
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "Enrich member contacts and profile articles"
+          git push
