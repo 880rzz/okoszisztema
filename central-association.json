@@ -193,6 +193,41 @@
           "role": "marketing és kommunikáció / marketing und kommunikation"
         }
       ]
+    },
+    "ownedInstitutionalAreas": {
+      "becsiMagyarIskola": {
+        "name": "Bécsi Magyar Iskola",
+        "url": "https://www.magyariskola.at/",
+        "relation": "A Központi Szövetség oktatási ökoszisztémájának saját intézményi rendszere.",
+        "subsystems": [
+          {
+            "name": "VIPACH",
+            "url": "https://www.vipach.at/",
+            "relation": "A BMI rendszerének része."
+          },
+          {
+            "name": "Bécsi Magyar Musical Társulat",
+            "url": "https://www.musicaltarsulat.at/",
+            "relation": "A BMI rendszerének része."
+          },
+          {
+            "name": "Programválasztó",
+            "url": "https://programvalaszto.magyariskola.at/"
+          },
+          {
+            "name": "Tanáraink",
+            "url": "https://tanarok.magyariskola.at/"
+          },
+          {
+            "name": "2025/26-os beszámoló",
+            "url": "https://2026.magyariskola.at/"
+          }
+        ]
+      },
+      "becsiNaplo": {
+        "name": "Bécsi Napló",
+        "relation": "A Központi Szövetség saját sajtó- és kiadói területe; a Központi Szövetség a tulajdonosa és kiadója."
+      }
     }
   }
 }
