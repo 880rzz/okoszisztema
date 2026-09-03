@@ -1,0 +1,56 @@
+name: Fix Irottko member record
+
+on:
+  push:
+    paths:
+      - '.github/workflows/fix-irottko-record-20260903.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Patch Irottko record
+        shell: python
+        run: |
+          import json
+          from pathlib import Path
+          p=Path('member-organizations.json')
+          d=json.loads(p.read_text(encoding='utf-8'))
+          for m in d.get('members',[]):
+              if m.get('id')=='irottko-sportegyesulet':
+                  m['name']='Írottkő Sportegyesület'
+                  m['alternateName']='Leichtathletikclub Geschriebenstein'
+                  m['region']='Burgenland'
+                  m['membershipStatus']='official-member'
+                  m['zvrAsPublished']='1807309556'
+                  m['url']='https://irottkofutas.hu/'
+                  m['socialLinks']=['https://www.facebook.com/groups/748296890091417/']
+                  m['contact']={
+                      'emails':['beata.nemeth@gmx.at'],
+                      'source':'https://www.kozpontiszovetseg.at/tagszervezetek',
+                      'verified':'2026-09-03'
+                  }
+                  m['officialSource']='https://www.kozpontiszovetseg.at/tagszervezetek'
+                  m['sourceNote']='A Központi Szövetség hivatalos Tagszervezeteink oldalán szereplő hivatalos tagszervezet. A tagsági státusz, ZVR és kapcsolati adatok elsődleges forrása a Központi Szövetség oldala.'
+                  ros=m.setdefault('researchOfficialSources',[])
+                  for u in ['https://www.kozpontiszovetseg.at/tagszervezetek','https://irottkofutas.hu/','https://www.facebook.com/groups/748296890091417/']:
+                      if u not in ros: ros.append(u)
+                  break
+          d['schemaVersion']='2026-09-03-v6'
+          p.write_text(json.dumps(d,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+      - name: Commit
+        run: |
+          git config user.name "ecosystem-steward"
+          git config user.email "actions@users.noreply.github.com"
+          git add member-organizations.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "Correct Irottko official member record"
+          git push
