@@ -1,6 +1,6 @@
 {
   "documentType": "canonical-central-association-profile",
-  "schemaVersion": "2026-09-02-v1",
+  "schemaVersion": "2026-09-03-v2",
   "lastVerified": "2026-09-03",
   "sourceAuthority": {
     "organization": "https://www.kozpontiszovetseg.at/",
@@ -229,6 +229,19 @@
         "name": "Bécsi Napló",
         "relation": "A Központi Szövetség saját sajtó- és kiadói területe; a Központi Szövetség a tulajdonosa és kiadója."
       }
+    },
+    "bank": {
+      "bankName": "ERSTE S-Bank",
+      "accountNumberLegacy": "4-93066",
+      "bankCodeLegacy": "20111",
+      "iban": "AT46 2011 1000 0049 3066",
+      "bicSwift": "GIBAATWWXXX",
+      "source": "https://www.kozpontiszovetseg.at/r%C3%B3lunk"
+    },
+    "machineKnowledge": {
+      "leadershipPeople": "https://okoszisztema.kozpontiszovetseg.at/leadership-people.json",
+      "memberLeadership": "https://okoszisztema.kozpontiszovetseg.at/member-leadership.json",
+      "institutionalData": "https://okoszisztema.kozpontiszovetseg.at/institutional-llm-data.json"
     }
   }
 }

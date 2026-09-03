@@ -127,6 +127,15 @@
         },
         {
           "@id": "https://okoszisztema.kozpontiszovetseg.at/#member-research"
+        },
+        {
+          "@id": "https://okoszisztema.kozpontiszovetseg.at/#leadership-people-data"
+        },
+        {
+          "@id": "https://okoszisztema.kozpontiszovetseg.at/#member-leadership-data"
+        },
+        {
+          "@id": "https://okoszisztema.kozpontiszovetseg.at/#institutional-llm-data"
         }
       ]
     },
@@ -197,14 +206,17 @@
         "https://okoszisztema.kozpontiszovetseg.at/member-organizations.json",
         "https://programvalaszto.magyariskola.at/programs.json",
         "https://programvalaszto.magyariskola.at/program-catalog.jsonld",
-        "https://tanarok.magyariskola.at/"
+        "https://tanarok.magyariskola.at/",
+        "https://okoszisztema.kozpontiszovetseg.at/leadership-people.json",
+        "https://okoszisztema.kozpontiszovetseg.at/member-leadership.json",
+        "https://okoszisztema.kozpontiszovetseg.at/institutional-llm-data.json"
       ]
     },
     {
       "@type": "ItemList",
       "@id": "https://okoszisztema.kozpontiszovetseg.at/#member-directory",
       "name": "A Központi Szövetség hivatalos tagszervezeti hálózata",
-      "numberOfItems": 28,
+      "numberOfItems": 29,
       "itemListOrder": "https://schema.org/ItemListUnordered",
       "itemListElement": [
         {
@@ -983,6 +995,57 @@
         "https://www.kozpontiszovetseg.at/tagszervezetek",
         "https://volksgruppen.orf.at/magyarok/",
         "https://rolunk.at/"
+      ]
+    },
+    {
+      "@type": "DigitalDocument",
+      "@id": "https://okoszisztema.kozpontiszovetseg.at/#leadership-people-data",
+      "name": "Központi Szövetség leadership and people knowledge",
+      "url": "https://okoszisztema.kozpontiszovetseg.at/leadership-people.json",
+      "about": {
+        "@id": "https://www.kozpontiszovetseg.at/#organization"
+      },
+      "publisher": {
+        "@id": "https://www.kozpontiszovetseg.at/#organization"
+      },
+      "inLanguage": [
+        "hu",
+        "de",
+        "en"
+      ]
+    },
+    {
+      "@type": "DigitalDocument",
+      "@id": "https://okoszisztema.kozpontiszovetseg.at/#member-leadership-data",
+      "name": "Központi Szövetség member leadership research",
+      "url": "https://okoszisztema.kozpontiszovetseg.at/member-leadership.json",
+      "about": {
+        "@id": "https://www.kozpontiszovetseg.at/#organization"
+      },
+      "publisher": {
+        "@id": "https://www.kozpontiszovetseg.at/#organization"
+      },
+      "inLanguage": [
+        "hu",
+        "de",
+        "en"
+      ]
+    },
+    {
+      "@type": "DigitalDocument",
+      "@id": "https://okoszisztema.kozpontiszovetseg.at/#institutional-llm-data",
+      "name": "Központi Szövetség institutional legal contact and banking data",
+      "url": "https://okoszisztema.kozpontiszovetseg.at/institutional-llm-data.json",
+      "about": {
+        "@id": "https://www.kozpontiszovetseg.at/#organization"
+      },
+      "publisher": {
+        "@id": "https://www.kozpontiszovetseg.at/#organization"
+      },
+      "inLanguage": [
+        "hu",
+        "de",
+        "en"
       ]
     }
   ]
