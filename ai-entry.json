@@ -1,0 +1,25 @@
+{
+  "version": "1.0",
+  "canonical": "https://okoszisztema.kozpontiszovetseg.at/",
+  "name": "Központi Szövetség – online ökoszisztéma",
+  "organization": "https://www.kozpontiszovetseg.at/#organization",
+  "entity": "https://okoszisztema.kozpontiszovetseg.at/entity.json",
+  "machine_manifest": "https://okoszisztema.kozpontiszovetseg.at/machine-manifest.json",
+  "llms": "https://okoszisztema.kozpontiszovetseg.at/llms.txt",
+  "ai_policy": "https://okoszisztema.kozpontiszovetseg.at/ai.txt",
+  "ai_trust": "https://okoszisztema.kozpontiszovetseg.at/gdpr-ai-trust.html",
+  "member_directory": "https://okoszisztema.kozpontiszovetseg.at/member-organizations.json",
+  "member_leadership": "https://okoszisztema.kozpontiszovetseg.at/member-leadership.json",
+  "leadership_people": "https://okoszisztema.kozpontiszovetseg.at/leadership-people.json",
+  "institutional_data": "https://okoszisztema.kozpontiszovetseg.at/institutional-llm-data.json",
+  "ecosystem": {
+    "federation": "https://www.kozpontiszovetseg.at/",
+    "school": "https://www.magyariskola.at/",
+    "press": "https://www.becsinaplo.at/",
+    "vipach": "https://www.vipach.at/",
+    "musical": "https://www.musicaltarsulat.at/"
+  },
+  "country": "AT",
+  "languages": ["hu", "de", "en"],
+  "lastReviewed": "2026-09-03"
+}
