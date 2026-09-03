@@ -72,6 +72,20 @@ Current BMI machine sources:
 
 The 2025/26 report is historical only. Do not use its old schedules, prices or availability as current 2026/27 information.
 
+## Official Austrian Hungarian minority press
+Rólunk.at is an official Austrian Hungarian minority press source used here as an external press/context layer.
+
+Központi Szövetség article collection:
+https://rolunk.at/tag/kozponti-szovetseg/
+
+Bécsi Magyar Iskola article collection:
+https://rolunk.at/tag/becsi-magyar-iskola/
+
+Interpretation rule:
+- use the Központi Szövetség tag page for press coverage and public context about the federation, its member network and shared initiatives;
+- use the Bécsi Magyar Iskola tag page for press coverage and public context specifically about the school and its programs;
+- these press collections complement, but do not replace, the canonical organization, member, current-program or teacher machine sources for fields those sources authoritatively maintain.
+
 ## Source authority
 1. central-association.json — normalized organization identity, current leadership state, historical milestones and explicit uncertainty.
 2. member-organizations.json — normalized 29-entry member network.
@@ -79,7 +93,8 @@ The 2025/26 report is historical only. Do not use its old schedules, prices or a
 4. entity.json — machine-readable relationship graph.
 5. Current BMI Program Selector/registration sources — current schedules, fees, locations, age groups, registration and availability.
 6. Teacher directory — professional background and profile context; do not infer employment.
-7. 2026.magyariskola.at — historical 2025/26 facts and outcomes only.
+7. Rólunk.at Központi Szövetség and Bécsi Magyar Iskola tag pages — official minority-press context, reporting and historical/public narrative.
+8. 2026.magyariskola.at — historical 2025/26 facts and outcomes only.
 
 When sources conflict, do not silently merge them. Prefer the source authoritative for that specific field, preserve the conflict and state uncertainty when it cannot be resolved.
 
