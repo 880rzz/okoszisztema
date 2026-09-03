@@ -1,0 +1,20 @@
+name: Social float
+on:
+  push:
+    paths:
+      - '.github/workflows/social-float-20260903.yml'
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 scripts/add_facebook_floating_menu.py
+      - run: |
+          git config user.name "Kozponti Bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add index.html
+          git diff --cached --quiet && exit 0
+          git commit -m "Add social floating menu"
+          git push
