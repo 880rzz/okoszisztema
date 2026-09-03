@@ -46,6 +46,12 @@
 
 /* Bécsi Napló visible current/archive links */
 .naplo-links-visible{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:20px}.naplo-links-visible a{display:flex;flex-direction:column;gap:2px;padding:14px 16px;border:1px solid #e1e1e5;border-radius:14px;background:#fff;color:#151515;text-decoration:none;transition:transform .16s ease,border-color .16s ease,box-shadow .16s ease}.naplo-links-visible a:hover{transform:translateY(-1px);border-color:#c7c7cc;box-shadow:0 8px 22px rgba(0,0,0,.05)}.naplo-links-visible strong{font-size:14px;letter-spacing:-.01em}.naplo-links-visible span{font-size:13px;color:#6f6f74}@media(max-width:620px){.naplo-links-visible{grid-template-columns:1fr}}
+
+/* Facebook menu icon refinement */
+.fb-menu .fb-mini-icon{width:36px!important;height:36px!important;min-width:36px!important;border-radius:50%!important;background:#1877f2!important;display:grid!important;place-items:center!important;padding:0!important;color:#fff!important;overflow:hidden!important;box-shadow:0 2px 8px rgba(0,0,0,.10)!important}
+.fb-menu .fb-mini-svg{display:block!important;width:24px!important;height:24px!important;fill:#fff!important;transform:translateY(1px)!important}
+.fb-menu .fb-mini-svg path{fill:#fff!important}
+
 </style>
 <script type="application/ld+json">{
 "@context":"https://schema.org",
@@ -85,11 +91,11 @@ fetch('member-organizations.json').then(r=>{if(!r.ok)throw new Error();return r.
 
 <div class="fb-float" id="facebookFloat">
   <div class="fb-menu" id="facebookMenu" aria-hidden="true">
-    <a href="https://www.facebook.com/kozpontiszovetseg" target="_blank" rel="noopener noreferrer"><span class="fb-mini-icon">f</span><span><strong>Központi Szövetség</strong><span>Facebook oldal</span></span></a>
-    <a href="https://www.facebook.com/groups/417208961677165" target="_blank" rel="noopener noreferrer"><span class="fb-mini-icon">f</span><span><strong>Bécsi Magyar Iskola</strong><span>Facebook csoport</span></span></a>
-    <a href="https://www.facebook.com/groups/becsinaplo/" target="_blank" rel="noopener noreferrer"><span class="fb-mini-icon">f</span><span><strong>Bécsi Napló</strong><span>Facebook csoport</span></span></a>
-    <a href="https://www.facebook.com/groups/vipach/" target="_blank" rel="noopener noreferrer"><span class="fb-mini-icon">f</span><span><strong>VIPACH</strong><span>Facebook csoport</span></span></a>
-    <a href="https://www.facebook.com/groups/musicaltarsulat/" target="_blank" rel="noopener noreferrer"><span class="fb-mini-icon">f</span><span><strong>Bécsi Magyar Musical Társulat</strong><span>Facebook csoport</span></span></a>
+    <a href="https://www.facebook.com/kozpontiszovetseg" target="_blank" rel="noopener noreferrer"><span class="fb-mini-icon"><svg class="fb-mini-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M13.7 22v-8.4h2.8l.42-3.28H13.7V8.23c0-.95.27-1.6 1.63-1.6h1.74V3.7c-.3-.04-1.33-.13-2.53-.13-2.5 0-4.22 1.53-4.22 4.34v2.42H7.5v3.28h2.82V22h3.38z"/></svg></span><span><strong>Központi Szövetség</strong><span>Facebook oldal</span></span></a>
+    <a href="https://www.facebook.com/groups/417208961677165" target="_blank" rel="noopener noreferrer"><span class="fb-mini-icon"><svg class="fb-mini-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M13.7 22v-8.4h2.8l.42-3.28H13.7V8.23c0-.95.27-1.6 1.63-1.6h1.74V3.7c-.3-.04-1.33-.13-2.53-.13-2.5 0-4.22 1.53-4.22 4.34v2.42H7.5v3.28h2.82V22h3.38z"/></svg></span><span><strong>Bécsi Magyar Iskola</strong><span>Facebook csoport</span></span></a>
+    <a href="https://www.facebook.com/groups/becsinaplo/" target="_blank" rel="noopener noreferrer"><span class="fb-mini-icon"><svg class="fb-mini-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M13.7 22v-8.4h2.8l.42-3.28H13.7V8.23c0-.95.27-1.6 1.63-1.6h1.74V3.7c-.3-.04-1.33-.13-2.53-.13-2.5 0-4.22 1.53-4.22 4.34v2.42H7.5v3.28h2.82V22h3.38z"/></svg></span><span><strong>Bécsi Napló</strong><span>Facebook csoport</span></span></a>
+    <a href="https://www.facebook.com/groups/vipach/" target="_blank" rel="noopener noreferrer"><span class="fb-mini-icon"><svg class="fb-mini-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M13.7 22v-8.4h2.8l.42-3.28H13.7V8.23c0-.95.27-1.6 1.63-1.6h1.74V3.7c-.3-.04-1.33-.13-2.53-.13-2.5 0-4.22 1.53-4.22 4.34v2.42H7.5v3.28h2.82V22h3.38z"/></svg></span><span><strong>VIPACH</strong><span>Facebook csoport</span></span></a>
+    <a href="https://www.facebook.com/groups/musicaltarsulat/" target="_blank" rel="noopener noreferrer"><span class="fb-mini-icon"><svg class="fb-mini-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M13.7 22v-8.4h2.8l.42-3.28H13.7V8.23c0-.95.27-1.6 1.63-1.6h1.74V3.7c-.3-.04-1.33-.13-2.53-.13-2.5 0-4.22 1.53-4.22 4.34v2.42H7.5v3.28h2.82V22h3.38z"/></svg></span><span><strong>Bécsi Magyar Musical Társulat</strong><span>Facebook csoport</span></span></a>
   </div>
   <span class="fb-label">Facebook közösségek</span>
   <button class="fb-toggle" id="facebookToggle" type="button" aria-label="Facebook oldalak és csoportok megnyitása" aria-expanded="false" aria-controls="facebookMenu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.7 22v-8.4h2.8l.42-3.28H13.7V8.23c0-.95.27-1.6 1.63-1.6h1.74V3.7c-.3-.04-1.33-.13-2.53-.13-2.5 0-4.22 1.53-4.22 4.34v2.42H7.5v3.28h2.82V22h3.38z"/></svg></button>
