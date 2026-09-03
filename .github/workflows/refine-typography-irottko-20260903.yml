@@ -1,0 +1,24 @@
+name: Refine typography and Irottko profile
+on:
+  push:
+    paths:
+      - 'scripts/refine_typography_and_irottko.py'
+      - '.github/workflows/refine-typography-irottko-20260903.yml'
+permissions:
+  contents: write
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - run: python scripts/refine_typography_and_irottko.py
+      - run: |
+          git config user.name "Kozponti Content Bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add index.html member-organizations.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "Refine typography and expand Irottko Sportegyesulet profile"
+          git push
