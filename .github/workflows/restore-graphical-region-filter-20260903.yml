@@ -2,6 +2,7 @@ name: Restore graphical region selector
 on:
   push:
     paths:
+      - 'scripts/restore_region_selector.py'
       - '.github/workflows/restore-graphical-region-filter-20260903.yml'
 permissions:
   contents: write
@@ -10,13 +11,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Restore selector
+      - name: Refresh Austria map, member data and explanatory content
         run: python3 scripts/restore_region_selector.py
       - name: Commit
         run: |
           git config user.name "Központi Ecosystem Bot"
           git config user.email "actions@users.noreply.github.com"
-          git add index.html
+          git add index.html member-organizations.json central-association.json llms.txt ai.txt
           if git diff --cached --quiet; then exit 0; fi
-          git commit -m "Restore graphical region selector for member organizations"
+          git commit -m "Refresh Austria map, 29-member directory and human-readable content"
           git push
