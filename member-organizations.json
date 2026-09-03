@@ -1,6 +1,6 @@
 {
   "documentType": "central-association-member-directory",
-  "schemaVersion": "2026-09-03-v5",
+  "schemaVersion": "2026-09-03-v6",
   "lastVerified": "2026-09-03",
   "source": "https://www.kozpontiszovetseg.at/tagszervezetek",
   "publishedEntryCount": 29,
@@ -357,11 +357,11 @@
     {
       "id": "irottko-sportegyesulet",
       "name": "Írottkő Sportegyesület",
-      "alternateName": "LAC Geschriebenstein",
+      "alternateName": "Leichtathletikclub Geschriebenstein",
       "region": "Burgenland",
       "zvrAsPublished": "1807309556",
       "officialSource": "https://www.kozpontiszovetseg.at/tagszervezetek",
-      "sourceNote": "A Központi Szövetség hivatalos Tagszervezeteink oldalán külön bejegyzésként szerepel.",
+      "sourceNote": "A Központi Szövetség hivatalos Tagszervezeteink oldalán szereplő hivatalos tagszervezet. A tagsági státusz, ZVR és kapcsolati adatok elsődleges forrása a Központi Szövetség oldala.",
       "url": "https://irottkofutas.hu/",
       "pressSummary": "A burgenlandi LAC Geschriebenstein sportegyesület az Írottkő / Geschriebenstein térségének futó- és terepsport-közösségét építi. Versenyeket és közösségi sportprogramokat szervez az osztrák–magyar határtérségben; legismertebb eseményei közé tartozik az Írottkő Futóverseny és az Írottkő Hillclimb, amely terepfutókat és hegyikerékpárosokat is megszólít.",
       "historicalProfile": "Az egyesület Bad Tatzmannsdorfban (Tarcsafürdőn) jött létre azzal a céllal, hogy szervezeti hátteret adjon az Írottkő-hegyi futóélet újjáépítésének. A közösség az Írottkő / Geschriebenstein és a Kőszegi-hegység sportéletét kapcsolja össze az osztrák–magyar határ két oldalán. Futó- és terepsporteseményeket szervez, köztük az Írottkő Futóversenyt, az Írottkő Hillclimbot és hosszabb terepfutó kihívásokat. Működésében a közösségi sport mellett a természetvédelem és a fenntarthatóság is hangsúlyos: az Írottkő Futóversenyt zero-waste szemlélettel szervezik, az egyesület pedig részt vesz a határon átnyúló Írottkő Natúrpark együttműködésben is.",
@@ -392,8 +392,21 @@
       ],
       "researchOfficialSources": [
         "https://irottkofutas.hu/",
-        "https://www.askoe-burgenland.at/de/boxnewsshow5-lac-geschriebenstein6"
-      ]
+        "https://www.askoe-burgenland.at/de/boxnewsshow5-lac-geschriebenstein6",
+        "https://www.kozpontiszovetseg.at/tagszervezetek",
+        "https://www.facebook.com/groups/748296890091417/"
+      ],
+      "membershipStatus": "official-member",
+      "socialLinks": [
+        "https://www.facebook.com/groups/748296890091417/"
+      ],
+      "contact": {
+        "emails": [
+          "beata.nemeth@gmx.at"
+        ],
+        "source": "https://www.kozpontiszovetseg.at/tagszervezetek",
+        "verified": "2026-09-03"
+      }
     },
     {
       "id": "kozep-burgenlandi-magyar-kulturegyesulet",
