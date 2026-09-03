@@ -59,13 +59,18 @@ jobs:
           }
 
           featured = {
+            'lean-in-femspace': {'publisher':'Rólunk.at','title':'Lean In Femspace – ausztriai magyar nők közössége','url':'https://rolunk.at/magazin/lean-in-femspace-ausztriai-magyar-nok-kozossege/','date':'2022-01-19'},
+            'bim-becsi-irodalmi-muhely': {'publisher':'Rólunk.at','title':'Bemutatkozott a Bécsi Irodalmi Műhely','url':'https://rolunk.at/kultura/bemutatkozott-a-becsi-irodalmi-muhely/','date':'2026-06-29'},
             'napraforgok': {'publisher':'ORF Magyarok','title':'Napraforgók és táncháztalálkozó Bécsben','url':'https://volksgruppen.orf.at/magyarok/stories/3154928/','date':'2022-05-05'},
-            'kozep-burgenlandi-magyar-kulturegyesulet': {'publisher':'ORF Magyarok','title':'Vezetőváltás a 20 éves MBUKV élén','url':'https://volksgruppen.orf.at/magyarok/stories/3204769/','date':'2023-04-26'},
+            'kozep-burgenlandi-magyar-kulturegyesulet': {'publisher':'Rólunk.at','title':'Feladatunk, hogy a következő évszázadban is megmaradjon a magyar nyelv és kultúra Burgenlandban','url':'https://rolunk.at/nepcsoportunk/feladatunk-hogy-a-kovetkezo-evszazadban-is-megmaradjon-a-magyar-nyelv-es-kultura-burgenlandban/','date':'2022-01-18'},
+            'felso-ausztriai-magyarok-kulturegyesulete': {'publisher':'ORF Magyarok','title':'50 éves lett a Felső-Ausztriai Magyarok Kultúregyesülete','url':'https://volksgruppen.orf.at/v2/magyarok/stories/2907261/','date':'2018-04-16'},
+            'grazi-magyar-egyesulet': {'publisher':'Rólunk.at','title':'Grázi Magyar Egyesület – 133 éves Európa egyik legrégebbi egyesülete','url':'https://rolunk.at/nepcsoportunk/grazi-magyar-egyesulet/','date':'2021-12-07'},
+            'magyar-egyetemistak-es-oregdiakok-klubja-graz': {'publisher':'Rólunk.at','title':'Megjelent a Gráci Magyar Újság legújabb száma','url':'https://rolunk.at/nepcsoportunk/megjelent-a-graci-magyar-ujsag-legujabb-szama/','date':'2022-08-19'},
             'femconnect-graz': {'publisher':'Rólunk.at','title':'FemConnect: új magyar kultúregyesület Grazban','url':'https://rolunk.at/kultura/femconnect-uj-magyar-kulturegyesulet-grazban/','date':'2024-09-23'},
             'imike': {'publisher':'Rólunk.at','title':'Okos(k)odni egy jó pofa sör mellett?','url':'https://rolunk.at/magazin/okoskodni-egy-jo-pofa-sor-mellett/','date':'2025-03-21'},
             'vorarlbergi-magyar-egyesulet': {'publisher':'ORF Magyarok','title':'Új tavasz, új remények Vorarlbergben','url':'https://volksgruppen.orf.at/magyarok/stories/3197605/','date':'2023-03-06'},
-            'mi-magyarok-egymasert': {'publisher':'ORF Magyarok','title':'Itthon – otthon Vorarlbergben','url':'https://volksgruppen.orf.at/magyarok/stories/3242638/','date':'2024-01-29'},
-            'irottko-sportegyesulet': {'publisher':'TISZTAZÖLD / Írottkő Natúrpark','title':'Gratulálunk a zero waste Írottkő Futóverseny szervezőjének az osztrák Green Events díjhoz!','url':'https://tisztazold.naturpark.hu/tag/dij/','date':'2024-06-13'}
+            'mi-magyarok-egymasert': {'publisher':'Rólunk.at','title':'Bemutatkozik a Mi Magyarok Egymásért – VIDEÓ','url':'https://rolunk.at/magazin/bemutatkozik-a-mi-magyarok-egymasert-video/','date':'2026-03-25'},
+            'irottko-sportegyesulet': {'publisher':'Rólunk.at','title':'Két ország között egy közösségért','url':'https://rolunk.at/magazin/ket-orszag-kozott-egy-kozossegert/','date':'2026'}
           }
 
           official_source = 'https://www.kozpontiszovetseg.at/tagszervezetek'
@@ -74,28 +79,36 @@ jobs:
               if mid in contacts:
                   m['contact'] = {
                       'emails': contacts[mid],
-                      'source': official_source if mid != 'irottko-sportegyesulet' else 'https://www.vdksz.hu/fogado-intezmenyek/p12',
+                      'source': official_source,
                       'verified': '2026-09-03'
                   }
+              if mid == 'irottko-sportegyesulet':
+                  m['officialSource'] = official_source
+                  m['url'] = 'https://irottkofutas.hu/'
+                  m['facebook'] = 'https://www.facebook.com/groups/748296890091417/'
+                  m['zvrAsPublished'] = '1807309556'
+                  m['alternateName'] = 'Leichtathletikclub Geschriebenstein'
               if mid in featured:
                   m['featuredProfileArticle'] = featured[mid]
               elif m.get('pressEvidence'):
                   m['featuredProfileArticle'] = m['pressEvidence'][0]
 
-          data['schemaVersion'] = '2026-09-03-v6'
+          data['schemaVersion'] = '2026-09-03-v7'
           data['contactResearch'] = {
               'lastVerified': '2026-09-03',
               'primarySource': official_source,
-              'rule': 'Contact details mirror the official Központi Szövetség member directory where available. External fallback sources are explicitly identified and do not override official legal identity.'
+              'rule': 'Contact details mirror the official Központi Szövetség member directory. Press sources enrich public descriptions but do not override official legal identity or membership.'
           }
+          data['pressResearch']['lastResearched'] = '2026-09-03'
+          data['pressResearch']['sourcePriority'] = ['https://volksgruppen.orf.at/magyarok/','https://rolunk.at/','official organization sources and reputable Austrian/Hungarian regional media']
           p.write_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
 
           htmlp = Path('index.html')
           html = htmlp.read_text(encoding='utf-8')
-          marker = 'member-contact-article-enrichment-v1'
+          marker = 'member-contact-article-enrichment-v2'
           if marker not in html:
               addon = r'''
-<script id="member-contact-article-enrichment-v1">
+<script id="member-contact-article-enrichment-v2">
 (function(){
   const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   async function enrich(){
@@ -105,22 +118,23 @@ jobs:
       const byName=new Map((d.members||[]).map(m=>[String(m.name||'').trim(),m]));
       document.querySelectorAll('.member').forEach(card=>{
         const h=card.querySelector('h3'); if(!h)return;
-        const m=byName.get(h.textContent.trim()); if(!m||card.querySelector('.member-enrichment'))return;
+        const m=byName.get(h.textContent.trim()); if(!m)return;
+        card.querySelectorAll('.member-enrichment').forEach(x=>x.remove());
         const box=document.createElement('div'); box.className='member-enrichment';
         let out='';
         const emails=(m.contact&&m.contact.emails)||[];
-        if(emails.length){out+='<div class="member-contact"><strong>Kapcsolat:</strong> '+emails.map(e=>'<a href="mailto:'+esc(e)+'">'+esc(e)+'</a>').join(' · ')+'</div>'}
+        if(emails.length){out+='<div class="member-contact"><span class="enrich-label">Kapcsolat</span>'+emails.map(e=>'<a href="mailto:'+esc(e)+'">'+esc(e)+'</a>').join('<span class="sep">·</span>')+'</div>'}
         const a=m.featuredProfileArticle;
-        if(a&&a.url){out+='<div class="member-profile-article"><strong>Bemutató / háttéranyag:</strong> <a href="'+esc(a.url)+'" target="_blank" rel="noopener">'+esc(a.title||a.publisher||'Cikk')+'</a>'+(a.publisher?' <span>('+esc(a.publisher)+')</span>':'')+'</div>'}
+        if(a&&a.url){out+='<a class="press-link" href="'+esc(a.url)+'" target="_blank" rel="noopener"><span class="press-mark" aria-hidden="true">↗</span><span><small>Sajtó / bemutató</small><strong>'+esc(a.title||a.publisher||'Cikk')+'</strong>'+(a.publisher?'<em>'+esc(a.publisher)+(a.date?' · '+esc(a.date):'')+'</em>':'')+'</span></a>'}
         box.innerHTML=out; if(out)card.appendChild(box);
       });
     }catch(e){}
   }
-  document.addEventListener('DOMContentLoaded',()=>{setTimeout(enrich,100);setTimeout(enrich,900)});
+  document.addEventListener('DOMContentLoaded',()=>{setTimeout(enrich,120);setTimeout(enrich,1000)});
 })();
 </script>
-<style id="member-contact-article-enrichment-style-v1">
-.member-enrichment{margin-top:14px;padding-top:13px;border-top:1px solid #ececec;font-size:13px;line-height:1.55;color:#626262}.member-enrichment strong{color:#333}.member-enrichment>div+div{margin-top:6px}.member-enrichment a{overflow-wrap:anywhere}.member-profile-article span{color:#858585}
+<style id="member-contact-article-enrichment-style-v2">
+.member-enrichment{margin-top:16px;padding-top:14px;border-top:1px solid #ececef;font-size:13px;color:#626266}.member-contact{display:flex;gap:7px;align-items:baseline;flex-wrap:wrap;margin-bottom:11px}.enrich-label{font-size:10px;line-height:1;text-transform:uppercase;letter-spacing:.08em;font-weight:760;color:#85858b;margin-right:2px}.member-contact a{font-weight:540!important;color:#515158!important;overflow-wrap:anywhere}.sep{color:#b5b5ba}.press-link{display:flex!important;align-items:flex-start;gap:10px;padding:11px 12px;border:1px solid #e5e5e8;border-radius:14px;background:#fafafa;color:#222!important;text-decoration:none!important;transition:background .18s ease,border-color .18s ease,transform .18s ease}.press-link:hover{background:#f4f4f5;border-color:#d9d9dd;transform:translateY(-1px)}.press-mark{width:24px;height:24px;border-radius:50%;display:grid;place-items:center;flex:0 0 auto;background:#fff;border:1px solid #dedee2;font-size:12px}.press-link small{display:block;font-size:9px;text-transform:uppercase;letter-spacing:.09em;color:#8a8a90;margin-bottom:2px}.press-link strong{display:block;font-size:13px;line-height:1.35;font-weight:650;color:#2b2b2f}.press-link em{display:block;font-size:11px;font-style:normal;color:#85858c;margin-top:3px}@media(max-width:520px){.member-contact{display:block}.member-contact .enrich-label{display:block;margin-bottom:5px}.member-contact .sep{margin:0 5px}}
 </style>
 '''
               html = html.replace('</body>', addon + '\n</body>')
@@ -131,5 +145,5 @@ jobs:
           git config user.email "actions@users.noreply.github.com"
           git add member-organizations.json index.html
           if git diff --cached --quiet; then exit 0; fi
-          git commit -m "Enrich member contacts and profile articles"
+          git commit -m "Enrich all member cards with contacts and press profiles"
           git push
