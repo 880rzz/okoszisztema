@@ -1,0 +1,22 @@
+name: Add BMI official Rólunk.at news source
+on:
+  push:
+    paths:
+      - '.github/workflows/add-bmi-news-source-20260903.yml'
+permissions:
+  contents: write
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Add BMI news source
+        run: python3 scripts/add_bmi_news_source.py
+      - name: Commit
+        run: |
+          git config user.name "Központi Ecosystem Bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add index.html
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "Add official BMI Rólunk.at news source"
+          git push
