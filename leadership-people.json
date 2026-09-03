@@ -1,0 +1,200 @@
+{
+  "documentType": "leadership-and-people-knowledge",
+  "schemaVersion": "2026-09-03-v1",
+  "lastVerified": "2026-09-03",
+  "interpretationRule": "Never infer a current office from an email address or an older board list. Preserve term dates, source dates and uncertainty. Press evidence may support public roles but does not replace the organization's own legal/official publication.",
+  "centralAssociation": {
+    "organizationId": "https://www.kozpontiszovetseg.at/#organization",
+    "currentLeadershipStatus": {
+      "term": "2026-2028",
+      "boardSize": 11,
+      "electionPressSource": "https://volksgruppen.orf.at/magyarok/stories/3356526/",
+      "presidentConfirmed": "ao. Univ.-Prof. Dr. Seidler Andrea",
+      "newMembersConfirmed": ["Mizsei Richárd", "Kladek-Antal Mónika"],
+      "departuresConfirmed": ["Mag. Hollós József", "Huszti Dávid"],
+      "publicationGap": "The official About page still labels its displayed roster 2024-2026. Do not silently treat that complete older list as the full current 2026-2028 board."
+    },
+    "people": [
+      {
+        "id": "person-seidler-andrea",
+        "name": "ao. Univ.-Prof. Dr. Seidler Andrea",
+        "centralRoles": ["elnök / Präsidentin"],
+        "currentRoleConfidence": "confirmed-2026",
+        "email": "andrea.seidler@univie.ac.at",
+        "otherVerifiedRoles": ["Bécsi Magyar Iskola intézményvezető", "Ausztriai Magyar Kutatóintézet elnök"],
+        "pressEvidence": [
+          {"publisher":"ORF Magyarok","title":"Központi szövetség éves közgyűlése","date":"2026-06-02","url":"https://volksgruppen.orf.at/magyarok/stories/3356526/"},
+          {"publisher":"ORF Magyarok","title":"Nyár Ünnep és évzáró a BMI-ben","date":"2026-06-23","url":"https://volksgruppen.orf.at/magyarok/stories/3359672/"},
+          {"publisher":"Rólunk.at","title":"Új korszak előtt a Bécsi Napló","date":"2026-02-26","url":"https://rolunk.at/nepcsoportunk/uj-korszak-elott-a-becsi-naplo/"}
+        ]
+      },
+      {
+        "id": "person-hausmann-farkas-elizabeth",
+        "name": "Hausmann-Farkas Elizabeth",
+        "centralRoles": ["főtitkár / Generalsekretärin (officially published 2024-2026 roster)"],
+        "currentRoleConfidence": "requires-2026-roster-confirmation",
+        "email": "lizafarkas@icloud.com",
+        "otherVerifiedRoles": ["Közép-Burgenlandi Magyar Kultúregyesület elnök (documented leadership source)"],
+        "pressEvidence": [
+          {"publisher":"Rólunk.at","title":"Hiszek a magyarságban","url":"https://rolunk.at/nepcsoportunk/hiszek-a-magyarsagban/"},
+          {"publisher":"Rólunk.at","title":"Új elnökség az Ausztriai Magyar Egyesületek és Szervezetek Központi Szövetségének élén","date":"2024-02-25","url":"https://rolunk.at/nepcsoportunk/uj-elnokseg-az-ausztriai-magyar-egyesuletek-es-szervezetek-kozponti-szovetsegenek-elen/"}
+        ]
+      },
+      {
+        "id": "person-albert-laszlo",
+        "name": "Dipl.-Ing. Albert László",
+        "centralRoles": ["pénztáros / Kassier (officially published 2024-2026 roster)"],
+        "currentRoleConfidence": "requires-2026-roster-confirmation",
+        "email": "laszlo.albert@a1.net",
+        "pressEvidence": [{"publisher":"Rólunk.at","title":"Új elnökség az Ausztriai Magyar Egyesületek és Szervezetek Központi Szövetségének élén","date":"2024-02-25","url":"https://rolunk.at/nepcsoportunk/uj-elnokseg-az-ausztriai-magyar-egyesuletek-es-szervezetek-kozponti-szovetsegenek-elen/"}]
+      },
+      {
+        "id": "person-blasko-katalin",
+        "name": "Dr. Blaskó Katalin",
+        "centralRoles": ["kultúrreferens / Kulturreferentin (officially published 2024-2026 roster)"],
+        "currentRoleConfidence": "requires-2026-roster-confirmation",
+        "email": "Katalin.Blasko@univie.ac.at",
+        "otherVerifiedRoles": ["Ausztriai Magyar Kutatóintézet tudományos tanácsadó testületének tagja"],
+        "pressEvidence": [{"publisher":"Rólunk.at","title":"Új elnökség az Ausztriai Magyar Egyesületek és Szervezetek Központi Szövetségének élén","date":"2024-02-25","url":"https://rolunk.at/nepcsoportunk/uj-elnokseg-az-ausztriai-magyar-egyesuletek-es-szervezetek-kozponti-szovetsegenek-elen/"}]
+      },
+      {
+        "id": "person-csire-marta",
+        "name": "Mag. Csire Márta",
+        "centralRoles": ["sajtóreferens / Pressereferentin (officially published 2024-2026 roster)"],
+        "currentRoleConfidence": "requires-2026-roster-confirmation",
+        "email": "Marta.csire@univie.ac.at",
+        "otherVerifiedRoles": ["Ausztriai Magyar Kutatóintézet pénztáros"],
+        "pressEvidence": [{"publisher":"Rólunk.at","title":"Új elnökség az Ausztriai Magyar Egyesületek és Szervezetek Központi Szövetségének élén","date":"2024-02-25","url":"https://rolunk.at/nepcsoportunk/uj-elnokseg-az-ausztriai-magyar-egyesuletek-es-szervezetek-kozponti-szovetsegenek-elen/"}]
+      },
+      {
+        "id": "person-sass-judit",
+        "name": "Dipl.-Ing. Sass Judit",
+        "centralRoles": ["szervezési referens / Koordinationsreferentin (officially published 2024-2026 roster)"],
+        "currentRoleConfidence": "requires-2026-roster-confirmation",
+        "email": "sassjudit10@gmail.com",
+        "otherVerifiedRoles": ["Bécsi Magyar Iskola teremadminisztráció"],
+        "pressEvidence": [{"publisher":"Rólunk.at","title":"Új elnökség az Ausztriai Magyar Egyesületek és Szervezetek Központi Szövetségének élén","date":"2024-02-25","url":"https://rolunk.at/nepcsoportunk/uj-elnokseg-az-ausztriai-magyar-egyesuletek-es-szervezetek-kozponti-szovetsegenek-elen/"}]
+      },
+      {
+        "id": "person-schenk-angyalka",
+        "name": "Schenk Angyalka",
+        "centralRoles": ["közösségi média referens / Social-Media-Referentin (officially published 2024-2026 roster)"],
+        "currentRoleConfidence": "requires-2026-roster-confirmation",
+        "email": "dias1965@gmail.com",
+        "otherVerifiedRoles": ["IMIKE elnök", "79. sz. Dr. Kozma György SJ cserkészcsapat vezető"],
+        "pressEvidence": [
+          {"publisher":"ORF Magyarok","title":"Amerikában lettem magyar","date":"2026-08-03","url":"https://volksgruppen.orf.at/magyarok/stories/3361160/"},
+          {"publisher":"ORF Magyarok","title":"Innsbrucki magyar közösség: sikeres év és új tervek","date":"2026-01-15","url":"https://volksgruppen.orf.at/magyarok/stories/3337903/"}
+        ]
+      },
+      {
+        "id": "person-deak-erno",
+        "name": "Dr. Deák Ernő",
+        "centralRoles": ["ülnök / Vorstandsmitglied (officially published 2024-2026 roster)"],
+        "currentRoleConfidence": "requires-2026-roster-confirmation",
+        "email": "becsi.naplo@gmail.com",
+        "otherVerifiedRoles": ["Bécsi Napló vezető/főszerkesztő az official BMI kapcsolatoldal szerint", "Ausztriai Magyar Kutatóintézet titkár"],
+        "pressEvidence": [{"publisher":"Rólunk.at","title":"Új korszak előtt a Bécsi Napló","date":"2026-02-26","url":"https://rolunk.at/nepcsoportunk/uj-korszak-elott-a-becsi-naplo/"}]
+      },
+      {
+        "id": "person-hollos-jozsef",
+        "name": "Mag. Hollós József",
+        "centralRoles": ["korábbi elnök", "ülnök / Vorstandsmitglied (2024-2026 roster)"],
+        "currentRoleConfidence": "confirmed-departure-2026",
+        "email": "josef.hollos@chello.at",
+        "pressEvidence": [
+          {"publisher":"ORF Magyarok","title":"Központi szövetség éves közgyűlése","date":"2026-06-02","url":"https://volksgruppen.orf.at/magyarok/stories/3356526/"},
+          {"publisher":"Bécsi Napló","title":"Új elnök a Magyar Népcsoporttanács élén","url":"https://www.becsinaplo.eu/uj-elnok-a-magyar-nepcsoporttanacs-elen"}
+        ]
+      },
+      {
+        "id": "person-huszti-david",
+        "name": "Huszti Dávid",
+        "centralRoles": ["ülnök / Vorstandsmitglied (2024-2026 roster)"],
+        "currentRoleConfidence": "confirmed-departure-2026",
+        "email": "huszti.david@gmail.com",
+        "otherVerifiedRoles": ["Kaláka Klub tisztségviselőként dokumentált"],
+        "pressEvidence": [
+          {"publisher":"ORF Magyarok","title":"Központi szövetség éves közgyűlése","date":"2026-06-02","url":"https://volksgruppen.orf.at/magyarok/stories/3356526/"},
+          {"publisher":"Bécsi Napló","title":"Új elnök a Magyar Népcsoporttanács élén","url":"https://www.becsinaplo.eu/uj-elnok-a-magyar-nepcsoporttanacs-elen"}
+        ]
+      },
+      {
+        "id": "person-sass-huba",
+        "name": "Dipl.-Ing. Sass Huba",
+        "centralRoles": ["tanácsnok / Beirat (officially published 2024-2026 roster)"],
+        "currentRoleConfidence": "requires-2026-roster-confirmation",
+        "email": "huba.sass@gmail.com",
+        "pressEvidence": [{"publisher":"Központi Szövetség","title":"Rólunk / vezetőség","url":"https://www.kozpontiszovetseg.at/r%C3%B3lunk","type":"official-profile-fallback-until-independent-press-is-verified"}]
+      },
+      {
+        "id": "person-kotolacsi-mikoczy-ilona",
+        "name": "Dr. Kotolácsi Mikóczy Ilona",
+        "centralRoles": ["tanácsnok / Beirätin (officially published 2024-2026 roster)"],
+        "currentRoleConfidence": "requires-2026-roster-confirmation",
+        "otherVerifiedRoles": ["SalzUng elnök"],
+        "pressEvidence": [
+          {"publisher":"ORF Magyarok","title":"Cipősdoboznyi szeretet Salzburgból","date":"2025-11-22","url":"https://volksgruppen.orf.at/magyarok/stories/3331105/"},
+          {"publisher":"ORF Magyarok","title":"Salzburgban már várják a jelentkezőket","date":"2025-02-04","url":"https://volksgruppen.orf.at/magyarok/stories/3291973/"}
+        ]
+      },
+      {
+        "id": "person-bajka-kinga-csengele",
+        "name": "Bajka Kinga Csengele",
+        "centralRoles": ["tanácsnok / Beirätin (officially published 2024-2026 roster)"],
+        "currentRoleConfidence": "requires-2026-roster-confirmation",
+        "otherVerifiedRoles": ["Bécsi Magyar Iskola vezetés és oktatásszervezés", "projektkoordinátor", "pedagógus", "tábor-koordinátor"],
+        "email": "office@magyariskola.at",
+        "telephone": "+43 650 331 2090",
+        "pressEvidence": [
+          {"publisher":"ORF Magyarok","title":"Suliújságot indít a Bécsi Magyar Iskola","date":"2024-07-25","url":"https://volksgruppen.orf.at/magyarok/stories/3266240/"},
+          {"publisher":"ORF Magyarok","title":"Időutazástól a Minecraft világáig – nyári táborok","date":"2026-06-09","url":"https://volksgruppen.orf.at/magyarok/stories/3357751/"}
+        ]
+      },
+      {
+        "id": "person-hierholcz-anna",
+        "name": "Hierholcz Anna, MSc",
+        "centralRoles": ["pénzügy / pályázatok", "adminisztráció és könyvelés"],
+        "currentRoleConfidence": "official-contact-page",
+        "emails": ["buchhaltung@kozpontiszovetseg.at", "buchhaltungbmi@gmail.com"],
+        "otherVerifiedRoles": ["Bécsi Magyar Iskola Musical Mesék programvezető"],
+        "pressEvidence": [{"publisher":"ORF Magyarok","title":"Humoros musicallel készülnek a BMI diákjai","date":"2025-10-12","url":"https://volksgruppen.orf.at/magyarok/stories/3325447/"}]
+      },
+      {
+        "id": "person-banhalmi-norbert",
+        "name": "Bánhalmi Norbert",
+        "centralRoles": ["marketing és kommunikáció"],
+        "currentRoleConfidence": "official-about-and-contact-pages",
+        "email": "marketing@kozpontiszovetseg.at",
+        "telephone": "+43 677 616 555 92",
+        "otherVerifiedRoles": ["Bécsi Magyar Iskola social media és honlap"],
+        "pressEvidence": [
+          {"publisher":"ORF Magyarok","title":"Közgyűlést tartott a Központi Szövetség","date":"2025-05-19","url":"https://volksgruppen.orf.at/magyarok/stories/3305949/"},
+          {"publisher":"Rólunk.at","title":"Bánhalmi Norbert témacímke","url":"https://rolunk.at/tag/banhalmi-norbert/","type":"press-collection"}
+        ]
+      },
+      {
+        "id": "person-mizsei-richard",
+        "name": "Mizsei Richárd",
+        "centralRoles": ["2026-ban újonnan megválasztott vezetőségi tag / ülnök"],
+        "currentRoleConfidence": "confirmed-2026",
+        "otherVerifiedRoles": ["Napraforgók Bécsi Magyar Néptánc és Népzene Egyesület elnök"],
+        "pressEvidence": [{"publisher":"ORF Magyarok","title":"Központi szövetség éves közgyűlése","date":"2026-06-02","url":"https://volksgruppen.orf.at/magyarok/stories/3356526/"}]
+      },
+      {
+        "id": "person-kladek-antal-monika",
+        "name": "Kladek-Antal Mónika",
+        "centralRoles": ["2026-ban újonnan megválasztott vezetőségi tag / ülnök"],
+        "currentRoleConfidence": "confirmed-2026",
+        "otherVerifiedRoles": ["felső-ausztriai magyar szervezetek képviselője"],
+        "pressEvidence": [{"publisher":"ORF Magyarok","title":"Központi szövetség éves közgyűlése","date":"2026-06-02","url":"https://volksgruppen.orf.at/magyarok/stories/3356526/"}]
+      }
+    ]
+  },
+  "sourceAuthority": [
+    "https://www.kozpontiszovetseg.at/r%C3%B3lunk",
+    "https://www.kozpontiszovetseg.at/kapcsolat",
+    "https://volksgruppen.orf.at/magyarok/stories/3356526/",
+    "https://rolunk.at/nepcsoportunk/uj-elnokseg-az-ausztriai-magyar-egyesuletek-es-szervezetek-kozponti-szovetsegenek-elen/"
+  ]
+}
