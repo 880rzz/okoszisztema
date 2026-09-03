@@ -1,0 +1,42 @@
+name: Add Search Console verification
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/add-search-console-verification-20260903.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Add verification meta
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+          p=Path('index.html')
+          s=p.read_text(encoding='utf-8')
+          tag='<meta name="google-site-verification" content="swfhC25kqKI2fTXjs23AMNfb35cfkXUd3tUi6A3B0i4" />'
+          # Remove any duplicate of this exact verification value first.
+          s=s.replace(tag+'\n','').replace(tag,'')
+          # Insert after viewport meta when possible, otherwise after <head>.
+          m=re.search(r'(<meta name="viewport"[^>]*>\s*)', s)
+          if m:
+              s=s[:m.end()]+tag+'\n'+s[m.end():]
+          else:
+              s=s.replace('<head>','<head>\n'+tag,1)
+          p.write_text(s,encoding='utf-8')
+          PY
+      - name: Commit verification meta
+        run: |
+          git config user.name "Kozponti SEO Bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add index.html
+          git diff --cached --quiet && exit 0
+          git commit -m "Add Google Search Console verification"
+          git push
