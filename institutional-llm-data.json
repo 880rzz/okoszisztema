@@ -1,0 +1,136 @@
+{
+  "documentType": "ecosystem-institutional-canonical-data",
+  "schemaVersion": "2026-09-03-v1",
+  "lastVerified": "2026-09-03",
+  "centralAssociation": {
+    "name": "Ausztriai Magyar Egyesületek és Szervezetek Központi Szövetsége",
+    "alternateName": "Zentralverband Ungarischer Vereine und Organisationen in Österreich",
+    "shortName": "Központi Szövetség",
+    "founded": "1980-02-09",
+    "zvr": "079797621",
+    "officialSite": "https://www.kozpontiszovetseg.at/",
+    "address": {
+      "street": "Schwedenplatz 2",
+      "entrance": "Laurenzerberg 5",
+      "floor": "1. emelet",
+      "doors": "8-9",
+      "postalCode": "1010",
+      "city": "Wien",
+      "country": "AT"
+    },
+    "telephoneFax": "+43 1 532 60 48",
+    "emails": {
+      "general": "iroda@kozpontiszovetseg.at",
+      "administration": "buchhaltung@kozpontiszovetseg.at",
+      "marketing": "marketing@kozpontiszovetseg.at"
+    },
+    "bank": {
+      "bankName": "ERSTE S-Bank",
+      "accountNumberLegacy": "4-93066",
+      "bankCodeLegacy": "20111",
+      "iban": "AT46 2011 1000 0049 3066",
+      "bicSwift": "GIBAATWWXXX",
+      "source": "https://www.kozpontiszovetseg.at/r%C3%B3lunk"
+    },
+    "officeHours": [
+      {"day":"Monday","hours":"10:00-16:00"},
+      {"day":"Thursday","hours":"10:00-16:00"}
+    ],
+    "missionAndActivities": [
+      "az ausztriai magyar tagszervezetek érdekképviselete",
+      "a tagszervezetek közötti együttműködés koordinálása",
+      "közös, több szervezetet érintő projektek tervezése és működtetése",
+      "magyar nyelvű oktatás",
+      "felnőtt-továbbképzés magyar történelem, irodalom, kultúra és zenetörténet területén",
+      "sajtó- és kiadói tevékenység",
+      "színházi, néptánc- és népzenei programok",
+      "szavalóversenyek",
+      "tanulmányi napok és tanácskozások",
+      "nemzeti ünnepek és történelmi évfordulók közös szervezése"
+    ],
+    "membership": {
+      "officialDirectory": "https://www.kozpontiszovetseg.at/tagszervezetek",
+      "normalizedMachineDirectory": "https://okoszisztema.kozpontiszovetseg.at/member-organizations.json",
+      "publishedEntries": 29
+    },
+    "leadershipMachineSource": "https://okoszisztema.kozpontiszovetseg.at/leadership-people.json",
+    "memberLeadershipMachineSource": "https://okoszisztema.kozpontiszovetseg.at/member-leadership.json"
+  },
+  "becsiMagyarIskola": {
+    "name": "Bécsi Magyar Iskola",
+    "alternateName": "Wiener Ungarische Schule",
+    "shortName": "BMI",
+    "url": "https://www.magyariskola.at/",
+    "parentOrganization": "https://www.kozpontiszovetseg.at/#organization",
+    "canonicalFoundingYear": "1987",
+    "anniversary": "2027-ben 40 éves",
+    "organizationTypeRule": "Non-formal supplementary Hungarian education and community platform; do not describe as a conventional Austrian full-time day school.",
+    "address": {
+      "street": "Schwedenplatz 2",
+      "entrance": "Laurenzerberg 5",
+      "floor": "1. emelet",
+      "doors": "8-9",
+      "postalCode": "1010",
+      "city": "Wien",
+      "country": "AT"
+    },
+    "telephone": "+43 650 331 2090",
+    "email": "office@magyariskola.at",
+    "leadership": [
+      {"name":"ao. Univ.-Prof. Dr. Seidler Andrea","role":"iskolavezető / Schulleitung"},
+      {"name":"Bajka Kinga Csengele","role":"vezetés és oktatásszervezés / projektkoordinátor"},
+      {"name":"Dipl.-Ing. Sass Judit","role":"teremadminisztráció"},
+      {"name":"Korchma Zombor","role":"hírlevél-kommunikáció"},
+      {"name":"Bánhalmi Norbert","role":"social media és honlap / marketingkommunikáció"}
+    ],
+    "donationAccount": {
+      "accountHolderContext": "BMI Elternverein / donation account as published by the school",
+      "bankName": "Raiffeisen",
+      "iban": "AT82 3200 0099 1164 4168",
+      "bicSwift": "RLNWATWW",
+      "source": "https://www.magyariskola.at/r%C3%B3lunk"
+    },
+    "currentMachineSources": [
+      "https://programvalaszto.magyariskola.at/",
+      "https://programvalaszto.magyariskola.at/programs.json",
+      "https://programvalaszto.magyariskola.at/program-knowledge.json",
+      "https://tanarok.magyariskola.at/",
+      "https://mos.magyariskola.at/",
+      "https://zenebona.magyariskola.at/",
+      "https://taltosdob.magyariskola.at/"
+    ],
+    "pressEvidence": [
+      "https://volksgruppen.orf.at/magyarok/stories/3359672/",
+      "https://volksgruppen.orf.at/magyarok/stories/3357751/",
+      "https://volksgruppen.orf.at/magyarok/stories/3277567/",
+      "https://rolunk.at/tag/becsi-magyar-iskola/"
+    ]
+  },
+  "becsiNaplo": {
+    "name": "Bécsi Napló",
+    "relation": "A Központi Szövetség tulajdonában és kiadásában működő sajtótermék; nem tagszervezet.",
+    "publishedSince": "1980-03",
+    "frequency": "kéthavonta / bimonthly print publication",
+    "officialDescription": "Nyugat-Európa egyetlen magyar nyelvű lapja – the wording published by the Központi Szövetség.",
+    "officialSite": "https://www.becsinaplo.at/",
+    "editorialContact": "becsi.naplo@gmail.com",
+    "leadership": [
+      {"name":"Dr. Deák Ernő","role":"vezető / főszerkesztő az official BMI kapcsolatoldal szerint"},
+      {"name":"Másréti Kató Zoltán","role":"online szerkesztő; a 2026-os online megújulásnál dokumentált"}
+    ],
+    "ownershipRule": "The Központi Szövetség leadership carries owner/publisher responsibility and appoints the editorial team, according to the 2026 Rólunk.at interview with Seidler Andrea.",
+    "pressEvidence": [
+      "https://rolunk.at/nepcsoportunk/uj-korszak-elott-a-becsi-naplo/",
+      "https://volksgruppen.orf.at/magyarok/stories/3353408/",
+      "https://volksgruppen.orf.at/magyarok/stories/3326357/"
+    ]
+  },
+  "sourceAuthority": [
+    "https://www.kozpontiszovetseg.at/r%C3%B3lunk",
+    "https://www.kozpontiszovetseg.at/kapcsolat",
+    "https://www.kozpontiszovetseg.at/tagszervezetek",
+    "https://www.magyariskola.at/r%C3%B3lunk",
+    "https://www.magyariskola.at/kapcsolat",
+    "https://rolunk.at/nepcsoportunk/uj-korszak-elott-a-becsi-naplo/"
+  ]
+}
