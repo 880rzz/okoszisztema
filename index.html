@@ -68,6 +68,7 @@
 {"@type":"WebPage","@id":"https://okoszisztema.kozpontiszovetseg.at/#webpage","url":"https://okoszisztema.kozpontiszovetseg.at/","name":"Hogyan működik a Központi Szövetség?","isPartOf":{"@id":"https://okoszisztema.kozpontiszovetseg.at/#website"},"about":{"@id":"https://www.kozpontiszovetseg.at/#organization"},"inLanguage":"hu-AT"}
 ]}
 </script>
+<link rel="stylesheet" href="member-enrichment.css">
 </head>
 <body id="top">
 <nav class="nav"><div class="wrap navin"><a class="brand brand-link" href="#top" aria-label="Központi Szövetség – oldal teteje">Központi Szövetség</a><div class="site-menu" id="siteMenu"><button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="menuPanel" aria-label="Menü megnyitása"><span class="menu-label">Menü</span><span class="hamburger" aria-hidden="true"><i></i><i></i></span></button><div class="menu-panel" id="menuPanel" aria-hidden="true"><a href="#mukodes">Hogyan működik?</a><a href="#szervezetek">Tagszervezetek</a><a href="#alrendszerek">Saját projektek</a><a href="https://rolunk.at/tag/kozponti-szovetseg/" target="_blank" rel="noopener noreferrer">Hírek <span>↗</span></a><a href="https://rolunk.at/tag/becsi-magyar-iskola/" target="_blank" rel="noopener noreferrer">Bécsi Magyar Iskola – hírek <span>↗</span></a><a href="https://www.kozpontiszovetseg.at/r%C3%B3lunk" target="_blank" rel="noopener noreferrer">Bemutatkozás <span>↗</span></a><a href="https://kozpontiszovetseg.at/r%C3%B3lunk#vezetsg" target="_blank" rel="noopener noreferrer">Vezetőség <span>↗</span></a></div></div></div></nav>
@@ -115,5 +116,6 @@ fetch('member-organizations.json').then(r=>{if(!r.ok)throw new Error();return r.
 (()=>{const root=document.getElementById('siteMenu'),btn=document.getElementById('menuToggle'),panel=document.getElementById('menuPanel');if(!root||!btn||!panel)return;const setOpen=v=>{root.classList.toggle('open',v);btn.setAttribute('aria-expanded',String(v));panel.setAttribute('aria-hidden',String(!v));};btn.addEventListener('click',e=>{e.stopPropagation();setOpen(!root.classList.contains('open'));});panel.addEventListener('click',e=>{if(e.target.closest('a'))setOpen(false);});document.addEventListener('click',e=>{if(!root.contains(e.target))setOpen(false);});document.addEventListener('keydown',e=>{if(e.key==='Escape')setOpen(false);});})();
 </script>
 
+<script src="member-enrichment.js" defer></script>
 </body>
 </html>

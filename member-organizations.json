@@ -1,6 +1,6 @@
 {
   "documentType": "central-association-member-directory",
-  "schemaVersion": "2026-09-03-v6",
+  "schemaVersion": "2026-09-03-v7",
   "lastVerified": "2026-09-03",
   "source": "https://www.kozpontiszovetseg.at/tagszervezetek",
   "publishedEntryCount": 29,
@@ -51,7 +51,21 @@
       "researchOfficialSources": [
         "https://www.oeius.at/uber-uns",
         "https://www.oeius.at/projekte"
-      ]
+      ],
+      "contact": {
+        "emails": [
+          "andrea.seidler@univie.ac.at",
+          "marta.csire@univie.ac.at"
+        ],
+        "source": "https://www.kozpontiszovetseg.at/tagszervezetek",
+        "verified": "2026-09-03"
+      },
+      "featuredProfileArticle": {
+        "publisher": "ORF Magyarok",
+        "date": "2023-03-24",
+        "title": "Tanulmánykötet a sokszínű Burgenlandról",
+        "url": "https://volksgruppen.orf.at/magyarok/stories/3200228/"
+      }
     },
     {
       "id": "lean-in-femspace",
@@ -86,7 +100,20 @@
         "2017: dokumentált működés/mentorprogram-korszak",
         "2023: KultPult–Femspace Itthon-otthon? estek",
         "2024: a grazi programkörből önálló FemConnect Graz alakult"
-      ]
+      ],
+      "contact": {
+        "emails": [
+          "leaninfemspace@gmail.com"
+        ],
+        "source": "https://www.kozpontiszovetseg.at/tagszervezetek",
+        "verified": "2026-09-03"
+      },
+      "featuredProfileArticle": {
+        "publisher": "Rólunk.at",
+        "title": "Lean In Femspace – ausztriai magyar nők közössége",
+        "url": "https://rolunk.at/magazin/lean-in-femspace-ausztriai-magyar-nok-kozossege/",
+        "date": "2022-01-19"
+      }
     },
     {
       "id": "svung",
@@ -122,7 +149,21 @@
         "2021 körül: Kicsi SVUNG utánpótlásprogram elindulása",
         "2024/25: Gimi SVUNG és háromlépcsős utánpótlás",
         "2025: 10 éves jubileum"
-      ]
+      ],
+      "contact": {
+        "emails": [
+          "svung.tarsulat@gmx.at",
+          "Katalin.Blasko@univie.ac.at"
+        ],
+        "source": "https://www.kozpontiszovetseg.at/tagszervezetek",
+        "verified": "2026-09-03"
+      },
+      "featuredProfileArticle": {
+        "publisher": "ORF Magyarok",
+        "date": "2025-10-05",
+        "title": "TV-riport a 10 éves SVUNG-ról",
+        "url": "https://volksgruppen.orf.at/magyarok/stories/3324528/"
+      }
     },
     {
       "id": "cserkesz-72-wien",
@@ -149,7 +190,21 @@
       "historicalMilestones": [
         "2020: dokumentált vezetői hétvége és vezetőképzés",
         "2022–2026: rendszeres részvétel országos/bécsi magyar közös eseményeken"
-      ]
+      ],
+      "contact": {
+        "emails": [
+          "becs@cserkesz.at",
+          "ildiko.piroska@cserkesz.at"
+        ],
+        "source": "https://www.kozpontiszovetseg.at/tagszervezetek",
+        "verified": "2026-09-03"
+      },
+      "featuredProfileArticle": {
+        "publisher": "ORF Magyarok",
+        "date": "2020-11-21",
+        "title": "Vezetői hétvégét tartottak a cserkészek az erdőben",
+        "url": "https://volksgruppen.orf.at/magyarok/stories/3077055/"
+      }
     },
     {
       "id": "bim-becsi-irodalmi-muhely",
@@ -174,7 +229,20 @@
       ],
       "researchOfficialSources": [
         "https://www.kozpontiszovetseg.at/post/ny%C3%A1ri-f%C3%A9l%C3%A9vz%C3%A1r%C3%B3-a-k%C3%B6zponti-sz%C3%B6vets%C3%A9gben"
-      ]
+      ],
+      "contact": {
+        "emails": [
+          "nadori.lidia@gmail.com"
+        ],
+        "source": "https://www.kozpontiszovetseg.at/tagszervezetek",
+        "verified": "2026-09-03"
+      },
+      "featuredProfileArticle": {
+        "publisher": "Rólunk.at",
+        "title": "Bemutatkozott a Bécsi Irodalmi Műhely",
+        "url": "https://rolunk.at/kultura/bemutatkozott-a-becsi-irodalmi-muhely/",
+        "date": "2026-06-29"
+      }
     },
     {
       "id": "kalaka-club",
@@ -212,7 +280,20 @@
         "1984 körül: a 2025-ös 40+1 jubileum alapján kialakult szervezeti korszak",
         "2025: 40+1 jubileumi konferencia",
         "2026: kb. 900 résztvevő a Stephansdom Szent István-ünnepén"
-      ]
+      ],
+      "contact": {
+        "emails": [
+          "elisabeth.wurst@gmx.at"
+        ],
+        "source": "https://www.kozpontiszovetseg.at/tagszervezetek",
+        "verified": "2026-09-03"
+      },
+      "featuredProfileArticle": {
+        "publisher": "ORF Magyarok",
+        "date": "2025-09-19",
+        "title": "Jubileumi konferenciával ünnepelt a bécsi Kaláka Klub",
+        "url": "https://volksgruppen.orf.at/magyarok/stories/3322469/"
+      }
     },
     {
       "id": "napraforgok",
@@ -241,7 +322,21 @@
         "1999: alapítás",
         "2024: 25 éves jubileum",
         "2026: aktív szerep a Központi Szövetség felújított központjában és vezetőségében"
-      ]
+      ],
+      "contact": {
+        "emails": [
+          "napraforgok.tancegyuttes@gmail.com",
+          "mizseirichard@gmail.com"
+        ],
+        "source": "https://www.kozpontiszovetseg.at/tagszervezetek",
+        "verified": "2026-09-03"
+      },
+      "featuredProfileArticle": {
+        "publisher": "ORF Magyarok",
+        "title": "Napraforgók és táncháztalálkozó Bécsben",
+        "url": "https://volksgruppen.orf.at/magyarok/stories/3154928/",
+        "date": "2022-05-05"
+      }
     },
     {
       "id": "szent-istvan-egylet",
@@ -267,7 +362,20 @@
       ],
       "researchOfficialSources": [
         "https://lexikon.katolikus.hu/S/Szent%20Istv%C3%A1n%20Egylet.html"
-      ]
+      ],
+      "contact": {
+        "emails": [
+          "ladislaus.batthyany@gmx.at"
+        ],
+        "source": "https://www.kozpontiszovetseg.at/tagszervezetek",
+        "verified": "2026-09-03"
+      },
+      "featuredProfileArticle": {
+        "publisher": "ORF Magyarok",
+        "date": "2015",
+        "title": "Szent István bál Bécsben",
+        "url": "https://volksgruppen.orf.at/v2/magyarok/stories/2694653/"
+      }
     },
     {
       "id": "bornemisza-peter-tarsasag",
@@ -295,7 +403,20 @@
         "1960: alapítás és Capistrangasse-korszak",
         "2024: a 64 éves székhely elvesztése",
         "2025-től: működés a Központi Szövetség intézményi környezetében"
-      ]
+      ],
+      "contact": {
+        "emails": [
+          "bornemiszapetertarsasag@gmail.com"
+        ],
+        "source": "https://www.kozpontiszovetseg.at/tagszervezetek",
+        "verified": "2026-09-03"
+      },
+      "featuredProfileArticle": {
+        "publisher": "ORF Magyarok",
+        "date": "2024-06-24",
+        "title": "Bornemisza-társaság: kilakoltatás fenyeget",
+        "url": "https://volksgruppen.orf.at/magyarok/stories/3262490/"
+      }
     },
     {
       "id": "nemzetkozi-duna-filharmonia-barati-kor",
@@ -326,7 +447,20 @@
       ],
       "researchOfficialSources": [
         "https://www.kozpontiszovetseg.at/"
-      ]
+      ],
+      "contact": {
+        "emails": [
+          "agnes.katona@gmx.org"
+        ],
+        "source": "https://www.kozpontiszovetseg.at/tagszervezetek",
+        "verified": "2026-09-03"
+      },
+      "featuredProfileArticle": {
+        "publisher": "ORF Magyarok",
+        "date": "2022-11-06",
+        "title": "Gálakoncert határaink legyőzésére",
+        "url": "https://volksgruppen.orf.at/magyarok/stories/3180996/"
+      }
     },
     {
       "id": "alsoori-magyar-kultur-es-tancegyesulet",
@@ -352,7 +486,20 @@
           "title": "Megemlékezés és jubiláló iskola",
           "url": "https://volksgruppen.orf.at/magyarok/stories/3346857/"
         }
-      ]
+      ],
+      "contact": {
+        "emails": [
+          "magyaregyesulet.unterwart@gmail.com"
+        ],
+        "source": "https://www.kozpontiszovetseg.at/tagszervezetek",
+        "verified": "2026-09-03"
+      },
+      "featuredProfileArticle": {
+        "publisher": "ORF Magyarok",
+        "date": "2023-06-18",
+        "title": "Őrvidéki Mulatság: a megélt sokszínűség",
+        "url": "https://volksgruppen.orf.at/magyarok/stories/3212235/"
+      }
     },
     {
       "id": "irottko-sportegyesulet",
@@ -406,6 +553,13 @@
         ],
         "source": "https://www.kozpontiszovetseg.at/tagszervezetek",
         "verified": "2026-09-03"
+      },
+      "facebook": "https://www.facebook.com/groups/748296890091417/",
+      "featuredProfileArticle": {
+        "publisher": "Rólunk.at",
+        "title": "Két ország között egy közösségért",
+        "url": "https://rolunk.at/magazin/ket-orszag-kozott-egy-kozossegert/",
+        "date": "2026"
       }
     },
     {
@@ -434,7 +588,21 @@
         "2003-03-13: alapítás",
         "2023: 20 éves jubileum",
         "2026: a Központi Szövetség tisztújító közgyűlésének házigazdája Felsőpulyán"
-      ]
+      ],
+      "contact": {
+        "emails": [
+          "lizafarkas@icloud.com",
+          "mbukv@gmx.at"
+        ],
+        "source": "https://www.kozpontiszovetseg.at/tagszervezetek",
+        "verified": "2026-09-03"
+      },
+      "featuredProfileArticle": {
+        "publisher": "Rólunk.at",
+        "title": "Feladatunk, hogy a következő évszázadban is megmaradjon a magyar nyelv és kultúra Burgenlandban",
+        "url": "https://rolunk.at/nepcsoportunk/feladatunk-hogy-a-kovetkezo-evszazadban-is-megmaradjon-a-magyar-nyelv-es-kultura-burgenlandban/",
+        "date": "2022-01-18"
+      }
     },
     {
       "id": "felso-ausztriai-magyarok-kulturegyesulete",
@@ -468,7 +636,20 @@
         "1968: alapítás",
         "2018: 50 éves jubileum",
         "2023: 55 éves jubileum és az iskola 20+ ünnepe"
-      ]
+      ],
+      "contact": {
+        "emails": [
+          "enikoe.toekes@gmail.com"
+        ],
+        "source": "https://www.kozpontiszovetseg.at/tagszervezetek",
+        "verified": "2026-09-03"
+      },
+      "featuredProfileArticle": {
+        "publisher": "ORF Magyarok",
+        "title": "50 éves lett a Felső-Ausztriai Magyarok Kultúregyesülete",
+        "url": "https://volksgruppen.orf.at/v2/magyarok/stories/2907261/",
+        "date": "2018-04-16"
+      }
     },
     {
       "id": "linz-magyar-katolikus-kozosseg",
@@ -492,7 +673,20 @@
       ],
       "researchOfficialSources": [
         "https://ausztria.katolikus.at/"
-      ]
+      ],
+      "contact": {
+        "emails": [
+          "ernest.szabo@dioezese-linz.at"
+        ],
+        "source": "https://www.kozpontiszovetseg.at/tagszervezetek",
+        "verified": "2026-09-03"
+      },
+      "featuredProfileArticle": {
+        "publisher": "ORF Magyarok",
+        "date": "2023-05-26",
+        "title": "Magyar fesztivál Linzben civil összefogással",
+        "url": "https://volksgruppen.orf.at/magyarok/stories/3209121/"
+      }
     },
     {
       "id": "felso-ausztriai-hetvegi-magyar-ovoda-es-iskola",
@@ -520,7 +714,21 @@
           "title": "Hol lehet magyarul tanulni? 4. rész",
           "url": "https://volksgruppen.orf.at/magyarok/stories/3327962/"
         }
-      ]
+      ],
+      "contact": {
+        "emails": [
+          "magyariskola.wels@gmx.at",
+          "monikakladek@gmx.at"
+        ],
+        "source": "https://www.kozpontiszovetseg.at/tagszervezetek",
+        "verified": "2026-09-03"
+      },
+      "featuredProfileArticle": {
+        "publisher": "ORF Magyarok",
+        "date": "2025-05-31",
+        "title": "25 éves az egyesületi magyaroktatás Felső-Ausztriában",
+        "url": "https://volksgruppen.orf.at/magyarok/stories/3307647/"
+      }
     },
     {
       "id": "cserkesz-80-wels",
@@ -541,7 +749,21 @@
       "historicalProfile": "A welsi 80. sz. Árpád cserkészcsapat a felső-ausztriai magyar ifjúsági és hagyományőrző hálózat része. Cserkészneveléssel, közösségi programokkal és regionális civil együttműködéssel segíti a magyar identitás átadását a fiatal generációknak. A csapat a felső-ausztriai magyar fesztiválok és a helyi oktatási-kulturális hálózat visszatérő partnere.",
       "historicalMilestones": [
         "2023: a Hamuban Sült Pogácsa Fesztivál és Táncháztalálkozó társszervezői körében"
-      ]
+      ],
+      "contact": {
+        "emails": [
+          "wels@cserkesz.eu",
+          "istvan.altordai@evonik.com"
+        ],
+        "source": "https://www.kozpontiszovetseg.at/tagszervezetek",
+        "verified": "2026-09-03"
+      },
+      "featuredProfileArticle": {
+        "publisher": "ORF Magyarok",
+        "date": "2023-05-26",
+        "title": "Magyar fesztivál Linzben civil összefogással",
+        "url": "https://volksgruppen.orf.at/magyarok/stories/3209121/"
+      }
     },
     {
       "id": "salzung",
@@ -580,7 +802,21 @@
       ],
       "researchOfficialSources": [
         "https://www.salzung.com/hu/rolunk/"
-      ]
+      ],
+      "contact": {
+        "emails": [
+          "salzburgerhunverein@gmail.com",
+          "ilonamikoczy@gmail.com"
+        ],
+        "source": "https://www.kozpontiszovetseg.at/tagszervezetek",
+        "verified": "2026-09-03"
+      },
+      "featuredProfileArticle": {
+        "publisher": "ORF Magyarok",
+        "date": "2022-06-10",
+        "title": "Legyen a zene mindenkié!",
+        "url": "https://volksgruppen.orf.at/magyarok/stories/3160199/"
+      }
     },
     {
       "id": "grazi-magyar-egyesulet",
@@ -606,7 +842,21 @@
       ],
       "researchOfficialSources": [
         "https://www.grazimagyaregyesuelet.at/"
-      ]
+      ],
+      "contact": {
+        "emails": [
+          "GME1888@gmx.at",
+          "molnar.a@gmx.at"
+        ],
+        "source": "https://www.kozpontiszovetseg.at/tagszervezetek",
+        "verified": "2026-09-03"
+      },
+      "featuredProfileArticle": {
+        "publisher": "Rólunk.at",
+        "title": "Grázi Magyar Egyesület – 133 éves Európa egyik legrégebbi egyesülete",
+        "url": "https://rolunk.at/nepcsoportunk/grazi-magyar-egyesulet/",
+        "date": "2021-12-07"
+      }
     },
     {
       "id": "magyar-egyetemistak-es-oregdiakok-klubja-graz",
@@ -639,7 +889,20 @@
           "title": "Országszerte tartanak 1956-os eseményeket",
           "url": "https://volksgruppen.orf.at/magyarok/stories/3278181/"
         }
-      ]
+      ],
+      "contact": {
+        "emails": [
+          "info@laszlovari.at"
+        ],
+        "source": "https://www.kozpontiszovetseg.at/tagszervezetek",
+        "verified": "2026-09-03"
+      },
+      "featuredProfileArticle": {
+        "publisher": "Rólunk.at",
+        "title": "Megjelent a Gráci Magyar Újság legújabb száma",
+        "url": "https://rolunk.at/nepcsoportunk/megjelent-a-graci-magyar-ujsag-legujabb-szama/",
+        "date": "2022-08-19"
+      }
     },
     {
       "id": "graci-magyar-katolikus-kozosseg",
@@ -666,7 +929,21 @@
           "title": "Gráci Magyar Újság - az esztendő fordulójára",
           "url": "https://volksgruppen.orf.at/v2/magyarok/stories/2748287/"
         }
-      ]
+      ],
+      "contact": {
+        "emails": [
+          "otto.molnar@laposte.net",
+          "e.solymos@hotmail.com"
+        ],
+        "source": "https://www.kozpontiszovetseg.at/tagszervezetek",
+        "verified": "2026-09-03"
+      },
+      "featuredProfileArticle": {
+        "publisher": "ORF Magyarok",
+        "date": "2017",
+        "title": "Magyar misék, istentiszteletek Grazban",
+        "url": "https://volksgruppen.orf.at/v2/magyarok/stories/2889845/"
+      }
     },
     {
       "id": "femconnect-graz",
@@ -694,7 +971,20 @@
         "2024-08: önálló egyesület megalakulása",
         "2024-09: nyilvános bemutatkozás",
         "2026: bővülő kulturális és családi programkínálat"
-      ]
+      ],
+      "contact": {
+        "emails": [
+          "verein@femconnectgraz.at"
+        ],
+        "source": "https://www.kozpontiszovetseg.at/tagszervezetek",
+        "verified": "2026-09-03"
+      },
+      "featuredProfileArticle": {
+        "publisher": "Rólunk.at",
+        "title": "FemConnect: új magyar kultúregyesület Grazban",
+        "url": "https://rolunk.at/kultura/femconnect-uj-magyar-kulturegyesulet-grazban/",
+        "date": "2024-09-23"
+      }
     },
     {
       "id": "magyarhaz-innsbruck",
@@ -722,7 +1012,21 @@
         "1957: magyar menekült diákok otthona",
         "1963: több helyi magyar szervezet közös bázisa",
         "2022–2026: az 1956-os emlékezet és helyi szervezeti élet kiemelt helyszíne"
-      ]
+      ],
+      "contact": {
+        "emails": [
+          "mail@ugarnheim.at",
+          "pepat@ikbnet.at"
+        ],
+        "source": "https://www.kozpontiszovetseg.at/tagszervezetek",
+        "verified": "2026-09-03"
+      },
+      "featuredProfileArticle": {
+        "publisher": "ORF Magyarok",
+        "date": "2022-10-23",
+        "title": "Ahol a falak zárják magukba 1956 szellemét",
+        "url": "https://volksgruppen.orf.at/magyarok/stories/3179229/"
+      }
     },
     {
       "id": "imike",
@@ -749,7 +1053,20 @@
       "historicalMilestones": [
         "2023: aktív részvétel a nyugat-ausztriai diaszpóra-kerekasztalban",
         "2026: dokumentált kapcsolat a magyar anyanyelvi oktatással és cserkészettel"
-      ]
+      ],
+      "contact": {
+        "emails": [
+          "ujkv.ibk@gmail.com"
+        ],
+        "source": "https://www.kozpontiszovetseg.at/tagszervezetek",
+        "verified": "2026-09-03"
+      },
+      "featuredProfileArticle": {
+        "publisher": "Rólunk.at",
+        "title": "Okos(k)odni egy jó pofa sör mellett?",
+        "url": "https://rolunk.at/magazin/okoskodni-egy-jo-pofa-sor-mellett/",
+        "date": "2025-03-21"
+      }
     },
     {
       "id": "cserkesz-79-innsbruck",
@@ -777,7 +1094,20 @@
       "historicalMilestones": [
         "2020: dokumentált családi piknik és szabadtéri cserkészprogramok",
         "2026: a helyi magyar oktatási-ifjúsági hálózat részeként jelenik meg"
-      ]
+      ],
+      "contact": {
+        "emails": [
+          "pfadfinder.ibk79@gmail.com"
+        ],
+        "source": "https://www.kozpontiszovetseg.at/tagszervezetek",
+        "verified": "2026-09-03"
+      },
+      "featuredProfileArticle": {
+        "publisher": "ORF Magyarok",
+        "date": "2020",
+        "title": "Családi piknik Innsbruckban",
+        "url": "https://volksgruppen.orf.at/magyarok/stories/3068208/"
+      }
     },
     {
       "id": "imeasz",
@@ -805,7 +1135,20 @@
         "1956/57: az innsbrucki magyar diák- és akadémikusközeg kialakulása",
         "1963-tól: Magyarház mint szervezeti bázis",
         "2022–2024: rendszeres 1956-os emlékező programok"
-      ]
+      ],
+      "contact": {
+        "emails": [
+          "info@imeasz.at"
+        ],
+        "source": "https://www.kozpontiszovetseg.at/tagszervezetek",
+        "verified": "2026-09-03"
+      },
+      "featuredProfileArticle": {
+        "publisher": "ORF Magyarok",
+        "date": "2022-10-23",
+        "title": "Ahol a falak zárják magukba 1956 szellemét",
+        "url": "https://volksgruppen.orf.at/magyarok/stories/3179229/"
+      }
     },
     {
       "id": "innsbrucki-magyar-katolikus-kozosseg",
@@ -825,7 +1168,20 @@
           "title": "Családi piknik Innsbruckban",
           "url": "https://volksgruppen.orf.at/magyarok/stories/3068208/"
         }
-      ]
+      ],
+      "contact": {
+        "emails": [
+          "pepat@ikbnet.at"
+        ],
+        "source": "https://www.kozpontiszovetseg.at/tagszervezetek",
+        "verified": "2026-09-03"
+      },
+      "featuredProfileArticle": {
+        "publisher": "ORF Magyarok",
+        "date": "2020",
+        "title": "Családi piknik Innsbruckban",
+        "url": "https://volksgruppen.orf.at/magyarok/stories/3068208/"
+      }
     },
     {
       "id": "vorarlbergi-magyar-egyesulet",
@@ -853,7 +1209,21 @@
         "2022 körül: az első vorarlbergi magyar egyesület létrejötte",
         "2023: dokumentált 1956-os megemlékezés",
         "2024: első Szent István-ünnep"
-      ]
+      ],
+      "contact": {
+        "emails": [
+          "vorarlberg.ungverein@gmail.com",
+          "fugedi.henriette@gmail.com"
+        ],
+        "source": "https://www.kozpontiszovetseg.at/tagszervezetek",
+        "verified": "2026-09-03"
+      },
+      "featuredProfileArticle": {
+        "publisher": "ORF Magyarok",
+        "title": "Új tavasz, új remények Vorarlbergben",
+        "url": "https://volksgruppen.orf.at/magyarok/stories/3197605/",
+        "date": "2023-03-06"
+      }
     },
     {
       "id": "mi-magyarok-egymasert",
@@ -888,14 +1258,30 @@
           "title": "Növekvő érdeklődés a magyaroktatás iránt Vorarlbergben",
           "url": "https://volksgruppen.orf.at/magyarok/stories/3313367/"
         }
-      ]
+      ],
+      "contact": {
+        "emails": [
+          "mime.vorarlberg@gmail.com",
+          "mazsi0810@gmail.com"
+        ],
+        "source": "https://www.kozpontiszovetseg.at/tagszervezetek",
+        "verified": "2026-09-03"
+      },
+      "featuredProfileArticle": {
+        "publisher": "Rólunk.at",
+        "title": "Bemutatkozik a Mi Magyarok Egymásért – VIDEÓ",
+        "url": "https://rolunk.at/magazin/bemutatkozik-a-mi-magyarok-egymasert-video/",
+        "date": "2026-03-25"
+      }
     }
   ],
   "pressResearch": {
-    "lastResearched": "2026-09-02",
+    "lastResearched": "2026-09-03",
     "sourcePriority": [
-      "https://volksgruppen.orf.at/magyarok/",
-      "https://rolunk.at/"
+      "ORF Magyarok",
+      "Rólunk.at",
+      "official organization sources",
+      "reputable Austrian and Hungarian regional media"
     ],
     "evidenceFile": "https://okoszisztema.kozpontiszovetseg.at/member-press-evidence.json",
     "rule": "Press evidence supplements the official member directory. It may enrich activity/history descriptions but must not override official legal identity, ZVR or membership status without an authoritative organization source."
@@ -908,5 +1294,9 @@
       "Rólunk.at"
     ],
     "researchFile": "https://okoszisztema.kozpontiszovetseg.at/member-research.json"
+  },
+  "contactResearch": {
+    "lastVerified": "2026-09-03",
+    "primarySource": "https://www.kozpontiszovetseg.at/tagszervezetek"
   }
 }
