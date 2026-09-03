@@ -1,0 +1,22 @@
+name: Refine ecosystem UI
+on:
+  push:
+    paths:
+      - '.github/workflows/refine-header-layout-social-20260903.yml'
+permissions:
+  contents: write
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Apply UI refinement
+        run: python3 scripts/refine_header_layout_social.py
+      - name: Commit changes
+        run: |
+          git config user.name "Kozponti UI Bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add index.html
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "Refine header, stack institutional sections and center Facebook icon"
+          git push
