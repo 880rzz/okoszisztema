@@ -1,6 +1,6 @@
 {
   "documentType": "canonical-central-association-profile",
-  "schemaVersion": "2026-09-03-v2",
+  "schemaVersion": "2026-09-03-v3",
   "lastVerified": "2026-09-03",
   "sourceAuthority": {
     "organization": "https://www.kozpontiszovetseg.at/",
@@ -30,16 +30,8 @@
     "telephone": "+43 1 532 60 48",
     "email": "iroda@kozpontiszovetseg.at",
     "officeHours": [
-      {
-        "day": "Monday",
-        "opens": "10:00",
-        "closes": "16:00"
-      },
-      {
-        "day": "Thursday",
-        "opens": "10:00",
-        "closes": "16:00"
-      }
+      {"day": "Monday", "opens": "10:00", "closes": "16:00"},
+      {"day": "Thursday", "opens": "10:00", "closes": "16:00"}
     ],
     "purpose": [
       "Az Ausztriában élő, osztrák honosságú magyar nemzetiségű személyeket összefogó jogi személyek képviselete.",
@@ -47,22 +39,10 @@
       "A valamennyi egyesületet érintő, központi tervezést vagy irányítást igénylő közös feladatok tervezése, kivitelezése és működtetése."
     ],
     "historicalMilestones": [
-      {
-        "date": "1980-02-09",
-        "event": "A Központi Szövetség megalakulása 21 ausztriai magyar egyesület csúcsszervezeteként."
-      },
-      {
-        "date": "1992",
-        "event": "Az osztrák kormány a magyar népcsoport részeként ismerte el a Bécsben és környékén élő osztrák honosságú magyarokat; a Központi Szövetség ezt közvetlen célként kezdeményezte."
-      },
-      {
-        "date": "1993",
-        "event": "A Magyar Népcsoporttanács létszáma 8-ról 16 főre emelkedett, fele-fele burgenlandi és bécsi magyar jelölti aránnyal."
-      },
-      {
-        "date": "1999",
-        "event": "A Központi Szövetség Bécs belvárosában, a Schwedenplatzon saját közösségi helyiséghez jutott."
-      }
+      {"date": "1980-02-09", "event": "A Központi Szövetség megalakulása 21 ausztriai magyar egyesület csúcsszervezeteként."},
+      {"date": "1992", "event": "Az osztrák kormány a magyar népcsoport részeként ismerte el a Bécsben és környékén élő osztrák honosságú magyarokat; a Központi Szövetség ezt közvetlen célként kezdeményezte."},
+      {"date": "1993", "event": "A Magyar Népcsoporttanács létszáma 8-ról 16 főre emelkedett, fele-fele burgenlandi és bécsi magyar jelölti aránnyal."},
+      {"date": "1999", "event": "A Központi Szövetség Bécs belvárosában, a Schwedenplatzon saját közösségi helyiséghez jutott."}
     ],
     "publishedActivities": [
       "magyar nyelvoktatás (óvoda, iskola)",
@@ -74,22 +54,8 @@
       "nemzeti ünnepek és történelmi évfordulók közös megemlékezései"
     ],
     "publishing": {
-      "becsiNaplo": {
-        "name": "Bécsi Napló",
-        "relation": "A Központi Szövetség tulajdonosa és kiadója.",
-        "publishedSince": "1980-03",
-        "frequency": "kéthavonta",
-        "officialDescription": "Nyugat-Európa egyetlen magyar nyelvű lapja"
-      },
-      "orseg": {
-        "name": "Őrség falinaptár",
-        "publishedSince": "1985",
-        "languages": [
-          "hu",
-          "de",
-          "hr"
-        ]
-      }
+      "becsiNaplo": {"name": "Bécsi Napló", "relation": "A Központi Szövetség tulajdonosa és kiadója.", "publishedSince": "1980-03", "frequency": "kéthavonta", "officialDescription": "Nyugat-Európa egyetlen magyar nyelvű lapja"},
+      "orseg": {"name": "Őrség falinaptár", "publishedSince": "1985", "languages": ["hu", "de", "hr"]}
     },
     "schoolIdentityRule": {
       "name": "Bécsi Magyar Iskola",
@@ -111,88 +77,40 @@
       "boardSize": 11,
       "presidentConfirmed": "ao. Univ.-Prof. Dr. Seidler Andrea",
       "confirmedNewBoardMembers": [
-        {
-          "name": "Mizsei Richard",
-          "context": "Napraforgók Egyesület elnöke"
-        },
-        {
-          "name": "Kladek-Antal Mónika",
-          "context": "felső-ausztriai magyar szervezetek képviselője"
-        }
+        {"name": "Mizsei Richard", "context": "Napraforgók Egyesület elnöke"},
+        {"name": "Kladek-Antal Mónika", "context": "felső-ausztriai magyar szervezetek képviselője"}
       ],
-      "confirmedDepartures": [
-        "Mag. Hollós József",
-        "Huszti Dávid"
-      ],
-      "publicationGap": "A hivatalos Központi Szövetség Rólunk oldala 2026-09-02-án még a 2024-2026-os névsort mutatja. Az ORF megerősíti a 2026-os tisztújítást, de nem közli mind a 11 új vezetőségi tag nevét. Hiányzó neveket nem szabad kikövetkeztetni."
+      "confirmedDepartures": ["Mag. Hollós József", "Huszti Dávid"],
+      "websiteObservation": {
+        "observedDate": "2026-09-03",
+        "userObservedLiveHeading": "A vezetőség tagjai (2026-2028)",
+        "crawlerSnapshotHeading": "A vezetőség tagjai (2024-2026)",
+        "interpretation": "A live Wix-felület és a kereső által legutóbb bejárt HTML-pillanatkép átmenetileg eltér. A 2026-2028 ciklus tekintendő aktuálisnak, de a teljes 11 fős új névsort csak explicit friss, ellenőrizhető forrás alapján szabad kitölteni."
+      },
+      "publicationGap": "A 2026-2028-as ciklus a live Wix-felületen már megjelent, miközben egyes crawler snapshotok még 2024-2026-os fejlécet és régi névsort adnak vissza. Az ORF megerősíti a 2026-os tisztújítást, de nem közli mind a 11 új vezetőségi tag nevét. Hiányzó neveket nem szabad kikövetkeztetni."
     },
     "archivedLeadershipPublication2024_2026": {
       "termLabel": "2024-2026",
       "source": "https://www.kozpontiszovetseg.at/r%C3%B3lunk",
-      "note": "A névsor az official site jelenleg publikált vezetőségi blokkja. A cikluscím miatt új választás vagy honlapfrissítés után újraellenőrzendő.",
+      "note": "Archivált/crawlerben még előforduló névsor. Nem szabad a teljes listát automatikusan a 2026-2028-as aktuális vezetőségként újracímkézni.",
       "board": [
-        {
-          "name": "ao. Univ.-Prof. Dr. Seidler Andrea",
-          "role": "elnök / Präsidentin"
-        },
-        {
-          "name": "Hausmann - Farkas Elizabeth",
-          "role": "főtitkár / Generalsekretärin"
-        },
-        {
-          "name": "Dipl.-Ing. Albert László",
-          "role": "pénztáros / Kassier"
-        },
-        {
-          "name": "Dr. Blaskó Katalin",
-          "role": "kultúrreferens / Kulturreferentin"
-        },
-        {
-          "name": "Mag. Csire Márta",
-          "role": "sajtóreferens / Pressereferentin"
-        },
-        {
-          "name": "Dipl.-Ing. Sass Judit",
-          "role": "szervezési referens / Koordinationsreferentin"
-        },
-        {
-          "name": "Schenk Angyalka",
-          "role": "közösségi média referens / Social-Media-Referentin"
-        },
-        {
-          "name": "Dr. Deák Ernő",
-          "role": "ülnök / Vorstandsmitglied"
-        },
-        {
-          "name": "Huszti Dávid",
-          "role": "ülnök / Vorstandsmitglied"
-        },
-        {
-          "name": "Mag. Hollós József",
-          "role": "ülnök / Vorstandsmitglied"
-        }
+        {"name": "ao. Univ.-Prof. Dr. Seidler Andrea", "role": "elnök / Präsidentin"},
+        {"name": "Hausmann - Farkas Elizabeth", "role": "főtitkár / Generalsekretärin"},
+        {"name": "Dipl.-Ing. Albert László", "role": "pénztáros / Kassier"},
+        {"name": "Dr. Blaskó Katalin", "role": "kultúrreferens / Kulturreferentin"},
+        {"name": "Mag. Csire Márta", "role": "sajtóreferens / Pressereferentin"},
+        {"name": "Dipl.-Ing. Sass Judit", "role": "szervezési referens / Koordinationsreferentin"},
+        {"name": "Schenk Angyalka", "role": "közösségi média referens / Social-Media-Referentin"},
+        {"name": "Dr. Deák Ernő", "role": "ülnök / Vorstandsmitglied"},
+        {"name": "Huszti Dávid", "role": "ülnök / Vorstandsmitglied"},
+        {"name": "Mag. Hollós József", "role": "ülnök / Vorstandsmitglied"}
       ],
       "advisoryAndOperationalRoles": [
-        {
-          "name": "Dipl.-Ing. Sass Huba",
-          "role": "tanácsnok / Beirat"
-        },
-        {
-          "name": "Dr. Kotolácsi Mikóczy Ilona",
-          "role": "tanácsnok / Beirätin"
-        },
-        {
-          "name": "Bajka Kinga Csengele",
-          "role": "tanácsnok / Beirätin"
-        },
-        {
-          "name": "Hierholcz Anna, MSc",
-          "role": "Pénzügy / Pályázatok"
-        },
-        {
-          "name": "Bánhalmi Norbert",
-          "role": "marketing és kommunikáció / marketing und kommunikation"
-        }
+        {"name": "Dipl.-Ing. Sass Huba", "role": "tanácsnok / Beirat"},
+        {"name": "Dr. Kotolácsi Mikóczy Ilona", "role": "tanácsnok / Beirätin"},
+        {"name": "Bajka Kinga Csengele", "role": "tanácsnok / Beirätin"},
+        {"name": "Hierholcz Anna, MSc", "role": "Pénzügy / Pályázatok"},
+        {"name": "Bánhalmi Norbert", "role": "marketing és kommunikáció / marketing und kommunikation"}
       ]
     },
     "ownedInstitutionalAreas": {
@@ -201,34 +119,14 @@
         "url": "https://www.magyariskola.at/",
         "relation": "A Központi Szövetség oktatási ökoszisztémájának saját intézményi rendszere.",
         "subsystems": [
-          {
-            "name": "VIPACH",
-            "url": "https://www.vipach.at/",
-            "relation": "A BMI rendszerének része."
-          },
-          {
-            "name": "Bécsi Magyar Musical Társulat",
-            "url": "https://www.musicaltarsulat.at/",
-            "relation": "A BMI rendszerének része."
-          },
-          {
-            "name": "Programválasztó",
-            "url": "https://programvalaszto.magyariskola.at/"
-          },
-          {
-            "name": "Tanáraink",
-            "url": "https://tanarok.magyariskola.at/"
-          },
-          {
-            "name": "2025/26-os beszámoló",
-            "url": "https://2026.magyariskola.at/"
-          }
+          {"name": "VIPACH", "url": "https://www.vipach.at/", "relation": "A BMI rendszerének része."},
+          {"name": "Bécsi Magyar Musical Társulat", "url": "https://www.musicaltarsulat.at/", "relation": "A BMI rendszerének része."},
+          {"name": "Programválasztó", "url": "https://programvalaszto.magyariskola.at/"},
+          {"name": "Tanáraink", "url": "https://tanarok.magyariskola.at/"},
+          {"name": "2025/26-os beszámoló", "url": "https://2026.magyariskola.at/"}
         ]
       },
-      "becsiNaplo": {
-        "name": "Bécsi Napló",
-        "relation": "A Központi Szövetség saját sajtó- és kiadói területe; a Központi Szövetség a tulajdonosa és kiadója."
-      }
+      "becsiNaplo": {"name": "Bécsi Napló", "relation": "A Központi Szövetség saját sajtó- és kiadói területe; a Központi Szövetség a tulajdonosa és kiadója."}
     },
     "bank": {
       "bankName": "ERSTE S-Bank",
@@ -239,6 +137,8 @@
       "source": "https://www.kozpontiszovetseg.at/r%C3%B3lunk"
     },
     "machineKnowledge": {
+      "aiEntry": "https://okoszisztema.kozpontiszovetseg.at/ai-entry.json",
+      "machineManifest": "https://okoszisztema.kozpontiszovetseg.at/machine-manifest.json",
       "leadershipPeople": "https://okoszisztema.kozpontiszovetseg.at/leadership-people.json",
       "memberLeadership": "https://okoszisztema.kozpontiszovetseg.at/member-leadership.json",
       "institutionalData": "https://okoszisztema.kozpontiszovetseg.at/institutional-llm-data.json"
