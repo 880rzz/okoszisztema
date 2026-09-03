@@ -17,7 +17,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Enrich member data and visible cards
+      - name: Update member directory data
         shell: python
         run: |
           import json
@@ -25,6 +25,7 @@ jobs:
 
           p = Path('member-organizations.json')
           data = json.loads(p.read_text(encoding='utf-8'))
+          official_source = 'https://www.kozpontiszovetseg.at/tagszervezetek'
 
           contacts = {
             'ausztriai-magyar-kutatointezet': ['andrea.seidler@univie.ac.at','marta.csire@univie.ac.at'],
@@ -73,15 +74,10 @@ jobs:
             'irottko-sportegyesulet': {'publisher':'Rólunk.at','title':'Két ország között egy közösségért','url':'https://rolunk.at/magazin/ket-orszag-kozott-egy-kozossegert/','date':'2026'}
           }
 
-          official_source = 'https://www.kozpontiszovetseg.at/tagszervezetek'
           for m in data.get('members', []):
               mid = m.get('id')
               if mid in contacts:
-                  m['contact'] = {
-                      'emails': contacts[mid],
-                      'source': official_source,
-                      'verified': '2026-09-03'
-                  }
+                  m['contact'] = {'emails': contacts[mid], 'source': official_source, 'verified': '2026-09-03'}
               if mid == 'irottko-sportegyesulet':
                   m['officialSource'] = official_source
                   m['url'] = 'https://irottkofutas.hu/'
@@ -94,51 +90,20 @@ jobs:
                   m['featuredProfileArticle'] = m['pressEvidence'][0]
 
           data['schemaVersion'] = '2026-09-03-v7'
-          data['contactResearch'] = {
-              'lastVerified': '2026-09-03',
-              'primarySource': official_source,
-              'rule': 'Contact details mirror the official Központi Szövetség member directory. Press sources enrich public descriptions but do not override official legal identity or membership.'
-          }
-          data['pressResearch']['lastResearched'] = '2026-09-03'
-          data['pressResearch']['sourcePriority'] = ['https://volksgruppen.orf.at/magyarok/','https://rolunk.at/','official organization sources and reputable Austrian/Hungarian regional media']
+          data.setdefault('pressResearch', {})['lastResearched'] = '2026-09-03'
+          data['pressResearch']['sourcePriority'] = ['ORF Magyarok','Rólunk.at','official organization sources','reputable Austrian and Hungarian regional media']
+          data['contactResearch'] = {'lastVerified':'2026-09-03','primarySource':official_source}
           p.write_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
 
           htmlp = Path('index.html')
           html = htmlp.read_text(encoding='utf-8')
-          marker = 'member-contact-article-enrichment-v2'
-          if marker not in html:
-              addon = r'''
-<script id="member-contact-article-enrichment-v2">
-(function(){
-  const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-  async function enrich(){
-    try{
-      const r=await fetch('member-organizations.json',{cache:'no-store'}); if(!r.ok)return;
-      const d=await r.json();
-      const byName=new Map((d.members||[]).map(m=>[String(m.name||'').trim(),m]));
-      document.querySelectorAll('.member').forEach(card=>{
-        const h=card.querySelector('h3'); if(!h)return;
-        const m=byName.get(h.textContent.trim()); if(!m)return;
-        card.querySelectorAll('.member-enrichment').forEach(x=>x.remove());
-        const box=document.createElement('div'); box.className='member-enrichment';
-        let out='';
-        const emails=(m.contact&&m.contact.emails)||[];
-        if(emails.length){out+='<div class="member-contact"><span class="enrich-label">Kapcsolat</span>'+emails.map(e=>'<a href="mailto:'+esc(e)+'">'+esc(e)+'</a>').join('<span class="sep">·</span>')+'</div>'}
-        const a=m.featuredProfileArticle;
-        if(a&&a.url){out+='<a class="press-link" href="'+esc(a.url)+'" target="_blank" rel="noopener"><span class="press-mark" aria-hidden="true">↗</span><span><small>Sajtó / bemutató</small><strong>'+esc(a.title||a.publisher||'Cikk')+'</strong>'+(a.publisher?'<em>'+esc(a.publisher)+(a.date?' · '+esc(a.date):'')+'</em>':'')+'</span></a>'}
-        box.innerHTML=out; if(out)card.appendChild(box);
-      });
-    }catch(e){}
-  }
-  document.addEventListener('DOMContentLoaded',()=>{setTimeout(enrich,120);setTimeout(enrich,1000)});
-})();
-</script>
-<style id="member-contact-article-enrichment-style-v2">
-.member-enrichment{margin-top:16px;padding-top:14px;border-top:1px solid #ececef;font-size:13px;color:#626266}.member-contact{display:flex;gap:7px;align-items:baseline;flex-wrap:wrap;margin-bottom:11px}.enrich-label{font-size:10px;line-height:1;text-transform:uppercase;letter-spacing:.08em;font-weight:760;color:#85858b;margin-right:2px}.member-contact a{font-weight:540!important;color:#515158!important;overflow-wrap:anywhere}.sep{color:#b5b5ba}.press-link{display:flex!important;align-items:flex-start;gap:10px;padding:11px 12px;border:1px solid #e5e5e8;border-radius:14px;background:#fafafa;color:#222!important;text-decoration:none!important;transition:background .18s ease,border-color .18s ease,transform .18s ease}.press-link:hover{background:#f4f4f5;border-color:#d9d9dd;transform:translateY(-1px)}.press-mark{width:24px;height:24px;border-radius:50%;display:grid;place-items:center;flex:0 0 auto;background:#fff;border:1px solid #dedee2;font-size:12px}.press-link small{display:block;font-size:9px;text-transform:uppercase;letter-spacing:.09em;color:#8a8a90;margin-bottom:2px}.press-link strong{display:block;font-size:13px;line-height:1.35;font-weight:650;color:#2b2b2f}.press-link em{display:block;font-size:11px;font-style:normal;color:#85858c;margin-top:3px}@media(max-width:520px){.member-contact{display:block}.member-contact .enrich-label{display:block;margin-bottom:5px}.member-contact .sep{margin:0 5px}}
-</style>
-'''
-              html = html.replace('</body>', addon + '\n</body>')
-              htmlp.write_text(html, encoding='utf-8')
+          css = '<link rel="stylesheet" href="member-enrichment.css">'
+          js = '<script src="member-enrichment.js" defer></script>'
+          if css not in html:
+              html = html.replace('</head>', css + '\n</head>')
+          if js not in html:
+              html = html.replace('</body>', js + '\n</body>')
+          htmlp.write_text(html, encoding='utf-8')
       - name: Commit enrichment
         run: |
           git config user.name "ecosystem-steward"
