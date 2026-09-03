@@ -1,0 +1,25 @@
+name: Update Bécsi Napló URLs
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'scripts/update_becsi_naplo_urls.py'
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - run: python scripts/update_becsi_naplo_urls.py
+      - run: |
+          if ! git diff --quiet; then
+            git config user.name 'Kozponti Bot'
+            git config user.email 'actions@users.noreply.github.com'
+            git add index.html central-association.json llms.txt ai.txt
+            git commit -m 'Add current and archive Bécsi Napló URLs'
+            git push
+          fi
