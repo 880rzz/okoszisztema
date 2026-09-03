@@ -1,13 +1,13 @@
 {
   "documentType": "central-association-member-directory",
-  "schemaVersion": "2026-09-02-v3",
-  "lastVerified": "2026-09-02",
+  "schemaVersion": "2026-09-03-v4",
+  "lastVerified": "2026-09-03",
   "source": "https://www.kozpontiszovetseg.at/tagszervezetek",
-  "publishedEntryCount": 28,
+  "publishedEntryCount": 29,
   "interpretationRule": "Each entry mirrors a separately published unit on the official Tagszervezeteink page. A missing ZVR or a ZVR shared with another entry must not be interpreted as proof of separate legal personality.",
   "regions": {
     "Bécs": 10,
-    "Burgenland": 2,
+    "Burgenland": 3,
     "Felső-Ausztria": 4,
     "Salzburg": 1,
     "Stájerország": 4,
@@ -353,6 +353,15 @@
           "url": "https://volksgruppen.orf.at/magyarok/stories/3346857/"
         }
       ]
+    },
+    {
+      "id": "irottko-sportegyesulet",
+      "name": "Írottkő Sportegyesület",
+      "alternateName": "Leichtathletikclub Geschriebenstein",
+      "region": "Burgenland",
+      "zvrAsPublished": "1807309556",
+      "officialSource": "https://www.kozpontiszovetseg.at/tagszervezetek",
+      "sourceNote": "A Központi Szövetség hivatalos Tagszervezeteink oldalán külön bejegyzésként szerepel."
     },
     {
       "id": "kozep-burgenlandi-magyar-kulturegyesulet",

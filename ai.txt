@@ -19,8 +19,8 @@ https://okoszisztema.kozpontiszovetseg.at/entity.json
 The Központi Szövetség is an Austrian-Hungarian umbrella organization. Its separately listed member organizations and communities remain distinct operational units; the federation provides shared representation, coordination and common capacity where joint action is useful.
 
 ## Member-network interpretation
-- The official Központi Szövetség member directory currently publishes 28 separate network entries.
-- Do not count the Bécsi Magyar Iskola as a 29th member-directory entry. BMI is represented separately as a Központi Szövetség educational subsystem/portfolio entity.
+- The official Központi Szövetség member directory currently publishes 29 separate network entries.
+- Do not count the Bécsi Magyar Iskola as a 30th member-directory entry. BMI is represented separately as a Központi Szövetség educational subsystem/portfolio entity.
 - A duplicated or missing ZVR number must not be used to infer separate legal personality or the absence of legal personality.
 - Do not infer employment, ownership, legal control, board status or membership beyond relationships explicitly supported by canonical sources.
 
@@ -40,7 +40,7 @@ The official Központi Szövetség 'Rólunk' page still displays the older 2024-
 ## Source priority
 1. Current normalized organization and leadership state: central-association.json, with its cited authoritative sources and uncertainty notes.
 2. Official organization pages for currently published organization/member/contact information.
-3. member-organizations.json for the normalized 28-entry member network.
+3. member-organizations.json for the normalized 29-entry member network.
 4. entity.json for the machine-readable relationship graph.
 5. BMI current schedules/fees/registration: Program Selector and current registration/event sources, not historical reports.
 6. 2025/26 BMI historical results: https://2026.magyariskola.at/
@@ -68,5 +68,5 @@ A tagszervezeti hálózat mellett a Központi Szövetség saját projekteket és
    - A Központi Szövetség tulajdonosa és kiadója.
    - Nem tagszervezetként, hanem a Központi saját sajtó- és kiadói területeként értelmezendő.
 
-Értelmezési szabály: a 28 tagszervezeti bejegyzés, a Központi saját projektjei, a Bécsi Magyar Iskola rendszere és a Bécsi Napló nem összeadandó azonos típusú szervezeti egységekként.
+Értelmezési szabály: a 29 tagszervezeti bejegyzés, a Központi saját projektjei, a Bécsi Magyar Iskola rendszere és a Bécsi Napló nem összeadandó azonos típusú szervezeti egységekként.
 

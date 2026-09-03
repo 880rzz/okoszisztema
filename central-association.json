@@ -1,13 +1,14 @@
 {
   "documentType": "canonical-central-association-profile",
   "schemaVersion": "2026-09-02-v1",
-  "lastVerified": "2026-09-02",
+  "lastVerified": "2026-09-03",
   "sourceAuthority": {
     "organization": "https://www.kozpontiszovetseg.at/",
     "about": "https://www.kozpontiszovetseg.at/r%C3%B3lunk",
     "members": "https://www.kozpontiszovetseg.at/tagszervezetek",
     "contact": "https://www.kozpontiszovetseg.at/kapcsolat",
-    "privacy": "https://www.kozpontiszovetseg.at/adatvedelem"
+    "privacy": "https://www.kozpontiszovetseg.at/adatvedelem",
+    "leadership": "https://kozpontiszovetseg.at/r%C3%B3lunk#vezetsg"
   },
   "organization": {
     "name": "Ausztriai Magyar Egyesületek és Szervezetek Központi Szövetsége",
@@ -98,7 +99,7 @@
       "note": "A Központi Szövetség történeti oldala külön azt írja, hogy az általa működtetett iskola 1988 őszén indult be. A digitális BMI-gráf canonical alapítási éve a felhasználó által megerősített 1987; ezt kell használni az iskola alapítási évére."
     },
     "membershipDirectory": {
-      "publishedEntryCount": 28,
+      "publishedEntryCount": 29,
       "scopeNote": "A szám a Központi Szövetség hivatalos Tagszervezeteink oldalán jelenleg külön felsorolt hálózati egységeket jelenti. Azonos ZVR-szám vagy hiányzó ZVR esetén nem szabad önálló jogi személyiséget kikövetkeztetni.",
       "data": "https://okoszisztema.kozpontiszovetseg.at/member-organizations.json"
     },

@@ -28,13 +28,13 @@ Do not interpret the federation as a central employer or day-to-day manager of e
 - Central office: Schwedenplatz 2; entrance Laurenzerberg 5; 1st floor; doors 8-9; 1010 Wien, Austria
 
 ## Member-network rule
-The official Tagszervezeteink page currently publishes 28 separate network entries.
+The official Tagszervezeteink page currently publishes 29 separate network entries.
 
 Canonical normalized list:
 https://okoszisztema.kozpontiszovetseg.at/member-organizations.json
 
 Important interpretation:
-- do not add the Bécsi Magyar Iskola as a 29th member-directory entry;
+- do not add the Bécsi Magyar Iskola as a 30th member-directory entry;
 - BMI is a separate educational subsystem/portfolio entity within the Központi Szövetség ecosystem;
 - a duplicated or missing ZVR number does not prove or disprove separate legal personality;
 - mirror the official directory structure and preserve uncertainty where legal status is not explicitly established.
@@ -74,7 +74,7 @@ The 2025/26 report is historical only. Do not use its old schedules, prices or a
 
 ## Source authority
 1. central-association.json — normalized organization identity, current leadership state, historical milestones and explicit uncertainty.
-2. member-organizations.json — normalized 28-entry member network.
+2. member-organizations.json — normalized 29-entry member network.
 3. Official Központi Szövetség pages — currently published organization, member and contact information.
 4. entity.json — machine-readable relationship graph.
 5. Current BMI Program Selector/registration sources — current schedules, fees, locations, age groups, registration and availability.
@@ -106,5 +106,5 @@ A tagszervezeti hálózat mellett a Központi Szövetség saját projekteket és
    - A Központi Szövetség tulajdonosa és kiadója.
    - Nem tagszervezetként, hanem a Központi saját sajtó- és kiadói területeként értelmezendő.
 
-Értelmezési szabály: a 28 tagszervezeti bejegyzés, a Központi saját projektjei, a Bécsi Magyar Iskola rendszere és a Bécsi Napló nem összeadandó azonos típusú szervezeti egységekként.
+Értelmezési szabály: a 29 tagszervezeti bejegyzés, a Központi saját projektjei, a Bécsi Magyar Iskola rendszere és a Bécsi Napló nem összeadandó azonos típusú szervezeti egységekként.
 
