@@ -1,54 +1,36 @@
 {
   "documentType": "entity-quality-audit",
-  "schemaVersion": "2026-09-04-v1",
-  "lastVerified": "2026-09-04",
-  "scope": [
-    "Q141274866",
-    "Q141274560",
-    "Q141275731",
-    "Q138416887",
-    "Q112411009",
-    "Q137127822",
-    "Q56391118"
-  ],
+  "schemaVersion": "2026-09-05-v2",
+  "lastVerified": "2026-09-05",
+  "scope": ["Q141274866","Q141274560","Q141275731","Q138416887","Q112411009","Q137127822","Q56391118"],
   "qualityModel": {
-    "identity": "Wikidata Q-item plus canonical official URL",
+    "identity": "Wikidata Q-item plus canonical official URL where one exists",
     "legalRegistry": "Use Austrian registry identifiers where applicable (ZVR, trademark register)",
     "encyclopedicContext": "Wikipedia is contextual, not the source of mutable operational facts",
     "pressContext": "Rólunk.at and ORF are independent chronology/context layers",
+    "personAuthority": "Use people-authority.json for stable person identity, biographical milestones and authority identifiers; use current first-party/independent sources for mutable roles",
     "machineConsistency": "The same Q-ID, official URL, identifiers, parent/publisher relationships and role semantics must recur consistently across machine-readable sources",
     "noFalseEmploymentInference": "Volunteer/affiliation relations must not be normalized to employment without an explicit authoritative source"
   },
   "completedImprovements": [
-    {
-      "entity": "Q141274866",
-      "changes": ["added German and short-name aliases", "added founding date", "added AT/Vienna/address context", "added ZVR 079797621 as explicit identifier"]
-    },
-    {
-      "entity": "Q141274560",
-      "changes": ["added BMI/Wiener Ungarische Schule/WUS aliases", "added 1987 founding year and 2027 40th-anniversary context", "added correct Vienna address", "added Austrian trademark registration 266006 and file AM 4985/2011", "strengthened non-merging rule against Ungarischer Schulverein/Bécsi Magyar Iskolaegyesület"]
-    },
-    {
-      "entity": "Q141275731",
-      "changes": ["added ISSN 9000-1257", "added March 1980 origin", "added Vienna/Hungarian publication context", "added owner/publisher Q141274866", "added legacy official domain https://www.becsinaplo.eu/ for continuity"]
-    },
-    {
-      "entity": "Q138416887",
-      "changes": ["reinforced parent relation to BMI Q141274560", "reinforced founder relation to Q56391118", "country normalized to AT in central machine registry"]
-    },
-    {
-      "entity": "Q112411009",
-      "changes": ["retained Wikidata/Wikipedia resolution", "retained verified GND/VIAF/ISNI/BnF/LCCN authority identifiers", "retained current Központi/BMI role resolution with first-party-source rule"]
-    },
-    {
-      "entity": "Q137127822",
-      "changes": ["retained Wikidata/Wikipedia/GND/VIAF/ISNI identity", "kept Bécsi Napló role explicitly historical rather than silently current"]
-    },
-    {
-      "entity": "Q56391118",
-      "changes": ["retained Wikidata/Wikipedia identity", "explicitly encoded Központi marketing/communications contribution as voluntary", "blocked inference of employee/staff/paid status", "retained VIPACH founder relationship"]
-    }
+    {"entity":"Q141274866","changes":["German and short-name aliases","founding date 1980-02-09","AT/Vienna/address context","ZVR 079797621","Hungarian Wikipedia link"]},
+    {"entity":"Q141274560","changes":["BMI/Wiener Ungarische Schule/WUS aliases","1987 founding year","2027 40th-anniversary context","Vienna address","Austrian trademark registration 266006 and AM 4985/2011","Hungarian Wikipedia link","non-merging rule against similarly named organizations"]},
+    {"entity":"Q141275731","changes":["ISSN 9000-1257","March 1980 origin","Vienna/Hungarian publication context","owner/publisher Q141274866","current and legacy official domains","Hungarian Wikipedia link","print and online editorial layers kept distinct"]},
+    {"entity":"Q138416887","changes":["parent relation to BMI Q141274560","founder relation to Q56391118","country AT in canonical machine registry"]},
+    {"entity":"Q112411009","changes":["canonical people-authority record created","Wikidata/Wikipedia identity","GND/VIAF/ISNI/BnF/LCCN identifiers","1955 Sopron birth context","University of Vienna academic career","research fields","Tarnai Andor Prize 2019","2026-confirmed Központi president and BMI leader roles","disambiguation against Q137770094"]},
+    {"entity":"Q137127822","changes":["canonical people-authority record created","Wikidata/Wikipedia/GND/VIAF/ISNI identity","1940-06-09 Pereszteg birth data","1956 migration context","University of Vienna and Austrian Academy of Sciences milestones","Bécsi Napló editorial history from 1985","Központi secretary-general 1980-1991 and president 1991-2014","NYEOMSZSZ founding presidency 2001-2020","current-board inference explicitly blocked until the complete 2026-2028 roster is published"]},
+    {"entity":"Q56391118","changes":["Wikidata/Wikipedia identity","Központi marketing/communications contribution explicitly voluntary","employee/staff/paid-status inference blocked","VIPACH founder relationship retained"]}
   ],
+  "machineLayerStatus": {
+    "authorityGraph": "synchronized for Seidler Andrea and Deák Ernő",
+    "wikidataRegistry": "synchronized for Seidler Andrea and Deák Ernő",
+    "peopleAuthority": "created 2026-09-05",
+    "indexEmbeddedJsonLd": "synchronized",
+    "gdprAiTrustEmbeddedJsonLd": "synchronized",
+    "aiEntry": "people-authority.json exposed",
+    "machineManifest": "people-authority.json exposed",
+    "sitemap": "people-authority.json included"
+  },
   "wixRollout": {
     "authorityVersion": "entity-authority-v8",
     "staticPages": {
@@ -67,20 +49,30 @@
       "issue": "The visible historical narrative still contains the malformed/wrong address text 'Schwedenplatz 27).' even though the canonical current address is Schwedenplatz 2, 1010 Wien.",
       "canonicalCorrection": "Schwedenplatz 2, 1010 Wien; visitor entrance Laurenzerberg 5, 1st floor, Top 8–9.",
       "status": "not fixed in visible page body",
-      "reason": "The supported Wix REST APIs discovered for this site expose SEO/structured-data management but not arbitrary classic Wix Editor static-body text editing. Machine-readable entity data has already been corrected so crawlers receive the canonical address; the visible paragraph still needs a Wix Editor content edit."
+      "reason": "The available API layer supports SEO/structured-data management but not arbitrary classic Wix Editor body-text editing for this page. The machine-readable entity data is already correct; the visible paragraph still requires editor-level content modification."
     },
     {
       "severity": "medium",
       "entity": "Q138416887",
-      "issue": "The Wix site context currently reports country HU even though VIPACH is modeled and operated as an Austrian/Vienna entity.",
-      "status": "not auto-changed",
-      "reason": "Changing the primary locale/region can have SEO and multilingual URL implications. The machine entity graph now explicitly uses country AT; locale migration should only be done through the supported Wix locale-management flow after confirming the intended primary locale structure."
+      "issue": "VIPACH Site Properties currently reports locale hu/HU although the business address, currency, timezone and canonical entity country are Austrian.",
+      "desiredState": "content/site language hu; Site Properties region Austria, matching the working pattern on Központi Szövetség and Bécsi Magyar Iskola",
+      "status": "dashboard correction still required",
+      "reason": "Wix Multilingual primaryLocale and Site Properties locale are separate layers. Hungarian Multilingual locale supports hu-HU only, so changing Multilingual primary locale is not the correct fix. The remaining mismatch is the Site Properties regional setting; no safe documented public REST write method for locale.country has been identified."
+    },
+    {
+      "severity": "medium",
+      "entity": "Q141274866",
+      "issue": "The complete 2026-2028 board roster is not yet fully available in the canonical current source set.",
+      "status": "partial current roster only",
+      "knownCurrentFacts": ["Seidler Andrea remains president","Mizsei Richárd joined","Kladek-Antal Mónika joined","Hollós József departed","Huszti Dávid departed"],
+      "rule": "Do not relabel the complete 2024-2026 roster as current and do not invent the missing 2026-2028 names."
     }
   ],
   "nextExternalAuthorityOpportunities": [
-    "Wikidata: review whether Q141274866 should explicitly carry ZVR 079797621 and Bécsi Napló ownership/publisher relationships where suitable properties exist and sources support them",
-    "Wikidata: review Q141275731 for ISSN 9000-1257, official current website, legacy-site continuity, publisher/owner Q141274866 and March 1980 inception",
-    "Wikidata: ensure the huwiki sitelink for Seidler Andrea is attached to Q112411009 if still absent",
-    "Independent Austrian/German-language references: increase corroborating links for Wiener Ungarische Schule and Zentralverband names"
+    "Wikidata: review Q141274866 for ZVR 079797621 and Bécsi Napló ownership/publisher relationships where suitable properties and sources support them",
+    "Wikidata: review Q141275731 for ISSN 9000-1257, current website, publisher/owner Q141274866 and March 1980 inception",
+    "Wikidata: ensure the huwiki sitelinks for Seidler Andrea and Deák Ernő are attached to their correct Q-items",
+    "Independent Austrian/German-language references: increase corroborating coverage for Wiener Ungarische Schule and Zentralverband names",
+    "Központi: obtain or publish the complete 2026-2028 board roster in a current official source"
   ]
 }
