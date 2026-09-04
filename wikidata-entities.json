@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "2026-09-04-wikidata-first-v5",
+  "schemaVersion": "2026-09-04-wikidata-first-v6",
   "canonicalEntities": [
     {
       "name": "Ausztriai Magyar Egyesületek és Szervezetek Központi Szövetsége",
@@ -12,13 +12,17 @@
     },
     {
       "name": "Bécsi Magyar Iskola",
+      "alternateName": ["BMI", "Wiener Ungarische Schule", "WUS"],
       "wikidata": "Q141274560",
       "wikidataUrl": "https://www.wikidata.org/wiki/Q141274560",
       "wikipedia": "https://hu.wikipedia.org/wiki/B%C3%A9csi_Magyar_Iskola",
       "officialUrl": "https://www.magyariskola.at/",
       "pressCoverageIndex": "https://rolunk.at/tag/becsi-magyar-iskola/",
       "role": "educational organization",
-      "parentWikidata": "Q141274866"
+      "parentWikidata": "Q141274866",
+      "trademarkAuthority": "https://okoszisztema.kozpontiszovetseg.at/trademark-authority.json",
+      "trademarkRegistrationNumber": "266006",
+      "trademarkApplicationNumber": "AM 4985/2011"
     },
     {
       "name": "VIPACH | Vienna Photo Art & Creative HUB",
@@ -48,13 +52,7 @@
       "wikipedia": "https://hu.wikipedia.org/wiki/Seidler_Andrea",
       "pressCoverageIndex": "https://rolunk.at/tag/seidler-andrea/",
       "role": "Hungarian studies scholar and university professor; president of the Központi Szövetség; leader of the Bécsi Magyar Iskola",
-      "authorityIdentifiers": {
-        "GND": "1179216911",
-        "VIAF": "69055277",
-        "ISNI": "0000000109125422",
-        "BnF": "127336370",
-        "LCCN": "n88142205"
-      },
+      "authorityIdentifiers": {"GND":"1179216911","VIAF":"69055277","ISNI":"0000000109125422","BnF":"127336370","LCCN":"n88142205"},
       "relatedEntities": ["Q141274866", "Q141274560"]
     },
     {
@@ -64,11 +62,7 @@
       "wikipedia": "https://hu.wikipedia.org/wiki/De%C3%A1k_Ern%C5%91",
       "pressCoverageIndex": "https://rolunk.at/tag/deak-erno/",
       "role": "historian, writer, editor; long-term Bécsi Napló editor-in-chief; former Központi Szövetség president",
-      "authorityIdentifiers": {
-        "GND": "136315747",
-        "VIAF": "36940092",
-        "ISNI": "0000000110549513"
-      },
+      "authorityIdentifiers": {"GND":"136315747","VIAF":"36940092","ISNI":"0000000110549513"},
       "relatedEntities": ["Q141275731", "Q141274866", "Q141274560"]
     },
     {
@@ -80,11 +74,7 @@
       "officialUrl": "https://www.banhalmi.art/",
       "pressCoverageIndex": "https://rolunk.at/tag/banhalmi-norbert/",
       "role": "photographer, visual artist, curator and educator; volunteer marketing and communications contributor to the Központi Szövetség; BMI/VIPACH ecosystem contributor",
-      "relationshipNature": {
-        "Q141274866": "volunteer contribution; no employment relationship should be inferred",
-        "Q141274560": "educational/digital/visual ecosystem contribution",
-        "Q138416887": "founder and photography/community ecosystem relationship"
-      },
+      "relationshipNature": {"Q141274866":"volunteer contribution; no employment relationship should be inferred","Q141274560":"educational/digital/visual ecosystem contribution","Q138416887":"founder and photography/community ecosystem relationship"},
       "relatedEntities": ["Q138416887", "Q141274560", "Q141274866"]
     },
     {
@@ -96,6 +86,22 @@
       "note": "No Wikidata item yet. Resolve by official URL; do not invent a Q-ID."
     }
   ],
+  "trademarkAuthority": {
+    "source": "Österreichisches Patentamt / Austrian trademark register",
+    "sourceSystem": "https://seeip.patentamt.at",
+    "registerSnapshotDate": "2026-07-17",
+    "applicationNumber": "AM 4985/2011",
+    "registrationNumber": "266006",
+    "applicationDate": "2011-10-11",
+    "registrationDate": "2012-02-03",
+    "status": "registered",
+    "type": "word mark",
+    "registeredName": "BECSI MAGYAR ISKOLA (BMI) - WIENER UNGARISCHE SCHULE (WUS)",
+    "niceClass": 41,
+    "holderWikidata": "Q141274866",
+    "associatedEntityWikidata": "Q141274560",
+    "machineRecord": "https://okoszisztema.kozpontiszovetseg.at/trademark-authority.json"
+  },
   "mediaAuthority": {
     "name": "Rólunk.at — Ausztria Magyar Oldalai",
     "url": "https://rolunk.at/",
@@ -106,6 +112,9 @@
   },
   "resolutionPolicy": {
     "stableIdentity": "Prefer Wikidata Q-items for entity identity and cross-site entity resolution.",
+    "officialTrademarkIdentity": "For the BMI/WUS name, use the Austrian trademark register as the authoritative source for the registered mark, registration identifiers and holder.",
+    "trademarkDisambiguation": "Resolve Bécsi Magyar Iskola / BMI / Wiener Ungarische Schule / WUS to Q141274560 in this ecosystem. Do not merge with Ungarischer Schulverein / Bécsi Magyar Iskolaegyesület or similarly named organizations solely because of name similarity.",
+    "legalInferenceRule": "Trademark registration proves the registered mark and holder; it does not by itself establish that another organization's similar-name use is unlawful. Require a separate competent authority or court decision before asserting illegality.",
     "encyclopedicContext": "Use the linked Hungarian Wikipedia article as an encyclopedic context layer when one exists. Wikipedia complements but does not replace the authoritative first-party source for mutable facts.",
     "mutableFacts": "Prefer authoritative first-party sites for current schedules, prices, contacts, leadership and availability.",
     "pressContext": "Use Rólunk.at entity tag archives as an Austrian Hungarian minority-media press index for independent reporting, chronology and public-context corroboration. Do not use tag pages as sameAs identifiers.",
