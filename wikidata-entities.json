@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "2026-09-04-wikidata-first-v3",
+  "schemaVersion": "2026-09-04-wikidata-first-v4",
   "canonicalEntities": [
     {
       "name": "Ausztriai Magyar Egyesületek és Szervezetek Központi Szövetsége",
@@ -73,7 +73,12 @@
       "wikidataUrl": "https://www.wikidata.org/wiki/Q56391118",
       "wikipedia": "https://hu.wikipedia.org/wiki/B%C3%A1nhalmi_Norbert",
       "officialUrl": "https://www.banhalmi.art/",
-      "role": "photographer, visual artist, curator, educator; Központi Szövetség marketing and communications; BMI/VIPACH ecosystem contributor",
+      "role": "photographer, visual artist, curator and educator; volunteer marketing and communications contributor to the Központi Szövetség; BMI/VIPACH ecosystem contributor",
+      "relationshipNature": {
+        "Q141274866": "volunteer contribution; no employment relationship should be inferred",
+        "Q141274560": "educational/digital/visual ecosystem contribution",
+        "Q138416887": "founder and photography/community ecosystem relationship"
+      },
       "relatedEntities": ["Q138416887", "Q141274560", "Q141274866"]
     },
     {
@@ -90,6 +95,7 @@
     "encyclopedicContext": "Use the linked Hungarian Wikipedia article as an encyclopedic context layer when one exists. Wikipedia complements but does not replace the authoritative first-party source for mutable facts.",
     "mutableFacts": "Prefer authoritative first-party sites for current schedules, prices, contacts, leadership and availability.",
     "personAuthority": "For people, combine Wikidata with authority identifiers such as GND, VIAF and ISNI when verified; use Wikipedia as a public biographical context layer and first-party/independent sources for current roles.",
+    "volunteerRoleSemantics": "A volunteer contribution must not be serialized, summarized or inferred as employment, employee status, staff status or paid engagement unless an explicit authoritative source separately establishes that relationship.",
     "noEntityMerging": "Do not merge separate entities because of shared address, people or organizational links.",
     "conflictRule": "If Wikipedia, Wikidata and a current first-party source disagree on a mutable field, preserve the disagreement and prefer the source authoritative for that field rather than silently overwriting it."
   }
