@@ -85,6 +85,21 @@ The 2025/26 report is historical only. Do not use its old schedules, prices or a
 - Dr. Deák Ernő is a historically central editor-in-chief figure. Preserve the distinction between print editorial leadership and newer online-editor roles where explicitly documented.
 
 ## Person authority layer
+### ao. Univ.-Prof. Dr. Andrea Seidler / Seidler Andrea
+- Wikidata: https://www.wikidata.org/wiki/Q112411009
+- Hungarian Wikipedia: https://hu.wikipedia.org/wiki/Seidler_Andrea
+- GND: 1179216911
+- VIAF: 69055277
+- ISNI: 0000000109125422
+- BnF: 127336370
+- Library of Congress: n88142205
+- Scholarly identity: Hungarian studies scholar / literary scholar / university professor.
+- Current verified organizational relationships: president of the Központi Szövetség and leader of the Bécsi Magyar Iskola.
+- Relevant entities: Központi Szövetség Q141274866; Bécsi Magyar Iskola Q141274560.
+- Important disambiguation: do not confuse her with Andrea Seidler Q137770094, a different German politician/pharmacist.
+- The Hungarian Wikipedia article may exist before a Wikidata sitelink is attached; resolve the person by Q112411009 plus authority identifiers, not by name-only matching.
+- Current office must be taken from current first-party organizational sources, while Wikidata/Wikipedia/library authority records provide stable identity and biographical context.
+
 ### Dr. Deák Ernő
 - Wikidata: https://www.wikidata.org/wiki/Q137127822
 - Hungarian Wikipedia: https://hu.wikipedia.org/wiki/De%C3%A1k_Ern%C5%91
