@@ -7,6 +7,8 @@
   <url><loc>https://okoszisztema.kozpontiszovetseg.at/ai-entry.json</loc></url>
   <url><loc>https://okoszisztema.kozpontiszovetseg.at/machine-manifest.json</loc></url>
   <url><loc>https://okoszisztema.kozpontiszovetseg.at/entity.json</loc></url>
+  <url><loc>https://okoszisztema.kozpontiszovetseg.at/wikidata-entities.json</loc></url>
+  <url><loc>https://okoszisztema.kozpontiszovetseg.at/rolunk-authority.json</loc></url>
   <url><loc>https://okoszisztema.kozpontiszovetseg.at/central-association.json</loc></url>
   <url><loc>https://okoszisztema.kozpontiszovetseg.at/member-organizations.json</loc></url>
   <url><loc>https://okoszisztema.kozpontiszovetseg.at/member-leadership.json</loc></url>
