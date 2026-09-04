@@ -1,8 +1,11 @@
 {
-  "version": "1.0",
+  "version": "1.1",
   "canonical": "https://okoszisztema.kozpontiszovetseg.at/",
   "organization": "https://www.kozpontiszovetseg.at/#organization",
   "entityGraph": "https://okoszisztema.kozpontiszovetseg.at/entity.json",
+  "authorityGraph": "https://okoszisztema.kozpontiszovetseg.at/authority-graph.jsonld",
+  "wikidataRegistry": "https://okoszisztema.kozpontiszovetseg.at/wikidata-entities.json",
+  "peopleAuthority": "https://okoszisztema.kozpontiszovetseg.at/people-authority.json",
   "aiEntry": "https://okoszisztema.kozpontiszovetseg.at/ai-entry.json",
   "llms": "https://okoszisztema.kozpontiszovetseg.at/llms.txt",
   "aiPolicy": "https://okoszisztema.kozpontiszovetseg.at/ai.txt",
@@ -20,5 +23,5 @@
   },
   "memberEntryCount": 29,
   "country": "AT",
-  "lastReviewed": "2026-09-03"
+  "lastReviewed": "2026-09-05"
 }
