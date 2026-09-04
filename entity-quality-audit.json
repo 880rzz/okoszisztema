@@ -1,0 +1,86 @@
+{
+  "documentType": "entity-quality-audit",
+  "schemaVersion": "2026-09-04-v1",
+  "lastVerified": "2026-09-04",
+  "scope": [
+    "Q141274866",
+    "Q141274560",
+    "Q141275731",
+    "Q138416887",
+    "Q112411009",
+    "Q137127822",
+    "Q56391118"
+  ],
+  "qualityModel": {
+    "identity": "Wikidata Q-item plus canonical official URL",
+    "legalRegistry": "Use Austrian registry identifiers where applicable (ZVR, trademark register)",
+    "encyclopedicContext": "Wikipedia is contextual, not the source of mutable operational facts",
+    "pressContext": "Rólunk.at and ORF are independent chronology/context layers",
+    "machineConsistency": "The same Q-ID, official URL, identifiers, parent/publisher relationships and role semantics must recur consistently across machine-readable sources",
+    "noFalseEmploymentInference": "Volunteer/affiliation relations must not be normalized to employment without an explicit authoritative source"
+  },
+  "completedImprovements": [
+    {
+      "entity": "Q141274866",
+      "changes": ["added German and short-name aliases", "added founding date", "added AT/Vienna/address context", "added ZVR 079797621 as explicit identifier"]
+    },
+    {
+      "entity": "Q141274560",
+      "changes": ["added BMI/Wiener Ungarische Schule/WUS aliases", "added 1987 founding year and 2027 40th-anniversary context", "added correct Vienna address", "added Austrian trademark registration 266006 and file AM 4985/2011", "strengthened non-merging rule against Ungarischer Schulverein/Bécsi Magyar Iskolaegyesület"]
+    },
+    {
+      "entity": "Q141275731",
+      "changes": ["added ISSN 9000-1257", "added March 1980 origin", "added Vienna/Hungarian publication context", "added owner/publisher Q141274866", "added legacy official domain https://www.becsinaplo.eu/ for continuity"]
+    },
+    {
+      "entity": "Q138416887",
+      "changes": ["reinforced parent relation to BMI Q141274560", "reinforced founder relation to Q56391118", "country normalized to AT in central machine registry"]
+    },
+    {
+      "entity": "Q112411009",
+      "changes": ["retained Wikidata/Wikipedia resolution", "retained verified GND/VIAF/ISNI/BnF/LCCN authority identifiers", "retained current Központi/BMI role resolution with first-party-source rule"]
+    },
+    {
+      "entity": "Q137127822",
+      "changes": ["retained Wikidata/Wikipedia/GND/VIAF/ISNI identity", "kept Bécsi Napló role explicitly historical rather than silently current"]
+    },
+    {
+      "entity": "Q56391118",
+      "changes": ["retained Wikidata/Wikipedia identity", "explicitly encoded Központi marketing/communications contribution as voluntary", "blocked inference of employee/staff/paid status", "retained VIPACH founder relationship"]
+    }
+  ],
+  "wixRollout": {
+    "authorityVersion": "entity-authority-v8",
+    "staticPages": {
+      "Bécsi Magyar Iskola": {"updated": 39, "failed": 0},
+      "Központi Szövetség": {"updated": 11, "failed": 0},
+      "VIPACH": {"updated": 20, "failed": 0},
+      "Bécsi Napló": {"updated": 16, "failed": 0}
+    },
+    "savedAndPublishedRevisionsSynchronized": true
+  },
+  "openIssues": [
+    {
+      "severity": "high",
+      "entity": "Q141274560",
+      "url": "https://www.magyariskola.at/tortenetunk",
+      "issue": "The visible historical narrative still contains the malformed/wrong address text 'Schwedenplatz 27).' even though the canonical current address is Schwedenplatz 2, 1010 Wien.",
+      "canonicalCorrection": "Schwedenplatz 2, 1010 Wien; visitor entrance Laurenzerberg 5, 1st floor, Top 8–9.",
+      "status": "not fixed in visible page body",
+      "reason": "The supported Wix REST APIs discovered for this site expose SEO/structured-data management but not arbitrary classic Wix Editor static-body text editing. Machine-readable entity data has already been corrected so crawlers receive the canonical address; the visible paragraph still needs a Wix Editor content edit."
+    },
+    {
+      "severity": "medium",
+      "entity": "Q138416887",
+      "issue": "The Wix site context currently reports country HU even though VIPACH is modeled and operated as an Austrian/Vienna entity.",
+      "status": "not auto-changed",
+      "reason": "Changing the primary locale/region can have SEO and multilingual URL implications. The machine entity graph now explicitly uses country AT; locale migration should only be done through the supported Wix locale-management flow after confirming the intended primary locale structure."
+    }
+  ],
+  "nextExternalAuthorityOpportunities": [
+    "Wikidata: review whether Q141274866 should explicitly carry ZVR 079797621 and Bécsi Napló ownership/publisher relationships where suitable properties exist and sources support them",
+    "Wikidata: review Q141275731 for ISSN 9000-1257, official current website, legacy-site continuity, publisher/owner Q141274866 and March 1980 inception",
+    "Wikidata: ensure the huwiki sitelink for Seidler Andrea is attached to Q112411009 if still absent",
+    "Independent Austrian/German-language references: increase corroborating links for Wiener Ungarische Schule and Zentralverband names"
+  ]
+}
