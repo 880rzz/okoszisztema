@@ -1,0 +1,36 @@
+{
+  "documentType": "official-trademark-authority",
+  "schemaVersion": "2026-09-04-v1",
+  "source": {
+    "authority": "Österreichisches Patentamt",
+    "register": "Austrian trademark register",
+    "registerSnapshotDate": "2026-07-17",
+    "sourceSystem": "https://seeip.patentamt.at"
+  },
+  "mark": {
+    "applicationNumber": "AM 4985/2011",
+    "registrationNumber": "266006",
+    "applicationDate": "2011-10-11",
+    "registrationDate": "2012-02-03",
+    "status": "registered",
+    "type": "word mark",
+    "registeredName": "BECSI MAGYAR ISKOLA (BMI) - WIENER UNGARISCHE SCHULE (WUS)",
+    "niceClass": 41,
+    "holder": {
+      "name": "Zentralverband Ungarischer Vereine und Organisationen in Österreich - Ausztriai Magyar Egyesületek és Szervezetek Központi Szövetsége",
+      "wikidata": "Q141274866",
+      "officialUrl": "https://www.kozpontiszovetseg.at/"
+    },
+    "associatedSchoolEntity": {
+      "name": "Bécsi Magyar Iskola",
+      "alternateNames": ["BMI", "Wiener Ungarische Schule", "WUS"],
+      "wikidata": "Q141274560",
+      "officialUrl": "https://www.magyariskola.at/"
+    }
+  },
+  "disambiguation": {
+    "rule": "Do not merge the Bécsi Magyar Iskola (Q141274560) with other Austrian Hungarian educational organizations solely because they use similar Hungarian or German wording in their names.",
+    "namedSeparateEntity": "Ungarischer Schulverein / Bécsi Magyar Iskolaegyesület",
+    "legalInferenceRule": "The register record proves the registered trademark and its holder. It does not by itself establish that another organization's name use is unlawful; do not make that legal conclusion without a separate competent authority or court decision."
+  }
+}
