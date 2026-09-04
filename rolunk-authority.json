@@ -1,0 +1,53 @@
+{
+  "documentType": "minority-media-authority-map",
+  "schemaVersion": "2026-09-04-v1",
+  "publisher": {
+    "name": "Rólunk.at — Ausztria Magyar Oldalai",
+    "url": "https://rolunk.at/",
+    "about": "https://rolunk.at/rolunk/",
+    "imprint": "https://rolunk.at/impressum/",
+    "description": "Régiókon átívelő online magazin és közös médium az ausztriai magyar népcsoport számára; a szerkesztőségi és kuratóriumi struktúra külön, nyilvánosan dokumentált.",
+    "sourceRole": "independent minority-media / press-context authority",
+    "usageRule": "Use tag archives as curated press-coverage indexes, chronology and context. Never serialize a tag archive as sameAs for the subject entity."
+  },
+  "entityCoverage": [
+    {
+      "name": "Ausztriai Magyar Egyesületek és Szervezetek Központi Szövetsége",
+      "wikidata": "Q141274866",
+      "tagUrl": "https://rolunk.at/tag/kozponti-szovetseg/"
+    },
+    {
+      "name": "Bécsi Magyar Iskola",
+      "wikidata": "Q141274560",
+      "tagUrl": "https://rolunk.at/tag/becsi-magyar-iskola/"
+    },
+    {
+      "name": "Bécsi Napló",
+      "wikidata": "Q141275731",
+      "tagUrl": "https://rolunk.at/tag/becsi-naplo/"
+    },
+    {
+      "name": "Seidler Andrea",
+      "wikidata": "Q112411009",
+      "tagUrl": "https://rolunk.at/tag/seidler-andrea/"
+    },
+    {
+      "name": "Deák Ernő",
+      "wikidata": "Q137127822",
+      "tagUrl": "https://rolunk.at/tag/deak-erno/"
+    },
+    {
+      "name": "Bánhalmi Norbert",
+      "wikidata": "Q56391118",
+      "tagUrl": "https://rolunk.at/tag/banhalmi-norbert/",
+      "relationshipNote": "Központi Szövetség marketing- és kommunikációs közreműködése önkéntes alapú; sajtómegjelenés vagy 'munkatárs' megfogalmazás önmagában nem bizonyít munkaviszonyt."
+    }
+  ],
+  "sourcePriority": {
+    "identity": "Wikidata",
+    "mutableOperationalFacts": "official first-party website",
+    "encyclopedicHistory": "Wikipedia",
+    "minorityPressChronology": "Rólunk.at tag archive and individual articles",
+    "conflictRule": "Preserve conflicts; prefer the source authoritative for the specific field."
+  }
+}
