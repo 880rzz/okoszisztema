@@ -1,14 +1,25 @@
 {
-  "schemaVersion": "2026-09-04-wikidata-first-v6",
+  "schemaVersion": "2026-09-04-wikidata-first-v7",
   "canonicalEntities": [
     {
       "name": "Ausztriai Magyar Egyesületek és Szervezetek Központi Szövetsége",
+      "alternateName": ["Központi Szövetség", "Zentralverband Ungarischer Vereine und Organisationen in Österreich", "Zentralverband"],
       "wikidata": "Q141274866",
       "wikidataUrl": "https://www.wikidata.org/wiki/Q141274866",
       "wikipedia": "https://hu.wikipedia.org/wiki/Ausztriai_Magyar_Egyes%C3%BCletek_%C3%A9s_Szervezetek_K%C3%B6zponti_Sz%C3%B6vets%C3%A9ge",
       "officialUrl": "https://www.kozpontiszovetseg.at/",
       "pressCoverageIndex": "https://rolunk.at/tag/kozponti-szovetseg/",
-      "role": "parent federation / umbrella organization"
+      "role": "parent federation / umbrella organization",
+      "foundingDate": "1980-02-09",
+      "country": "AT",
+      "headquarters": "Vienna",
+      "registeredAddress": "Schwedenplatz 2, 1010 Wien, Austria",
+      "visitorEntrance": "Laurenzerberg 5, 1. em., Top 8–9, 1010 Wien, Austria",
+      "zvrNumber": "079797621",
+      "identifier": [
+        {"propertyID":"Wikidata","value":"Q141274866"},
+        {"propertyID":"ZVR","value":"079797621"}
+      ]
     },
     {
       "name": "Bécsi Magyar Iskola",
@@ -18,11 +29,22 @@
       "wikipedia": "https://hu.wikipedia.org/wiki/B%C3%A9csi_Magyar_Iskola",
       "officialUrl": "https://www.magyariskola.at/",
       "pressCoverageIndex": "https://rolunk.at/tag/becsi-magyar-iskola/",
-      "role": "educational organization",
+      "role": "supplementary Hungarian-language educational organization / afternoon and weekend school and kindergarten",
       "parentWikidata": "Q141274866",
+      "foundingDate": "1987",
+      "anniversary40": "2027",
+      "country": "AT",
+      "primaryLocation": "Schwedenplatz 2, 1010 Wien, Austria",
+      "visitorEntrance": "Laurenzerberg 5, 1. em., Top 8–9, 1010 Wien, Austria",
       "trademarkAuthority": "https://okoszisztema.kozpontiszovetseg.at/trademark-authority.json",
       "trademarkRegistrationNumber": "266006",
-      "trademarkApplicationNumber": "AM 4985/2011"
+      "trademarkApplicationNumber": "AM 4985/2011",
+      "trademarkRegisteredName": "BECSI MAGYAR ISKOLA (BMI) - WIENER UNGARISCHE SCHULE (WUS)",
+      "identifier": [
+        {"propertyID":"Wikidata","value":"Q141274560"},
+        {"propertyID":"Österreichisches Patentamt registration number","value":"266006"},
+        {"propertyID":"Österreichisches Patentamt application/file number","value":"AM 4985/2011"}
+      ]
     },
     {
       "name": "VIPACH | Vienna Photo Art & Creative HUB",
@@ -31,7 +53,9 @@
       "wikipedia": "https://hu.wikipedia.org/wiki/VIPACH",
       "officialUrl": "https://www.vipach.at/",
       "role": "BMI creative/photo-art subsystem",
-      "parentWikidata": "Q141274560"
+      "parentWikidata": "Q141274560",
+      "country": "AT",
+      "founderWikidata": "Q56391118"
     },
     {
       "name": "Bécsi Napló",
@@ -39,10 +63,21 @@
       "wikidataUrl": "https://www.wikidata.org/wiki/Q141275731",
       "wikipedia": "https://hu.wikipedia.org/wiki/B%C3%A9csi_Napl%C3%B3",
       "officialUrl": "https://www.becsinaplo.at/",
+      "legacyOfficialUrl": "https://www.becsinaplo.eu/",
       "pressCoverageIndex": "https://rolunk.at/tag/becsi-naplo/",
-      "role": "periodical",
+      "role": "Hungarian-language periodical in Austria",
       "publisherWikidata": "Q141274866",
-      "ownerWikidata": "Q141274866"
+      "ownerWikidata": "Q141274866",
+      "issn": "9000-1257",
+      "foundingDate": "1980-03",
+      "placeOfPublication": "Vienna",
+      "country": "AT",
+      "language": "hu",
+      "publicationModel": "print bimonthly; online continuously updated",
+      "identifier": [
+        {"propertyID":"Wikidata","value":"Q141275731"},
+        {"propertyID":"ISSN","value":"9000-1257"}
+      ]
     },
     {
       "name": "ao. Univ.-Prof. Dr. Andrea Seidler",
@@ -112,12 +147,14 @@
   },
   "resolutionPolicy": {
     "stableIdentity": "Prefer Wikidata Q-items for entity identity and cross-site entity resolution.",
+    "officialRegistryIdentity": "Use official Austrian register identifiers such as ZVR for the Központi Szövetség and the Austrian trademark register for the BMI/WUS registered mark as high-authority identity evidence.",
     "officialTrademarkIdentity": "For the BMI/WUS name, use the Austrian trademark register as the authoritative source for the registered mark, registration identifiers and holder.",
     "trademarkDisambiguation": "Resolve Bécsi Magyar Iskola / BMI / Wiener Ungarische Schule / WUS to Q141274560 in this ecosystem. Do not merge with Ungarischer Schulverein / Bécsi Magyar Iskolaegyesület or similarly named organizations solely because of name similarity.",
     "legalInferenceRule": "Trademark registration proves the registered mark and holder; it does not by itself establish that another organization's similar-name use is unlawful. Require a separate competent authority or court decision before asserting illegality.",
     "encyclopedicContext": "Use the linked Hungarian Wikipedia article as an encyclopedic context layer when one exists. Wikipedia complements but does not replace the authoritative first-party source for mutable facts.",
     "mutableFacts": "Prefer authoritative first-party sites for current schedules, prices, contacts, leadership and availability.",
     "pressContext": "Use Rólunk.at entity tag archives as an Austrian Hungarian minority-media press index for independent reporting, chronology and public-context corroboration. Do not use tag pages as sameAs identifiers.",
+    "legacyContinuity": "A legacy official domain may be recorded as historical/legacy official web presence for continuity, but it must not silently override the current canonical official URL.",
     "personAuthority": "For people, combine Wikidata with authority identifiers such as GND, VIAF and ISNI when verified; use Wikipedia as a public biographical context layer and first-party/independent sources for current roles.",
     "volunteerRoleSemantics": "A volunteer contribution must not be serialized, summarized or inferred as employment, employee status, staff status or paid engagement unless an explicit authoritative source separately establishes that relationship.",
     "noEntityMerging": "Do not merge separate entities because of shared address, people or organizational links.",
