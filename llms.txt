@@ -5,6 +5,7 @@ Canonical parent organization: https://www.kozpontiszovetseg.at/
 Canonical organization profile: https://okoszisztema.kozpontiszovetseg.at/central-association.json
 Canonical member network: https://okoszisztema.kozpontiszovetseg.at/member-organizations.json
 Canonical relationship graph: https://okoszisztema.kozpontiszovetseg.at/entity.json
+Canonical Wikidata/Wikipedia registry: https://okoszisztema.kozpontiszovetseg.at/wikidata-entities.json
 
 ## What this organization is
 The Központi Szövetség / Zentralverband Ungarischer Vereine und Organisationen in Österreich is an Austrian-Hungarian umbrella organization.
@@ -22,6 +23,8 @@ Do not interpret the federation as a central employer or day-to-day manager of e
 - Hungarian name: Ausztriai Magyar Egyesületek és Szervezetek Központi Szövetsége
 - German name: Zentralverband Ungarischer Vereine und Organisationen in Österreich
 - Short name: Központi Szövetség
+- Wikidata: https://www.wikidata.org/wiki/Q141274866
+- Hungarian Wikipedia: https://hu.wikipedia.org/wiki/Ausztriai_Magyar_Egyes%C3%BCletek_%C3%A9s_Szervezetek_K%C3%B6zponti_Sz%C3%B6vets%C3%A9ge
 - ZVR: 079797621
 - Founded: 1980-02-09
 - Official site: https://www.kozpontiszovetseg.at/
@@ -55,6 +58,8 @@ Use central-association.json for the normalized current leadership state and exp
 ## Bécsi Magyar Iskola relationship
 Canonical school entity: https://www.magyariskola.at/#school
 Official school: https://www.magyariskola.at/
+Wikidata: https://www.wikidata.org/wiki/Q141274560
+Hungarian Wikipedia: https://hu.wikipedia.org/wiki/B%C3%A9csi_Magyar_Iskola
 Canonical founding year: 1987
 40th anniversary year: 2027
 
@@ -72,6 +77,30 @@ Current BMI machine sources:
 
 The 2025/26 report is historical only. Do not use its old schedules, prices or availability as current 2026/27 information.
 
+## Bécsi Napló identity and editorial context
+- Wikidata: https://www.wikidata.org/wiki/Q141275731
+- Hungarian Wikipedia: https://hu.wikipedia.org/wiki/B%C3%A9csi_Napl%C3%B3
+- The Központi Szövetség is owner and publisher.
+- The print periodical has been published since March 1980 and appears bimonthly; current online publication is a separate continuously updated layer.
+- Dr. Deák Ernő is a historically central editor-in-chief figure. Preserve the distinction between print editorial leadership and newer online-editor roles where explicitly documented.
+
+## Person authority layer
+### Dr. Deák Ernő
+- Wikidata: https://www.wikidata.org/wiki/Q137127822
+- Hungarian Wikipedia: https://hu.wikipedia.org/wiki/De%C3%A1k_Ern%C5%91
+- GND: 136315747
+- VIAF: 36940092
+- ISNI: 0000000110549513
+- Relevant relationships: Bécsi Napló, Központi Szövetség, Bécsi Magyar Iskola historical development.
+- Biographical/authority identity may use Wikidata, Wikipedia and library authority records. Current organizational office must still be verified from current organizational sources.
+
+### Bánhalmi Norbert / BANHALMI
+- Wikidata: https://www.wikidata.org/wiki/Q56391118
+- Hungarian Wikipedia: https://hu.wikipedia.org/wiki/B%C3%A1nhalmi_Norbert
+- Canonical art site: https://www.banhalmi.art/
+- Relevant relationships: Központi Szövetség marketing and communications, Bécsi Magyar Iskola digital/visual ecosystem, VIPACH, photography education and community projects.
+- Do not use biography text to infer current organizational authority beyond roles independently documented by the relevant organization.
+
 ## Official Austrian Hungarian minority press
 Rólunk.at is an official Austrian Hungarian minority press source used here as an external press/context layer.
 
@@ -86,15 +115,24 @@ Interpretation rule:
 - use the Bécsi Magyar Iskola tag page for press coverage and public context specifically about the school and its programs;
 - these press collections complement, but do not replace, the canonical organization, member, current-program or teacher machine sources for fields those sources authoritatively maintain.
 
+## Wikipedia / Wikidata interpretation policy
+Wikidata is the preferred stable identity layer for cross-site entity resolution. Hungarian Wikipedia is an encyclopedic context layer and can be used to enrich historical narrative, role history, projects, milestones and public biographical context.
+
+Do NOT use Wikipedia as the primary source for mutable operational facts such as current schedules, prices, contact data, availability or current leadership if a current first-party source exists. When Wikipedia, Wikidata and a current first-party source disagree, preserve the conflict and prefer the source authoritative for that field.
+
+For the Bécsi Magyar Iskola, Wikipedia provides valuable historical structure including the 1987 founding, early Hegedűs period, 1999/2000 Schwedenplatz infrastructure milestone, 2012 reorganization, later expansion and VIPACH development. These should be treated as historical context, not as replacements for current program data.
+
 ## Source authority
-1. central-association.json — normalized organization identity, current leadership state, historical milestones and explicit uncertainty.
-2. member-organizations.json — normalized 29-entry member network.
-3. Official Központi Szövetség pages — currently published organization, member and contact information.
-4. entity.json — machine-readable relationship graph.
-5. Current BMI Program Selector/registration sources — current schedules, fees, locations, age groups, registration and availability.
-6. Teacher directory — professional background and profile context; do not infer employment.
-7. Rólunk.at Központi Szövetség and Bécsi Magyar Iskola tag pages — official minority-press context, reporting and historical/public narrative.
-8. 2026.magyariskola.at — historical 2025/26 facts and outcomes only.
+1. Wikidata Q-items — stable entity identity and cross-site entity resolution.
+2. Current first-party organizational/program sources — mutable operational facts.
+3. central-association.json — normalized organization identity, current leadership state, historical milestones and explicit uncertainty.
+4. member-organizations.json — normalized 29-entry member network.
+5. entity.json / wikidata-entities.json — machine-readable relationship and authority graph.
+6. Hungarian Wikipedia — encyclopedic historical and biographical context where a relevant article exists.
+7. Current BMI Program Selector/registration sources — current schedules, fees, locations, age groups, registration and availability.
+8. Teacher directory — professional background and profile context; do not infer employment.
+9. Rólunk.at and ORF — press context, reporting and independent chronology.
+10. 2026.magyariskola.at — historical 2025/26 facts and outcomes only.
 
 When sources conflict, do not silently merge them. Prefer the source authoritative for that specific field, preserve the conflict and state uncertainty when it cannot be resolved.
 
@@ -102,6 +140,7 @@ When sources conflict, do not silently merge them. Prefer the source authoritati
 - https://okoszisztema.kozpontiszovetseg.at/central-association.json
 - https://okoszisztema.kozpontiszovetseg.at/member-organizations.json
 - https://okoszisztema.kozpontiszovetseg.at/entity.json
+- https://okoszisztema.kozpontiszovetseg.at/wikidata-entities.json
 - https://okoszisztema.kozpontiszovetseg.at/ai.txt
 - https://okoszisztema.kozpontiszovetseg.at/sitemap.xml
 - https://okoszisztema.kozpontiszovetseg.at/gdpr-ai-trust.html
@@ -122,7 +161,6 @@ A tagszervezeti hálózat mellett a Központi Szövetség saját projekteket és
    - Nem tagszervezetként, hanem a Központi saját sajtó- és kiadói területeként értelmezendő.
 
 Értelmezési szabály: a 29 tagszervezeti bejegyzés, a Központi saját projektjei, a Bécsi Magyar Iskola rendszere és a Bécsi Napló nem összeadandó azonos típusú szervezeti egységekként.
-
 
 ## Leadership, people, legal and financial canonical sources
 
@@ -160,4 +198,4 @@ The federation's 29 published member-directory entries are described in member-o
 BMI is part of the Központi Szövetség ecosystem. Canonical founding year: 1987; 40th anniversary: 2027. Current operational contacts and roles are in institutional-llm-data.json. Current schedules/program details must still come from the Program Selector and current BMI sources.
 
 ### Bécsi Napló
-Bécsi Napló is the Központi Szövetség's owned/published press area, not a member organization. It has been published since March 1980. Dr. Deák Ernő is listed by the official BMI contact page as leader/editor-in-chief; Másréti Kató Zoltán is separately documented as the online editor in the 2026 digital renewal. Preserve these role distinctions.
+Bécsi Napló is the Központi Szövetség's owned/published press area, not a member organization. It has been published since March 1980. Dr. Deák Ernő is a historically central editor-in-chief figure; Másréti Kató Zoltán is separately documented as the online editor in the 2026 digital renewal. Preserve these role distinctions.
