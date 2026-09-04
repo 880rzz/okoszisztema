@@ -7,11 +7,18 @@
       "name": "Ausztriai Magyar Egyesületek és Szervezetek Központi Szövetsége",
       "alternateName": "Zentralverband Ungarischer Vereine und Organisationen in Österreich",
       "url": "https://www.kozpontiszovetseg.at/",
-      "identifier": {
-        "@type": "PropertyValue",
-        "propertyID": "ZVR-Zahl",
-        "value": "079797621"
-      },
+      "identifier": [
+        {
+          "@type": "PropertyValue",
+          "propertyID": "ZVR-Zahl",
+          "value": "079797621"
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "Wikidata",
+          "value": "Q141274866"
+        }
+      ],
       "foundingDate": "1980-02-09",
       "description": "Az ausztriai magyar egyesületek és szervezetek országos csúcsszervezete, amely 1980. február 9-én eredetileg 21 ausztriai magyar egyesület összefogására alakult.",
       "email": "iroda@kozpontiszovetseg.at",
@@ -24,8 +31,9 @@
         "addressCountry": "AT"
       },
       "sameAs": [
-        "https://www.facebook.com/kozpontiszovetseg",
-        "https://rolunk.at/tag/kozponti-szovetseg/"
+        "https://www.wikidata.org/wiki/Q141274866",
+        "https://hu.wikipedia.org/wiki/Ausztriai_Magyar_Egyes%C3%BCletek_%C3%A9s_Szervezetek_K%C3%B6zponti_Sz%C3%B6vets%C3%A9ge",
+        "https://www.facebook.com/kozpontiszovetseg"
       ],
       "subOrganization": [
         {
@@ -136,6 +144,11 @@
         },
         {
           "@id": "https://okoszisztema.kozpontiszovetseg.at/#institutional-llm-data"
+        },
+        {
+          "@type": "CollectionPage",
+          "url": "https://rolunk.at/tag/kozponti-szovetseg/",
+          "name": "Rólunk.at – Központi Szövetség sajtóarchívum"
         }
       ]
     },
@@ -154,7 +167,8 @@
       "foundingDate": "1987",
       "description": "A Bécsi Magyar Iskola canonical alapítási éve 1987; 2027-ben ünnepli fennállásának 40. évfordulóját.",
       "sameAs": [
-        "https://hu.wikipedia.org/wiki/Bécsi_Magyar_Iskola"
+        "https://www.wikidata.org/wiki/Q141274560",
+        "https://hu.wikipedia.org/wiki/B%C3%A9csi_Magyar_Iskola"
       ],
       "parentOrganization": {
         "@id": "https://www.kozpontiszovetseg.at/#organization"
@@ -180,6 +194,11 @@
         },
         {
           "@id": "https://www.musicaltarsulat.at/#website"
+        },
+        {
+          "@type": "CollectionPage",
+          "url": "https://rolunk.at/tag/becsi-magyar-iskola/",
+          "name": "Rólunk.at – Bécsi Magyar Iskola sajtóarchívum"
         }
       ]
     },
