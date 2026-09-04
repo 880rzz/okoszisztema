@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "2026-09-04-wikidata-first-v2",
+  "schemaVersion": "2026-09-04-wikidata-first-v3",
   "canonicalEntities": [
     {
       "name": "Ausztriai Magyar Egyesületek és Szervezetek Központi Szövetsége",
@@ -36,6 +36,22 @@
       "role": "periodical",
       "publisherWikidata": "Q141274866",
       "ownerWikidata": "Q141274866"
+    },
+    {
+      "name": "ao. Univ.-Prof. Dr. Andrea Seidler",
+      "alternateName": ["Seidler Andrea", "Andrea Seidler"],
+      "wikidata": "Q112411009",
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q112411009",
+      "wikipedia": "https://hu.wikipedia.org/wiki/Seidler_Andrea",
+      "role": "Hungarian studies scholar and university professor; president of the Központi Szövetség; leader of the Bécsi Magyar Iskola",
+      "authorityIdentifiers": {
+        "GND": "1179216911",
+        "VIAF": "69055277",
+        "ISNI": "0000000109125422",
+        "BnF": "127336370",
+        "LCCN": "n88142205"
+      },
+      "relatedEntities": ["Q141274866", "Q141274560"]
     },
     {
       "name": "Dr. Deák Ernő",
