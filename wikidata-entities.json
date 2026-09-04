@@ -1,10 +1,11 @@
 {
-  "schemaVersion": "2026-09-04-wikidata-first-v1",
+  "schemaVersion": "2026-09-04-wikidata-first-v2",
   "canonicalEntities": [
     {
       "name": "Ausztriai Magyar Egyesületek és Szervezetek Központi Szövetsége",
       "wikidata": "Q141274866",
       "wikidataUrl": "https://www.wikidata.org/wiki/Q141274866",
+      "wikipedia": "https://hu.wikipedia.org/wiki/Ausztriai_Magyar_Egyes%C3%BCletek_%C3%A9s_Szervezetek_K%C3%B6zponti_Sz%C3%B6vets%C3%A9ge",
       "officialUrl": "https://www.kozpontiszovetseg.at/",
       "role": "parent federation / umbrella organization"
     },
@@ -12,6 +13,7 @@
       "name": "Bécsi Magyar Iskola",
       "wikidata": "Q141274560",
       "wikidataUrl": "https://www.wikidata.org/wiki/Q141274560",
+      "wikipedia": "https://hu.wikipedia.org/wiki/B%C3%A9csi_Magyar_Iskola",
       "officialUrl": "https://www.magyariskola.at/",
       "role": "educational organization",
       "parentWikidata": "Q141274866"
@@ -20,6 +22,7 @@
       "name": "VIPACH | Vienna Photo Art & Creative HUB",
       "wikidata": "Q138416887",
       "wikidataUrl": "https://www.wikidata.org/wiki/Q138416887",
+      "wikipedia": "https://hu.wikipedia.org/wiki/VIPACH",
       "officialUrl": "https://www.vipach.at/",
       "role": "BMI creative/photo-art subsystem",
       "parentWikidata": "Q141274560"
@@ -28,10 +31,34 @@
       "name": "Bécsi Napló",
       "wikidata": "Q141275731",
       "wikidataUrl": "https://www.wikidata.org/wiki/Q141275731",
+      "wikipedia": "https://hu.wikipedia.org/wiki/B%C3%A9csi_Napl%C3%B3",
       "officialUrl": "https://www.becsinaplo.at/",
       "role": "periodical",
       "publisherWikidata": "Q141274866",
       "ownerWikidata": "Q141274866"
+    },
+    {
+      "name": "Dr. Deák Ernő",
+      "wikidata": "Q137127822",
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q137127822",
+      "wikipedia": "https://hu.wikipedia.org/wiki/De%C3%A1k_Ern%C5%91",
+      "role": "historian, writer, editor; long-term Bécsi Napló editor-in-chief; former Központi Szövetség president",
+      "authorityIdentifiers": {
+        "GND": "136315747",
+        "VIAF": "36940092",
+        "ISNI": "0000000110549513"
+      },
+      "relatedEntities": ["Q141275731", "Q141274866", "Q141274560"]
+    },
+    {
+      "name": "Bánhalmi Norbert",
+      "alternateName": "BANHALMI",
+      "wikidata": "Q56391118",
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q56391118",
+      "wikipedia": "https://hu.wikipedia.org/wiki/B%C3%A1nhalmi_Norbert",
+      "officialUrl": "https://www.banhalmi.art/",
+      "role": "photographer, visual artist, curator, educator; Központi Szövetség marketing and communications; BMI/VIPACH ecosystem contributor",
+      "relatedEntities": ["Q138416887", "Q141274560", "Q141274866"]
     },
     {
       "name": "Bécsi Magyar Musical Társulat",
@@ -44,7 +71,10 @@
   ],
   "resolutionPolicy": {
     "stableIdentity": "Prefer Wikidata Q-items for entity identity and cross-site entity resolution.",
+    "encyclopedicContext": "Use the linked Hungarian Wikipedia article as an encyclopedic context layer when one exists. Wikipedia complements but does not replace the authoritative first-party source for mutable facts.",
     "mutableFacts": "Prefer authoritative first-party sites for current schedules, prices, contacts, leadership and availability.",
-    "noEntityMerging": "Do not merge separate entities because of shared address, people or organizational links."
+    "personAuthority": "For people, combine Wikidata with authority identifiers such as GND, VIAF and ISNI when verified; use Wikipedia as a public biographical context layer and first-party/independent sources for current roles.",
+    "noEntityMerging": "Do not merge separate entities because of shared address, people or organizational links.",
+    "conflictRule": "If Wikipedia, Wikidata and a current first-party source disagree on a mutable field, preserve the disagreement and prefer the source authoritative for that field rather than silently overwriting it."
   }
 }
