@@ -1,8 +1,16 @@
 {
   "documentType": "canonical-central-association-profile",
-  "schemaVersion": "2026-09-03-v3",
-  "lastVerified": "2026-09-03",
+  "schemaVersion": "2026-09-04-wikidata-first-v1",
+  "lastVerified": "2026-09-04",
+  "entityRegistry": {
+    "centralAssociation": {"wikidata":"Q141274866","url":"https://www.wikidata.org/wiki/Q141274866"},
+    "becsiMagyarIskola": {"wikidata":"Q141274560","url":"https://www.wikidata.org/wiki/Q141274560"},
+    "vipach": {"wikidata":"Q138416887","url":"https://www.wikidata.org/wiki/Q138416887"},
+    "becsiNaplo": {"wikidata":"Q141275731","url":"https://www.wikidata.org/wiki/Q141275731"},
+    "musicalTarsulat": {"wikidata":null,"url":null,"note":"No Wikidata item yet; resolve by https://www.musicaltarsulat.at/ and do not invent a Q-ID."}
+  },
   "sourceAuthority": {
+    "wikidata": "https://www.wikidata.org/wiki/Q141274866",
     "organization": "https://www.kozpontiszovetseg.at/",
     "about": "https://www.kozpontiszovetseg.at/r%C3%B3lunk",
     "members": "https://www.kozpontiszovetseg.at/tagszervezetek",
@@ -15,6 +23,8 @@
     "alternateName": "Zentralverband Ungarischer Vereine und Organisationen in Österreich",
     "shortName": "Központi Szövetség",
     "url": "https://www.kozpontiszovetseg.at/",
+    "wikidata": "Q141274866",
+    "sameAs": ["https://www.wikidata.org/wiki/Q141274866"],
     "zvr": "079797621",
     "foundingDate": "1980-02-09",
     "foundingContext": "A szervezet eredetileg 21 ausztriai magyar egyesület csúcsszervezeteként alakult.",
@@ -54,15 +64,26 @@
       "nemzeti ünnepek és történelmi évfordulók közös megemlékezései"
     ],
     "publishing": {
-      "becsiNaplo": {"name": "Bécsi Napló", "relation": "A Központi Szövetség tulajdonosa és kiadója.", "publishedSince": "1980-03", "frequency": "kéthavonta", "officialDescription": "Nyugat-Európa egyetlen magyar nyelvű lapja"},
+      "becsiNaplo": {
+        "name": "Bécsi Napló",
+        "wikidata": "Q141275731",
+        "sameAs": ["https://www.wikidata.org/wiki/Q141275731"],
+        "relation": "A Központi Szövetség tulajdonosa és kiadója.",
+        "publishedSince": "1980-03",
+        "printFrequency": "kéthavonta",
+        "onlinePublication": "folyamatos",
+        "officialDescription": "Az ausztriai magyar közösség magyar nyelvű sajtóterméke"
+      },
       "orseg": {"name": "Őrség falinaptár", "publishedSince": "1985", "languages": ["hu", "de", "hr"]}
     },
     "schoolIdentityRule": {
       "name": "Bécsi Magyar Iskola",
+      "wikidata": "Q141274560",
+      "sameAs": ["https://www.wikidata.org/wiki/Q141274560"],
       "canonicalFoundingYear": "1987",
       "anniversaryYear": "2027",
       "anniversary": "40. évforduló",
-      "note": "A Központi Szövetség történeti oldala külön azt írja, hogy az általa működtetett iskola 1988 őszén indult be. A digitális BMI-gráf canonical alapítási éve a felhasználó által megerősített 1987; ezt kell használni az iskola alapítási évére."
+      "note": "A digitális BMI-gráf canonical alapítási éve 1987; ezt kell használni az iskola alapítási évére."
     },
     "membershipDirectory": {
       "publishedEntryCount": 29,
@@ -81,62 +102,31 @@
         {"name": "Kladek-Antal Mónika", "context": "felső-ausztriai magyar szervezetek képviselője"}
       ],
       "confirmedDepartures": ["Mag. Hollós József", "Huszti Dávid"],
-      "websiteObservation": {
-        "observedDate": "2026-09-03",
-        "userObservedLiveHeading": "A vezetőség tagjai (2026-2028)",
-        "crawlerSnapshotHeading": "A vezetőség tagjai (2024-2026)",
-        "interpretation": "A live Wix-felület és a kereső által legutóbb bejárt HTML-pillanatkép átmenetileg eltér. A 2026-2028 ciklus tekintendő aktuálisnak, de a teljes 11 fős új névsort csak explicit friss, ellenőrizhető forrás alapján szabad kitölteni."
-      },
-      "publicationGap": "A 2026-2028-as ciklus a live Wix-felületen már megjelent, miközben egyes crawler snapshotok még 2024-2026-os fejlécet és régi névsort adnak vissza. Az ORF megerősíti a 2026-os tisztújítást, de nem közli mind a 11 új vezetőségi tag nevét. Hiányzó neveket nem szabad kikövetkeztetni."
-    },
-    "archivedLeadershipPublication2024_2026": {
-      "termLabel": "2024-2026",
-      "source": "https://www.kozpontiszovetseg.at/r%C3%B3lunk",
-      "note": "Archivált/crawlerben még előforduló névsor. Nem szabad a teljes listát automatikusan a 2026-2028-as aktuális vezetőségként újracímkézni.",
-      "board": [
-        {"name": "ao. Univ.-Prof. Dr. Seidler Andrea", "role": "elnök / Präsidentin"},
-        {"name": "Hausmann - Farkas Elizabeth", "role": "főtitkár / Generalsekretärin"},
-        {"name": "Dipl.-Ing. Albert László", "role": "pénztáros / Kassier"},
-        {"name": "Dr. Blaskó Katalin", "role": "kultúrreferens / Kulturreferentin"},
-        {"name": "Mag. Csire Márta", "role": "sajtóreferens / Pressereferentin"},
-        {"name": "Dipl.-Ing. Sass Judit", "role": "szervezési referens / Koordinationsreferentin"},
-        {"name": "Schenk Angyalka", "role": "közösségi média referens / Social-Media-Referentin"},
-        {"name": "Dr. Deák Ernő", "role": "ülnök / Vorstandsmitglied"},
-        {"name": "Huszti Dávid", "role": "ülnök / Vorstandsmitglied"},
-        {"name": "Mag. Hollós József", "role": "ülnök / Vorstandsmitglied"}
-      ],
-      "advisoryAndOperationalRoles": [
-        {"name": "Dipl.-Ing. Sass Huba", "role": "tanácsnok / Beirat"},
-        {"name": "Dr. Kotolácsi Mikóczy Ilona", "role": "tanácsnok / Beirätin"},
-        {"name": "Bajka Kinga Csengele", "role": "tanácsnok / Beirätin"},
-        {"name": "Hierholcz Anna, MSc", "role": "Pénzügy / Pályázatok"},
-        {"name": "Bánhalmi Norbert", "role": "marketing és kommunikáció / marketing und kommunikation"}
-      ]
+      "publicationGap": "A teljes 2026-2028-as névsort csak explicit friss, ellenőrizhető forrás alapján szabad kitölteni."
     },
     "ownedInstitutionalAreas": {
       "becsiMagyarIskola": {
         "name": "Bécsi Magyar Iskola",
+        "wikidata": "Q141274560",
         "url": "https://www.magyariskola.at/",
         "relation": "A Központi Szövetség oktatási ökoszisztémájának saját intézményi rendszere.",
         "subsystems": [
-          {"name": "VIPACH", "url": "https://www.vipach.at/", "relation": "A BMI rendszerének része."},
-          {"name": "Bécsi Magyar Musical Társulat", "url": "https://www.musicaltarsulat.at/", "relation": "A BMI rendszerének része."},
+          {"name": "VIPACH", "wikidata":"Q138416887", "url": "https://www.vipach.at/", "relation": "A BMI rendszerének része."},
+          {"name": "Bécsi Magyar Musical Társulat", "wikidata":null, "url": "https://www.musicaltarsulat.at/", "relation": "A BMI rendszerének része; jelenleg nincs Wikidata-azonosítója."},
           {"name": "Programválasztó", "url": "https://programvalaszto.magyariskola.at/"},
           {"name": "Tanáraink", "url": "https://tanarok.magyariskola.at/"},
           {"name": "2025/26-os beszámoló", "url": "https://2026.magyariskola.at/"}
         ]
       },
-      "becsiNaplo": {"name": "Bécsi Napló", "relation": "A Központi Szövetség saját sajtó- és kiadói területe; a Központi Szövetség a tulajdonosa és kiadója."}
-    },
-    "bank": {
-      "bankName": "ERSTE S-Bank",
-      "accountNumberLegacy": "4-93066",
-      "bankCodeLegacy": "20111",
-      "iban": "AT46 2011 1000 0049 3066",
-      "bicSwift": "GIBAATWWXXX",
-      "source": "https://www.kozpontiszovetseg.at/r%C3%B3lunk"
+      "becsiNaplo": {
+        "name": "Bécsi Napló",
+        "wikidata":"Q141275731",
+        "url":"https://www.becsinaplo.at/",
+        "relation": "A Központi Szövetség saját sajtó- és kiadói területe; a Központi Szövetség a tulajdonosa és kiadója."
+      }
     },
     "machineKnowledge": {
+      "wikidataFirst": "https://okoszisztema.kozpontiszovetseg.at/wikidata-entities.json",
       "aiEntry": "https://okoszisztema.kozpontiszovetseg.at/ai-entry.json",
       "machineManifest": "https://okoszisztema.kozpontiszovetseg.at/machine-manifest.json",
       "leadershipPeople": "https://okoszisztema.kozpontiszovetseg.at/leadership-people.json",
