@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "2026-09-04-wikidata-first-v1",
+  "canonicalEntities": [
+    {
+      "name": "Ausztriai Magyar Egyesületek és Szervezetek Központi Szövetsége",
+      "wikidata": "Q141274866",
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q141274866",
+      "officialUrl": "https://www.kozpontiszovetseg.at/",
+      "role": "parent federation / umbrella organization"
+    },
+    {
+      "name": "Bécsi Magyar Iskola",
+      "wikidata": "Q141274560",
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q141274560",
+      "officialUrl": "https://www.magyariskola.at/",
+      "role": "educational organization",
+      "parentWikidata": "Q141274866"
+    },
+    {
+      "name": "VIPACH | Vienna Photo Art & Creative HUB",
+      "wikidata": "Q138416887",
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q138416887",
+      "officialUrl": "https://www.vipach.at/",
+      "role": "BMI creative/photo-art subsystem",
+      "parentWikidata": "Q141274560"
+    },
+    {
+      "name": "Bécsi Napló",
+      "wikidata": "Q141275731",
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q141275731",
+      "officialUrl": "https://www.becsinaplo.at/",
+      "role": "periodical",
+      "publisherWikidata": "Q141274866",
+      "ownerWikidata": "Q141274866"
+    },
+    {
+      "name": "Bécsi Magyar Musical Társulat",
+      "wikidata": null,
+      "officialUrl": "https://www.musicaltarsulat.at/",
+      "role": "BMI subsystem",
+      "parentWikidata": "Q141274560",
+      "note": "No Wikidata item yet. Resolve by official URL; do not invent a Q-ID."
+    }
+  ],
+  "resolutionPolicy": {
+    "stableIdentity": "Prefer Wikidata Q-items for entity identity and cross-site entity resolution.",
+    "mutableFacts": "Prefer authoritative first-party sites for current schedules, prices, contacts, leadership and availability.",
+    "noEntityMerging": "Do not merge separate entities because of shared address, people or organizational links."
+  }
+}
