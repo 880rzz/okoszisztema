@@ -1,0 +1,77 @@
+{
+  "documentType": "canonical-people-authority",
+  "schemaVersion": "2026-09-05-v1",
+  "lastVerified": "2026-09-05",
+  "purpose": "Stable person identity and biographical authority layer for the Központi Szövetség ecosystem. Current mutable organizational roles must still be verified from current first-party or current independent sources.",
+  "people": [
+    {
+      "id": "person-seidler-andrea",
+      "name": "ao. Univ.-Prof. Dr. Andrea Seidler",
+      "alternateNames": ["Seidler Andrea", "Andrea Seidler"],
+      "wikidata": "Q112411009",
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q112411009",
+      "wikipedia": "https://hu.wikipedia.org/wiki/Seidler_Andrea",
+      "birthYear": 1955,
+      "birthPlace": "Sopron, Hungary",
+      "nationalAndCulturalContext": "Hungarian-born Austrian scholar active in Hungarian studies and Austrian-Hungarian cultural life",
+      "professions": ["literary historian", "Hungarian studies scholar", "university professor"],
+      "researchFields": ["18th-century Hungarian literature", "press history", "multilingualism", "scholarly correspondence", "travel literature", "Central European cultural relations"],
+      "academicCareer": {
+        "institution": "University of Vienna",
+        "unit": "Finno-Ugric Studies",
+        "documentedPeriod": "1994-2020",
+        "leadershipRoles": ["institute head 2005-2008", "vice dean 2008-2011", "dean 2011-2012", "Finno-Ugric unit head 2016-2018"],
+        "retirement": "2020-10-01"
+      },
+      "internationalRoles": [{"organization":"International Association for Hungarian Studies / Nemzetközi Magyarságtudományi Társaság","role":"president","period":"2016-2021"}],
+      "awards": [{"name":"Tarnai Andor Prize","year":2019}],
+      "currentVerifiedRoles": [
+        {"organizationWikidata":"Q141274866","organization":"Ausztriai Magyar Egyesületek és Szervezetek Központi Szövetsége","role":"president","confirmedDate":"2026-06-02","source":"https://volksgruppen.orf.at/magyarok/stories/3356526/"},
+        {"organizationWikidata":"Q141274560","organization":"Bécsi Magyar Iskola","role":"leader","confirmedDate":"2026-06-23","source":"https://volksgruppen.orf.at/magyarok/stories/3359672/"}
+      ],
+      "authorityIdentifiers": {"GND":"1179216911","VIAF":"69055277","ISNI":"0000000109125422","BnF":"127336370","LCCN":"n88142205"},
+      "authoritativeProfiles": ["https://finno-ugristik.univie.ac.at/en/about-us/people-de/seidler-a/"],
+      "pressCoverage": ["https://rolunk.at/tag/seidler-andrea/","https://volksgruppen.orf.at/magyarok/stories/3356526/","https://volksgruppen.orf.at/magyarok/stories/3359672/"],
+      "relatedEntities": ["Q141274866", "Q141274560"],
+      "disambiguation": "Do not confuse with Andrea Seidler Q137770094, a different German politician/pharmacist."
+    },
+    {
+      "id": "person-deak-erno",
+      "name": "Dr. Deák Ernő",
+      "alternateNames": ["Deák Ernő"],
+      "wikidata": "Q137127822",
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q137127822",
+      "wikipedia": "https://hu.wikipedia.org/wiki/De%C3%A1k_Ern%C5%91",
+      "birthDate": "1940-06-09",
+      "birthPlace": "Pereszteg, Hungary",
+      "professions": ["historian", "economic historian", "writer", "editor"],
+      "biographicalMilestones": [
+        "left Hungary after the 1956 revolution and settled in Austria",
+        "studied at the University of Vienna",
+        "worked at the Austrian Academy of Sciences",
+        "Bécsi Napló editor from 1985 and later editor-in-chief",
+        "Központi Szövetség secretary-general 1980-1991",
+        "Központi Szövetség president 1991-2014",
+        "NYEOMSZSZ founding president 2001-2020"
+      ],
+      "historicalRoles": [
+        {"organizationWikidata":"Q141274866","organization":"Ausztriai Magyar Egyesületek és Szervezetek Központi Szövetsége","role":"secretary-general","period":"1980-1991"},
+        {"organizationWikidata":"Q141274866","organization":"Ausztriai Magyar Egyesületek és Szervezetek Központi Szövetsége","role":"president","period":"1991-2014"},
+        {"organizationWikidata":"Q141275731","organization":"Bécsi Napló","role":"editor; later editor-in-chief","period":"from 1985"},
+        {"organization":"Nyugat-Európai Országos Magyar Szervezetek Szövetsége","url":"https://www.nyeomszsz.org/","role":"founding president","period":"2001-2020"}
+      ],
+      "authorityIdentifiers": {"GND":"136315747","VIAF":"36940092","ISNI":"0000000110549513"},
+      "authoritativeProfiles": ["https://magyarnaplo.hu/szerzok/deak-erno"],
+      "pressCoverage": ["https://rolunk.at/tag/deak-erno/","https://volksgruppen.orf.at/magyarok/stories/3337426/","https://volksgruppen.orf.at/magyarok/stories/3340741/"],
+      "relatedEntities": ["Q141275731", "Q141274866", "Q141274560"],
+      "currentRoleRule": "Do not infer a current board office from the 2024-2026 Központi roster. The complete 2026-2028 board is not yet fully published in the canonical current source set."
+    }
+  ],
+  "interpretationRules": {
+    "identity": "Prefer Wikidata plus library authority identifiers for stable person resolution.",
+    "wikipedia": "Use Hungarian Wikipedia as encyclopedic context, not as the primary authority for mutable current roles.",
+    "currentRoles": "Use current first-party organizational sources and current independent reporting for mutable organizational roles.",
+    "historicalRoles": "Preserve documented term dates and distinguish historical office from current office.",
+    "employment": "Affiliation, editorial work, teaching, leadership or voluntary contribution must not be converted into an employment relationship unless an authoritative source explicitly establishes employment."
+  }
+}
