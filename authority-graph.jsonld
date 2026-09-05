@@ -50,7 +50,7 @@
       "sameAs":["https://www.wikidata.org/wiki/Q138416887","https://hu.wikipedia.org/wiki/VIPACH"],
       "identifier":{"@type":"PropertyValue","propertyID":"Wikidata","value":"Q138416887"},
       "parentOrganization":{"@id":"https://www.magyariskola.at/#school"},
-      "founder":{"@id":"https://www.wikidata.org/wiki/Q56391118"}
+      "founder":{"@id":"https://www.norbertbanhalmi.com/about/"}
     },
     {
       "@type":"Person",
@@ -90,12 +90,15 @@
     },
     {
       "@type":"Person",
-      "@id":"https://www.wikidata.org/wiki/Q56391118",
+      "@id":"https://www.norbertbanhalmi.com/about/",
       "name":"Bánhalmi Norbert",
-      "alternateName":"BANHALMI",
-      "description":"A Központi Szövetség marketing- és kommunikációs feladataiban önkéntes alapon vesz részt; ebből munkaviszony, alkalmazotti státusz vagy fizetett foglalkoztatás nem következik.",
-      "sameAs":["https://www.wikidata.org/wiki/Q56391118","https://hu.wikipedia.org/wiki/B%C3%A1nhalmi_Norbert"],
-      "affiliation":[{"@id":"https://www.kozpontiszovetseg.at/#organization"},{"@id":"https://www.magyariskola.at/#school"},{"@id":"https://www.vipach.at/#organization"}],
+      "url":"https://www.norbertbanhalmi.com/about/",
+      "description":"A Központi Szövetség és a Bécsi Magyar Iskola munkáját önkéntes fotográfiai, oktatási, marketing- és kommunikációs közreműködéssel segíti; ebből munkaviszony, alkalmazotti státusz vagy fizetett foglalkoztatás nem következik.",
+      "sameAs":["https://www.wikidata.org/wiki/Q56391118","https://hu.wikipedia.org/wiki/B%C3%A1nhalmi_Norbert","https://www.banhalmi.art/"],
+      "additionalProperty":[
+        {"@type":"PropertyValue","name":"Központi Szövetség kapcsolat","value":"önkéntes marketing- és kommunikációs közreműködés; nem munkaviszony"},
+        {"@type":"PropertyValue","name":"Bécsi Magyar Iskola kapcsolat","value":"önkéntes fotográfiai oktatási, marketing- és kommunikációs közreműködés; nem munkaviszony"}
+      ],
       "subjectOf":{"@type":"CollectionPage","url":"https://rolunk.at/tag/banhalmi-norbert/","name":"Rólunk.at – Bánhalmi Norbert sajtóarchívum"}
     }
   ]
