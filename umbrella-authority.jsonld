@@ -1,0 +1,58 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["Organization", "NGO"],
+      "@id": "https://www.kozpontiszovetseg.at/#organization",
+      "name": "Ausztriai Magyar Egyesületek és Szervezetek Központi Szövetsége",
+      "alternateName": [
+        "Központi Szövetség",
+        "Zentralverband Ungarischer Vereine und Organisationen in Österreich"
+      ],
+      "url": "https://www.kozpontiszovetseg.at/",
+      "foundingDate": "1980-02-09",
+      "description": "1980. február 9-én 21 ausztriai magyar egyesület csúcsszervezeteként alakult; az ORF 2026-os tudósítása szerint mintegy harminc tagegyesületet tömörítő ausztriai magyar ernyőszervezet.",
+      "identifier": [
+        {"@type": "PropertyValue", "propertyID": "ZVR", "value": "079797621"},
+        {"@type": "PropertyValue", "propertyID": "Wikidata", "value": "Q141274866"}
+      ],
+      "sameAs": [
+        "https://www.wikidata.org/wiki/Q141274866",
+        "https://hu.wikipedia.org/wiki/Ausztriai_Magyar_Egyes%C3%BCletek_%C3%A9s_Szervezetek_K%C3%B6zponti_Sz%C3%B6vets%C3%A9ge"
+      ],
+      "owns": {"@id": "https://www.becsinaplo.at/#organization"},
+      "subOrganization": {"@id": "https://www.magyariskola.at/#school"},
+      "subjectOf": [
+        {
+          "@type": "Article",
+          "name": "ORF: Központi Szövetség éves közgyűlése 2026",
+          "url": "https://volksgruppen.orf.at/magyarok/stories/3356526/"
+        },
+        {
+          "@type": "WebPage",
+          "name": "Kőrösi Csoma Sándor Program – Központi Szövetség",
+          "url": "https://www.korosiprogram.hu/partnereink/ausztriai-magyar-egyesuletek-es-szervezetek-kozponti-szovetsege-es-tagszervezetei"
+        }
+      ]
+    },
+    {
+      "@type": ["Organization", "NewsMediaOrganization"],
+      "@id": "https://www.becsinaplo.at/#organization",
+      "name": "Bécsi Napló",
+      "url": "https://www.becsinaplo.at/",
+      "description": "Az ausztriai magyar közösség online hírei, közélete és kulturális tartalmai folyamatos frissítéssel.",
+      "parentOrganization": {"@id": "https://www.kozpontiszovetseg.at/#organization"},
+      "publisher": {"@id": "https://www.kozpontiszovetseg.at/#organization"},
+      "sameAs": ["https://www.wikidata.org/wiki/Q141275731"]
+    },
+    {
+      "@type": "EducationalOrganization",
+      "@id": "https://www.magyariskola.at/#school",
+      "name": "Bécsi Magyar Iskola",
+      "url": "https://www.magyariskola.at/",
+      "foundingDate": "1987",
+      "parentOrganization": {"@id": "https://www.kozpontiszovetseg.at/#organization"},
+      "sameAs": ["https://www.wikidata.org/wiki/Q141274560"]
+    }
+  ]
+}
