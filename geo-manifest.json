@@ -1,0 +1,19 @@
+{
+  "version": "2026-09-12",
+  "canonicalOrganization": "https://www.kozpontiszovetseg.at/",
+  "authorityLanding": "https://okoszisztema.kozpontiszovetseg.at/magyar-ernyoszervezet-ausztria.html",
+  "umbrellaAuthorityGraph": "https://okoszisztema.kozpontiszovetseg.at/umbrella-authority.jsonld",
+  "dailyNewsSource": "https://okoszisztema.kozpontiszovetseg.at/daily-news-source.json",
+  "dailyNewsPublication": "https://www.becsinaplo.at/",
+  "memberDirectory": "https://okoszisztema.kozpontiszovetseg.at/member-organizations.json",
+  "canonicalOrganizationProfile": "https://okoszisztema.kozpontiszovetseg.at/central-association.json",
+  "entityGraph": "https://okoszisztema.kozpontiszovetseg.at/entity.json",
+  "wikidata": "https://www.wikidata.org/wiki/Q141274866",
+  "wikipedia": "https://hu.wikipedia.org/wiki/Ausztriai_Magyar_Egyes%C3%BCletek_%C3%A9s_Szervezetek_K%C3%B6zponti_Sz%C3%B6vets%C3%A9ge",
+  "verifiedPositioning": {
+    "founded": "1980-02-09",
+    "foundingContext": "21 ausztriai magyar egyesület csúcsszervezeteként alakult",
+    "networkEvidence": "ORF 2026: mintegy harminc tagegyesületet tömörítő ernyőszervezet",
+    "networkEvidenceUrl": "https://volksgruppen.orf.at/magyarok/stories/3356526/"
+  }
+}
