@@ -601,9 +601,11 @@
       "type": "oktatási közösség",
       "intro": "Hétvégi magyar óvodai és iskolai foglalkozásokat szervező felső-ausztriai közösség.",
       "website": null,
-      "facebook": null,
+      "facebook": "https://www.facebook.com/profile.php?id=100057286665201",
       "instagram": null,
-      "eventSources": []
+      "eventSources": [
+        "https://www.facebook.com/profile.php?id=100057286665201"
+      ]
     },
     {
       "id": "ne-felejts",
@@ -726,7 +728,9 @@
       "website": null,
       "facebook": "https://www.facebook.com/Salzburgi.Magyar.Neptancegyuttes/",
       "instagram": "https://www.instagram.com/salzburgi.neptanc/",
-      "eventSources": []
+      "eventSources": [
+        "https://www.facebook.com/Salzburgi.Magyar.Neptancegyuttes/"
+      ]
     },
     {
       "id": "magyarhaz-innsbruck",
@@ -750,9 +754,12 @@
       "type": "ifjúsági-kulturális",
       "intro": "Innsbruck magyar fiataljait és családjait összekapcsoló kulturális egyesület közösségi és ifjúsági programokkal.",
       "website": null,
-      "facebook": null,
-      "instagram": null,
-      "eventSources": []
+      "facebook": "https://www.facebook.com/IMIKE2019UJKV/",
+      "instagram": "https://www.instagram.com/imike_ujkv/",
+      "eventSources": [
+        "https://www.facebook.com/IMIKE2019UJKV/",
+        "https://www.instagram.com/imike_ujkv/"
+      ]
     },
     {
       "id": "imeasz",
