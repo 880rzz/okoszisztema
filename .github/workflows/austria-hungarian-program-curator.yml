@@ -16,8 +16,12 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - name: Compile curator
+        run: python -m py_compile austria-programs/scripts/update_events.py austria-programs/scripts/validate_directory.py
       - name: Refresh verified event sources
         run: python austria-programs/scripts/update_events.py
+      - name: Validate directory integrity
+        run: python austria-programs/scripts/validate_directory.py
       - name: Validate JSON
         run: |
           python -m json.tool austria-programs/data/organizations.json >/dev/null
