@@ -829,6 +829,158 @@
       "eventSources": [
         "https://vukk.at/"
       ]
+    },
+    {
+      "id": "alsoori-katolikus",
+      "name": "Alsóőri Katolikus Egyházközség",
+      "state": "burgenland",
+      "city": "Unterwart / Alsóőr",
+      "type": "egyházi közösség",
+      "intro": "Alsóőr magyar katolikus közössége, amely magyar nyelvű vallási és közösségi alkalmakat szervez.",
+      "website": "https://www.martinus.at/",
+      "facebook": null,
+      "instagram": null,
+      "eventSources": [
+        "https://www.martinus.at/"
+      ]
+    },
+    {
+      "id": "alsoori-vasjobbagyi",
+      "name": "Alsóőri–Vasjobbágyi Magyar Baráti Kör",
+      "state": "burgenland",
+      "city": "Unterwart / Alsóőr",
+      "type": "közösségi egyesület",
+      "intro": "Alsóőr és Vasjobbágy magyar közösségei közötti kulturális és közösségi kapcsolatokat ápoló baráti kör.",
+      "website": null,
+      "facebook": null,
+      "instagram": null,
+      "eventSources": []
+    },
+    {
+      "id": "eszak-burgenlandi",
+      "name": "Észak-burgenlandi Magyar Kulturális Egyesület",
+      "state": "burgenland",
+      "city": "Észak-Burgenland",
+      "type": "kulturális egyesület",
+      "intro": "Észak-Burgenland magyar közösségének kulturális szervezete, közösségi és hagyományőrző programokkal.",
+      "website": null,
+      "facebook": null,
+      "instagram": null,
+      "eventSources": []
+    },
+    {
+      "id": "felsoori-katolikus",
+      "name": "Felsőőri Katolikus Egyházközség",
+      "state": "burgenland",
+      "city": "Oberwart / Felsőőr",
+      "type": "egyházi közösség",
+      "intro": "Felsőőr magyar katolikus közössége, rendszeres magyar nyelvű liturgikus és közösségi alkalmak szervezője.",
+      "website": "https://www.martinus.at/pfarre/1122",
+      "facebook": null,
+      "instagram": null,
+      "eventSources": [
+        "https://www.martinus.at/pfarre/1122"
+      ]
+    },
+    {
+      "id": "felsoori-reformatus",
+      "name": "Felsőőri Református Gyülekezet",
+      "state": "burgenland",
+      "city": "Oberwart / Felsőőr",
+      "type": "egyházi közösség",
+      "intro": "Felsőőr történelmi magyar református közössége istentiszteletekkel és közösségi programokkal.",
+      "website": "https://www.die-reformierten.at/",
+      "facebook": null,
+      "instagram": null,
+      "eventSources": [
+        "https://www.die-reformierten.at/"
+      ]
+    },
+    {
+      "id": "oriszigeti-evangelikus",
+      "name": "Őriszigeti Evangélikus Egyházközség",
+      "state": "burgenland",
+      "city": "Siget in der Wart / Őrisziget",
+      "type": "egyházi közösség",
+      "intro": "Őrisziget történelmi magyar evangélikus közössége, vallási és közösségi alkalmak szervezője.",
+      "website": "https://www.evang-bgld.at/",
+      "facebook": null,
+      "instagram": null,
+      "eventSources": [
+        "https://www.evang-bgld.at/"
+      ]
+    },
+    {
+      "id": "reformatus-ifjusagi-olvasokor",
+      "name": "Református Ifjúsági Olvasókör",
+      "state": "burgenland",
+      "city": "Oberwart / Felsőőr",
+      "type": "ifjúsági-kulturális közösség",
+      "intro": "Felsőőri magyar református ifjúsági és kulturális közösség, közösségi és hagyományőrző programokkal.",
+      "website": null,
+      "facebook": null,
+      "instagram": null,
+      "eventSources": []
+    },
+    {
+      "id": "becsi-magyar-munkasegylet",
+      "name": "Bécsi Magyar Munkásegylet",
+      "state": "wien",
+      "city": "Wien",
+      "type": "közösségi egyesület",
+      "intro": "Bécsi magyar közösségi egyesület hosszú múltra visszatekintő társasági és kulturális programokkal.",
+      "website": null,
+      "facebook": "https://www.facebook.com/VereinBMME/",
+      "instagram": null,
+      "eventSources": []
+    },
+    {
+      "id": "bmi-szulok-tamogatok",
+      "name": "Bécsi Magyar Oktatást Segítő Szülők és Támogatók Egyesülete",
+      "state": "wien",
+      "city": "Wien",
+      "type": "oktatást támogató egyesület",
+      "intro": "A bécsi magyar oktatást és a hozzá kapcsolódó családi-közösségi kezdeményezéseket támogató szülői és civil egyesület.",
+      "website": null,
+      "facebook": null,
+      "instagram": null,
+      "eventSources": []
+    },
+    {
+      "id": "erdelyi-magyarok-ausztriai",
+      "name": "Erdélyi Magyarok Ausztriai Egyesülete",
+      "state": "wien",
+      "city": "Wien",
+      "type": "kulturális-közösségi egyesület",
+      "intro": "Az Ausztriában élő erdélyi magyarok kulturális és közösségi kapcsolatait szervező egyesület.",
+      "website": null,
+      "facebook": null,
+      "instagram": null,
+      "eventSources": []
+    },
+    {
+      "id": "pax-romana",
+      "name": "Katolikus Magyar Értelmiségi Mozgalom – Pax Romana",
+      "state": "wien",
+      "city": "Wien",
+      "type": "értelmiségi és egyházi közösség",
+      "intro": "Magyar katolikus értelmiségi közösség bécsi kapcsolódással, vallási, kulturális és közéleti beszélgetésekkel.",
+      "website": null,
+      "facebook": null,
+      "instagram": null,
+      "eventSources": []
+    },
+    {
+      "id": "nepcsoporttanacsi-elnokok",
+      "name": "Népcsoporttanácsi Elnökök Állandó Konferenciája",
+      "state": "wien",
+      "city": "Wien",
+      "type": "népcsoporti együttműködés",
+      "intro": "Az ausztriai népcsoporttanácsok vezetőinek együttműködési fóruma, amely a magyar népcsoportot érintő közösségi és kulturális ügyekhez is kapcsolódik.",
+      "website": null,
+      "facebook": null,
+      "instagram": null,
+      "eventSources": []
     }
   ]
 }
