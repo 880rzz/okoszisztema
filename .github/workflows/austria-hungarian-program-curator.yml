@@ -1,0 +1,36 @@
+name: Austria Hungarian program daily curator
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 4 * * *"
+permissions:
+  contents: write
+concurrency:
+  group: austria-hungarian-program-curator
+  cancel-in-progress: false
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Refresh verified event sources
+        run: python austria-programs/scripts/update_events.py
+      - name: Validate JSON
+        run: |
+          python -m json.tool austria-programs/data/organizations.json >/dev/null
+          python -m json.tool austria-programs/data/events.json >/dev/null
+          python -m json.tool austria-programs/data/source-health.json >/dev/null
+      - name: Commit source-backed changes
+        run: |
+          if git diff --quiet -- austria-programs/data/events.json austria-programs/data/source-health.json; then
+            echo "No data changes"
+            exit 0
+          fi
+          git config user.name "austria-program-curator[bot]"
+          git config user.email "actions@users.noreply.github.com"
+          git add austria-programs/data/events.json austria-programs/data/source-health.json
+          git commit -m "chore(events): daily source-backed refresh"
+          git push
