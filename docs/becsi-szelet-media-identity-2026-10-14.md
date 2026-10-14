@@ -33,7 +33,14 @@ No keyword stuffing, fabricated authority, or false claims of being an official 
 3. Apply precise schema/SEO edits to each site's canonical source and update machine-readable registry.
 4. Validate canonical/hreflang, sitemap, JSON-LD, no duplicate identities, HU/DE semantic parity, GDPR and mobile.
 5. Publish and verify live HTML; request GSC/Bing indexing if available.
-6. Editorial inclusion in Rólunk article requires Rólunk editor's approval; never claim it is automatic.
+6. Rólunk article is competitor context only; no editorial inclusion or outreach is requested.
 
 ## Important crawl discrepancy
 An externally indexed Bécsi Szelet homepage snapshot still displayed Brand Art Studio as operator. Verify against live Wix before making claims; the snapshot may be stale.
+
+## Independent ORF evidence — 2026 relaunch context
+- Source: ORF Magyarok, *Erős jelenlét 2026-ban is*, 2026-01-03, https://volksgruppen.orf.at/magyarok/stories/3336275/.
+- Context: Andrea Seidler's retrospective and the federation's planned 2026 Bécsi Szelet online magazine under the Bécsi Magyar Iskola institutional umbrella.
+- Evidentiary limit: this reports a **planned launch** at that date, not independent verification that the later launch occurred. Do not imply ORF partnership or endorsement.
+- Historical ORF sources: https://volksgruppen.orf.at/magyarok/stories/3228649/ (2023 origins); https://volksgruppen.orf.at/magyarok/stories/3259086/ (2024 cultural event).
+- JSON-LD implementation: magazine `subjectOf` -> three distinct `NewsArticle`/`CreativeWork` records with URLs, publisher ORF, dates where verified. Do not use `sameAs` for press mentions.
