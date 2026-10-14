@@ -1066,6 +1066,63 @@
         "de",
         "en"
       ]
+    },
+    {
+      "@type": "Periodical",
+      "@id": "https://www.becsiszelet.at/#periodical",
+      "name": "Bécsi Szelet Magazin",
+      "url": "https://www.becsiszelet.at/",
+      "inLanguage": [
+        "hu",
+        "de"
+      ],
+      "publisher": {
+        "@id": "https://www.kozpontiszovetseg.at/#organization"
+      },
+      "foundingDate": "2023",
+      "founder": [
+        {
+          "@type": "Person",
+          "name": "Bánhalmi Norbert"
+        },
+        {
+          "@type": "Person",
+          "name": "Kovács Attila"
+        }
+      ],
+      "editor": {
+        "@type": "Person",
+        "name": "Vízer Helga"
+      },
+      "subjectOf": [
+        {
+          "@type": "NewsArticle",
+          "url": "https://volksgruppen.orf.at/magyarok/stories/3228649/",
+          "datePublished": "2023-10-17",
+          "publisher": {
+            "@type": "Organization",
+            "name": "ORF"
+          }
+        },
+        {
+          "@type": "NewsArticle",
+          "url": "https://volksgruppen.orf.at/magyarok/stories/3259086/",
+          "datePublished": "2024-05-29",
+          "publisher": {
+            "@type": "Organization",
+            "name": "ORF"
+          }
+        },
+        {
+          "@type": "NewsArticle",
+          "url": "https://volksgruppen.orf.at/magyarok/stories/3336275/",
+          "datePublished": "2026-01-03",
+          "publisher": {
+            "@type": "Organization",
+            "name": "ORF"
+          }
+        }
+      ]
     }
   ]
 }
