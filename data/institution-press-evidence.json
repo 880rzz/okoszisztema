@@ -1,0 +1,654 @@
+{
+  "schemaVersion": 1,
+  "lastReviewed": "2026-10-18",
+  "relationRule": "Only sourced coverage ABOUT each entity. In-house published articles about unrelated subjects do not count as independent coverage of the publisher. Distinct school entities are not merged.",
+  "descriptionRule": "Use a factual one-sentence summary grounded in the original source; historical affiliation or predecessor is labeled.",
+  "records": [
+    {
+      "date": "2026-01-03",
+      "title": "Erős jelenlét 2026-ban is",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3336275/",
+      "publisher": "ORF Magyarok",
+      "summary": "Az ORF összegezte a Központi Szövetség 2025-ös programjait és 2026-os terveit, köztük az iskola, a sajtó és a fotóklub munkáját.",
+      "institutionIds": [
+        "kozponti-szovetseg",
+        "becsi-magyar-iskola",
+        "becsi-szelet",
+        "bmi-fotoklub"
+      ],
+      "relation": "direct-coverage",
+      "verification": "publisher-article-or-curated-institutional-evidence"
+    },
+    {
+      "date": "2026-06-02",
+      "title": "Központi szövetség éves közgyűlése",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3356526/",
+      "publisher": "ORF Magyarok",
+      "summary": "A felsőpulyai tisztújító közgyűlésről, az új vezetésről és az egyesületi támogatások feladatairól szóló riport.",
+      "institutionIds": [
+        "kozponti-szovetseg"
+      ],
+      "relation": "direct-coverage",
+      "verification": "publisher-article-or-curated-institutional-evidence"
+    },
+    {
+      "date": "2024-02-25",
+      "title": "Új elnökség az Ausztriai Magyar Egyesületek és Szervezetek Központi Szövetségének élén",
+      "url": "https://rolunk.at/nepcsoportunk/uj-elnokseg-az-ausztriai-magyar-egyesuletek-es-szervezetek-kozponti-szovetsegenek-elen/",
+      "publisher": "Rólunk.at",
+      "summary": "A 2024-es tisztújításról, Seidler Andrea elnökségéről és a szövetségi közösségi intézmények feladatairól számol be.",
+      "institutionIds": [
+        "kozponti-szovetseg"
+      ],
+      "relation": "direct-coverage",
+      "verification": "publisher-article-or-curated-institutional-evidence"
+    },
+    {
+      "date": "2025-11-26",
+      "title": "Találunk közös nevezőt?",
+      "url": "https://rolunk.at/nepcsoportunk/talalunk-kozos-nevezot/",
+      "publisher": "Rólunk.at",
+      "summary": "A 17. Kufstein-konferencia résztvevői az ausztriai magyar egyesületek együttműködéséről és közös problémáiról beszéltek.",
+      "institutionIds": [
+        "kozponti-szovetseg"
+      ],
+      "relation": "direct-coverage",
+      "verification": "publisher-article-or-curated-institutional-evidence"
+    },
+    {
+      "date": "2026-05-12",
+      "title": "Új online felülettel bővült a 46 éves Bécsi Napló",
+      "url": "https://rolunk.at/aktualis/uj-online-felulettel-bovult-a-44-eves-becsi-naplo/",
+      "publisher": "Rólunk.at",
+      "summary": "A Bécsi Napló megújult online kiadásának bemutatójáról és a Központi Szövetség kiadói szerepéről tudósít.",
+      "institutionIds": [
+        "kozponti-szovetseg",
+        "becsi-naplo"
+      ],
+      "relation": "direct-coverage",
+      "verification": "publisher-article-or-curated-institutional-evidence"
+    },
+    {
+      "date": "2026-02-26",
+      "title": "Új korszak előtt a Bécsi Napló",
+      "url": "https://rolunk.at/nepcsoportunk/uj-korszak-elott-a-becsi-naplo/",
+      "publisher": "Rólunk.at",
+      "summary": "A lap jövőjéről, digitális jelenlétéről és a szerkesztőség előtt álló változásokról.",
+      "institutionIds": [
+        "becsi-naplo"
+      ],
+      "relation": "direct-coverage",
+      "verification": "publisher-article-or-curated-institutional-evidence"
+    },
+    {
+      "date": "2026-03-13",
+      "title": "Irodalmi pályázat és versolvasás Bécsben",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3345686/",
+      "publisher": "ORF Magyarok",
+      "summary": "A Bécsi Napló fiataloknak kiírt irodalmi pályázatának eredményeiről és díjazottjairól.",
+      "institutionIds": [
+        "becsi-naplo"
+      ],
+      "relation": "direct-coverage",
+      "verification": "publisher-article-or-curated-institutional-evidence"
+    },
+    {
+      "date": "2025-10-18",
+      "title": "ORF Magyarok adásairól a Bécsi Naplóban",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3326357/",
+      "publisher": "ORF Magyarok",
+      "summary": "Az ORF Magyarok a folyóirat aktuális számának témáit és az ORF-műsorkínálat ismertetését mutatja be.",
+      "institutionIds": [
+        "becsi-naplo"
+      ],
+      "relation": "direct-coverage",
+      "verification": "publisher-article-or-curated-institutional-evidence"
+    },
+    {
+      "date": "2025-06-04",
+      "title": "Miről és kinek szóljon a népcsoporti média?",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3308239/",
+      "publisher": "ORF Magyarok",
+      "summary": "A Bornemisza Péter Társaság által szervezett pódiumbeszélgetésen a Bécsi Napló, az ORF és a Rólunk.at munkatársai vettek részt.",
+      "institutionIds": [
+        "becsi-naplo"
+      ],
+      "relation": "direct-coverage",
+      "verification": "publisher-article-or-curated-institutional-evidence"
+    },
+    {
+      "date": "2025-04-22",
+      "title": "Bécsi Napló: megjelent a jubileumi szám",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3300923/",
+      "publisher": "ORF Magyarok",
+      "summary": "A 45 éves folyóirat március 15-ével, közéleti és kulturális témákkal foglalkozó jubileumi számáról.",
+      "institutionIds": [
+        "becsi-naplo"
+      ],
+      "relation": "direct-coverage",
+      "verification": "publisher-article-or-curated-institutional-evidence"
+    },
+    {
+      "date": "2025-03-06",
+      "title": "45 éves a Bécsi Napló",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3295903/",
+      "publisher": "ORF Magyarok",
+      "summary": "A kéthavonta megjelenő bécsi magyar lap szerkesztőségének történetéről és küldetéséről.",
+      "institutionIds": [
+        "becsi-naplo"
+      ],
+      "relation": "direct-coverage",
+      "verification": "publisher-article-or-curated-institutional-evidence"
+    },
+    {
+      "date": "2025-02-18",
+      "title": "Bécsi Napló: Magyar kisebbségek",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3293352/",
+      "publisher": "ORF Magyarok",
+      "summary": "A folyóirat magyar kisebbségekről, nemzetpolitikáról és kulturális kapcsolatokról szóló írásait ismerteti.",
+      "institutionIds": [
+        "becsi-naplo"
+      ],
+      "relation": "direct-coverage",
+      "verification": "publisher-article-or-curated-institutional-evidence"
+    },
+    {
+      "date": "2024-02-19",
+      "title": "Új külsővel kezdi 45. évét a Bécsi Napló",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3245547/",
+      "publisher": "ORF Magyarok",
+      "summary": "A lap kisebb formátumát, nagyobb betűit és frissített nyomtatott megjelenését mutatja be.",
+      "institutionIds": [
+        "becsi-naplo"
+      ],
+      "relation": "direct-coverage",
+      "verification": "publisher-article-or-curated-institutional-evidence"
+    },
+    {
+      "date": "2022-02-16",
+      "title": "Megjelent a Bécsi Napló legfrissebb száma",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3143369/",
+      "publisher": "ORF Magyarok",
+      "summary": "Az ORF a magyar diaszpóra és közélet témáit feldolgozó új számról tudósít.",
+      "institutionIds": [
+        "becsi-naplo"
+      ],
+      "relation": "direct-coverage",
+      "verification": "publisher-article-or-curated-institutional-evidence"
+    },
+    {
+      "date": "2021-07-25",
+      "title": "Készül a Bécsi Napló következő száma",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3114150/",
+      "publisher": "ORF Magyarok",
+      "summary": "A folyóirat szerkesztőségi munkájáról és a 2021-ben megnyílt online kiadásról.",
+      "institutionIds": [
+        "becsi-naplo"
+      ],
+      "relation": "direct-coverage",
+      "verification": "publisher-article-or-curated-institutional-evidence"
+    },
+    {
+      "date": "2023-10-17",
+      "title": "Körbezárt Szerelem: kiállítás és zenés aukció",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3228649/",
+      "publisher": "ORF Magyarok",
+      "summary": "A Bécsi Szelet Magazin nyitó kulturális rendezvényéről, Zádory Édua bemutatkozásáról és a szerkesztők terveiről.",
+      "institutionIds": [
+        "becsi-szelet"
+      ],
+      "relation": "direct-coverage",
+      "verification": "publisher-article-or-curated-institutional-evidence"
+    },
+    {
+      "date": "2024-05-29",
+      "title": "Egy újabb letakart kép talált gazdára",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3259086/",
+      "publisher": "ORF Magyarok",
+      "summary": "A magazin második kulturális bemutatkozó estjéről és Schmuck Éva festőművész kiállításáról.",
+      "institutionIds": [
+        "becsi-szelet"
+      ],
+      "relation": "direct-coverage",
+      "verification": "publisher-article-or-curated-institutional-evidence"
+    },
+    {
+      "date": "2025",
+      "title": "A lehetetlen csupán egy szó",
+      "url": "https://rolunk.at/magazin/a-lehetetlen-csupan-egy-szo/",
+      "publisher": "Rólunk.at",
+      "summary": "A Bécsi Szelet Magazint is alapító Bánhalmi Norbert közösségi, művészeti és iskolai projektjeiről készült portré.",
+      "institutionIds": [
+        "becsi-szelet"
+      ],
+      "relation": "founder-coverage",
+      "verification": "publisher-article-or-curated-institutional-evidence"
+    },
+    {
+      "date": "2025-12-01",
+      "title": "Fotókiállítással ünnepel a BMI Fotóklub",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3332313/",
+      "publisher": "ORF Magyarok",
+      "summary": "Az As I Like It Austria közösségi fotókiállításról és a klub korábbi egy évének munkájáról.",
+      "institutionIds": [
+        "bmi-fotoklub",
+        "vipach"
+      ],
+      "relation": "direct-coverage",
+      "verification": "publisher-article-or-curated-institutional-evidence"
+    },
+    {
+      "date": "2025-12-11",
+      "title": "Egyéves a BMI Fotóklub – hogyan teremt közösséget a művészet",
+      "url": "https://rolunk.at/kultura/egyeves-a-bmi-fotoklub-hogyan-teremt-kozosseget-a-muveszet/",
+      "publisher": "Rólunk.at",
+      "summary": "A klub első évének kiállításairól, közösségépítő működéséről és a VIPACH névre váltásról.",
+      "institutionIds": [
+        "bmi-fotoklub",
+        "vipach"
+      ],
+      "relation": "direct-coverage",
+      "verification": "publisher-article-or-curated-institutional-evidence"
+    },
+    {
+      "date": "2026-01-06",
+      "title": "Hírösszefoglaló: ez történt 2025 decemberében",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3336654/",
+      "publisher": "ORF Magyarok",
+      "summary": "A decemberi hírek között az ORF felidézi a BMI Fotóklub bécsi közösségi kiállítását.",
+      "institutionIds": [
+        "bmi-fotoklub"
+      ],
+      "relation": "direct-coverage",
+      "verification": "publisher-article-or-curated-institutional-evidence"
+    },
+    {
+      "date": "2026-05-16",
+      "title": "Régi telefonok új élete – Digitális újrahasznosítás",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3354195/",
+      "publisher": "ORF Magyarok",
+      "summary": "A BMI környezetéből kinőtt Be Smart Kids Club és a VIPACH PhotoStudio adatgyűjtésmentes kreatív alkalmazásáról.",
+      "institutionIds": [
+        "vipach"
+      ],
+      "relation": "direct-coverage",
+      "verification": "publisher-article-or-curated-institutional-evidence"
+    },
+    {
+      "date": "2026-06-10",
+      "title": "A fiataloknak ma már bizonyíték kell – egy bécsi kreatív közösség új generációt épít",
+      "url": "https://rolunk.at/aktualis/a-fiataloknak-ma-mar-bizonyitek-kell-egy-becsi-kreativ-kozosseg-uj-generaciot-epit/",
+      "publisher": "Rólunk.at",
+      "summary": "A BMI/VIPACH környezetéhez kapcsolódó fiatalok digitális és kreatív oktatási kezdeményezéséről.",
+      "institutionIds": [
+        "vipach",
+        "becsi-magyar-iskola"
+      ],
+      "relation": "direct-coverage",
+      "verification": "publisher-article-or-curated-institutional-evidence"
+    },
+    {
+      "date": "2026-03-02",
+      "title": "A papírtól a színpadig – egy gyerekmusical margójára",
+      "url": "https://rolunk.at/kultura/a-papirtol-a-szinpadig-egy-gyerekmusical-margojara/",
+      "publisher": "Rólunk.at",
+      "summary": "A Musical Mesék első saját produkciójának alkotói folyamatáról és az abból megalakult maMUT társulatról.",
+      "institutionIds": [
+        "mamut-musical",
+        "becsi-magyar-iskola"
+      ],
+      "relation": "direct-coverage",
+      "verification": "publisher-article-or-curated-institutional-evidence"
+    },
+    {
+      "date": "2025-10-12",
+      "title": "Humoros musicallel készülnek a BMI diákjai",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3325447/",
+      "publisher": "ORF Magyarok",
+      "summary": "A BMI Musical Mesék csoportjának görög mitológiai vígjáték-előkészületeiről, a maMUT előzményéről.",
+      "institutionIds": [
+        "mamut-musical",
+        "becsi-magyar-iskola"
+      ],
+      "relation": "predecessor-project",
+      "verification": "publisher-article-or-curated-institutional-evidence"
+    },
+    {
+      "date": "2026-02-11",
+      "title": "BMI: a félév közben is lehet csatlakozni",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3341569/",
+      "publisher": "ORF Magyarok",
+      "summary": "A BMI aktuális oktatási és színpadi programjairól, köztük a Musical Mesék foglalkozásairól.",
+      "institutionIds": [
+        "becsi-magyar-iskola",
+        "mamut-musical"
+      ],
+      "relation": "predecessor-project",
+      "verification": "publisher-article-or-curated-institutional-evidence"
+    },
+    {
+      "date": "2026-09-01",
+      "title": "A magyar nyelvhez jó dolgok kapcsolódnak – óvodai foglalkozások Bécsben és Badenben",
+      "url": "https://rolunk.at/nepcsoportunk/a-magyar-nyelvhez-jo-dolgok-kapcsolodnak-ovodai-foglalkozasok-becsben-es-badenben/",
+      "publisher": "Rólunk.at",
+      "summary": "A BMI magyar nyelvű óvodai foglalkozásait mutatja be a bécsi és badeni helyszínen.",
+      "institutionIds": [
+        "becsi-magyar-iskola"
+      ],
+      "relation": "direct-coverage",
+      "verification": "publisher-article-or-curated-institutional-evidence"
+    },
+    {
+      "date": "2026-06-23",
+      "title": "Nyár Ünnep és évzáró a BMI-ben",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3359672/",
+      "publisher": "ORF Magyarok",
+      "summary": "A BMI tanévzáró közösségi eseményeiről, a néptánccsoport és a dobosok fellépéséről.",
+      "institutionIds": [
+        "becsi-magyar-iskola"
+      ],
+      "relation": "direct-coverage",
+      "verification": "publisher-article-or-curated-institutional-evidence"
+    },
+    {
+      "date": "2026-05-11",
+      "title": "Rekordlétszám a 8. OlvaShow rendezvényén",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3353774/",
+      "publisher": "ORF Magyarok",
+      "summary": "A BMI és a külön működő BMI Egyesület közös irodalmi vetélkedőjéről, a diákok nagy érdeklődésével.",
+      "institutionIds": [
+        "becsi-magyar-iskola"
+      ],
+      "relation": "direct-coverage",
+      "verification": "publisher-article-or-curated-institutional-evidence"
+    },
+    {
+      "date": "2026-06-09",
+      "title": "Időutazástól a Minecraft világáig – nyári táborok",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3357751/",
+      "publisher": "ORF Magyarok",
+      "summary": "A BMI nyári gyermekprogramjait és tematikus táborait mutatja be.",
+      "institutionIds": [
+        "becsi-magyar-iskola"
+      ],
+      "relation": "direct-coverage",
+      "verification": "publisher-article-or-curated-institutional-evidence"
+    },
+    {
+      "date": "2026-03-01",
+      "title": "Idén is Hétvégi Magyar Iskolák Találkozója",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3343911/",
+      "publisher": "ORF Magyarok",
+      "summary": "A diaszpóra magyar iskoláinak budapesti szakmai találkozójáról, amelyen a BMI képviselői is részt vettek.",
+      "institutionIds": [
+        "becsi-magyar-iskola"
+      ],
+      "relation": "direct-coverage",
+      "verification": "publisher-article-or-curated-institutional-evidence"
+    },
+    {
+      "date": "2025-03-09",
+      "title": "Hol lehet Bécsben magyarul tanulni?",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3296234/",
+      "publisher": "ORF Magyarok",
+      "summary": "A bécsi magyar oktatási lehetőségeket hasonlítja össze, a BMI intézményt elkülönítve a BMI Egyesülettől.",
+      "institutionIds": [
+        "becsi-magyar-iskola"
+      ],
+      "relation": "direct-coverage",
+      "verification": "publisher-article-or-curated-institutional-evidence"
+    },
+    {
+      "date": "2026-05-16",
+      "title": "Régi telefonok új élete – Digitális újrahasznosítás",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3354195/",
+      "publisher": "ORF Magyarok",
+      "summary": "A BMI környezetéből indult digitális klub és a VIPACH PhotoStudio fejlesztéséről.",
+      "institutionIds": [
+        "becsi-magyar-iskola"
+      ],
+      "relation": "direct-coverage",
+      "verification": "publisher-article-or-curated-institutional-evidence"
+    },
+    {
+      "date": "2006",
+      "title": "Bécsi Napló XXVII. évfolyam 1. szám – Bécsi Magyar Iskola történeti összefoglaló",
+      "url": "https://www.becsinaplo.eu/newspaper_archive/bn2006-1.pdf",
+      "publisher": "Bécsi Napló",
+      "summary": "A Bécsi Magyar Iskola tevékenységét vagy történetét dokumentáló korábbi sajtó- és archív forrás.",
+      "institutionIds": [
+        "becsi-magyar-iskola"
+      ],
+      "relation": "direct-coverage",
+      "verification": "publisher-article-or-curated-institutional-evidence"
+    },
+    {
+      "date": "2017",
+      "title": "30 éves a Bécsi Magyar Iskola",
+      "url": "https://volksgruppen.orf.at/v2/magyarok/stories/2870888/",
+      "publisher": "ORF Magyarok",
+      "summary": "A Bécsi Magyar Iskola tevékenységét vagy történetét dokumentáló korábbi sajtó- és archív forrás.",
+      "institutionIds": [
+        "becsi-magyar-iskola"
+      ],
+      "relation": "direct-coverage",
+      "verification": "publisher-article-or-curated-institutional-evidence"
+    },
+    {
+      "date": "2017",
+      "title": "Harminc éves a Bécsi Magyar Iskola – jubileumi ünnepség",
+      "url": "https://www.korosiprogram.hu/hirek/harminc-eves-becsi-magyar-iskola-jubileumi-unnepseg",
+      "publisher": "Kőrösi Csoma Sándor Program",
+      "summary": "A Bécsi Magyar Iskola tevékenységét vagy történetét dokumentáló korábbi sajtó- és archív forrás.",
+      "institutionIds": [
+        "becsi-magyar-iskola"
+      ],
+      "relation": "direct-coverage",
+      "verification": "publisher-article-or-curated-institutional-evidence"
+    },
+    {
+      "date": "2018",
+      "title": "Bécsi Napló XXXIX. évfolyam 1. szám – a BMI harmincéves jubileumi kötetéről",
+      "url": "https://www.becsinaplo.eu/newspaper_archive/bn2018-1.pdf",
+      "publisher": "Bécsi Napló",
+      "summary": "A Bécsi Magyar Iskola tevékenységét vagy történetét dokumentáló korábbi sajtó- és archív forrás.",
+      "institutionIds": [
+        "becsi-magyar-iskola"
+      ],
+      "relation": "direct-coverage",
+      "verification": "publisher-article-or-curated-institutional-evidence"
+    },
+    {
+      "date": "2012",
+      "title": "Bécsi Napló 2012/6 – BMI karácsonyi ünnepély és Jókai Anna üzenete",
+      "url": "https://www.becsinaplo.eu/newspaper_archive/bn2012-6.pdf",
+      "publisher": "Bécsi Napló",
+      "summary": "A Bécsi Magyar Iskola tevékenységét vagy történetét dokumentáló korábbi sajtó- és archív forrás.",
+      "institutionIds": [
+        "becsi-magyar-iskola"
+      ],
+      "relation": "direct-coverage",
+      "verification": "publisher-article-or-curated-institutional-evidence"
+    },
+    {
+      "date": "2021-10-20",
+      "title": "Tök-fesztivál a Bécsi Magyar Iskolában",
+      "url": "https://www.becsinaplo.eu/tok-fesztival-a-becsi-magyar-iskolaban",
+      "publisher": "Bécsi Napló",
+      "summary": "A Bécsi Magyar Iskola tevékenységét vagy történetét dokumentáló korábbi sajtó- és archív forrás.",
+      "institutionIds": [
+        "becsi-magyar-iskola"
+      ],
+      "relation": "direct-coverage",
+      "verification": "publisher-article-or-curated-institutional-evidence"
+    },
+    {
+      "date": "2022-03-08",
+      "title": "Bécsi magyar adománygyűjtő pont",
+      "url": "https://www.becsinaplo.eu/becsi-magyar-adomanygyujto-pont",
+      "publisher": "Bécsi Napló",
+      "summary": "A Bécsi Magyar Iskola tevékenységét vagy történetét dokumentáló korábbi sajtó- és archív forrás.",
+      "institutionIds": [
+        "becsi-magyar-iskola"
+      ],
+      "relation": "direct-coverage",
+      "verification": "publisher-article-or-curated-institutional-evidence"
+    },
+    {
+      "date": "2024-07-25",
+      "title": "Suliújságot indít a Bécsi Magyar Iskola",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3266240/",
+      "publisher": "ORF Magyarok",
+      "summary": "A Bécsi Magyar Iskola tevékenységét vagy történetét dokumentáló korábbi sajtó- és archív forrás.",
+      "institutionIds": [
+        "becsi-magyar-iskola"
+      ],
+      "relation": "direct-coverage",
+      "verification": "publisher-article-or-curated-institutional-evidence"
+    },
+    {
+      "date": "2024-10-17",
+      "title": "Újdonságokkal indult az új tanév Bécsben",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3277567/",
+      "publisher": "ORF Magyarok",
+      "summary": "A Bécsi Magyar Iskola tevékenységét vagy történetét dokumentáló korábbi sajtó- és archív forrás.",
+      "institutionIds": [
+        "becsi-magyar-iskola"
+      ],
+      "relation": "direct-coverage",
+      "verification": "publisher-article-or-curated-institutional-evidence"
+    },
+    {
+      "date": "2022-04-12",
+      "title": "Verőfény 25+ versmondóverseny",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3151059/",
+      "publisher": "ORF Magyarok",
+      "summary": "A Bécsi Magyar Iskola tevékenységét vagy történetét dokumentáló korábbi sajtó- és archív forrás.",
+      "institutionIds": [
+        "becsi-magyar-iskola"
+      ],
+      "relation": "direct-coverage",
+      "verification": "publisher-article-or-curated-institutional-evidence"
+    },
+    {
+      "date": "2022-05-15",
+      "title": "90 feletti résztvevő a jubileumi Verőfényen",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3156456/",
+      "publisher": "ORF Magyarok",
+      "summary": "A Bécsi Magyar Iskola tevékenységét vagy történetét dokumentáló korábbi sajtó- és archív forrás.",
+      "institutionIds": [
+        "becsi-magyar-iskola"
+      ],
+      "relation": "direct-coverage",
+      "verification": "publisher-article-or-curated-institutional-evidence"
+    },
+    {
+      "date": "2017-06-26",
+      "title": "Évzáró kirándulás a Bécsi Magyar Iskolával",
+      "url": "https://volksgruppen.orf.at/v2/magyarok/stories/2851263/",
+      "publisher": "ORF Magyarok",
+      "summary": "A Bécsi Magyar Iskola tevékenységét vagy történetét dokumentáló korábbi sajtó- és archív forrás.",
+      "institutionIds": [
+        "becsi-magyar-iskola"
+      ],
+      "relation": "direct-coverage",
+      "verification": "publisher-article-or-curated-institutional-evidence"
+    },
+    {
+      "date": "2025-07-14",
+      "title": "A megújult Bécsi Magyar Iskola elmúlt egy éve – VIDEÓ",
+      "url": "https://rolunk.at/nepcsoportunk/a-megujult-becsi-magyar-iskola-elmult-egy-eve-video/",
+      "publisher": "Rólunk.at",
+      "summary": "A Bécsi Magyar Iskola tevékenységét vagy történetét dokumentáló korábbi sajtó- és archív forrás.",
+      "institutionIds": [
+        "becsi-magyar-iskola"
+      ],
+      "relation": "direct-coverage",
+      "verification": "publisher-article-or-curated-institutional-evidence"
+    },
+    {
+      "date": "2024-09-05",
+      "title": "Újdonságok a Bécsi Magyar Iskola 2024/25-ös tanévében",
+      "url": "https://rolunk.at/kultura/ujdonsagok-a-becsi-magyar-iskola-2024-25-os-taneveben/",
+      "publisher": "Rólunk.at",
+      "summary": "A Bécsi Magyar Iskola tevékenységét vagy történetét dokumentáló korábbi sajtó- és archív forrás.",
+      "institutionIds": [
+        "becsi-magyar-iskola"
+      ],
+      "relation": "direct-coverage",
+      "verification": "publisher-article-or-curated-institutional-evidence"
+    },
+    {
+      "date": "2026-07-14",
+      "title": "12 éve ingázik Bezenyéről Bécsbe, hogy magyarul tanítsa a gyerekeket",
+      "url": "https://rolunk.at/kultura/12-eve-ingazik-bezenyerol-becsbe-hogy-magyarul-tanitsa-a-gyerekeket/",
+      "publisher": "Rólunk.at",
+      "summary": "A Bécsi Magyar Iskola tevékenységét vagy történetét dokumentáló korábbi sajtó- és archív forrás.",
+      "institutionIds": [
+        "becsi-magyar-iskola"
+      ],
+      "relation": "direct-coverage",
+      "verification": "publisher-article-or-curated-institutional-evidence"
+    },
+    {
+      "date": "2025-07-30",
+      "title": "Állat/barát kétnyelvű tábor a Bécsi Magyar Iskolában",
+      "url": "https://rolunk.at/fiatalok/allat-barat-ketnyelvu-tabor-a-becsi-magyar-iskolaban/",
+      "publisher": "Rólunk.at",
+      "summary": "A Bécsi Magyar Iskola tevékenységét vagy történetét dokumentáló korábbi sajtó- és archív forrás.",
+      "institutionIds": [
+        "becsi-magyar-iskola"
+      ],
+      "relation": "direct-coverage",
+      "verification": "publisher-article-or-curated-institutional-evidence"
+    },
+    {
+      "date": "2022-07-12",
+      "title": "Fabula bábtábor – Interjú Bajka Kinga Csengelével",
+      "url": "https://rolunk.at/kultura/fabula-babtabor-interju-bajka-kinga-csengelevel/",
+      "publisher": "Rólunk.at",
+      "summary": "A Bécsi Magyar Iskola tevékenységét vagy történetét dokumentáló korábbi sajtó- és archív forrás.",
+      "institutionIds": [
+        "becsi-magyar-iskola"
+      ],
+      "relation": "direct-coverage",
+      "verification": "publisher-article-or-curated-institutional-evidence"
+    },
+    {
+      "date": "2025-10-10",
+      "title": "Valóban ijesztő a pszichodráma vagy csak úgy hangzik?",
+      "url": "https://rolunk.at/magazin/valoban-ijeszto-a-pszichodrama-vagy-csak-ugy-hangzik/",
+      "publisher": "Rólunk.at",
+      "summary": "A Bécsi Magyar Iskola tevékenységét vagy történetét dokumentáló korábbi sajtó- és archív forrás.",
+      "institutionIds": [
+        "becsi-magyar-iskola"
+      ],
+      "relation": "direct-coverage",
+      "verification": "publisher-article-or-curated-institutional-evidence"
+    },
+    {
+      "date": "2024-07-02",
+      "title": "Kreatív Minecraft tábor Bécsben",
+      "url": "https://rolunk.at/magazin/kreativ-minecraft-tabor-becsben/",
+      "publisher": "Rólunk.at",
+      "summary": "A Bécsi Magyar Iskola tevékenységét vagy történetét dokumentáló korábbi sajtó- és archív forrás.",
+      "institutionIds": [
+        "becsi-magyar-iskola"
+      ],
+      "relation": "direct-coverage",
+      "verification": "publisher-article-or-curated-institutional-evidence"
+    },
+    {
+      "date": "2021-08-21",
+      "title": "Nyári táborok: Mesés világ",
+      "url": "https://rolunk.at/fiatalok/nyari-taborok-meses-vilag/",
+      "publisher": "Rólunk.at",
+      "summary": "A Bécsi Magyar Iskola tevékenységét vagy történetét dokumentáló korábbi sajtó- és archív forrás.",
+      "institutionIds": [
+        "becsi-magyar-iskola"
+      ],
+      "relation": "direct-coverage",
+      "verification": "publisher-article-or-curated-institutional-evidence"
+    }
+  ]
+}
