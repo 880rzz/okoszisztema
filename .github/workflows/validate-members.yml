@@ -9,6 +9,13 @@ on:
       - "member-news.js"
       - "member-news.css"
       - "data/member-news.json"
+      - "data/institutions.json"
+      - "data/institution-press-evidence.json"
+      - "data/ecosystem-press.json"
+      - "intezmenyek/**"
+      - "scripts/build_ecosystem_press.py"
+      - "scripts/render_ecosystem_press.py"
+      - "scripts/validate_ecosystem_press.py"
       - "data/member-news-editorial.json"
       - "scripts/enrich_member_news.py"
       - "scripts/test_member_news_enrichment.py"
@@ -41,5 +48,7 @@ jobs:
       - run: python3 scripts/test_member_news_enrichment.py
       - run: python3 scripts/validate_member_news.py
       - run: python3 scripts/build_member_news.py --check
-      - run: python3 scripts/render_member_news.py
+      - run: python3 scripts/build_ecosystem_press.py --check
+      - run: python3 scripts/validate_ecosystem_press.py
+      - run: python3 scripts/render_ecosystem_press.py --check
       - run: git diff --exit-code -- index.html hirek/index.html

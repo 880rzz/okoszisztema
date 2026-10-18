@@ -36,3 +36,15 @@
 .member-news-archive main{padding:38px 0 74px}
 .member-news-archive footer{border-top:1px solid #e6e8eb;padding:28px 0;font-size:.86rem;color:#67727c}
 @media(max-width:700px){.member-news-grid{grid-template-columns:1fr}.member-news-wrap{width:min(100% - 28px,1120px)}.member-news-section{padding:50px 0}.member-news-archive .news-hero{padding:40px 0 28px}.member-news-card{padding:19px}.member-news-toolbar{display:grid}.member-news-toolbar label{min-width:0}}
+
+/* Annual chronology and institution directory */
+.institution-news-links{margin:20px 0 24px;padding:20px 0;border-top:1px solid #e4e8ed;border-bottom:1px solid #e4e8ed;display:flex;align-items:center;gap:7px 12px;flex-wrap:wrap}
+.institution-news-links .institution-news-label{display:block;width:100%;font-size:.8rem;font-weight:650;color:#64717b;margin-bottom:7px}
+.institution-news-links a{font-size:.84rem;border:1px solid #dbe2e9;color:#22567c;text-decoration:none;border-radius:6px;padding:6px 10px;background:#fff;line-height:1.5}
+.institution-news-links a:hover{text-decoration:underline}
+.press-archive-year{margin:22px 0 40px}
+.press-archive-year>h2{font-size:1.55rem;letter-spacing:-.02em;line-height:1.35;border-bottom:1px solid #e2e6e9;padding-bottom:13px;margin:0 0 20px}
+.press-archive-year .press-count{font-size:.79rem;font-weight:500;color:#697580;vertical-align:middle;letter-spacing:normal;margin-left:10px;white-space:nowrap}
+.member-news-archive [data-news-group-by-year]>.member-news-grid{display:block}
+.member-news-archive .press-archive-year>.member-news-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+@media(max-width:710px){.member-news-archive .press-archive-year>.member-news-grid{grid-template-columns:1fr}.press-archive-year>h2{font-size:1.3rem}.institution-news-links{gap:8px}}

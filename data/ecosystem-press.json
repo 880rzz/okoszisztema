@@ -1,0 +1,3153 @@
+{
+  "schemaVersion": 1,
+  "generatedFrom": [
+    "data/member-news.json",
+    "data/institution-press-evidence.json",
+    "data/institutions.json"
+  ],
+  "publicationPolicy": "Only manually sourced press or explicitly verified citations. Candidate searches are NOT published.",
+  "sortPolicy": "Newer full dates first; imprecise month/year dates follow fully dated items within their publication year.",
+  "totalArticles": 116,
+  "totalMemberAssociations": 78,
+  "totalInstitutionAssociations": 63,
+  "coveredMembers": 29,
+  "coveredInstitutions": 7,
+  "items": [
+    {
+      "id": "press-inst-0173f6e1",
+      "url": "https://rolunk.at/nepcsoportunk/a-magyar-nyelvhez-jo-dolgok-kapcsolodnak-ovodai-foglalkozasok-becsben-es-badenben/",
+      "title": "A magyar nyelvhez jó dolgok kapcsolódnak – óvodai foglalkozások Bécsben és Badenben",
+      "publisher": "Rólunk.at",
+      "date": "2026-09-01",
+      "summary": "A BMI magyar nyelvű óvodai foglalkozásait mutatja be a bécsi és badeni helyszínen.",
+      "summaryType": "editorial-summary",
+      "approval": "curated-source-evidence",
+      "memberIds": [],
+      "memberNames": [],
+      "institutionIds": [
+        "becsi-magyar-iskola"
+      ],
+      "institutionNames": [
+        "Bécsi Magyar Iskola"
+      ],
+      "pressEvidenceRefs": [
+        "data/institution-press-evidence.json"
+      ],
+      "relationByInstitution": {
+        "becsi-magyar-iskola": "direct-coverage"
+      },
+      "year": "2026",
+      "sortKey": "2026-09-013"
+    },
+    {
+      "id": "press-8d45086b",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3368990/",
+      "title": "Programkavalkád várta a gyerekeket",
+      "publisher": "ORF Magyarok",
+      "date": "2026-08-29",
+      "memberIds": [
+        "salzung"
+      ],
+      "memberNames": [
+        "SalzUng - Salzburgi Magyar Egyesület"
+      ],
+      "summary": "A SalzUng negyedik alkalommal vitt ausztriai magyar gyerekeket a zánkai Erzsébet-táborba; a tudósítás a közös programokat és a tábor élményeit ismerteti.",
+      "summaryType": "editorial-summary",
+      "evidenceSources": [
+        "member-organizations.json"
+      ],
+      "approval": "curated-source-evidence",
+      "summaryVerifiedAt": "2026-10-18",
+      "institutionIds": [],
+      "institutionNames": [],
+      "pressEvidenceRefs": [
+        "data/member-news.json"
+      ],
+      "year": "2026",
+      "sortKey": "2026-08-293"
+    },
+    {
+      "id": "press-197a31a9",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3368141/",
+      "title": "Kenyérszentelés és ünnepi mise",
+      "publisher": "ORF Magyarok",
+      "date": "2026-08-23",
+      "memberIds": [
+        "kalaka-club"
+      ],
+      "memberNames": [
+        "Kaláka Club"
+      ],
+      "summary": "Bécsben, a Stephansdomban Szent István-napi misét és kenyérszentelést tartottak a Kaláka Club és a Collegium Pazmanianum közreműködésével.",
+      "summaryType": "editorial-summary",
+      "evidenceSources": [
+        "member-organizations.json",
+        "member-press-evidence.json"
+      ],
+      "approval": "curated-source-evidence",
+      "summaryVerifiedAt": "2026-10-18",
+      "institutionIds": [],
+      "institutionNames": [],
+      "pressEvidenceRefs": [
+        "data/member-news.json"
+      ],
+      "year": "2026",
+      "sortKey": "2026-08-233"
+    },
+    {
+      "id": "press-cb7b12d9",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3361160/",
+      "title": "Amerikában lettem magyar",
+      "publisher": "ORF Magyarok",
+      "date": "2026-08-03",
+      "memberIds": [
+        "cserkesz-79-innsbruck",
+        "imike"
+      ],
+      "memberNames": [
+        "79 sz. Dr. Kozma György SJ cserkészcsapat",
+        "IMIKE - Innsbrucki Magyar Ifjúsági és Kultúregyesület"
+      ],
+      "summary": "Schenk Angyalka portréja a New York-i magyar gyermekévektől az innsbrucki cserkészetig és a magyar nyelvű közösségi oktatás szervezéséig vezet.",
+      "summaryType": "editorial-summary",
+      "evidenceSources": [
+        "member-organizations.json",
+        "member-press-evidence.json"
+      ],
+      "approval": "curated-source-evidence",
+      "summaryVerifiedAt": "2026-10-18",
+      "institutionIds": [],
+      "institutionNames": [],
+      "pressEvidenceRefs": [
+        "data/member-news.json"
+      ],
+      "year": "2026",
+      "sortKey": "2026-08-033"
+    },
+    {
+      "id": "press-inst-303e0134",
+      "url": "https://rolunk.at/kultura/12-eve-ingazik-bezenyerol-becsbe-hogy-magyarul-tanitsa-a-gyerekeket/",
+      "title": "12 éve ingázik Bezenyéről Bécsbe, hogy magyarul tanítsa a gyerekeket",
+      "publisher": "Rólunk.at",
+      "date": "2026-07-14",
+      "summary": "A Bécsi Magyar Iskola tevékenységét vagy történetét dokumentáló korábbi sajtó- és archív forrás.",
+      "summaryType": "editorial-summary",
+      "approval": "curated-source-evidence",
+      "memberIds": [],
+      "memberNames": [],
+      "institutionIds": [
+        "becsi-magyar-iskola"
+      ],
+      "institutionNames": [
+        "Bécsi Magyar Iskola"
+      ],
+      "pressEvidenceRefs": [
+        "data/institution-press-evidence.json"
+      ],
+      "relationByInstitution": {
+        "becsi-magyar-iskola": "direct-coverage"
+      },
+      "year": "2026",
+      "sortKey": "2026-07-143"
+    },
+    {
+      "id": "press-9c2292c8",
+      "url": "https://volksgruppen.orf.at/magyarok/meldungen/stories/3102623/",
+      "title": "Die Themen der Sendung am 12. Juli",
+      "publisher": "ORF Magyarok",
+      "date": "2026-07-06",
+      "memberIds": [
+        "magyarhaz-innsbruck"
+      ],
+      "memberNames": [
+        "Magyarház - Innsbrucki Magyar Diákotthon és Kultúrcentrum Egyesület"
+      ],
+      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
+      "summaryType": "source-context",
+      "evidenceSources": [
+        "member-organizations.json",
+        "member-press-evidence.json"
+      ],
+      "approval": "curated-source-evidence",
+      "institutionIds": [],
+      "institutionNames": [],
+      "pressEvidenceRefs": [
+        "data/member-news.json"
+      ],
+      "year": "2026",
+      "sortKey": "2026-07-063"
+    },
+    {
+      "id": "press-e0c13fe2",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3359672/",
+      "title": "Nyár Ünnep és évzáró a BMI-ben",
+      "publisher": "ORF Magyarok",
+      "date": "2026-06-23",
+      "memberIds": [
+        "napraforgok"
+      ],
+      "memberNames": [
+        "Napraforgók Bécsi Magyar Néptánc és Népzene Egyesület"
+      ],
+      "summary": "A Bécsi Magyar Iskola nyári tanévzáró rendezvényeiről, a Napraforgócskák fellépéséről és a gyermekeknek szervezett közösségi programokról szól.",
+      "summaryType": "editorial-summary",
+      "evidenceSources": [
+        "member-press-evidence.json"
+      ],
+      "approval": "curated-source-evidence",
+      "summaryVerifiedAt": "2026-10-18",
+      "institutionIds": [
+        "becsi-magyar-iskola"
+      ],
+      "institutionNames": [
+        "Bécsi Magyar Iskola"
+      ],
+      "pressEvidenceRefs": [
+        "data/member-news.json",
+        "data/institution-press-evidence.json"
+      ],
+      "relationByInstitution": {
+        "becsi-magyar-iskola": "direct-coverage"
+      },
+      "year": "2026",
+      "sortKey": "2026-06-233"
+    },
+    {
+      "id": "press-inst-e2c7cf22",
+      "url": "https://rolunk.at/aktualis/a-fiataloknak-ma-mar-bizonyitek-kell-egy-becsi-kreativ-kozosseg-uj-generaciot-epit/",
+      "title": "A fiataloknak ma már bizonyíték kell – egy bécsi kreatív közösség új generációt épít",
+      "publisher": "Rólunk.at",
+      "date": "2026-06-10",
+      "summary": "A BMI/VIPACH környezetéhez kapcsolódó fiatalok digitális és kreatív oktatási kezdeményezéséről.",
+      "summaryType": "editorial-summary",
+      "approval": "curated-source-evidence",
+      "memberIds": [],
+      "memberNames": [],
+      "institutionIds": [
+        "becsi-magyar-iskola",
+        "vipach"
+      ],
+      "institutionNames": [
+        "Bécsi Magyar Iskola",
+        "VIPACH – Vienna Photo Art & Creative Hub"
+      ],
+      "pressEvidenceRefs": [
+        "data/institution-press-evidence.json"
+      ],
+      "relationByInstitution": {
+        "vipach": "direct-coverage",
+        "becsi-magyar-iskola": "direct-coverage"
+      },
+      "year": "2026",
+      "sortKey": "2026-06-103"
+    },
+    {
+      "id": "press-inst-6bac6d2c",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3357751/",
+      "title": "Időutazástól a Minecraft világáig – nyári táborok",
+      "publisher": "ORF Magyarok",
+      "date": "2026-06-09",
+      "summary": "A BMI nyári gyermekprogramjait és tematikus táborait mutatja be.",
+      "summaryType": "editorial-summary",
+      "approval": "curated-source-evidence",
+      "memberIds": [],
+      "memberNames": [],
+      "institutionIds": [
+        "becsi-magyar-iskola"
+      ],
+      "institutionNames": [
+        "Bécsi Magyar Iskola"
+      ],
+      "pressEvidenceRefs": [
+        "data/institution-press-evidence.json"
+      ],
+      "relationByInstitution": {
+        "becsi-magyar-iskola": "direct-coverage"
+      },
+      "year": "2026",
+      "sortKey": "2026-06-093"
+    },
+    {
+      "id": "press-1f968f2d",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3356526/",
+      "title": "Központi szövetség éves közgyűlése",
+      "publisher": "ORF Magyarok",
+      "date": "2026-06-02",
+      "memberIds": [
+        "kozep-burgenlandi-magyar-kulturegyesulet",
+        "napraforgok"
+      ],
+      "memberNames": [
+        "Közép–Burgenlandi Magyar Kultúregyesület",
+        "Napraforgók Bécsi Magyar Néptánc és Népzene Egyesület"
+      ],
+      "summary": "A Központi Szövetség felsőpulyai tisztújító közgyűléséről, a megválasztott vezetőségről és a diaszpóraszervezetek támogatási lehetőségeiről tudósít.",
+      "summaryType": "editorial-summary",
+      "evidenceSources": [
+        "member-organizations.json"
+      ],
+      "approval": "curated-source-evidence",
+      "summaryVerifiedAt": "2026-10-18",
+      "institutionIds": [
+        "kozponti-szovetseg"
+      ],
+      "institutionNames": [
+        "Központi Szövetség"
+      ],
+      "pressEvidenceRefs": [
+        "data/member-news.json",
+        "data/institution-press-evidence.json"
+      ],
+      "relationByInstitution": {
+        "kozponti-szovetseg": "direct-coverage"
+      },
+      "year": "2026",
+      "sortKey": "2026-06-023"
+    },
+    {
+      "id": "press-90936f79",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3356535/",
+      "title": "Élettel teli a salzburgi minikönyvtár",
+      "publisher": "ORF Magyarok",
+      "date": "2026-05-31",
+      "memberIds": [
+        "salzung"
+      ],
+      "memberNames": [
+        "SalzUng - Salzburgi Magyar Egyesület"
+      ],
+      "summary": "A SalzUng magyar minikönyvtára és újraindított könyvklubja közösségi találkozókat és könyvcserét kínál a salzburgi magyaroknak.",
+      "summaryType": "editorial-summary",
+      "evidenceSources": [
+        "member-organizations.json"
+      ],
+      "approval": "curated-source-evidence",
+      "summaryVerifiedAt": "2026-10-18",
+      "institutionIds": [],
+      "institutionNames": [],
+      "pressEvidenceRefs": [
+        "data/member-news.json"
+      ],
+      "year": "2026",
+      "sortKey": "2026-05-313"
+    },
+    {
+      "id": "press-555e9213",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3356076/",
+      "title": "Színes a programkínálat Grazban",
+      "publisher": "ORF Magyarok",
+      "date": "2026-05-28",
+      "memberIds": [
+        "femconnect-graz"
+      ],
+      "memberNames": [
+        "FemConnect Graz"
+      ],
+      "summary": "A FemConnect Graz szakértői beszélgetésekkel, városi sétákkal és kulturális programokkal, köztük bábjátékkal kapcsolja össze a helyi magyar közösséget.",
+      "summaryType": "editorial-summary",
+      "evidenceSources": [
+        "member-organizations.json",
+        "member-press-evidence.json"
+      ],
+      "approval": "curated-source-evidence",
+      "summaryVerifiedAt": "2026-10-18",
+      "institutionIds": [],
+      "institutionNames": [],
+      "pressEvidenceRefs": [
+        "data/member-news.json"
+      ],
+      "year": "2026",
+      "sortKey": "2026-05-283"
+    },
+    {
+      "id": "press-inst-087c1429",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3354195/",
+      "title": "Régi telefonok új élete – Digitális újrahasznosítás",
+      "publisher": "ORF Magyarok",
+      "date": "2026-05-16",
+      "summary": "A BMI környezetéből kinőtt Be Smart Kids Club és a VIPACH PhotoStudio adatgyűjtésmentes kreatív alkalmazásáról.",
+      "summaryType": "editorial-summary",
+      "approval": "curated-source-evidence",
+      "memberIds": [],
+      "memberNames": [],
+      "institutionIds": [
+        "becsi-magyar-iskola",
+        "vipach"
+      ],
+      "institutionNames": [
+        "Bécsi Magyar Iskola",
+        "VIPACH – Vienna Photo Art & Creative Hub"
+      ],
+      "pressEvidenceRefs": [
+        "data/institution-press-evidence.json"
+      ],
+      "relationByInstitution": {
+        "vipach": "direct-coverage",
+        "becsi-magyar-iskola": "direct-coverage"
+      },
+      "year": "2026",
+      "sortKey": "2026-05-163"
+    },
+    {
+      "id": "press-inst-8bfc7e1e",
+      "url": "https://rolunk.at/aktualis/uj-online-felulettel-bovult-a-44-eves-becsi-naplo/",
+      "title": "Új online felülettel bővült a 46 éves Bécsi Napló",
+      "publisher": "Rólunk.at",
+      "date": "2026-05-12",
+      "summary": "A Bécsi Napló megújult online kiadásának bemutatójáról és a Központi Szövetség kiadói szerepéről tudósít.",
+      "summaryType": "editorial-summary",
+      "approval": "curated-source-evidence",
+      "memberIds": [],
+      "memberNames": [],
+      "institutionIds": [
+        "becsi-naplo",
+        "kozponti-szovetseg"
+      ],
+      "institutionNames": [
+        "Bécsi Napló",
+        "Központi Szövetség"
+      ],
+      "pressEvidenceRefs": [
+        "data/institution-press-evidence.json"
+      ],
+      "relationByInstitution": {
+        "kozponti-szovetseg": "direct-coverage",
+        "becsi-naplo": "direct-coverage"
+      },
+      "year": "2026",
+      "sortKey": "2026-05-123"
+    },
+    {
+      "id": "press-ef6af4a4",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3353931/",
+      "title": "Csárdás nélkül nincs magyar bál Grazban",
+      "publisher": "ORF Magyarok",
+      "date": "2026-05-12",
+      "memberIds": [
+        "grazi-magyar-egyesulet"
+      ],
+      "memberNames": [
+        "Grázi Magyar Egyesület"
+      ],
+      "summary": "A Grazi Magyar Egyesület 137. magyar báljáról tudósít: a telt házas rendezvényen mintegy 350 vendég vett részt, csárdással és néptánccal.",
+      "summaryType": "editorial-summary",
+      "evidenceSources": [
+        "member-organizations.json",
+        "member-press-evidence.json"
+      ],
+      "approval": "curated-source-evidence",
+      "summaryVerifiedAt": "2026-10-18",
+      "institutionIds": [],
+      "institutionNames": [],
+      "pressEvidenceRefs": [
+        "data/member-news.json"
+      ],
+      "year": "2026",
+      "sortKey": "2026-05-123"
+    },
+    {
+      "id": "press-inst-fe0eaa1d",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3353774/",
+      "title": "Rekordlétszám a 8. OlvaShow rendezvényén",
+      "publisher": "ORF Magyarok",
+      "date": "2026-05-11",
+      "summary": "A BMI és a külön működő BMI Egyesület közös irodalmi vetélkedőjéről, a diákok nagy érdeklődésével.",
+      "summaryType": "editorial-summary",
+      "approval": "curated-source-evidence",
+      "memberIds": [],
+      "memberNames": [],
+      "institutionIds": [
+        "becsi-magyar-iskola"
+      ],
+      "institutionNames": [
+        "Bécsi Magyar Iskola"
+      ],
+      "pressEvidenceRefs": [
+        "data/institution-press-evidence.json"
+      ],
+      "relationByInstitution": {
+        "becsi-magyar-iskola": "direct-coverage"
+      },
+      "year": "2026",
+      "sortKey": "2026-05-113"
+    },
+    {
+      "id": "press-da084944",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3352222/",
+      "title": "Egy sima egy fordított – sikeres a könyvklub",
+      "publisher": "ORF Magyarok",
+      "date": "2026-05-04",
+      "memberIds": [
+        "bim-becsi-irodalmi-muhely"
+      ],
+      "memberNames": [
+        "BIM - Bécsi Irodalmi Műhely"
+      ],
+      "summary": "Az Egy sima – Egy fordított bécsi könyvklub a BIM műhelyéből indult; résztvevői havonta találkoznak kortárs magyar és fordított irodalom megvitatására.",
+      "summaryType": "editorial-summary",
+      "evidenceSources": [
+        "member-organizations.json",
+        "member-press-evidence.json"
+      ],
+      "approval": "curated-source-evidence",
+      "summaryVerifiedAt": "2026-10-18",
+      "institutionIds": [],
+      "institutionNames": [],
+      "pressEvidenceRefs": [
+        "data/member-news.json"
+      ],
+      "year": "2026",
+      "sortKey": "2026-05-043"
+    },
+    {
+      "id": "press-1550e113",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3351154/",
+      "title": "Felsőőrbe érkezik Az aranyrózsa",
+      "publisher": "ORF Magyarok",
+      "date": "2026-04-23",
+      "memberIds": [
+        "svung"
+      ],
+      "memberNames": [
+        "SVUNG Bécsi Magyarok Művészeti Egyesülete"
+      ],
+      "summary": "A SVUNG roma népmesékből inspirálódott Az aranyrózsa című mesejátékával Felsőőrben is fellép; az előadás kifejezetten gyermekeknek szól.",
+      "summaryType": "editorial-summary",
+      "evidenceSources": [
+        "member-organizations.json"
+      ],
+      "approval": "curated-source-evidence",
+      "summaryVerifiedAt": "2026-10-18",
+      "institutionIds": [],
+      "institutionNames": [],
+      "pressEvidenceRefs": [
+        "data/member-news.json"
+      ],
+      "year": "2026",
+      "sortKey": "2026-04-233"
+    },
+    {
+      "id": "press-63e71ad9",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3346857/",
+      "title": "Megemlékezés és jubiláló iskola",
+      "publisher": "ORF Magyarok",
+      "date": "2026-03-22",
+      "memberIds": [
+        "alsoori-magyar-kultur-es-tancegyesulet"
+      ],
+      "memberNames": [
+        "Alsóőri Magyar Kultúr- és Táncegyesület"
+      ],
+      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
+      "summaryType": "source-context",
+      "evidenceSources": [
+        "member-organizations.json"
+      ],
+      "approval": "curated-source-evidence",
+      "institutionIds": [],
+      "institutionNames": [],
+      "pressEvidenceRefs": [
+        "data/member-news.json"
+      ],
+      "year": "2026",
+      "sortKey": "2026-03-223"
+    },
+    {
+      "id": "press-inst-5a3e3a62",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3345686/",
+      "title": "Irodalmi pályázat és versolvasás Bécsben",
+      "publisher": "ORF Magyarok",
+      "date": "2026-03-13",
+      "summary": "A Bécsi Napló fiataloknak kiírt irodalmi pályázatának eredményeiről és díjazottjairól.",
+      "summaryType": "editorial-summary",
+      "approval": "curated-source-evidence",
+      "memberIds": [],
+      "memberNames": [],
+      "institutionIds": [
+        "becsi-naplo"
+      ],
+      "institutionNames": [
+        "Bécsi Napló"
+      ],
+      "pressEvidenceRefs": [
+        "data/institution-press-evidence.json"
+      ],
+      "relationByInstitution": {
+        "becsi-naplo": "direct-coverage"
+      },
+      "year": "2026",
+      "sortKey": "2026-03-133"
+    },
+    {
+      "id": "press-inst-d6a17fce",
+      "url": "https://rolunk.at/kultura/a-papirtol-a-szinpadig-egy-gyerekmusical-margojara/",
+      "title": "A papírtól a színpadig – egy gyerekmusical margójára",
+      "publisher": "Rólunk.at",
+      "date": "2026-03-02",
+      "summary": "A Musical Mesék első saját produkciójának alkotói folyamatáról és az abból megalakult maMUT társulatról.",
+      "summaryType": "editorial-summary",
+      "approval": "curated-source-evidence",
+      "memberIds": [],
+      "memberNames": [],
+      "institutionIds": [
+        "becsi-magyar-iskola",
+        "mamut-musical"
+      ],
+      "institutionNames": [
+        "Bécsi Magyar Iskola",
+        "maMUT – Bécsi Magyar Musical Társulat"
+      ],
+      "pressEvidenceRefs": [
+        "data/institution-press-evidence.json"
+      ],
+      "relationByInstitution": {
+        "mamut-musical": "direct-coverage",
+        "becsi-magyar-iskola": "direct-coverage"
+      },
+      "year": "2026",
+      "sortKey": "2026-03-023"
+    },
+    {
+      "id": "press-inst-cbb3a729",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3343911/",
+      "title": "Idén is Hétvégi Magyar Iskolák Találkozója",
+      "publisher": "ORF Magyarok",
+      "date": "2026-03-01",
+      "summary": "A diaszpóra magyar iskoláinak budapesti szakmai találkozójáról, amelyen a BMI képviselői is részt vettek.",
+      "summaryType": "editorial-summary",
+      "approval": "curated-source-evidence",
+      "memberIds": [],
+      "memberNames": [],
+      "institutionIds": [
+        "becsi-magyar-iskola"
+      ],
+      "institutionNames": [
+        "Bécsi Magyar Iskola"
+      ],
+      "pressEvidenceRefs": [
+        "data/institution-press-evidence.json"
+      ],
+      "relationByInstitution": {
+        "becsi-magyar-iskola": "direct-coverage"
+      },
+      "year": "2026",
+      "sortKey": "2026-03-013"
+    },
+    {
+      "id": "press-inst-6e8fdf8f",
+      "url": "https://rolunk.at/nepcsoportunk/uj-korszak-elott-a-becsi-naplo/",
+      "title": "Új korszak előtt a Bécsi Napló",
+      "publisher": "Rólunk.at",
+      "date": "2026-02-26",
+      "summary": "A lap jövőjéről, digitális jelenlétéről és a szerkesztőség előtt álló változásokról.",
+      "summaryType": "editorial-summary",
+      "approval": "curated-source-evidence",
+      "memberIds": [],
+      "memberNames": [],
+      "institutionIds": [
+        "becsi-naplo"
+      ],
+      "institutionNames": [
+        "Bécsi Napló"
+      ],
+      "pressEvidenceRefs": [
+        "data/institution-press-evidence.json"
+      ],
+      "relationByInstitution": {
+        "becsi-naplo": "direct-coverage"
+      },
+      "year": "2026",
+      "sortKey": "2026-02-263"
+    },
+    {
+      "id": "press-inst-4a1c1ea8",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3341569/",
+      "title": "BMI: a félév közben is lehet csatlakozni",
+      "publisher": "ORF Magyarok",
+      "date": "2026-02-11",
+      "summary": "A BMI aktuális oktatási és színpadi programjairól, köztük a Musical Mesék foglalkozásairól.",
+      "summaryType": "editorial-summary",
+      "approval": "curated-source-evidence",
+      "memberIds": [],
+      "memberNames": [],
+      "institutionIds": [
+        "becsi-magyar-iskola",
+        "mamut-musical"
+      ],
+      "institutionNames": [
+        "Bécsi Magyar Iskola",
+        "maMUT – Bécsi Magyar Musical Társulat"
+      ],
+      "pressEvidenceRefs": [
+        "data/institution-press-evidence.json"
+      ],
+      "relationByInstitution": {
+        "becsi-magyar-iskola": "predecessor-project",
+        "mamut-musical": "predecessor-project"
+      },
+      "year": "2026",
+      "sortKey": "2026-02-113"
+    },
+    {
+      "id": "press-f7e2d8f0",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3338990/",
+      "title": "Új elnököt választott a MEÖK",
+      "publisher": "ORF Magyarok",
+      "date": "2026-01-24",
+      "memberIds": [
+        "magyar-egyetemistak-es-oregdiakok-klubja-graz"
+      ],
+      "memberNames": [
+        "Magyar Egyetemisták és Öregdiákok Klubja"
+      ],
+      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
+      "summaryType": "source-context",
+      "evidenceSources": [
+        "member-organizations.json"
+      ],
+      "approval": "curated-source-evidence",
+      "institutionIds": [],
+      "institutionNames": [],
+      "pressEvidenceRefs": [
+        "data/member-news.json"
+      ],
+      "year": "2026",
+      "sortKey": "2026-01-243"
+    },
+    {
+      "id": "press-inst-d7512c43",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3336654/",
+      "title": "Hírösszefoglaló: ez történt 2025 decemberében",
+      "publisher": "ORF Magyarok",
+      "date": "2026-01-06",
+      "summary": "A decemberi hírek között az ORF felidézi a BMI Fotóklub bécsi közösségi kiállítását.",
+      "summaryType": "editorial-summary",
+      "approval": "curated-source-evidence",
+      "memberIds": [],
+      "memberNames": [],
+      "institutionIds": [
+        "bmi-fotoklub"
+      ],
+      "institutionNames": [
+        "BMI Fotóklub"
+      ],
+      "pressEvidenceRefs": [
+        "data/institution-press-evidence.json"
+      ],
+      "relationByInstitution": {
+        "bmi-fotoklub": "direct-coverage"
+      },
+      "year": "2026",
+      "sortKey": "2026-01-063"
+    },
+    {
+      "id": "press-26ecef22",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3336275/",
+      "title": "Erős jelenlét 2026-ban is",
+      "publisher": "ORF Magyarok",
+      "date": "2026-01-03",
+      "memberIds": [
+        "ausztriai-magyar-kutatointezet"
+      ],
+      "memberNames": [
+        "Ausztriai Magyar Kutatóintézet"
+      ],
+      "summary": "Az ORF összegezte a Központi Szövetség 2025-ös programjait és 2026-os terveit, köztük az iskola, a sajtó és a fotóklub munkáját.",
+      "summaryType": "editorial-summary",
+      "evidenceSources": [
+        "member-organizations.json"
+      ],
+      "approval": "curated-source-evidence",
+      "institutionIds": [
+        "becsi-magyar-iskola",
+        "becsi-szelet",
+        "bmi-fotoklub",
+        "kozponti-szovetseg"
+      ],
+      "institutionNames": [
+        "Bécsi Magyar Iskola",
+        "Bécsi Szelet Magazin",
+        "BMI Fotóklub",
+        "Központi Szövetség"
+      ],
+      "pressEvidenceRefs": [
+        "data/member-news.json",
+        "data/institution-press-evidence.json"
+      ],
+      "relationByInstitution": {
+        "kozponti-szovetseg": "direct-coverage",
+        "becsi-magyar-iskola": "direct-coverage",
+        "becsi-szelet": "direct-coverage",
+        "bmi-fotoklub": "direct-coverage"
+      },
+      "year": "2026",
+      "sortKey": "2026-01-033"
+    },
+    {
+      "id": "press-f7bc39e2",
+      "url": "https://rolunk.at/aktualis/nyari-taborok-ausztriaban-2026/",
+      "title": "Nyári táborok Ausztriában – 2026",
+      "publisher": "Rólunk.at",
+      "date": "2026",
+      "memberIds": [
+        "femconnect-graz"
+      ],
+      "memberNames": [
+        "FemConnect Graz"
+      ],
+      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
+      "summaryType": "source-context",
+      "evidenceSources": [
+        "member-press-evidence.json"
+      ],
+      "approval": "curated-source-evidence",
+      "institutionIds": [],
+      "institutionNames": [],
+      "pressEvidenceRefs": [
+        "data/member-news.json"
+      ],
+      "year": "2026",
+      "sortKey": "2026-00-001"
+    },
+    {
+      "id": "press-9e8c600b",
+      "url": "https://www.askoe-burgenland.at/de/boxnewsshow5-lac-geschriebenstein6",
+      "title": "LAC Geschriebenstein – Grenzenloses Erlebnis am Geschriebenstein",
+      "publisher": "ASKÖ Burgenland",
+      "date": "2026",
+      "memberIds": [
+        "irottko-sportegyesulet"
+      ],
+      "memberNames": [
+        "Írottkő Sportegyesület"
+      ],
+      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
+      "summaryType": "source-context",
+      "evidenceSources": [
+        "member-organizations.json"
+      ],
+      "approval": "curated-source-evidence",
+      "institutionIds": [],
+      "institutionNames": [],
+      "pressEvidenceRefs": [
+        "data/member-news.json"
+      ],
+      "year": "2026",
+      "sortKey": "2026-00-001"
+    },
+    {
+      "id": "press-53762e63",
+      "url": "https://rolunk.at/magazin/ket-orszag-kozott-egy-kozossegert/",
+      "title": "Két ország között egy közösségért",
+      "publisher": "Rólunk.at",
+      "date": "2026",
+      "memberIds": [
+        "irottko-sportegyesulet"
+      ],
+      "memberNames": [
+        "Írottkő Sportegyesület"
+      ],
+      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
+      "summaryType": "source-context",
+      "evidenceSources": [
+        "member-organizations.json"
+      ],
+      "approval": "curated-source-evidence",
+      "institutionIds": [],
+      "institutionNames": [],
+      "pressEvidenceRefs": [
+        "data/member-news.json"
+      ],
+      "year": "2026",
+      "sortKey": "2026-00-001"
+    },
+    {
+      "id": "press-inst-57b75818",
+      "url": "https://rolunk.at/kultura/egyeves-a-bmi-fotoklub-hogyan-teremt-kozosseget-a-muveszet/",
+      "title": "Egyéves a BMI Fotóklub – hogyan teremt közösséget a művészet",
+      "publisher": "Rólunk.at",
+      "date": "2025-12-11",
+      "summary": "A klub első évének kiállításairól, közösségépítő működéséről és a VIPACH névre váltásról.",
+      "summaryType": "editorial-summary",
+      "approval": "curated-source-evidence",
+      "memberIds": [],
+      "memberNames": [],
+      "institutionIds": [
+        "bmi-fotoklub",
+        "vipach"
+      ],
+      "institutionNames": [
+        "BMI Fotóklub",
+        "VIPACH – Vienna Photo Art & Creative Hub"
+      ],
+      "pressEvidenceRefs": [
+        "data/institution-press-evidence.json"
+      ],
+      "relationByInstitution": {
+        "bmi-fotoklub": "direct-coverage",
+        "vipach": "direct-coverage"
+      },
+      "year": "2025",
+      "sortKey": "2025-12-113"
+    },
+    {
+      "id": "press-inst-fda0a0f5",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3332313/",
+      "title": "Fotókiállítással ünnepel a BMI Fotóklub",
+      "publisher": "ORF Magyarok",
+      "date": "2025-12-01",
+      "summary": "Az As I Like It Austria közösségi fotókiállításról és a klub korábbi egy évének munkájáról.",
+      "summaryType": "editorial-summary",
+      "approval": "curated-source-evidence",
+      "memberIds": [],
+      "memberNames": [],
+      "institutionIds": [
+        "bmi-fotoklub",
+        "vipach"
+      ],
+      "institutionNames": [
+        "BMI Fotóklub",
+        "VIPACH – Vienna Photo Art & Creative Hub"
+      ],
+      "pressEvidenceRefs": [
+        "data/institution-press-evidence.json"
+      ],
+      "relationByInstitution": {
+        "bmi-fotoklub": "direct-coverage",
+        "vipach": "direct-coverage"
+      },
+      "year": "2025",
+      "sortKey": "2025-12-013"
+    },
+    {
+      "id": "press-81c3163a",
+      "url": "https://rolunk.at/nepcsoportunk/talalunk-kozos-nevezot/",
+      "title": "Találunk közös nevezőt?",
+      "publisher": "Rólunk.at",
+      "date": "2025-11-26",
+      "memberIds": [
+        "napraforgok",
+        "svung"
+      ],
+      "memberNames": [
+        "Napraforgók Bécsi Magyar Néptánc és Népzene Egyesület",
+        "SVUNG Bécsi Magyarok Művészeti Egyesülete"
+      ],
+      "summary": "A 17. Kufstein-konferencián az ausztriai magyar tagegyesületek együttműködését, közös kihívásait és a közösségi identitás kérdéseit vitatták meg.",
+      "summaryType": "editorial-summary",
+      "evidenceSources": [
+        "member-organizations.json",
+        "member-press-evidence.json"
+      ],
+      "approval": "curated-source-evidence",
+      "summaryVerifiedAt": "2026-10-18",
+      "institutionIds": [
+        "kozponti-szovetseg"
+      ],
+      "institutionNames": [
+        "Központi Szövetség"
+      ],
+      "pressEvidenceRefs": [
+        "data/member-news.json",
+        "data/institution-press-evidence.json"
+      ],
+      "relationByInstitution": {
+        "kozponti-szovetseg": "direct-coverage"
+      },
+      "year": "2025",
+      "sortKey": "2025-11-263"
+    },
+    {
+      "id": "press-277d5eed",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3327962/",
+      "title": "Hol lehet magyarul tanulni? 4. rész",
+      "publisher": "ORF Magyarok",
+      "date": "2025-11-09",
+      "memberIds": [
+        "felso-ausztriai-hetvegi-magyar-ovoda-es-iskola"
+      ],
+      "memberNames": [
+        "Felső-Ausztriai Hétvégi Magyar Óvoda és Iskola"
+      ],
+      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
+      "summaryType": "source-context",
+      "evidenceSources": [
+        "member-organizations.json"
+      ],
+      "approval": "curated-source-evidence",
+      "institutionIds": [],
+      "institutionNames": [],
+      "pressEvidenceRefs": [
+        "data/member-news.json"
+      ],
+      "year": "2025",
+      "sortKey": "2025-11-093"
+    },
+    {
+      "id": "press-inst-a7a4822e",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3326357/",
+      "title": "ORF Magyarok adásairól a Bécsi Naplóban",
+      "publisher": "ORF Magyarok",
+      "date": "2025-10-18",
+      "summary": "Az ORF Magyarok a folyóirat aktuális számának témáit és az ORF-műsorkínálat ismertetését mutatja be.",
+      "summaryType": "editorial-summary",
+      "approval": "curated-source-evidence",
+      "memberIds": [],
+      "memberNames": [],
+      "institutionIds": [
+        "becsi-naplo"
+      ],
+      "institutionNames": [
+        "Bécsi Napló"
+      ],
+      "pressEvidenceRefs": [
+        "data/institution-press-evidence.json"
+      ],
+      "relationByInstitution": {
+        "becsi-naplo": "direct-coverage"
+      },
+      "year": "2025",
+      "sortKey": "2025-10-183"
+    },
+    {
+      "id": "press-inst-2ecfbc41",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3325447/",
+      "title": "Humoros musicallel készülnek a BMI diákjai",
+      "publisher": "ORF Magyarok",
+      "date": "2025-10-12",
+      "summary": "A BMI Musical Mesék csoportjának görög mitológiai vígjáték-előkészületeiről, a maMUT előzményéről.",
+      "summaryType": "editorial-summary",
+      "approval": "curated-source-evidence",
+      "memberIds": [],
+      "memberNames": [],
+      "institutionIds": [
+        "becsi-magyar-iskola",
+        "mamut-musical"
+      ],
+      "institutionNames": [
+        "Bécsi Magyar Iskola",
+        "maMUT – Bécsi Magyar Musical Társulat"
+      ],
+      "pressEvidenceRefs": [
+        "data/institution-press-evidence.json"
+      ],
+      "relationByInstitution": {
+        "mamut-musical": "predecessor-project",
+        "becsi-magyar-iskola": "predecessor-project"
+      },
+      "year": "2025",
+      "sortKey": "2025-10-123"
+    },
+    {
+      "id": "press-inst-7ac2efc3",
+      "url": "https://rolunk.at/magazin/valoban-ijeszto-a-pszichodrama-vagy-csak-ugy-hangzik/",
+      "title": "Valóban ijesztő a pszichodráma vagy csak úgy hangzik?",
+      "publisher": "Rólunk.at",
+      "date": "2025-10-10",
+      "summary": "A Bécsi Magyar Iskola tevékenységét vagy történetét dokumentáló korábbi sajtó- és archív forrás.",
+      "summaryType": "editorial-summary",
+      "approval": "curated-source-evidence",
+      "memberIds": [],
+      "memberNames": [],
+      "institutionIds": [
+        "becsi-magyar-iskola"
+      ],
+      "institutionNames": [
+        "Bécsi Magyar Iskola"
+      ],
+      "pressEvidenceRefs": [
+        "data/institution-press-evidence.json"
+      ],
+      "relationByInstitution": {
+        "becsi-magyar-iskola": "direct-coverage"
+      },
+      "year": "2025",
+      "sortKey": "2025-10-103"
+    },
+    {
+      "id": "press-587f74ac",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3324528/",
+      "title": "TV-riport a 10 éves SVUNG-ról",
+      "publisher": "ORF Magyarok",
+      "date": "2025-10-05",
+      "memberIds": [
+        "svung"
+      ],
+      "memberNames": [
+        "SVUNG Bécsi Magyarok Művészeti Egyesülete"
+      ],
+      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
+      "summaryType": "source-context",
+      "evidenceSources": [
+        "member-organizations.json",
+        "member-press-evidence.json"
+      ],
+      "approval": "curated-source-evidence",
+      "institutionIds": [],
+      "institutionNames": [],
+      "pressEvidenceRefs": [
+        "data/member-news.json"
+      ],
+      "year": "2025",
+      "sortKey": "2025-10-053"
+    },
+    {
+      "id": "press-fb3d6b76",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3322469/",
+      "title": "Jubileumi konferenciával ünnepelt a bécsi Kaláka Klub",
+      "publisher": "ORF Magyarok",
+      "date": "2025-09-19",
+      "memberIds": [
+        "kalaka-club"
+      ],
+      "memberNames": [
+        "Kaláka Club"
+      ],
+      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
+      "summaryType": "source-context",
+      "evidenceSources": [
+        "member-organizations.json"
+      ],
+      "approval": "curated-source-evidence",
+      "institutionIds": [],
+      "institutionNames": [],
+      "pressEvidenceRefs": [
+        "data/member-news.json"
+      ],
+      "year": "2025",
+      "sortKey": "2025-09-193"
+    },
+    {
+      "id": "press-inst-5d38a8e5",
+      "url": "https://rolunk.at/fiatalok/allat-barat-ketnyelvu-tabor-a-becsi-magyar-iskolaban/",
+      "title": "Állat/barát kétnyelvű tábor a Bécsi Magyar Iskolában",
+      "publisher": "Rólunk.at",
+      "date": "2025-07-30",
+      "summary": "A Bécsi Magyar Iskola tevékenységét vagy történetét dokumentáló korábbi sajtó- és archív forrás.",
+      "summaryType": "editorial-summary",
+      "approval": "curated-source-evidence",
+      "memberIds": [],
+      "memberNames": [],
+      "institutionIds": [
+        "becsi-magyar-iskola"
+      ],
+      "institutionNames": [
+        "Bécsi Magyar Iskola"
+      ],
+      "pressEvidenceRefs": [
+        "data/institution-press-evidence.json"
+      ],
+      "relationByInstitution": {
+        "becsi-magyar-iskola": "direct-coverage"
+      },
+      "year": "2025",
+      "sortKey": "2025-07-303"
+    },
+    {
+      "id": "press-inst-11b2bbd2",
+      "url": "https://rolunk.at/nepcsoportunk/a-megujult-becsi-magyar-iskola-elmult-egy-eve-video/",
+      "title": "A megújult Bécsi Magyar Iskola elmúlt egy éve – VIDEÓ",
+      "publisher": "Rólunk.at",
+      "date": "2025-07-14",
+      "summary": "A Bécsi Magyar Iskola tevékenységét vagy történetét dokumentáló korábbi sajtó- és archív forrás.",
+      "summaryType": "editorial-summary",
+      "approval": "curated-source-evidence",
+      "memberIds": [],
+      "memberNames": [],
+      "institutionIds": [
+        "becsi-magyar-iskola"
+      ],
+      "institutionNames": [
+        "Bécsi Magyar Iskola"
+      ],
+      "pressEvidenceRefs": [
+        "data/institution-press-evidence.json"
+      ],
+      "relationByInstitution": {
+        "becsi-magyar-iskola": "direct-coverage"
+      },
+      "year": "2025",
+      "sortKey": "2025-07-143"
+    },
+    {
+      "id": "press-e1bf0cad",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3313367/",
+      "title": "Növekvő érdeklődés a magyaroktatás iránt Vorarlbergben",
+      "publisher": "ORF Magyarok",
+      "date": "2025-07-13",
+      "memberIds": [
+        "mi-magyarok-egymasert"
+      ],
+      "memberNames": [
+        "Mi Magyarok Egymásért"
+      ],
+      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
+      "summaryType": "source-context",
+      "evidenceSources": [
+        "member-organizations.json"
+      ],
+      "approval": "curated-source-evidence",
+      "institutionIds": [],
+      "institutionNames": [],
+      "pressEvidenceRefs": [
+        "data/member-news.json"
+      ],
+      "year": "2025",
+      "sortKey": "2025-07-133"
+    },
+    {
+      "id": "press-215d3ecf",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3311789/",
+      "title": "Idén is lesz Szent István mise Bécsben",
+      "publisher": "ORF Magyarok",
+      "date": "2025-07-01",
+      "memberIds": [
+        "kalaka-club"
+      ],
+      "memberNames": [
+        "Kaláka Club"
+      ],
+      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
+      "summaryType": "source-context",
+      "evidenceSources": [
+        "member-press-evidence.json"
+      ],
+      "approval": "curated-source-evidence",
+      "institutionIds": [],
+      "institutionNames": [],
+      "pressEvidenceRefs": [
+        "data/member-news.json"
+      ],
+      "year": "2025",
+      "sortKey": "2025-07-013"
+    },
+    {
+      "id": "press-inst-6bd927e5",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3308239/",
+      "title": "Miről és kinek szóljon a népcsoporti média?",
+      "publisher": "ORF Magyarok",
+      "date": "2025-06-04",
+      "summary": "A Bornemisza Péter Társaság által szervezett pódiumbeszélgetésen a Bécsi Napló, az ORF és a Rólunk.at munkatársai vettek részt.",
+      "summaryType": "editorial-summary",
+      "approval": "curated-source-evidence",
+      "memberIds": [],
+      "memberNames": [],
+      "institutionIds": [
+        "becsi-naplo"
+      ],
+      "institutionNames": [
+        "Bécsi Napló"
+      ],
+      "pressEvidenceRefs": [
+        "data/institution-press-evidence.json"
+      ],
+      "relationByInstitution": {
+        "becsi-naplo": "direct-coverage"
+      },
+      "year": "2025",
+      "sortKey": "2025-06-043"
+    },
+    {
+      "id": "press-4022293b",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3307647/",
+      "title": "25 éves az egyesületi magyaroktatás Felső-Ausztriában",
+      "publisher": "ORF Magyarok",
+      "date": "2025-05-31",
+      "memberIds": [
+        "felso-ausztriai-hetvegi-magyar-ovoda-es-iskola"
+      ],
+      "memberNames": [
+        "Felső-Ausztriai Hétvégi Magyar Óvoda és Iskola"
+      ],
+      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
+      "summaryType": "source-context",
+      "evidenceSources": [
+        "member-organizations.json"
+      ],
+      "approval": "curated-source-evidence",
+      "institutionIds": [],
+      "institutionNames": [],
+      "pressEvidenceRefs": [
+        "data/member-news.json"
+      ],
+      "year": "2025",
+      "sortKey": "2025-05-313"
+    },
+    {
+      "id": "press-inst-2932149f",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3300923/",
+      "title": "Bécsi Napló: megjelent a jubileumi szám",
+      "publisher": "ORF Magyarok",
+      "date": "2025-04-22",
+      "summary": "A 45 éves folyóirat március 15-ével, közéleti és kulturális témákkal foglalkozó jubileumi számáról.",
+      "summaryType": "editorial-summary",
+      "approval": "curated-source-evidence",
+      "memberIds": [],
+      "memberNames": [],
+      "institutionIds": [
+        "becsi-naplo"
+      ],
+      "institutionNames": [
+        "Bécsi Napló"
+      ],
+      "pressEvidenceRefs": [
+        "data/institution-press-evidence.json"
+      ],
+      "relationByInstitution": {
+        "becsi-naplo": "direct-coverage"
+      },
+      "year": "2025",
+      "sortKey": "2025-04-223"
+    },
+    {
+      "id": "press-inst-e5829986",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3296234/",
+      "title": "Hol lehet Bécsben magyarul tanulni?",
+      "publisher": "ORF Magyarok",
+      "date": "2025-03-09",
+      "summary": "A bécsi magyar oktatási lehetőségeket hasonlítja össze, a BMI intézményt elkülönítve a BMI Egyesülettől.",
+      "summaryType": "editorial-summary",
+      "approval": "curated-source-evidence",
+      "memberIds": [],
+      "memberNames": [],
+      "institutionIds": [
+        "becsi-magyar-iskola"
+      ],
+      "institutionNames": [
+        "Bécsi Magyar Iskola"
+      ],
+      "pressEvidenceRefs": [
+        "data/institution-press-evidence.json"
+      ],
+      "relationByInstitution": {
+        "becsi-magyar-iskola": "direct-coverage"
+      },
+      "year": "2025",
+      "sortKey": "2025-03-093"
+    },
+    {
+      "id": "press-inst-10124f56",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3295903/",
+      "title": "45 éves a Bécsi Napló",
+      "publisher": "ORF Magyarok",
+      "date": "2025-03-06",
+      "summary": "A kéthavonta megjelenő bécsi magyar lap szerkesztőségének történetéről és küldetéséről.",
+      "summaryType": "editorial-summary",
+      "approval": "curated-source-evidence",
+      "memberIds": [],
+      "memberNames": [],
+      "institutionIds": [
+        "becsi-naplo"
+      ],
+      "institutionNames": [
+        "Bécsi Napló"
+      ],
+      "pressEvidenceRefs": [
+        "data/institution-press-evidence.json"
+      ],
+      "relationByInstitution": {
+        "becsi-naplo": "direct-coverage"
+      },
+      "year": "2025",
+      "sortKey": "2025-03-063"
+    },
+    {
+      "id": "press-5f0ad09e",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3293538/",
+      "title": "Tavaszi irodalmi beszélgetések Bécsben",
+      "publisher": "ORF Magyarok",
+      "date": "2025-02-19",
+      "memberIds": [
+        "ausztriai-magyar-kutatointezet"
+      ],
+      "memberNames": [
+        "Ausztriai Magyar Kutatóintézet"
+      ],
+      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
+      "summaryType": "source-context",
+      "evidenceSources": [
+        "member-organizations.json"
+      ],
+      "approval": "curated-source-evidence",
+      "institutionIds": [],
+      "institutionNames": [],
+      "pressEvidenceRefs": [
+        "data/member-news.json"
+      ],
+      "year": "2025",
+      "sortKey": "2025-02-193"
+    },
+    {
+      "id": "press-inst-47580270",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3293352/",
+      "title": "Bécsi Napló: Magyar kisebbségek",
+      "publisher": "ORF Magyarok",
+      "date": "2025-02-18",
+      "summary": "A folyóirat magyar kisebbségekről, nemzetpolitikáról és kulturális kapcsolatokról szóló írásait ismerteti.",
+      "summaryType": "editorial-summary",
+      "approval": "curated-source-evidence",
+      "memberIds": [],
+      "memberNames": [],
+      "institutionIds": [
+        "becsi-naplo"
+      ],
+      "institutionNames": [
+        "Bécsi Napló"
+      ],
+      "pressEvidenceRefs": [
+        "data/institution-press-evidence.json"
+      ],
+      "relationByInstitution": {
+        "becsi-naplo": "direct-coverage"
+      },
+      "year": "2025",
+      "sortKey": "2025-02-183"
+    },
+    {
+      "id": "press-82c8496b",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3331185/",
+      "title": "Közös gondolkodásra hívtak",
+      "publisher": "ORF Magyarok",
+      "date": "2025",
+      "memberIds": [
+        "cserkesz-72-wien",
+        "nemzetkozi-duna-filharmonia-barati-kor"
+      ],
+      "memberNames": [
+        "72 sz. Széchenyi István cserkészcsapat",
+        "Nemzetközi Duna Filharmónia Baráti kör"
+      ],
+      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
+      "summaryType": "source-context",
+      "evidenceSources": [
+        "member-organizations.json",
+        "member-press-evidence.json"
+      ],
+      "approval": "curated-source-evidence",
+      "institutionIds": [],
+      "institutionNames": [],
+      "pressEvidenceRefs": [
+        "data/member-news.json"
+      ],
+      "year": "2025",
+      "sortKey": "2025-00-001"
+    },
+    {
+      "id": "press-inst-4ff439d7",
+      "url": "https://rolunk.at/magazin/a-lehetetlen-csupan-egy-szo/",
+      "title": "A lehetetlen csupán egy szó",
+      "publisher": "Rólunk.at",
+      "date": "2025",
+      "summary": "A Bécsi Szelet Magazint is alapító Bánhalmi Norbert közösségi, művészeti és iskolai projektjeiről készült portré.",
+      "summaryType": "editorial-summary",
+      "approval": "curated-source-evidence",
+      "memberIds": [],
+      "memberNames": [],
+      "institutionIds": [
+        "becsi-szelet"
+      ],
+      "institutionNames": [
+        "Bécsi Szelet Magazin"
+      ],
+      "pressEvidenceRefs": [
+        "data/institution-press-evidence.json"
+      ],
+      "relationByInstitution": {
+        "becsi-szelet": "founder-coverage"
+      },
+      "year": "2025",
+      "sortKey": "2025-00-001"
+    },
+    {
+      "id": "press-f1391565",
+      "url": "https://naturpark.hu/hu/news/id-nature-2025-2026-interreg-athu-199.html",
+      "title": "ID Nature – határon átnyúló natúrparki együttműködés",
+      "publisher": "Írottkő Natúrpark",
+      "date": "2025-2026",
+      "memberIds": [
+        "irottko-sportegyesulet"
+      ],
+      "memberNames": [
+        "Írottkő Sportegyesület"
+      ],
+      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
+      "summaryType": "source-context",
+      "evidenceSources": [
+        "member-organizations.json"
+      ],
+      "approval": "curated-source-evidence",
+      "institutionIds": [],
+      "institutionNames": [],
+      "pressEvidenceRefs": [
+        "data/member-news.json"
+      ],
+      "year": "2025",
+      "sortKey": "2025-00-000"
+    },
+    {
+      "id": "press-03d1c4cf",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3283569/",
+      "title": "25. Bécsi Magyar Táncháztalálkozó",
+      "publisher": "ORF Magyarok",
+      "date": "2024-12-02",
+      "memberIds": [
+        "napraforgok"
+      ],
+      "memberNames": [
+        "Napraforgók Bécsi Magyar Néptánc és Népzene Egyesület"
+      ],
+      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
+      "summaryType": "source-context",
+      "evidenceSources": [
+        "member-organizations.json"
+      ],
+      "approval": "curated-source-evidence",
+      "institutionIds": [],
+      "institutionNames": [],
+      "pressEvidenceRefs": [
+        "data/member-news.json"
+      ],
+      "year": "2024",
+      "sortKey": "2024-12-023"
+    },
+    {
+      "id": "press-18baa798",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3278283/",
+      "title": "Vorarlberg: új lendület a magyaroktatásban",
+      "publisher": "ORF Magyarok",
+      "date": "2024-10-22",
+      "memberIds": [
+        "mi-magyarok-egymasert"
+      ],
+      "memberNames": [
+        "Mi Magyarok Egymásért"
+      ],
+      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
+      "summaryType": "source-context",
+      "evidenceSources": [
+        "member-organizations.json"
+      ],
+      "approval": "curated-source-evidence",
+      "institutionIds": [],
+      "institutionNames": [],
+      "pressEvidenceRefs": [
+        "data/member-news.json"
+      ],
+      "year": "2024",
+      "sortKey": "2024-10-223"
+    },
+    {
+      "id": "press-inst-a3a160b8",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3277567/",
+      "title": "Újdonságokkal indult az új tanév Bécsben",
+      "publisher": "ORF Magyarok",
+      "date": "2024-10-17",
+      "summary": "A Bécsi Magyar Iskola tevékenységét vagy történetét dokumentáló korábbi sajtó- és archív forrás.",
+      "summaryType": "editorial-summary",
+      "approval": "curated-source-evidence",
+      "memberIds": [],
+      "memberNames": [],
+      "institutionIds": [
+        "becsi-magyar-iskola"
+      ],
+      "institutionNames": [
+        "Bécsi Magyar Iskola"
+      ],
+      "pressEvidenceRefs": [
+        "data/institution-press-evidence.json"
+      ],
+      "relationByInstitution": {
+        "becsi-magyar-iskola": "direct-coverage"
+      },
+      "year": "2024",
+      "sortKey": "2024-10-173"
+    },
+    {
+      "id": "press-9e563fd6",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3277330/",
+      "title": "A nagy múltú egyesületnek jövőre új székhelye lesz",
+      "publisher": "ORF Magyarok",
+      "date": "2024-10-15",
+      "memberIds": [
+        "bornemisza-peter-tarsasag"
+      ],
+      "memberNames": [
+        "Bornemisza Péter Társaság"
+      ],
+      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
+      "summaryType": "source-context",
+      "evidenceSources": [
+        "member-organizations.json",
+        "member-press-evidence.json"
+      ],
+      "approval": "curated-source-evidence",
+      "institutionIds": [],
+      "institutionNames": [],
+      "pressEvidenceRefs": [
+        "data/member-news.json"
+      ],
+      "year": "2024",
+      "sortKey": "2024-10-153"
+    },
+    {
+      "id": "press-3fdf5233",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3278181/",
+      "title": "Országszerte tartanak 1956-os eseményeket",
+      "publisher": "ORF Magyarok",
+      "date": "2024-10",
+      "memberIds": [
+        "imeasz",
+        "magyar-egyetemistak-es-oregdiakok-klubja-graz"
+      ],
+      "memberNames": [
+        "IMEASZ - Innsbrucki Magyar Egyetemisták és Akadémikusok Szövetsége",
+        "Magyar Egyetemisták és Öregdiákok Klubja"
+      ],
+      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
+      "summaryType": "source-context",
+      "evidenceSources": [
+        "member-organizations.json"
+      ],
+      "approval": "curated-source-evidence",
+      "institutionIds": [],
+      "institutionNames": [],
+      "pressEvidenceRefs": [
+        "data/member-news.json"
+      ],
+      "year": "2024",
+      "sortKey": "2024-10-002"
+    },
+    {
+      "id": "press-a1e11357",
+      "url": "https://rolunk.at/kultura/femconnect-uj-magyar-kulturegyesulet-grazban/",
+      "title": "FemConnect: új magyar kultúregyesület Grazban",
+      "publisher": "Rólunk.at",
+      "date": "2024-09-23",
+      "memberIds": [
+        "femconnect-graz"
+      ],
+      "memberNames": [
+        "FemConnect Graz"
+      ],
+      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
+      "summaryType": "source-context",
+      "evidenceSources": [
+        "member-organizations.json",
+        "member-press-evidence.json"
+      ],
+      "approval": "curated-source-evidence",
+      "institutionIds": [],
+      "institutionNames": [],
+      "pressEvidenceRefs": [
+        "data/member-news.json"
+      ],
+      "year": "2024",
+      "sortKey": "2024-09-233"
+    },
+    {
+      "id": "press-inst-bd4bafbd",
+      "url": "https://rolunk.at/kultura/ujdonsagok-a-becsi-magyar-iskola-2024-25-os-taneveben/",
+      "title": "Újdonságok a Bécsi Magyar Iskola 2024/25-ös tanévében",
+      "publisher": "Rólunk.at",
+      "date": "2024-09-05",
+      "summary": "A Bécsi Magyar Iskola tevékenységét vagy történetét dokumentáló korábbi sajtó- és archív forrás.",
+      "summaryType": "editorial-summary",
+      "approval": "curated-source-evidence",
+      "memberIds": [],
+      "memberNames": [],
+      "institutionIds": [
+        "becsi-magyar-iskola"
+      ],
+      "institutionNames": [
+        "Bécsi Magyar Iskola"
+      ],
+      "pressEvidenceRefs": [
+        "data/institution-press-evidence.json"
+      ],
+      "relationByInstitution": {
+        "becsi-magyar-iskola": "direct-coverage"
+      },
+      "year": "2024",
+      "sortKey": "2024-09-053"
+    },
+    {
+      "id": "press-c0685d7a",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3269351/",
+      "title": "Szent István-ünnep Vorarlbergben",
+      "publisher": "ORF Magyarok",
+      "date": "2024-08-16",
+      "memberIds": [
+        "vorarlbergi-magyar-egyesulet"
+      ],
+      "memberNames": [
+        "Vorarlbergi Magyar Egyesület"
+      ],
+      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
+      "summaryType": "source-context",
+      "evidenceSources": [
+        "member-organizations.json",
+        "member-press-evidence.json"
+      ],
+      "approval": "curated-source-evidence",
+      "institutionIds": [],
+      "institutionNames": [],
+      "pressEvidenceRefs": [
+        "data/member-news.json"
+      ],
+      "year": "2024",
+      "sortKey": "2024-08-163"
+    },
+    {
+      "id": "press-d21d937e",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3268738/",
+      "title": "Magyar Magazin: színház és fotó",
+      "publisher": "ORF Magyarok",
+      "date": "2024-08-11",
+      "memberIds": [
+        "svung"
+      ],
+      "memberNames": [
+        "SVUNG Bécsi Magyarok Művészeti Egyesülete"
+      ],
+      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
+      "summaryType": "source-context",
+      "evidenceSources": [
+        "member-press-evidence.json"
+      ],
+      "approval": "curated-source-evidence",
+      "institutionIds": [],
+      "institutionNames": [],
+      "pressEvidenceRefs": [
+        "data/member-news.json"
+      ],
+      "year": "2024",
+      "sortKey": "2024-08-113"
+    },
+    {
+      "id": "press-inst-a96202cc",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3266240/",
+      "title": "Suliújságot indít a Bécsi Magyar Iskola",
+      "publisher": "ORF Magyarok",
+      "date": "2024-07-25",
+      "summary": "A Bécsi Magyar Iskola tevékenységét vagy történetét dokumentáló korábbi sajtó- és archív forrás.",
+      "summaryType": "editorial-summary",
+      "approval": "curated-source-evidence",
+      "memberIds": [],
+      "memberNames": [],
+      "institutionIds": [
+        "becsi-magyar-iskola"
+      ],
+      "institutionNames": [
+        "Bécsi Magyar Iskola"
+      ],
+      "pressEvidenceRefs": [
+        "data/institution-press-evidence.json"
+      ],
+      "relationByInstitution": {
+        "becsi-magyar-iskola": "direct-coverage"
+      },
+      "year": "2024",
+      "sortKey": "2024-07-253"
+    },
+    {
+      "id": "press-inst-dd7a4e69",
+      "url": "https://rolunk.at/magazin/kreativ-minecraft-tabor-becsben/",
+      "title": "Kreatív Minecraft tábor Bécsben",
+      "publisher": "Rólunk.at",
+      "date": "2024-07-02",
+      "summary": "A Bécsi Magyar Iskola tevékenységét vagy történetét dokumentáló korábbi sajtó- és archív forrás.",
+      "summaryType": "editorial-summary",
+      "approval": "curated-source-evidence",
+      "memberIds": [],
+      "memberNames": [],
+      "institutionIds": [
+        "becsi-magyar-iskola"
+      ],
+      "institutionNames": [
+        "Bécsi Magyar Iskola"
+      ],
+      "pressEvidenceRefs": [
+        "data/institution-press-evidence.json"
+      ],
+      "relationByInstitution": {
+        "becsi-magyar-iskola": "direct-coverage"
+      },
+      "year": "2024",
+      "sortKey": "2024-07-023"
+    },
+    {
+      "id": "press-854fac0f",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3262490/",
+      "title": "Bornemisza-társaság: kilakoltatás fenyeget",
+      "publisher": "ORF Magyarok",
+      "date": "2024-06-24",
+      "memberIds": [
+        "bornemisza-peter-tarsasag"
+      ],
+      "memberNames": [
+        "Bornemisza Péter Társaság"
+      ],
+      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
+      "summaryType": "source-context",
+      "evidenceSources": [
+        "member-organizations.json",
+        "member-press-evidence.json"
+      ],
+      "approval": "curated-source-evidence",
+      "institutionIds": [],
+      "institutionNames": [],
+      "pressEvidenceRefs": [
+        "data/member-news.json"
+      ],
+      "year": "2024",
+      "sortKey": "2024-06-243"
+    },
+    {
+      "id": "press-inst-0c0e4822",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3259086/",
+      "title": "Egy újabb letakart kép talált gazdára",
+      "publisher": "ORF Magyarok",
+      "date": "2024-05-29",
+      "summary": "A magazin második kulturális bemutatkozó estjéről és Schmuck Éva festőművész kiállításáról.",
+      "summaryType": "editorial-summary",
+      "approval": "curated-source-evidence",
+      "memberIds": [],
+      "memberNames": [],
+      "institutionIds": [
+        "becsi-szelet"
+      ],
+      "institutionNames": [
+        "Bécsi Szelet Magazin"
+      ],
+      "pressEvidenceRefs": [
+        "data/institution-press-evidence.json"
+      ],
+      "relationByInstitution": {
+        "becsi-szelet": "direct-coverage"
+      },
+      "year": "2024",
+      "sortKey": "2024-05-293"
+    },
+    {
+      "id": "press-68661e6e",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3256313/",
+      "title": "Új programokkal jelentkezik a grazi Femspace Szalon",
+      "publisher": "ORF Magyarok",
+      "date": "2024-05-08",
+      "memberIds": [
+        "lean-in-femspace"
+      ],
+      "memberNames": [
+        "Lean in Femspace Külföldön újrakezdő magyar nők egyesülete"
+      ],
+      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
+      "summaryType": "source-context",
+      "evidenceSources": [
+        "member-organizations.json"
+      ],
+      "approval": "curated-source-evidence",
+      "institutionIds": [],
+      "institutionNames": [],
+      "pressEvidenceRefs": [
+        "data/member-news.json"
+      ],
+      "year": "2024",
+      "sortKey": "2024-05-083"
+    },
+    {
+      "id": "press-inst-cdf892ee",
+      "url": "https://rolunk.at/nepcsoportunk/uj-elnokseg-az-ausztriai-magyar-egyesuletek-es-szervezetek-kozponti-szovetsegenek-elen/",
+      "title": "Új elnökség az Ausztriai Magyar Egyesületek és Szervezetek Központi Szövetségének élén",
+      "publisher": "Rólunk.at",
+      "date": "2024-02-25",
+      "summary": "A 2024-es tisztújításról, Seidler Andrea elnökségéről és a szövetségi közösségi intézmények feladatairól számol be.",
+      "summaryType": "editorial-summary",
+      "approval": "curated-source-evidence",
+      "memberIds": [],
+      "memberNames": [],
+      "institutionIds": [
+        "kozponti-szovetseg"
+      ],
+      "institutionNames": [
+        "Központi Szövetség"
+      ],
+      "pressEvidenceRefs": [
+        "data/institution-press-evidence.json"
+      ],
+      "relationByInstitution": {
+        "kozponti-szovetseg": "direct-coverage"
+      },
+      "year": "2024",
+      "sortKey": "2024-02-253"
+    },
+    {
+      "id": "press-inst-27b8b4ed",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3245547/",
+      "title": "Új külsővel kezdi 45. évét a Bécsi Napló",
+      "publisher": "ORF Magyarok",
+      "date": "2024-02-19",
+      "summary": "A lap kisebb formátumát, nagyobb betűit és frissített nyomtatott megjelenését mutatja be.",
+      "summaryType": "editorial-summary",
+      "approval": "curated-source-evidence",
+      "memberIds": [],
+      "memberNames": [],
+      "institutionIds": [
+        "becsi-naplo"
+      ],
+      "institutionNames": [
+        "Bécsi Napló"
+      ],
+      "pressEvidenceRefs": [
+        "data/institution-press-evidence.json"
+      ],
+      "relationByInstitution": {
+        "becsi-naplo": "direct-coverage"
+      },
+      "year": "2024",
+      "sortKey": "2024-02-193"
+    },
+    {
+      "id": "press-23e317c5",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3242638/",
+      "title": "Itthon – otthon Vorarlbergben",
+      "publisher": "ORF Magyarok",
+      "date": "2024-01-29",
+      "memberIds": [
+        "mi-magyarok-egymasert"
+      ],
+      "memberNames": [
+        "Mi Magyarok Egymásért"
+      ],
+      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
+      "summaryType": "source-context",
+      "evidenceSources": [
+        "member-organizations.json"
+      ],
+      "approval": "curated-source-evidence",
+      "institutionIds": [],
+      "institutionNames": [],
+      "pressEvidenceRefs": [
+        "data/member-news.json"
+      ],
+      "year": "2024",
+      "sortKey": "2024-01-293"
+    },
+    {
+      "id": "press-03b2790e",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3254863/",
+      "title": "Lovagkereszt a magyarság szolgálatáért",
+      "publisher": "ORF Magyarok",
+      "date": "2024",
+      "memberIds": [
+        "imeasz"
+      ],
+      "memberNames": [
+        "IMEASZ - Innsbrucki Magyar Egyetemisták és Akadémikusok Szövetsége"
+      ],
+      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
+      "summaryType": "source-context",
+      "evidenceSources": [
+        "member-press-evidence.json"
+      ],
+      "approval": "curated-source-evidence",
+      "institutionIds": [],
+      "institutionNames": [],
+      "pressEvidenceRefs": [
+        "data/member-news.json"
+      ],
+      "year": "2024",
+      "sortKey": "2024-00-001"
+    },
+    {
+      "id": "press-24de9c2a",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3242657/",
+      "title": "Jótékonysági koncert a traumatizált fiatalokért",
+      "publisher": "ORF Magyarok",
+      "date": "2024",
+      "memberIds": [
+        "nemzetkozi-duna-filharmonia-barati-kor"
+      ],
+      "memberNames": [
+        "Nemzetközi Duna Filharmónia Baráti kör"
+      ],
+      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
+      "summaryType": "source-context",
+      "evidenceSources": [
+        "member-press-evidence.json"
+      ],
+      "approval": "curated-source-evidence",
+      "institutionIds": [],
+      "institutionNames": [],
+      "pressEvidenceRefs": [
+        "data/member-news.json"
+      ],
+      "year": "2024",
+      "sortKey": "2024-00-001"
+    },
+    {
+      "id": "press-inst-1492621d",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3228649/",
+      "title": "Körbezárt Szerelem: kiállítás és zenés aukció",
+      "publisher": "ORF Magyarok",
+      "date": "2023-10-17",
+      "summary": "A Bécsi Szelet Magazin nyitó kulturális rendezvényéről, Zádory Édua bemutatkozásáról és a szerkesztők terveiről.",
+      "summaryType": "editorial-summary",
+      "approval": "curated-source-evidence",
+      "memberIds": [],
+      "memberNames": [],
+      "institutionIds": [
+        "becsi-szelet"
+      ],
+      "institutionNames": [
+        "Bécsi Szelet Magazin"
+      ],
+      "pressEvidenceRefs": [
+        "data/institution-press-evidence.json"
+      ],
+      "relationByInstitution": {
+        "becsi-szelet": "direct-coverage"
+      },
+      "year": "2023",
+      "sortKey": "2023-10-173"
+    },
+    {
+      "id": "press-06d72974",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3229029/",
+      "title": "1956-os megemlékezések országszerte",
+      "publisher": "ORF Magyarok",
+      "date": "2023-10",
+      "memberIds": [
+        "vorarlbergi-magyar-egyesulet"
+      ],
+      "memberNames": [
+        "Vorarlbergi Magyar Egyesület"
+      ],
+      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
+      "summaryType": "source-context",
+      "evidenceSources": [
+        "member-organizations.json"
+      ],
+      "approval": "curated-source-evidence",
+      "institutionIds": [],
+      "institutionNames": [],
+      "pressEvidenceRefs": [
+        "data/member-news.json"
+      ],
+      "year": "2023",
+      "sortKey": "2023-10-002"
+    },
+    {
+      "id": "press-f730fdea",
+      "url": "https://rolunk.at/nepcsoportunk/huszeves-a-kozepburgenlandi-magyar-kulturegyesulet/",
+      "title": "Húszéves a Középburgenlandi Magyar Kultúregyesület",
+      "publisher": "Rólunk.at",
+      "date": "2023-09-06",
+      "memberIds": [
+        "kozep-burgenlandi-magyar-kulturegyesulet"
+      ],
+      "memberNames": [
+        "Közép–Burgenlandi Magyar Kultúregyesület"
+      ],
+      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
+      "summaryType": "source-context",
+      "evidenceSources": [
+        "member-organizations.json",
+        "member-press-evidence.json"
+      ],
+      "approval": "curated-source-evidence",
+      "institutionIds": [],
+      "institutionNames": [],
+      "pressEvidenceRefs": [
+        "data/member-news.json"
+      ],
+      "year": "2023",
+      "sortKey": "2023-09-063"
+    },
+    {
+      "id": "press-68b1de8d",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3212235/",
+      "title": "Őrvidéki Mulatság: a megélt sokszínűség",
+      "publisher": "ORF Magyarok",
+      "date": "2023-06-18",
+      "memberIds": [
+        "alsoori-magyar-kultur-es-tancegyesulet"
+      ],
+      "memberNames": [
+        "Alsóőri Magyar Kultúr- és Táncegyesület"
+      ],
+      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
+      "summaryType": "source-context",
+      "evidenceSources": [
+        "member-organizations.json"
+      ],
+      "approval": "curated-source-evidence",
+      "institutionIds": [],
+      "institutionNames": [],
+      "pressEvidenceRefs": [
+        "data/member-news.json"
+      ],
+      "year": "2023",
+      "sortKey": "2023-06-183"
+    },
+    {
+      "id": "press-8c6189f0",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3211192/",
+      "title": "Közép-burgenlandi magyarok a heti piacon",
+      "publisher": "ORF Magyarok",
+      "date": "2023-06-10",
+      "memberIds": [
+        "kozep-burgenlandi-magyar-kulturegyesulet"
+      ],
+      "memberNames": [
+        "Közép–Burgenlandi Magyar Kultúregyesület"
+      ],
+      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
+      "summaryType": "source-context",
+      "evidenceSources": [
+        "member-press-evidence.json"
+      ],
+      "approval": "curated-source-evidence",
+      "institutionIds": [],
+      "institutionNames": [],
+      "pressEvidenceRefs": [
+        "data/member-news.json"
+      ],
+      "year": "2023",
+      "sortKey": "2023-06-103"
+    },
+    {
+      "id": "press-91868a8d",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3209121/",
+      "title": "Magyar fesztivál Linzben civil összefogással",
+      "publisher": "ORF Magyarok",
+      "date": "2023-05-26",
+      "memberIds": [
+        "cserkesz-80-wels",
+        "felso-ausztriai-magyarok-kulturegyesulete",
+        "linz-magyar-katolikus-kozosseg"
+      ],
+      "memberNames": [
+        "80 sz. Árpád cserkészcsapat",
+        "Felső-Ausztriai Magyarok Kultúregyesülete",
+        "Linz Magyar Katolikus Közösség"
+      ],
+      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
+      "summaryType": "source-context",
+      "evidenceSources": [
+        "member-organizations.json",
+        "member-press-evidence.json"
+      ],
+      "approval": "curated-source-evidence",
+      "institutionIds": [],
+      "institutionNames": [],
+      "pressEvidenceRefs": [
+        "data/member-news.json"
+      ],
+      "year": "2023",
+      "sortKey": "2023-05-263"
+    },
+    {
+      "id": "press-43357d62",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3205267/",
+      "title": "KultPult-estek: otthon vagyunk-e itthon?",
+      "publisher": "ORF Magyarok",
+      "date": "2023-04-29",
+      "memberIds": [
+        "lean-in-femspace"
+      ],
+      "memberNames": [
+        "Lean in Femspace Külföldön újrakezdő magyar nők egyesülete"
+      ],
+      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
+      "summaryType": "source-context",
+      "evidenceSources": [
+        "member-organizations.json",
+        "member-press-evidence.json"
+      ],
+      "approval": "curated-source-evidence",
+      "institutionIds": [],
+      "institutionNames": [],
+      "pressEvidenceRefs": [
+        "data/member-news.json"
+      ],
+      "year": "2023",
+      "sortKey": "2023-04-293"
+    },
+    {
+      "id": "press-672274a6",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3202860/",
+      "title": "Magyarországi elismerés Wurst Erzsébetnek",
+      "publisher": "ORF Magyarok",
+      "date": "2023-04-13",
+      "memberIds": [
+        "kalaka-club"
+      ],
+      "memberNames": [
+        "Kaláka Club"
+      ],
+      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
+      "summaryType": "source-context",
+      "evidenceSources": [
+        "member-organizations.json"
+      ],
+      "approval": "curated-source-evidence",
+      "institutionIds": [],
+      "institutionNames": [],
+      "pressEvidenceRefs": [
+        "data/member-news.json"
+      ],
+      "year": "2023",
+      "sortKey": "2023-04-133"
+    },
+    {
+      "id": "press-48847a26",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3201515/",
+      "title": "Dupla jubileum Felső-Ausztriában",
+      "publisher": "ORF Magyarok",
+      "date": "2023-04-03",
+      "memberIds": [
+        "felso-ausztriai-magyarok-kulturegyesulete"
+      ],
+      "memberNames": [
+        "Felső-Ausztriai Magyarok Kultúregyesülete"
+      ],
+      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
+      "summaryType": "source-context",
+      "evidenceSources": [
+        "member-organizations.json"
+      ],
+      "approval": "curated-source-evidence",
+      "institutionIds": [],
+      "institutionNames": [],
+      "pressEvidenceRefs": [
+        "data/member-news.json"
+      ],
+      "year": "2023",
+      "sortKey": "2023-04-033"
+    },
+    {
+      "id": "press-47fdecb1",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3200580/",
+      "title": "Diaszpóra-kerekasztal Innsbruckban",
+      "publisher": "ORF Magyarok",
+      "date": "2023-03-27",
+      "memberIds": [
+        "imike",
+        "salzung"
+      ],
+      "memberNames": [
+        "IMIKE - Innsbrucki Magyar Ifjúsági és Kultúregyesület",
+        "SalzUng - Salzburgi Magyar Egyesület"
+      ],
+      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
+      "summaryType": "source-context",
+      "evidenceSources": [
+        "member-organizations.json",
+        "member-press-evidence.json"
+      ],
+      "approval": "curated-source-evidence",
+      "institutionIds": [],
+      "institutionNames": [],
+      "pressEvidenceRefs": [
+        "data/member-news.json"
+      ],
+      "year": "2023",
+      "sortKey": "2023-03-273"
+    },
+    {
+      "id": "press-aa861c3e",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3200228/",
+      "title": "Tanulmánykötet a sokszínű Burgenlandról",
+      "publisher": "ORF Magyarok",
+      "date": "2023-03-24",
+      "memberIds": [
+        "ausztriai-magyar-kutatointezet"
+      ],
+      "memberNames": [
+        "Ausztriai Magyar Kutatóintézet"
+      ],
+      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
+      "summaryType": "source-context",
+      "evidenceSources": [
+        "member-organizations.json"
+      ],
+      "approval": "curated-source-evidence",
+      "institutionIds": [],
+      "institutionNames": [],
+      "pressEvidenceRefs": [
+        "data/member-news.json"
+      ],
+      "year": "2023",
+      "sortKey": "2023-03-243"
+    },
+    {
+      "id": "press-f3ef5ce7",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3189913/",
+      "title": "Újdonságok a Femspace idei naptárában",
+      "publisher": "ORF Magyarok",
+      "date": "2023-01",
+      "memberIds": [
+        "lean-in-femspace"
+      ],
+      "memberNames": [
+        "Lean in Femspace Külföldön újrakezdő magyar nők egyesülete"
+      ],
+      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
+      "summaryType": "source-context",
+      "evidenceSources": [
+        "member-press-evidence.json"
+      ],
+      "approval": "curated-source-evidence",
+      "institutionIds": [],
+      "institutionNames": [],
+      "pressEvidenceRefs": [
+        "data/member-news.json"
+      ],
+      "year": "2023",
+      "sortKey": "2023-01-002"
+    },
+    {
+      "id": "press-b879f732",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3224341/",
+      "title": "Új tagokat várnak a welsi mazsorettek",
+      "publisher": "ORF Magyarok",
+      "date": "2023",
+      "memberIds": [
+        "felso-ausztriai-magyarok-kulturegyesulete"
+      ],
+      "memberNames": [
+        "Felső-Ausztriai Magyarok Kultúregyesülete"
+      ],
+      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
+      "summaryType": "source-context",
+      "evidenceSources": [
+        "member-press-evidence.json"
+      ],
+      "approval": "curated-source-evidence",
+      "institutionIds": [],
+      "institutionNames": [],
+      "pressEvidenceRefs": [
+        "data/member-news.json"
+      ],
+      "year": "2023",
+      "sortKey": "2023-00-001"
+    },
+    {
+      "id": "press-66448f30",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3201360/",
+      "title": "Leköszönt a főkonzul Innsbruckban",
+      "publisher": "ORF Magyarok",
+      "date": "2023",
+      "memberIds": [
+        "vorarlbergi-magyar-egyesulet"
+      ],
+      "memberNames": [
+        "Vorarlbergi Magyar Egyesület"
+      ],
+      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
+      "summaryType": "source-context",
+      "evidenceSources": [
+        "member-press-evidence.json"
+      ],
+      "approval": "curated-source-evidence",
+      "institutionIds": [],
+      "institutionNames": [],
+      "pressEvidenceRefs": [
+        "data/member-news.json"
+      ],
+      "year": "2023",
+      "sortKey": "2023-00-001"
+    },
+    {
+      "id": "press-0ea92cc1",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3180996/",
+      "title": "Gálakoncert határaink legyőzésére",
+      "publisher": "ORF Magyarok",
+      "date": "2022-11-06",
+      "memberIds": [
+        "nemzetkozi-duna-filharmonia-barati-kor"
+      ],
+      "memberNames": [
+        "Nemzetközi Duna Filharmónia Baráti kör"
+      ],
+      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
+      "summaryType": "source-context",
+      "evidenceSources": [
+        "member-organizations.json",
+        "member-press-evidence.json"
+      ],
+      "approval": "curated-source-evidence",
+      "institutionIds": [],
+      "institutionNames": [],
+      "pressEvidenceRefs": [
+        "data/member-news.json"
+      ],
+      "year": "2022",
+      "sortKey": "2022-11-063"
+    },
+    {
+      "id": "press-1fe6654a",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3179229/",
+      "title": "Ahol a falak zárják magukba 1956 szellemét",
+      "publisher": "ORF Magyarok",
+      "date": "2022-10-23",
+      "memberIds": [
+        "imeasz",
+        "magyarhaz-innsbruck"
+      ],
+      "memberNames": [
+        "IMEASZ - Innsbrucki Magyar Egyetemisták és Akadémikusok Szövetsége",
+        "Magyarház - Innsbrucki Magyar Diákotthon és Kultúrcentrum Egyesület"
+      ],
+      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
+      "summaryType": "source-context",
+      "evidenceSources": [
+        "member-organizations.json",
+        "member-press-evidence.json"
+      ],
+      "approval": "curated-source-evidence",
+      "institutionIds": [],
+      "institutionNames": [],
+      "pressEvidenceRefs": [
+        "data/member-news.json"
+      ],
+      "year": "2022",
+      "sortKey": "2022-10-233"
+    },
+    {
+      "id": "press-f60d02a4",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3179029/",
+      "title": "Új csoportokat indítanak a Napraforgók",
+      "publisher": "ORF Magyarok",
+      "date": "2022-10-21",
+      "memberIds": [
+        "napraforgok"
+      ],
+      "memberNames": [
+        "Napraforgók Bécsi Magyar Néptánc és Népzene Egyesület"
+      ],
+      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
+      "summaryType": "source-context",
+      "evidenceSources": [
+        "member-press-evidence.json"
+      ],
+      "approval": "curated-source-evidence",
+      "institutionIds": [],
+      "institutionNames": [],
+      "pressEvidenceRefs": [
+        "data/member-news.json"
+      ],
+      "year": "2022",
+      "sortKey": "2022-10-213"
+    },
+    {
+      "id": "press-inst-b784bd2c",
+      "url": "https://rolunk.at/kultura/fabula-babtabor-interju-bajka-kinga-csengelevel/",
+      "title": "Fabula bábtábor – Interjú Bajka Kinga Csengelével",
+      "publisher": "Rólunk.at",
+      "date": "2022-07-12",
+      "summary": "A Bécsi Magyar Iskola tevékenységét vagy történetét dokumentáló korábbi sajtó- és archív forrás.",
+      "summaryType": "editorial-summary",
+      "approval": "curated-source-evidence",
+      "memberIds": [],
+      "memberNames": [],
+      "institutionIds": [
+        "becsi-magyar-iskola"
+      ],
+      "institutionNames": [
+        "Bécsi Magyar Iskola"
+      ],
+      "pressEvidenceRefs": [
+        "data/institution-press-evidence.json"
+      ],
+      "relationByInstitution": {
+        "becsi-magyar-iskola": "direct-coverage"
+      },
+      "year": "2022",
+      "sortKey": "2022-07-123"
+    },
+    {
+      "id": "press-a7931062",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3160199/",
+      "title": "Legyen a zene mindenkié!",
+      "publisher": "ORF Magyarok",
+      "date": "2022-06-10",
+      "memberIds": [
+        "salzung"
+      ],
+      "memberNames": [
+        "SalzUng - Salzburgi Magyar Egyesület"
+      ],
+      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
+      "summaryType": "source-context",
+      "evidenceSources": [
+        "member-organizations.json",
+        "member-press-evidence.json"
+      ],
+      "approval": "curated-source-evidence",
+      "institutionIds": [],
+      "institutionNames": [],
+      "pressEvidenceRefs": [
+        "data/member-news.json"
+      ],
+      "year": "2022",
+      "sortKey": "2022-06-103"
+    },
+    {
+      "id": "press-inst-535d504b",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3156456/",
+      "title": "90 feletti résztvevő a jubileumi Verőfényen",
+      "publisher": "ORF Magyarok",
+      "date": "2022-05-15",
+      "summary": "A Bécsi Magyar Iskola tevékenységét vagy történetét dokumentáló korábbi sajtó- és archív forrás.",
+      "summaryType": "editorial-summary",
+      "approval": "curated-source-evidence",
+      "memberIds": [],
+      "memberNames": [],
+      "institutionIds": [
+        "becsi-magyar-iskola"
+      ],
+      "institutionNames": [
+        "Bécsi Magyar Iskola"
+      ],
+      "pressEvidenceRefs": [
+        "data/institution-press-evidence.json"
+      ],
+      "relationByInstitution": {
+        "becsi-magyar-iskola": "direct-coverage"
+      },
+      "year": "2022",
+      "sortKey": "2022-05-153"
+    },
+    {
+      "id": "press-inst-5e9d05d1",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3151059/",
+      "title": "Verőfény 25+ versmondóverseny",
+      "publisher": "ORF Magyarok",
+      "date": "2022-04-12",
+      "summary": "A Bécsi Magyar Iskola tevékenységét vagy történetét dokumentáló korábbi sajtó- és archív forrás.",
+      "summaryType": "editorial-summary",
+      "approval": "curated-source-evidence",
+      "memberIds": [],
+      "memberNames": [],
+      "institutionIds": [
+        "becsi-magyar-iskola"
+      ],
+      "institutionNames": [
+        "Bécsi Magyar Iskola"
+      ],
+      "pressEvidenceRefs": [
+        "data/institution-press-evidence.json"
+      ],
+      "relationByInstitution": {
+        "becsi-magyar-iskola": "direct-coverage"
+      },
+      "year": "2022",
+      "sortKey": "2022-04-123"
+    },
+    {
+      "id": "press-inst-612df8f6",
+      "url": "https://www.becsinaplo.eu/becsi-magyar-adomanygyujto-pont",
+      "title": "Bécsi magyar adománygyűjtő pont",
+      "publisher": "Bécsi Napló",
+      "date": "2022-03-08",
+      "summary": "A Bécsi Magyar Iskola tevékenységét vagy történetét dokumentáló korábbi sajtó- és archív forrás.",
+      "summaryType": "editorial-summary",
+      "approval": "curated-source-evidence",
+      "memberIds": [],
+      "memberNames": [],
+      "institutionIds": [
+        "becsi-magyar-iskola"
+      ],
+      "institutionNames": [
+        "Bécsi Magyar Iskola"
+      ],
+      "pressEvidenceRefs": [
+        "data/institution-press-evidence.json"
+      ],
+      "relationByInstitution": {
+        "becsi-magyar-iskola": "direct-coverage"
+      },
+      "year": "2022",
+      "sortKey": "2022-03-083"
+    },
+    {
+      "id": "press-1564529a",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3144104/",
+      "title": "Anyanyelv: versmondó verseny Vorarlbergben",
+      "publisher": "ORF Magyarok",
+      "date": "2022-02-21",
+      "memberIds": [
+        "vorarlbergi-magyar-egyesulet"
+      ],
+      "memberNames": [
+        "Vorarlbergi Magyar Egyesület"
+      ],
+      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
+      "summaryType": "source-context",
+      "evidenceSources": [
+        "member-press-evidence.json"
+      ],
+      "approval": "curated-source-evidence",
+      "institutionIds": [],
+      "institutionNames": [],
+      "pressEvidenceRefs": [
+        "data/member-news.json"
+      ],
+      "year": "2022",
+      "sortKey": "2022-02-213"
+    },
+    {
+      "id": "press-f3a0fa0b",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3143883/",
+      "title": "Új elnök a MEÖK élén Grácban",
+      "publisher": "ORF Magyarok",
+      "date": "2022-02-19",
+      "memberIds": [
+        "magyar-egyetemistak-es-oregdiakok-klubja-graz"
+      ],
+      "memberNames": [
+        "Magyar Egyetemisták és Öregdiákok Klubja"
+      ],
+      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
+      "summaryType": "source-context",
+      "evidenceSources": [
+        "member-organizations.json"
+      ],
+      "approval": "curated-source-evidence",
+      "institutionIds": [],
+      "institutionNames": [],
+      "pressEvidenceRefs": [
+        "data/member-news.json"
+      ],
+      "year": "2022",
+      "sortKey": "2022-02-193"
+    },
+    {
+      "id": "press-inst-efe1419a",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3143369/",
+      "title": "Megjelent a Bécsi Napló legfrissebb száma",
+      "publisher": "ORF Magyarok",
+      "date": "2022-02-16",
+      "summary": "Az ORF a magyar diaszpóra és közélet témáit feldolgozó új számról tudósít.",
+      "summaryType": "editorial-summary",
+      "approval": "curated-source-evidence",
+      "memberIds": [],
+      "memberNames": [],
+      "institutionIds": [
+        "becsi-naplo"
+      ],
+      "institutionNames": [
+        "Bécsi Napló"
+      ],
+      "pressEvidenceRefs": [
+        "data/institution-press-evidence.json"
+      ],
+      "relationByInstitution": {
+        "becsi-naplo": "direct-coverage"
+      },
+      "year": "2022",
+      "sortKey": "2022-02-163"
+    },
+    {
+      "id": "press-ced1d1c1",
+      "url": "https://rolunk.at/nepcsoportunk/feladatunk-hogy-a-kovetkezo-evszazadban-is-megmaradjon-a-magyar-nyelv-es-kultura-burgenlandban/",
+      "title": "Feladatunk, hogy a következő évszázadban is megmaradjon a magyar nyelv és kultúra Burgenlandban",
+      "publisher": "Rólunk.at",
+      "date": "2022-01-18",
+      "memberIds": [
+        "kozep-burgenlandi-magyar-kulturegyesulet"
+      ],
+      "memberNames": [
+        "Közép–Burgenlandi Magyar Kultúregyesület"
+      ],
+      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
+      "summaryType": "source-context",
+      "evidenceSources": [
+        "member-press-evidence.json"
+      ],
+      "approval": "curated-source-evidence",
+      "institutionIds": [],
+      "institutionNames": [],
+      "pressEvidenceRefs": [
+        "data/member-news.json"
+      ],
+      "year": "2022",
+      "sortKey": "2022-01-183"
+    },
+    {
+      "id": "press-39dcdcb3",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3177880/",
+      "title": "Népcsoporttanács látogatása",
+      "publisher": "ORF Magyarok",
+      "date": "2022",
+      "memberIds": [
+        "kalaka-club"
+      ],
+      "memberNames": [
+        "Kaláka Club"
+      ],
+      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
+      "summaryType": "source-context",
+      "evidenceSources": [
+        "member-press-evidence.json"
+      ],
+      "approval": "curated-source-evidence",
+      "institutionIds": [],
+      "institutionNames": [],
+      "pressEvidenceRefs": [
+        "data/member-news.json"
+      ],
+      "year": "2022",
+      "sortKey": "2022-00-001"
+    },
+    {
+      "id": "press-inst-3e03b5f1",
+      "url": "https://www.becsinaplo.eu/tok-fesztival-a-becsi-magyar-iskolaban",
+      "title": "Tök-fesztivál a Bécsi Magyar Iskolában",
+      "publisher": "Bécsi Napló",
+      "date": "2021-10-20",
+      "summary": "A Bécsi Magyar Iskola tevékenységét vagy történetét dokumentáló korábbi sajtó- és archív forrás.",
+      "summaryType": "editorial-summary",
+      "approval": "curated-source-evidence",
+      "memberIds": [],
+      "memberNames": [],
+      "institutionIds": [
+        "becsi-magyar-iskola"
+      ],
+      "institutionNames": [
+        "Bécsi Magyar Iskola"
+      ],
+      "pressEvidenceRefs": [
+        "data/institution-press-evidence.json"
+      ],
+      "relationByInstitution": {
+        "becsi-magyar-iskola": "direct-coverage"
+      },
+      "year": "2021",
+      "sortKey": "2021-10-203"
+    },
+    {
+      "id": "press-inst-fb9cbbad",
+      "url": "https://rolunk.at/fiatalok/nyari-taborok-meses-vilag/",
+      "title": "Nyári táborok: Mesés világ",
+      "publisher": "Rólunk.at",
+      "date": "2021-08-21",
+      "summary": "A Bécsi Magyar Iskola tevékenységét vagy történetét dokumentáló korábbi sajtó- és archív forrás.",
+      "summaryType": "editorial-summary",
+      "approval": "curated-source-evidence",
+      "memberIds": [],
+      "memberNames": [],
+      "institutionIds": [
+        "becsi-magyar-iskola"
+      ],
+      "institutionNames": [
+        "Bécsi Magyar Iskola"
+      ],
+      "pressEvidenceRefs": [
+        "data/institution-press-evidence.json"
+      ],
+      "relationByInstitution": {
+        "becsi-magyar-iskola": "direct-coverage"
+      },
+      "year": "2021",
+      "sortKey": "2021-08-213"
+    },
+    {
+      "id": "press-inst-42950fc8",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3114150/",
+      "title": "Készül a Bécsi Napló következő száma",
+      "publisher": "ORF Magyarok",
+      "date": "2021-07-25",
+      "summary": "A folyóirat szerkesztőségi munkájáról és a 2021-ben megnyílt online kiadásról.",
+      "summaryType": "editorial-summary",
+      "approval": "curated-source-evidence",
+      "memberIds": [],
+      "memberNames": [],
+      "institutionIds": [
+        "becsi-naplo"
+      ],
+      "institutionNames": [
+        "Bécsi Napló"
+      ],
+      "pressEvidenceRefs": [
+        "data/institution-press-evidence.json"
+      ],
+      "relationByInstitution": {
+        "becsi-naplo": "direct-coverage"
+      },
+      "year": "2021",
+      "sortKey": "2021-07-253"
+    },
+    {
+      "id": "press-f6624ec8",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3077055/",
+      "title": "Vezetői hétvégét tartottak a cserkészek az erdőben",
+      "publisher": "ORF Magyarok",
+      "date": "2020-11-21",
+      "memberIds": [
+        "cserkesz-72-wien"
+      ],
+      "memberNames": [
+        "72 sz. Széchenyi István cserkészcsapat"
+      ],
+      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
+      "summaryType": "source-context",
+      "evidenceSources": [
+        "member-organizations.json",
+        "member-press-evidence.json"
+      ],
+      "approval": "curated-source-evidence",
+      "institutionIds": [],
+      "institutionNames": [],
+      "pressEvidenceRefs": [
+        "data/member-news.json"
+      ],
+      "year": "2020",
+      "sortKey": "2020-11-213"
+    },
+    {
+      "id": "press-601a7026",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3053789/",
+      "title": "Ismét szervez programokat a tiroli magyarság",
+      "publisher": "ORF Magyarok",
+      "date": "2020-06-18",
+      "memberIds": [
+        "imeasz"
+      ],
+      "memberNames": [
+        "IMEASZ - Innsbrucki Magyar Egyetemisták és Akadémikusok Szövetsége"
+      ],
+      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
+      "summaryType": "source-context",
+      "evidenceSources": [
+        "member-press-evidence.json"
+      ],
+      "approval": "curated-source-evidence",
+      "institutionIds": [],
+      "institutionNames": [],
+      "pressEvidenceRefs": [
+        "data/member-news.json"
+      ],
+      "year": "2020",
+      "sortKey": "2020-06-183"
+    },
+    {
+      "id": "press-07bb7653",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3034569/",
+      "title": "Örökölt minták a mesékben",
+      "publisher": "ORF Magyarok",
+      "date": "2020-02-13",
+      "memberIds": [
+        "lean-in-femspace"
+      ],
+      "memberNames": [
+        "Lean in Femspace Külföldön újrakezdő magyar nők egyesülete"
+      ],
+      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
+      "summaryType": "source-context",
+      "evidenceSources": [
+        "member-organizations.json",
+        "member-press-evidence.json"
+      ],
+      "approval": "curated-source-evidence",
+      "institutionIds": [],
+      "institutionNames": [],
+      "pressEvidenceRefs": [
+        "data/member-news.json"
+      ],
+      "year": "2020",
+      "sortKey": "2020-02-133"
+    },
+    {
+      "id": "press-4e9a6284",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3068208/",
+      "title": "Családi piknik Innsbruckban",
+      "publisher": "ORF Magyarok",
+      "date": "2020",
+      "memberIds": [
+        "cserkesz-79-innsbruck",
+        "innsbrucki-magyar-katolikus-kozosseg"
+      ],
+      "memberNames": [
+        "79 sz. Dr. Kozma György SJ cserkészcsapat",
+        "Innsbrucki Magyar Katolikus Közösség"
+      ],
+      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
+      "summaryType": "source-context",
+      "evidenceSources": [
+        "member-organizations.json"
+      ],
+      "approval": "curated-source-evidence",
+      "institutionIds": [],
+      "institutionNames": [],
+      "pressEvidenceRefs": [
+        "data/member-news.json"
+      ],
+      "year": "2020",
+      "sortKey": "2020-00-001"
+    },
+    {
+      "id": "press-c0f22b89",
+      "url": "https://volksgruppen.orf.at/v2/magyarok/stories/2907261/",
+      "title": "50 éves lett a Felső-Ausztriai Magyarok Kultúregyesülete",
+      "publisher": "ORF Magyarok",
+      "date": "2018-04-16",
+      "memberIds": [
+        "felso-ausztriai-magyarok-kulturegyesulete"
+      ],
+      "memberNames": [
+        "Felső-Ausztriai Magyarok Kultúregyesülete"
+      ],
+      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
+      "summaryType": "source-context",
+      "evidenceSources": [
+        "member-organizations.json",
+        "member-press-evidence.json"
+      ],
+      "approval": "curated-source-evidence",
+      "institutionIds": [],
+      "institutionNames": [],
+      "pressEvidenceRefs": [
+        "data/member-news.json"
+      ],
+      "year": "2018",
+      "sortKey": "2018-04-163"
+    },
+    {
+      "id": "press-inst-86b02ffa",
+      "url": "https://www.becsinaplo.eu/newspaper_archive/bn2018-1.pdf",
+      "title": "Bécsi Napló XXXIX. évfolyam 1. szám – a BMI harmincéves jubileumi kötetéről",
+      "publisher": "Bécsi Napló",
+      "date": "2018",
+      "summary": "A Bécsi Magyar Iskola tevékenységét vagy történetét dokumentáló korábbi sajtó- és archív forrás.",
+      "summaryType": "editorial-summary",
+      "approval": "curated-source-evidence",
+      "memberIds": [],
+      "memberNames": [],
+      "institutionIds": [
+        "becsi-magyar-iskola"
+      ],
+      "institutionNames": [
+        "Bécsi Magyar Iskola"
+      ],
+      "pressEvidenceRefs": [
+        "data/institution-press-evidence.json"
+      ],
+      "relationByInstitution": {
+        "becsi-magyar-iskola": "direct-coverage"
+      },
+      "year": "2018",
+      "sortKey": "2018-00-001"
+    },
+    {
+      "id": "press-inst-de8b7833",
+      "url": "https://volksgruppen.orf.at/v2/magyarok/stories/2851263/",
+      "title": "Évzáró kirándulás a Bécsi Magyar Iskolával",
+      "publisher": "ORF Magyarok",
+      "date": "2017-06-26",
+      "summary": "A Bécsi Magyar Iskola tevékenységét vagy történetét dokumentáló korábbi sajtó- és archív forrás.",
+      "summaryType": "editorial-summary",
+      "approval": "curated-source-evidence",
+      "memberIds": [],
+      "memberNames": [],
+      "institutionIds": [
+        "becsi-magyar-iskola"
+      ],
+      "institutionNames": [
+        "Bécsi Magyar Iskola"
+      ],
+      "pressEvidenceRefs": [
+        "data/institution-press-evidence.json"
+      ],
+      "relationByInstitution": {
+        "becsi-magyar-iskola": "direct-coverage"
+      },
+      "year": "2017",
+      "sortKey": "2017-06-263"
+    },
+    {
+      "id": "press-7b21b876",
+      "url": "https://volksgruppen.orf.at/v2/magyarok/stories/2889845/",
+      "title": "Magyar misék, istentiszteletek Grazban",
+      "publisher": "ORF Magyarok",
+      "date": "2017",
+      "memberIds": [
+        "graci-magyar-katolikus-kozosseg"
+      ],
+      "memberNames": [
+        "Gráci Magyar Katolikus Közösség"
+      ],
+      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
+      "summaryType": "source-context",
+      "evidenceSources": [
+        "member-organizations.json"
+      ],
+      "approval": "curated-source-evidence",
+      "institutionIds": [],
+      "institutionNames": [],
+      "pressEvidenceRefs": [
+        "data/member-news.json"
+      ],
+      "year": "2017",
+      "sortKey": "2017-00-001"
+    },
+    {
+      "id": "press-inst-b635de6e",
+      "url": "https://www.korosiprogram.hu/hirek/harminc-eves-becsi-magyar-iskola-jubileumi-unnepseg",
+      "title": "Harminc éves a Bécsi Magyar Iskola – jubileumi ünnepség",
+      "publisher": "Kőrösi Csoma Sándor Program",
+      "date": "2017",
+      "summary": "A Bécsi Magyar Iskola tevékenységét vagy történetét dokumentáló korábbi sajtó- és archív forrás.",
+      "summaryType": "editorial-summary",
+      "approval": "curated-source-evidence",
+      "memberIds": [],
+      "memberNames": [],
+      "institutionIds": [
+        "becsi-magyar-iskola"
+      ],
+      "institutionNames": [
+        "Bécsi Magyar Iskola"
+      ],
+      "pressEvidenceRefs": [
+        "data/institution-press-evidence.json"
+      ],
+      "relationByInstitution": {
+        "becsi-magyar-iskola": "direct-coverage"
+      },
+      "year": "2017",
+      "sortKey": "2017-00-001"
+    },
+    {
+      "id": "press-inst-f1790eb5",
+      "url": "https://volksgruppen.orf.at/v2/magyarok/stories/2870888/",
+      "title": "30 éves a Bécsi Magyar Iskola",
+      "publisher": "ORF Magyarok",
+      "date": "2017",
+      "summary": "A Bécsi Magyar Iskola tevékenységét vagy történetét dokumentáló korábbi sajtó- és archív forrás.",
+      "summaryType": "editorial-summary",
+      "approval": "curated-source-evidence",
+      "memberIds": [],
+      "memberNames": [],
+      "institutionIds": [
+        "becsi-magyar-iskola"
+      ],
+      "institutionNames": [
+        "Bécsi Magyar Iskola"
+      ],
+      "pressEvidenceRefs": [
+        "data/institution-press-evidence.json"
+      ],
+      "relationByInstitution": {
+        "becsi-magyar-iskola": "direct-coverage"
+      },
+      "year": "2017",
+      "sortKey": "2017-00-001"
+    },
+    {
+      "id": "press-85f5aeec",
+      "url": "https://volksgruppen.orf.at/v2/magyarok/stories/2748287/",
+      "title": "Gráci Magyar Újság - az esztendő fordulójára",
+      "publisher": "ORF Magyarok",
+      "date": "2015-12-20",
+      "memberIds": [
+        "graci-magyar-katolikus-kozosseg"
+      ],
+      "memberNames": [
+        "Gráci Magyar Katolikus Közösség"
+      ],
+      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
+      "summaryType": "source-context",
+      "evidenceSources": [
+        "member-organizations.json"
+      ],
+      "approval": "curated-source-evidence",
+      "institutionIds": [],
+      "institutionNames": [],
+      "pressEvidenceRefs": [
+        "data/member-news.json"
+      ],
+      "year": "2015",
+      "sortKey": "2015-12-203"
+    },
+    {
+      "id": "press-a038b05b",
+      "url": "https://volksgruppen.orf.at/v2/magyarok/stories/2694653/",
+      "title": "Szent István bál Bécsben",
+      "publisher": "ORF Magyarok",
+      "date": "2015",
+      "memberIds": [
+        "szent-istvan-egylet"
+      ],
+      "memberNames": [
+        "Szent István Egylet"
+      ],
+      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
+      "summaryType": "source-context",
+      "evidenceSources": [
+        "member-organizations.json",
+        "member-press-evidence.json"
+      ],
+      "approval": "curated-source-evidence",
+      "institutionIds": [],
+      "institutionNames": [],
+      "pressEvidenceRefs": [
+        "data/member-news.json"
+      ],
+      "year": "2015",
+      "sortKey": "2015-00-001"
+    },
+    {
+      "id": "press-inst-191498c1",
+      "url": "https://www.becsinaplo.eu/newspaper_archive/bn2012-6.pdf",
+      "title": "Bécsi Napló 2012/6 – BMI karácsonyi ünnepély és Jókai Anna üzenete",
+      "publisher": "Bécsi Napló",
+      "date": "2012",
+      "summary": "A Bécsi Magyar Iskola tevékenységét vagy történetét dokumentáló korábbi sajtó- és archív forrás.",
+      "summaryType": "editorial-summary",
+      "approval": "curated-source-evidence",
+      "memberIds": [],
+      "memberNames": [],
+      "institutionIds": [
+        "becsi-magyar-iskola"
+      ],
+      "institutionNames": [
+        "Bécsi Magyar Iskola"
+      ],
+      "pressEvidenceRefs": [
+        "data/institution-press-evidence.json"
+      ],
+      "relationByInstitution": {
+        "becsi-magyar-iskola": "direct-coverage"
+      },
+      "year": "2012",
+      "sortKey": "2012-00-001"
+    },
+    {
+      "id": "press-inst-77c1a3d1",
+      "url": "https://www.becsinaplo.eu/newspaper_archive/bn2006-1.pdf",
+      "title": "Bécsi Napló XXVII. évfolyam 1. szám – Bécsi Magyar Iskola történeti összefoglaló",
+      "publisher": "Bécsi Napló",
+      "date": "2006",
+      "summary": "A Bécsi Magyar Iskola tevékenységét vagy történetét dokumentáló korábbi sajtó- és archív forrás.",
+      "summaryType": "editorial-summary",
+      "approval": "curated-source-evidence",
+      "memberIds": [],
+      "memberNames": [],
+      "institutionIds": [
+        "becsi-magyar-iskola"
+      ],
+      "institutionNames": [
+        "Bécsi Magyar Iskola"
+      ],
+      "pressEvidenceRefs": [
+        "data/institution-press-evidence.json"
+      ],
+      "relationByInstitution": {
+        "becsi-magyar-iskola": "direct-coverage"
+      },
+      "year": "2006",
+      "sortKey": "2006-00-001"
+    }
+  ]
+}
