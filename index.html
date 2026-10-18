@@ -235,13 +235,13 @@ fetch('member-organizations.json').then(r=>{if(!r.ok)throw new Error();return r.
 
 
 <script>
-(()=>{const root=document.getElementById('facebookFloat'),btn=document.getElementById('facebookToggle'),menu=document.getElementById('facebookMenu');if(!root||!btn||!menu)return;const setOpen=(v)=>{root.classList.toggle('open',v);btn.setAttribute('aria-expanded',String(v));menu.setAttribute('aria-hidden',String(!v));};btn.addEventListener('click',e=>{e.stopPropagation();setOpen(!root.classList.contains('open'));});document.addEventListener('click',e=>{if(!root.contains(e.target))setOpen(false);});document.addEventListener('keydown',e=>{if(e.key==='Escape')setOpen(false);});})();
+(()=>{const root=document.getElementById('facebookFloat'),btn=document.getElementById('facebookToggle'),menu=document.getElementById('facebookMenu');if(!root||!btn||!menu)return;const setOpen=(v)=>{root.classList.toggle('open',v);btn.setAttribute('aria-expanded',String(v));menu.setAttribute('aria-hidden',String(!v));};btn.addEventListener('click',e=>{e.stopPropagation();setOpen(!root.classList.contains('open'));});document.addEventListener('click',e=>{if(!root.contains(e.target))setOpen(false);});document.addEventListener('keydown',e=>{if(e.key==='Escape'&&root.classList.contains('open')){const focusInside=root.contains(document.activeElement);setOpen(false);if(focusInside)btn.focus();}});})();
 </script>
 
 
 <script>
 /* hamburger-menu-controller-20260903 */
-(()=>{const root=document.getElementById('siteMenu'),btn=document.getElementById('menuToggle'),panel=document.getElementById('menuPanel');if(!root||!btn||!panel)return;const setOpen=v=>{root.classList.toggle('open',v);btn.setAttribute('aria-expanded',String(v));panel.setAttribute('aria-hidden',String(!v));};btn.addEventListener('click',e=>{e.stopPropagation();setOpen(!root.classList.contains('open'));});panel.addEventListener('click',e=>{if(e.target.closest('a'))setOpen(false);});document.addEventListener('click',e=>{if(!root.contains(e.target))setOpen(false);});document.addEventListener('keydown',e=>{if(e.key==='Escape')setOpen(false);});})();
+(()=>{const root=document.getElementById('siteMenu'),btn=document.getElementById('menuToggle'),panel=document.getElementById('menuPanel');if(!root||!btn||!panel)return;const setOpen=v=>{root.classList.toggle('open',v);btn.setAttribute('aria-expanded',String(v));btn.setAttribute('aria-label',v?'Menü bezárása':'Menü megnyitása');panel.setAttribute('aria-hidden',String(!v));};btn.addEventListener('click',e=>{e.stopPropagation();setOpen(!root.classList.contains('open'));});panel.addEventListener('click',e=>{if(e.target.closest('a'))setOpen(false);});document.addEventListener('click',e=>{if(!root.contains(e.target))setOpen(false);});document.addEventListener('keydown',e=>{if(e.key==='Escape'&&root.classList.contains('open')){const focusInside=root.contains(document.activeElement);setOpen(false);if(focusInside)btn.focus();}});})();
 </script>
 
 <script src="member-calendar.js" defer></script>
