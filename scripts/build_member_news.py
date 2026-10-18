@@ -18,10 +18,8 @@ ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "data/member-news.json"
 DESCRIPTION = ("A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között "
                "tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.")
-ALLOWED_PUBLISHER_HOSTS = {
-    "volksgruppen.orf.at", "rolunk.at", "www.askoe-burgenland.at",
-    "naturpark.hu"
-}
+from press_sources import member_evidence_hosts
+ALLOWED_PUBLISHER_HOSTS = member_evidence_hosts()
 
 def read(path):
     return json.loads(Path(path).read_text(encoding="utf-8"))
