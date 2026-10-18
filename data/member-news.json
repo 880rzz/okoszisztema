@@ -3,11 +3,13 @@
   "publicationPolicy": "Only curated member press evidence; automated discovery candidates are excluded from public data.",
   "sourceFiles": [
     "member-organizations.json",
-    "member-press-evidence.json"
+    "member-press-evidence.json",
+    "data/member-news-editorial.json"
   ],
   "sourceDates": {
     "member-organizations.json": "2026-09-03",
-    "member-press-evidence.json": "2026-09-02"
+    "member-press-evidence.json": "2026-09-02",
+    "data/member-news-editorial.json": "2026-10-18"
   },
   "totalArticles": 68,
   "totalMemberAssociations": 78,
@@ -25,12 +27,13 @@
       "memberNames": [
         "SalzUng - Salzburgi Magyar Egyesület"
       ],
-      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
-      "summaryType": "source-context",
+      "summary": "A SalzUng negyedik alkalommal vitt ausztriai magyar gyerekeket a zánkai Erzsébet-táborba; a tudósítás a közös programokat és a tábor élményeit ismerteti.",
+      "summaryType": "editorial-summary",
       "evidenceSources": [
         "member-organizations.json"
       ],
-      "approval": "curated-source-evidence"
+      "approval": "curated-source-evidence",
+      "summaryVerifiedAt": "2026-10-18"
     },
     {
       "id": "press-197a31a9",
@@ -44,13 +47,14 @@
       "memberNames": [
         "Kaláka Club"
       ],
-      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
-      "summaryType": "source-context",
+      "summary": "Bécsben, a Stephansdomban Szent István-napi misét és kenyérszentelést tartottak a Kaláka Club és a Collegium Pazmanianum közreműködésével.",
+      "summaryType": "editorial-summary",
       "evidenceSources": [
         "member-organizations.json",
         "member-press-evidence.json"
       ],
-      "approval": "curated-source-evidence"
+      "approval": "curated-source-evidence",
+      "summaryVerifiedAt": "2026-10-18"
     },
     {
       "id": "press-cb7b12d9",
@@ -66,13 +70,14 @@
         "79 sz. Dr. Kozma György SJ cserkészcsapat",
         "IMIKE - Innsbrucki Magyar Ifjúsági és Kultúregyesület"
       ],
-      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
-      "summaryType": "source-context",
+      "summary": "Schenk Angyalka portréja a New York-i magyar gyermekévektől az innsbrucki cserkészetig és a magyar nyelvű közösségi oktatás szervezéséig vezet.",
+      "summaryType": "editorial-summary",
       "evidenceSources": [
         "member-organizations.json",
         "member-press-evidence.json"
       ],
-      "approval": "curated-source-evidence"
+      "approval": "curated-source-evidence",
+      "summaryVerifiedAt": "2026-10-18"
     },
     {
       "id": "press-9c2292c8",
@@ -106,12 +111,13 @@
       "memberNames": [
         "Napraforgók Bécsi Magyar Néptánc és Népzene Egyesület"
       ],
-      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
-      "summaryType": "source-context",
+      "summary": "A Bécsi Magyar Iskola nyári tanévzáró rendezvényeiről, a Napraforgócskák fellépéséről és a gyermekeknek szervezett közösségi programokról szól.",
+      "summaryType": "editorial-summary",
       "evidenceSources": [
         "member-press-evidence.json"
       ],
-      "approval": "curated-source-evidence"
+      "approval": "curated-source-evidence",
+      "summaryVerifiedAt": "2026-10-18"
     },
     {
       "id": "press-1f968f2d",
@@ -127,12 +133,13 @@
         "Közép–Burgenlandi Magyar Kultúregyesület",
         "Napraforgók Bécsi Magyar Néptánc és Népzene Egyesület"
       ],
-      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
-      "summaryType": "source-context",
+      "summary": "A Központi Szövetség felsőpulyai tisztújító közgyűléséről, a megválasztott vezetőségről és a diaszpóraszervezetek támogatási lehetőségeiről tudósít.",
+      "summaryType": "editorial-summary",
       "evidenceSources": [
         "member-organizations.json"
       ],
-      "approval": "curated-source-evidence"
+      "approval": "curated-source-evidence",
+      "summaryVerifiedAt": "2026-10-18"
     },
     {
       "id": "press-90936f79",
@@ -271,16 +278,35 @@
       "approval": "curated-source-evidence"
     },
     {
-      "id": "press-26ecef22",
-      "url": "https://volksgruppen.orf.at/magyarok/stories/3336275/",
-      "title": "Erős jelenlét 2026-ban is",
-      "publisher": "ORF Magyarok",
+      "id": "press-f7bc39e2",
+      "url": "https://rolunk.at/aktualis/nyari-taborok-ausztriaban-2026/",
+      "title": "Nyári táborok Ausztriában – 2026",
+      "publisher": "Rólunk.at",
       "date": "2026",
       "memberIds": [
-        "ausztriai-magyar-kutatointezet"
+        "femconnect-graz"
       ],
       "memberNames": [
-        "Ausztriai Magyar Kutatóintézet"
+        "FemConnect Graz"
+      ],
+      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
+      "summaryType": "source-context",
+      "evidenceSources": [
+        "member-press-evidence.json"
+      ],
+      "approval": "curated-source-evidence"
+    },
+    {
+      "id": "press-9e8c600b",
+      "url": "https://www.askoe-burgenland.at/de/boxnewsshow5-lac-geschriebenstein6",
+      "title": "LAC Geschriebenstein – Grenzenloses Erlebnis am Geschriebenstein",
+      "publisher": "ASKÖ Burgenland",
+      "date": "2026",
+      "memberIds": [
+        "irottko-sportegyesulet"
+      ],
+      "memberNames": [
+        "Írottkő Sportegyesület"
       ],
       "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
       "summaryType": "source-context",
@@ -309,40 +335,21 @@
       "approval": "curated-source-evidence"
     },
     {
-      "id": "press-9e8c600b",
-      "url": "https://www.askoe-burgenland.at/de/boxnewsshow5-lac-geschriebenstein6",
-      "title": "LAC Geschriebenstein – Grenzenloses Erlebnis am Geschriebenstein",
-      "publisher": "ASKÖ Burgenland",
+      "id": "press-26ecef22",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3336275/",
+      "title": "Erős jelenlét 2026-ban is",
+      "publisher": "ORF Magyarok",
       "date": "2026",
       "memberIds": [
-        "irottko-sportegyesulet"
+        "ausztriai-magyar-kutatointezet"
       ],
       "memberNames": [
-        "Írottkő Sportegyesület"
+        "Ausztriai Magyar Kutatóintézet"
       ],
       "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
       "summaryType": "source-context",
       "evidenceSources": [
         "member-organizations.json"
-      ],
-      "approval": "curated-source-evidence"
-    },
-    {
-      "id": "press-f7bc39e2",
-      "url": "https://rolunk.at/aktualis/nyari-taborok-ausztriaban-2026/",
-      "title": "Nyári táborok Ausztriában – 2026",
-      "publisher": "Rólunk.at",
-      "date": "2026",
-      "memberIds": [
-        "femconnect-graz"
-      ],
-      "memberNames": [
-        "FemConnect Graz"
-      ],
-      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
-      "summaryType": "source-context",
-      "evidenceSources": [
-        "member-press-evidence.json"
       ],
       "approval": "curated-source-evidence"
     },
@@ -364,6 +371,29 @@
         "member-organizations.json"
       ],
       "approval": "curated-source-evidence"
+    },
+    {
+      "id": "press-81c3163a",
+      "url": "https://rolunk.at/nepcsoportunk/talalunk-kozos-nevezot/",
+      "title": "Találunk közös nevezőt?",
+      "publisher": "Rólunk.at",
+      "date": "2025-11-26",
+      "memberIds": [
+        "napraforgok",
+        "svung"
+      ],
+      "memberNames": [
+        "Napraforgók Bécsi Magyar Néptánc és Népzene Egyesület",
+        "SVUNG Bécsi Magyarok Művészeti Egyesülete"
+      ],
+      "summary": "A 17. Kufstein-konferencián az ausztriai magyar tagegyesületek együttműködését, közös kihívásait és a közösségi identitás kérdéseit vitatták meg.",
+      "summaryType": "editorial-summary",
+      "evidenceSources": [
+        "member-organizations.json",
+        "member-press-evidence.json"
+      ],
+      "approval": "curated-source-evidence",
+      "summaryVerifiedAt": "2026-10-18"
     },
     {
       "id": "press-277d5eed",
@@ -512,28 +542,6 @@
       "memberNames": [
         "72 sz. Széchenyi István cserkészcsapat",
         "Nemzetközi Duna Filharmónia Baráti kör"
-      ],
-      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
-      "summaryType": "source-context",
-      "evidenceSources": [
-        "member-organizations.json",
-        "member-press-evidence.json"
-      ],
-      "approval": "curated-source-evidence"
-    },
-    {
-      "id": "press-81c3163a",
-      "url": "https://rolunk.at/nepcsoportunk/talalunk-kozos-nevezot/",
-      "title": "Találunk közös nevezőt?",
-      "publisher": "Rólunk.at",
-      "date": "2025",
-      "memberIds": [
-        "napraforgok",
-        "svung"
-      ],
-      "memberNames": [
-        "Napraforgók Bécsi Magyar Néptánc és Népzene Egyesület",
-        "SVUNG Bécsi Magyarok Művészeti Egyesülete"
       ],
       "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
       "summaryType": "source-context",
@@ -740,25 +748,6 @@
       "approval": "curated-source-evidence"
     },
     {
-      "id": "press-24de9c2a",
-      "url": "https://volksgruppen.orf.at/magyarok/stories/3242657/",
-      "title": "Jótékonysági koncert a traumatizált fiatalokért",
-      "publisher": "ORF Magyarok",
-      "date": "2024",
-      "memberIds": [
-        "nemzetkozi-duna-filharmonia-barati-kor"
-      ],
-      "memberNames": [
-        "Nemzetközi Duna Filharmónia Baráti kör"
-      ],
-      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
-      "summaryType": "source-context",
-      "evidenceSources": [
-        "member-press-evidence.json"
-      ],
-      "approval": "curated-source-evidence"
-    },
-    {
       "id": "press-03b2790e",
       "url": "https://volksgruppen.orf.at/magyarok/stories/3254863/",
       "title": "Lovagkereszt a magyarság szolgálatáért",
@@ -769,6 +758,25 @@
       ],
       "memberNames": [
         "IMEASZ - Innsbrucki Magyar Egyetemisták és Akadémikusok Szövetsége"
+      ],
+      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
+      "summaryType": "source-context",
+      "evidenceSources": [
+        "member-press-evidence.json"
+      ],
+      "approval": "curated-source-evidence"
+    },
+    {
+      "id": "press-24de9c2a",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3242657/",
+      "title": "Jótékonysági koncert a traumatizált fiatalokért",
+      "publisher": "ORF Magyarok",
+      "date": "2024",
+      "memberIds": [
+        "nemzetkozi-duna-filharmonia-barati-kor"
+      ],
+      "memberNames": [
+        "Nemzetközi Duna Filharmónia Baráti kör"
       ],
       "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
       "summaryType": "source-context",
@@ -997,25 +1005,6 @@
       "approval": "curated-source-evidence"
     },
     {
-      "id": "press-66448f30",
-      "url": "https://volksgruppen.orf.at/magyarok/stories/3201360/",
-      "title": "Leköszönt a főkonzul Innsbruckban",
-      "publisher": "ORF Magyarok",
-      "date": "2023",
-      "memberIds": [
-        "vorarlbergi-magyar-egyesulet"
-      ],
-      "memberNames": [
-        "Vorarlbergi Magyar Egyesület"
-      ],
-      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
-      "summaryType": "source-context",
-      "evidenceSources": [
-        "member-press-evidence.json"
-      ],
-      "approval": "curated-source-evidence"
-    },
-    {
       "id": "press-b879f732",
       "url": "https://volksgruppen.orf.at/magyarok/stories/3224341/",
       "title": "Új tagokat várnak a welsi mazsorettek",
@@ -1026,6 +1015,25 @@
       ],
       "memberNames": [
         "Felső-Ausztriai Magyarok Kultúregyesülete"
+      ],
+      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
+      "summaryType": "source-context",
+      "evidenceSources": [
+        "member-press-evidence.json"
+      ],
+      "approval": "curated-source-evidence"
+    },
+    {
+      "id": "press-66448f30",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3201360/",
+      "title": "Leköszönt a főkonzul Innsbruckban",
+      "publisher": "ORF Magyarok",
+      "date": "2023",
+      "memberIds": [
+        "vorarlbergi-magyar-egyesulet"
+      ],
+      "memberNames": [
+        "Vorarlbergi Magyar Egyesület"
       ],
       "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
       "summaryType": "source-context",

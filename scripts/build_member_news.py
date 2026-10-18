@@ -102,7 +102,7 @@ def gather(remote=None):
                         if isinstance(o, dict) and o.get("id")}
         for member_id, org_id in crosswalk.items():
             org = remote_by_id.get(org_id)
-            if not org or not org.get("profileVerifiedAt"):
+            if not org or not (org.get("profileVerifiedAt") or org.get("verifiedAt")):
                 continue
             if not any(isinstance(link,dict) and
                        link.get("umbrellaId") == "kozponti-szovetseg" and link.get("sourceUrl")
@@ -122,30 +122,59 @@ def gather(remote=None):
                     continue
                 add(member_id, item, "DORAPP:explicit-verified-pressMentions")
 
+    # Editorial summaries are attached only to URLs already present in the
+    # approved first-party press-evidence sources.
+    editorial = read(ROOT / "data/member-news-editorial.json")
+    editorial_by_key = {url_key(x.get("url")):x for x in editorial.get("items", [])}
+    assert len(editorial_by_key)==len(editorial.get("items", []))
+    prior_by_key = {}
+    if OUT.exists():
+        prior = read(OUT)
+        prior_by_key = {url_key(x.get("url")):x for x in prior.get("items", [])}
+
     rows = []
     for key, value in merged.items():
         ids = sorted(value["memberIds"])
-        rows.append({
+        edited = editorial_by_key.get(key, {})
+        previous = prior_by_key.get(key, {})
+        vetted = bool(edited.get("summary") and edited.get("sourceVerifiedAt"))
+        publisher_excerpt = (
+            previous.get("summaryType") == "publisher-excerpt"
+            and previous.get("summarySourceUrl") == value["url"]
+            and previous.get("sourceHeadingMatched") is True
+            and previous.get("summary")
+        )
+        summary = edited["summary"] if vetted else (previous["summary"] if publisher_excerpt else DESCRIPTION)
+        summary_type = "editorial-summary" if vetted else ("publisher-excerpt" if publisher_excerpt else "source-context")
+        row = {
             "id": stable_id(key),
             "url": value["url"],
             "title": value["title"],
             "publisher": value["publisher"],
-            "date": value["date"],
+            "date": edited.get("date") if vetted and edited.get("date") else value["date"],
             "memberIds": ids,
             "memberNames": [by_id[x]["name"] for x in ids],
-            "summary": DESCRIPTION,
-            "summaryType": "source-context",
+            "summary": summary,
+            "summaryType": summary_type,
             "evidenceSources": sorted(value["evidenceSources"]),
             "approval": "curated-source-evidence"
-        })
+        }
+        if vetted:
+            row["summaryVerifiedAt"] = edited["sourceVerifiedAt"]
+        elif publisher_excerpt:
+            row["summarySourceUrl"] = previous["summarySourceUrl"]
+            row["sourceHeadingMatched"] = True
+            row["summaryVerifiedAt"] = previous.get("summaryVerifiedAt", "")
+        rows.append(row)
     rows.sort(key=lambda x: (x["date"][:4], x["date"], x["title"].casefold()), reverse=True)
     return {
         "schemaVersion":1,
         "publicationPolicy":"Only curated member press evidence; automated discovery candidates are excluded from public data.",
-        "sourceFiles":["member-organizations.json","member-press-evidence.json"],
+        "sourceFiles":["member-organizations.json","member-press-evidence.json","data/member-news-editorial.json"],
         "sourceDates":{
             "member-organizations.json":directory.get("lastVerified"),
-            "member-press-evidence.json":source.get("lastResearched")
+            "member-press-evidence.json":source.get("lastResearched"),
+            "data/member-news-editorial.json":editorial.get("verifiedAt")
         },
         "totalArticles":len(rows),
         "totalMemberAssociations":sum(len(r["memberIds"]) for r in rows),

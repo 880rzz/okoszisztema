@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "policy": "Editorial one-sentence factual summaries after direct publisher-source inspection; not copied excerpts. Each exact URL and identity association must already be curated in the first-party federation evidence.",
+  "verifiedAt": "2026-10-18",
+  "items": [
+    {
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3368990/",
+      "summary": "A SalzUng negyedik alkalommal vitt ausztriai magyar gyerekeket a zánkai Erzsébet-táborba; a tudósítás a közös programokat és a tábor élményeit ismerteti.",
+      "sourceVerifiedAt": "2026-10-18"
+    },
+    {
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3368141/",
+      "summary": "Bécsben, a Stephansdomban Szent István-napi misét és kenyérszentelést tartottak a Kaláka Club és a Collegium Pazmanianum közreműködésével.",
+      "sourceVerifiedAt": "2026-10-18"
+    },
+    {
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3361160/",
+      "summary": "Schenk Angyalka portréja a New York-i magyar gyermekévektől az innsbrucki cserkészetig és a magyar nyelvű közösségi oktatás szervezéséig vezet.",
+      "sourceVerifiedAt": "2026-10-18"
+    },
+    {
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3359672/",
+      "summary": "A Bécsi Magyar Iskola nyári tanévzáró rendezvényeiről, a Napraforgócskák fellépéséről és a gyermekeknek szervezett közösségi programokról szól.",
+      "sourceVerifiedAt": "2026-10-18"
+    },
+    {
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3356526/",
+      "summary": "A Központi Szövetség felsőpulyai tisztújító közgyűléséről, a megválasztott vezetőségről és a diaszpóraszervezetek támogatási lehetőségeiről tudósít.",
+      "sourceVerifiedAt": "2026-10-18"
+    },
+    {
+      "url": "https://rolunk.at/nepcsoportunk/talalunk-kozos-nevezot/",
+      "summary": "A 17. Kufstein-konferencián az ausztriai magyar tagegyesületek együttműködését, közös kihívásait és a közösségi identitás kérdéseit vitatták meg.",
+      "date": "2025-11-26",
+      "sourceVerifiedAt": "2026-10-18"
+    }
+  ]
+}

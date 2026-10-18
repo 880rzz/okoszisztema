@@ -6,6 +6,7 @@ on:
 permissions:
   contents: write
   pull-requests: write
+  actions: write
 concurrency:
   group: federation-member-news-steward
   cancel-in-progress: false
@@ -30,9 +31,10 @@ jobs:
           path: ${{ runner.temp }}/member-press-candidates.json
           retention-days: 7
           if-no-files-found: error
-      - name: Refresh strictly approved press
+      - name: Refresh strictly approved press and source-backed descriptions
         run: |
           python3 scripts/build_member_news.py --dorapp "$RUNNER_TEMP/dorapp-organizations.json"
+          python3 scripts/enrich_member_news.py --limit 14 --shards 7
           python3 scripts/render_member_news.py
       - name: Run source, identity and code quality gates
         run: |
@@ -69,6 +71,36 @@ jobs:
           git add data/member-news.json index.html hirek/index.html
           git commit -m "chore(news): sync approved member press"
           git push --set-upstream origin "$BRANCH"
-          gh pr create --base main --head "$BRANCH" \
+          PR_URL=$(gh pr create --base main --head "$BRANCH" \
             --title 'chore(news): sync approved member press' \
-            --body 'Automatikus, forráskapuzott frissítés. A DORAPP jelöltlistája nem kerül a publikus fájlokba. Kizárólag explicit módon hitelesített médiaforrás, tagegyesületi megfeleltetés és sikeres tesztek szerepelnek. Ellenőrzött CI és konfliktusmentes jóváhagyás után vonható össze.'
+            --body 'Napi forráskapuzott cikkleírás- és jóváhagyott sajtófrissítés. DORAPP jelöltek kizárólag privát ellenőrzési artefaktumban. Csak sikeres CI és konfliktusmentes PR után automatikus összevonás.')
+          # GITHUB_TOKEN-initiated PR events do NOT trigger normal PR workflows.
+          # Use the explicit workflow_dispatch exception to execute the real CI.
+          NEW_SHA=$(git rev-parse HEAD)
+          gh workflow run validate-members.yml --ref "$BRANCH"
+          RUN_ID=""
+          for attempt in $(seq 1 30); do
+            RUN_ID=$(gh run list --workflow validate-members.yml --branch "$BRANCH" \
+              --event workflow_dispatch --limit 12 \
+              --json databaseId,headSha \
+              --jq ".[] | select(.headSha == \"$NEW_SHA\") | .databaseId" | head -n 1)
+            if [ -n "$RUN_ID" ]; then break; fi
+            sleep 10
+          done
+          if [ -z "$RUN_ID" ]; then
+            echo "::error::No exact-SHA CI run started. PR deliberately left open."
+            exit 1
+          fi
+          gh run watch "$RUN_ID" --exit-status --interval 10
+          PR_SHA=$(gh pr view "$PR_URL" --json headRefOid --jq .headRefOid)
+          if [ "$PR_SHA" != "$NEW_SHA" ]; then
+            echo "::error::PR head changed during validation; merge blocked."
+            exit 1
+          fi
+          MERGE_STATE=$(gh pr view "$PR_URL" --json mergeStateStatus --jq .mergeStateStatus)
+          if [ "$MERGE_STATE" != "CLEAN" ]; then
+            echo "::error::PR is not clean ($MERGE_STATE); merge blocked."
+            exit 1
+          fi
+          # Required checks / reviews remain enforced by the GitHub merge API.
+          gh pr merge "$PR_URL" --squash --delete-branch

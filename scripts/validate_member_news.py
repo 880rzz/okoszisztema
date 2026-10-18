@@ -21,6 +21,10 @@ def main():
     assert published.get("totalArticles")==len(articles)
     assert published.get("totalMemberAssociations")==sum(len(a["memberIds"]) for a in articles)
     assert published.get("coveredMembers")==len({m for a in articles for m in a["memberIds"]})
+    editorial=read("data/member-news-editorial.json")
+    editorial_map={x["url"]:x for x in editorial.get("items",[])}
+    assert len(editorial_map)==len(editorial.get("items",[]))
+    assert all(x.get("sourceVerifiedAt") and x.get("summary") for x in editorial_map.values())
     seen=set()
     for row in articles:
         assert row["approval"]=="curated-source-evidence",row.get("id")
@@ -28,7 +32,18 @@ def main():
             "member-organizations.json","member-press-evidence.json","DORAPP:explicit-verified-pressMentions"
         })
         assert row.get("title") and row.get("publisher") and row.get("summary")
-        assert row.get("summaryType") in ("source-context","verified-article-description")
+        assert row.get("summaryType") in ("source-context","editorial-summary","publisher-excerpt")
+        if row["summaryType"]=="publisher-excerpt":
+            assert row.get("summarySourceUrl")==row["url"] and row.get("sourceHeadingMatched") is True
+            assert row["summary"].startswith("„") and row["summary"].endswith("…”")
+            assert len(row["summary"].split())<=20
+            assert row.get("summaryVerifiedAt")
+        if row["url"] in editorial_map:
+            edited=editorial_map[row["url"]]
+            assert row["summaryType"]=="editorial-summary" and row["summary"]==edited["summary"]
+            assert row.get("summaryVerifiedAt")==edited["sourceVerifiedAt"]
+            if edited.get("date"):
+                assert row["date"]==edited["date"]
         u=urlsplit(row["url"])
         assert u.scheme=="https" and u.hostname in APPROVED and not u.username and not u.password,row.get("url")
         key=(u.netloc+u.path.rstrip("/")).lower()
@@ -40,6 +55,7 @@ def main():
         assert row["memberIds"] and len(row["memberNames"])==len(row["memberIds"])
         for member_id,member_name in zip(row["memberIds"],row["memberNames"]):
             assert member_id in known and member_name==known[member_id],member_id
+    assert set(editorial_map).issubset({a["url"] for a in articles})
     homepage=(ROOT/"index.html").read_text(encoding="utf-8")
     archive=(ROOT/"hirek/index.html").read_text(encoding="utf-8")
     sitemap=(ROOT/"sitemap.xml").read_text(encoding="utf-8")
