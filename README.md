@@ -60,3 +60,10 @@ A technikai és kutatási fájlok háttérforrások, nem a fő felhasználói na
 - Hálózati/CORS hiba esetén a `data/austria-events-snapshot.json` mentett, dátummal jelölt állapotát mutatja. Ezt a snapshotot időszakosan frissíteni kell; önmagában nem élő szinkron.
 - A tagszervezethez rendelt esemény csak egyértelműen egyeztetett `organizerId` alapján látható, név alapján történő automatikus találgatás nélkül.
 - A profil- és naptároldalak meglévő számlálóit, legal/AI-Trust rétegeit nem módosítja a frissítés.
+
+## Hírek – tagegyesületi sajtóarchívum
+
+- A főoldal Hírek fülén és a `hirek/` önálló oldalon csak a korábban kurált `member-press-evidence.json` és `member-organizations.json` sajtóhivatkozásai szerepelnek.
+- `data/member-news.json`: cím, kontextusjellegű rövid leírás, dátum (valós felbontásban), médium, tagszervezeti kapcsolatok, eredeti URL.
+- A `global-press-review-queue.json` DORAPP-jelöltadatok nem kerülnek automatikusan publikálásra. A napi felderítés elkülönített ellenőrzési csatornát használ.
+- A felület oldalbetöltéskor frissít, és nyitott lapon 30 percenként újratölti a jóváhagyott forrásadatot.

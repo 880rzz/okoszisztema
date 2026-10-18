@@ -1,0 +1,74 @@
+name: Daily member press discovery and vetted-news sync
+on:
+  schedule:
+    - cron: "23 5 * * *"
+  workflow_dispatch:
+permissions:
+  contents: write
+  pull-requests: write
+concurrency:
+  group: federation-member-news-steward
+  cancel-in-progress: false
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout canonical main
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Discover DORAPP press candidates (private review artifact only)
+        run: |
+          python3 scripts/collect_member_news_candidates.py \
+            --organizations-out "$RUNNER_TEMP/dorapp-organizations.json" \
+            --review-out "$RUNNER_TEMP/member-press-candidates.json"
+      - name: Save unverified findings outside the published site
+        uses: actions/upload-artifact@v4
+        with:
+          name: member-press-candidate-review
+          path: ${{ runner.temp }}/member-press-candidates.json
+          retention-days: 7
+          if-no-files-found: error
+      - name: Refresh strictly approved press
+        run: |
+          python3 scripts/build_member_news.py --dorapp "$RUNNER_TEMP/dorapp-organizations.json"
+          python3 scripts/render_member_news.py
+      - name: Run source, identity and code quality gates
+        run: |
+          python3 scripts/validate_member_news.py
+          python3 scripts/build_member_news.py --check
+          python3 scripts/validate_member_pages.py
+          node --check member-news.js
+          node --check member-calendar.js
+      - name: Detect meaningful approved changes
+        id: changed
+        shell: bash
+        run: |
+          if git diff --quiet -- data/member-news.json index.html hirek/index.html; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "No new approved content: candidate review is still recorded."
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Open evidence-preserving PR, never write to main
+        if: ${{ steps.changed.outputs.changed == 'true' }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          if gh pr list --state open --json title --jq '.[].title' | grep -Fxq 'chore(news): sync approved member press'; then
+            echo "::warning::An approved-news PR is already open. No duplicate or main write."
+            exit 0
+          fi
+          BRANCH="automation/member-news-$GITHUB_RUN_ID"
+          git switch -c "$BRANCH"
+          git config user.name "federation-news-steward[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/member-news.json index.html hirek/index.html
+          git commit -m "chore(news): sync approved member press"
+          git push --set-upstream origin "$BRANCH"
+          gh pr create --base main --head "$BRANCH" \
+            --title 'chore(news): sync approved member press' \
+            --body 'Automatikus, forráskapuzott frissítés. A DORAPP jelöltlistája nem kerül a publikus fájlokba. Kizárólag explicit módon hitelesített médiaforrás, tagegyesületi megfeleltetés és sikeres tesztek szerepelnek. Ellenőrzött CI és konfliktusmentes jóváhagyás után vonható össze.'

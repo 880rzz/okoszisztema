@@ -6,6 +6,16 @@ on:
       - "member-organizations.json"
       - "member-event-map.json"
       - "member-calendar.js"
+      - "member-news.js"
+      - "member-news.css"
+      - "data/member-news.json"
+      - "member-press-evidence.json"
+      - "hirek/**"
+      - "scripts/build_member_news.py"
+      - "scripts/render_member_news.py"
+      - "scripts/collect_member_news_candidates.py"
+      - "scripts/validate_member_news.py"
+      - ".github/workflows/daily-member-news.yml"
       - "member-profiles.css"
       - "tagszervezetek/**"
       - "data/austria-events-snapshot.json"
@@ -24,3 +34,8 @@ jobs:
       - uses: actions/checkout@v4
       - run: python3 scripts/validate_member_pages.py
       - run: node --check member-calendar.js
+      - run: node --check member-news.js
+      - run: python3 scripts/validate_member_news.py
+      - run: python3 scripts/build_member_news.py --check
+      - run: python3 scripts/render_member_news.py
+      - run: git diff --exit-code -- index.html hirek/index.html
