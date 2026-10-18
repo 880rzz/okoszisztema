@@ -153,12 +153,13 @@
       "memberNames": [
         "SalzUng - Salzburgi Magyar Egyesület"
       ],
-      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
-      "summaryType": "source-context",
+      "summary": "A SalzUng magyar minikönyvtára és újraindított könyvklubja közösségi találkozókat és könyvcserét kínál a salzburgi magyaroknak.",
+      "summaryType": "editorial-summary",
       "evidenceSources": [
         "member-organizations.json"
       ],
-      "approval": "curated-source-evidence"
+      "approval": "curated-source-evidence",
+      "summaryVerifiedAt": "2026-10-18"
     },
     {
       "id": "press-555e9213",
@@ -172,13 +173,14 @@
       "memberNames": [
         "FemConnect Graz"
       ],
-      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
-      "summaryType": "source-context",
+      "summary": "A FemConnect Graz szakértői beszélgetésekkel, városi sétákkal és kulturális programokkal, köztük bábjátékkal kapcsolja össze a helyi magyar közösséget.",
+      "summaryType": "editorial-summary",
       "evidenceSources": [
         "member-organizations.json",
         "member-press-evidence.json"
       ],
-      "approval": "curated-source-evidence"
+      "approval": "curated-source-evidence",
+      "summaryVerifiedAt": "2026-10-18"
     },
     {
       "id": "press-ef6af4a4",
@@ -192,13 +194,14 @@
       "memberNames": [
         "Grázi Magyar Egyesület"
       ],
-      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
-      "summaryType": "source-context",
+      "summary": "A Grazi Magyar Egyesület 137. magyar báljáról tudósít: a telt házas rendezvényen mintegy 350 vendég vett részt, csárdással és néptánccal.",
+      "summaryType": "editorial-summary",
       "evidenceSources": [
         "member-organizations.json",
         "member-press-evidence.json"
       ],
-      "approval": "curated-source-evidence"
+      "approval": "curated-source-evidence",
+      "summaryVerifiedAt": "2026-10-18"
     },
     {
       "id": "press-da084944",
@@ -212,13 +215,14 @@
       "memberNames": [
         "BIM - Bécsi Irodalmi Műhely"
       ],
-      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
-      "summaryType": "source-context",
+      "summary": "Az Egy sima – Egy fordított bécsi könyvklub a BIM műhelyéből indult; résztvevői havonta találkoznak kortárs magyar és fordított irodalom megvitatására.",
+      "summaryType": "editorial-summary",
       "evidenceSources": [
         "member-organizations.json",
         "member-press-evidence.json"
       ],
-      "approval": "curated-source-evidence"
+      "approval": "curated-source-evidence",
+      "summaryVerifiedAt": "2026-10-18"
     },
     {
       "id": "press-1550e113",
@@ -232,12 +236,13 @@
       "memberNames": [
         "SVUNG Bécsi Magyarok Művészeti Egyesülete"
       ],
-      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
-      "summaryType": "source-context",
+      "summary": "A SVUNG roma népmesékből inspirálódott Az aranyrózsa című mesejátékával Felsőőrben is fellép; az előadás kifejezetten gyermekeknek szól.",
+      "summaryType": "editorial-summary",
       "evidenceSources": [
         "member-organizations.json"
       ],
-      "approval": "curated-source-evidence"
+      "approval": "curated-source-evidence",
+      "summaryVerifiedAt": "2026-10-18"
     },
     {
       "id": "press-63e71ad9",
