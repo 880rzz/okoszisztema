@@ -8,7 +8,8 @@ from pathlib import Path
 from urllib.parse import urlsplit
 
 ROOT=Path(__file__).resolve().parents[1]
-APPROVED={"volksgruppen.orf.at","rolunk.at","www.askoe-burgenland.at","naturpark.hu"}
+from press_sources import member_evidence_hosts
+APPROVED=member_evidence_hosts()
 def read(p):return json.loads((ROOT/p).read_text(encoding="utf-8"))
 def main():
     directory=read("member-organizations.json")

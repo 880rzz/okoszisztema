@@ -8,11 +8,11 @@
   ],
   "sourceDates": {
     "member-organizations.json": "2026-09-03",
-    "member-press-evidence.json": "2026-09-02",
+    "member-press-evidence.json": "2026-10-18",
     "data/member-news-editorial.json": "2026-10-18"
   },
-  "totalArticles": 68,
-  "totalMemberAssociations": 78,
+  "totalArticles": 80,
+  "totalMemberAssociations": 92,
   "coveredMembers": 29,
   "items": [
     {
@@ -31,6 +31,26 @@
       "summaryType": "editorial-summary",
       "evidenceSources": [
         "member-organizations.json"
+      ],
+      "approval": "curated-source-evidence",
+      "summaryVerifiedAt": "2026-10-18"
+    },
+    {
+      "id": "press-12f8fb5f34c9a5",
+      "url": "https://rolunk.at/aktualis/szent-istvan-unnepe-becsben-video/",
+      "title": "Szent István ünnepe Bécsben – VIDEÓ",
+      "publisher": "Rólunk.at",
+      "date": "2026-08-27",
+      "memberIds": [
+        "kalaka-club"
+      ],
+      "memberNames": [
+        "Kaláka Club"
+      ],
+      "summary": "A Kaláka Club és a Collegium Pazmaneum szervezésében több száz magyar ünnepelte Szent István napját a Stephansdomban.",
+      "summaryType": "editorial-summary",
+      "evidenceSources": [
+        "member-press-evidence.json"
       ],
       "approval": "curated-source-evidence",
       "summaryVerifiedAt": "2026-10-18"
@@ -120,6 +140,26 @@
       "summaryVerifiedAt": "2026-10-18"
     },
     {
+      "id": "press-2b831cf5d85ae6",
+      "url": "https://www.bvz.at/Nachrichten/generalversammlung-ungarische-vereinsobleute-aus-ganz-oesterreich-tagten-in-oberpullendorf-8580.html",
+      "title": "Ungarische Vereinsobleute aus ganz Österreich tagten in Oberpullendorf",
+      "publisher": "BVZ",
+      "date": "2026-06-07",
+      "memberIds": [
+        "kozep-burgenlandi-magyar-kulturegyesulet"
+      ],
+      "memberNames": [
+        "Közép–Burgenlandi Magyar Kultúregyesület"
+      ],
+      "summary": "A BVZ a felsőpulyai magyar egyesületek közgyűléséről tudósított, amelynek helyi házigazdája a Közép-burgenlandi Magyar Kultúregyesület volt.",
+      "summaryType": "editorial-summary",
+      "evidenceSources": [
+        "member-press-evidence.json"
+      ],
+      "approval": "curated-source-evidence",
+      "summaryVerifiedAt": "2026-10-18"
+    },
+    {
       "id": "press-1f968f2d",
       "url": "https://volksgruppen.orf.at/magyarok/stories/3356526/",
       "title": "Központi szövetség éves közgyűlése",
@@ -137,6 +177,26 @@
       "summaryType": "editorial-summary",
       "evidenceSources": [
         "member-organizations.json"
+      ],
+      "approval": "curated-source-evidence",
+      "summaryVerifiedAt": "2026-10-18"
+    },
+    {
+      "id": "press-9cd32999e23883",
+      "url": "https://rolunk.at/nepcsoportunk/eloszor-tartott-tisztujito-kozgyulest-a-kozponti-szovetseg-felsopulyan/",
+      "title": "Először tartott tisztújító közgyűlést a Központi Szövetség Felsőpulyán",
+      "publisher": "Rólunk.at",
+      "date": "2026-06-02",
+      "memberIds": [
+        "kozep-burgenlandi-magyar-kulturegyesulet"
+      ],
+      "memberNames": [
+        "Közép–Burgenlandi Magyar Kultúregyesület"
+      ],
+      "summary": "A Közép-burgenlandi Magyar Kultúregyesület házigazdaként működött közre a Központi Szövetség felsőpulyai közgyűlésén.",
+      "summaryType": "editorial-summary",
+      "evidenceSources": [
+        "member-press-evidence.json"
       ],
       "approval": "curated-source-evidence",
       "summaryVerifiedAt": "2026-10-18"
@@ -420,6 +480,48 @@
       "approval": "curated-source-evidence"
     },
     {
+      "id": "press-6bdc4ee9345bf8",
+      "url": "https://rolunk.at/kultura/burgenlandi-neptancosok-a-csillag-szuletik-szinpadan/",
+      "title": "Burgenlandi néptáncosok a Csillag Születik színpadán",
+      "publisher": "Rólunk.at",
+      "date": "2025-11-05",
+      "memberIds": [
+        "alsoori-magyar-kultur-es-tancegyesulet",
+        "kozep-burgenlandi-magyar-kulturegyesulet"
+      ],
+      "memberNames": [
+        "Alsóőri Magyar Kultúr- és Táncegyesület",
+        "Közép–Burgenlandi Magyar Kultúregyesület"
+      ],
+      "summary": "A közép-burgenlandi Csalafinta és az alsóőri táncosok Csalafinta Pacsirta néven közös koreográfiával jelentkeztek a tehetségkutatóba.",
+      "summaryType": "editorial-summary",
+      "evidenceSources": [
+        "member-press-evidence.json"
+      ],
+      "approval": "curated-source-evidence",
+      "summaryVerifiedAt": "2026-10-18"
+    },
+    {
+      "id": "press-9afc08069b229c",
+      "url": "https://rolunk.at/aktualis/a-magyarsanak-nincsenek-hatarai-ulesezett-a-magyar-diaszpora-tanacs/",
+      "title": "A magyarságnak nincsenek határai – ülésezett a Magyar Diaszpóra Tanács",
+      "publisher": "Rólunk.at",
+      "date": "2025-10-20",
+      "memberIds": [
+        "kalaka-club"
+      ],
+      "memberNames": [
+        "Kaláka Club"
+      ],
+      "summary": "Az ausztriai magyar képviseletben a Kaláka Club elnöke, Wurst Erzsébet is részt vett a Magyar Diaszpóra Tanács plenáris ülésén.",
+      "summaryType": "editorial-summary",
+      "evidenceSources": [
+        "member-press-evidence.json"
+      ],
+      "approval": "curated-source-evidence",
+      "summaryVerifiedAt": "2026-10-18"
+    },
+    {
       "id": "press-587f74ac",
       "url": "https://volksgruppen.orf.at/magyarok/stories/3324528/",
       "title": "TV-riport a 10 éves SVUNG-ról",
@@ -497,6 +599,26 @@
       "approval": "curated-source-evidence"
     },
     {
+      "id": "press-77ca33e8d45610",
+      "url": "https://rolunk.at/kultura/a-svung-fondujeben-mindenki-sajt/",
+      "title": "A Svung Fondüjében mindenki sajt",
+      "publisher": "Rólunk.at",
+      "date": "2025-06-12",
+      "memberIds": [
+        "svung"
+      ],
+      "memberNames": [
+        "SVUNG Bécsi Magyarok Művészeti Egyesülete"
+      ],
+      "summary": "A Svung Bécsi Magyar Színház Fondü című vígjátékának bemutatójáról és a társulat vezetőjével készült beszélgetésről.",
+      "summaryType": "editorial-summary",
+      "evidenceSources": [
+        "member-press-evidence.json"
+      ],
+      "approval": "curated-source-evidence",
+      "summaryVerifiedAt": "2026-10-18"
+    },
+    {
       "id": "press-4022293b",
       "url": "https://volksgruppen.orf.at/magyarok/stories/3307647/",
       "title": "25 éves az egyesületi magyaroktatás Felső-Ausztriában",
@@ -514,6 +636,68 @@
         "member-organizations.json"
       ],
       "approval": "curated-source-evidence"
+    },
+    {
+      "id": "press-3772dee3a46332",
+      "url": "https://rolunk.at/kultura/legeny-a-jaras-leany-a-varas-dokumentumfilm-a-tanchazetikettrol/",
+      "title": "Legény a járás, leány a várás – dokumentumfilm a táncházetikettről",
+      "publisher": "Rólunk.at",
+      "date": "2025-04-24",
+      "memberIds": [
+        "napraforgok"
+      ],
+      "memberNames": [
+        "Napraforgók Bécsi Magyar Néptánc és Népzene Egyesület"
+      ],
+      "summary": "A Napraforgók Néptáncegyüttes táncházában Redő Júlia dokumentumfilmjét vetítették, majd a Romungro zenéjére táncoltak.",
+      "summaryType": "editorial-summary",
+      "evidenceSources": [
+        "member-press-evidence.json"
+      ],
+      "approval": "curated-source-evidence",
+      "summaryVerifiedAt": "2026-10-18"
+    },
+    {
+      "id": "press-17854b604b7df2",
+      "url": "https://rolunk.at/aktualis/viii-hetvegi-magyar-iskolak-talalkozoja/",
+      "title": "VIII. Hétvégi Magyar Iskolák Találkozója",
+      "publisher": "Rólunk.at",
+      "date": "2025-04-17",
+      "memberIds": [
+        "kalaka-club",
+        "salzung"
+      ],
+      "memberNames": [
+        "Kaláka Club",
+        "SalzUng - Salzburgi Magyar Egyesület"
+      ],
+      "summary": "A diaszpóra oktatási konferenciáján a Bécsi Magyar Iskola, a SalzUng Egyesület és a Kaláka Club képviselői is részt vettek.",
+      "summaryType": "editorial-summary",
+      "evidenceSources": [
+        "member-press-evidence.json"
+      ],
+      "approval": "curated-source-evidence",
+      "summaryVerifiedAt": "2026-10-18"
+    },
+    {
+      "id": "press-0ebd78a97d626d",
+      "url": "https://rolunk.at/nepcsoportunk/egy-szinpadon-a-vilag-magyarjai-minden-magyarok-tanca-a-tanchaztalalkozon/",
+      "title": "Egy színpadon a világ magyarjai – Minden Magyarok Tánca a Táncháztalálkozón",
+      "publisher": "Rólunk.at",
+      "date": "2025-04-17",
+      "memberIds": [
+        "napraforgok"
+      ],
+      "memberNames": [
+        "Napraforgók Bécsi Magyar Néptánc és Népzene Egyesület"
+      ],
+      "summary": "A Napraforgók és más ausztriai magyar táncosok Budapesten a Minden Magyarok Tánca közös produkciójában szerepeltek.",
+      "summaryType": "editorial-summary",
+      "evidenceSources": [
+        "member-press-evidence.json"
+      ],
+      "approval": "curated-source-evidence",
+      "summaryVerifiedAt": "2026-10-18"
     },
     {
       "id": "press-5f0ad09e",
@@ -656,6 +840,26 @@
       "approval": "curated-source-evidence"
     },
     {
+      "id": "press-08996b863f2332",
+      "url": "https://www.meinbezirk.at/oberpullendorf/c-lokales/freude-an-der-ungarischen-kultur-in-oberpullendorf_a6881908",
+      "title": "Freude an der ungarischen Kultur in Oberpullendorf",
+      "publisher": "MeinBezirk.at",
+      "date": "2024-09-06",
+      "memberIds": [
+        "kozep-burgenlandi-magyar-kulturegyesulet"
+      ],
+      "memberNames": [
+        "Közép–Burgenlandi Magyar Kultúregyesület"
+      ],
+      "summary": "A térségi lap a felsőpulyai magyar kultúregyesület nyitott közösségi délutánjait és rendszeres táncos, énekes programjait mutatta be.",
+      "summaryType": "editorial-summary",
+      "evidenceSources": [
+        "member-press-evidence.json"
+      ],
+      "approval": "curated-source-evidence",
+      "summaryVerifiedAt": "2026-10-18"
+    },
+    {
       "id": "press-c0685d7a",
       "url": "https://volksgruppen.orf.at/magyarok/stories/3269351/",
       "title": "Szent István-ünnep Vorarlbergben",
@@ -713,6 +917,26 @@
         "member-press-evidence.json"
       ],
       "approval": "curated-source-evidence"
+    },
+    {
+      "id": "press-7365a6f3b898fd",
+      "url": "https://www.meinbezirk.at/oberpullendorf/c-leute/ausstellungseroeffnung-resz-maurer-traditionelle-ungarische-schnitzkunst_a6749564",
+      "title": "Ausstellungseröffnung Resző Maurer – traditionelle ungarische Schnitzkunst",
+      "publisher": "MeinBezirk.at",
+      "date": "2024-06-16",
+      "memberIds": [
+        "kozep-burgenlandi-magyar-kulturegyesulet"
+      ],
+      "memberNames": [
+        "Közép–Burgenlandi Magyar Kultúregyesület"
+      ],
+      "summary": "A Közép-burgenlandi Magyar Kultúregyesület Resző Maurer faragóművész alkotásaiból rendezett kiállítást Felsőpulyán.",
+      "summaryType": "editorial-summary",
+      "evidenceSources": [
+        "member-press-evidence.json"
+      ],
+      "approval": "curated-source-evidence",
+      "summaryVerifiedAt": "2026-10-18"
     },
     {
       "id": "press-68661e6e",
@@ -1283,6 +1507,26 @@
         "member-organizations.json"
       ],
       "approval": "curated-source-evidence"
+    },
+    {
+      "id": "press-e45086e36e7f1c",
+      "url": "https://www.meinbezirk.at/graz/c-lokales/ein-tanzhaz-im-brauhaus-puntigam_a3145776",
+      "title": "Ein Tanzhaz im Brauhaus Puntigam",
+      "publisher": "MeinBezirk.at",
+      "date": "2019-01-18",
+      "memberIds": [
+        "grazi-magyar-egyesulet"
+      ],
+      "memberNames": [
+        "Grázi Magyar Egyesület"
+      ],
+      "summary": "A MeinBezirk a Grazi Magyar Egyesület 131. magyar báljáról számolt be, amelyet hagyományosan a Brauhaus Puntigamban tartottak.",
+      "summaryType": "editorial-summary",
+      "evidenceSources": [
+        "member-press-evidence.json"
+      ],
+      "approval": "curated-source-evidence",
+      "summaryVerifiedAt": "2026-10-18"
     },
     {
       "id": "press-c0f22b89",

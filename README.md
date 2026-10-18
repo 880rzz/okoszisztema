@@ -67,3 +67,15 @@ A technikai és kutatási fájlok háttérforrások, nem a fő felhasználói na
 - `data/member-news.json`: cím, kontextusjellegű rövid leírás, dátum (valós felbontásban), médium, tagszervezeti kapcsolatok, eredeti URL.
 - A `global-press-review-queue.json` DORAPP-jelöltadatok nem kerülnek automatikusan publikálásra. A napi felderítés elkülönített ellenőrzési csatornát használ.
 - A felület oldalbetöltéskor frissít, és nyitott lapon 30 percenként újratölti a jóváhagyott forrásadatot.
+
+
+## Többforrású osztrák sajtóarchívum – 2026. október 18.
+
+- A központi éves archívum a **29 hivatalos tagegyesület** és **7 intézményi/projekt-egység** ellenőrzött forráshivatkozásait fogja össze.
+- Egy médiacikk csak **egyszer** jelenik meg a hírfolyamban, de minden igazoltan érintett szervezet éves listáján feltüntethető.
+- Sajtóforrások: **Rólunk.at, ORF Magyarok, BVZ, MeinBezirk.at**, valamint osztrák regionális és országos kiadók. Központi kiadói nyilvántartás: data/press-source-registry.json.
+- A kiadói domain jelenléte **nem publikálási jóváhagyás**. Pontos cím, publikálási dátum, eredeti cikk-URL, ténybeli intézményi/szervezeti kapcsolat és bizonyíték szükséges. A saját sajtóközlemény vagy a MeinBezirk közösségi beküldése nem automatikusan független tudósítás.
+- A napi Austrian Multi-Source Press Discovery az egyesületeket ötnapos ciklusban, a hét intézményt naponta keresési jelöltként ellenőrzi. Google News RSS találatok csak **GitHub Actions-felülvizsgálati artefaktumba** kerülnek. Az RSS-link nem az eredeti cikk-URL.
+- Kurált forrásállományok: member-organizations.json, member-press-evidence.json, data/member-news-editorial.json és data/institution-press-evidence.json. Generátorok: scripts/build_member_news.py, scripts/build_ecosystem_press.py, scripts/render_ecosystem_press.py.
+- A főoldal mindig **legújabbtól a legrégebbiig** sorolja a jóváhagyott cikkeket. Részlegesen ismert év/hónap nem alakítható át kitalált naptári nappá.
+- Közzététel csak branch → PR → teljes CI → konfliktusmentes merge → Pages-deploy útvonalon történik. Keresési hiba nem jelenti azt, hogy nincs új sajtómegjelenés.

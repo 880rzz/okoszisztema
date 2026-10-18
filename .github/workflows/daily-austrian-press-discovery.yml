@@ -1,0 +1,38 @@
+name: Austrian Multi-Source Press Discovery
+on:
+  schedule:
+    - cron: "17 6 * * *"
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: austrian-multisource-press-discovery
+  cancel-in-progress: false
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate candidate-only research boundary
+        run: python3 scripts/test_austrian_press_discovery.py
+      - name: Search Rólunk.at, ORF, BVZ, MeinBezirk and other Austrian media
+        id: discover
+        continue-on-error: true
+        shell: bash
+        run: |
+          python3 scripts/discover_austrian_press.py \
+            --output "$RUNNER_TEMP/austrian-press-candidates.json" --days 90
+      - name: Keep findings only as a research artifact, never publish in Pages
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: austrian-media-review-candidates
+          path: ${{ runner.temp }}/austrian-press-candidates.json
+          if-no-files-found: warn
+          retention-days: 14
+      - name: Raise explicit failure if upstream press search was incomplete
+        if: steps.discover.outcome == 'failure'
+        run: |
+          echo "::error::At least one publisher search failed; see the artifact's failedQueries. Zero verified publication from failed sources."
+          exit 1

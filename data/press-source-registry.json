@@ -1,0 +1,141 @@
+{
+  "schemaVersion": 1,
+  "lastReviewed": "2026-10-18",
+  "purpose": "Media domain discovery and approved evidence validation. Being on this list does not prove that a news candidate matches any member; content and identity checks remain mandatory.",
+  "publishers": [
+    {
+      "host": "rolunk.at",
+      "name": "Rólunk.at",
+      "role": "Austrian Hungarian minority editorial",
+      "discovery": true,
+      "memberEvidence": true,
+      "metadata": true
+    },
+    {
+      "host": "volksgruppen.orf.at",
+      "name": "ORF Magyarok",
+      "role": "Austrian public service minority media",
+      "discovery": true,
+      "memberEvidence": true,
+      "metadata": true
+    },
+    {
+      "host": "burgenland.orf.at",
+      "name": "ORF Burgenland",
+      "role": "Austrian public broadcaster regional editorial",
+      "discovery": true,
+      "memberEvidence": true,
+      "metadata": true
+    },
+    {
+      "host": "www.meinbezirk.at",
+      "name": "MeinBezirk.at",
+      "role": "Austrian regional media; community-submitted contributions need author classification",
+      "discovery": true,
+      "memberEvidence": true,
+      "metadata": true
+    },
+    {
+      "host": "www.bvz.at",
+      "name": "Burgenländische Volkszeitung",
+      "role": "Austrian regional newspaper",
+      "discovery": true,
+      "memberEvidence": true,
+      "metadata": true
+    },
+    {
+      "host": "www.kurier.at",
+      "name": "Kurier",
+      "role": "Austrian newspaper",
+      "discovery": true,
+      "memberEvidence": true,
+      "metadata": false
+    },
+    {
+      "host": "kurier.at",
+      "name": "Kurier",
+      "role": "Austrian newspaper",
+      "discovery": true,
+      "memberEvidence": true,
+      "metadata": false
+    },
+    {
+      "host": "www.derstandard.at",
+      "name": "Der Standard",
+      "role": "Austrian newspaper",
+      "discovery": true,
+      "memberEvidence": true,
+      "metadata": false
+    },
+    {
+      "host": "www.diepresse.com",
+      "name": "Die Presse",
+      "role": "Austrian newspaper",
+      "discovery": true,
+      "memberEvidence": true,
+      "metadata": false
+    },
+    {
+      "host": "www.kleinezeitung.at",
+      "name": "Kleine Zeitung",
+      "role": "Austrian regional/national newspaper",
+      "discovery": true,
+      "memberEvidence": true,
+      "metadata": false
+    },
+    {
+      "host": "www.sn.at",
+      "name": "Salzburger Nachrichten",
+      "role": "Austrian newspaper",
+      "discovery": true,
+      "memberEvidence": true,
+      "metadata": false
+    },
+    {
+      "host": "www.ots.at",
+      "name": "APA-OTS",
+      "role": "Austrian press release distributor; PR is NOT independent editorial coverage",
+      "discovery": true,
+      "memberEvidence": true,
+      "metadata": false
+    },
+    {
+      "host": "www.becsinaplo.eu",
+      "name": "Bécsi Napló historical",
+      "role": "Austrian Hungarian community magazine historical press archive",
+      "discovery": false,
+      "memberEvidence": true,
+      "metadata": false
+    },
+    {
+      "host": "www.becsinaplo.at",
+      "name": "Bécsi Napló",
+      "role": "Austrian Hungarian community press",
+      "discovery": true,
+      "memberEvidence": true,
+      "metadata": false
+    },
+    {
+      "host": "www.askoe-burgenland.at",
+      "name": "ASKÖ Burgenland",
+      "role": "Austrian sport association publication / supporting sources",
+      "discovery": false,
+      "memberEvidence": true,
+      "metadata": false
+    },
+    {
+      "host": "naturpark.hu",
+      "name": "Naturpark",
+      "role": "Historical third-party source in existing curated registry",
+      "discovery": false,
+      "memberEvidence": true,
+      "metadata": false
+    }
+  ],
+  "controls": [
+    "Discovery candidates are not published until a direct source URL, article date, organization identity, relationship type, and editorial relevance are verified.",
+    "A media title is never used to infer official federation membership.",
+    "Self-published community posts and press releases must not be described as independent newsroom coverage.",
+    "Normalize URLs and deduplicate articles across multiple association references."
+  ]
+}

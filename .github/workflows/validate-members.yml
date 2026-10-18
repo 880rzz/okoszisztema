@@ -9,6 +9,11 @@ on:
       - "member-news.js"
       - "member-news.css"
       - "data/member-news.json"
+      - "data/press-source-registry.json"
+      - "scripts/press_sources.py"
+      - "scripts/discover_austrian_press.py"
+      - "scripts/test_austrian_press_discovery.py"
+      - ".github/workflows/daily-austrian-press-discovery.yml"
       - "data/institutions.json"
       - "data/institution-press-evidence.json"
       - "data/ecosystem-press.json"
@@ -46,6 +51,7 @@ jobs:
       - run: node --check member-calendar.js
       - run: node --check member-news.js
       - run: python3 scripts/test_member_news_enrichment.py
+      - run: python3 scripts/test_austrian_press_discovery.py
       - run: python3 scripts/validate_member_news.py
       - run: python3 scripts/build_member_news.py --check
       - run: python3 scripts/build_ecosystem_press.py --check
