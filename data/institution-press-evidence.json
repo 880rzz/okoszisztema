@@ -649,6 +649,54 @@
       ],
       "relation": "direct-coverage",
       "verification": "publisher-article-or-curated-institutional-evidence"
+    },
+    {
+      "date": "2026-06-07",
+      "title": "Ungarische Vereinsobleute aus ganz Österreich tagten in Oberpullendorf",
+      "url": "https://www.bvz.at/Nachrichten/generalversammlung-ungarische-vereinsobleute-aus-ganz-oesterreich-tagten-in-oberpullendorf-8580.html",
+      "publisher": "BVZ",
+      "summary": "A Burgenländische Volkszeitung a Központi Szövetség felsőpulyai közgyűléséről, a tisztújításról és a helyi magyar egyesület házigazdaszerepéről tudósított.",
+      "institutionIds": [
+        "kozponti-szovetseg"
+      ],
+      "relation": "direct-coverage",
+      "verification": "publisher-article-or-curated-institutional-evidence"
+    },
+    {
+      "date": "2026-06-02",
+      "title": "Először tartott tisztújító közgyűlést a Központi Szövetség Felsőpulyán",
+      "url": "https://rolunk.at/nepcsoportunk/eloszor-tartott-tisztujito-kozgyulest-a-kozponti-szovetseg-felsopulyan/",
+      "publisher": "Rólunk.at",
+      "summary": "A Rólunk.at a Központi Szövetség felsőpulyai közgyűléséről, a megválasztott vezetőségről és a tagegyesületek feladatairól számolt be.",
+      "institutionIds": [
+        "kozponti-szovetseg"
+      ],
+      "relation": "direct-coverage",
+      "verification": "publisher-article-or-curated-institutional-evidence"
+    },
+    {
+      "date": "2025-10-20",
+      "title": "A magyarságnak nincsenek határai – ülésezett a Magyar Diaszpóra Tanács",
+      "url": "https://rolunk.at/aktualis/a-magyarsanak-nincsenek-hatarai-ulesezett-a-magyar-diaszpora-tanacs/",
+      "publisher": "Rólunk.at",
+      "summary": "A Központi Szövetség elnöke, Seidler Andrea és a Kaláka Club vezetője az ausztriai magyarság képviseletében vett részt a Diaszpóra Tanács ülésén.",
+      "institutionIds": [
+        "kozponti-szovetseg"
+      ],
+      "relation": "official-representative-mention",
+      "verification": "publisher-article-or-curated-institutional-evidence"
+    },
+    {
+      "date": "2025-04-17",
+      "title": "VIII. Hétvégi Magyar Iskolák Találkozója",
+      "url": "https://rolunk.at/aktualis/viii-hetvegi-magyar-iskolak-talalkozoja/",
+      "publisher": "Rólunk.at",
+      "summary": "A budapesti hétvégi magyar iskolák konferenciáján a Bécsi Magyar Iskola munkatársai is részt vettek, több más ausztriai szervezettel együtt.",
+      "institutionIds": [
+        "becsi-magyar-iskola"
+      ],
+      "relation": "institutional-participation",
+      "verification": "publisher-article-or-curated-institutional-evidence"
     }
   ]
 }
