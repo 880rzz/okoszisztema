@@ -56,3 +56,22 @@
 .calendar-source a{color:var(--members-blue)}
 @media(max-width:740px){.profile-content{grid-template-columns:1fr;gap:20px}.profile-hero{padding:38px 0}.calendar-events{grid-template-columns:1fr}.profile-header-inner{padding:10px 0}.profile-nav{gap:10px}.calendar-toolbar{display:grid}.calendar-toolbar input{min-width:0;width:100%}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important}}
+
+/* BMITANAROK-inspired, quiet annual press accordions */
+.profile-evidence .profile-press-intro{color:#5e6872;font-size:.92rem;line-height:1.7;margin:0 0 20px}
+.profile-press-year{border:1px solid #dde4e9;border-radius:9px;margin:0 0 12px;background:#fff;overflow:hidden}
+.profile-press-year>summary{list-style:none;cursor:pointer;padding:14px 17px;font-weight:680;font-size:1.02rem;color:#25303a;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.profile-press-year>summary::-webkit-details-marker{display:none}
+.profile-press-year>summary:after{content:"+";font-weight:400;color:#66717b;font-size:1.15rem;margin-left:10px}
+.profile-press-year[open]>summary:after{content:"−"}
+.profile-press-year summary small{font-size:.76rem;color:#6d7883;font-weight:500;margin-left:auto;white-space:nowrap}
+.profile-press-year>summary:focus-visible{outline:2px solid #145c95;outline-offset:-3px}
+.profile-press-list{margin:0!important;padding:4px 17px 12px!important;list-style:none!important}
+.profile-press-card{padding:15px 0 17px;border-top:1px solid #e6ebee;list-style:none}
+.profile-press-meta{font-size:.77rem;color:#62707c;margin-bottom:7px;line-height:1.5}
+.profile-press-meta strong{color:#455462}
+.profile-press-card>a{color:#145c95;font-weight:650;text-decoration:none;font-size:1rem;line-height:1.4;display:block;overflow-wrap:normal}
+.profile-press-card>a:hover{text-decoration:underline;text-underline-offset:3px}
+.profile-press-card p{font-size:.89rem!important;line-height:1.7!important;color:#606b74!important;margin:8px 0 0!important}
+.profile-press-card a:focus-visible{outline:2px solid #145c95;outline-offset:3px}
+@media(max-width:490px){.profile-press-year>summary{padding:13px}.profile-press-list{padding-inline:13px!important}.profile-press-year summary small{font-size:.69rem}}
