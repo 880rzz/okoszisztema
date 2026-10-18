@@ -1,0 +1,38 @@
+/* Member news: quiet editorial cards, responsive; no global overrides. */
+.member-news-section{padding:70px 0;border-top:1px solid #e6e9ec;background:#fbfcfd}
+.member-news-section .news-heading{font-size:clamp(1.7rem,3vw,2.4rem);letter-spacing:-.025em;line-height:1.2;margin:8px 0 13px}
+.member-news-section .news-intro{max-width:78ch;color:#5d6570;line-height:1.7;font-size:1rem;margin:0 0 22px}
+.member-news-wrap{width:min(1120px,calc(100% - 40px));margin-inline:auto}
+.member-news-toolbar{display:flex;gap:12px;flex-wrap:wrap;margin:20px 0;align-items:end}
+.member-news-toolbar label{display:grid;gap:6px;color:#5b6570;font-size:.81rem;font-weight:650;min-width:180px;flex:1}
+.member-news-toolbar input,.member-news-toolbar select{width:100%;min-height:44px;padding:10px 12px;background:#fff;border:1px solid #d3d8dd;border-radius:9px;font:inherit;font-size:.94rem;color:#20252b}
+.member-news-toolbar input:focus-visible,.member-news-toolbar select:focus-visible,.member-news-more:focus-visible{outline:2px solid #145c95;outline-offset:3px}
+.member-news-status{font-size:.83rem;color:#6c7882;min-height:1.4em;margin:12px 0}
+.member-news-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.member-news-card{min-width:0;padding:22px 23px;border:1px solid #e1e5e9;border-radius:12px;background:white;display:flex;flex-direction:column}
+.member-news-card .news-overline{font-size:.73rem;font-weight:700;letter-spacing:.055em;text-transform:uppercase;color:#4c6d86;margin-bottom:12px;display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.member-news-card h3{font-size:1.1rem!important;line-height:1.35!important;letter-spacing:-.018em;margin:0 0 10px!important;font-weight:650;overflow-wrap:normal;word-break:normal}
+.member-news-card p{font-size:.9rem;line-height:1.65;color:#657078;margin:0 0 17px!important}
+.member-news-card .news-members{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;padding-bottom:14px}
+.member-news-card .news-members a{font-size:.77rem;border:1px solid #dce3e9;border-radius:6px;padding:4px 8px;text-decoration:none;color:#4c5965;background:#fafbfc;overflow-wrap:anywhere}
+.member-news-card .news-members a:hover{text-decoration:underline}
+.member-news-card .news-source-link{font-size:.88rem;font-weight:700;text-decoration:none;color:#145c95;align-self:flex-start}
+.member-news-card .news-source-link:hover{text-decoration:underline;text-underline-offset:3px}
+.member-news-empty{border:1px dashed #c9d1d8;border-radius:9px;padding:24px;color:#5e6770}
+.member-news-more{padding:10px 17px;margin:20px 0 0;cursor:pointer;border:1px solid #d5dae0;border-radius:8px;color:#28333e;background:#fff;font-size:.94rem}
+.member-news-link{display:inline-block;margin-top:20px;color:#145c95!important;font-size:.92rem;font-weight:650;text-decoration:none}
+.member-news-link:hover{text-decoration:underline}
+.member-news-disclosure{margin-top:16px;color:#6c7680;font-size:.81rem;line-height:1.65;max-width:86ch}
+.member-news-disclosure a{color:#145c95;text-decoration:underline}
+.member-news-archive{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;color:#171e26;background:#fff;margin:0;line-height:1.6}
+.member-news-archive *{box-sizing:border-box}
+.member-news-archive header{border-bottom:1px solid #e7e9ec;background:#fff}
+.member-news-archive header .member-news-wrap{min-height:60px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding:9px 0}
+.member-news-archive header a{color:#314558;text-decoration:none;font-weight:650}
+.member-news-archive header nav{display:flex;gap:20px;font-size:.9rem;flex-wrap:wrap}
+.member-news-archive .news-hero{padding:58px 0 35px;background:#f9fafb;border-bottom:1px solid #e6e8eb}
+.member-news-archive .news-hero h1{font-size:clamp(2rem,5vw,3.2rem);letter-spacing:-.035em;line-height:1.15;margin:14px 0}
+.member-news-archive .news-hero p{font-size:1.05rem;color:#58636d;max-width:800px;line-height:1.72}
+.member-news-archive main{padding:38px 0 74px}
+.member-news-archive footer{border-top:1px solid #e6e8eb;padding:28px 0;font-size:.86rem;color:#67727c}
+@media(max-width:700px){.member-news-grid{grid-template-columns:1fr}.member-news-wrap{width:min(100% - 28px,1120px)}.member-news-section{padding:50px 0}.member-news-archive .news-hero{padding:40px 0 28px}.member-news-card{padding:19px}.member-news-toolbar{display:grid}.member-news-toolbar label{min-width:0}}
