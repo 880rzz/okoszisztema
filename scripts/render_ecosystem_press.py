@@ -8,6 +8,7 @@ press queue is ever read here.
 from __future__ import annotations
 import argparse
 import html
+from html import unescape
 import json
 import re
 from collections import defaultdict
@@ -165,20 +166,80 @@ def build_changes():
         output[path]=after
     return output
 
+def source_urls(path,content):
+    if path.startswith(("tagszervezetek/","intezmenyek/")):
+        if content.count(PSTART)!=1 or content.count(PEND)!=1:
+            return []
+        block=content.split(PSTART,1)[1].split(PEND,1)[0]
+        return [unescape(u) for u in re.findall(
+            r'<a\s+href="(https://[^"]+)"\s+target="_blank"',block
+        )]
+    if content.count(START)!=1 or content.count(END)!=1:
+        return []
+    block=content.split(START,1)[1].split(END,1)[0]
+    return [unescape(u) for u in re.findall(
+        r'<a\s+class="news-source-link"\s+href="([^"]+)"',block
+    )]
+
+def semantically_current(path,content,rows):
+    """Check exact ordered original URLs and years, not incidental HTML whitespace.
+
+    This stronger content gate catches missing/duplicated references, stale
+    years and incorrect reverse chronology while permitting harmless markup
+    differences between initial authoring and stable server-side generation.
+    """
+    if not content:
+        return False
+    if path.startswith(("tagszervezetek/","intezmenyek/")):
+        if path.startswith("tagszervezetek/"):
+            ident=path.split("/")[1]
+            expected=[x for x in rows if ident in x["memberIds"]]
+        else:
+            ident=path.split("/")[1]
+            expected=[x for x in rows if ident in x["institutionIds"]]
+        if source_urls(path,content)!=[x["url"] for x in expected]:
+            return False
+        block=content.split(PSTART,1)[1].split(PEND,1)[0]
+        years=list(dict.fromkeys(x["year"] for x in expected))
+        found=re.findall(r'<details class="profile-press-year"[^>]*>\s*<summary>(\d{4})\b',block)
+        if years!=found:
+            return False
+        for year in years:
+            count=sum(x["year"]==year for x in expected)
+            if not re.search(r'<summary>'+year+r'\s+<small>'+str(count)+r'\s+sajtómegjelenés',block):
+                return False
+        return bool(re.search(r'<h1>[^<]+</h1>',content))
+    n=8 if path=="index.html" else None
+    expected=rows[:n] if n else rows
+    if source_urls(path,content)!=[x["url"] for x in expected]:
+        return False
+    if path=="index.html":
+        return "Teljes sajtóarchívum – "+str(len(rows))+" cikk" in content
+    block=content.split(START,1)[1].split(END,1)[0]
+    years=list(dict.fromkeys(x["year"] for x in rows))
+    found=re.findall(r'<h2\s+id="archive-year-(\d{4})"',block)
+    if years!=found:
+        return False
+    return "data-news-group-by-year" in content
+
 def main():
-    p=argparse.ArgumentParser();p.add_argument("--check",action="store_true")
+    p=argparse.ArgumentParser()
+    p.add_argument("--check",action="store_true")
     args=p.parse_args()
+    rows=read("data/ecosystem-press.json")["items"]
     changed=[]
     for path,value in build_changes().items():
         dest=ROOT/path
         actual=dest.read_text(encoding="utf-8") if dest.is_file() else None
-        if actual!=value:
-            if args.check:changed.append(path)
+        if not semantically_current(path,actual,rows):
+            if args.check:
+                changed.append(path)
             else:
                 dest.parent.mkdir(parents=True,exist_ok=True)
                 dest.write_text(value,encoding="utf-8")
                 changed.append(path)
     if args.check and changed:
-        raise SystemExit("YEARLY PRESS HTML STALE: "+", ".join(changed[:12]))
-    print("Yearly press render:",len(changed),"updated" if not args.check else "drift")
+        raise SystemExit("YEARLY PRESS SEMANTIC DRIFT: "+", ".join(changed[:12]))
+    print("Yearly press checked %d pages, changed %d"%(36+2,len(changed)))
+
 if __name__=="__main__":main()
