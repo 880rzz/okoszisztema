@@ -22,7 +22,7 @@ class Doc(HTMLParser):
  def handle_endtag(self,t):
   if t=="script" and self.inside:
    self.schemas.append(json.loads("".join(self.buf)));self.inside=False
- class InlineScripts(HTMLParser):
+class InlineScripts(HTMLParser):
   def __init__(self):
    super().__init__()
    self.inside=False
