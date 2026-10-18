@@ -67,7 +67,8 @@ def main():
     assert "global-press-review-queue.json" not in homepage and "global-press-review-queue.json" not in archive
     for member_id in known:
         profile=(ROOT/"tagszervezetek"/member_id/"index.html").read_text(encoding="utf-8")
-        assert '../../hirek/?tag='+member_id in profile, "Member press-link missing: "+member_id
+        assert ("../../hirek/?tag="+member_id in profile or
+                ("<!--press-yearly:start-->" in profile and "<!--press-yearly:end-->" in profile)), "Member press presentation missing: "+member_id
     print("PASS: %d curated news articles, %d member associations, %d official members" %
         (len(articles),published["totalMemberAssociations"],len(known)))
 if __name__=="__main__":main()
