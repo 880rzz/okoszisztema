@@ -37,3 +37,5 @@ jobs:
       - run: node --check member-news.js
       - run: python3 scripts/validate_member_news.py
       - run: python3 scripts/build_member_news.py --check
+      - run: python3 scripts/render_member_news.py
+      - run: git diff --exit-code -- index.html hirek/index.html
