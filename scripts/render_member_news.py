@@ -24,7 +24,7 @@ def card(row,prefix):
             f'<div class="news-members" aria-label="Kapcsolódó tagegyesületek">{members}</div>'
             f'<a class="news-source-link" href="{esc(row["url"])}" target="_blank" '
             'rel="noopener noreferrer">Eredeti cikk a médiumban ↗</a></article>')
-def update(path,items,prefix):
+def update(path,items,prefix,total):
     content=path.read_text(encoding="utf-8")
     if content.count(START)!=1 or content.count(END)!=1:
         raise SystemExit(f"Missing static news markers: {path}")
@@ -34,7 +34,7 @@ def update(path,items,prefix):
     result=before+START+cards+END+after
     if path.parent==ROOT:
         result=re.sub(r"Teljes sajtóarchívum – \d+ cikk",
-                      f"Teljes sajtóarchívum – {len(items)} cikk",result)
+                      f"Teljes sajtóarchívum – {total} cikk",result)
     if result!=content:
         path.write_text(result,encoding="utf-8")
         return True
@@ -44,7 +44,7 @@ def main():
     rows=data["items"]
     home=ROOT/"index.html"
     archive=ROOT/"hirek/index.html"
-    changed=update(home,rows[:6],"")
-    changed=update(archive,rows,"../") or changed
+    changed=update(home,rows[:6],"",len(rows))
+    changed=update(archive,rows,"../",len(rows)) or changed
     print("Static news cards updated" if changed else "Static news cards unchanged")
 if __name__=="__main__":main()
