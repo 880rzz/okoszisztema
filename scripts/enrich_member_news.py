@@ -22,7 +22,8 @@ from urllib.parse import urlsplit
 
 ROOT=Path(__file__).resolve().parents[1]
 OUT=ROOT/"data/member-news.json"
-HOSTS={"volksgruppen.orf.at","rolunk.at","www.askoe-burgenland.at","naturpark.hu"}
+from press_sources import metadata_hosts
+HOSTS=metadata_hosts()
 GENERIC=("cookie", "datenschutz", "privacy policy", "kérjük, engedélyezze",
          "javascript", "search results", "alle artikel", "404 not found")
 STOP={"magyarok","magyar","orf","hírek","hirek","aktuális","aktualis","sz","a","az",
