@@ -35,19 +35,23 @@ jobs:
         run: |
           python3 scripts/build_member_news.py --dorapp "$RUNNER_TEMP/dorapp-organizations.json"
           python3 scripts/enrich_member_news.py --limit 14 --shards 7
-          python3 scripts/render_member_news.py
+          python3 scripts/build_ecosystem_press.py
+          python3 scripts/render_ecosystem_press.py
       - name: Run source, identity and code quality gates
         run: |
           python3 scripts/validate_member_news.py
           python3 scripts/build_member_news.py --check
           python3 scripts/validate_member_pages.py
+          python3 scripts/build_ecosystem_press.py --check
+          python3 scripts/validate_ecosystem_press.py
+          python3 scripts/render_ecosystem_press.py --check
           node --check member-news.js
           node --check member-calendar.js
       - name: Detect meaningful approved changes
         id: changed
         shell: bash
         run: |
-          if git diff --quiet -- data/member-news.json index.html hirek/index.html; then
+          if git diff --quiet -- data/member-news.json data/ecosystem-press.json index.html hirek/index.html tagszervezetek/ intezmenyek/; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
             echo "No new approved content: candidate review is still recorded."
           else
@@ -68,7 +72,7 @@ jobs:
           git switch -c "$BRANCH"
           git config user.name "federation-news-steward[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/member-news.json index.html hirek/index.html
+          git add data/member-news.json data/ecosystem-press.json index.html hirek/index.html tagszervezetek/ intezmenyek/
           git commit -m "chore(news): sync approved member press"
           git push --set-upstream origin "$BRANCH"
           PR_URL=$(gh pr create --base main --head "$BRANCH" \
