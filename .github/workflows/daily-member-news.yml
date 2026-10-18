@@ -39,6 +39,7 @@ jobs:
           python3 scripts/render_ecosystem_press.py
       - name: Run source, identity and code quality gates
         run: |
+          python3 scripts/test_austrian_press_discovery.py
           python3 scripts/validate_member_news.py
           python3 scripts/build_member_news.py --check
           python3 scripts/validate_member_pages.py
