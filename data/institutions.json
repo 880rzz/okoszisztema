@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "officialMemberDirectory": "member-organizations.json",
+  "notes": "These 7 entities are institutions, projects, brands and the umbrella organization; they are NOT added as official 29 federation member organizations.",
+  "institutions": [
+    {
+      "id": "kozponti-szovetseg",
+      "name": "Központi Szövetség",
+      "shortName": "Központi Szövetség",
+      "kind": "umbrella-organization",
+      "relation": "Az intézmények és tagszervezetek ernyőszervezete, nem külön tagegyesület.",
+      "url": "https://www.kozpontiszovetseg.at/",
+      "description": "Az ausztriai magyar tagegyesületek ernyőszervezete és több közösségi intézmény fenntartója."
+    },
+    {
+      "id": "becsi-naplo",
+      "name": "Bécsi Napló",
+      "kind": "owned-publication",
+      "relation": "A Központi Szövetség tulajdonában és kiadásában működő sajtókiadvány; nem tagegyesület.",
+      "url": "https://www.becsinaplo.at/",
+      "description": "Az ausztriai magyar közösség közéleti és kulturális sajtókiadványa; 1980 óta jelenik meg."
+    },
+    {
+      "id": "becsi-szelet",
+      "name": "Bécsi Szelet Magazin",
+      "kind": "institutional-publication",
+      "relation": "A Központi Szövetséghez kapcsolódó online magazin és közösségi márka; nem tagegyesület.",
+      "url": "https://www.becsiszelet.at/",
+      "description": "Bécsi kulturális és közösségi témákkal foglalkozó online magazin."
+    },
+    {
+      "id": "becsi-magyar-iskola",
+      "name": "Bécsi Magyar Iskola",
+      "kind": "education-institution",
+      "relation": "A Központi Szövetség által fenntartott, 1987-ben alapított BMI; nem azonos a Bécsi Magyar Iskolaegyesülettel.",
+      "url": "https://www.magyariskola.at/",
+      "description": "Magyar nyelvű oktatási és közösségi foglalkozásokat szervez 1987 óta."
+    },
+    {
+      "id": "vipach",
+      "name": "VIPACH – Vienna Photo Art & Creative Hub",
+      "kind": "creative-program",
+      "relation": "A BMI fotográfiai és kreatív programrendszeréből fejlődött; nem külön tagegyesület.",
+      "url": "https://www.vipach.at/",
+      "description": "Fotográfiai, kiállítási és kreatív közösségi programokat összefogó kezdeményezés."
+    },
+    {
+      "id": "bmi-fotoklub",
+      "name": "BMI Fotóklub",
+      "kind": "historical-and-current-school-club",
+      "relation": "A Bécsi Magyar Iskola fotóklubja; a VIPACH kialakulásának történeti előzménye.",
+      "url": "https://www.vipach.at/",
+      "description": "2024-ben indult közösségi fotográfiai klub, tanfolyamokkal és kiállításokkal."
+    },
+    {
+      "id": "mamut-musical",
+      "name": "maMUT – Bécsi Magyar Musical Társulat",
+      "kind": "school-performing-arts-program",
+      "relation": "A Musical Mesék BMI-programból 2026-ban kialakult musical-alkotóműhely; nem azonos a budapesti Mammut Színházzal.",
+      "url": "https://www.musicaltarsulat.at/",
+      "description": "Magyar nyelvű gyermek- és ifjúsági musicalalkotás, zenés színpadi műhely és előadások."
+    }
+  ]
+}
