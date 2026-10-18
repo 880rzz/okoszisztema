@@ -160,21 +160,23 @@ def main():
     args=ap.parse_args()
     data=gather(args.dorapp)
     content=json.dumps(data,ensure_ascii=False,indent=2)+"\n"
+    def records_by_url(data):
+        return {
+            url_key(a["url"]): {k:v for k,v in a.items() if k != "id"}
+            for a in data.get("items", [])
+        }
     if args.check:
-        # Compare membership/links rather than serialization to avoid needless
-        # update churn from a one-time older exporter or equivalent row ordering.
-        existing=read(OUT)
-        expected={(a["url"].rstrip("/").lower(),tuple(a["memberIds"])) for a in data["items"]}
-        actual={(a["url"].rstrip("/").lower(),tuple(a["memberIds"])) for a in existing["items"]}
-        if not expected.issubset(actual):
-            raise SystemExit("NEWS STALE: vetted evidence missing from published news feed")
-        print(f"Verified-source news gate: {len(actual)} URLs, {len(expected)} current known")
+        current=read(OUT)
+        actual=records_by_url(current)
+        expected=records_by_url(data)
+        differences=[u for u,row in expected.items() if actual.get(u) != row]
+        if differences:
+            raise SystemExit("NEWS STALE: %d vetted records missing or out of date" % len(differences))
+        print(f"Verified-source gate: {len(actual)} URLs, {len(expected)} current curated")
     else:
-        # Preserve existing static ordering when content is semantically equal.
         if OUT.exists():
             old=read(OUT)
-            if {(a["url"].rstrip("/").lower(),tuple(a["memberIds"])) for a in old.get("items",[])} == \
-               {(a["url"].rstrip("/").lower(),tuple(a["memberIds"])) for a in data["items"]}:
+            if records_by_url(old)==records_by_url(data) and old.get("sourceDates")==data.get("sourceDates"):
                 print("News unchanged; no content-only commit required")
                 return
         OUT.parent.mkdir(parents=True,exist_ok=True)
