@@ -90,7 +90,7 @@ async function refresh(){
   try{
    const payload=await get(s.base);
    s.rows=payload.items.filter(x=>x.approval==="curated-source-evidence"&&validUrl(x.url)&&x.title&&x.publisher&&x.date&&Array.isArray(x.memberIds)&&Array.isArray(x.institutionIds)&&(x.memberIds.length+x.institutionIds.length)>0);
-   s.rows.sort((a,b)=>String(b.sortKey||b.date).localeCompare(String(a.sortKey||a.date))||String(b.title).localeCompare(String(a.title),"hu"));
+   // Canonical feed is already strictly ordered; preserve its verified order.
    filters(s);render(s);
   }catch(e){const status=s.root.querySelector("[data-news-status]");if(status)status.textContent="A friss híradatbázis nem érhető el. Az előzőleg létrehozott forráslinkek megmaradnak."}
  }));
