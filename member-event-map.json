@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "description": "Manually reconciled first-party federation membership links from DORAPP against the federation official member directory. Null means no exact verified match, not absence of membership.",
+  "description": "29 member records reconciled with DORAPP organization IDs and the official federation membership evidence. Event association never relies solely on name similarity.",
   "membershipSource": "https://www.kozpontiszovetseg.at/tagszervezetek",
   "dorappSource": "880rzz/DORAPP/data/countries/at/organizations.json",
   "memberToDorappId": {
@@ -18,7 +18,7 @@
     "irottko-sportegyesulet": "irottko-sportegyesulet",
     "kozep-burgenlandi-magyar-kulturegyesulet": "kozep-burgenlandi",
     "felso-ausztriai-magyarok-kulturegyesulete": "felso-ausztriai-magyarok",
-    "linz-magyar-katolikus-kozosseg": null,
+    "linz-magyar-katolikus-kozosseg": "katolikus-linz",
     "felso-ausztriai-hetvegi-magyar-ovoda-es-iskola": "wels-hetvegi-iskola",
     "cserkesz-80-wels": "cserkesz-80",
     "salzung": "salzung",

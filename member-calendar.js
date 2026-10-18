@@ -16,7 +16,7 @@ const localRoot=widgets[0].dataset.root||'';
 let crosswalk={},events=[],dataSource='',generatedAt='',lastError='',loaded=false;
 const sourceUrl='https://diaszpora.kozpontiszovetseg.at/';
 async function request(url){
- const ctrl=new AbortController(),timer=setTimeout(()=>ctrl.abort(),8000);
+ const ctrl=new AbortController(),timer=setTimeout(()=>ctrl.abort(),3500);
  try{const r=await fetch(url,{cache:'no-store',signal:ctrl.signal});if(!r.ok)throw Error('HTTP '+r.status);const j=await r.json();if(!j||!Array.isArray(j.events))throw Error('Invalid event payload');return j}
  finally{clearTimeout(timer)}
 }
@@ -49,7 +49,7 @@ function render(w){
  const scopedId=memberId?crosswalk[memberId]:null;
  const query=(w.querySelector('[data-calendar-search]')?.value||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
  const scope=w.querySelector('[data-calendar-scope]')?.value||'all';
- const filter=events.filter(e=>(!memberId||scopedId===e.organizerId)&&(!(!memberId&&scope==='members')||memberIds.has(e.organizerId))&&(!query||[e.name,e.city,e.venue,e.organizer].join(' ').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().includes(query)));
+ const filter=events.filter(e=>(!memberId||(scopedId&&scopedId===e.organizerId))&&(!(!memberId&&scope==='members')||memberIds.has(e.organizerId))&&(!query||[e.name,e.city,e.venue,e.organizer].join(' ').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().includes(query)));
  list.innerHTML=filter.slice(0,36).map(e=>card(e,memberIds)).join('');
  if(empty){empty.hidden=filter.length>0;empty.textContent=!loaded?'Naptár betöltése…':!events.length&&!dataSource?'A naptár most nem érhető el. A szervezők hivatalos oldalain ellenőrizhetők a programok.':memberId?'Ehhez a tagegyesülethez jelenleg nincs külön azonosított, forrásellenőrzött közelgő program a DORAPP naptárában.':'Nincs a szűrésnek megfelelő, forrásellenőrzött közelgő esemény.'}
  if(dataSource){const status=dataSource==='live'?'Friss DORAPP-forrás':'Mentett naptáradat (a friss DORAPP-forrás nem érhető el)';

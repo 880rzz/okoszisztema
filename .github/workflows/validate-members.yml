@@ -1,0 +1,26 @@
+name: Validate member profiles
+on:
+  pull_request:
+    paths:
+      - "index.html"
+      - "member-organizations.json"
+      - "member-event-map.json"
+      - "member-calendar.js"
+      - "member-profiles.css"
+      - "tagszervezetek/**"
+      - "data/austria-events-snapshot.json"
+      - "sitemap.xml"
+      - "scripts/validate_member_pages.py"
+      - ".github/workflows/validate-members.yml"
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  integrity:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 scripts/validate_member_pages.py
+      - run: node --check member-calendar.js
