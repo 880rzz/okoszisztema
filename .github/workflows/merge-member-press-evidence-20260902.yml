@@ -1,27 +1,30 @@
-name: Merge member press evidence 20260902
-
+name: Audit curated member press evidence (read-only)
 on:
-  push:
+  pull_request:
     paths:
-      - '.github/workflows/merge-member-press-evidence-20260902.yml'
-      - 'tools/merge_member_press_evidence.py'
-      - 'member-press-evidence.json'
-
+      - "member-press-evidence.json"
+      - "member-organizations.json"
+      - "data/member-news.json"
+      - "data/ecosystem-press.json"
+      - "tools/merge_member_press_evidence.py"
+      - ".github/workflows/merge-member-press-evidence-20260902.yml"
+  push:
+    branches: [main]
+    paths:
+      - "member-press-evidence.json"
+      - "member-organizations.json"
+      - "data/member-news.json"
+      - "data/ecosystem-press.json"
+      - "tools/merge_member_press_evidence.py"
+      - ".github/workflows/merge-member-press-evidence-20260902.yml"
+  workflow_dispatch:
 permissions:
-  contents: write
-
+  contents: read
 jobs:
-  merge:
+  audit:
     runs-on: ubuntu-latest
+    timeout-minutes: 8
     steps:
       - uses: actions/checkout@v4
-      - name: Merge ORF and Rólunk evidence into member data
+      - name: Validate canonical 29-member press without writing to main
         run: python3 tools/merge_member_press_evidence.py
-      - name: Commit enriched member data
-        run: |
-          git config user.name "ecosystem-steward[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add member-organizations.json
-          git diff --cached --quiet && exit 0
-          git commit -m "Enrich member organizations from ORF and Rólunk press evidence"
-          git push
