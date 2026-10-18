@@ -6,7 +6,6 @@ press is a separately edited evidence registry. Never promote DORAPP
 candidate discoveries, media self-publications, or guessed entity matches.
 """
 from __future__ import annotations
-import hashlib
 import json
 import re
 from pathlib import Path
@@ -35,6 +34,13 @@ def check_date(v):
     elif re.fullmatch(r"\d{4}",v):pass
     elif re.fullmatch(r"\d{4}-\d{4}",v) and int(v[:4])<=int(v[5:]):pass
     else:raise ValueError("Invalid partial date "+v)
+
+def institution_id(key):
+    # Stable URL-ID that can also be generated in the static JavaScript tooling.
+    h=2166136261
+    for byte in key.encode("utf-8"):
+        h=((h^byte)*16777619)&0xffffffff
+    return "press-inst-%08x"%h
 
 def year(v):return str(v)[:4]
 def sort_value(v):
@@ -75,7 +81,7 @@ def build():
             raise ValueError("Unapproved institution article "+raw["url"])
         if key not in merged:
             merged[key]={
-                "id":"press-"+hashlib.sha256(key.encode()).hexdigest()[:14],
+                "id":institution_id(key),
                 "url":raw["url"],"title":raw["title"],"publisher":raw["publisher"],
                 "date":raw["date"],"summary":raw["summary"],"summaryType":"editorial-summary",
                 "approval":"curated-source-evidence","memberIds":[],"memberNames":[],
@@ -124,7 +130,7 @@ def main():
     output=build()
     text=json.dumps(output,ensure_ascii=False,indent=2)+"\n"
     if args.check:
-        if not OUT.is_file() or OUT.read_text(encoding="utf-8")!=text:
+        if not OUT.is_file() or read(OUT)!=output:
             raise SystemExit("ECOSYSTEM PRESS STALE: aggregated data differs from approved sources")
     elif not OUT.exists() or OUT.read_text(encoding="utf-8")!=text:
         OUT.parent.mkdir(parents=True,exist_ok=True)
