@@ -54,6 +54,15 @@ def main():
  for id in members:
   s=(ROOT/"tagszervezetek"/id/"index.html").read_text(encoding="utf-8")
   assert "<!--press-yearly:start-->" in s and "<!--press-yearly:end-->" in s
+  for row in rows:
+   if id in row["memberIds"]:
+    assert 'href="'+row["url"]+'"' in s, ("Missing member press URL",id,row["url"])
+ archive=(ROOT/"hirek/index.html").read_text(encoding="utf-8")
+ for row in rows:
+  for id in row["memberIds"]:
+   assert 'href="../tagszervezetek/'+id+'/"' in archive, ("Missing member profile link",id)
+  for id in row["institutionIds"]:
+   assert 'href="../intezmenyek/'+id+'/"' in archive, ("Missing institution profile link",id)
  site=(ROOT/"sitemap.xml").read_text(encoding="utf-8")
  for id in institutions:
   assert "/intezmenyek/"+id+"/" in site
