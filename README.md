@@ -55,7 +55,7 @@ A technikai és kutatási fájlok háttérforrások, nem a fő felhasználói na
 
 - A 29 tagszervezeti bejegyzés önálló statikus, forrásolt `tagszervezetek/<id>/` oldalon jelenik meg.
 - Tagság kanonikus forrása: `member-organizations.json` és a Központi Szövetség hivatalos tagszervezeti oldala; a DORAPP további forrásként szolgál, nem írja felül a tagságot.
-- A `member-event-map.json` 28 igazolt DORAPP szervezeti azonosítót és egy nem párosított bejegyzést tart nyilván. A hiányzó párosításhoz nem találunk ki kapcsolatot.
+- A `member-event-map.json` 29 forrásazonosított DORAPP szervezeti azonosítót tart nyilván, és minden párosítás mögött a Központi Szövetség hivatalos tagsági forrása áll.
 - A `member-calendar.js` böngészőből, olvasási művelettel tölti a DORAPP aktuális `data/global-events.json` naptárát, és kizárólag osztrák, forráslinkkel rendelkező eseményeket mutat. 30 percenként újratölt, ha az oldal nyitva van.
 - Hálózati/CORS hiba esetén a `data/austria-events-snapshot.json` mentett, dátummal jelölt állapotát mutatja. Ezt a snapshotot időszakosan frissíteni kell; önmagában nem élő szinkron.
 - A tagszervezethez rendelt esemény csak egyértelműen egyeztetett `organizerId` alapján látható, név alapján történő automatikus találgatás nélkül.

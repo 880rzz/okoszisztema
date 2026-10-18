@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Offline gate: exact membership, pages, schema, source-backed calendar."""
 from html.parser import HTMLParser
+import subprocess
 from pathlib import Path
 from datetime import datetime
 from urllib.parse import urlsplit
@@ -21,6 +22,23 @@ class Doc(HTMLParser):
  def handle_endtag(self,t):
   if t=="script" and self.inside:
    self.schemas.append(json.loads("".join(self.buf)));self.inside=False
+ class InlineScripts(HTMLParser):
+  def __init__(self):
+   super().__init__()
+   self.inside=False
+   self.buffer=[]
+   self.blocks=[]
+  def handle_starttag(self,t,a):
+   d=dict(a)
+   if t=="script" and not d.get("src") and d.get("type") in (None,"text/javascript","module"):
+    self.inside=True
+    self.buffer=[]
+  def handle_data(self,data):
+   if self.inside:self.buffer.append(data)
+  def handle_endtag(self,t):
+   if t=="script" and self.inside:
+    self.blocks.append("".join(self.buffer));self.inside=False
+
 def main():
  d=read("member-organizations.json");members=d["members"];assert len(members)==d["publishedEntryCount"]==29
  ids=[m["id"] for m in members];assert len(ids)==len(set(ids))
@@ -46,5 +64,10 @@ def main():
   datetime.fromisoformat(e["startDate"].replace("Z","+00:00"))
  js=(ROOT/"member-calendar.js").read_text()
  assert "(scopedId&&scopedId===e.organizerId)" in js and "data/austria-events-snapshot.json" in js
+ scripts=InlineScripts()
+ scripts.feed(idx)
+ for block in scripts.blocks:
+  result=subprocess.run(["node","--check","-"],input=block,text=True,capture_output=True)
+  assert result.returncode==0,result.stderr
  print("PASS: 29 member pages, 29 mappings and",snapshot["count"],"source-backed events")
 if __name__=="__main__":main()
