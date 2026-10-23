@@ -99,6 +99,24 @@
   .austria-map-v2 .reset{grid-column:1/-1;min-width:0!important}
   .austria-map-v2 .region-map-btn:hover{transform:none!important}
 }
+
+/* Mobile map parity: preserve the desktop Austria-shaped map and place provinces inside it. */
+@media(max-width:760px){
+  .austria-map-v2{display:block!important;position:relative!important;aspect-ratio:2.25/1!important;min-height:300px!important;height:auto!important;padding:0!important;overflow:visible!important}
+  .austria-map-v2:before{display:none!important;content:none!important}
+  .austria-map-v2 svg{position:absolute!important;inset:0!important;width:100%!important;height:100%!important}
+  .austria-map-v2 .region-map-btn{position:absolute!important;display:block!important;width:auto!important;min-width:64px!important;max-width:86px!important;min-height:42px!important;padding:5px 6px!important;font-size:9px!important;line-height:1.1!important;transform:translate(-50%,-50%)!important;white-space:normal!important}
+  .austria-map-v2 .reset{left:25%!important;top:13%!important;min-width:96px!important;transform:translate(-50%,-50%)!important}
+  .austria-map-v2 .vor{left:12%!important;top:53%!important}
+  .austria-map-v2 .tir{left:30%!important;top:70%!important}
+  .austria-map-v2 .sal{left:45%!important;top:51%!important}
+  .austria-map-v2 .oo{left:56%!important;top:31%!important}
+  .austria-map-v2 .noe{left:72%!important;top:32%!important}
+  .austria-map-v2 .vie{left:85%!important;top:23%!important}
+  .austria-map-v2 .bur{left:87%!important;top:52%!important}
+  .austria-map-v2 .sty{left:68%!important;top:70%!important}
+  .austria-map-v2 .kar{left:51%!important;top:84%!important}
+}
 </style>
 <script type="application/ld+json">{
 "@context":"https://schema.org",
