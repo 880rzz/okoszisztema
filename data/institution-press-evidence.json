@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "lastReviewed": "2026-10-18",
+  "lastReviewed": "2026-10-23",
   "relationRule": "Only sourced coverage ABOUT each entity. In-house published articles about unrelated subjects do not count as independent coverage of the publisher. Distinct school entities are not merged.",
   "descriptionRule": "Use a factual one-sentence summary grounded in the original source; historical affiliation or predecessor is labeled.",
   "records": [
@@ -696,6 +696,55 @@
         "becsi-magyar-iskola"
       ],
       "relation": "institutional-participation",
+      "verification": "publisher-article-or-curated-institutional-evidence"
+    },
+    {
+      "date": "2026-04-30",
+      "title": "100 éves a Bécsi Magyar Iskolaegyesület",
+      "url": "https://rolunk.at/nepcsoportunk/100-eves-a-becsi-magyar-iskolaegyesulet/",
+      "publisher": "Rólunk.at",
+      "summary": "Király Andrea a Bécsi Magyar Iskolaegyesület százéves történetéről, oktatási programjairól és 2026-os jubileumi terveiről beszél.",
+      "institutionIds": [
+        "becsi-magyar-iskolaegyesulet"
+      ],
+      "relation": "direct-coverage",
+      "verification": "publisher-article-or-curated-institutional-evidence"
+    },
+    {
+      "date": "2026-09-03",
+      "title": "Hamarosan becsengetnek!",
+      "url": "https://rolunk.at/aktualis/hamarosan-becsengetnek/",
+      "publisher": "Rólunk.at",
+      "summary": "A Bécsi Magyar Iskola 2026/27-es foglalkozásait és a fiatalok által készített online programválasztót mutatja be.",
+      "institutionIds": [
+        "becsi-magyar-iskola"
+      ],
+      "relation": "direct-coverage",
+      "verification": "publisher-article-or-curated-institutional-evidence"
+    },
+    {
+      "date": "2026-09-11",
+      "title": "Idén először Badenben is indít csoportot a BMI",
+      "url": "https://rolunk.at/aktualis/iden-eloszor-badenben-is-indit-csoportot-a-bmi/",
+      "publisher": "Rólunk.at",
+      "summary": "A Bécsi Magyar Iskola 2026/27-ben Badenben is indít magyar nyelvi csoportot, több korosztály számára.",
+      "institutionIds": [
+        "becsi-magyar-iskola"
+      ],
+      "relation": "direct-coverage",
+      "verification": "publisher-article-or-curated-institutional-evidence"
+    },
+    {
+      "date": "2026-09-21",
+      "title": "„Feladatunk, hogy támogassuk a népcsoportot, és a diaszpórát befogadjuk” – Köztünk #1",
+      "url": "https://rolunk.at/nepcsoportunk/feladatunk-hogy-tamogassuk-a-nepcsoportot-es-a-diaszporat-befogadjuk-koztunk-1/",
+      "publisher": "Rólunk.at",
+      "summary": "Interjú az ausztriai magyar egyesületi életről és az azt szervező közösségi szereplők munkájáról; a Bécsi Magyar Iskola címkéjű sorozatindító.",
+      "institutionIds": [
+        "becsi-magyar-iskola",
+        "kozponti-szovetseg"
+      ],
+      "relation": "direct-coverage",
       "verification": "publisher-article-or-curated-institutional-evidence"
     }
   ]
