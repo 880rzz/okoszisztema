@@ -75,3 +75,6 @@
 .profile-press-card p{font-size:.89rem!important;line-height:1.7!important;color:#606b74!important;margin:8px 0 0!important}
 .profile-press-card a:focus-visible{outline:2px solid #145c95;outline-offset:3px}
 @media(max-width:490px){.profile-press-year>summary{padding:13px}.profile-press-list{padding-inline:13px!important}.profile-press-year summary small{font-size:.69rem}}
+
+.profile-logo{display:block;width:min(100%,260px);aspect-ratio:4/3;height:auto;object-fit:contain;object-position:center;background:transparent;border-radius:14px;margin:0 0 24px}
+@media(max-width:600px){.profile-logo{width:min(100%,220px);margin-bottom:20px}}
