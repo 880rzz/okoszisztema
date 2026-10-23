@@ -47,13 +47,13 @@ function render(w){
  const memberIds=new Set(Object.values(crosswalk).filter(Boolean));
  const scopedId=memberId?crosswalk[memberId]:null;
  const query=(w.querySelector('[data-calendar-search]')?.value||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
- const scope=w.querySelector('[data-calendar-scope]')?.value||'all';
+ const scope=w.querySelector('[data-calendar-scope]')?.value||'members';
  const filter=events.filter(e=>(!memberId||(scopedId&&scopedId===e.organizerId))&&(!(!memberId&&scope==='members')||memberIds.has(e.organizerId))&&(!query||[e.name,e.city,e.venue,e.organizer].join(' ').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().includes(query)));
- list.innerHTML=filter.slice(0,36).map(e=>card(e,memberIds)).join('');
+ list.innerHTML=filter.map(e=>card(e,memberIds)).join('');
  if(empty){empty.hidden=filter.length>0;empty.textContent=!loaded?'Naptár betöltése…':!events.length&&!dataSource?'A naptár most nem érhető el. A szervezők hivatalos oldalain ellenőrizhetők a programok.':memberId&&!mappingAvailable?'A tagszervezeti esemény-hozzárendelés jelenleg nem érhető el; a naptár nem tekinthető teljesnek.':memberId?'Ehhez a tagegyesülethez jelenleg nincs külön azonosított, forrásellenőrzött közelgő program a DORAPP naptárában.':'Nincs a szűrésnek megfelelő, forrásellenőrzött közelgő esemény.'}
  if(dataSource){const status=dataSource==='live'?'Friss DORAPP-forrás':'Mentett naptáradat (a friss DORAPP-forrás nem érhető el)';
  const when=generatedAt&&Number.isFinite(Date.parse(generatedAt))?' · forrás frissítve: '+formatDate(generatedAt):'';
- health.textContent=status+when+(memberId&&!mappingAvailable?' · Figyelem: a tagszervezeti hozzárendelés nem érhető el':'')+' · '+filter.length+' megjeleníthető program'+(filter.length>36?' (az első 36 látható)':'');
+ health.textContent=status+when+(memberId&&!mappingAvailable?' · Figyelem: a tagszervezeti hozzárendelés nem érhető el':'')+' · '+filter.length+' megjeleníthető tagszervezeti program';
  }else health.textContent='A DORAPP naptáradatok jelenleg nem tölthetők be.';
 }
 function renderAll(){widgets.forEach(render)}
