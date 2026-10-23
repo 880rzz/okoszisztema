@@ -3,7 +3,6 @@
 const widgets=[...document.querySelectorAll('[data-member-calendar]')];
 if(!widgets.length)return;
 const endpoints=[
- 'https://diaszpora.kozpontiszovetseg.at/data/global-events.json',
  'https://www.diaszporaterkep.hu/data/global-events.json',
  'https://raw.githubusercontent.com/880rzz/DORAPP/main/data/global-events.json'
 ];
@@ -14,7 +13,7 @@ const clean=e=>e&&e.country==='at'&&e.id&&e.name&&e.startDate&&Number.isFinite(D
 const membersLink='https://www.kozpontiszovetseg.at/tagszervezetek';
 const localRoot=widgets[0].dataset.root||'';
 let crosswalk={},events=[],dataSource='',generatedAt='',lastError='',loaded=false,mappingAvailable=false;
-const sourceUrl='https://diaszpora.kozpontiszovetseg.at/';
+const sourceUrl='https://www.diaszporaterkep.hu/';
 async function request(url){
  const ctrl=new AbortController(),timer=setTimeout(()=>ctrl.abort(),3500);
  try{const r=await fetch(url,{cache:'no-store',signal:ctrl.signal});if(!r.ok)throw Error('HTTP '+r.status);const j=await r.json();if(!j||!Array.isArray(j.events))throw Error('Invalid event payload');return j}
