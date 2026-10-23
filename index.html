@@ -89,6 +89,16 @@
   .austria-map-v2 .sty{left:67%!important;top:72%!important}
   .austria-map-v2 .kar{left:49%!important;top:84%!important}
 }
+
+/* Mobile: readable map first, region selector grid below it. */
+@media(max-width:760px){
+  .austria-map-v2{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;aspect-ratio:auto!important;min-height:0!important;padding:0 0 4px;overflow:visible!important}
+  .austria-map-v2 svg{position:absolute!important;inset:0 0 auto!important;width:100%!important;height:210px!important;pointer-events:none}
+  .austria-map-v2 .region-map-btn{position:static!important;left:auto!important;top:auto!important;transform:none!important;width:100%!important;min-width:0!important;max-width:none!important;min-height:48px!important;padding:8px 6px!important;font-size:11px!important;line-height:1.15!important;white-space:normal!important}
+  .austria-map-v2:before{content:"";display:block;grid-column:1/-1;height:210px}
+  .austria-map-v2 .reset{grid-column:1/-1;min-width:0!important}
+  .austria-map-v2 .region-map-btn:hover{transform:none!important}
+}
 </style>
 <script type="application/ld+json">{
 "@context":"https://schema.org",
