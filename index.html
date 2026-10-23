@@ -262,5 +262,6 @@ fetch('member-organizations.json').then(r=>{if(!r.ok)throw new Error();return r.
 <script src="member-calendar.js" defer></script>
 <script src="member-news.js" defer></script>
 <script src="member-enrichment.js" defer></script>
+<script>document.addEventListener("DOMContentLoaded",()=>{const t=document.querySelector(".hero h1"),l=document.querySelector(".hero-founded");if(t)t.textContent="Központi Szövetség";if(l)l.textContent="Ausztriai Magyar Egyesületek és Szervezetek Központi Szövetsége · Alapítva: 1980";});</script>
 </body>
 </html>
