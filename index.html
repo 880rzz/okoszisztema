@@ -75,7 +75,21 @@
 
 /* Official organization-name hero — responsive */
 .hero h1{font-size:clamp(2rem,3.8vw,3rem)!important;line-height:1.08!important;letter-spacing:-.045em!important;max-width:1040px!important;text-wrap:balance;overflow-wrap:normal;word-break:normal}.hero-founded{margin:16px 0 0;font-size:clamp(1rem,1.5vw,1.16rem);line-height:1.35;font-weight:680;letter-spacing:-.015em;color:#50545a}.hero .lead{margin-top:22px}@media(max-width:760px){.hero h1{font-size:clamp(1.75rem,7.5vw,2.4rem)!important;line-height:1.08!important;letter-spacing:-.04em!important;max-width:100%!important}.hero-founded{margin-top:14px;font-size:1rem}.hero .lead{margin-top:20px}}@media(max-width:420px){.hero h1{font-size:clamp(1.7rem,8vw,2.15rem)!important;line-height:1.1!important}}
-.member-logo{display:block;width:min(100%,220px);aspect-ratio:4/3;height:auto;object-fit:contain;object-position:center;border-radius:14px;margin:-4px auto 18px;background:transparent}\n.austria-map-v2 svg{pointer-events:none}.austria-map-v2 .region-map-btn{pointer-events:auto!important;cursor:pointer;touch-action:manipulation}\n</style>
+.member-logo{display:block;width:min(100%,220px);aspect-ratio:4/3;height:auto;object-fit:contain;object-position:center;border-radius:14px;margin:-4px auto 18px;background:transparent}\n.austria-map-v2 svg{pointer-events:none}.austria-map-v2 .region-map-btn{pointer-events:auto!important;cursor:pointer;touch-action:manipulation}\n
+/* Mobile map layout: keep every region control on the map, never in the legacy grid. */
+@media(max-width:760px){
+  .austria-map-v2 .reset{left:24%!important;top:8%!important;min-width:104px!important;transform:translate(-50%,-50%)!important}
+  .austria-map-v2 .vor{left:8%!important;top:52%!important}
+  .austria-map-v2 .tir{left:24%!important;top:72%!important}
+  .austria-map-v2 .sal{left:42%!important;top:50%!important}
+  .austria-map-v2 .oo{left:55%!important;top:28%!important}
+  .austria-map-v2 .noe{left:72%!important;top:30%!important}
+  .austria-map-v2 .vie{left:86%!important;top:20%!important}
+  .austria-map-v2 .bur{left:88%!important;top:52%!important}
+  .austria-map-v2 .sty{left:67%!important;top:72%!important}
+  .austria-map-v2 .kar{left:49%!important;top:84%!important}
+}
+</style>
 <script type="application/ld+json">{
 "@context":"https://schema.org",
 "@graph":[
