@@ -21,14 +21,14 @@ cp.write_text(json.dumps(c,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 
 for fname in ('llms.txt','ai.txt'):
     q=Path(fname); t=q.read_text(encoding='utf-8')
-    t=t.replace('currently publishes 28 separate network entries','currently publishes 29 separate network entries')
-    t=t.replace('normalized 28-entry member network','normalized 29-entry member network')
+    t=t.replace('currently publishes 29 separate network entries','currently publishes 29 separate network entries')
+    t=t.replace('normalized 29-entry member network','normalized 29-entry member network')
     t=t.replace('a 29th member-directory entry','a 30th member-directory entry')
-    t=t.replace('28 tagszervezeti bejegyzés','29 tagszervezeti bejegyzés')
+    t=t.replace('29 tagszervezeti bejegyzés','29 tagszervezeti bejegyzés')
     q.write_text(t,encoding='utf-8')
 
 p=Path('index.html'); s=p.read_text(encoding='utf-8')
-s=s.replace('28 tagszervezeti bejegyzéséről','29 tagszervezeti bejegyzéséről')
+s=s.replace('29 tagszervezeti bejegyzéséről','29 tagszervezeti bejegyzéséről')
 s=s.replace('<b>28</b><span>hivatalosan felsorolt hálózati bejegyzés</span>','<b>29</b><span>külön publikált tagszervezeti bejegyzés</span>')
 s=s.replace('<b>7</b><span>osztrák régió a jelenlegi listában</span>','<b>9</b><span>osztrák tartomány a térképen</span>')
 s=s.replace('külön felsorolt 28 bejegyzést','külön felsorolt 29 bejegyzést')
