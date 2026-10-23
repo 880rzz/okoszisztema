@@ -7,12 +7,64 @@
   ],
   "publicationPolicy": "Only manually sourced press or explicitly verified citations. Candidate searches are NOT published.",
   "sortPolicy": "Newer full dates first; imprecise month/year dates follow fully dated items within their publication year.",
-  "totalArticles": 128,
+  "totalArticles": 130,
   "totalMemberAssociations": 92,
-  "totalInstitutionAssociations": 67,
+  "totalInstitutionAssociations": 69,
   "coveredMembers": 29,
   "coveredInstitutions": 7,
   "items": [
+    {
+      "id": "press-inst-bbadd98c",
+      "url": "https://rolunk.at/aktualis/iden-eloszor-badenben-is-indit-csoportot-a-bmi/",
+      "title": "Idén először Badenben is indít csoportot a BMI",
+      "publisher": "Rólunk.at",
+      "date": "2026-09-11",
+      "summary": "A Bécsi Magyar Iskola a 2026/27-es tanévben Badenben is indít magyar nyelvi csoportot több korosztály számára.",
+      "summaryType": "editorial-summary",
+      "approval": "curated-source-evidence",
+      "memberIds": [],
+      "memberNames": [],
+      "institutionIds": [
+        "becsi-magyar-iskola"
+      ],
+      "institutionNames": [
+        "Bécsi Magyar Iskola"
+      ],
+      "pressEvidenceRefs": [
+        "data/institution-press-evidence.json"
+      ],
+      "relationByInstitution": {
+        "becsi-magyar-iskola": "direct-coverage"
+      },
+      "year": "2026",
+      "sortKey": "2026-09-113"
+    },
+    {
+      "id": "press-inst-28f9aa25",
+      "url": "https://rolunk.at/aktualis/hamarosan-becsengetnek/",
+      "title": "Hamarosan becsengetnek!",
+      "publisher": "Rólunk.at",
+      "date": "2026-09-03",
+      "summary": "A Bécsi Magyar Iskola 2026/27-es foglalkozásait és a fiatalok által készített online programválasztót mutatja be.",
+      "summaryType": "editorial-summary",
+      "approval": "curated-source-evidence",
+      "memberIds": [],
+      "memberNames": [],
+      "institutionIds": [
+        "becsi-magyar-iskola"
+      ],
+      "institutionNames": [
+        "Bécsi Magyar Iskola"
+      ],
+      "pressEvidenceRefs": [
+        "data/institution-press-evidence.json"
+      ],
+      "relationByInstitution": {
+        "becsi-magyar-iskola": "direct-coverage"
+      },
+      "year": "2026",
+      "sortKey": "2026-09-033"
+    },
     {
       "id": "press-inst-0173f6e1",
       "url": "https://rolunk.at/nepcsoportunk/a-magyar-nyelvhez-jo-dolgok-kapcsolodnak-ovodai-foglalkozasok-becsben-es-badenben/",
