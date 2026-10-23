@@ -7,12 +7,93 @@
   ],
   "publicationPolicy": "Only manually sourced press or explicitly verified citations. Candidate searches are NOT published.",
   "sortPolicy": "Newer full dates first; imprecise month/year dates follow fully dated items within their publication year.",
-  "totalArticles": 128,
+  "totalArticles": 132,
   "totalMemberAssociations": 92,
-  "totalInstitutionAssociations": 67,
+  "totalInstitutionAssociations": 72,
   "coveredMembers": 29,
   "coveredInstitutions": 7,
   "items": [
+    {
+      "id": "press-inst-feladatunk-hogy-",
+      "url": "https://rolunk.at/nepcsoportunk/feladatunk-hogy-tamogassuk-a-nepcsoportot-es-a-diaszporat-befogadjuk-koztunk-1/",
+      "title": "„Feladatunk, hogy támogassuk a népcsoportot, és a diaszpórát befogadjuk” – Köztünk #1",
+      "publisher": "Rólunk.at",
+      "date": "2026-09-21",
+      "summary": "Interjú az ausztriai magyar egyesületi életről és az azt szervező közösségi szereplők munkájáról; a Bécsi Magyar Iskola címkéjű sorozatindító.",
+      "summaryType": "editorial-summary",
+      "approval": "curated-source-evidence",
+      "memberIds": [],
+      "memberNames": [],
+      "institutionIds": [
+        "becsi-magyar-iskola",
+        "kozponti-szovetseg"
+      ],
+      "institutionNames": [
+        "Bécsi Magyar Iskola",
+        "Központi Szövetség"
+      ],
+      "pressEvidenceRefs": [
+        "data/institution-press-evidence.json"
+      ],
+      "relationByInstitution": {
+        "becsi-magyar-iskola": "direct-coverage",
+        "kozponti-szovetseg": "direct-coverage"
+      },
+      "year": "2026",
+      "sortKey": "2026-09-213"
+    },
+    {
+      "id": "press-inst-iden-eloszor-bad",
+      "url": "https://rolunk.at/aktualis/iden-eloszor-badenben-is-indit-csoportot-a-bmi/",
+      "title": "Idén először Badenben is indít csoportot a BMI",
+      "publisher": "Rólunk.at",
+      "date": "2026-09-11",
+      "summary": "A Bécsi Magyar Iskola 2026/27-ben Badenben is indít magyar nyelvi csoportot, több korosztály számára.",
+      "summaryType": "editorial-summary",
+      "approval": "curated-source-evidence",
+      "memberIds": [],
+      "memberNames": [],
+      "institutionIds": [
+        "becsi-magyar-iskola"
+      ],
+      "institutionNames": [
+        "Bécsi Magyar Iskola"
+      ],
+      "pressEvidenceRefs": [
+        "data/institution-press-evidence.json"
+      ],
+      "relationByInstitution": {
+        "becsi-magyar-iskola": "direct-coverage"
+      },
+      "year": "2026",
+      "sortKey": "2026-09-113"
+    },
+    {
+      "id": "press-inst-hamarosan-becsen",
+      "url": "https://rolunk.at/aktualis/hamarosan-becsengetnek/",
+      "title": "Hamarosan becsengetnek!",
+      "publisher": "Rólunk.at",
+      "date": "2026-09-03",
+      "summary": "A Bécsi Magyar Iskola 2026/27-es foglalkozásait és a fiatalok által készített online programválasztót mutatja be.",
+      "summaryType": "editorial-summary",
+      "approval": "curated-source-evidence",
+      "memberIds": [],
+      "memberNames": [],
+      "institutionIds": [
+        "becsi-magyar-iskola"
+      ],
+      "institutionNames": [
+        "Bécsi Magyar Iskola"
+      ],
+      "pressEvidenceRefs": [
+        "data/institution-press-evidence.json"
+      ],
+      "relationByInstitution": {
+        "becsi-magyar-iskola": "direct-coverage"
+      },
+      "year": "2026",
+      "sortKey": "2026-09-033"
+    },
     {
       "id": "press-inst-0173f6e1",
       "url": "https://rolunk.at/nepcsoportunk/a-magyar-nyelvhez-jo-dolgok-kapcsolodnak-ovodai-foglalkozasok-becsben-es-badenben/",
@@ -597,6 +678,32 @@
       "sortKey": "2026-05-043"
     },
     {
+      "id": "press-inst-100-eves-a-becsi",
+      "url": "https://rolunk.at/nepcsoportunk/100-eves-a-becsi-magyar-iskolaegyesulet/",
+      "title": "100 éves a Bécsi Magyar Iskolaegyesület",
+      "publisher": "Rólunk.at",
+      "date": "2026-04-30",
+      "summary": "Király Andrea a Bécsi Magyar Iskolaegyesület százéves történetéről, oktatási programjairól és 2026-os jubileumi terveiről beszél.",
+      "summaryType": "editorial-summary",
+      "approval": "curated-source-evidence",
+      "memberIds": [],
+      "memberNames": [],
+      "institutionIds": [
+        "becsi-magyar-iskolaegyesulet"
+      ],
+      "institutionNames": [
+        "Bécsi Magyar Iskolaegyesület"
+      ],
+      "pressEvidenceRefs": [
+        "data/institution-press-evidence.json"
+      ],
+      "relationByInstitution": {
+        "becsi-magyar-iskolaegyesulet": "direct-coverage"
+      },
+      "year": "2026",
+      "sortKey": "2026-04-303"
+    },
+    {
       "id": "press-1550e113",
       "url": "https://volksgruppen.orf.at/magyarok/stories/3351154/",
       "title": "Felsőőrbe érkezik Az aranyrózsa",
@@ -957,6 +1064,32 @@
       ],
       "year": "2026",
       "sortKey": "2026-00-001"
+    },
+    {
+      "id": "press-f1391565",
+      "url": "https://naturpark.hu/hu/news/id-nature-2025-2026-interreg-athu-199.html",
+      "title": "ID Nature – határon átnyúló natúrparki együttműködés",
+      "publisher": "Írottkő Natúrpark",
+      "date": "2025-2026",
+      "memberIds": [
+        "irottko-sportegyesulet"
+      ],
+      "memberNames": [
+        "Írottkő Sportegyesület"
+      ],
+      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
+      "summaryType": "source-context",
+      "evidenceSources": [
+        "member-organizations.json"
+      ],
+      "approval": "curated-source-evidence",
+      "institutionIds": [],
+      "institutionNames": [],
+      "pressEvidenceRefs": [
+        "data/member-news.json"
+      ],
+      "year": "2025",
+      "sortKey": "2025-00-000"
     },
     {
       "id": "press-inst-57b75818",
@@ -1736,32 +1869,6 @@
       },
       "year": "2025",
       "sortKey": "2025-00-001"
-    },
-    {
-      "id": "press-f1391565",
-      "url": "https://naturpark.hu/hu/news/id-nature-2025-2026-interreg-athu-199.html",
-      "title": "ID Nature – határon átnyúló natúrparki együttműködés",
-      "publisher": "Írottkő Natúrpark",
-      "date": "2025-2026",
-      "memberIds": [
-        "irottko-sportegyesulet"
-      ],
-      "memberNames": [
-        "Írottkő Sportegyesület"
-      ],
-      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
-      "summaryType": "source-context",
-      "evidenceSources": [
-        "member-organizations.json"
-      ],
-      "approval": "curated-source-evidence",
-      "institutionIds": [],
-      "institutionNames": [],
-      "pressEvidenceRefs": [
-        "data/member-news.json"
-      ],
-      "year": "2025",
-      "sortKey": "2025-00-000"
     },
     {
       "id": "press-03d1c4cf",
