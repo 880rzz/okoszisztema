@@ -316,12 +316,15 @@
       "memberNames": [
         "Alsóőri Magyar Kultúr- és Táncegyesület"
       ],
-      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
-      "summaryType": "source-context",
+      "summary": "„A soron következő, egy órás, zenés magazinadásunk első felében az Alsóőrben megtartott március 15-i ünnepségről szóló beszámolónkat hallhatják majd. Majd…”",
+      "summaryType": "publisher-excerpt",
       "evidenceSources": [
         "member-organizations.json"
       ],
-      "approval": "curated-source-evidence"
+      "approval": "curated-source-evidence",
+      "summarySourceUrl": "https://volksgruppen.orf.at/magyarok/stories/3346857/",
+      "sourceHeadingMatched": true,
+      "summaryVerifiedAt": "2026-10-26"
     },
     {
       "id": "press-f7e2d8f0",
@@ -392,12 +395,15 @@
       "memberNames": [
         "Írottkő Sportegyesület"
       ],
-      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
-      "summaryType": "source-context",
+      "summary": "„Körmendről indult, ma Tarcsafürdő mindennapjainak megkerülhetetlen alakja. Németh Beáta története arról szól, hogyan válhat egy ember tapasztalata, kitartása és nyitottsága…”",
+      "summaryType": "publisher-excerpt",
       "evidenceSources": [
         "member-organizations.json"
       ],
-      "approval": "curated-source-evidence"
+      "approval": "curated-source-evidence",
+      "summarySourceUrl": "https://rolunk.at/magazin/ket-orszag-kozott-egy-kozossegert/",
+      "sourceHeadingMatched": true,
+      "summaryVerifiedAt": "2026-10-26"
     },
     {
       "id": "press-26ecef22",
@@ -411,12 +417,15 @@
       "memberNames": [
         "Ausztriai Magyar Kutatóintézet"
       ],
-      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
-      "summaryType": "source-context",
+      "summary": "„Sikeres év áll a bécsi Központi Szövetség mögött is. Számos rendezvényt tartottak, köztük a Kufstein Konferenciát. 2026-ban is izgalmas projektek…”",
+      "summaryType": "publisher-excerpt",
       "evidenceSources": [
         "member-organizations.json"
       ],
-      "approval": "curated-source-evidence"
+      "approval": "curated-source-evidence",
+      "summarySourceUrl": "https://volksgruppen.orf.at/magyarok/stories/3336275/",
+      "sourceHeadingMatched": true,
+      "summaryVerifiedAt": "2026-10-26"
     },
     {
       "id": "press-f1391565",
@@ -910,13 +919,16 @@
       "memberNames": [
         "Bornemisza Péter Társaság"
       ],
-      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
-      "summaryType": "source-context",
+      "summary": "„Immár 64 éve biztos pont a bécsi magyar kulturális életben a Bornemisza Péter Társaság. Az evangélikussághoz kötődő, döntően irodalmi és…”",
+      "summaryType": "publisher-excerpt",
       "evidenceSources": [
         "member-organizations.json",
         "member-press-evidence.json"
       ],
-      "approval": "curated-source-evidence"
+      "approval": "curated-source-evidence",
+      "summarySourceUrl": "https://volksgruppen.orf.at/magyarok/stories/3262490/",
+      "sourceHeadingMatched": true,
+      "summaryVerifiedAt": "2026-10-26"
     },
     {
       "id": "press-7365a6f3b898fd",
@@ -950,12 +962,15 @@
       "memberNames": [
         "Lean in Femspace Külföldön újrakezdő magyar nők egyesülete"
       ],
-      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
-      "summaryType": "source-context",
+      "summary": "„A Lean in Femspace Egyesület grazi alszervezete május végén és június elején újabb kulturális rendezvényekkel folytatja a tavaly óta működő…”",
+      "summaryType": "publisher-excerpt",
       "evidenceSources": [
         "member-organizations.json"
       ],
-      "approval": "curated-source-evidence"
+      "approval": "curated-source-evidence",
+      "summarySourceUrl": "https://volksgruppen.orf.at/magyarok/stories/3256313/",
+      "sourceHeadingMatched": true,
+      "summaryVerifiedAt": "2026-10-26"
     },
     {
       "id": "press-23e317c5",
@@ -1166,12 +1181,15 @@
       "memberNames": [
         "Felső-Ausztriai Magyarok Kultúregyesülete"
       ],
-      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
-      "summaryType": "source-context",
+      "summary": "„A Felső-Ausztriai Magyarok Kultúregyesülete április közepén kettős jubileumot ünnepel. Az egyesület megalapításának idén már 55 éve, amiről egy gálaműsorral emlékeznek…”",
+      "summaryType": "publisher-excerpt",
       "evidenceSources": [
         "member-organizations.json"
       ],
-      "approval": "curated-source-evidence"
+      "approval": "curated-source-evidence",
+      "summarySourceUrl": "https://volksgruppen.orf.at/magyarok/stories/3201515/",
+      "sourceHeadingMatched": true,
+      "summaryVerifiedAt": "2026-10-26"
     },
     {
       "id": "press-47fdecb1",
@@ -1207,12 +1225,15 @@
       "memberNames": [
         "Ausztriai Magyar Kutatóintézet"
       ],
-      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
-      "summaryType": "source-context",
+      "summary": "„Region der Vielfalt, azaz a sokszínűség vidéke – ezzel a címmel adott ki tanulmánykötetet az Ausztriai Magyar Kutatóintézet. A kötetben…”",
+      "summaryType": "publisher-excerpt",
       "evidenceSources": [
         "member-organizations.json"
       ],
-      "approval": "curated-source-evidence"
+      "approval": "curated-source-evidence",
+      "summarySourceUrl": "https://volksgruppen.orf.at/magyarok/stories/3200228/",
+      "sourceHeadingMatched": true,
+      "summaryVerifiedAt": "2026-10-26"
     },
     {
       "id": "press-f3ef5ce7",
@@ -1479,13 +1500,16 @@
       "memberNames": [
         "Lean in Femspace Külföldön újrakezdő magyar nők egyesülete"
       ],
-      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
-      "summaryType": "source-context",
+      "summary": "„A Lean in Femspace, az Ausztriában élő magyar nők professzionális, non profit egyesülete szerteágazó rendezvényei között egy különleges eseménynek adott…”",
+      "summaryType": "publisher-excerpt",
       "evidenceSources": [
         "member-organizations.json",
         "member-press-evidence.json"
       ],
-      "approval": "curated-source-evidence"
+      "approval": "curated-source-evidence",
+      "summarySourceUrl": "https://volksgruppen.orf.at/magyarok/stories/3034569/",
+      "sourceHeadingMatched": true,
+      "summaryVerifiedAt": "2026-10-26"
     },
     {
       "id": "press-4e9a6284",
