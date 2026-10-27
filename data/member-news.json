@@ -472,12 +472,15 @@
       "memberNames": [
         "Felső-Ausztriai Hétvégi Magyar Óvoda és Iskola"
       ],
-      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
-      "summaryType": "source-context",
+      "summary": "„Szerkesztőségünk tavasz óta sorozatban mutatja be az iskolai magyaroktatás lehetőségeit Ausztriában. A negyedik részben Felső-Ausztria és Vorarlberg kínálatának néztünk utána…”",
+      "summaryType": "publisher-excerpt",
       "evidenceSources": [
         "member-organizations.json"
       ],
-      "approval": "curated-source-evidence"
+      "approval": "curated-source-evidence",
+      "summarySourceUrl": "https://volksgruppen.orf.at/magyarok/stories/3327962/",
+      "sourceHeadingMatched": true,
+      "summaryVerifiedAt": "2026-10-27"
     },
     {
       "id": "press-6bdc4ee9345bf8",
@@ -732,13 +735,16 @@
         "72 sz. Széchenyi István cserkészcsapat",
         "Nemzetközi Duna Filharmónia Baráti kör"
       ],
-      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
-      "summaryType": "source-context",
+      "summary": "„„Diaszpóra, népcsoport, menekültek, migráció és transznacionalitás – az ausztriai magyar egyesületek önképe“ mottóval rendezték meg a hétvégén az immár 17…”",
+      "summaryType": "publisher-excerpt",
       "evidenceSources": [
         "member-organizations.json",
         "member-press-evidence.json"
       ],
-      "approval": "curated-source-evidence"
+      "approval": "curated-source-evidence",
+      "summarySourceUrl": "https://volksgruppen.orf.at/magyarok/stories/3331185/",
+      "sourceHeadingMatched": true,
+      "summaryVerifiedAt": "2026-10-27"
     },
     {
       "id": "press-03d1c4cf",
@@ -1026,12 +1032,15 @@
       "memberNames": [
         "Vorarlbergi Magyar Egyesület"
       ],
-      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
-      "summaryType": "source-context",
+      "summary": "„Október 23-án lesz 67 éve az 1956-os magyar forradalom és szabadságharc kitörésének. Idén Bécsben, Burgenlandban, Salzburgban, Stájerországban és Tirolban is…”",
+      "summaryType": "publisher-excerpt",
       "evidenceSources": [
         "member-organizations.json"
       ],
-      "approval": "curated-source-evidence"
+      "approval": "curated-source-evidence",
+      "summarySourceUrl": "https://volksgruppen.orf.at/magyarok/stories/3229029/",
+      "sourceHeadingMatched": true,
+      "summaryVerifiedAt": "2026-10-27"
     },
     {
       "id": "press-f730fdea",
@@ -1187,13 +1196,16 @@
         "IMIKE - Innsbrucki Magyar Ifjúsági és Kultúregyesület",
         "SalzUng - Salzburgi Magyar Egyesület"
       ],
-      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
-      "summaryType": "source-context",
+      "summary": "„Egységben a diaszpóra címmel a nyugat-ausztriai és dél-tiroli magyar szervezetek számára rendeztek tanácskozást szombaton Innsbruckban. A Salzburgi Magyar Egyesület és…”",
+      "summaryType": "publisher-excerpt",
       "evidenceSources": [
         "member-organizations.json",
         "member-press-evidence.json"
       ],
-      "approval": "curated-source-evidence"
+      "approval": "curated-source-evidence",
+      "summarySourceUrl": "https://volksgruppen.orf.at/magyarok/stories/3200580/",
+      "sourceHeadingMatched": true,
+      "summaryVerifiedAt": "2026-10-27"
     },
     {
       "id": "press-aa861c3e",
@@ -1283,13 +1295,16 @@
       "memberNames": [
         "Nemzetközi Duna Filharmónia Baráti kör"
       ],
-      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
-      "summaryType": "source-context",
+      "summary": "„A Duna-régió nemzeteit, kultúráit igyekszik egymáshoz közelebb hozni 2003 óta a Nemzetközi Duna Filharmónia. November 5-én stílszerű helyszínen, a Duna-parti…”",
+      "summaryType": "publisher-excerpt",
       "evidenceSources": [
         "member-organizations.json",
         "member-press-evidence.json"
       ],
-      "approval": "curated-source-evidence"
+      "approval": "curated-source-evidence",
+      "summarySourceUrl": "https://volksgruppen.orf.at/magyarok/stories/3180996/",
+      "sourceHeadingMatched": true,
+      "summaryVerifiedAt": "2026-10-27"
     },
     {
       "id": "press-1fe6654a",
@@ -1402,12 +1417,15 @@
       "memberNames": [
         "Közép–Burgenlandi Magyar Kultúregyesület"
       ],
-      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
-      "summaryType": "source-context",
+      "summary": "„A csaknem kétszáz tagot számláló Közép-burgenlandi Magyar Kultúregyesület küldetése a burgenlandi magyar nyelv ápolása és megőrzése, a magyar örökség továbbörökítése…”",
+      "summaryType": "publisher-excerpt",
       "evidenceSources": [
         "member-press-evidence.json"
       ],
-      "approval": "curated-source-evidence"
+      "approval": "curated-source-evidence",
+      "summarySourceUrl": "https://rolunk.at/nepcsoportunk/feladatunk-hogy-a-kovetkezo-evszazadban-is-megmaradjon-a-magyar-nyelv-es-kultura-burgenlandban/",
+      "sourceHeadingMatched": true,
+      "summaryVerifiedAt": "2026-10-27"
     },
     {
       "id": "press-39dcdcb3",
