@@ -1905,13 +1905,16 @@
       "memberNames": [
         "Bornemisza Péter Társaság"
       ],
-      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
-      "summaryType": "source-context",
+      "summary": "„Immár 64 éve meghatározó szerepet tölt be a bécsi magyar kulturális életben a Bornemisza Péter Társaság. A főként irodalmi és…”",
+      "summaryType": "publisher-excerpt",
       "evidenceSources": [
         "member-organizations.json",
         "member-press-evidence.json"
       ],
       "approval": "curated-source-evidence",
+      "summarySourceUrl": "https://volksgruppen.orf.at/magyarok/stories/3277330/",
+      "sourceHeadingMatched": true,
+      "summaryVerifiedAt": "2026-10-28",
       "institutionIds": [],
       "institutionNames": [],
       "pressEvidenceRefs": [
@@ -2303,12 +2306,15 @@
       "memberNames": [
         "Mi Magyarok Egymásért"
       ],
-      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
-      "summaryType": "source-context",
+      "summary": "„Alig több, mint fél évvel ezelőtt a vorarlbergi magyar közösség egyesületet alapított tevékenységeinek koordinálására és bővítésére. A „Mi Magyarok Egymásért“…”",
+      "summaryType": "publisher-excerpt",
       "evidenceSources": [
         "member-organizations.json"
       ],
       "approval": "curated-source-evidence",
+      "summarySourceUrl": "https://volksgruppen.orf.at/magyarok/stories/3242638/",
+      "sourceHeadingMatched": true,
+      "summaryVerifiedAt": "2026-10-28",
       "institutionIds": [],
       "institutionNames": [],
       "pressEvidenceRefs": [
@@ -2516,13 +2522,16 @@
         "Felső-Ausztriai Magyarok Kultúregyesülete",
         "Linz Magyar Katolikus Közösség"
       ],
-      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
-      "summaryType": "source-context",
+      "summary": "„Hét magyar közösség és számos vállalkozás, magánszemély együttműködésében tartják meg Linzben a „Hamuban Sült Pogácsa Fesztivál és Táncháztalálkozó“ programját június…”",
+      "summaryType": "publisher-excerpt",
       "evidenceSources": [
         "member-organizations.json",
         "member-press-evidence.json"
       ],
       "approval": "curated-source-evidence",
+      "summarySourceUrl": "https://volksgruppen.orf.at/magyarok/stories/3209121/",
+      "sourceHeadingMatched": true,
+      "summaryVerifiedAt": "2026-10-28",
       "institutionIds": [],
       "institutionNames": [],
       "pressEvidenceRefs": [
@@ -2863,13 +2872,16 @@
       "memberNames": [
         "SalzUng - Salzburgi Magyar Egyesület"
       ],
-      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
-      "summaryType": "source-context",
+      "summary": "„„Legyen a zene mindenkié!“ címmel szervez koncertet szombaton a Salzung, a Salzburgi Magyar Egyesület. 17:00 órától a salzburgi zenei élet…”",
+      "summaryType": "publisher-excerpt",
       "evidenceSources": [
         "member-organizations.json",
         "member-press-evidence.json"
       ],
       "approval": "curated-source-evidence",
+      "summarySourceUrl": "https://volksgruppen.orf.at/magyarok/stories/3160199/",
+      "sourceHeadingMatched": true,
+      "summaryVerifiedAt": "2026-10-28",
       "institutionIds": [],
       "institutionNames": [],
       "pressEvidenceRefs": [
@@ -3311,13 +3323,16 @@
       "memberNames": [
         "Felső-Ausztriai Magyarok Kultúregyesülete"
       ],
-      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
-      "summaryType": "source-context",
+      "summary": "„50-ik születésnapját ünnepelte a Felső-Ausztriai Magyar Kultúregyesület a hétvégén Linzben, a város Redoutentermében. A kultúregyesület egy háromórás műsor keretében bemutatta…”",
+      "summaryType": "publisher-excerpt",
       "evidenceSources": [
         "member-organizations.json",
         "member-press-evidence.json"
       ],
       "approval": "curated-source-evidence",
+      "summarySourceUrl": "https://volksgruppen.orf.at/v2/magyarok/stories/2907261/",
+      "sourceHeadingMatched": true,
+      "summaryVerifiedAt": "2026-10-28",
       "institutionIds": [],
       "institutionNames": [],
       "pressEvidenceRefs": [
