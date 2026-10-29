@@ -711,12 +711,15 @@
       "memberNames": [
         "Ausztriai Magyar Kutatóintézet"
       ],
-      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
-      "summaryType": "source-context",
+      "summary": "„Az őszi premier után tavasszal három beszélgetéssel folytatódik az Ausztriai Magyar Kutatóintézet (ÖIUS) irodalmi sorozata, a „Schwedenplatzi beszélgetések“. Három kortárs…”",
+      "summaryType": "publisher-excerpt",
       "evidenceSources": [
         "member-organizations.json"
       ],
-      "approval": "curated-source-evidence"
+      "approval": "curated-source-evidence",
+      "summarySourceUrl": "https://volksgruppen.orf.at/magyarok/stories/3293538/",
+      "sourceHeadingMatched": true,
+      "summaryVerifiedAt": "2026-10-29"
     },
     {
       "id": "press-82c8496b",
@@ -752,12 +755,15 @@
       "memberNames": [
         "Napraforgók Bécsi Magyar Néptánc és Népzene Egyesület"
       ],
-      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
-      "summaryType": "source-context",
+      "summary": "„A bécsi Napraforgók Táncegyüttes idén ünnepli megalakulásának 25. évfordulóját. A jubileumot a 25. Bécsi Magyar Táncháztalálkozóval egybekötve tartották meg az…”",
+      "summaryType": "publisher-excerpt",
       "evidenceSources": [
         "member-organizations.json"
       ],
-      "approval": "curated-source-evidence"
+      "approval": "curated-source-evidence",
+      "summarySourceUrl": "https://volksgruppen.orf.at/magyarok/stories/3283569/",
+      "sourceHeadingMatched": true,
+      "summaryVerifiedAt": "2026-10-29"
     },
     {
       "id": "press-18baa798",
@@ -831,13 +837,16 @@
       "memberNames": [
         "FemConnect Graz"
       ],
-      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
-      "summaryType": "source-context",
+      "summary": "„FemConnect Graz néven új magyar kultúregyesület alakult 2024 augusztusában Grazban. Az egyesület célja kettős: egyfelől szeretnének színvonalas magyar nyelvű kulturális…”",
+      "summaryType": "publisher-excerpt",
       "evidenceSources": [
         "member-organizations.json",
         "member-press-evidence.json"
       ],
-      "approval": "curated-source-evidence"
+      "approval": "curated-source-evidence",
+      "summarySourceUrl": "https://rolunk.at/kultura/femconnect-uj-magyar-kulturegyesulet-grazban/",
+      "sourceHeadingMatched": true,
+      "summaryVerifiedAt": "2026-10-29"
     },
     {
       "id": "press-08996b863f2332",
@@ -1007,12 +1016,15 @@
       "memberNames": [
         "Nemzetközi Duna Filharmónia Baráti kör"
       ],
-      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
-      "summaryType": "source-context",
+      "summary": "„A közép-európai zenészek kulturális platformja, a Nemzetközi Duna Filharmónia február 1-jén jótékonysági koncertet szervez. Az esemény célja, hogy adományokat gyűjtsenek…”",
+      "summaryType": "publisher-excerpt",
       "evidenceSources": [
         "member-press-evidence.json"
       ],
-      "approval": "curated-source-evidence"
+      "approval": "curated-source-evidence",
+      "summarySourceUrl": "https://volksgruppen.orf.at/magyarok/stories/3242657/",
+      "sourceHeadingMatched": true,
+      "summaryVerifiedAt": "2026-10-29"
     },
     {
       "id": "press-06d72974",
@@ -1045,13 +1057,16 @@
       "memberNames": [
         "Közép–Burgenlandi Magyar Kultúregyesület"
       ],
-      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
-      "summaryType": "source-context",
+      "summary": "„Két évtizedes fennállását ünnepli idén a Középburgenlandi Magyar Kultúregyesület (MBUKV). A jeles születésnapról többórás, színes gálaműsorral emlékeztek meg a szervezők…”",
+      "summaryType": "publisher-excerpt",
       "evidenceSources": [
         "member-organizations.json",
         "member-press-evidence.json"
       ],
-      "approval": "curated-source-evidence"
+      "approval": "curated-source-evidence",
+      "summarySourceUrl": "https://rolunk.at/nepcsoportunk/huszeves-a-kozepburgenlandi-magyar-kulturegyesulet/",
+      "sourceHeadingMatched": true,
+      "summaryVerifiedAt": "2026-10-29"
     },
     {
       "id": "press-68b1de8d",
@@ -1147,12 +1162,15 @@
       "memberNames": [
         "Kaláka Club"
       ],
-      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
-      "summaryType": "source-context",
+      "summary": "„A győri Széchenyi István Egyetem Pro Universitate díjában részesült nemrégiben Wurst Erzsébet. A Központi Szövetség, a bécsi Kaláka Club és…”",
+      "summaryType": "publisher-excerpt",
       "evidenceSources": [
         "member-organizations.json"
       ],
-      "approval": "curated-source-evidence"
+      "approval": "curated-source-evidence",
+      "summarySourceUrl": "https://volksgruppen.orf.at/magyarok/stories/3202860/",
+      "sourceHeadingMatched": true,
+      "summaryVerifiedAt": "2026-10-29"
     },
     {
       "id": "press-48847a26",
@@ -1245,12 +1263,15 @@
       "memberNames": [
         "Felső-Ausztriai Magyarok Kultúregyesülete"
       ],
-      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
-      "summaryType": "source-context",
+      "summary": "„Ritmusos menetelés és lendületes szergyakorlatok. A Magyarországon napjainkban is népszerű mazsorett táncforma egyesíti a tánc és a sport elemeit, fejleszti…”",
+      "summaryType": "publisher-excerpt",
       "evidenceSources": [
         "member-press-evidence.json"
       ],
-      "approval": "curated-source-evidence"
+      "approval": "curated-source-evidence",
+      "summarySourceUrl": "https://volksgruppen.orf.at/magyarok/stories/3224341/",
+      "sourceHeadingMatched": true,
+      "summaryVerifiedAt": "2026-10-29"
     },
     {
       "id": "press-66448f30",
@@ -1440,13 +1461,16 @@
       "memberNames": [
         "72 sz. Széchenyi István cserkészcsapat"
       ],
-      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
-      "summaryType": "source-context",
+      "summary": "„Szinte nomád körülmények között töltöttek el egy hosszú hétvégét az erdőben a bécsi cserkész vezetők. Magukra főztek, fát vágtak, és…”",
+      "summaryType": "publisher-excerpt",
       "evidenceSources": [
         "member-organizations.json",
         "member-press-evidence.json"
       ],
-      "approval": "curated-source-evidence"
+      "approval": "curated-source-evidence",
+      "summarySourceUrl": "https://volksgruppen.orf.at/magyarok/stories/3077055/",
+      "sourceHeadingMatched": true,
+      "summaryVerifiedAt": "2026-10-29"
     },
     {
       "id": "press-601a7026",
