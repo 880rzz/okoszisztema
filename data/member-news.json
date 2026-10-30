@@ -335,12 +335,15 @@
       "memberNames": [
         "Magyar Egyetemisták és Öregdiákok Klubja"
       ],
-      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
-      "summaryType": "source-context",
+      "summary": "„A Magyar Egyetemisták és Öregdiákok Klubja Grácban a napokban tartotta éves rendes közgyűlését. Ezen a tagok újraválasztották a vezetőséget, amelynek…”",
+      "summaryType": "publisher-excerpt",
       "evidenceSources": [
         "member-organizations.json"
       ],
-      "approval": "curated-source-evidence"
+      "approval": "curated-source-evidence",
+      "summarySourceUrl": "https://volksgruppen.orf.at/magyarok/stories/3338990/",
+      "sourceHeadingMatched": true,
+      "summaryVerifiedAt": "2026-10-30"
     },
     {
       "id": "press-f7bc39e2",
@@ -354,12 +357,15 @@
       "memberNames": [
         "FemConnect Graz"
       ],
-      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
-      "summaryType": "source-context",
+      "summary": "„A dolgozó szülők számára minden évben komoly fejtörést jelent a nyári szünet megszervezése. A táborok hirdetései jellemzően április és május…”",
+      "summaryType": "publisher-excerpt",
       "evidenceSources": [
         "member-press-evidence.json"
       ],
-      "approval": "curated-source-evidence"
+      "approval": "curated-source-evidence",
+      "summarySourceUrl": "https://rolunk.at/aktualis/nyari-taborok-ausztriaban-2026/",
+      "sourceHeadingMatched": true,
+      "summaryVerifiedAt": "2026-10-30"
     },
     {
       "id": "press-9e8c600b",
@@ -533,13 +539,16 @@
       "memberNames": [
         "SVUNG Bécsi Magyarok Művészeti Egyesülete"
       ],
-      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
-      "summaryType": "source-context",
+      "summary": "„Az ORF Magyar szerkesztősége forgatott a SVUNG Bécsi Magyar Színház egyik próbáján, a riport pedig november 9-én, 14:00 órakor kerül…”",
+      "summaryType": "publisher-excerpt",
       "evidenceSources": [
         "member-organizations.json",
         "member-press-evidence.json"
       ],
-      "approval": "curated-source-evidence"
+      "approval": "curated-source-evidence",
+      "summarySourceUrl": "https://volksgruppen.orf.at/magyarok/stories/3324528/",
+      "sourceHeadingMatched": true,
+      "summaryVerifiedAt": "2026-10-30"
     },
     {
       "id": "press-fb3d6b76",
@@ -572,12 +581,15 @@
       "memberNames": [
         "Mi Magyarok Egymásért"
       ],
-      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
-      "summaryType": "source-context",
+      "summary": "„A vorarlbergi magyar elsőnyelvi (anyanyelvi) oktatás iránti kereslet folyamatosan növekszik. Az oktatás három helyszínen és online zajlik, kulturális eseményekkel kiegészítve…”",
+      "summaryType": "publisher-excerpt",
       "evidenceSources": [
         "member-organizations.json"
       ],
-      "approval": "curated-source-evidence"
+      "approval": "curated-source-evidence",
+      "summarySourceUrl": "https://volksgruppen.orf.at/magyarok/stories/3313367/",
+      "sourceHeadingMatched": true,
+      "summaryVerifiedAt": "2026-10-30"
     },
     {
       "id": "press-215d3ecf",
@@ -591,12 +603,15 @@
       "memberNames": [
         "Kaláka Club"
       ],
-      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
-      "summaryType": "source-context",
+      "summary": "„Az Ausztriai Magyarok Gazdasági Érdekközössége/Kaláka Club, a Collegium Pazmaneum, valamint Magyarország Bécsi Nagykövetsége mint szervező, augusztus 23-án, szombaton rendezi meg…”",
+      "summaryType": "publisher-excerpt",
       "evidenceSources": [
         "member-press-evidence.json"
       ],
-      "approval": "curated-source-evidence"
+      "approval": "curated-source-evidence",
+      "summarySourceUrl": "https://volksgruppen.orf.at/magyarok/stories/3311789/",
+      "sourceHeadingMatched": true,
+      "summaryVerifiedAt": "2026-10-30"
     },
     {
       "id": "press-77ca33e8d45610",
@@ -771,12 +786,15 @@
       "memberNames": [
         "Mi Magyarok Egymásért"
       ],
-      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
-      "summaryType": "source-context",
+      "summary": "„A vorarlbergi magyar anyanyelvi oktatás terén idén jelentős előrelépés történt. Az eddigi harminc helyett ötven gyermek jelentkezett. Új helyszínen, valamint…”",
+      "summaryType": "publisher-excerpt",
       "evidenceSources": [
         "member-organizations.json"
       ],
-      "approval": "curated-source-evidence"
+      "approval": "curated-source-evidence",
+      "summarySourceUrl": "https://volksgruppen.orf.at/magyarok/stories/3278283/",
+      "sourceHeadingMatched": true,
+      "summaryVerifiedAt": "2026-10-30"
     },
     {
       "id": "press-9e563fd6",
@@ -871,13 +889,16 @@
       "memberNames": [
         "Vorarlbergi Magyar Egyesület"
       ],
-      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
-      "summaryType": "source-context",
+      "summary": "„Először ünnepelték meg a magyar államalapítás közelgő, augusztus 20-i ünnepét Ausztria legnyugatibb tartományában. A Vorarlbergi Magyar Egyesület számára kiemelten fontos…”",
+      "summaryType": "publisher-excerpt",
       "evidenceSources": [
         "member-organizations.json",
         "member-press-evidence.json"
       ],
-      "approval": "curated-source-evidence"
+      "approval": "curated-source-evidence",
+      "summarySourceUrl": "https://volksgruppen.orf.at/magyarok/stories/3269351/",
+      "sourceHeadingMatched": true,
+      "summaryVerifiedAt": "2026-10-30"
     },
     {
       "id": "press-d21d937e",
@@ -1065,12 +1086,15 @@
       "memberNames": [
         "Alsóőri Magyar Kultúr- és Táncegyesület"
       ],
-      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
-      "summaryType": "source-context",
+      "summary": "„A tavalyi nagy sikert követően ismét Őrvidéki Mulatságra hívta az érdeklődőket június 17-én a Burgenlandi Magyarok Népfőiskolája. A zenés, interkulturális…”",
+      "summaryType": "publisher-excerpt",
       "evidenceSources": [
         "member-organizations.json"
       ],
-      "approval": "curated-source-evidence"
+      "approval": "curated-source-evidence",
+      "summarySourceUrl": "https://volksgruppen.orf.at/magyarok/stories/3212235/",
+      "sourceHeadingMatched": true,
+      "summaryVerifiedAt": "2026-10-30"
     },
     {
       "id": "press-8c6189f0",
@@ -1084,12 +1108,15 @@
       "memberNames": [
         "Közép–Burgenlandi Magyar Kultúregyesület"
       ],
-      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
-      "summaryType": "source-context",
+      "summary": "„Immár hagyomány, hogy a Közép-Burgenlandi Magyar Kultúregyesület is bekapcsolódik a felsőpulyai regionális heti piac programjába, hisz itt nemcsak kulináris, hanem…”",
+      "summaryType": "publisher-excerpt",
       "evidenceSources": [
         "member-press-evidence.json"
       ],
-      "approval": "curated-source-evidence"
+      "approval": "curated-source-evidence",
+      "summarySourceUrl": "https://volksgruppen.orf.at/magyarok/stories/3211192/",
+      "sourceHeadingMatched": true,
+      "summaryVerifiedAt": "2026-10-30"
     },
     {
       "id": "press-91868a8d",
@@ -1264,12 +1291,15 @@
       "memberNames": [
         "Vorarlbergi Magyar Egyesület"
       ],
-      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
-      "summaryType": "source-context",
+      "summary": "„Beke József, Magyarország Innsbrucki Főkonzulátusának vezetőjének a megbízatása március végével lejárt, így elköszönt a 2019-ben nyílt külképviselet éléről. Hivatali ideje…”",
+      "summaryType": "publisher-excerpt",
       "evidenceSources": [
         "member-press-evidence.json"
       ],
-      "approval": "curated-source-evidence"
+      "approval": "curated-source-evidence",
+      "summarySourceUrl": "https://volksgruppen.orf.at/magyarok/stories/3201360/",
+      "sourceHeadingMatched": true,
+      "summaryVerifiedAt": "2026-10-30"
     },
     {
       "id": "press-0ea92cc1",
@@ -1325,12 +1355,15 @@
       "memberNames": [
         "Napraforgók Bécsi Magyar Néptánc és Népzene Egyesület"
       ],
-      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
-      "summaryType": "source-context",
+      "summary": "„Új gyermekcsoportokat indít novembertől a Napraforgók Bécsi Magyar Néptánc és Népzene Egyesület. Az szervezet ezekben a hetekben méri fel, hány…”",
+      "summaryType": "publisher-excerpt",
       "evidenceSources": [
         "member-press-evidence.json"
       ],
-      "approval": "curated-source-evidence"
+      "approval": "curated-source-evidence",
+      "summarySourceUrl": "https://volksgruppen.orf.at/magyarok/stories/3179029/",
+      "sourceHeadingMatched": true,
+      "summaryVerifiedAt": "2026-10-30"
     },
     {
       "id": "press-a7931062",
@@ -1383,12 +1416,15 @@
       "memberNames": [
         "Magyar Egyetemisták és Öregdiákok Klubja"
       ],
-      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
-      "summaryType": "source-context",
+      "summary": "„Új elnököt választott a MEÖK – Magyar Egyetemisták és Öregdiákok Klubja Grácban. Az egyesületet ezentúl Lászlóvári-Thoma Csongor vezeti, aki már…”",
+      "summaryType": "publisher-excerpt",
       "evidenceSources": [
         "member-organizations.json"
       ],
-      "approval": "curated-source-evidence"
+      "approval": "curated-source-evidence",
+      "summarySourceUrl": "https://volksgruppen.orf.at/magyarok/stories/3143883/",
+      "sourceHeadingMatched": true,
+      "summaryVerifiedAt": "2026-10-30"
     },
     {
       "id": "press-ced1d1c1",
@@ -1501,12 +1537,15 @@
         "79 sz. Dr. Kozma György SJ cserkészcsapat",
         "Innsbrucki Magyar Katolikus Közösség"
       ],
-      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
-      "summaryType": "source-context",
+      "summary": "„Kilencedik alkalommal tartottak a hévégén családi napot a tiroli magyarok, ahol lehetőség volt megismerkedni a cserkészvezetőkkel is. Emellett tájékozódhattak az…”",
+      "summaryType": "publisher-excerpt",
       "evidenceSources": [
         "member-organizations.json"
       ],
-      "approval": "curated-source-evidence"
+      "approval": "curated-source-evidence",
+      "summarySourceUrl": "https://volksgruppen.orf.at/magyarok/stories/3068208/",
+      "sourceHeadingMatched": true,
+      "summaryVerifiedAt": "2026-10-30"
     },
     {
       "id": "press-e45086e36e7f1c",
