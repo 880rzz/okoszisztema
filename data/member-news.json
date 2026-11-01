@@ -553,12 +553,15 @@
       "memberNames": [
         "Kaláka Club"
       ],
-      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
-      "summaryType": "source-context",
+      "summary": "„Nemzetközi konferenciával ünnepelte fennállásának 40+1 éves jubileumát a Kaláka Klub – Ausztriai Magyarok Gazdasági Érdekközössége csütörtökön a bécsi Magyar Nagykövetség…”",
+      "summaryType": "publisher-excerpt",
       "evidenceSources": [
         "member-organizations.json"
       ],
-      "approval": "curated-source-evidence"
+      "approval": "curated-source-evidence",
+      "summarySourceUrl": "https://volksgruppen.orf.at/magyarok/stories/3322469/",
+      "sourceHeadingMatched": true,
+      "summaryVerifiedAt": "2026-11-01"
     },
     {
       "id": "press-e1bf0cad",
@@ -630,12 +633,15 @@
       "memberNames": [
         "Felső-Ausztriai Hétvégi Magyar Óvoda és Iskola"
       ],
-      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
-      "summaryType": "source-context",
+      "summary": "„A Felső-Ausztriai Hétvégi Magyar Óvoda és Iskola május 24-én ünnepelte fennállásának 25. évfordulóját. Az esemény méltatta a welsi intézmény erőfeszítéseit…”",
+      "summaryType": "publisher-excerpt",
       "evidenceSources": [
         "member-organizations.json"
       ],
-      "approval": "curated-source-evidence"
+      "approval": "curated-source-evidence",
+      "summarySourceUrl": "https://volksgruppen.orf.at/magyarok/stories/3307647/",
+      "sourceHeadingMatched": true,
+      "summaryVerifiedAt": "2026-11-01"
     },
     {
       "id": "press-3772dee3a46332",
@@ -1226,12 +1232,15 @@
       "memberNames": [
         "Lean in Femspace Külföldön újrakezdő magyar nők egyesülete"
       ],
-      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
-      "summaryType": "source-context",
+      "summary": "„Az elmúlt évek bevált programjait is folytatják, de új események, rendezvények is a tervek között vannak a Famspace idei naptárában…”",
+      "summaryType": "publisher-excerpt",
       "evidenceSources": [
         "member-press-evidence.json"
       ],
-      "approval": "curated-source-evidence"
+      "approval": "curated-source-evidence",
+      "summarySourceUrl": "https://volksgruppen.orf.at/magyarok/stories/3189913/",
+      "sourceHeadingMatched": true,
+      "summaryVerifiedAt": "2026-11-01"
     },
     {
       "id": "press-b879f732",
@@ -1305,13 +1314,16 @@
         "IMEASZ - Innsbrucki Magyar Egyetemisták és Akadémikusok Szövetsége",
         "Magyarház - Innsbrucki Magyar Diákotthon és Kultúrcentrum Egyesület"
       ],
-      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
-      "summaryType": "source-context",
+      "summary": "„A ma innsbrucki „Magyarház“-ként ismert épületben találtak szállást 1957 elején a pesti forradalom után elmenekült diákok. Október 21-én az Innsbrucki…”",
+      "summaryType": "publisher-excerpt",
       "evidenceSources": [
         "member-organizations.json",
         "member-press-evidence.json"
       ],
-      "approval": "curated-source-evidence"
+      "approval": "curated-source-evidence",
+      "summarySourceUrl": "https://volksgruppen.orf.at/magyarok/stories/3179229/",
+      "sourceHeadingMatched": true,
+      "summaryVerifiedAt": "2026-11-01"
     },
     {
       "id": "press-f60d02a4",
@@ -1598,13 +1610,16 @@
       "memberNames": [
         "Szent István Egylet"
       ],
-      "summary": "A hivatkozást a Központi Szövetség tagszervezeti sajtóforrásai között tartjuk nyilván. A cikk részletei az eredeti médiumban olvashatók.",
-      "summaryType": "source-context",
+      "summary": "„A bécsi magyar nagykövetségen szombaton 21:00 órától rendezi meg nagyhagyományú Szent István bálját a több, mint 87 éves múltra visszatekintő…”",
+      "summaryType": "publisher-excerpt",
       "evidenceSources": [
         "member-organizations.json",
         "member-press-evidence.json"
       ],
-      "approval": "curated-source-evidence"
+      "approval": "curated-source-evidence",
+      "summarySourceUrl": "https://volksgruppen.orf.at/v2/magyarok/stories/2694653/",
+      "sourceHeadingMatched": true,
+      "summaryVerifiedAt": "2026-11-01"
     }
   ]
 }
