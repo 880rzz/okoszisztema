@@ -108,7 +108,7 @@
         "sameAs": [
           "https://www.wikidata.org/wiki/Q141275731"
         ],
-        "relation": "A Központi Szövetség tulajdonosa és kiadója.",
+        "relation": "A Központi Szövetség tulajdonosa és kiadója; a Bécsi Szelet Magazintól különálló szerkesztőségi termék.",
         "publishedSince": "1980-03",
         "printFrequency": "kéthavonta",
         "onlinePublication": "folyamatos",
@@ -134,6 +134,7 @@
         "editor": "Vízer Helga",
         "publisher": "Ausztriai Magyar Egyesületek és Szervezetek Központi Szövetsége",
         "organizationalHome": "Bécsi Magyar Iskola",
+        "relation": "A Központi Szövetség kiadói ökoszisztémájának magyar–német online kulturális és közösségi magazinja; a Bécsi Naplótól különálló szerkesztőségi termék.",
         "relaunchContextYear": 2026,
         "independentEvidence": [
           "https://volksgruppen.orf.at/magyarok/stories/3228649/",
