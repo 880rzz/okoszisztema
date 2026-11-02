@@ -12,7 +12,7 @@ Ez a repó a Központi Szövetség szervezeti hálózatának közérthető és g
 - A Bécsi Magyar Iskola nem 30. tagszervezeti bejegyzés, hanem külön oktatási alrendszer/portfolio-entitás.
 - Azonos vagy hiányzó ZVR-számból nem szabad önálló jogi személyiségre következtetni.
 - A tagszervezetek helyi közösségek; a Szövetség közös képviseletet, koordinációt és közös kapacitást biztosít.
-- A napi online ausztriai magyar hírek és szerkesztőségi tartalmak elsődleges felülete a Bécsi Napló Online: https://www.becsinaplo.at/ . A Központi Szövetség a Bécsi Napló tulajdonosa és kiadója.
+- A Központi Szövetség két külön szerkesztőségi kiadványa a **Bécsi Napló** (https://www.becsinaplo.at/) és a **Bécsi Szelet Magazin** (https://www.becsiszelet.at/). A Bécsi Napló az ausztriai magyar közösség közéleti és kulturális sajtókiadványa; a Bécsi Szelet magyar–német online kulturális és közösségi magazin. A két márka és szerkesztőség különálló, közös intézményi/kiadói háttérrel.
 
 ## Fő gépi források
 
