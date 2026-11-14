@@ -10,7 +10,18 @@
   "about": {
     "@type": "Periodical",
     "name": "Bécsi Szelet Magazin",
-    "url": "https://www.becsiszelet.at/"
+    "url": "https://www.becsiszelet.at/",
+    "@id": "https://www.becsiszelet.at/#periodical",
+    "sameAs": [
+      "https://www.wikidata.org/wiki/Q142154314"
+    ],
+    "inLanguage": [
+      "hu",
+      "de"
+    ],
+    "publisher": {
+      "@id": "https://www.kozpontiszovetseg.at/#organization"
+    }
   },
   "publisher": {
     "@type": "Organization",
@@ -20,16 +31,22 @@
       "propertyID": "ZVR",
       "value": "079797621"
     },
-    "url": "https://www.kozpontiszovetseg.at/"
+    "url": "https://www.kozpontiszovetseg.at/",
+    "sameAs": [
+      "https://www.wikidata.org/wiki/Q141274866"
+    ]
   },
-  "additionalType": "https://schema.org/NewsMediaOrganization",
   "subjectOf": {
     "@type": "Thing",
     "name": "Bécsi Magyar Iskola project structure",
-    "url": "https://www.magyariskola.at/"
+    "url": "https://www.magyariskola.at/",
+    "sameAs": [
+      "https://www.wikidata.org/wiki/Q141274560"
+    ]
   },
   "description": "A Bécsi Szelet Magazin a Bécsi Magyar Iskola projektstruktúrájához kapcsolódó, önálló magyar–német online magazin. A projektkapcsolat nem helyettesíti a jóváhagyott jogi Impressum/Offenlegung állításait.",
   "sameAs": [
-    "https://www.becsiszelet.at/"
+    "https://www.becsiszelet.at/",
+    "https://www.wikidata.org/wiki/Q142154314"
   ]
 }
