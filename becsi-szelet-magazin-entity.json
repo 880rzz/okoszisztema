@@ -1,0 +1,35 @@
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "@id": "https://okoszisztema.kozpontiszovetseg.at/entities/becsi-szelet-magazin",
+  "name": "Bécsi Szelet Magazin – project relationship",
+  "url": "https://www.becsiszelet.at/",
+  "isPartOf": {
+    "@id": "https://okoszisztema.kozpontiszovetseg.at/"
+  },
+  "about": {
+    "@type": "Periodical",
+    "name": "Bécsi Szelet Magazin",
+    "url": "https://www.becsiszelet.at/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Ausztriai Magyar Egyesületek és Szervezetek Központi Szövetsége",
+    "identifier": {
+      "@type": "PropertyValue",
+      "propertyID": "ZVR",
+      "value": "079797621"
+    },
+    "url": "https://www.kozpontiszovetseg.at/"
+  },
+  "additionalType": "https://schema.org/NewsMediaOrganization",
+  "subjectOf": {
+    "@type": "Thing",
+    "name": "Bécsi Magyar Iskola project structure",
+    "url": "https://www.magyariskola.at/"
+  },
+  "description": "A Bécsi Szelet Magazin a Bécsi Magyar Iskola projektstruktúrájához kapcsolódó, önálló magyar–német online magazin. A projektkapcsolat nem helyettesíti a jóváhagyott jogi Impressum/Offenlegung állításait.",
+  "sameAs": [
+    "https://www.becsiszelet.at/"
+  ]
+}

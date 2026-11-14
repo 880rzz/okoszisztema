@@ -79,3 +79,13 @@ A technikai és kutatási fájlok háttérforrások, nem a fő felhasználói na
 - Kurált forrásállományok: member-organizations.json, member-press-evidence.json, data/member-news-editorial.json és data/institution-press-evidence.json. Generátorok: scripts/build_member_news.py, scripts/build_ecosystem_press.py, scripts/render_ecosystem_press.py.
 - A főoldal mindig **legújabbtól a legrégebbiig** sorolja a jóváhagyott cikkeket. Részlegesen ismert év/hónap nem alakítható át kitalált naptári nappá.
 - Közzététel csak branch → PR → teljes CI → konfliktusmentes merge → Pages-deploy útvonalon történik. Keresési hiba nem jelenti azt, hogy nincs új sajtómegjelenés.
+
+## Bécsi Szelet Magazin – projektkapcsolat
+
+A jóváhagyott digitális projekt-hierarchia:
+
+**Központi Szövetség → Bécsi Magyar Iskola → Bécsi Szelet Magazin**
+
+A Bécsi Szelet Magazin önálló magyar–német szerkesztőségi márka és domain (https://www.becsiszelet.at/). Ez a kapcsolat projekt- és ökoszisztéma-hierarchia; önmagában nem állítja, hogy a Bécsi Magyar Iskola a magazin jogi kiadója. A jogi kiadói/üzemeltetői szerepet kizárólag az ellenőrzött Impressum/Offenlegung alapján szabad kommunikálni.
+
+A Bécsi Napló Online és a nyomtatott Bécsi Napló külön sajtóprojektek, nem azonosak a Bécsi Szelettel.
