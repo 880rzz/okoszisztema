@@ -21,7 +21,7 @@
         "https://hu.wikipedia.org/wiki/Ausztriai_Magyar_Egyes%C3%BCletek_%C3%A9s_Szervezetek_K%C3%B6zponti_Sz%C3%B6vets%C3%A9ge"
       ],
       "owns": {"@id": "https://www.becsinaplo.at/#organization"},
-      "subOrganization": {"@id": "https://www.magyariskola.at/#school"},
+      "subOrganization": {"@id": "https://www.magyariskola.at/#organization"},
       "subjectOf": [
         {
           "@type": "Article",
@@ -47,7 +47,7 @@
     },
     {
       "@type": "EducationalOrganization",
-      "@id": "https://www.magyariskola.at/#school",
+      "@id": "https://www.magyariskola.at/#organization",
       "name": "Bécsi Magyar Iskola",
       "url": "https://www.magyariskola.at/",
       "foundingDate": "1987",
