@@ -3,6 +3,8 @@ on:
   pull_request:
     paths:
       - "index.html"
+      - "gdpr-ai-trust.html"
+      - "scripts/test_analytics_consent.js"
       - "authority-graph.jsonld"
       - "entity.json"
       - "scripts/check_entity_graph.py"
@@ -54,6 +56,7 @@ jobs:
       - run: python3 scripts/validate_member_pages.py
       - run: python3 scripts/check_entity_graph.py
       - run: node --check member-calendar.js
+      - run: node scripts/test_analytics_consent.js
       - run: node --check member-news.js
       - run: python3 scripts/test_member_news_enrichment.py
       - run: python3 scripts/test_austrian_press_discovery.py
