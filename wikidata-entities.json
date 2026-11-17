@@ -45,6 +45,23 @@
       "identifier": [{"propertyID":"Wikidata","value":"Q141274560"},{"propertyID":"Österreichisches Patentamt registration number","value":"266006"},{"propertyID":"Österreichisches Patentamt application/file number","value":"AM 4985/2011"}]
     },
     {
+      "name": "Bécsi Szelet Magazin",
+      "wikidata": "Q142154314",
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q142154314",
+      "officialUrl": "https://www.becsiszelet.at/",
+      "role": "separate Hungarian-German editorial periodical, published by the Központi Szövetség, affiliated with the Bécsi Magyar Iskola project portfolio",
+      "publisherWikidata": "Q141274866",
+      "schoolProjectWikidata": "Q141274560",
+      "foundingYear": 2023,
+      "founders": [
+        "Bánhalmi Norbert",
+        "Kovács Attila"
+      ],
+      "source": "https://okoszisztema.kozpontiszovetseg.at/central-association.json",
+      "historicalIndependentEvidence": "https://volksgruppen.orf.at/magyarok/stories/3228649/",
+      "disambiguation": "A kiadó, az alapító, a cikk szerzője és a magazin iskolai projekthez tartozása négy különféle kapcsolat. Nem azonos a Bécsi Naplóval."
+    },
+    {
       "name": "VIPACH | Vienna Photo Art & Creative HUB",
       "wikidata": "Q138416887",
       "wikidataUrl": "https://www.wikidata.org/wiki/Q138416887",
