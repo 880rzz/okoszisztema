@@ -153,6 +153,17 @@ def main() -> None:
     assert quality["searchSitemap"]["after"]["humanPages"] == len(locs)
     assert quality["limitations"]["googleIndexingGuaranteed"] is False
     assert quality["limitations"]["legalComplianceCertified"] is False
+    proof = quality["searchSitemap"].get("productionVerification", {})
+    if quality["searchSitemap"]["status"].startswith("PRODUCTION-ELLENŐRZÖTT"):
+        assert proof["directLiveFetchUrlCount"] == len(locs)
+        assert proof["googleReportedSubmittedUrls"] == len(locs)
+        assert proof["googleReportedErrors"] == proof["googleReportedWarnings"] == 0
+        assert proof["liveSitemapUrl"] == BASE + "sitemap.xml"
+        assert len(proof["releaseSha"]) == 40
+        assert proof["indexedPagesConfirmedBySubmission"] is False
+    state = quality["indexingMeasurement"]
+    assert state["totalTracked"] == state["indexedConfirmed"] + state["notIndexed"] + state["pending"]
+    assert all(entry.get("githubIssue") for entry in quality["unresolved"] if entry["id"] in {"WIX-HEADING-ALT", "GDPR-CONSENT"})
 
     # The policy date controls *policy* review, not older source snapshots.
     assert router["factsAndFreshness"]["officialMemberDirectoryLastVerified"] < policy["lastPolicyReview"]
