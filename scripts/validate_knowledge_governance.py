@@ -38,6 +38,7 @@ def main() -> None:
     assert policy["documentType"] == "federation-knowledge-governance-contract"
     assert policy["canonical"] == BASE + "knowledge-governance.json"
     assert policy["routingAuthority"] == router["canonical"]
+    assert router["knowledgeGovernance"] == policy["canonical"], "Router and governance pointer diverged"
     assert policy["organizationIdentity"] == router["canonicalFederationIdentityId"] == FED
     assert policy["lastPolicyReview"] >= router["lastRoutingReview"]
     assert policy["boundaries"]["firstParty"] != policy["boundaries"]["sourceOfTruth"]
