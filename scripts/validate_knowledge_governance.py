@@ -101,15 +101,15 @@ def main() -> None:
     assert page.count("<h1") == 1
     assert '<html lang="hu-AT">' in page
     assert "googletagmanager.com" not in page
-    assert not re.search(r'<script\\b[^>]*\\bsrc\\s*=', page, flags=re.I), "Unexpected remote script"
+    assert not re.search(r'<script\b[^>]*\bsrc\s*=', page, flags=re.I), "Unexpected remote script"
     assert '<link rel="canonical" href="' + policy["humanDocumentation"] + '">' in page
     assert "knowledge-governance.json" in page
-    main = re.search(r'<main\\b[^>]*>([\\s\\S]*?)</main>', page, flags=re.I)
+    main = re.search(r'<main\b[^>]*>([\s\S]*?)</main>', page, flags=re.I)
     assert main, "Accessible main content missing"
     words = re.sub(r'<[^>]+>', ' ', main.group(1)).split()
     assert len(words) >= 650, "Public governance guide lost its explanatory detail"
     scripts = re.findall(
-        r'<script\\b[^>]*\\btype="application/ld\\+json"[^>]*>([\\s\\S]*?)</script>',
+        r'<script\b[^>]*\btype="application/ld\+json"[^>]*>([\s\S]*?)</script>',
         page, flags=re.I
     )
     assert len(scripts) == 1, "One controlled local JSON-LD block expected"
