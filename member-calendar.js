@@ -11,6 +11,9 @@ const safeUrl=v=>{try{const u=new URL(v);return u.protocol==='https:'?u.href:''}
 const formatDate=v=>new Intl.DateTimeFormat('hu-AT',{timeZone:'Europe/Vienna',dateStyle:'long',...(/^\d{4}-\d{2}-\d{2}$/.test(String(v))?{}:{timeStyle:'short'})}).format(new Date(v));
 const clean=e=>e&&e.country==='at'&&e.id&&e.name&&e.startDate&&Number.isFinite(Date.parse(e.startDate))&&safeUrl(e.sourceUrl)&&!String(e.eventStatus||'').endsWith('EventCancelled');
 const membersLink='https://www.kozpontiszovetseg.at/tagszervezetek';
+// Explicit, source-backed DORAPP organizer IDs for the federation's projects;
+// these are not member associations and are not assigned by name similarity.
+const federationOrgIds=new Set(['kozponti-szovetseg','becsi-magyar-iskola','vipach']);
 const localRoot=widgets[0].dataset.root||'';
 let crosswalk={},events=[],dataSource='',generatedAt='',lastError='',loaded=false,mappingAvailable=false;
 const sourceUrl='https://www.diaszporaterkep.hu/';
@@ -40,7 +43,19 @@ async function load(){
   if(!Number.isFinite(timestamp)||Date.now()-timestamp>7*86400000||timestamp-Date.now()>12*3600000)throw Error('A tartalék naptár régi vagy dátuma hibás');
   payload=cached;dataSource='snapshot';
  }catch(e){lastError=String(e.message||e)}}
- if(payload){const ids=new Set();events=payload.events.filter(clean).filter(e=>{if(ids.has(e.id))return false;ids.add(e.id);return endAt(e)>=Date.now()-60*60*1000&&Date.parse(e.startDate)<=windowEnd()}).sort((a,b)=>new Date(a.startDate)-new Date(b.startDate));generatedAt=payload.generatedAt||''}
+ if(payload){
+ const ids=new Set(),entries=new Map;
+ for(const e of payload.events.filter(clean)){
+  if(ids.has(e.id))continue;ids.add(e.id);
+  if(endAt(e)<Date.now()-60*60*1000||Date.parse(e.startDate)>windowEnd())continue;
+  // Identical verified source, organizer and start time is the same event.
+  const key=[e.organizerId,e.sourceUrl,e.startDate].join('|');
+  const previous=entries.get(key);
+  if(!previous||String(e.name).length>String(previous.name).length)entries.set(key,e);
+ }
+ events=[...entries.values()].sort((a,b)=>new Date(a.startDate)-new Date(b.startDate));
+ generatedAt=payload.generatedAt||'';
+}
  loaded=true;renderAll();
 }
 function card(e,memberOf){
@@ -61,12 +76,12 @@ function render(w){
  const scopedId=memberId?crosswalk[memberId]:null;
  const query=(w.querySelector('[data-calendar-search]')?.value||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
  const scope=w.querySelector('[data-calendar-scope]')?.value||'members';
- const filter=events.filter(e=>(!memberId||(scopedId&&scopedId===e.organizerId))&&(!(!memberId&&scope==='members')||memberIds.has(e.organizerId))&&(!query||[e.name,e.city,e.venue,e.organizer].join(' ').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().includes(query)));
+ const filter=events.filter(e=>(!memberId||(scopedId&&scopedId===e.organizerId))&&(memberId||scope==='all'||(scope==='members'?memberIds.has(e.organizerId):memberIds.has(e.organizerId)||federationOrgIds.has(e.organizerId)))&&(!query||[e.name,e.city,e.venue,e.organizer].join(' ').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().includes(query)));
  list.innerHTML=filter.map(e=>card(e,memberIds)).join('');
  if(empty){empty.hidden=filter.length>0;empty.textContent=!loaded?'Naptár betöltése…':!events.length&&!dataSource?'A naptár most nem érhető el. A szervezők hivatalos oldalain ellenőrizhetők a programok.':memberId&&!mappingAvailable?'A tagszervezeti esemény-hozzárendelés jelenleg nem érhető el; a naptár nem tekinthető teljesnek.':memberId?'Ehhez a tagegyesülethez jelenleg nincs külön azonosított, forrásellenőrzött közelgő program a DORAPP naptárában.':'Nincs a szűrésnek megfelelő, forrásellenőrzött közelgő esemény.'}
  if(dataSource){const status=dataSource==='live'?'Friss DORAPP-forrás':'Mentett naptáradat (a friss DORAPP-forrás nem érhető el)';
  const when=generatedAt&&Number.isFinite(Date.parse(generatedAt))?' · forrás frissítve: '+formatDate(generatedAt):'';
- health.textContent=status+when+(memberId&&!mappingAvailable?' · Figyelem: a tagszervezeti hozzárendelés nem érhető el':'')+' · '+filter.length+' megjeleníthető '+(!memberId&&scope==='all'?'ausztriai':'tagszervezeti')+' program a következő két hónapban';
+ health.textContent=status+when+(memberId&&!mappingAvailable?' · Figyelem: a tagszervezeti hozzárendelés nem érhető el':'')+' · '+filter.length+' megjeleníthető '+(!memberId&&scope==='all'?'ausztriai':!memberId&&scope==='federation'?'tagszervezeti és intézményi':'tagszervezeti')+' program a következő két hónapban';
  }else health.textContent='A DORAPP naptáradatok jelenleg nem tölthetők be.';
 }
 function renderAll(){widgets.forEach(render)}
