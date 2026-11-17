@@ -1,0 +1,34 @@
+{
+  "version": "2026-11-17.1",
+  "documentType": "official-organization-brand-asset-evidence",
+  "organizationId": "https://www.kozpontiszovetseg.at/#organization",
+  "organizationWikidata": "Q141274866",
+  "officialWebsite": "https://www.kozpontiszovetseg.at/",
+  "sourceDataOwner": "Központi Szövetség — official Wix Business Profile / Site Properties v4",
+  "verifiedOn": "2026-11-17",
+  "logo": {
+    "url": "https://static.wixstatic.com/media/b0aee1_d0e7974d0bc742f587beffeed3ee025b~mv2.png",
+    "wixMediaId": "b0aee1_d0e7974d0bc742f587beffeed3ee025b~mv2.png",
+    "originalFilename": "logo3.png",
+    "mediaType": "IMAGE",
+    "mimeType": "image/png",
+    "intrinsicWidth": 100,
+    "intrinsicHeight": 100,
+    "private": false,
+    "state": "OK"
+  },
+  "verification": {
+    "fieldsVerified": [
+      "Wix Site Properties v4 properties.businessName",
+      "Wix Site Properties v4 properties.logo",
+      "Wix Site Media v1 Get File Descriptor file.id",
+      "file.url",
+      "file.private",
+      "file.media.image width/height"
+    ],
+    "sourceOwnership": "first-party site settings",
+    "publicationScope": "organization identity/Schema.org logo only",
+    "mediaLicense": "not independently verified; do not infer image redistribution rights",
+    "caution": "The site-properties logo identifies the federation only. Never copy it as the logo of member associations, school or separate publications. Media resolution and Google rich result eligibility are independent checks."
+  }
+}
