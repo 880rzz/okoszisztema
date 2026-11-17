@@ -42,6 +42,7 @@ on:
       - "data/austria-events-snapshot.json"
       - "sitemap.xml"
       - "scripts/validate_member_pages.py"
+      - "scripts/check_federation_home.py"
       - ".github/workflows/validate-members.yml"
   push:
     branches: [main]
@@ -54,6 +55,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: python3 scripts/validate_member_pages.py
+      - run: python3 scripts/check_federation_home.py
       - run: python3 scripts/check_entity_graph.py
       - run: node --check member-calendar.js
       - run: node scripts/test_analytics_consent.js

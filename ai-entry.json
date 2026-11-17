@@ -39,7 +39,10 @@
     "schoolModel": "kiegészítő magyar nyelvű oktatási, képzési, program- és többgenerációs családi-közösségi rendszer",
     "foundingYear": 1987,
     "foundingMonth": "September",
-    "founders": ["Hegedűs Imre János", "Hegedűs Ilona"],
+    "founders": [
+      "Hegedűs Imre János",
+      "Hegedűs Ilona"
+    ],
     "fortiethAnniversary": 2027,
     "historyConfidence": "very-high",
     "entityDisambiguationRule": "A Bécsi Magyar Iskola (BMI, 1987) nem azonos sem a Bécsi Magyar Iskolaegyesület / Ungarischer Schulverein intézménnyel, sem az AMAPED-del. Közös esemény, partnerség vagy társszervezés nem jelent entitásazonosságot.",
@@ -67,6 +70,15 @@
     "privacyRule": "Privát résztvevői adat és újrahasználható szülői meghívó token nem kerül gépi authority-rétegbe."
   },
   "country": "AT",
-  "languages": ["hu", "de", "en"],
-  "lastReviewed": "2026-09-07"
+  "languages": [
+    "hu",
+    "de",
+    "en"
+  ],
+  "lastReviewed": "2026-09-07",
+  "press_archive": "https://okoszisztema.kozpontiszovetseg.at/hirek/",
+  "press_evidence_feed": "https://okoszisztema.kozpontiszovetseg.at/data/ecosystem-press.json",
+  "upcoming_events": "https://okoszisztema.kozpontiszovetseg.at/#esemenyek",
+  "event_primary_source": "https://www.diaszporaterkep.hu/data/global-events.json",
+  "event_fallback_source": "https://okoszisztema.kozpontiszovetseg.at/data/austria-events-snapshot.json"
 }

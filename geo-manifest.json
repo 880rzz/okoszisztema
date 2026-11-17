@@ -17,5 +17,9 @@
     "foundingContext": "21 ausztriai magyar egyesület csúcsszervezeteként alakult",
     "networkEvidence": "ORF 2026: mintegy harminc tagegyesületet tömörítő ernyőszervezet",
     "networkEvidenceUrl": "https://volksgruppen.orf.at/magyarok/stories/3356526/"
-  }
+  },
+  "pressArchive": "https://okoszisztema.kozpontiszovetseg.at/hirek/",
+  "pressEvidenceFeed": "https://okoszisztema.kozpontiszovetseg.at/data/ecosystem-press.json",
+  "eventPrimarySource": "https://www.diaszporaterkep.hu/data/global-events.json",
+  "eventFallbackSource": "https://okoszisztema.kozpontiszovetseg.at/data/austria-events-snapshot.json"
 }

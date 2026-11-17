@@ -178,10 +178,19 @@ def main() -> None:
     for entity in router["institutions"]:
         assert entity["canonicalProfile"] in page
     blocks = re.findall(r'<script\s+type="application/ld\+json">([\s\S]*?)</script>', page)
-    assert len(blocks) == 1
-    nodes = json.loads(blocks[0])["@graph"]
+    # This page intentionally has the local DataCatalog plus the shared,
+    # synced federation identity graph. Both must parse and retain distinct roles.
+    assert len(blocks) == 2, f"Source catalog expected 2 known JSON-LD blocks; got {len(blocks)}"
+    local, authority = [json.loads(block) for block in blocks]
+    nodes = local["@graph"]
     assert any(x.get("@type") == "DataCatalog" for x in nodes)
     assert any(x.get("@type") == "CollectionPage" and x["publisher"]["@id"] == FED for x in nodes)
+    authoritative = authority["@graph"]
+    assert any(x.get("@id") == FED and x.get("@type") == "Organization" for x in authoritative)
+    assert any(x.get("@id") == BMI for x in authoritative)
+    assert any(x.get("@id") == "https://www.becsiszelet.at/#periodical" for x in authoritative)
+    assert set(x.get("@id") for x in nodes).isdisjoint(
+        x.get("@id") for x in authoritative), "Duplicate primary entities across authority and catalog"
 
     for name in ("machine-manifest.json", "ai-entry.json", "geo-manifest.json"):
         s = (ROOT / name).read_text(encoding="utf-8")

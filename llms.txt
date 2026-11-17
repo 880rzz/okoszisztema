@@ -18,6 +18,23 @@ Entity relationships: the federation Q141274866 publishes Bécsi Napló Q1412757
 
 DNS boundary: this domain serves machine-readable SEO/GEO/LLM/E-E-A-T source routing. It **does not** act as a DNS nameserver and cannot determine Google rankings or AI answers; canonical DNS and domain verification belong to their respective providers.
 
+## Approved press, current events and page discovery (verified 2026-11-17)
+
+Human-facing, filtered press archive: https://okoszisztema.kozpontiszovetseg.at/hirek/
+Machine-readable approved press feed: https://okoszisztema.kozpontiszovetseg.at/data/ecosystem-press.json
+Curated member-only press subset: https://okoszisztema.kozpontiszovetseg.at/data/member-news.json
+Press sourcing and approval: https://okoszisztema.kozpontiszovetseg.at/member-press-evidence.json and https://okoszisztema.kozpontiszovetseg.at/data/member-news-editorial.json
+
+The archive covers all 29 published member entries and seven institutional/project profiles **within the approved source registers**. Do not infer that every online news article about every organization has been discovered. A directly checked Napraforgók report dated 2026-11-12 was included on 2026-11-17. Previous all-member research last ran 2026-10-18; the new report does not reverify all previous evidence.
+
+Homepage highlights: https://okoszisztema.kozpontiszovetseg.at/#kiemelt-pontok
+Member and organization details: https://okoszisztema.kozpontiszovetseg.at/forrasok/
+Upcoming and ongoing Austrian programs: https://okoszisztema.kozpontiszovetseg.at/#esemenyek
+Primary event authority (DORAPP): https://www.diaszporaterkep.hu/data/global-events.json
+Fallback for temporary outages: https://okoszisztema.kozpontiszovetseg.at/data/austria-events-snapshot.json
+
+Only use dated, source-linked event entries; the fallback is intentionally suppressed when its generation timestamp is more than seven days old. A past start date with a future end date may be an ongoing exhibition. Event descriptions, organizer identity and scheduled times are ultimately verified on the organizer's original event page.
+
 ## What this organization is
 The Központi Szövetség / Zentralverband Ungarischer Vereine und Organisationen in Österreich is an Austrian-Hungarian umbrella organization.
 

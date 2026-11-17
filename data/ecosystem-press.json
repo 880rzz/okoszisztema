@@ -7,12 +7,39 @@
   ],
   "publicationPolicy": "Only manually sourced press or explicitly verified citations. Candidate searches are NOT published.",
   "sortPolicy": "Newer full dates first; imprecise month/year dates follow fully dated items within their publication year.",
-  "totalArticles": 130,
-  "totalMemberAssociations": 92,
+  "totalArticles": 131,
+  "totalMemberAssociations": 93,
   "totalInstitutionAssociations": 69,
   "coveredMembers": 29,
   "coveredInstitutions": 7,
   "items": [
+    {
+      "id": "press-ab45bf130b3644",
+      "url": "https://rolunk.at/kultura/tobb-mint-felezren-roptak-a-tancot/",
+      "title": "Több mint félezren ropták a táncot",
+      "publisher": "Rólunk.at",
+      "date": "2026-11-12",
+      "memberIds": [
+        "napraforgok"
+      ],
+      "memberNames": [
+        "Napraforgók Bécsi Magyar Néptánc és Népzene Egyesület"
+      ],
+      "summary": "A Napraforgók szervezésében november 7-én megtartott 27. Bécsi Magyar Táncháztalálkozón több mint ötszáz résztvevő volt; a programban tánctanítás, gyermekfoglalkozás és gálaműsor is szerepelt.",
+      "summaryType": "editorial-summary",
+      "evidenceSources": [
+        "member-press-evidence.json"
+      ],
+      "approval": "curated-source-evidence",
+      "summaryVerifiedAt": "2026-11-17",
+      "institutionIds": [],
+      "institutionNames": [],
+      "pressEvidenceRefs": [
+        "data/member-news.json"
+      ],
+      "year": "2026",
+      "sortKey": "2026-11-123"
+    },
     {
       "id": "press-inst-bbadd98c",
       "url": "https://rolunk.at/aktualis/iden-eloszor-badenben-is-indit-csoportot-a-bmi/",

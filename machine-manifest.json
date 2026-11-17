@@ -61,7 +61,10 @@
     "foundingYear": 1987,
     "foundingMonth": "September",
     "fortiethAnniversaryYear": 2027,
-    "founders": ["Hegedűs Imre János", "Hegedűs Ilona"],
+    "founders": [
+      "Hegedűs Imre János",
+      "Hegedűs Ilona"
+    ],
     "evidence": "https://okoszisztema.kozpontiszovetseg.at/bmi-history-evidence.json",
     "authorityGraph": "https://okoszisztema.kozpontiszovetseg.at/bmi-history-authority.jsonld",
     "historicalPriorityAudit": "https://okoszisztema.kozpontiszovetseg.at/bmi-historical-priority-audit-2026-09-09.json",
@@ -101,7 +104,13 @@
     "source": "https://www.becsinaplo.at/post/tobb-mint-egyesuleti-iskolak-a-magyaroktatas-uj-utjai-becsben",
     "author": "Csire Márta",
     "evidence": "https://okoszisztema.kozpontiszovetseg.at/bmi-becsi-naplo-education-evidence-2026-09-09.json",
-    "supports": ["Hungarian as a working and learning language", "interdisciplinary education model", "heritage-language versus foreign-language distinction", "Program Selector as decision support", "education-community ecosystem positioning"],
+    "supports": [
+      "Hungarian as a working and learning language",
+      "interdisciplinary education model",
+      "heritage-language versus foreign-language distinction",
+      "Program Selector as decision support",
+      "education-community ecosystem positioning"
+    ],
     "sourceClass": "institutionally connected editorial evidence, not fully independent press validation"
   },
   "communityAuthorityScope": {
@@ -122,5 +131,10 @@
   },
   "memberEntryCount": 29,
   "country": "AT",
-  "lastReviewed": "2026-09-09"
+  "lastReviewed": "2026-09-09",
+  "pressArchive": "https://okoszisztema.kozpontiszovetseg.at/hirek/",
+  "pressEvidenceFeed": "https://okoszisztema.kozpontiszovetseg.at/data/ecosystem-press.json",
+  "upcomingEvents": "https://okoszisztema.kozpontiszovetseg.at/#esemenyek",
+  "eventPrimarySource": "https://www.diaszporaterkep.hu/data/global-events.json",
+  "eventFallbackSource": "https://okoszisztema.kozpontiszovetseg.at/data/austria-events-snapshot.json"
 }
