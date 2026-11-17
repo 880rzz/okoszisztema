@@ -1,5 +1,5 @@
 {
-  "version": "2026-11-17.1",
+  "version": "2026-11-17.2",
   "dateChecked": "2026-11-17",
   "scope": "federation-search-and-trust-technical-audit",
   "sourceAttribution": {
@@ -24,7 +24,19 @@
       "machineResourcesInSearchSitemap": 0
     },
     "includedNewHumanPage": "https://okoszisztema.kozpontiszovetseg.at/bmi-community-trust.html",
-    "status": "prepared-in-branch, final deploy and GSC re-download must be checked separately"
+    "status": "PRODUCTION-ELLENŐRZÖTT: 43 live XML URLs, GitHub Pages SHA and Google GSC download matched",
+    "productionVerification": {
+      "releaseSha": "077aa5e8f17f2c54d9cb83b10df2cc9d75518cdb",
+      "pagesDeployment": "https://github.com/880rzz/okoszisztema/actions/runs/44098266540",
+      "liveSitemapUrl": "https://okoszisztema.kozpontiszovetseg.at/sitemap.xml",
+      "directLiveFetchUrlCount": 43,
+      "googleSitemapLastSubmitted": "2026-11-17T14:01:15.245Z",
+      "googleSitemapLastDownloaded": "2026-11-17T14:01:15.774Z",
+      "googleReportedSubmittedUrls": 43,
+      "googleReportedErrors": 0,
+      "googleReportedWarnings": 0,
+      "indexedPagesConfirmedBySubmission": false
+    }
   },
   "liveWixSeoCorrections": [
     {
@@ -57,7 +69,8 @@
       },
       "owner": "Wix Editor page content",
       "severity": "accessibility-and-SEO",
-      "state": "pending-editor-remediation"
+      "state": "pending-editor-remediation",
+      "githubIssue": "https://github.com/880rzz/okoszisztema/issues/45"
     },
     {
       "id": "GOOGLE-INDEX",
@@ -70,7 +83,10 @@
       "id": "GDPR-CONSENT",
       "url": "https://www.kozpontiszovetseg.at/",
       "owner": "Wix site owner and qualified Austrian legal reviewer",
-      "state": "browser-network-and-legal-audit-pending"
+      "state": "browser-network-and-legal-audit-pending",
+      "githubIssue": "https://github.com/880rzz/okoszisztema/issues/46",
+      "observedPolicySnapshot": "The public first-party privacy page indicates 2024 and discusses newsletter, event registration and contact data; legal review must verify current cookie, processor and transfer notices and the data-subject contact route.",
+      "sourceUrl": "https://www.kozpontiszovetseg.at/adatvedelem"
     }
   ],
   "schemaWarningClassification": {
@@ -86,5 +102,13 @@
     "searchRankingsGuaranteed": false,
     "completeMobileDesktopQA": false,
     "thirdPartyLogoVerified": false
+  },
+  "indexingMeasurement": {
+    "source": "GSC Wizard index-tracker list as checked on 2026-11-17",
+    "totalTracked": 43,
+    "indexedConfirmed": 0,
+    "notIndexed": 9,
+    "pending": 34,
+    "rule": "Pending and not-indexed are not SEO failures unless their original index/coverage reason is established; sitemap acceptance is not Google indexation"
   }
 }
