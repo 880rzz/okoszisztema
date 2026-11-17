@@ -1,0 +1,49 @@
+name: Validate federation knowledge governance
+on:
+  pull_request:
+    paths:
+      - 'knowledge-governance.json'
+      - 'docs/knowledge-governance*'
+      - 'authority-router.json'
+      - 'member-organizations.json'
+      - 'data/institutions.json'
+      - 'wikidata-entities.json'
+      - 'machine-manifest.json'
+      - 'ai-entry.json'
+      - 'geo-manifest.json'
+      - 'llms.txt'
+      - 'ai.txt'
+      - 'README.md'
+      - 'sitemap.xml'
+      - 'scripts/validate_knowledge_governance.py'
+      - '.github/workflows/validate-knowledge-governance.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'knowledge-governance.json'
+      - 'docs/knowledge-governance*'
+      - 'authority-router.json'
+      - 'member-organizations.json'
+      - 'data/institutions.json'
+      - 'wikidata-entities.json'
+      - 'machine-manifest.json'
+      - 'ai-entry.json'
+      - 'geo-manifest.json'
+      - 'llms.txt'
+      - 'ai.txt'
+      - 'README.md'
+      - 'sitemap.xml'
+      - 'scripts/validate_knowledge_governance.py'
+      - '.github/workflows/validate-knowledge-governance.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  governance:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate source ownership, provenance, entity identities and public documentation
+        run: python3 scripts/validate_knowledge_governance.py
+      - name: Validate existing authority router and repository-backed source references
+        run: python3 scripts/validate_authority_router.py
