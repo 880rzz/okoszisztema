@@ -1,0 +1,620 @@
+{
+  "version": "2026-11-17-1",
+  "documentType": "federation-authority-source-router",
+  "lastRoutingReview": "2026-11-17",
+  "canonical": "https://okoszisztema.kozpontiszovetseg.at/authority-router.json",
+  "publicHumanIndex": "https://okoszisztema.kozpontiszovetseg.at/forrasok/",
+  "canonicalFederationIdentityId": "https://www.kozpontiszovetseg.at/#organization",
+  "canonicalFederationWebsite": "https://www.kozpontiszovetseg.at/",
+  "use": "Read-only source router: use it to locate authoritative records, not as a substitute for current first-party Wix content.",
+  "dnsBoundary": "This is not an authoritative DNS nameserver, registrar or zone file; domain DNS records remain managed at their DNS hosts.",
+  "factsAndFreshness": {
+    "officialMemberDirectoryEntries": 29,
+    "officialMemberDirectoryLastVerified": "2026-09-03",
+    "projectRegistryEntries": 7,
+    "organizationCoreLastVerified": "2026-09-06",
+    "membersMayChange": "Always validate current membership against the federation's published directory; this file is a dated snapshot."
+  },
+  "sourceRouting": {
+    "stableIdentity": {
+      "primary": "https://okoszisztema.kozpontiszovetseg.at/wikidata-entities.json",
+      "federation": "https://okoszisztema.kozpontiszovetseg.at/central-association.json",
+      "structuredRelations": [
+        "https://okoszisztema.kozpontiszovetseg.at/entity.json",
+        "https://okoszisztema.kozpontiszovetseg.at/authority-graph.jsonld"
+      ],
+      "externalStableIds": "Wikidata Q-items are identifiers, not evidence of ownership or employment"
+    },
+    "currentFederationFacts": {
+      "primary": "https://www.kozpontiszovetseg.at/",
+      "normalized": "https://okoszisztema.kozpontiszovetseg.at/central-association.json",
+      "scope": "statutes, legal details, official contacts, current official statements"
+    },
+    "memberDirectory": {
+      "primary": "https://www.kozpontiszovetseg.at/tagszervezetek",
+      "normalized": "https://okoszisztema.kozpontiszovetseg.at/member-organizations.json",
+      "leadership": "https://okoszisztema.kozpontiszovetseg.at/member-leadership.json",
+      "eventLinking": "https://okoszisztema.kozpontiszovetseg.at/member-event-map.json",
+      "scope": "29 published directory entries are not necessarily 29 separately registered legal persons"
+    },
+    "currentLeadership": {
+      "primary": "https://www.kozpontiszovetseg.at/r%C3%B3lunk",
+      "normalized": "https://okoszisztema.kozpontiszovetseg.at/leadership-people.json",
+      "independentCorroboration": "https://volksgruppen.orf.at/magyarok/stories/3356526/",
+      "caution": "Do not treat the official 2024-2026 roster as the complete elected 2026-2028 board; preserve unresolved posts"
+    },
+    "publishing": {
+      "becsiNaplo": "https://www.becsinaplo.at/",
+      "becsiSzelet": "https://www.becsiszelet.at/",
+      "authorityEvidence": "https://okoszisztema.kozpontiszovetseg.at/central-association.json",
+      "caution": "Separate editorial brands; founder != author; formal publisher != school project home"
+    },
+    "schoolAndPrograms": {
+      "school": "https://www.magyariskola.at/",
+      "currentPrograms": "https://programvalaszto.magyariskola.at/programs.json",
+      "programKnowledge": "https://programvalaszto.magyariskola.at/program-knowledge.json",
+      "teachers": "https://tanarok.magyariskola.at/",
+      "authority": "https://okoszisztema.kozpontiszovetseg.at/bmi-education-positioning.json",
+      "caution": "Historical 2025/26 report is not the current timetable"
+    },
+    "currentEvents": {
+      "federation": "https://www.kozpontiszovetseg.at/",
+      "memberEventMap": "https://okoszisztema.kozpontiszovetseg.at/member-event-map.json",
+      "caution": "Member-to-event association requires verified organizer ID, not name similarity"
+    },
+    "evidenceAndPress": {
+      "pressRegistry": "https://okoszisztema.kozpontiszovetseg.at/data/press-source-registry.json",
+      "memberEvidence": "https://okoszisztema.kozpontiszovetseg.at/member-press-evidence.json",
+      "independentContext": "https://volksgruppen.orf.at/magyarok/",
+      "caution": "Media mention is not partnership, endorsement or organization identity"
+    },
+    "privacyAndAiTrust": {
+      "page": "https://okoszisztema.kozpontiszovetseg.at/gdpr-ai-trust.html",
+      "aiInstructions": "https://okoszisztema.kozpontiszovetseg.at/ai.txt",
+      "caution": "A policy page does not prove legal compliance or that all external scripts are consent-gated"
+    }
+  },
+  "institutions": [
+    {
+      "id": "kozponti-szovetseg",
+      "name": "Központi Szövetség",
+      "officialWebsite": "https://www.kozpontiszovetseg.at/",
+      "canonicalProfile": "https://okoszisztema.kozpontiszovetseg.at/intezmenyek/kozponti-szovetseg/",
+      "source": "https://okoszisztema.kozpontiszovetseg.at/data/institutions.json",
+      "type": "umbrella-organization",
+      "identityId": "https://www.kozpontiszovetseg.at/#organization",
+      "wikidata": "Q141274866",
+      "role": "federation-operator",
+      "relationAsPublished": "Az intézmények és tagszervezetek ernyőszervezete, nem külön tagegyesület."
+    },
+    {
+      "id": "becsi-naplo",
+      "name": "Bécsi Napló",
+      "officialWebsite": "https://www.becsinaplo.at/",
+      "canonicalProfile": "https://okoszisztema.kozpontiszovetseg.at/intezmenyek/becsi-naplo/",
+      "source": "https://okoszisztema.kozpontiszovetseg.at/data/institutions.json",
+      "type": "owned-publication",
+      "identityId": "https://www.becsinaplo.at/#periodical",
+      "wikidata": "Q141275731",
+      "role": "federation-owned-publication",
+      "publisherIdentityId": "https://www.kozpontiszovetseg.at/#organization",
+      "relationAsPublished": "A Központi Szövetség tulajdonában és kiadásában működő sajtókiadvány; nem tagegyesület."
+    },
+    {
+      "id": "becsi-szelet",
+      "name": "Bécsi Szelet Magazin",
+      "officialWebsite": "https://www.becsiszelet.at/",
+      "canonicalProfile": "https://okoszisztema.kozpontiszovetseg.at/intezmenyek/becsi-szelet/",
+      "source": "https://okoszisztema.kozpontiszovetseg.at/data/institutions.json",
+      "type": "institutional-publication",
+      "identityId": "https://www.becsiszelet.at/#periodical",
+      "wikidata": "Q142154314",
+      "role": "federation-published-school-project-magazine",
+      "publisherIdentityId": "https://www.kozpontiszovetseg.at/#organization",
+      "projectContextIdentityId": "https://www.magyariskola.at/#organization",
+      "relationAsPublished": "A Központi Szövetség kiadói ökoszisztémájában működő magyar–német online magazin; a Bécsi Naplótól különálló szerkesztőségi termék, nem tagegyesület."
+    },
+    {
+      "id": "becsi-magyar-iskola",
+      "name": "Bécsi Magyar Iskola",
+      "officialWebsite": "https://www.magyariskola.at/",
+      "canonicalProfile": "https://okoszisztema.kozpontiszovetseg.at/intezmenyek/becsi-magyar-iskola/",
+      "source": "https://okoszisztema.kozpontiszovetseg.at/data/institutions.json",
+      "type": "education-institution",
+      "identityId": "https://www.magyariskola.at/#organization",
+      "wikidata": "Q141274560",
+      "role": "maintained-educational-institution",
+      "parentIdentityId": "https://www.kozpontiszovetseg.at/#organization",
+      "relationAsPublished": "A Központi Szövetség által fenntartott, 1987-ben alapított BMI; nem azonos a Bécsi Magyar Iskolaegyesülettel."
+    },
+    {
+      "id": "vipach",
+      "name": "VIPACH – Vienna Photo Art & Creative Hub",
+      "officialWebsite": "https://www.vipach.at/",
+      "canonicalProfile": "https://okoszisztema.kozpontiszovetseg.at/intezmenyek/vipach/",
+      "source": "https://okoszisztema.kozpontiszovetseg.at/data/institutions.json",
+      "type": "creative-program",
+      "identityId": "https://www.vipach.at/#organization",
+      "wikidata": "Q138416887",
+      "role": "school-creative-project",
+      "projectContextIdentityId": "https://www.magyariskola.at/#organization",
+      "relationAsPublished": "A BMI fotográfiai és kreatív programrendszeréből fejlődött; nem külön tagegyesület."
+    },
+    {
+      "id": "bmi-fotoklub",
+      "name": "BMI Fotóklub",
+      "officialWebsite": "https://www.vipach.at/",
+      "canonicalProfile": "https://okoszisztema.kozpontiszovetseg.at/intezmenyek/bmi-fotoklub/",
+      "source": "https://okoszisztema.kozpontiszovetseg.at/data/institutions.json",
+      "type": "historical-and-current-school-club",
+      "identityId": null,
+      "wikidata": null,
+      "role": "school-photo-club-and-historical-project",
+      "relationAsPublished": "A Bécsi Magyar Iskola fotóklubja; a VIPACH kialakulásának történeti előzménye."
+    },
+    {
+      "id": "mamut-musical",
+      "name": "maMUT – Bécsi Magyar Musical Társulat",
+      "officialWebsite": "https://www.musicaltarsulat.at/",
+      "canonicalProfile": "https://okoszisztema.kozpontiszovetseg.at/intezmenyek/mamut-musical/",
+      "source": "https://okoszisztema.kozpontiszovetseg.at/data/institutions.json",
+      "type": "school-performing-arts-program",
+      "identityId": "https://www.musicaltarsulat.at/#organization",
+      "wikidata": null,
+      "role": "school-associated-performing-arts-project",
+      "projectContextIdentityId": "https://www.magyariskola.at/#organization",
+      "relationAsPublished": "A Musical Mesék BMI-programból 2026-ban kialakult musical-alkotóműhely; nem azonos a budapesti Mammut Színházzal."
+    }
+  ],
+  "members": [
+    {
+      "id": "ausztriai-magyar-kutatointezet",
+      "name": "Ausztriai Magyar Kutatóintézet",
+      "aliases": [
+        "ÖIUS",
+        "Österreichisches Institut für ungarische Studien"
+      ],
+      "region": "Bécs",
+      "officialWebsite": "https://oeius.univie.ac.at/",
+      "authorityProfile": "https://okoszisztema.kozpontiszovetseg.at/tagszervezetek/ausztriai-magyar-kutatointezet/",
+      "recordSource": "https://okoszisztema.kozpontiszovetseg.at/member-organizations.json",
+      "directoryEvidence": "https://www.kozpontiszovetseg.at/tagszervezetek",
+      "membershipClass": "official-directory-entry",
+      "legalEntityStatus": "not-inferred-from-directory",
+      "dorappOrgId": "oeius"
+    },
+    {
+      "id": "lean-in-femspace",
+      "name": "Lean in Femspace Külföldön újrakezdő magyar nők egyesülete",
+      "aliases": [],
+      "region": "Bécs",
+      "officialWebsite": "https://leaninfemspace.at/",
+      "authorityProfile": "https://okoszisztema.kozpontiszovetseg.at/tagszervezetek/lean-in-femspace/",
+      "recordSource": "https://okoszisztema.kozpontiszovetseg.at/member-organizations.json",
+      "directoryEvidence": "https://www.kozpontiszovetseg.at/tagszervezetek",
+      "membershipClass": "official-directory-entry",
+      "legalEntityStatus": "not-inferred-from-directory",
+      "dorappOrgId": "lean-in-femspace"
+    },
+    {
+      "id": "svung",
+      "name": "SVUNG Bécsi Magyarok Művészeti Egyesülete",
+      "aliases": [],
+      "region": "Bécs",
+      "officialWebsite": "https://www.svung.at/",
+      "authorityProfile": "https://okoszisztema.kozpontiszovetseg.at/tagszervezetek/svung/",
+      "recordSource": "https://okoszisztema.kozpontiszovetseg.at/member-organizations.json",
+      "directoryEvidence": "https://www.kozpontiszovetseg.at/tagszervezetek",
+      "membershipClass": "official-directory-entry",
+      "legalEntityStatus": "not-inferred-from-directory",
+      "dorappOrgId": "svung"
+    },
+    {
+      "id": "cserkesz-72-wien",
+      "name": "72 sz. Széchenyi István cserkészcsapat",
+      "aliases": [],
+      "region": "Bécs",
+      "officialWebsite": null,
+      "authorityProfile": "https://okoszisztema.kozpontiszovetseg.at/tagszervezetek/cserkesz-72-wien/",
+      "recordSource": "https://okoszisztema.kozpontiszovetseg.at/member-organizations.json",
+      "directoryEvidence": "https://www.kozpontiszovetseg.at/tagszervezetek",
+      "membershipClass": "official-directory-entry",
+      "legalEntityStatus": "not-inferred-from-directory",
+      "dorappOrgId": "cserkesz-72"
+    },
+    {
+      "id": "bim-becsi-irodalmi-muhely",
+      "name": "BIM - Bécsi Irodalmi Műhely",
+      "aliases": [],
+      "region": "Bécs",
+      "officialWebsite": null,
+      "authorityProfile": "https://okoszisztema.kozpontiszovetseg.at/tagszervezetek/bim-becsi-irodalmi-muhely/",
+      "recordSource": "https://okoszisztema.kozpontiszovetseg.at/member-organizations.json",
+      "directoryEvidence": "https://www.kozpontiszovetseg.at/tagszervezetek",
+      "membershipClass": "official-directory-entry",
+      "legalEntityStatus": "not-inferred-from-directory",
+      "dorappOrgId": "becsi-irodalmi-muhely"
+    },
+    {
+      "id": "kalaka-club",
+      "name": "Kaláka Club",
+      "aliases": [],
+      "region": "Bécs",
+      "officialWebsite": "https://kalaka-club.at/",
+      "authorityProfile": "https://okoszisztema.kozpontiszovetseg.at/tagszervezetek/kalaka-club/",
+      "recordSource": "https://okoszisztema.kozpontiszovetseg.at/member-organizations.json",
+      "directoryEvidence": "https://www.kozpontiszovetseg.at/tagszervezetek",
+      "membershipClass": "official-directory-entry",
+      "legalEntityStatus": "not-inferred-from-directory",
+      "dorappOrgId": "kalaka-club"
+    },
+    {
+      "id": "napraforgok",
+      "name": "Napraforgók Bécsi Magyar Néptánc és Népzene Egyesület",
+      "aliases": [
+        "Napraforgók"
+      ],
+      "region": "Bécs",
+      "officialWebsite": "https://www.napraforgok.at/",
+      "authorityProfile": "https://okoszisztema.kozpontiszovetseg.at/tagszervezetek/napraforgok/",
+      "recordSource": "https://okoszisztema.kozpontiszovetseg.at/member-organizations.json",
+      "directoryEvidence": "https://www.kozpontiszovetseg.at/tagszervezetek",
+      "membershipClass": "official-directory-entry",
+      "legalEntityStatus": "not-inferred-from-directory",
+      "dorappOrgId": "napraforgok"
+    },
+    {
+      "id": "szent-istvan-egylet",
+      "name": "Szent István Egylet",
+      "aliases": [],
+      "region": "Bécs",
+      "officialWebsite": null,
+      "authorityProfile": "https://okoszisztema.kozpontiszovetseg.at/tagszervezetek/szent-istvan-egylet/",
+      "recordSource": "https://okoszisztema.kozpontiszovetseg.at/member-organizations.json",
+      "directoryEvidence": "https://www.kozpontiszovetseg.at/tagszervezetek",
+      "membershipClass": "official-directory-entry",
+      "legalEntityStatus": "not-inferred-from-directory",
+      "dorappOrgId": "szent-istvan-egylet"
+    },
+    {
+      "id": "bornemisza-peter-tarsasag",
+      "name": "Bornemisza Péter Társaság",
+      "aliases": [],
+      "region": "Bécs",
+      "officialWebsite": null,
+      "authorityProfile": "https://okoszisztema.kozpontiszovetseg.at/tagszervezetek/bornemisza-peter-tarsasag/",
+      "recordSource": "https://okoszisztema.kozpontiszovetseg.at/member-organizations.json",
+      "directoryEvidence": "https://www.kozpontiszovetseg.at/tagszervezetek",
+      "membershipClass": "official-directory-entry",
+      "legalEntityStatus": "not-inferred-from-directory",
+      "dorappOrgId": "bornemisza-peter-tarsasag"
+    },
+    {
+      "id": "nemzetkozi-duna-filharmonia-barati-kor",
+      "name": "Nemzetközi Duna Filharmónia Baráti kör",
+      "aliases": [],
+      "region": "Bécs",
+      "officialWebsite": null,
+      "authorityProfile": "https://okoszisztema.kozpontiszovetseg.at/tagszervezetek/nemzetkozi-duna-filharmonia-barati-kor/",
+      "recordSource": "https://okoszisztema.kozpontiszovetseg.at/member-organizations.json",
+      "directoryEvidence": "https://www.kozpontiszovetseg.at/tagszervezetek",
+      "membershipClass": "official-directory-entry",
+      "legalEntityStatus": "not-inferred-from-directory",
+      "dorappOrgId": "duna-filharmonia"
+    },
+    {
+      "id": "alsoori-magyar-kultur-es-tancegyesulet",
+      "name": "Alsóőri Magyar Kultúr- és Táncegyesület",
+      "aliases": [],
+      "region": "Burgenland",
+      "officialWebsite": null,
+      "authorityProfile": "https://okoszisztema.kozpontiszovetseg.at/tagszervezetek/alsoori-magyar-kultur-es-tancegyesulet/",
+      "recordSource": "https://okoszisztema.kozpontiszovetseg.at/member-organizations.json",
+      "directoryEvidence": "https://www.kozpontiszovetseg.at/tagszervezetek",
+      "membershipClass": "official-directory-entry",
+      "legalEntityStatus": "not-inferred-from-directory",
+      "dorappOrgId": "alsoori-kultur-tanc"
+    },
+    {
+      "id": "irottko-sportegyesulet",
+      "name": "Írottkő Sportegyesület",
+      "aliases": [],
+      "region": "Burgenland",
+      "officialWebsite": "https://irottkofutas.hu/",
+      "authorityProfile": "https://okoszisztema.kozpontiszovetseg.at/tagszervezetek/irottko-sportegyesulet/",
+      "recordSource": "https://okoszisztema.kozpontiszovetseg.at/member-organizations.json",
+      "directoryEvidence": "https://www.kozpontiszovetseg.at/tagszervezetek",
+      "membershipClass": "official-directory-entry",
+      "legalEntityStatus": "not-inferred-from-directory",
+      "dorappOrgId": "irottko-sportegyesulet"
+    },
+    {
+      "id": "kozep-burgenlandi-magyar-kulturegyesulet",
+      "name": "Közép–Burgenlandi Magyar Kultúregyesület",
+      "aliases": [],
+      "region": "Burgenland",
+      "officialWebsite": null,
+      "authorityProfile": "https://okoszisztema.kozpontiszovetseg.at/tagszervezetek/kozep-burgenlandi-magyar-kulturegyesulet/",
+      "recordSource": "https://okoszisztema.kozpontiszovetseg.at/member-organizations.json",
+      "directoryEvidence": "https://www.kozpontiszovetseg.at/tagszervezetek",
+      "membershipClass": "official-directory-entry",
+      "legalEntityStatus": "not-inferred-from-directory",
+      "dorappOrgId": "kozep-burgenlandi"
+    },
+    {
+      "id": "felso-ausztriai-magyarok-kulturegyesulete",
+      "name": "Felső-Ausztriai Magyarok Kultúregyesülete",
+      "aliases": [],
+      "region": "Felső-Ausztria",
+      "officialWebsite": null,
+      "authorityProfile": "https://okoszisztema.kozpontiszovetseg.at/tagszervezetek/felso-ausztriai-magyarok-kulturegyesulete/",
+      "recordSource": "https://okoszisztema.kozpontiszovetseg.at/member-organizations.json",
+      "directoryEvidence": "https://www.kozpontiszovetseg.at/tagszervezetek",
+      "membershipClass": "official-directory-entry",
+      "legalEntityStatus": "not-inferred-from-directory",
+      "dorappOrgId": "felso-ausztriai-magyarok"
+    },
+    {
+      "id": "linz-magyar-katolikus-kozosseg",
+      "name": "Linz Magyar Katolikus Közösség",
+      "aliases": [],
+      "region": "Felső-Ausztria",
+      "officialWebsite": "https://ausztria.katolikus.at/",
+      "authorityProfile": "https://okoszisztema.kozpontiszovetseg.at/tagszervezetek/linz-magyar-katolikus-kozosseg/",
+      "recordSource": "https://okoszisztema.kozpontiszovetseg.at/member-organizations.json",
+      "directoryEvidence": "https://www.kozpontiszovetseg.at/tagszervezetek",
+      "membershipClass": "official-directory-entry",
+      "legalEntityStatus": "not-inferred-from-directory",
+      "dorappOrgId": "katolikus-linz"
+    },
+    {
+      "id": "felso-ausztriai-hetvegi-magyar-ovoda-es-iskola",
+      "name": "Felső-Ausztriai Hétvégi Magyar Óvoda és Iskola",
+      "aliases": [],
+      "region": "Felső-Ausztria",
+      "officialWebsite": null,
+      "authorityProfile": "https://okoszisztema.kozpontiszovetseg.at/tagszervezetek/felso-ausztriai-hetvegi-magyar-ovoda-es-iskola/",
+      "recordSource": "https://okoszisztema.kozpontiszovetseg.at/member-organizations.json",
+      "directoryEvidence": "https://www.kozpontiszovetseg.at/tagszervezetek",
+      "membershipClass": "official-directory-entry",
+      "legalEntityStatus": "not-inferred-from-directory",
+      "dorappOrgId": "wels-hetvegi-iskola"
+    },
+    {
+      "id": "cserkesz-80-wels",
+      "name": "80 sz. Árpád cserkészcsapat",
+      "aliases": [],
+      "region": "Felső-Ausztria",
+      "officialWebsite": "https://arpadcscslinz.jimdofree.com/",
+      "authorityProfile": "https://okoszisztema.kozpontiszovetseg.at/tagszervezetek/cserkesz-80-wels/",
+      "recordSource": "https://okoszisztema.kozpontiszovetseg.at/member-organizations.json",
+      "directoryEvidence": "https://www.kozpontiszovetseg.at/tagszervezetek",
+      "membershipClass": "official-directory-entry",
+      "legalEntityStatus": "not-inferred-from-directory",
+      "dorappOrgId": "cserkesz-80"
+    },
+    {
+      "id": "salzung",
+      "name": "SalzUng - Salzburgi Magyar Egyesület",
+      "aliases": [],
+      "region": "Salzburg",
+      "officialWebsite": "https://vukk.at/",
+      "authorityProfile": "https://okoszisztema.kozpontiszovetseg.at/tagszervezetek/salzung/",
+      "recordSource": "https://okoszisztema.kozpontiszovetseg.at/member-organizations.json",
+      "directoryEvidence": "https://www.kozpontiszovetseg.at/tagszervezetek",
+      "membershipClass": "official-directory-entry",
+      "legalEntityStatus": "not-inferred-from-directory",
+      "dorappOrgId": "salzung"
+    },
+    {
+      "id": "grazi-magyar-egyesulet",
+      "name": "Grázi Magyar Egyesület",
+      "aliases": [],
+      "region": "Stájerország",
+      "officialWebsite": "https://www.grazimagyaregyesuelet.at/",
+      "authorityProfile": "https://okoszisztema.kozpontiszovetseg.at/tagszervezetek/grazi-magyar-egyesulet/",
+      "recordSource": "https://okoszisztema.kozpontiszovetseg.at/member-organizations.json",
+      "directoryEvidence": "https://www.kozpontiszovetseg.at/tagszervezetek",
+      "membershipClass": "official-directory-entry",
+      "legalEntityStatus": "not-inferred-from-directory",
+      "dorappOrgId": "grazi-magyar-egyesulet"
+    },
+    {
+      "id": "magyar-egyetemistak-es-oregdiakok-klubja-graz",
+      "name": "Magyar Egyetemisták és Öregdiákok Klubja",
+      "aliases": [],
+      "region": "Stájerország",
+      "officialWebsite": null,
+      "authorityProfile": "https://okoszisztema.kozpontiszovetseg.at/tagszervezetek/magyar-egyetemistak-es-oregdiakok-klubja-graz/",
+      "recordSource": "https://okoszisztema.kozpontiszovetseg.at/member-organizations.json",
+      "directoryEvidence": "https://www.kozpontiszovetseg.at/tagszervezetek",
+      "membershipClass": "official-directory-entry",
+      "legalEntityStatus": "not-inferred-from-directory",
+      "dorappOrgId": "meok-graz"
+    },
+    {
+      "id": "graci-magyar-katolikus-kozosseg",
+      "name": "Gráci Magyar Katolikus Közösség",
+      "aliases": [],
+      "region": "Stájerország",
+      "officialWebsite": "https://www.grazimagyaregyesuelet.at/",
+      "authorityProfile": "https://okoszisztema.kozpontiszovetseg.at/tagszervezetek/graci-magyar-katolikus-kozosseg/",
+      "recordSource": "https://okoszisztema.kozpontiszovetseg.at/member-organizations.json",
+      "directoryEvidence": "https://www.kozpontiszovetseg.at/tagszervezetek",
+      "membershipClass": "official-directory-entry",
+      "legalEntityStatus": "not-inferred-from-directory",
+      "dorappOrgId": "katolikus-graz"
+    },
+    {
+      "id": "femconnect-graz",
+      "name": "FemConnect Graz",
+      "aliases": [],
+      "region": "Stájerország",
+      "officialWebsite": null,
+      "authorityProfile": "https://okoszisztema.kozpontiszovetseg.at/tagszervezetek/femconnect-graz/",
+      "recordSource": "https://okoszisztema.kozpontiszovetseg.at/member-organizations.json",
+      "directoryEvidence": "https://www.kozpontiszovetseg.at/tagszervezetek",
+      "membershipClass": "official-directory-entry",
+      "legalEntityStatus": "not-inferred-from-directory",
+      "dorappOrgId": "femconnect-graz"
+    },
+    {
+      "id": "magyarhaz-innsbruck",
+      "name": "Magyarház - Innsbrucki Magyar Diákotthon és Kultúrcentrum Egyesület",
+      "aliases": [],
+      "region": "Tirol",
+      "officialWebsite": null,
+      "authorityProfile": "https://okoszisztema.kozpontiszovetseg.at/tagszervezetek/magyarhaz-innsbruck/",
+      "recordSource": "https://okoszisztema.kozpontiszovetseg.at/member-organizations.json",
+      "directoryEvidence": "https://www.kozpontiszovetseg.at/tagszervezetek",
+      "membershipClass": "official-directory-entry",
+      "legalEntityStatus": "not-inferred-from-directory",
+      "dorappOrgId": "magyarhaz-innsbruck"
+    },
+    {
+      "id": "imike",
+      "name": "IMIKE - Innsbrucki Magyar Ifjúsági és Kultúregyesület",
+      "aliases": [],
+      "region": "Tirol",
+      "officialWebsite": null,
+      "authorityProfile": "https://okoszisztema.kozpontiszovetseg.at/tagszervezetek/imike/",
+      "recordSource": "https://okoszisztema.kozpontiszovetseg.at/member-organizations.json",
+      "directoryEvidence": "https://www.kozpontiszovetseg.at/tagszervezetek",
+      "membershipClass": "official-directory-entry",
+      "legalEntityStatus": "not-inferred-from-directory",
+      "dorappOrgId": "imike"
+    },
+    {
+      "id": "cserkesz-79-innsbruck",
+      "name": "79 sz. Dr. Kozma György SJ cserkészcsapat",
+      "aliases": [],
+      "region": "Tirol",
+      "officialWebsite": null,
+      "authorityProfile": "https://okoszisztema.kozpontiszovetseg.at/tagszervezetek/cserkesz-79-innsbruck/",
+      "recordSource": "https://okoszisztema.kozpontiszovetseg.at/member-organizations.json",
+      "directoryEvidence": "https://www.kozpontiszovetseg.at/tagszervezetek",
+      "membershipClass": "official-directory-entry",
+      "legalEntityStatus": "not-inferred-from-directory",
+      "dorappOrgId": "cserkesz-79"
+    },
+    {
+      "id": "imeasz",
+      "name": "IMEASZ - Innsbrucki Magyar Egyetemisták és Akadémikusok Szövetsége",
+      "aliases": [],
+      "region": "Tirol",
+      "officialWebsite": null,
+      "authorityProfile": "https://okoszisztema.kozpontiszovetseg.at/tagszervezetek/imeasz/",
+      "recordSource": "https://okoszisztema.kozpontiszovetseg.at/member-organizations.json",
+      "directoryEvidence": "https://www.kozpontiszovetseg.at/tagszervezetek",
+      "membershipClass": "official-directory-entry",
+      "legalEntityStatus": "not-inferred-from-directory",
+      "dorappOrgId": "imeasz"
+    },
+    {
+      "id": "innsbrucki-magyar-katolikus-kozosseg",
+      "name": "Innsbrucki Magyar Katolikus Közösség",
+      "aliases": [],
+      "region": "Tirol",
+      "officialWebsite": null,
+      "authorityProfile": "https://okoszisztema.kozpontiszovetseg.at/tagszervezetek/innsbrucki-magyar-katolikus-kozosseg/",
+      "recordSource": "https://okoszisztema.kozpontiszovetseg.at/member-organizations.json",
+      "directoryEvidence": "https://www.kozpontiszovetseg.at/tagszervezetek",
+      "membershipClass": "official-directory-entry",
+      "legalEntityStatus": "not-inferred-from-directory",
+      "dorappOrgId": "katolikus-innsbruck"
+    },
+    {
+      "id": "vorarlbergi-magyar-egyesulet",
+      "name": "Vorarlbergi Magyar Egyesület",
+      "aliases": [],
+      "region": "Vorarlberg",
+      "officialWebsite": null,
+      "authorityProfile": "https://okoszisztema.kozpontiszovetseg.at/tagszervezetek/vorarlbergi-magyar-egyesulet/",
+      "recordSource": "https://okoszisztema.kozpontiszovetseg.at/member-organizations.json",
+      "directoryEvidence": "https://www.kozpontiszovetseg.at/tagszervezetek",
+      "membershipClass": "official-directory-entry",
+      "legalEntityStatus": "not-inferred-from-directory",
+      "dorappOrgId": "vorarlbergi-magyar-egyesulet"
+    },
+    {
+      "id": "mi-magyarok-egymasert",
+      "name": "Mi Magyarok Egymásért",
+      "aliases": [],
+      "region": "Vorarlberg",
+      "officialWebsite": null,
+      "authorityProfile": "https://okoszisztema.kozpontiszovetseg.at/tagszervezetek/mi-magyarok-egymasert/",
+      "recordSource": "https://okoszisztema.kozpontiszovetseg.at/member-organizations.json",
+      "directoryEvidence": "https://www.kozpontiszovetseg.at/tagszervezetek",
+      "membershipClass": "official-directory-entry",
+      "legalEntityStatus": "not-inferred-from-directory",
+      "dorappOrgId": "mime-vorarlberg"
+    }
+  ],
+  "relatedDigitalSystems": [
+    {
+      "name": "Programválasztó",
+      "url": "https://programvalaszto.magyariskola.at/",
+      "identityRole": "current BMI program catalog",
+      "data": "https://programvalaszto.magyariskola.at/programs.json"
+    },
+    {
+      "name": "Tanáraink",
+      "url": "https://tanarok.magyariskola.at/",
+      "identityRole": "BMI educator and activity-leader directory"
+    },
+    {
+      "name": "BMI hírlevél",
+      "url": "https://hirlevel.magyariskola.at/",
+      "identityRole": "BMI editorial program newsletter; time-bound content"
+    },
+    {
+      "name": "ZENEBONA",
+      "url": "https://zenebona.magyariskola.at/",
+      "identityRole": "BMI-related music project"
+    },
+    {
+      "name": "Világfa Sárkányai",
+      "url": "https://taltosdob.magyariskola.at/",
+      "identityRole": "BMI-related activities"
+    },
+    {
+      "name": "BMI 2025/26 beszámoló",
+      "url": "https://2026.magyariskola.at/",
+      "identityRole": "historical report, not current program authority"
+    }
+  ],
+  "boundaryRules": [
+    "The federation's member organizations remain separate entities; do not serialize directory membership as federation ownership or employment.",
+    "Bécsi Szelet Magazin is an editorial brand published by the federation and situated in the school project portfolio; it is not the legal entity Bécsi Magyar Iskola.",
+    "Bécsi Napló and Bécsi Szelet must not be merged or treated as one publication.",
+    "ÖIUS and Napraforgók are entries in the member directory, not BMI sub-organizations by that fact.",
+    "VIPACH and Musical Társulat must not be collapsed into BMI: retain separate brands and verify organizational/legal parent claims before asserting formal ownership.",
+    "Founder, editor, article author and image photographer are distinct claims; credit by verified source rather than inheritance.",
+    "For current dates, prices, people, contacts, roles and events consult the operator's live first-party source.",
+    "Use sameAs only for truly identical entities, subjectOf for documented external coverage, and project/affiliation semantics only where evidenced.",
+    "Avoid publishing historical account and banking details from snapshots as guaranteed-current facts.",
+    "A machine-readable knowledge layer cannot control search engine ranking, AI assistant answers or DNS resolution."
+  ],
+  "knownGaps": [
+    {
+      "field": "2026-2028-board",
+      "status": "incomplete",
+      "source": "https://okoszisztema.kozpontiszovetseg.at/leadership-people.json"
+    },
+    {
+      "field": "member-legal-personality",
+      "status": "case-by-case",
+      "source": "https://okoszisztema.kozpontiszovetseg.at/member-organizations.json"
+    },
+    {
+      "field": "live-wix-schema-and-cookie-consent",
+      "status": "requires-runtime-verification",
+      "source": "https://okoszisztema.kozpontiszovetseg.at/gdpr-ai-trust.html"
+    },
+    {
+      "field": "cross-domain-live-canonical-hreflang-and-DNS",
+      "status": "requires-domain-and-live-verification",
+      "source": "https://okoszisztema.kozpontiszovetseg.at/machine-manifest.json"
+    }
+  ]
+}
