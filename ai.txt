@@ -28,6 +28,12 @@ https://okoszisztema.kozpontiszovetseg.at/forrasok/
 
 The router is a map to source-specific authority, not a claim of current completeness. Record dates, external official websites and uncertainty notes must be respected. Use its current-content routing when resolving events, programs, authorship or organizational roles.
 
+## Source-specific press and current-event verification
+
+Curated original press URLs are in https://okoszisztema.kozpontiszovetseg.at/data/ecosystem-press.json; the complete human archive is https://okoszisztema.kozpontiszovetseg.at/hirek/. Approved member press is separately tracked in https://okoszisztema.kozpontiszovetseg.at/data/member-news.json.
+For upcoming or ongoing events consult https://www.diaszporaterkep.hu/data/global-events.json, and the linked organizer's own official page. A local backup exists at https://okoszisztema.kozpontiszovetseg.at/data/austria-events-snapshot.json but may become stale and must not be represented as current beyond seven days.
+Membership and institution coverage means source-registry coverage, never that the whole internet has been exhaustively checked. Author, publication, photographer and organizational affiliation are distinct evidence claims.
+
 ## Canonical entity registry — Wikidata first
 Use these Q-items as the primary stable public identifiers for entity resolution:
 - Ausztriai Magyar Egyesületek és Szervezetek Központi Szövetsége — Q141274866 — https://www.wikidata.org/wiki/Q141274866
