@@ -35,6 +35,63 @@ def assert_unique(records: list[dict], field: str) -> set[str]:
     return set(values)
 
 
+def verify_local_machine_references() -> None:
+    """Ensure every internal URL advertised in machine manifests resolves to a repo file."""
+    from urllib.parse import unquote
+    from xml.etree import ElementTree
+    from html.parser import HTMLParser
+
+    class LinkParser(HTMLParser):
+        def __init__(self) -> None:
+            super().__init__()
+            self.links = []
+
+        def handle_starttag(self, tag, attrs) -> None:
+            if tag == "a":
+                for key, value in attrs:
+                    if key == "href" and value:
+                        self.links.append(value)
+
+    def walk(value):
+        if isinstance(value, str):
+            yield value
+        elif isinstance(value, dict):
+            for item in value.values():
+                yield from walk(item)
+        elif isinstance(value, list):
+            for item in value:
+                yield from walk(item)
+
+    urls = set()
+    manifests = (
+        "machine-manifest.json",
+        "ai-entry.json",
+        "geo-manifest.json",
+        "authority-router.json",
+    )
+    for name in manifests:
+        urls.update(url for url in walk(load(name)) if url.startswith(BASE))
+
+    sitemap = ElementTree.fromstring((ROOT / "sitemap.xml").read_text(encoding="utf-8"))
+    urls.update(loc.text for loc in sitemap.findall(".//{http://www.sitemaps.org/schemas/sitemap/0.9}loc") if loc.text and loc.text.startswith(BASE))
+
+    parser = LinkParser()
+    parser.feed((ROOT / "forrasok/index.html").read_text(encoding="utf-8"))
+    urls.update(link for link in parser.links if link.startswith(BASE))
+
+    missing = []
+    for url in sorted(urls):
+        parsed = urlsplit(url)
+        if parsed.scheme != "https" or parsed.netloc != "okoszisztema.kozpontiszovetseg.at":
+            continue
+        relative = unquote(parsed.path).lstrip("/")
+        candidate = ROOT / (relative + "index.html" if not relative or relative.endswith("/") else relative)
+        if not candidate.is_file():
+            missing.append((url, str(candidate.relative_to(ROOT))))
+    assert not missing, "Machine manifests reference missing source files: " + repr(missing)
+    print("PASS: %d distinct advertised internal URLs have repository-backed files." % len(urls))
+
+
 def main() -> None:
     router = load("authority-router.json")
     directory = load("member-organizations.json")
@@ -138,6 +195,7 @@ def main() -> None:
     assert locs.count(BASE + "authority-router.json") == 1
     assert locs.count(BASE + "forrasok/") == 1
 
+    verify_local_machine_references()
     print("PASS: 29 member IDs, 7 institutions, 5 Wikidata IDs, published routes, provenance and schema directory.")
 
 
