@@ -14,6 +14,10 @@ A központi `authority-graph.jsonld` az intézményi gráf kanonikus forrása. A
 
 Ellenőrzés helyben, módosítás nélkül: `python3 scripts/sync_authority_schema.py`. Kanonikus gráf módosításakor **csak külön munkabranchen** futtasd a `python3 scripts/sync_authority_schema.py --write` parancsot, majd ugyanazon PR-ben nézd át a generált HTML-diffeket. A teljes CI zöld állapota után mehet a merge; a workflow nem commitolhat automatikusan production `main`-re. Az önálló `docs/knowledge-governance.html` soha nem kaphat közös gráf-injekciót.
 
+## Ellenőrzött hivatalos logó
+
+A szövetségi entitás `Organization.logo` mezője a **Központi Szövetség saját Wix Business Profile** logójára mutat. A kép médiaszolgáltatói URL-jét, azonosítóját és ellenőrzött 100×100-as natív méretét a [`data/official-brand-assets.json`](data/official-brand-assets.json) rögzíti. A kép más intézmények logójára nem használható; a megállapítás nem jelent szerzői jogi felhasználási engedélyt vagy Google rich-result garanciát.
+
 ## Központi forrásfeloldó: a rendszer gépi belépési pontja
 
 - `authority-router.json`: forrásprioritás, 29 tagszervezeti bejegyzés, 7 intézményi/projektprofil, 6 kapcsolódó digitális szolgáltatás, entitásazonosítók és bizonytalansági szabályok.
