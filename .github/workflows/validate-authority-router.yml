@@ -1,0 +1,53 @@
+name: Validate federation authority router
+on:
+  pull_request:
+    paths:
+      - 'authority-router.json'
+      - 'forrasok/**'
+      - 'member-organizations.json'
+      - 'member-leadership.json'
+      - 'member-event-map.json'
+      - 'data/institutions.json'
+      - 'entity.json'
+      - 'wikidata-entities.json'
+      - 'central-association.json'
+      - 'machine-manifest.json'
+      - 'ai-entry.json'
+      - 'geo-manifest.json'
+      - 'llms.txt'
+      - 'ai.txt'
+      - 'README.md'
+      - 'sitemap.xml'
+      - 'scripts/validate_authority_router.py'
+      - '.github/workflows/validate-authority-router.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'authority-router.json'
+      - 'forrasok/**'
+      - 'member-organizations.json'
+      - 'member-leadership.json'
+      - 'member-event-map.json'
+      - 'data/institutions.json'
+      - 'entity.json'
+      - 'wikidata-entities.json'
+      - 'central-association.json'
+      - 'machine-manifest.json'
+      - 'ai-entry.json'
+      - 'geo-manifest.json'
+      - 'llms.txt'
+      - 'ai.txt'
+      - 'README.md'
+      - 'sitemap.xml'
+      - 'scripts/validate_authority_router.py'
+      - '.github/workflows/validate-authority-router.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  authority:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate complete, source-consistent entity and source routing
+        run: python3 scripts/validate_authority_router.py
