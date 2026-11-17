@@ -2,6 +2,7 @@
   "version": "2026-09-12",
   "canonicalOrganization": "https://www.kozpontiszovetseg.at/",
   "authorityRouter": "https://okoszisztema.kozpontiszovetseg.at/authority-router.json",
+  "knowledgeGovernance": "https://okoszisztema.kozpontiszovetseg.at/knowledge-governance.json",
   "authorityDirectory": "https://okoszisztema.kozpontiszovetseg.at/forrasok/",
   "authorityLanding": "https://okoszisztema.kozpontiszovetseg.at/magyar-ernyoszervezet-ausztria.html",
   "umbrellaAuthorityGraph": "https://okoszisztema.kozpontiszovetseg.at/umbrella-authority.jsonld",
