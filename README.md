@@ -6,6 +6,8 @@ Publikus oldal: https://okoszisztema.kozpontiszovetseg.at/
 
 Ez a repó a Központi Szövetség szervezeti hálózatának közérthető és géppel feldolgozható áttekintése.
 
+**Hivatalos logóforrás:** `data/federation-brand-asset-evidence.json` – a központi szervezet saját Wix-oldalán megjelenő, teljes felbontású, nyilvános logó, csak a szövetségi `Organization` entitáshoz. A márkák/kiadványok saját logóit és jogosultságait ettől külön kell kezelni.
+
 ## Schema-szinkron: PR-ellenőrzés, nem automatikus main-átírás
 
 A központi `authority-graph.jsonld` az intézményi gráf kanonikus forrása. A régi, `main` ágra automatikusan visszaíró `sync-authority-schema.yml` kockázata az volt, hogy a meg nem jelölt, önálló tartalmi dokumentumokba (például `docs/knowledge-governance.html`) is beilleszthette a teljes közös Organization/Person gráfot. A CI most **csak olvas**, és kizárólag a `<!-- ecosystem-authority-schema:start/end -->` jelölőkkel rendelkező HTML-ekben ellenőrzi a szó szerinti szinkront.

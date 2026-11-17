@@ -1,0 +1,26 @@
+{
+  "version": "2026-11-17.1",
+  "documentType": "verified-federation-official-brand-asset",
+  "entityId": "https://www.kozpontiszovetseg.at/#organization",
+  "scope": "federation-only",
+  "sourceAuthority": "Központi Szövetség official Wix site and its first-party Media Manager",
+  "officialSite": "https://www.kozpontiszovetseg.at/",
+  "visuallyPublishedAt": "https://www.kozpontiszovetseg.at/r%C3%B3lunk",
+  "sourceDisplayName": "logo4.png",
+  "mediaId": "b0aee1_70fdea210a4a4e0cac06b22d4446e451~mv2.png",
+  "originalPublicUrl": "https://static.wixstatic.com/media/b0aee1_70fdea210a4a4e0cac06b22d4446e451~mv2.png",
+  "width": 1162,
+  "height": 1163,
+  "mimeType": "image/png",
+  "private": false,
+  "mediaState": "OK",
+  "operationStatus": "READY",
+  "mediaFileUpdatedDate": "2024-10-17T18:26:47.000Z",
+  "metadataCheckedOn": "2026-11-17",
+  "evidenceMethod": "Authenticated Wix site media search; matched exact original image displayed as Központi Szövetség logo on the official site.",
+  "limitations": [
+    "The asset identity and public file metadata are verified; no rights are inferred for other organizations.",
+    "Logo references do not prove legal ownership, licensing of unrelated materials, or AI reuse permission.",
+    "Do not assign this federation logo to BMI, VIPACH, Bécsi Napló, Bécsi Szelet or separate member organizations."
+  ]
+}

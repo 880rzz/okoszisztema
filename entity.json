@@ -153,7 +153,13 @@
           "url": "https://rolunk.at/tag/kozponti-szovetseg/",
           "name": "Rólunk.at – Központi Szövetség sajtóarchívum"
         }
-      ]
+      ],
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://static.wixstatic.com/media/b0aee1_70fdea210a4a4e0cac06b22d4446e451~mv2.png",
+        "width": 1162,
+        "height": 1163
+      }
     },
     {
       "@type": [

@@ -84,7 +84,21 @@ def main() -> None:
             observed_orf[ref["url"]] = (ref.get("name"), ref.get("datePublished"))
     assert observed_orf == verified_orf, "Independent source titles/dates must stay verified"
 
+    # The parent federation logo is a first-party published asset, not a
+    # fabricated corporate symbol or an inferred logo for related entities.
+    evidence = json.loads((ROOT / "data/federation-brand-asset-evidence.json").read_text(encoding="utf-8"))
+    logo_url = evidence["originalPublicUrl"]
+    assert evidence["entityId"] == FEDERATION
+    assert evidence["private"] is False and evidence["mediaState"] == "OK"
+    assert evidence["operationStatus"] == "READY"
+    assert evidence["width"] >= 112 and evidence["height"] >= 112
+    assert exactly_one(authority_nodes, FEDERATION)["logo"]["url"] == logo_url
+    assert exactly_one(homepage_nodes, FEDERATION) is not None
+    assert exactly_one(nodes(blocks[0]), FEDERATION)["logo"]["url"] == logo_url
+    assert exactly_one(authority_nodes, FEDERATION)["logo"]["width"] == evidence["width"]
+
     entity = json.loads((ROOT / "entity.json").read_text(encoding="utf-8"))
+    assert exactly_one(nodes(entity), FEDERATION)["logo"]["url"] == logo_url
     entity_magazine = exactly_one(nodes(entity), MAGAZINE)
     registry_founders = entity_magazine.get("founder", [])
     assert any(f.get("name") == "Kovács Attila" for f in registry_founders)
