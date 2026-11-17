@@ -99,10 +99,30 @@ def main() -> None:
     assert human.is_file(), human
     page = human.read_text(encoding="utf-8")
     assert page.count("<h1") == 1
-    assert '<html lang="hu">' in page
-    assert "<script" not in page and "googletagmanager.com" not in page
+    assert '<html lang="hu-AT">' in page
+    assert "googletagmanager.com" not in page
+    assert not re.search(r'<script\b[^>]*\bsrc\s*=', page, flags=re.I), "Unexpected remote script"
     assert '<link rel="canonical" href="' + policy["humanDocumentation"] + '">' in page
     assert "knowledge-governance.json" in page
+    main = re.search(r'<main\b[^>]*>([\s\S]*?)</main>', page, flags=re.I)
+    assert main, "Accessible main content missing"
+    words = re.sub(r'<[^>]+>', ' ', main.group(1)).split()
+    assert len(words) >= 650, "Public governance guide lost its explanatory detail"
+    scripts = re.findall(
+        r'<script\b[^>]*\btype="application/ld\+json"[^>]*>([\s\S]*?)</script>',
+        page, flags=re.I
+    )
+    assert len(scripts) == 1, "One controlled local JSON-LD block expected"
+    graph = json.loads(scripts[0])["@graph"]
+    assert len(graph) == 2
+    webpage = next(n for n in graph if n["@type"] == "WebPage")
+    contract = next(n for n in graph if n["@type"] == "CreativeWork")
+    assert webpage["url"] == policy["humanDocumentation"]
+    assert webpage["publisher"]["@id"] == FED
+    assert webpage["inLanguage"] == "hu-AT"
+    assert webpage["mainEntity"]["@id"] == contract["@id"]
+    assert contract["url"] == policy["canonical"]
+    assert contract["version"] == policy["version"]
 
     for name, key in (
         ("machine-manifest.json", "knowledgeGovernance"),

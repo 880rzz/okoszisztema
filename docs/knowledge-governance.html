@@ -1,1 +1,130 @@
-<!doctype html><html lang="hu"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Tudásbázis és forráskezelés – Központi Szövetség</title><meta name="description" content="A Központi Szövetség digitális tudásbázisának forrásprioritási, bizonyítékkezelési, entitásazonosítási és AI Trust szabályai."><link rel="canonical" href="https://okoszisztema.kozpontiszovetseg.at/docs/knowledge-governance.html"><style>body{font:16px/1.7 system-ui,-apple-system,sans-serif;margin:0 auto;padding:3rem 1.25rem;max-width:850px;color:#192027}h1,h2{line-height:1.2}a{color:#164972}code{overflow-wrap:anywhere}footer{margin-top:3rem;border-top:1px solid #ddd;padding-top:1rem}</style></head><body><main><h1>Központi tudásbázis és bizonyítékkezelés</h1><p>Az Ausztriai Magyar Egyesületek és Szervezetek Központi Szövetségének digitális ökoszisztémájához tartozó, nyilvános és forrásolt intézményi adatkezelési modell. Utolsó szabályzati felülvizsgálat: 2026. november 17.</p><h2>Mi a központi forrás?</h2><p>Az <a href="/authority-router.json">authority-router.json</a> segít a 29 közzétett tagszervezeti bejegyzés, hét intézményi/projektprofil és kapcsolódó médiatartalmak eredeti hiteles forrásának kiválasztásában. Az <a href="/knowledge-governance.json">ellenőrizhető irányítási szerződés</a> a frissességet, jogi, szerkesztőségi és AI-felhasználási korlátokat rögzíti.</p><h2>A változó tények adatgazdái</h2><p>A <a href="https://www.kozpontiszovetseg.at/">Központi Szövetség</a> hivatalos oldala a szervezet aktuális közleményeié; a <a href="https://www.magyariskola.at/">Bécsi Magyar Iskola</a> saját oktatási adatainak, a <a href="https://programvalaszto.magyariskola.at/">Programválasztó</a> az aktuális programinformációknak az elsődleges felülete. A <a href="https://www.becsinaplo.at/">Bécsi Napló</a> és a <a href="https://www.becsiszelet.at/">Bécsi Szelet</a> külön szerkesztőségi kiadvány; a Bécsi Szelet egyben a BMI projektkörnyezetéhez is tartozik. A sajtóhoz az eredeti kiadói cikk, eseményhez az eredeti szervező forrása szükséges.</p><h2>Mit nem bizonyít a tudásbázis?</h2><p>Az azonosító vagy hivatkozás nem igazol önmagában jogi tulajdont, munkaviszonyt, szerzőséget, jóváhagyott személyesadat-kezelést, átfogó sajtólefedettséget, keresőhelyezést vagy AI-megjelenést. A hiányzó adatot nem találgatjuk; a régi dátumot nem frissítjük felülvizsgálat nélkül.</p><h2>Adatvédelem és AI Trust</h2><p>A nyilvános gépi állományok nem tartalmazhatnak titkokat, privát kapcsolattartói listákat, gyermekek indokolatlanul azonosító adatait vagy nyers belső pénzügyi iratokat. Az analitika csak hozzájárulás után indulhat; a jogszabályi megfelelőséget külön vizsgálni kell. Részletek: <a href="/gdpr-ai-trust.html">GDPR és AI Trust</a>.</p><h2>Források és ellenőrzés</h2><p><a href="/forrasok/">Emberi forrásjegyzék</a> · <a href="/machine-manifest.json">Gépi manifeszt</a> · <a href="/llms.txt">LLM forrásútmutató</a> · <a href="/hirek/">Jóváhagyott sajtóarchívum</a> · <a href="https://github.com/880rzz/okoszisztema/blob/main/docs/knowledge-governance-2026-11-17.md">Teljes verziókezelt szakmai szabályzat</a></p></main><footer>© Központi Szövetség · Ez a dokumentum nem jogi tanúsítvány.</footer></body></html>
+<!doctype html>
+<html lang="hu-AT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="index,follow,max-snippet:-1">
+<title>Tudásbázis és forráskezelés | Központi Szövetség</title>
+<meta name="description" content="A Központi Szövetség központi, bizonyítékalapú tudásbázisa: hiteles források, entitásazonosítók, SEO, GEO, Schema.org, E-E-A-T, GDPR és AI Trust.">
+<link rel="canonical" href="https://okoszisztema.kozpontiszovetseg.at/docs/knowledge-governance.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Központi tudásbázis és forráskezelés">
+<meta property="og:description" content="Hogyan ellenőrizzük a Központi Szövetség és intézményei digitális tudásforrásait, szervezeti kapcsolatait és gépi adatait.">
+<meta property="og:url" content="https://okoszisztema.kozpontiszovetseg.at/docs/knowledge-governance.html">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://okoszisztema.kozpontiszovetseg.at/docs/knowledge-governance.html#webpage",
+      "url": "https://okoszisztema.kozpontiszovetseg.at/docs/knowledge-governance.html",
+      "name": "Központi tudásbázis és bizonyítékkezelés",
+      "description": "A Központi Szövetség hivatalos digitális ökoszisztémájának forrásprioritási, intézményi entitás- és adatkezelési modellje.",
+      "inLanguage": "hu-AT",
+      "isPartOf": {"@id": "https://okoszisztema.kozpontiszovetseg.at/#website"},
+      "publisher": {"@id": "https://www.kozpontiszovetseg.at/#organization"},
+      "dateModified": "2026-11-17",
+      "mainEntity": {"@id": "https://okoszisztema.kozpontiszovetseg.at/knowledge-governance.json#contract"}
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://okoszisztema.kozpontiszovetseg.at/knowledge-governance.json#contract",
+      "url": "https://okoszisztema.kozpontiszovetseg.at/knowledge-governance.json",
+      "name": "Központi Szövetség – federation knowledge governance contract",
+      "version": "2026-11-17.1",
+      "inLanguage": "en",
+      "encodingFormat": "application/json",
+      "publisher": {"@id": "https://www.kozpontiszovetseg.at/#organization"}
+    }
+  ]
+}
+</script>
+<style>
+:root{color-scheme:light}*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:#19212a;background:#fff;font:16px/1.7 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+.wrap{max-width:900px;margin-inline:auto;padding-inline:clamp(20px,4vw,48px)}
+header{border-bottom:1px solid #e3e6eb;padding:18px 0}
+nav{display:flex;flex-wrap:wrap;gap:10px 23px;align-items:center}
+nav strong{margin-right:auto}a{color:#125582;text-underline-offset:3px}
+a:hover{text-decoration-thickness:2px}
+a:focus-visible{outline:3px solid #125582;outline-offset:4px;border-radius:3px}
+.hero{padding:54px 0 38px;background:#f7f9fb;border-bottom:1px solid #e7ebee}
+.eyebrow{font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:750;color:#345d7d}
+h1{font-size:clamp(31px,5vw,50px);letter-spacing:-.04em;line-height:1.14;margin:12px 0 20px}
+.lead{font-size:clamp(17px,2.2vw,21px);line-height:1.55;color:#46546a;max-width:780px}
+main{padding-block:26px 55px}
+section{padding:26px 0;border-bottom:1px solid #e9ecef}
+h2{font-size:clamp(22px,3.5vw,30px);letter-spacing:-.025em;line-height:1.25;margin:0 0 15px}
+h3{font-size:18px;line-height:1.35;margin:20px 0 6px}
+p{margin:0 0 15px}ul{padding-left:23px;margin-top:8px}li{margin-bottom:8px}
+code{font-size:.93em;overflow-wrap:anywhere;background:#f1f3f6;padding:2px 4px;border-radius:3px}
+dl{display:grid;grid-template-columns:minmax(120px,180px) minmax(0,1fr);gap:8px 18px}
+dt{font-weight:750}dd{margin:0;min-width:0}
+.small{font-size:14px;color:#5f6a76}
+footer{background:#f8f9fa;border-top:1px solid #e3e6eb;padding:28px 0 42px;font-size:14px;color:#596675}
+@media(max-width:560px){.hero{padding-top:38px}dl{display:block}dt{margin-top:15px}dd{margin-top:3px}nav strong{width:100%}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><nav aria-label="Főnavigáció">
+<strong><a href="/">Központi Szövetség – online ökoszisztéma</a></strong>
+<a href="/forrasok/">Forráskatalógus</a>
+<a href="/hirek/">Sajtóarchívum</a>
+<a href="/gdpr-ai-trust.html">GDPR / AI Trust</a>
+</nav></div></header>
+<div class="hero"><div class="wrap">
+<p class="eyebrow">Intézményi tudásbázis · források · bizonyítékok</p>
+<h1>Központi tudásbázis és bizonyítékkezelés</h1>
+<p class="lead">A Központi Szövetség szervezeti és projektkapcsolatainak, történeti adatainak, forrásainak, sajtóhivatkozásainak és géppel feldolgozható entitásainak ellenőrizhető tudásrendszere. Az adatokat nem csak összegyűjtjük: rögzítjük, melyik állítás honnan származik és meddig tekinthető aktuálisnak.</p>
+<p class="small">Szabályzat felülvizsgálata: 2026. november 17. · Ez nem jogi vagy keresőmotoros megfelelőségi tanúsítvány.</p>
+</div></div>
+<main class="wrap">
+<section id="alapelv"><h2>1. Egy központi tudásbázis, több hiteles adatgazda</h2>
+<p>Az <a href="/authority-router.json"><code>authority-router.json</code></a> a szövetségi ökoszisztéma központi gépi forrásfeloldója. Az <a href="/knowledge-governance.json"><code>knowledge-governance.json</code></a> határozza meg, hogyan kell értelmezni a források elsőbbségét, a bizonyítási követelményeket és az intézményi kapcsolatokat. A <a href="/forrasok/">nyilvános forráskatalógus</a> a látogatók számára is olvasható formában ad áttekintést.</p>
+<p>A központi rendszerben a kapcsolatok és a bizonyítékok kanonikus rendje szerepel. A változó tényekért azonban mindig az adott intézmény vagy hivatalos nyilvántartás a felelős: új vezetőségi választás, programváltozás, cikkpublikáció, díj, díjszabás vagy elérhetőség nem lesz automatikusan igaz attól, hogy a központi adatfájlban szerepel.</p>
+<p>A gépi állományok nem DNS-névszerverek és nem helyettesítik a tényleges hivatalos honlapokat. A kereszthivatkozások kizárólag ellenőrzött kapcsolatokat jelölnek; a több oldalról származó adatokat nem olvasztjuk össze automatikusan.</p>
+</section>
+<section id="terjedelem"><h2>2. Intézmények, tagszervezetek és projektkapcsolatok</h2>
+<p>A jelenlegi központi nyilvántartás a hivatalosan közzétett címtár szerinti <strong>29 tagszervezeti bejegyzést</strong> és <strong>7 intézményi/projektprofilt</strong> rendszerez. Ez két külön adatkör. A tagszervezeti címtárbejegyzésből nem következik önálló jogi személyiség, és a Bécsi Magyar Iskola nem számít a címtár harmincadik tagszervezetének.</p>
+<dl>
+<dt>Központi Szövetség</dt><dd><a href="https://www.wikidata.org/wiki/Q141274866">Q141274866</a> · ernyőszervezet, amelyhez tagszervezetek és saját intézményi projektek kapcsolódnak.</dd>
+<dt>Bécsi Magyar Iskola</dt><dd><a href="https://www.wikidata.org/wiki/Q141274560">Q141274560</a> · a Szövetség által fenntartott oktatási intézményi rendszer, 1987-es alapítással.</dd>
+<dt>Bécsi Napló</dt><dd><a href="https://www.wikidata.org/wiki/Q141275731">Q141275731</a> · önálló sajtókiadvány, a Szövetség kiadói környezetében.</dd>
+<dt>Bécsi Szelet</dt><dd><a href="https://www.wikidata.org/wiki/Q142154314">Q142154314</a> · külön magyar–német magazin; a Szövetség kiadói kapcsolatában és a BMI projektkörnyezetében működik.</dd>
+<dt>VIPACH</dt><dd><a href="https://www.wikidata.org/wiki/Q138416887">Q138416887</a> · a BMI-hez kapcsolódó kreatív projekt, saját identitással.</dd>
+<dt>Musical Társulat</dt><dd><a href="https://www.musicaltarsulat.at/">Hivatalos oldal</a> · külön művészeti projekt; ellenőrzött Wikidata Q-azonosító jelenleg nincs a központi nyilvántartásban.</dd>
+</dl>
+<p>Az alapító, a fenntartó, a kiadó, a cikk szerzője, a munkatárs, az önkéntes és a projektpartner egymástól különböző relációk. A <code>sameAs</code> kizárólag valódi entitásazonosságra használható, nem a kapcsolat vagy névhasonlóság jelzésére.</p>
+</section>
+<section id="adatgazdak"><h2>3. Hol ellenőrizzük a változó adatokat?</h2>
+<h3>Szervezeti és jogi adatok</h3>
+<p>A Szövetség hivatalos oldala és az alkalmazandó osztrák nyilvántartások irányadók a bejegyzési adatok, fenntartási kapcsolatok, hivatalos elérhetőségek és jogi kiadói szerepek kérdésében. A teljes, 2026–2028-as vezetőségi névsor nem kezelhető bizonyítottként, amíg nincs teljes, hiteles jelenlegi forrás. A korábbi 2024–2026-os névsort nem nevezzük át automatikusan aktuálissá.</p>
+<h3>Oktatás és programok</h3>
+<p>A <a href="https://www.magyariskola.at/">Bécsi Magyar Iskola</a>, a <a href="https://programvalaszto.magyariskola.at/">Programválasztó</a> és a <a href="https://tanarok.magyariskola.at/">tanári nyilvántartás</a> szolgáltatja a jelenlegi program-, tanári és jelentkezési információt. A központi BMI-állományok az ellenőrzött történeti, szakmai és sajtóbizonyítékot kapcsolják hozzá. Egy korábbi tanév beszámolója nem írhatja felül a jelenlegi programot vagy árat.</p>
+<h3>Események és sajtó</h3>
+<p>Az eseménynaptárhoz a <a href="https://www.diaszporaterkep.hu/data/global-events.json">DORAPP</a> és az eredeti szervező oldala tartozik; a helyi esemény-pillanatkép legfeljebb hét napig szolgálhat tartalékként. Az <a href="/hirek/">ellenőrzött sajtóarchívum</a> minden cikket az eredeti kiadóhoz, tényleges URL-hez és az ismert dátumpontossághoz köt. A keresési találat csak jelölt, nem automatikusan publikálható hír.</p>
+</section>
+<section id="evidence"><h2>4. Bizonyítékmodell és E-E-A-T</h2>
+<p>Minden új lényegi nyilvános tényállításhoz szükséges az állítás szövege, az alany kanonikus azonosítója, az állítás típusa, az eredeti forrás URL-je, a forrás kiadója, a forrás tényleges dátuma vagy pontossága, az ellenőrzés időpontja és a hitelesítési státusz. Az adatok státusza lehet <code>verified</code>, <code>provisional</code>, <code>disputed</code> vagy <code>superseded</code>.</p>
+<p>Ha csak az év vagy a hónap ismert, nem egészítjük ki kitalált nappal. Ha két forrás ellentmond, a konfliktust megőrizzük az ellenőrzésig. Ha egy állítás személyhez kapcsolódik – például tanári képesítés, szakmai díj, önkéntesség, tisztség, alapítói részvétel vagy márkanagyköveti státusz –, akkor személyazonosítás és állítás-specifikus igazolás szükséges.</p>
+<p>A Wikidata és a Wikipedia segíti a stabil entitásfeloldást és a történeti kontextust, de önmagában nem bizonyítja a jelenlegi munkaviszonyt, egy intézmény tulajdonjogát vagy a naprakész nyitvatartást. Az E-E-A-T szemléletű dokumentáció valós forrásokat, ellenőrizhető szerzői és szervezeti kapcsolatokat, kontextust és javítási nyomvonalat jelent, nem puszta minőségi címkéket.</p>
+</section>
+<section id="seo"><h2>5. SEO, GEO, Schema.org és LLM-felhasználás</h2>
+<p>Minden önálló URL-nek pontos címe, leírása, önkanonikus URL-je és helyes nyelvi azonosítója van. A nyelvi <code>hreflang</code> kapcsolatot csak ténylegesen elkészült, tartalmilag egyenértékű oldalpárokhoz adjuk hozzá. A strukturált adatoknál külön kezeljük az <code>Organization</code>, <code>EducationalOrganization</code>, <code>Periodical</code>, <code>WebSite</code>, <code>WebPage</code>, <code>Person</code>, <code>Article</code>, <code>Event</code> és <code>DataCatalog</code> típusok tényleges jelentését.</p>
+<p>A gépi belépési pontok: <a href="/machine-manifest.json">machine-manifest.json</a>, <a href="/ai-entry.json">ai-entry.json</a>, <a href="/geo-manifest.json">geo-manifest.json</a>, <a href="/llms.txt">llms.txt</a> és <a href="/ai.txt">ai.txt</a>. Ezek a megfelelő forrás kiválasztását támogatják. Nem garantálnak Google-indexelést, keresési helyezést vagy LLM-citációt, és nem jelentenek szerzői jogi felhasználási engedélyt.</p>
+<p>A Bécsi Napló, a Bécsi Szelet, az iskola és a tagszervezetek saját tartalma, szerkesztése és brandazonossága megmarad. A központi repó az összefüggéseket és a forrásokhoz vezető útvonalakat szabványosítja.</p>
+</section>
+<section id="gdpr"><h2>6. GDPR, Mediengesetz és AI Trust</h2>
+<p>A publikus GitHub-repóba nem kerülhet jelszó, meghívótoken, belső levelezés, résztvevői lista, indokolatlanul gyermekeket azonosító adat, belső pénzügyi irat vagy hozzájárulási napló. A honlapoknak külön tisztázniuk kell az adatkezelői és adatfeldolgozói szerepeket, a célokat, jogalapot, megőrzést, harmadik feleket és érintetti tájékoztatást. A hozzájárulást igénylő analitika az elfogadás előtt nem indulhat el; a visszavonást valódi böngészőben és hálózati forgalomban is ellenőrizni kell.</p>
+<p>A kiadványoknál a szerkesztőségi szerepek és az Impressum/Offenlegung ellenőrzése elkülönül az iskolai projektkapcsolatoktól. A GDPR- vagy AI Trust-oldal megléte nem jelent automatikus jogszabályi megfelelést vagy független tanúsítást. Részletek: <a href="/gdpr-ai-trust.html">adatvédelmi és AI Trust tájékoztató</a>.</p>
+</section>
+<section id="kiadas"><h2>7. Változáskezelés, ellenőrzés és publikálás</h2>
+<p>Minden változtatás célzott GitHub-ágon kezdődik. A forrásellenőrzés után automatikus tesztek vizsgálják a 29 tagszervezeti és 7 intézményi kapcsolatot, a Wikidata-azonosítókat, a forrás-URL-eket, a JSON/JSON-LD érvényességet, az aktuális és történeti adatok szétválasztását és a gépi belépési pontokat.</p>
+<p>A CI-siker, a PR beolvasztása, a GitHub Pages telepítése, a tényleges élő oldal és a keresőmotoros indexelés külön ellenőrzési állapot. Az élő oldalon a HTTP-választ, a kanonikus címeket, a strukturált adatokat, a mobil/desktop használhatóságot és a hozzájárulás előtti hálózati forgalmat is vizsgáljuk. A Search Console és az IndexNow beküldés csak feltérképezési jelzés, nem rangsorolási garancia.</p>
+<p><a href="https://github.com/880rzz/okoszisztema/blob/main/docs/knowledge-governance-2026-11-17.md">A részletes, verziókezelt szakmai szabályzat</a> és a <a href="/knowledge-governance.json">gépi szerződés</a> a további implementációk alapja. A javításokat bizonyítékokkal dokumentáljuk, és a még nem ellenőrzött tényeket nyitott státuszban tartjuk.</p>
+</section>
+</main>
+<footer><div class="wrap">Ausztriai Magyar Egyesületek és Szervezetek Központi Szövetsége · ZVR 079797621 · <a href="https://www.kozpontiszovetseg.at/">Hivatalos oldal</a> · <a href="/">Ökoszisztéma</a> · <a href="/gdpr-ai-trust.html">Adatvédelem</a></div></footer>
+</body></html>
