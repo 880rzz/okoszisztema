@@ -2,6 +2,8 @@
 
 Publikus oldal: https://okoszisztema.kozpontiszovetseg.at/
 
+**Központi tudásbázis-szerződés (2026-11-17):** [knowledge-governance.json](knowledge-governance.json) · [részletes forrás- és adatkezelési szabályzat](docs/knowledge-governance-2026-11-17.md) · [publikus, emberi útmutató](docs/knowledge-governance.html). A repo a legteljesebb keresztintézményi *forrásfeloldó*, de a változó tények elsődleges adatgazdái továbbra is a hivatalos oldalak és jogi nyilvántartások. A forrásdátumokat nem írjuk felül a rendszer kiadási dátumával.
+
 Ez a repó a Központi Szövetség szervezeti hálózatának közérthető és géppel feldolgozható áttekintése.
 
 ## Központi forrásfeloldó: a rendszer gépi belépési pontja
