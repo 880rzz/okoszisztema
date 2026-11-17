@@ -1,95 +1,35 @@
-name: Sync authority schema across ecosystem HTML
+name: Verify authority schema parity (read-only)
+
+# Prior workflow used to rewrite every HTML file and push directly to main.
+# That bypassed branch/PR review and could inject shared schemas into
+# standalone editorial and governance documents. This is now a CI gate.
 on:
+  pull_request:
+    paths:
+      - 'authority-graph.jsonld'
+      - '*.html'
+      - '**/*.html'
+      - 'scripts/sync_authority_schema.py'
+      - '.github/workflows/sync-authority-schema.yml'
   push:
     branches: [main]
-    paths: ['authority-graph.jsonld','rolunk-authority.json','.github/workflows/sync-authority-schema.yml']
+    paths:
+      - 'authority-graph.jsonld'
+      - '*.html'
+      - '**/*.html'
+      - 'scripts/sync_authority_schema.py'
+      - '.github/workflows/sync-authority-schema.yml'
   workflow_dispatch:
+
 permissions:
-  contents: write
+  contents: read
+
 jobs:
-  sync:
+  schema-parity:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Normalize central entity graph and inject authority graph into all HTML
-        run: |
-          python3 - <<'PY'
-          from pathlib import Path
-          import json
-
-          old_school = 'https://www.magyariskola.at/' + '#school'
-          canonical_school = 'https://www.magyariskola.at/' + '#organization'
-          old_person = 'https://www.magyariskola.at/rolunk' + '#seidler-andrea'
-          canonical_person = 'https://www.magyariskola.at/' + '#seidler-andrea'
-
-          # Canonicalize legacy BMI entity IDs in machine-readable and public text layers.
-          normalized=[]
-          for p in Path('.').rglob('*'):
-              if not p.is_file():
-                  continue
-              if any(x in {'.git','node_modules','vendor'} for x in p.parts):
-                  continue
-              if p.suffix.lower() not in {'.json','.jsonld','.html','.txt','.md'}:
-                  continue
-              try:
-                  s=p.read_text(encoding='utf-8')
-              except UnicodeDecodeError:
-                  continue
-              n=s.replace(old_school,canonical_school).replace(old_person,canonical_person)
-              if n!=s:
-                  p.write_text(n,encoding='utf-8')
-                  normalized.append(str(p))
-
-          entity_path=Path('entity.json')
-          if entity_path.exists():
-              data=json.loads(entity_path.read_text(encoding='utf-8'))
-              graph=data.get('@graph',[])
-              byid={x.get('@id'):x for x in graph if isinstance(x,dict)}
-              central=byid.get('https://www.kozpontiszovetseg.at/#organization')
-              if central:
-                  central['sameAs']=[
-                      'https://www.wikidata.org/wiki/Q141274866',
-                      'https://hu.wikipedia.org/wiki/Ausztriai_Magyar_Egyes%C3%BCletek_%C3%A9s_Szervezetek_K%C3%B6zponti_Sz%C3%B6vets%C3%A9ge',
-                      'https://www.facebook.com/kozpontiszovetseg'
-                  ]
-                  subjects=central.get('subjectOf',[])
-                  if not isinstance(subjects,list): subjects=[subjects]
-                  if not any(isinstance(x,dict) and x.get('url')=='https://rolunk.at/tag/kozponti-szovetseg/' for x in subjects):
-                      subjects.append({'@type':'CollectionPage','url':'https://rolunk.at/tag/kozponti-szovetseg/','name':'Rólunk.at – Központi Szövetség sajtóarchívum'})
-                  central['subjectOf']=subjects
-                  central['identifier']=[
-                      {'@type':'PropertyValue','propertyID':'ZVR-Zahl','value':'079797621'},
-                      {'@type':'PropertyValue','propertyID':'Wikidata','value':'Q141274866'}
-                  ]
-              bmi=byid.get(canonical_school)
-              if bmi:
-                  bmi['sameAs']=['https://www.wikidata.org/wiki/Q141274560','https://hu.wikipedia.org/wiki/B%C3%A9csi_Magyar_Iskola']
-                  subjects=bmi.get('subjectOf',[])
-                  if not isinstance(subjects,list): subjects=[subjects]
-                  if not any(isinstance(x,dict) and x.get('url')=='https://rolunk.at/tag/becsi-magyar-iskola/' for x in subjects):
-                      subjects.append({'@type':'CollectionPage','url':'https://rolunk.at/tag/becsi-magyar-iskola/','name':'Rólunk.at – Bécsi Magyar Iskola sajtóarchívum'})
-                  bmi['subjectOf']=subjects
-              entity_path.write_text(json.dumps(data,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
-
-          source=Path('authority-graph.jsonld').read_text(encoding='utf-8').strip()
-          start='<!-- ecosystem-authority-schema:start -->'; end='<!-- ecosystem-authority-schema:end -->'
-          block=f'{start}\n<script type="application/ld+json">\n{source}\n</script>\n{end}'
-          changed=[]
-          for p in Path('.').rglob('*.html'):
-              if any(x in {'.git','node_modules','vendor'} for x in p.parts): continue
-              s=p.read_text(encoding='utf-8')
-              if start in s and end in s:
-                  a=s.index(start); b=s.index(end,a)+len(end); n=s[:a]+block+s[b:]
-              elif '</head>' in s: n=s.replace('</head>',block+'\n</head>',1)
-              else: continue
-              if n!=s: p.write_text(n,encoding='utf-8'); changed.append(str(p))
-          print('canonicalized',len(normalized),'files; updated',len(changed),'HTML files')
-          PY
-      - name: Commit synchronized graph and HTML
-        run: |
-          if git diff --quiet; then exit 0; fi
-          git config user.name "ecosystem-schema-bot"
-          git config user.email "actions@users.noreply.github.com"
-          git add -A
-          git commit -m "Normalize BMI canonical entity IDs and sync authority graph"
-          git push
+      - name: Check the canonical graph and all explicitly marked HTML pages
+        run: python3 scripts/sync_authority_schema.py
+      - name: Recheck core entity identity and magazine publisher relationships
+        run: python3 scripts/check_entity_graph.py
