@@ -6,6 +6,14 @@ Publikus oldal: https://okoszisztema.kozpontiszovetseg.at/
 
 Ez a repó a Központi Szövetség szervezeti hálózatának közérthető és géppel feldolgozható áttekintése.
 
+## Schema-szinkron: PR-ellenőrzés, nem automatikus main-átírás
+
+A központi `authority-graph.jsonld` az intézményi gráf kanonikus forrása. A régi, `main` ágra automatikusan visszaíró `sync-authority-schema.yml` kockázata az volt, hogy a meg nem jelölt, önálló tartalmi dokumentumokba (például `docs/knowledge-governance.html`) is beilleszthette a teljes közös Organization/Person gráfot. A CI most **csak olvas**, és kizárólag a `<!-- ecosystem-authority-schema:start/end -->` jelölőkkel rendelkező HTML-ekben ellenőrzi a szó szerinti szinkront.
+
+Új HTML-oldal nem kap automatikus, intézményi szintű JSON-LD-t. Amennyiben szükséges a közös gráf, azt tudatosan kell hozzáadni a két konkrét jelölővel (`<!-- ecosystem-authority-schema:start -->` és `<!-- ecosystem-authority-schema:end -->`); egyébként az oldal saját `WebPage`, `Article` vagy más releváns helyi sémát használhat.
+
+Ellenőrzés helyben, módosítás nélkül: `python3 scripts/sync_authority_schema.py`. Kanonikus gráf módosításakor **csak külön munkabranchen** futtasd a `python3 scripts/sync_authority_schema.py --write` parancsot, majd ugyanazon PR-ben nézd át a generált HTML-diffeket. A teljes CI zöld állapota után mehet a merge; a workflow nem commitolhat automatikusan production `main`-re. Az önálló `docs/knowledge-governance.html` soha nem kaphat közös gráf-injekciót.
+
 ## Központi forrásfeloldó: a rendszer gépi belépési pontja
 
 - `authority-router.json`: forrásprioritás, 29 tagszervezeti bejegyzés, 7 intézményi/projektprofil, 6 kapcsolódó digitális szolgáltatás, entitásazonosítók és bizonytalansági szabályok.
