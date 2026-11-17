@@ -1,6 +1,8 @@
 {
   "version": "3.9",
   "canonical": "https://okoszisztema.kozpontiszovetseg.at/",
+  "authorityRouter": "https://okoszisztema.kozpontiszovetseg.at/authority-router.json",
+  "authorityDirectory": "https://okoszisztema.kozpontiszovetseg.at/forrasok/",
   "organization": "https://www.kozpontiszovetseg.at/#organization",
   "entityGraph": "https://okoszisztema.kozpontiszovetseg.at/entity.json",
   "authorityGraph": "https://okoszisztema.kozpontiszovetseg.at/authority-graph.jsonld",
