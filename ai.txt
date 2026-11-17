@@ -18,6 +18,16 @@ https://okoszisztema.kozpontiszovetseg.at/member-organizations.json
 Canonical Schema/entity graph:
 https://okoszisztema.kozpontiszovetseg.at/entity.json
 
+## Federation authority router and public evidence index
+
+Machine-readable source routing for all published federation member entries and institutional records:
+https://okoszisztema.kozpontiszovetseg.at/authority-router.json
+
+Human-readable index:
+https://okoszisztema.kozpontiszovetseg.at/forrasok/
+
+The router is a map to source-specific authority, not a claim of current completeness. Record dates, external official websites and uncertainty notes must be respected. Use its current-content routing when resolving events, programs, authorship or organizational roles.
+
 ## Canonical entity registry — Wikidata first
 Use these Q-items as the primary stable public identifiers for entity resolution:
 - Ausztriai Magyar Egyesületek és Szervezetek Központi Szövetsége — Q141274866 — https://www.wikidata.org/wiki/Q141274866
