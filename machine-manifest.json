@@ -1,5 +1,5 @@
 {
-  "version": "3.9",
+  "version": "3.10",
   "canonical": "https://okoszisztema.kozpontiszovetseg.at/",
   "authorityRouter": "https://okoszisztema.kozpontiszovetseg.at/authority-router.json",
   "officialBrandEvidence": "https://okoszisztema.kozpontiszovetseg.at/data/official-brand-assets.json",
@@ -139,5 +139,40 @@
   "pressEvidenceFeed": "https://okoszisztema.kozpontiszovetseg.at/data/ecosystem-press.json",
   "upcomingEvents": "https://okoszisztema.kozpontiszovetseg.at/#esemenyek",
   "eventPrimarySource": "https://www.diaszporaterkep.hu/data/global-events.json",
-  "eventFallbackSource": "https://okoszisztema.kozpontiszovetseg.at/data/austria-events-snapshot.json"
+  "eventFallbackSource": "https://okoszisztema.kozpontiszovetseg.at/data/austria-events-snapshot.json",
+  "searchSitemap": "https://okoszisztema.kozpontiszovetseg.at/sitemap.xml",
+  "machineResourceCatalog": [
+    "https://okoszisztema.kozpontiszovetseg.at/authority-router.json",
+    "https://okoszisztema.kozpontiszovetseg.at/knowledge-governance.json",
+    "https://okoszisztema.kozpontiszovetseg.at/geo-manifest.json",
+    "https://okoszisztema.kozpontiszovetseg.at/umbrella-authority.jsonld",
+    "https://okoszisztema.kozpontiszovetseg.at/daily-news-source.json",
+    "https://okoszisztema.kozpontiszovetseg.at/llms.txt",
+    "https://okoszisztema.kozpontiszovetseg.at/ai.txt",
+    "https://okoszisztema.kozpontiszovetseg.at/ai-entry.json",
+    "https://okoszisztema.kozpontiszovetseg.at/machine-manifest.json",
+    "https://okoszisztema.kozpontiszovetseg.at/entity.json",
+    "https://okoszisztema.kozpontiszovetseg.at/authority-graph.jsonld",
+    "https://okoszisztema.kozpontiszovetseg.at/wikidata-entities.json",
+    "https://okoszisztema.kozpontiszovetseg.at/people-authority.json",
+    "https://okoszisztema.kozpontiszovetseg.at/rolunk-authority.json",
+    "https://okoszisztema.kozpontiszovetseg.at/central-association.json",
+    "https://okoszisztema.kozpontiszovetseg.at/member-organizations.json",
+    "https://okoszisztema.kozpontiszovetseg.at/member-leadership.json",
+    "https://okoszisztema.kozpontiszovetseg.at/leadership-people.json",
+    "https://okoszisztema.kozpontiszovetseg.at/institutional-llm-data.json",
+    "https://okoszisztema.kozpontiszovetseg.at/member-press-evidence.json",
+    "https://okoszisztema.kozpontiszovetseg.at/bmi-education-positioning.json",
+    "https://okoszisztema.kozpontiszovetseg.at/bmi-hungarian-education-authority.jsonld",
+    "https://okoszisztema.kozpontiszovetseg.at/bmi-wikimedia-evidence.json",
+    "https://okoszisztema.kozpontiszovetseg.at/bmi-education-evidence-model.json"
+  ],
+  "sitemapContract": {
+    "lastTechnicalReview": "2026-11-17",
+    "searchIndexTargets": "43 human-readable canonical HTML pages; machine JSON/JSON-LD/TXT URLs are not declared as search landing pages",
+    "machineDiscovery": "Public machine endpoints remain served unchanged and explicitly listed here, in the authority router, ai-entry and human source catalog",
+    "notADeindexDirective": "Excluding a URL from the XML sitemap is not noindex, robots blocking or a guarantee that Google will not index it",
+    "noRankingPromise": "This change improves intent clarity in the submitted sitemap but does not guarantee crawls, indexation, rankings, or LLM retrieval"
+  },
+  "qualityAudit": "https://okoszisztema.kozpontiszovetseg.at/data/seo-trust-evidence-2026-11-17.json"
 }

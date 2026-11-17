@@ -1,0 +1,90 @@
+{
+  "version": "2026-11-17.1",
+  "dateChecked": "2026-11-17",
+  "scope": "federation-search-and-trust-technical-audit",
+  "sourceAttribution": {
+    "repository": "880rzz/okoszisztema",
+    "gscProperty": "https://okoszisztema.kozpontiszovetseg.at/",
+    "wixGscProperty": "https://www.kozpontiszovetseg.at/",
+    "wixSite": "https://www.kozpontiszovetseg.at/",
+    "googleSearchCentralSitemapPolicy": "https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap",
+    "googleOrganizationPolicy": "https://developers.google.com/search/docs/appearance/structured-data/organization",
+    "schemaAffiliation": "https://schema.org/affiliation",
+    "measurementMethod": "GSC Wizard live crawl audit, Google URL Inspection and authenticated Wix SEO Settings API; dates refer to measurement, not source-claim re-verification"
+  },
+  "searchSitemap": {
+    "before": {
+      "submittedUrls": 66,
+      "humanPages": 42,
+      "machineResources": 24
+    },
+    "after": {
+      "humanPages": 43,
+      "machineResourcesPublished": 24,
+      "machineResourcesInSearchSitemap": 0
+    },
+    "includedNewHumanPage": "https://okoszisztema.kozpontiszovetseg.at/bmi-community-trust.html",
+    "status": "prepared-in-branch, final deploy and GSC re-download must be checked separately"
+  },
+  "liveWixSeoCorrections": [
+    {
+      "url": "https://www.kozpontiszovetseg.at/",
+      "change": "meta description",
+      "beforeChars": 248,
+      "afterChars": 160,
+      "liveResponse": 200,
+      "observed": "verified"
+    },
+    {
+      "url": "https://www.kozpontiszovetseg.at/r%C3%B3lunk",
+      "change": "meta description and page title",
+      "descriptionBeforeChars": 190,
+      "descriptionAfterChars": 140,
+      "titleBeforeChars": 27,
+      "titleAfterChars": 44,
+      "liveResponse": 200,
+      "observed": "verified"
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "WIX-HEADING-ALT",
+      "url": "https://www.kozpontiszovetseg.at/tagszervezetek",
+      "observed": {
+        "h1Count": 9,
+        "imagesWithoutAlt": 28,
+        "imagesTotal": 93
+      },
+      "owner": "Wix Editor page content",
+      "severity": "accessibility-and-SEO",
+      "state": "pending-editor-remediation"
+    },
+    {
+      "id": "GOOGLE-INDEX",
+      "url": "https://okoszisztema.kozpontiszovetseg.at/",
+      "observed": "Crawled – currently not indexed with latest Google crawl from September 2026; several other URLs unknown to Google despite sitemap download",
+      "owner": "Google discovery and first-party site relevance",
+      "state": "measurement-underway"
+    },
+    {
+      "id": "GDPR-CONSENT",
+      "url": "https://www.kozpontiszovetseg.at/",
+      "owner": "Wix site owner and qualified Austrian legal reviewer",
+      "state": "browser-network-and-legal-audit-pending"
+    }
+  ],
+  "schemaWarningClassification": {
+    "affectedSite": "okoszisztema.kozpontiszovetseg.at",
+    "observation": "Crawler heuristic flags Organization.logo as required",
+    "verifiedCause": "Nested third-party Organization used as Person.affiliation has no first-party verified logo, while first-party federation and VIPACH Organization nodes do",
+    "decision": "Do not fabricate third-party logo or remove true affiliation solely to silence a nonrequired-property heuristic",
+    "policy": "Google Organization structured data has no required properties; logo is recommended when applicable"
+  },
+  "limitations": {
+    "googleIndexingGuaranteed": false,
+    "legalComplianceCertified": false,
+    "searchRankingsGuaranteed": false,
+    "completeMobileDesktopQA": false,
+    "thirdPartyLogoVerified": false
+  }
+}

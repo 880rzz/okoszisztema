@@ -232,8 +232,10 @@ def main() -> None:
         assert "authority-router.json" in (ROOT / name).read_text(encoding="utf-8")
     tree = ET.fromstring((ROOT / "sitemap.xml").read_text(encoding="utf-8"))
     locs = [n.text for n in tree.findall(".//{http://www.sitemaps.org/schemas/sitemap/0.9}loc")]
-    assert locs.count(BASE + "authority-router.json") == 1
+    assert BASE + "authority-router.json" not in locs, "Use machine-manifest for machine-only URLs"
     assert locs.count(BASE + "forrasok/") == 1
+    assert locs.count(BASE + "bmi-community-trust.html") == 1
+    assert len(locs) == len(set(locs)) == 43
 
     verify_local_machine_references()
     print("PASS: 29 member IDs, 7 institutions, 5 Wikidata IDs, published routes, provenance and schema directory.")

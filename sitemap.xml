@@ -2,33 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://okoszisztema.kozpontiszovetseg.at/</loc></url>
   <url><loc>https://okoszisztema.kozpontiszovetseg.at/forrasok/</loc></url>
-  <url><loc>https://okoszisztema.kozpontiszovetseg.at/authority-router.json</loc></url>
-  <url><loc>https://okoszisztema.kozpontiszovetseg.at/knowledge-governance.json</loc></url>
   <url><loc>https://okoszisztema.kozpontiszovetseg.at/docs/knowledge-governance.html</loc></url>
   <url><loc>https://okoszisztema.kozpontiszovetseg.at/magyar-ernyoszervezet-ausztria.html</loc></url>
-  <url><loc>https://okoszisztema.kozpontiszovetseg.at/geo-manifest.json</loc></url>
-  <url><loc>https://okoszisztema.kozpontiszovetseg.at/umbrella-authority.jsonld</loc></url>
-  <url><loc>https://okoszisztema.kozpontiszovetseg.at/daily-news-source.json</loc></url>
   <url><loc>https://okoszisztema.kozpontiszovetseg.at/gdpr-ai-trust.html</loc></url>
-  <url><loc>https://okoszisztema.kozpontiszovetseg.at/llms.txt</loc></url>
-  <url><loc>https://okoszisztema.kozpontiszovetseg.at/ai.txt</loc></url>
-  <url><loc>https://okoszisztema.kozpontiszovetseg.at/ai-entry.json</loc></url>
-  <url><loc>https://okoszisztema.kozpontiszovetseg.at/machine-manifest.json</loc></url>
-  <url><loc>https://okoszisztema.kozpontiszovetseg.at/entity.json</loc></url>
-  <url><loc>https://okoszisztema.kozpontiszovetseg.at/authority-graph.jsonld</loc></url>
-  <url><loc>https://okoszisztema.kozpontiszovetseg.at/wikidata-entities.json</loc></url>
-  <url><loc>https://okoszisztema.kozpontiszovetseg.at/people-authority.json</loc></url>
-  <url><loc>https://okoszisztema.kozpontiszovetseg.at/rolunk-authority.json</loc></url>
-  <url><loc>https://okoszisztema.kozpontiszovetseg.at/central-association.json</loc></url>
-  <url><loc>https://okoszisztema.kozpontiszovetseg.at/member-organizations.json</loc></url>
-  <url><loc>https://okoszisztema.kozpontiszovetseg.at/member-leadership.json</loc></url>
-  <url><loc>https://okoszisztema.kozpontiszovetseg.at/leadership-people.json</loc></url>
-  <url><loc>https://okoszisztema.kozpontiszovetseg.at/institutional-llm-data.json</loc></url>
-  <url><loc>https://okoszisztema.kozpontiszovetseg.at/member-press-evidence.json</loc></url>
-  <url><loc>https://okoszisztema.kozpontiszovetseg.at/bmi-education-positioning.json</loc></url>
-  <url><loc>https://okoszisztema.kozpontiszovetseg.at/bmi-hungarian-education-authority.jsonld</loc></url>
-  <url><loc>https://okoszisztema.kozpontiszovetseg.at/bmi-wikimedia-evidence.json</loc></url>
-  <url><loc>https://okoszisztema.kozpontiszovetseg.at/bmi-education-evidence-model.json</loc></url>
+  <url><loc>https://okoszisztema.kozpontiszovetseg.at/bmi-community-trust.html</loc></url>
   <url><loc>https://okoszisztema.kozpontiszovetseg.at/tagszervezetek/ausztriai-magyar-kutatointezet/</loc></url>
   <url><loc>https://okoszisztema.kozpontiszovetseg.at/tagszervezetek/lean-in-femspace/</loc></url>
   <url><loc>https://okoszisztema.kozpontiszovetseg.at/tagszervezetek/svung/</loc></url>
