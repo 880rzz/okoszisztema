@@ -63,6 +63,27 @@ def main() -> None:
     assert any(p.get("@id") == PERSON for p in founders)
     assert any(p.get("name") == "Kovács Attila" for p in founders)
 
+    # Cross-domain ORF articles are evidence citations, not local NewsArticle pages.
+    verified_orf = {
+        "https://volksgruppen.orf.at/magyarok/stories/3356526/": ("Központi szövetség éves közgyűlése", "2026-06-02"),
+        "https://volksgruppen.orf.at/magyarok/stories/3359672/": ("Nyár Ünnep és évzáró a BMI-ben", "2026-06-23"),
+        "https://volksgruppen.orf.at/magyarok/stories/3337426/": ("Deák Ernő emlékei 1956 decemberéről", "2026-01-12"),
+        "https://volksgruppen.orf.at/magyarok/stories/3340741/": ("Deák Ernő a WIR magazinban", "2026-02-05"),
+    }
+    observed_orf = {}
+    for node in authority_nodes:
+        refs = node.get("subjectOf", [])
+        if not isinstance(refs, list):
+            refs = [refs]
+        for ref in refs:
+            if not isinstance(ref, dict) or ref.get("url") not in verified_orf:
+                continue
+            assert ref.get("@type") == "CreativeWork", "Do not claim to host an ORF NewsArticle"
+            assert "image" not in ref and "author" not in ref, "No unverified ORF metadata"
+            assert ref["url"] not in observed_orf, "Duplicate ORF citation"
+            observed_orf[ref["url"]] = (ref.get("name"), ref.get("datePublished"))
+    assert observed_orf == verified_orf, "Independent source titles/dates must stay verified"
+
     entity = json.loads((ROOT / "entity.json").read_text(encoding="utf-8"))
     entity_magazine = exactly_one(nodes(entity), MAGAZINE)
     registry_founders = entity_magazine.get("founder", [])
