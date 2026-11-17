@@ -18,6 +18,12 @@ Ellenőrzés helyben, módosítás nélkül: `python3 scripts/sync_authority_sch
 
 A szövetségi entitás `Organization.logo` mezője a **Központi Szövetség saját Wix Business Profile** logójára mutat. A kép médiaszolgáltatói URL-jét, azonosítóját és ellenőrzött 100×100-as natív méretét a [`data/official-brand-assets.json`](data/official-brand-assets.json) rögzíti. A kép más intézmények logójára nem használható; a megállapítás nem jelent szerzői jogi felhasználási engedélyt vagy Google rich-result garanciát.
 
+## Kereső-sitemap és gépi tudásforrások szétválasztása (2026-11-17)
+
+A `sitemap.xml` kizárólag a keresőkben megjelenésre szánt **43, önkanonikus HTML-céloldalt** tartalmazza: 29 tagszervezeti, 7 intézményi/projektprofil és 7 alap-/bizalmi/archív oldal. Az eredetileg felsorolt 24 JSON/JSON-LD/TXT forrás **nem lett törölve**: a `machine-manifest.json.machineResourceCatalog` teljes listájában, valamint a `llms.txt`, `ai-entry.json` és `authority-router.json` kapcsolataiban továbbra is feloldható.
+
+Ez a változás nem `noindex`, nem robots tiltás, és nem Google-indexelési garancia. A keresőmotoros indexelés és a jogosultsági / GDPR megfelelés külön mérés és jóváhagyás. Az ellenőrzés forrásokkal, nyitott pontokkal: [2026-11-17 SEO/AI Trust evidence](data/seo-trust-evidence-2026-11-17.json). A Google-indexelési számokat tilos a kódból vagy a sitemap elfogadásából automatikusan „indexed” állapotra átírni.
+
 ## Központi forrásfeloldó: a rendszer gépi belépési pontja
 
 - `authority-router.json`: forrásprioritás, 29 tagszervezeti bejegyzés, 7 intézményi/projektprofil, 6 kapcsolódó digitális szolgáltatás, entitásazonosítók és bizonytalansági szabályok.

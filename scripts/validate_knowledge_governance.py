@@ -136,10 +136,23 @@ def main() -> None:
 
     tree = ET.parse(ROOT / "sitemap.xml").getroot()
     locs = [n.text for n in tree.findall(".//{http://www.sitemaps.org/schemas/sitemap/0.9}loc")]
-    assert locs.count(policy["canonical"]) == 1
+    assert len(locs) == len(set(locs)) == 43, "Only 43 human-readable HTML canonical pages belong in Google sitemap"
     assert locs.count(policy["humanDocumentation"]) == 1
-    for url in (policy["canonical"], policy["humanDocumentation"]):
-        assert local_file(url).is_file()
+    assert locs.count(BASE + "bmi-community-trust.html") == 1
+    assert all(url.startswith(BASE) and (url.endswith("/") or url.endswith(".html")) for url in locs)
+    manifest = load("machine-manifest.json")
+    machine_urls = manifest["machineResourceCatalog"]
+    assert len(machine_urls) == len(set(machine_urls)) == 24
+    assert manifest["searchSitemap"] == BASE + "sitemap.xml"
+    assert policy["canonical"] in machine_urls and router["canonical"] in machine_urls
+    assert not set(machine_urls).intersection(locs), "Machine endpoints must not inflate search landing-page list"
+    for url in (policy["canonical"], policy["humanDocumentation"], BASE + "bmi-community-trust.html", *machine_urls):
+        assert local_file(url).is_file(), ("Public resource missing", url)
+    quality = load("data/seo-trust-evidence-2026-11-17.json")
+    assert quality["scope"] == "federation-search-and-trust-technical-audit"
+    assert quality["searchSitemap"]["after"]["humanPages"] == len(locs)
+    assert quality["limitations"]["googleIndexingGuaranteed"] is False
+    assert quality["limitations"]["legalComplianceCertified"] is False
 
     # The policy date controls *policy* review, not older source snapshots.
     assert router["factsAndFreshness"]["officialMemberDirectoryLastVerified"] < policy["lastPolicyReview"]
