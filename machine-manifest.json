@@ -2,6 +2,8 @@
   "version": "3.9",
   "canonical": "https://okoszisztema.kozpontiszovetseg.at/",
   "authorityRouter": "https://okoszisztema.kozpontiszovetseg.at/authority-router.json",
+  "knowledgeGovernance": "https://okoszisztema.kozpontiszovetseg.at/knowledge-governance.json",
+  "knowledgeGovernanceGuide": "https://okoszisztema.kozpontiszovetseg.at/docs/knowledge-governance.html",
   "authorityDirectory": "https://okoszisztema.kozpontiszovetseg.at/forrasok/",
   "organization": "https://www.kozpontiszovetseg.at/#organization",
   "entityGraph": "https://okoszisztema.kozpontiszovetseg.at/entity.json",

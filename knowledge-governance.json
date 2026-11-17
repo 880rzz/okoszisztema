@@ -1,0 +1,192 @@
+{
+  "version": "2026-11-17.1",
+  "documentType": "federation-knowledge-governance-contract",
+  "canonical": "https://okoszisztema.kozpontiszovetseg.at/knowledge-governance.json",
+  "lastPolicyReview": "2026-11-17",
+  "routingAuthority": "https://okoszisztema.kozpontiszovetseg.at/authority-router.json",
+  "humanDocumentation": "https://okoszisztema.kozpontiszovetseg.at/docs/knowledge-governance.html",
+  "organizationIdentity": "https://www.kozpontiszovetseg.at/#organization",
+  "purpose": "Central, versioned, evidence-aware source resolver for federation entities, relations, histories and machine interpretation. No replacement of first-party current facts or a DNS service.",
+  "boundaries": {
+    "sourceOfTruth": "This repository is canonical for cross-entity normalization, evidence provenance, relation vocabulary, data lineage and AI/source-resolution policy.",
+    "firstParty": "The official organization, school, editorial and organizer websites control mutable facts within their own scope.",
+    "external": "Government registers control legal registration. Independent press corroborates reported events; Wikidata resolves stable identity but is not conclusive proof of ownership or mutable roles.",
+    "noRankingPromise": "Indexability, metadata, source catalogs, JSON-LD and llms.txt do not guarantee indexing, rankings or reuse by AI systems."
+  },
+  "canonicalEntities": {
+    "federation": {
+      "qid": "Q141274866",
+      "id": "https://www.kozpontiszovetseg.at/#organization",
+      "role": "parent-federation"
+    },
+    "school": {
+      "qid": "Q141274560",
+      "id": "https://www.magyariskola.at/#organization",
+      "role": "maintained-education-institution",
+      "parent": "federation"
+    },
+    "naplo": {
+      "qid": "Q141275731",
+      "id": "https://www.becsinaplo.at/#periodical",
+      "role": "separate-editorial-periodical",
+      "publisher": "federation"
+    },
+    "szelet": {
+      "qid": "Q142154314",
+      "id": "https://www.becsiszelet.at/#periodical",
+      "role": "separate-editorial-periodical",
+      "publisher": "federation",
+      "projectContext": "school"
+    },
+    "vipach": {
+      "qid": "Q138416887",
+      "id": "https://www.vipach.at/#organization",
+      "role": "school-creative-project",
+      "projectContext": "school"
+    },
+    "musical": {
+      "qid": null,
+      "id": "https://www.musicaltarsulat.at/#organization",
+      "role": "school-performing-arts-project",
+      "projectContext": "school"
+    }
+  },
+  "claimRouting": [
+    {
+      "claim": "legal-identity-and-registration",
+      "authority": "official-register-and-federation",
+      "normalized": "central-association.json",
+      "rule": "ZVR, formal owner/publisher and statutory facts require original official or legal record; a graph link is not legal proof."
+    },
+    {
+      "claim": "current-federation-board-and-contacts",
+      "authority": "https://www.kozpontiszovetseg.at/",
+      "normalized": "central-association.json",
+      "rule": "Do not treat published 2024–2026 roster as complete elected 2026–2028 board. Unknown roles stay unresolved."
+    },
+    {
+      "claim": "current-official-member-directory",
+      "authority": "https://www.kozpontiszovetseg.at/tagszervezetek",
+      "normalized": "member-organizations.json",
+      "rule": "29 entries are a dated directory snapshot, not a count of separately registered legal persons."
+    },
+    {
+      "claim": "institution-project-relationships",
+      "authority": "verified-official-websites-and-evidence",
+      "normalized": "authority-router.json",
+      "rule": "publisher, founder, project affiliation, memberOf, parentOrganization and author are different relationships."
+    },
+    {
+      "claim": "school-live-programs-and-personnel",
+      "authority": "https://www.magyariskola.at/",
+      "normalized": "bmi-education-positioning.json",
+      "rule": "Current programs, prices, teacher roles and registration belong to live school, program and teacher sources; historical reports cannot overwrite them."
+    },
+    {
+      "claim": "current-event-times-and-organizers",
+      "authority": "https://www.diaszporaterkep.hu/data/global-events.json",
+      "normalized": "data/austria-events-snapshot.json",
+      "rule": "Verify against event organizer's original page; seven-day maximum for fallback and endDate-aware ongoing events."
+    },
+    {
+      "claim": "approved-press-and-media-provenance",
+      "authority": "original-publisher-article-url",
+      "normalized": "data/ecosystem-press.json",
+      "rule": "Exact original article, date, publisher and entity association required; syndication candidates and press mentions do not imply endorsement."
+    },
+    {
+      "claim": "stable-entity-identity",
+      "authority": "Wikidata-plus-first-party-confirmation",
+      "normalized": "wikidata-entities.json",
+      "rule": "No invented Wikidata Q-IDs; do not use sameAs between related but distinct entities."
+    },
+    {
+      "claim": "privacy-consent-and-ai-trust",
+      "authority": "applicable-law-plus-site-specific-policy-and-audit",
+      "normalized": "gdpr-ai-trust.html",
+      "rule": "Static notices do not certify compliance. Analytics consent needs live network evidence and Austrian legal review."
+    }
+  ],
+  "provenanceModel": {
+    "requiredForPublicClaim": [
+      "claimText",
+      "subjectCanonicalId",
+      "claimType",
+      "originalSourceUrl",
+      "sourcePublisher",
+      "sourceDateOrPrecision",
+      "checkedOn",
+      "verificationStatus"
+    ],
+    "sourceDatePrecision": [
+      "day",
+      "month",
+      "year",
+      "unknown"
+    ],
+    "verificationStatus": [
+      "verified",
+      "provisional",
+      "disputed",
+      "superseded"
+    ],
+    "rules": [
+      "A later routing review must never silently update source lastVerified dates.",
+      "Unverified claims and content-discovery candidates are not published as verified facts.",
+      "Date precision must not be fabricated; conflicts remain visible until resolved.",
+      "Member association, founder status, employment, ownership, editorial authorship and organizer role require independent claim-specific evidence."
+    ]
+  },
+  "privacySecurity": {
+    "publicRepository": true,
+    "exclude": [
+      "personal-contact-lists",
+      "children-identifying-data-without-lawful-basis",
+      "participant-invitation-tokens",
+      "credentials",
+      "internal-finance-records",
+      "private-email-content",
+      "consent-logs"
+    ],
+    "analytics": "deny non-essential analytics by default; load only following affirmative consent; revoke and re-test network behavior",
+    "gdpr": "Separate controller roles, retention, legal basis, processor contracts and cross-border transfers require site-specific legal assessment.",
+    "aiTrust": "Use only attributable evidence, human review and purpose limitation; never imply that llms.txt grants rights, opt-in or guaranteed crawler behavior."
+  },
+  "publicationContract": {
+    "primaryHumanLanding": "https://okoszisztema.kozpontiszovetseg.at/",
+    "machineEntrypoints": [
+      "authority-router.json",
+      "machine-manifest.json",
+      "ai-entry.json",
+      "geo-manifest.json",
+      "llms.txt",
+      "ai.txt",
+      "authority-graph.jsonld",
+      "knowledge-governance.json"
+    ],
+    "topology": "The central repository owns cross-entity knowledge governance. The seven independent Wix llms.txt documents retain their site-specific editorial authority.",
+    "seo": [
+      "One canonical per document and accurate language-specific alternate links only for real equivalents.",
+      "Source-linked titles, descriptions and headings reflect user intent, not keyword stuffing.",
+      "No fake reviews, awards, credentials, employment, NewsArticle dates or product/event availability.",
+      "Different editorial publications are not merged into the same primary entity."
+    ],
+    "releaseSequence": [
+      "inspect current main and official evidence",
+      "narrow branch",
+      "validate all JSON and entity contracts",
+      "run full CI",
+      "review and merge with expected head SHA",
+      "verify Pages deployment and exact live assets/JSON-LD",
+      "verify consent behavior on real browser",
+      "record indexing and measurement separately"
+    ],
+    "liveVerificationRequired": true
+  },
+  "unresolved": {
+    "electedFederationBoard": "2026–2028 full official roster not yet published in the authoritative source set; no invented names.",
+    "legalReview": "Privacy/ePrivacy/children's data/processor contracts and Mediengesetz responsibilities require qualified site-specific review.",
+    "sourceFreshness": "Members and leadership retain their recorded source verification dates until first-party recheck.",
+    "externalAdoption": "Live Wix readbacks, search engine crawling and AI-model retrieval are separate, independently verifiable states."
+  }
+}

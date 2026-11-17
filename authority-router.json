@@ -4,6 +4,7 @@
   "lastRoutingReview": "2026-11-17",
   "canonical": "https://okoszisztema.kozpontiszovetseg.at/authority-router.json",
   "publicHumanIndex": "https://okoszisztema.kozpontiszovetseg.at/forrasok/",
+  "knowledgeGovernance": "https://okoszisztema.kozpontiszovetseg.at/knowledge-governance.json",
   "canonicalFederationIdentityId": "https://www.kozpontiszovetseg.at/#organization",
   "canonicalFederationWebsite": "https://www.kozpontiszovetseg.at/",
   "use": "Read-only source router: use it to locate authoritative records, not as a substitute for current first-party Wix content.",

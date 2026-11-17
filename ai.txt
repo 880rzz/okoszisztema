@@ -1,5 +1,10 @@
 # AI / machine-use notes — Központi Szövetség
 
+Federation knowledge governance and evidence thresholds:
+https://okoszisztema.kozpontiszovetseg.at/knowledge-governance.json
+Human explanation: https://okoszisztema.kozpontiszovetseg.at/docs/knowledge-governance.html
+These are routing and validation rules, not a GDPR compliance certificate or permission to reuse copyrighted work.
+
 Canonical public overview:
 https://okoszisztema.kozpontiszovetseg.at/
 
