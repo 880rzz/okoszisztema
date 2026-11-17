@@ -57,7 +57,13 @@ def main() -> None:
     assert len(members) == directory["publishedEntryCount"] == 29
     assert member_ids == set(source_members) == set(map_ids)
     assert member_ids == {x["memberId"] for x in leadership["members"]}
-    graph_member_ids = {n["@id"].rsplit("#member-", 1)[1] for n in graph if "#member-" in n.get("@id", "")}
+    graph_member_ids = {
+        n["@id"].rsplit("#member-", 1)[1]
+        for n in graph
+        if n.get("@type") == "Organization"
+        and n.get("memberOf", {}).get("@id") == FED
+        and n.get("@id", "").startswith(BASE + "#member-")
+    }
     assert member_ids == graph_member_ids, "Member directory and Schema graph diverged"
     for member in members:
         original = source_members[member["id"]]
