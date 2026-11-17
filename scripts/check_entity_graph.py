@@ -75,6 +75,17 @@ def main() -> None:
     assert OLD_PROFILE not in json.dumps(source, ensure_ascii=False)
     workflow = (ROOT / ".github/workflows/fix-central-structure-20260903.yml").read_text(encoding="utf-8")
     assert FORMER_BMI not in workflow, "Generator could reintroduce duplicate school"
+    # Do not allow historical one-off automation to delete independent newsroom sections.
+    assert 'id="media-okoszisztema"' in content
+    assert 'data-news-grid' in content and '<!--member-news-static:start-->' in content
+    assert 'href="forrasok/"' in content
+    historical = (ROOT / ".github/workflows/fix-central-structure-20260903.yml").read_text(encoding="utf-8")
+    assert "git push" not in historical and "contents: write" not in historical
+    assert "workflow_dispatch:" in historical
+    # Historical source profiles must not be downgraded by regeneration.
+    central = json.loads((ROOT / "central-association.json").read_text(encoding="utf-8"))
+    assert central["organization"]["publishing"]["becsiSzelet"]["founders"] == ["Bánhalmi Norbert", "Kovács Attila"]
+    assert central["organization"]["membershipDirectory"]["publishedEntryCount"] == 29
     print("Entity graph QA passed: canonical BMI, 2 founders, publisher, current Person URL.")
 
 
