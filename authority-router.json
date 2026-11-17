@@ -616,5 +616,82 @@
       "status": "requires-domain-and-live-verification",
       "source": "https://okoszisztema.kozpontiszovetseg.at/machine-manifest.json"
     }
-  ]
+  ],
+  "wixKnowledgeMirrors": {
+    "reviewedOn": "2026-11-17",
+    "evidence": "The site's own, publicly enabled Wix llms.txt. Values were saved and separately reread through the Wix first-party API; this review does not certify public HTTP fetching.",
+    "model": "The federation router is the shared source directory; every Wix site has its own editorial identity, live content and machine-readable file.",
+    "sites": [
+      {
+        "name": "Központi Szövetség",
+        "recordId": "kozponti-szovetseg",
+        "recordKind": "institution",
+        "officialWebsite": "https://www.kozpontiszovetseg.at/",
+        "canonicalEntityId": "https://www.kozpontiszovetseg.at/#organization",
+        "llmsTxt": "https://www.kozpontiszovetseg.at/llms.txt",
+        "sourceAuthority": "Wix Llms Txt API; readback verified 2026-11-17",
+        "identityRole": "federation-operator"
+      },
+      {
+        "name": "Bécsi Szelet Magazin",
+        "recordId": "becsi-szelet",
+        "recordKind": "institution",
+        "officialWebsite": "https://www.becsiszelet.at/",
+        "canonicalEntityId": "https://www.becsiszelet.at/#periodical",
+        "llmsTxt": "https://www.becsiszelet.at/llms.txt",
+        "sourceAuthority": "Wix Llms Txt API; readback verified 2026-11-17",
+        "identityRole": "federation-published-school-project-magazine"
+      },
+      {
+        "name": "Bécsi Magyar Iskola",
+        "recordId": "becsi-magyar-iskola",
+        "recordKind": "institution",
+        "officialWebsite": "https://www.magyariskola.at/",
+        "canonicalEntityId": "https://www.magyariskola.at/#organization",
+        "llmsTxt": "https://www.magyariskola.at/llms.txt",
+        "sourceAuthority": "Wix Llms Txt API; readback verified 2026-11-17",
+        "identityRole": "maintained-educational-institution"
+      },
+      {
+        "name": "VIPACH",
+        "recordId": "vipach",
+        "recordKind": "institution",
+        "officialWebsite": "https://www.vipach.at/",
+        "canonicalEntityId": "https://www.vipach.at/#organization",
+        "llmsTxt": "https://www.vipach.at/llms.txt",
+        "sourceAuthority": "Wix Llms Txt API; readback verified 2026-11-17",
+        "identityRole": "school-creative-project"
+      },
+      {
+        "name": "Bécsi Napló",
+        "recordId": "becsi-naplo",
+        "recordKind": "institution",
+        "officialWebsite": "https://www.becsinaplo.at/",
+        "canonicalEntityId": "https://www.becsinaplo.at/#periodical",
+        "llmsTxt": "https://www.becsinaplo.at/llms.txt",
+        "sourceAuthority": "Wix Llms Txt API; readback verified 2026-11-17",
+        "identityRole": "federation-owned-publication"
+      },
+      {
+        "name": "Bécsi Magyar Musical Társulat",
+        "recordId": "mamut-musical",
+        "recordKind": "institution",
+        "officialWebsite": "https://www.musicaltarsulat.at/",
+        "canonicalEntityId": "https://www.musicaltarsulat.at/#organization",
+        "llmsTxt": "https://www.musicaltarsulat.at/llms.txt",
+        "sourceAuthority": "Wix Llms Txt API; readback verified 2026-11-17",
+        "identityRole": "school-associated-performing-arts-project"
+      },
+      {
+        "name": "Napraforgók",
+        "recordId": "napraforgok",
+        "recordKind": "member",
+        "officialWebsite": "https://www.napraforgok.at/",
+        "canonicalEntityId": "https://www.napraforgok.at/#organization",
+        "llmsTxt": "https://www.napraforgok.at/llms.txt",
+        "sourceAuthority": "Wix Llms Txt API; readback verified 2026-11-17",
+        "identityRole": "independent federation member, not subsidiary"
+      }
+    ]
+  }
 }
