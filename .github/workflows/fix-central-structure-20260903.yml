@@ -58,7 +58,7 @@ jobs:
                       failures.append(f"{path}: invalid JSON-LD: {exc}")
               else:
                   blocks = re.findall(
-                      r'<script[^>]*type=["\']application/ld\\+json["\'][^>]*>(.*?)</script>',
+                      r'<script[^>]*type=["\']application/ld\+json["\'][^>]*>(.*?)</script>',
                       data,
                       re.I | re.S,
                   )
