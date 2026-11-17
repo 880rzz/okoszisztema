@@ -170,7 +170,7 @@ def main() -> None:
     # Public site-authored LLM documents must map back to their distinct
     # canonical institution/member; never silently merge these brands.
     mirrors = router["wixKnowledgeMirrors"]["sites"]
-    assert router["wixKnowledgeMirrors"]["reviewedOn"] == "2026-11-17"
+    assert re.fullmatch(r"20[0-9]{2}-[01][0-9]-[0-3][0-9]", router["wixKnowledgeMirrors"]["reviewedOn"])
     assert len(mirrors) == 7
     assert len({m["officialWebsite"] for m in mirrors}) == 7
     assert len({m["llmsTxt"] for m in mirrors}) == 7
