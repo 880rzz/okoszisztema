@@ -7,6 +7,17 @@ Canonical member network: https://okoszisztema.kozpontiszovetseg.at/member-organ
 Canonical relationship graph: https://okoszisztema.kozpontiszovetseg.at/entity.json
 Canonical Wikidata/Wikipedia registry: https://okoszisztema.kozpontiszovetseg.at/wikidata-entities.json
 
+## Primary source-routing and entity discovery (updated 2026-11-17)
+
+Machine-readable federation-wide authority router: https://okoszisztema.kozpontiszovetseg.at/authority-router.json
+Human-readable directory of all 29 published member entries and 7 institution/project records: https://okoszisztema.kozpontiszovetseg.at/forrasok/
+
+Use this router to select the authoritative source **for each claim**; it is not a replacement for actual official publications. Distinguish stable Wikidata identity, current federation contact/leadership, live BMI program data, member-research records and independent press evidence. Its directory references preserve each underlying source's original lastVerified timestamp. Do not assume historical data has been reverified merely because the router was updated.
+
+Entity relationships: the federation Q141274866 publishes Bécsi Napló Q141275731 and Bécsi Szelet Q142154314 as distinct titles; Bécsi Szelet is also in the BMI Q141274560 project context. VIPACH Q138416887 and the Musical Társulat are separate projects/brands. ÖIUS and Napraforgók are members of the official directory, not federation-owned editorial brands.
+
+DNS boundary: this domain serves machine-readable SEO/GEO/LLM/E-E-A-T source routing. It **does not** act as a DNS nameserver and cannot determine Google rankings or AI answers; canonical DNS and domain verification belong to their respective providers.
+
 ## What this organization is
 The Központi Szövetség / Zentralverband Ungarischer Vereine und Organisationen in Österreich is an Austrian-Hungarian umbrella organization.
 

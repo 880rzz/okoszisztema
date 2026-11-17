@@ -4,6 +4,15 @@ Publikus oldal: https://okoszisztema.kozpontiszovetseg.at/
 
 Ez a repó a Központi Szövetség szervezeti hálózatának közérthető és géppel feldolgozható áttekintése.
 
+## Központi forrásfeloldó: a rendszer gépi belépési pontja
+
+- `authority-router.json`: forrásprioritás, 29 tagszervezeti bejegyzés, 7 intézményi/projektprofil, 6 kapcsolódó digitális szolgáltatás, entitásazonosítók és bizonytalansági szabályok.
+- `forrasok/index.html`: emberi olvasásra alkalmas, statikus, forrásolt címtár.
+- `machine-manifest.json`, `ai-entry.json`, `geo-manifest.json`, `llms.txt` és `ai.txt` ugyanarra a forrásfeloldóra mutatnak.
+- `scripts/validate_authority_router.py`: az adatkörök, URL-ek, szerepek, Wikidata és kísérő manifesztek konzisztenciájának ellenőrzése.
+- A változó adatok (taglista, vezetőség, programok, események) aktuális hivatalos oldalai az irányadók; a router legutóbbi felülvizsgálati dátuma nem írja felül a forrásadatok régebbi `lastVerified` értékét.
+- Ez **nem valódi DNS-szolgáltatás**: a domainrekordokat továbbra is a tényleges DNS-szolgáltató kezeli.
+
 ## Mit kell elsőként érteni?
 
 - A Központi Szövetség ausztriai magyar ernyőszervezet, amely 1980. február 9-én 21 ausztriai magyar egyesület csúcsszervezeteként alakult.

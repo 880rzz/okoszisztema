@@ -1,6 +1,8 @@
 {
   "version": "3.3",
   "canonical": "https://okoszisztema.kozpontiszovetseg.at/",
+  "authority_router": "https://okoszisztema.kozpontiszovetseg.at/authority-router.json",
+  "authority_directory": "https://okoszisztema.kozpontiszovetseg.at/forrasok/",
   "name": "Központi Szövetség – online ökoszisztéma",
   "organization": "https://www.kozpontiszovetseg.at/#organization",
   "entity": "https://okoszisztema.kozpontiszovetseg.at/entity.json",

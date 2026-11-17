@@ -75,6 +75,9 @@
           "@id": "https://okoszisztema.kozpontiszovetseg.at/#member-alsoori-magyar-kultur-es-tancegyesulet"
         },
         {
+          "@id": "https://okoszisztema.kozpontiszovetseg.at/#member-irottko-sportegyesulet"
+        },
+        {
           "@id": "https://okoszisztema.kozpontiszovetseg.at/#member-kozep-burgenlandi-magyar-kulturegyesulet"
         },
         {
@@ -633,6 +636,25 @@
         "@type": "PropertyValue",
         "propertyID": "ZVR-Zahl",
         "value": "1847607707"
+      },
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Burgenland"
+      },
+      "memberOf": {
+        "@id": "https://www.kozpontiszovetseg.at/#organization"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://okoszisztema.kozpontiszovetseg.at/#member-irottko-sportegyesulet",
+      "name": "Írottkő Sportegyesület",
+      "alternateName": "Leichtathletikclub Geschriebenstein",
+      "url": "https://irottkofutas.hu/",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "ZVR-Zahl",
+        "value": "1807309556"
       },
       "areaServed": {
         "@type": "AdministrativeArea",

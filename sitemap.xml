@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://okoszisztema.kozpontiszovetseg.at/</loc></url>
+  <url><loc>https://okoszisztema.kozpontiszovetseg.at/forrasok/</loc></url>
+  <url><loc>https://okoszisztema.kozpontiszovetseg.at/authority-router.json</loc></url>
   <url><loc>https://okoszisztema.kozpontiszovetseg.at/magyar-ernyoszervezet-ausztria.html</loc></url>
   <url><loc>https://okoszisztema.kozpontiszovetseg.at/geo-manifest.json</loc></url>
   <url><loc>https://okoszisztema.kozpontiszovetseg.at/umbrella-authority.jsonld</loc></url>
