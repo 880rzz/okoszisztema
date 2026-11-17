@@ -85,6 +85,21 @@ def main() -> None:
     assert observed_orf == verified_orf, "Independent source titles/dates must stay verified"
 
     entity = json.loads((ROOT / "entity.json").read_text(encoding="utf-8"))
+    # Only the federation can use the first-party Wix business-profile logo.
+    brand = json.loads((ROOT / "data/official-brand-assets.json").read_text(encoding="utf-8"))
+    assert brand["organizationId"] == FEDERATION and brand["organizationWikidata"] == "Q141274866"
+    image = brand["logo"]
+    assert image["private"] is False and image["state"] == "OK"
+    assert image["intrinsicWidth"] == 100 and image["intrinsicHeight"] == 100
+    assert image["url"].startswith("https://static.wixstatic.com/media/")
+    assert exactly_one(nodes(blocks[0]), FEDERATION)["logo"] == image["url"]
+    assert exactly_one(authority_nodes, FEDERATION)["logo"] == image["url"]
+    assert exactly_one(nodes(entity), FEDERATION)["logo"] == image["url"]
+    for b in blocks:
+        for record in nodes(b):
+            if record.get("@id") != FEDERATION:
+                assert record.get("logo") != image["url"], "Federation logo assigned to unrelated entity"
+
     entity_magazine = exactly_one(nodes(entity), MAGAZINE)
     registry_founders = entity_magazine.get("founder", [])
     assert any(f.get("name") == "Kovács Attila" for f in registry_founders)
