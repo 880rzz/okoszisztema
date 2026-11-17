@@ -100,6 +100,25 @@ def main() -> None:
             if record.get("@id") != FEDERATION:
                 assert record.get("logo") != image["url"], "Federation logo assigned to unrelated entity"
 
+    # The school-linked brands use their own first-party Wix media, never the federation logo.
+    related_logos = brand.get("relatedEntityLogos", [])
+    assert len(related_logos) == 2
+    by_org = {v["organizationId"]: v for v in related_logos}
+    assert set(by_org) == set(PARTNERS)
+    for identity, item in by_org.items():
+        media = item["image"]
+        assert media["private"] is False and media["state"] == "OK"
+        assert media["intrinsicWidth"] == media["intrinsicHeight"] == 1512
+        assert media["url"].startswith("https://static.wixstatic.com/media/")
+        assert media["url"] != image["url"]
+        assert exactly_one(nodes(blocks[0]), identity)["logo"] == media["url"]
+    assert by_org[PARTNERS[0]]["image"]["url"] != by_org[PARTNERS[1]]["image"]["url"]
+    assert exactly_one(authority_nodes, PARTNERS[0])["logo"] == by_org[PARTNERS[0]]["image"]["url"]
+    for b in blocks:
+        for n in nodes(b):
+            if n.get("@id") in by_org:
+                assert n.get("logo") == by_org[n["@id"]]["image"]["url"]
+
     entity_magazine = exactly_one(nodes(entity), MAGAZINE)
     registry_founders = entity_magazine.get("founder", [])
     assert any(f.get("name") == "Kovács Attila" for f in registry_founders)

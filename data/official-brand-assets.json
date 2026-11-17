@@ -1,5 +1,5 @@
 {
-  "version": "2026-11-17.1",
+  "version": "2026-11-17.2",
   "documentType": "official-organization-brand-asset-evidence",
   "organizationId": "https://www.kozpontiszovetseg.at/#organization",
   "organizationWikidata": "Q141274866",
@@ -30,5 +30,45 @@
     "publicationScope": "organization identity/Schema.org logo only",
     "mediaLicense": "not independently verified; do not infer image redistribution rights",
     "caution": "The site-properties logo identifies the federation only. Never copy it as the logo of member associations, school or separate publications. Media resolution and Google rich result eligibility are independent checks."
-  }
+  },
+  "relatedEntityLogos": [
+    {
+      "organizationId": "https://www.vipach.at/#organization",
+      "officialWebsite": "https://www.vipach.at/",
+      "siteBusinessName": "VIPACH — Vienna Photo Art & Creative Hub",
+      "verifiedOn": "2026-11-17",
+      "image": {
+        "url": "https://static.wixstatic.com/media/b0aee1_8d66c00d87e1477f99edf8fff7bca9ff~mv2.png",
+        "wixMediaId": "b0aee1_8d66c00d87e1477f99edf8fff7bca9ff~mv2.png",
+        "originalFilename": "Photoroom_20251201_114135.PNG",
+        "intrinsicWidth": 1512,
+        "intrinsicHeight": 1512,
+        "mediaType": "IMAGE",
+        "mimeType": "image/png",
+        "private": false,
+        "state": "OK"
+      },
+      "sourceEvidence": "First-party Wix Site Properties v4 logo property; matching Wix Site Media v1 Get File Descriptor readback",
+      "usageBoundary": "Only the specified organization entity; not evidence of legal ownership or rights to reproduce images beyond the published logo URL"
+    },
+    {
+      "organizationId": "https://www.musicaltarsulat.at/#organization",
+      "officialWebsite": "https://www.musicaltarsulat.at/",
+      "siteBusinessName": "Bécsi Magyar Musical Társulat",
+      "verifiedOn": "2026-11-17",
+      "image": {
+        "url": "https://static.wixstatic.com/media/b0aee1_829f5cc9bb894eeeb41720caf4bc0657~mv2.png",
+        "wixMediaId": "b0aee1_829f5cc9bb894eeeb41720caf4bc0657~mv2.png",
+        "originalFilename": "Photoroom_20260217_123147 3.PNG",
+        "intrinsicWidth": 1512,
+        "intrinsicHeight": 1512,
+        "mediaType": "IMAGE",
+        "mimeType": "image/png",
+        "private": false,
+        "state": "OK"
+      },
+      "sourceEvidence": "First-party Wix Site Properties v4 logo property; matching Wix Site Media v1 Get File Descriptor readback",
+      "usageBoundary": "Only the specified organization entity; not evidence of legal ownership or rights to reproduce images beyond the published logo URL"
+    }
+  ]
 }
