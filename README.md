@@ -13,6 +13,16 @@ Ez a repó a Központi Szövetség szervezeti hálózatának közérthető és g
 - A változó adatok (taglista, vezetőség, programok, események) aktuális hivatalos oldalai az irányadók; a router legutóbbi felülvizsgálati dátuma nem írja felül a forrásadatok régebbi `lastVerified` értékét.
 - Ez **nem valódi DNS-szolgáltatás**: a domainrekordokat továbbra is a tényleges DNS-szolgáltató kezeli.
 
+## Új kezdőlap · sajtó · frissülő eseménynaptár
+
+- Az indulóoldal hat fő útvonalat ad: tagszervezetek, közelgő és folyamatban lévő események, teljes sajtóarchívum, hivatalos források, intézményi projektek és két külön kiadvány.
+- `data/ecosystem-press.json` = jóváhagyott tagszervezeti és intézményi sajtóhivatkozások; minden tagszervezeti adatlap és a `hirek/index.html` ezekből készül.
+- `data/member-news.json` = tagszervezetekhez közvetlenül hozzárendelt sajtó; nem szabad az ellenőrizetlen DORAPP-jelölteket automatikusan publikálni.
+- `member-calendar.js` az élő DORAPP-forrást kérdezi; `data/austria-events-snapshot.json` legfeljebb hét napig használható tartalék.
+- A folyamatban lévő programoknál az `endDate` is számít. A projekt szervezőit külön, ellenőrzött azonosító alapján kezeljük.
+- `scripts/check_federation_home.py` vizsgálja a 29 tagszervezeti profilt, az archívumot, a kiválasztási útvonalakat és a naptár forrásfrissességét.
+- A központi keresőgép-/LLM-regiszter **forrásfeloldó**, nem önálló DNS-névszerver vagy teljes körű médiaszemle.
+
 ## Mit kell elsőként érteni?
 
 - A Központi Szövetség ausztriai magyar ernyőszervezet, amely 1980. február 9-én 21 ausztriai magyar egyesület csúcsszervezeteként alakult.
