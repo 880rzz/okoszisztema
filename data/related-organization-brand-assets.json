@@ -1,0 +1,50 @@
+{
+  "version": "2026-11-17.1",
+  "documentType": "distinct-first-party-organization-brand-assets",
+  "reviewedOn": "2026-11-17",
+  "purpose": "Explicitly verified public brand media for distinct federation-related entities, not a claim of common ownership.",
+  "proofMethod": "Authenticated Wix Site Properties v4 `properties.logo` matched to same site's Media Manager Get File Descriptor; each source was independently verified.",
+  "sites": [
+    {
+      "recordId": "vipach",
+      "canonicalOrganizationId": "https://www.vipach.at/#organization",
+      "officialSite": "https://www.vipach.at/",
+      "sitePropertyBusinessName": "VIPACH — Vienna Photo Art & Creative Hub",
+      "sitePropertiesLogoFileId": "b0aee1_8d66c00d87e1477f99edf8fff7bca9ff~mv2.png",
+      "mediaManagerDisplayName": "Photoroom_20251201_114135.PNG",
+      "originalPublicImageUrl": "https://static.wixstatic.com/media/b0aee1_8d66c00d87e1477f99edf8fff7bca9ff~mv2.png",
+      "width": 1512,
+      "height": 1512,
+      "private": false,
+      "state": "OK",
+      "operationStatus": "READY",
+      "mediaType": "IMAGE",
+      "mediaUpdatedDate": "2025-12-08T22:47:02.000Z",
+      "lastMetadataReview": "2026-11-17"
+    },
+    {
+      "recordId": "musical",
+      "canonicalOrganizationId": "https://www.musicaltarsulat.at/#organization",
+      "officialSite": "https://www.musicaltarsulat.at/",
+      "sitePropertyBusinessName": "Bécsi Magyar Musical Társulat",
+      "sitePropertiesLogoFileId": "b0aee1_829f5cc9bb894eeeb41720caf4bc0657~mv2.png",
+      "mediaManagerDisplayName": "Photoroom_20260217_123147 3.PNG",
+      "originalPublicImageUrl": "https://static.wixstatic.com/media/b0aee1_829f5cc9bb894eeeb41720caf4bc0657~mv2.png",
+      "width": 1512,
+      "height": 1512,
+      "private": false,
+      "state": "OK",
+      "operationStatus": "READY",
+      "mediaType": "IMAGE",
+      "mediaUpdatedDate": "2026-02-17T13:14:19.000Z",
+      "lastMetadataReview": "2026-11-17"
+    }
+  ],
+  "guardrails": [
+    "No federation logo is assigned to a member or subsidiary.",
+    "No publisher/founder/employer relation inferred from having a logo.",
+    "The maMUT logo is attached only to its existing homepage Organization node; no duplicate entity is injected into the common authority graph.",
+    "Distinct media URLs and identity nodes must not be merged."
+  ],
+  "notes": "Image URLs are original Wix CDN asset URLs for the respective sites; they do not imply rights to reproduce or modify brand identities outside public attribution."
+}

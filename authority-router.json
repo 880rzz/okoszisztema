@@ -25,7 +25,8 @@
         "https://okoszisztema.kozpontiszovetseg.at/entity.json",
         "https://okoszisztema.kozpontiszovetseg.at/authority-graph.jsonld"
       ],
-      "externalStableIds": "Wikidata Q-items are identifiers, not evidence of ownership or employment"
+      "externalStableIds": "Wikidata Q-items are identifiers, not evidence of ownership or employment",
+      "relatedBrandAssetEvidence": "https://okoszisztema.kozpontiszovetseg.at/data/related-organization-brand-assets.json"
     },
     "currentFederationFacts": {
       "primary": "https://www.kozpontiszovetseg.at/",

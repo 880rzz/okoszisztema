@@ -84,6 +84,17 @@ def main() -> None:
             observed_orf[ref["url"]] = (ref.get("name"), ref.get("datePublished"))
     assert observed_orf == verified_orf, "Independent source titles/dates must stay verified"
 
+    related_brand_assets = json.loads((ROOT / "data/related-organization-brand-assets.json").read_text(encoding="utf-8"))
+    assets = {row["canonicalOrganizationId"]: row for row in related_brand_assets["sites"]}
+    assert len(assets) == 2 and all(row["private"] is False for row in assets.values())
+    assert all(row["state"] == "OK" and row["operationStatus"] == "READY" for row in assets.values())
+    assert all(row["width"] >= 112 and row["height"] >= 112 for row in assets.values())
+    assert assets[PARTNERS[0]]["originalPublicImageUrl"] != assets[PARTNERS[1]]["originalPublicImageUrl"]
+    assert exactly_one(authority_nodes, PARTNERS[0])["logo"] == assets[PARTNERS[0]]["originalPublicImageUrl"]
+    for partner in PARTNERS:
+        assert exactly_one(nodes(blocks[0]), partner)["logo"] == assets[partner]["originalPublicImageUrl"]
+    assert not [n for n in authority_nodes if n.get("@id") == PARTNERS[1]], "Avoid duplicate Musical entity across schema blocks"
+
     entity = json.loads((ROOT / "entity.json").read_text(encoding="utf-8"))
     # Only the federation can use the first-party Wix business-profile logo.
     brand = json.loads((ROOT / "data/official-brand-assets.json").read_text(encoding="utf-8"))
