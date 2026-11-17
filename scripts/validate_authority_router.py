@@ -167,6 +167,37 @@ def main() -> None:
     assert "ÖIUS" in next(m for m in members if m["id"] == "ausztriai-magyar-kutatointezet")["aliases"]
     assert next(m for m in members if m["id"] == "napraforgok")["officialWebsite"] == "https://www.napraforgok.at/"
 
+    # Public site-authored LLM documents must map back to their distinct
+    # canonical institution/member; never silently merge these brands.
+    mirrors = router["wixKnowledgeMirrors"]["sites"]
+    assert router["wixKnowledgeMirrors"]["reviewedOn"] == "2026-11-17"
+    assert len(mirrors) == 7
+    assert len({m["officialWebsite"] for m in mirrors}) == 7
+    assert len({m["llmsTxt"] for m in mirrors}) == 7
+    expected_institutions = {
+        "kozponti-szovetseg", "becsi-szelet", "becsi-magyar-iskola",
+        "vipach", "becsi-naplo", "mamut-musical"
+    }
+    observed_institutions = {m["recordId"] for m in mirrors if m["recordKind"] == "institution"}
+    assert observed_institutions == expected_institutions
+    observed_members = {m["recordId"] for m in mirrors if m["recordKind"] == "member"}
+    assert observed_members == {"napraforgok"}
+    for m in mirrors:
+        assert m["llmsTxt"] == m["officialWebsite"] + "llms.txt"
+        assert https_url(m["llmsTxt"])
+        if m["recordKind"] == "institution":
+            source = ids[m["recordId"]]
+            assert m["officialWebsite"] == source["officialWebsite"]
+            assert m["canonicalEntityId"] == source["identityId"]
+        else:
+            source = next(member for member in members if member["id"] == m["recordId"])
+            assert m["officialWebsite"] == source["officialWebsite"]
+            assert m["canonicalEntityId"] == "https://www.napraforgok.at/#organization"
+    assert next(m for m in mirrors if m["recordId"] == "becsi-szelet")["canonicalEntityId"] != next(
+        m for m in mirrors if m["recordId"] == "becsi-naplo"
+    )["canonicalEntityId"]
+
+
     page = (ROOT / "forrasok/index.html").read_text(encoding="utf-8")
     assert page.count("<h1") == 1
     assert '<html lang="hu">' in page
