@@ -1,0 +1,23 @@
+name: Validate IndexNow domain verification
+on:
+  pull_request:
+    paths:
+      - '*.txt'
+      - 'scripts/check_indexnow_key.py'
+      - '.github/workflows/validate-indexnow.yml'
+  push:
+    branches: [main]
+    paths:
+      - '*.txt'
+      - 'scripts/check_indexnow_key.py'
+      - '.github/workflows/validate-indexnow.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  key:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify IndexNow root file and contents
+        run: python3 scripts/check_indexnow_key.py
