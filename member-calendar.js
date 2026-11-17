@@ -8,13 +8,20 @@ const endpoints=[
 ];
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const safeUrl=v=>{try{const u=new URL(v);return u.protocol==='https:'?u.href:''}catch{return''}};
-const formatDate=v=>new Intl.DateTimeFormat('hu-AT',{timeZone:'Europe/Vienna',dateStyle:'long',timeStyle:'short'}).format(new Date(v));
+const formatDate=v=>new Intl.DateTimeFormat('hu-AT',{timeZone:'Europe/Vienna',dateStyle:'long',...(/^\d{4}-\d{2}-\d{2}$/.test(String(v))?{}:{timeStyle:'short'})}).format(new Date(v));
 const clean=e=>e&&e.country==='at'&&e.id&&e.name&&e.startDate&&Number.isFinite(Date.parse(e.startDate))&&safeUrl(e.sourceUrl)&&!String(e.eventStatus||'').endsWith('EventCancelled');
 const membersLink='https://www.kozpontiszovetseg.at/tagszervezetek';
 const localRoot=widgets[0].dataset.root||'';
 let crosswalk={},events=[],dataSource='',generatedAt='',lastError='',loaded=false,mappingAvailable=false;
 const sourceUrl='https://www.diaszporaterkep.hu/';
 const windowEnd=()=>{const d=new Date();d.setMonth(d.getMonth()+2);return d.getTime()};
+const endAt=e=>{
+ const v=String(e.endDate||'');
+ if(!v)return Date.parse(e.startDate);
+ const point=Date.parse(v);
+ return Number.isFinite(point)?point+(/^\d{4}-\d{2}-\d{2}$/.test(v)?86400000-1:0):Date.parse(e.startDate);
+};
+const ongoing=e=>Date.parse(e.startDate)<Date.now()&&endAt(e)>=Date.now();
 async function request(url){
  const ctrl=new AbortController(),timer=setTimeout(()=>ctrl.abort(),3500);
  try{const r=await fetch(url,{cache:'no-store',signal:ctrl.signal});if(!r.ok)throw Error('HTTP '+r.status);const j=await r.json();if(!j||!Array.isArray(j.events))throw Error('Invalid event payload');return j}
@@ -27,15 +34,20 @@ async function load(){
   crosswalk=(await m.json()).memberToDorappId||{};mappingAvailable=Object.keys(crosswalk).length===29;
  }catch(e){crosswalk={};mappingAvailable=false;lastError=String(e.message||e)}
  for(const url of endpoints){try{payload=await request(url);dataSource='live';break}catch(e){lastError=String(e.message||e)}}
- if(!payload){try{payload=await request(localRoot+'data/austria-events-snapshot.json');dataSource='snapshot'}catch(e){lastError=String(e.message||e)}}
- if(payload){const ids=new Set();events=payload.events.filter(clean).filter(e=>{if(ids.has(e.id))return false;ids.add(e.id);return new Date(e.startDate).getTime()>=Date.now()-60*60*1000&&new Date(e.startDate).getTime()<=windowEnd()}).sort((a,b)=>new Date(a.startDate)-new Date(b.startDate));generatedAt=payload.generatedAt||''}
+ if(!payload){try{
+  const cached=await request(localRoot+'data/austria-events-snapshot.json');
+  const timestamp=Date.parse(cached.generatedAt||'');
+  if(!Number.isFinite(timestamp)||Date.now()-timestamp>7*86400000||timestamp-Date.now()>12*3600000)throw Error('A tartalék naptár régi vagy dátuma hibás');
+  payload=cached;dataSource='snapshot';
+ }catch(e){lastError=String(e.message||e)}}
+ if(payload){const ids=new Set();events=payload.events.filter(clean).filter(e=>{if(ids.has(e.id))return false;ids.add(e.id);return endAt(e)>=Date.now()-60*60*1000&&Date.parse(e.startDate)<=windowEnd()}).sort((a,b)=>new Date(a.startDate)-new Date(b.startDate));generatedAt=payload.generatedAt||''}
  loaded=true;renderAll();
 }
 function card(e,memberOf){
  const who=e.organizer||'Szervező az eredeti forrásban';
  const parts=[e.city,e.venue].filter(Boolean);
  const member=memberOf.has(e.organizerId);
- return '<article class="calendar-event">'+(member?'<div class="calendar-member">Tagszervezeti esemény</div>':'')+
+ return '<article class="calendar-event">'+(member?'<div class="calendar-member">Tagszervezeti esemény</div>':'')+(ongoing(e)?'<div class="calendar-ongoing">Folyamatban</div>':'')+
   '<time datetime="'+esc(e.startDate)+'">'+esc(formatDate(e.startDate))+'</time>'+
   '<h3>'+esc(e.name)+'</h3><p>'+esc(who)+'</p>'+
   (parts.length?'<p>'+esc(parts.join(' · '))+'</p>':'')+
@@ -54,7 +66,7 @@ function render(w){
  if(empty){empty.hidden=filter.length>0;empty.textContent=!loaded?'Naptár betöltése…':!events.length&&!dataSource?'A naptár most nem érhető el. A szervezők hivatalos oldalain ellenőrizhetők a programok.':memberId&&!mappingAvailable?'A tagszervezeti esemény-hozzárendelés jelenleg nem érhető el; a naptár nem tekinthető teljesnek.':memberId?'Ehhez a tagegyesülethez jelenleg nincs külön azonosított, forrásellenőrzött közelgő program a DORAPP naptárában.':'Nincs a szűrésnek megfelelő, forrásellenőrzött közelgő esemény.'}
  if(dataSource){const status=dataSource==='live'?'Friss DORAPP-forrás':'Mentett naptáradat (a friss DORAPP-forrás nem érhető el)';
  const when=generatedAt&&Number.isFinite(Date.parse(generatedAt))?' · forrás frissítve: '+formatDate(generatedAt):'';
- health.textContent=status+when+(memberId&&!mappingAvailable?' · Figyelem: a tagszervezeti hozzárendelés nem érhető el':'')+' · '+filter.length+' megjeleníthető tagszervezeti program a következő két hónapban';
+ health.textContent=status+when+(memberId&&!mappingAvailable?' · Figyelem: a tagszervezeti hozzárendelés nem érhető el':'')+' · '+filter.length+' megjeleníthető '+(!memberId&&scope==='all'?'ausztriai':'tagszervezeti')+' program a következő két hónapban';
  }else health.textContent='A DORAPP naptáradatok jelenleg nem tölthetők be.';
 }
 function renderAll(){widgets.forEach(render)}
