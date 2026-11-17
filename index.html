@@ -123,9 +123,8 @@
 "@graph":[
 {"@type":"Organization","@id":"https://www.kozpontiszovetseg.at/#organization","name":"Ausztriai Magyar Egyesületek és Szervezetek Központi Szövetsége","alternateName":"Zentralverband Ungarischer Vereine und Organisationen in Österreich","url":"https://www.kozpontiszovetseg.at/","identifier":{"@type":"PropertyValue","propertyID":"ZVR","value":"079797621"},"foundingDate":"1980-02-09"},
 {"@type":"WebSite","@id":"https://okoszisztema.kozpontiszovetseg.at/#website","url":"https://okoszisztema.kozpontiszovetseg.at/","name":"Központi Szövetség – online ökoszisztéma","about":{"@id":"https://www.kozpontiszovetseg.at/#organization"}},
-{"@type":"Organization","@id":"https://www.kozpontiszovetseg.at/#becsi-magyar-iskola-system","name":"Bécsi Magyar Iskola","url":"https://www.magyariskola.at/","parentOrganization":{"@id":"https://www.kozpontiszovetseg.at/#organization"},"subOrganization":[{"@id":"https://www.vipach.at/#organization"},{"@id":"https://www.musicaltarsulat.at/#organization"}]},
-{"@type":"Organization","@id":"https://www.vipach.at/#organization","name":"VIPACH","url":"https://www.vipach.at/","parentOrganization":{"@id":"https://www.kozpontiszovetseg.at/#becsi-magyar-iskola-system"}},
-{"@type":"Organization","@id":"https://www.musicaltarsulat.at/#organization","name":"Bécsi Magyar Musical Társulat","url":"https://www.musicaltarsulat.at/","parentOrganization":{"@id":"https://www.kozpontiszovetseg.at/#becsi-magyar-iskola-system"}},
+{"@type":"Organization","@id":"https://www.vipach.at/#organization","name":"VIPACH","url":"https://www.vipach.at/","parentOrganization":{"@id":"https://www.magyariskola.at/#organization"}},
+{"@type":"Organization","@id":"https://www.musicaltarsulat.at/#organization","name":"Bécsi Magyar Musical Társulat","url":"https://www.musicaltarsulat.at/","parentOrganization":{"@id":"https://www.magyariskola.at/#organization"}},
 {"@type":"CreativeWork","@id":"https://www.kozpontiszovetseg.at/#becsi-naplo","name":"Bécsi Napló","publisher":{"@id":"https://www.kozpontiszovetseg.at/#organization"}},
 {"@type":"WebPage","@id":"https://okoszisztema.kozpontiszovetseg.at/#webpage","url":"https://okoszisztema.kozpontiszovetseg.at/","name":"Hogyan működik a Központi Szövetség?","isPartOf":{"@id":"https://okoszisztema.kozpontiszovetseg.at/#website"},"about":{"@id":"https://www.kozpontiszovetseg.at/#organization"},"inLanguage":"hu-AT"}
 ]}
@@ -394,7 +393,7 @@
         "@id": "https://www.magyariskola.at/#organization"
       },
       "founder": {
-        "@id": "https://www.norbertbanhalmi.com/about/"
+        "@id": "https://www.wikidata.org/wiki/Q56391118"
       }
     },
     {
@@ -574,9 +573,9 @@
     },
     {
       "@type": "Person",
-      "@id": "https://www.norbertbanhalmi.com/about/",
+      "@id": "https://www.wikidata.org/wiki/Q56391118",
       "name": "Bánhalmi Norbert",
-      "url": "https://www.norbertbanhalmi.com/about/",
+      "url": "https://www.banhalmiphotography.com/about/",
       "description": "A Központi Szövetség és a Bécsi Magyar Iskola munkáját önkéntes fotográfiai, oktatási, marketing- és kommunikációs közreműködéssel segíti; ebből munkaviszony, alkalmazotti státusz vagy fizetett foglalkoztatás nem következik.",
       "sameAs": [
         "https://www.wikidata.org/wiki/Q56391118",
@@ -610,12 +609,18 @@
       "publisher": {
         "@id": "https://www.kozpontiszovetseg.at/#organization"
       },
-      "founder": {
-        "@type": "Person",
-        "@id": "https://www.wikidata.org/wiki/Q56391118",
-        "name": "Norbert Bánhalmi",
-        "sameAs": "https://www.wikidata.org/wiki/Q56391118"
-      }
+      "founder": [
+        {
+          "@type": "Person",
+          "@id": "https://www.wikidata.org/wiki/Q56391118",
+          "name": "Norbert Bánhalmi",
+          "sameAs": "https://www.wikidata.org/wiki/Q56391118"
+        },
+        {
+          "@type": "Person",
+          "name": "Kovács Attila"
+        }
+      ]
     }
   ]
 }
