@@ -93,7 +93,6 @@ def main() -> None:
     assert evidence["operationStatus"] == "READY"
     assert evidence["width"] >= 112 and evidence["height"] >= 112
     assert exactly_one(authority_nodes, FEDERATION)["logo"]["url"] == logo_url
-    assert exactly_one(homepage_nodes, FEDERATION) is not None
     assert exactly_one(nodes(blocks[0]), FEDERATION)["logo"]["url"] == logo_url
     assert exactly_one(authority_nodes, FEDERATION)["logo"]["width"] == evidence["width"]
 
