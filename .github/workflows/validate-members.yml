@@ -3,6 +3,10 @@ on:
   pull_request:
     paths:
       - "index.html"
+      - "authority-graph.jsonld"
+      - "entity.json"
+      - "scripts/check_entity_graph.py"
+      - ".github/workflows/fix-central-structure-20260903.yml"
       - "member-organizations.json"
       - "member-event-map.json"
       - "member-calendar.js"
@@ -48,6 +52,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: python3 scripts/validate_member_pages.py
+      - run: python3 scripts/check_entity_graph.py
       - run: node --check member-calendar.js
       - run: node --check member-news.js
       - run: python3 scripts/test_member_news_enrichment.py
