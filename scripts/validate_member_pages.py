@@ -55,6 +55,21 @@ def main():
   assert d.h1==1 and d.canon==[canonical] and canonical in site,id
   assert 'data-member-id="'+id+'"' in html and "kozpontiszovetseg.at/tagszervezetek" in html,id
   assert d.schemas and any(x.get("@type")=="ProfilePage" for x in d.schemas[0].get("@graph",[])),id
+ registry=read("data/member-programs.json")
+ assert registry["schemaVersion"]==1 and registry["sourceRepository"]=="880rzz/okoszisztema"
+ assert isinstance(registry["verifiedEvents"],list) and isinstance(registry["programCandidates"],list)
+ candidate_ids=set()
+ for p in registry["programCandidates"]:
+  assert p["id"] not in candidate_ids and p["memberId"] in mapping and mapping[p["memberId"]]==p["organizerId"]
+  candidate_ids.add(p["id"])
+  assert p["status"]=="date-unverified" and p.get("title")
+  assert urlsplit(p.get("sourceUrl","")).scheme=="https"
+  assert not p.get("startDate") and not p.get("endDate"),"No invented dates for unverified program"
+ for e in registry["verifiedEvents"]:
+  assert e.get("verificationStatus")=="verified" and e.get("organizerId") in set(mapping.values())
+  assert e.get("name") and e.get("id") and e.get("sourceUrl") and e.get("verifiedAt")
+  assert urlsplit(e["sourceUrl"]).scheme=="https"
+  datetime.fromisoformat(e["startDate"].replace("Z","+00:00"))
  snapshot=read("data/austria-events-snapshot.json")
  assert snapshot["sourceRepository"]=="880rzz/DORAPP" and snapshot["country"]=="at"
  assert snapshot["count"]==len(snapshot["events"]) and snapshot["generatedAt"]
@@ -63,6 +78,9 @@ def main():
   assert urlsplit(e.get("sourceUrl","")).scheme=="https"
   datetime.fromisoformat(e["startDate"].replace("Z","+00:00"))
  js=(ROOT/"member-calendar.js").read_text()
+ assert "data/member-programs.json" in js and "calendar-program-leads" in js
+ result=subprocess.run(["node","--check",str(ROOT/"member-calendar.js")],text=True,capture_output=True)
+ assert result.returncode==0,result.stderr
  assert "(scopedId&&scopedId===e.organizerId)" in js and "data/austria-events-snapshot.json" in js
  scripts=InlineScripts()
  scripts.feed(idx)
