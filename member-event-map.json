@@ -33,22 +33,5 @@
     "innsbrucki-magyar-katolikus-kozosseg": "katolikus-innsbruck",
     "vorarlbergi-magyar-egyesulet": "vorarlbergi-magyar-egyesulet",
     "mi-magyarok-egymasert": "mime-vorarlberg"
-  },
-  "memberToSocialEventSource": {
-    "ausztriai-magyar-kutatointezet": "https://www.facebook.com/OEIUS",
-    "lean-in-femspace": "https://www.facebook.com/leaninfemspace/",
-    "svung": "https://www.facebook.com/Svung.Wien",
-    "kalaka-club": "https://www.facebook.com/profile.php?id=100069108893600",
-    "napraforgok": "https://www.facebook.com/napraforgok.becs",
-    "alsoori-magyar-kultur-es-tancegyesulet": "https://www.facebook.com/profile.php?id=100088924551185",
-    "kozep-burgenlandi-magyar-kulturegyesulet": "https://www.facebook.com/MittelburgenlaendischerUngarischerKulturverein/",
-    "felso-ausztriai-magyarok-kulturegyesulete": "https://www.facebook.com/profile.php?id=61585964764924",
-    "felso-ausztriai-hetvegi-magyar-ovoda-es-iskola": "https://www.facebook.com/profile.php?id=100057286665201",
-    "salzung": "https://www.facebook.com/salzung/",
-    "grazi-magyar-egyesulet": "https://www.facebook.com/Grazi.Magyar.Egyesuelet",
-    "imike": "https://www.facebook.com/IMIKE2019UJKV/",
-    "cserkesz-79-innsbruck": "https://www.facebook.com/InnsbruckiMagyarCserkeszek/",
-    "vorarlbergi-magyar-egyesulet": "https://www.facebook.com/profile.php?id=61551073885214",
-    "mi-magyarok-egymasert": "https://www.facebook.com/profile.php?id=61550875215206"
   }
 }

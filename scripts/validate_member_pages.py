@@ -44,6 +44,7 @@ def main():
  ids=[m["id"] for m in members];assert len(ids)==len(set(ids))
  mapping=read("member-event-map.json")["memberToDorappId"]
  assert set(mapping)==set(ids) and len(set(mapping.values()))==29,"Exact 1:1 organization IDs"
+ assert "memberToSocialEventSource" not in read("member-event-map.json"),"Social sources belong exclusively to the canonical registry"
  idx=(ROOT/"index.html").read_text();site=(ROOT/"sitemap.xml").read_text()
  assert 'id="esemenyek"' in idx and "member-calendar.js" in idx and "Részletes bemutatkozás" in idx
  for m in members:
