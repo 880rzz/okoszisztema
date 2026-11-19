@@ -15,7 +15,7 @@ const membersLink='https://www.kozpontiszovetseg.at/tagszervezetek';
 // these are not member associations and are not assigned by name similarity.
 const federationOrgIds=new Set(['kozponti-szovetseg','becsi-magyar-iskola','vipach']);
 const localRoot=widgets[0].dataset.root||'';
-let crosswalk={},socialSources={},memberSources={},programCandidates=[],verifiedMemberEvents=[],events=[],dataSource='',generatedAt='',lastError='',loaded=false,mappingAvailable=false;
+let crosswalk={},memberSources={},programCandidates=[],verifiedMemberEvents=[],events=[],dataSource='',generatedAt='',lastError='',loaded=false,mappingAvailable=false;
 const sourceUrl='https://www.diaszporaterkep.hu/';
 const windowEnd=()=>{const d=new Date();d.setMonth(d.getMonth()+2);return d.getTime()};
 const endAt=e=>{
@@ -35,8 +35,8 @@ async function load(){
  programCandidates=[];verifiedMemberEvents=[];memberSources={};
  try{
   const m=await fetch(localRoot+'member-event-map.json',{cache:'no-store'});if(!m.ok)throw Error('Mapping unavailable');
-  const mapping=await m.json();crosswalk=mapping.memberToDorappId||{};socialSources=mapping.memberToSocialEventSource||{};mappingAvailable=Object.keys(crosswalk).length===29;
- }catch(e){crosswalk={};socialSources={};mappingAvailable=false;lastError=String(e.message||e)}
+  const mapping=await m.json();crosswalk=mapping.memberToDorappId||{};mappingAvailable=Object.keys(crosswalk).length===29;
+ }catch(e){crosswalk={};mappingAvailable=false;lastError=String(e.message||e)}
  try{
   const r=await fetch(localRoot+'data/member-programs.json',{cache:'no-store'});
   if(!r.ok)throw Error('Member program registry HTTP '+r.status);
@@ -130,7 +130,6 @@ function render(w){
  // Facebook/Instagram links are links only: no trackers, embeds or scraping.
  let socialNode=w.querySelector('.calendar-social-source');
  const sources=memberId?(memberSources[memberId]||[]):[];
- const fallback=memberId?safeUrl(socialSources[memberId]):'';
  if(memberId&&!socialNode){
   socialNode=document.createElement('section');socialNode.className='calendar-social-source';
   socialNode.setAttribute('aria-label','Tagszervezeti programforrások');
@@ -139,13 +138,13 @@ function render(w){
  }
  if(socialNode){
   socialNode.replaceChildren();
-  socialNode.hidden=!(sources.length||fallback);
+  socialNode.hidden=!sources.length;
   if(!socialNode.hidden){
    const title=document.createElement('h3');title.textContent='A szervezet programforrásai';
    const intro=document.createElement('p');
    intro.textContent='Ellenőrzött forráshivatkozások, nem feltétlenül automatikusan átvett események.';
    const ul=document.createElement('ul');
-   const items=sources.length?sources:[{url:fallback,label:'A szervezet Facebook-oldala',platform:'facebook',ingestEvents:false}];
+   const items=sources;
    for(const source of items){
     const li=document.createElement('li');
     const url=safeUrl(source.url);
