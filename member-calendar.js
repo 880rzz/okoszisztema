@@ -15,7 +15,7 @@ const membersLink='https://www.kozpontiszovetseg.at/tagszervezetek';
 // these are not member associations and are not assigned by name similarity.
 const federationOrgIds=new Set(['kozponti-szovetseg','becsi-magyar-iskola','vipach']);
 const localRoot=widgets[0].dataset.root||'';
-let crosswalk={},socialSources={},programCandidates=[],verifiedMemberEvents=[],events=[],dataSource='',generatedAt='',lastError='',loaded=false,mappingAvailable=false;
+let crosswalk={},socialSources={},memberSources={},programCandidates=[],verifiedMemberEvents=[],events=[],dataSource='',generatedAt='',lastError='',loaded=false,mappingAvailable=false;
 const sourceUrl='https://www.diaszporaterkep.hu/';
 const windowEnd=()=>{const d=new Date();d.setMonth(d.getMonth()+2);return d.getTime()};
 const endAt=e=>{
@@ -32,7 +32,7 @@ async function request(url){
 }
 async function load(){
  let payload=null;
- programCandidates=[];verifiedMemberEvents=[];
+ programCandidates=[];verifiedMemberEvents=[];memberSources={};
  try{
   const m=await fetch(localRoot+'member-event-map.json',{cache:'no-store'});if(!m.ok)throw Error('Mapping unavailable');
   const mapping=await m.json();crosswalk=mapping.memberToDorappId||{};socialSources=mapping.memberToSocialEventSource||{};mappingAvailable=Object.keys(crosswalk).length===29;
@@ -45,6 +45,16 @@ async function load(){
   programCandidates=registry.programCandidates.filter(p=>p&&p.status==='date-unverified'&&crosswalk[p.memberId]===p.organizerId&&p.title&&safeUrl(p.sourceUrl));
   verifiedMemberEvents=registry.verifiedEvents.filter(e=>e&&e.verificationStatus==='verified'&&clean(e)&&Object.values(crosswalk).includes(e.organizerId));
  }catch(e){lastError=String(e.message||e)}
+ try{
+  const r=await fetch(localRoot+'data/member-event-sources.json',{cache:'no-store'});
+  if(!r.ok)throw Error('Member source registry unavailable');
+  const registry=await r.json();
+  if(registry.schemaVersion!==1||registry.sourceRepository!=='880rzz/okoszisztema'||!Array.isArray(registry.members)||registry.members.length!==29)throw Error('Invalid member source registry');
+  for(const row of registry.members){
+   if(crosswalk[row.memberId]!==row.organizerId||!Array.isArray(row.calendarSources))throw Error('Source membership crosswalk mismatch');
+   memberSources[row.memberId]=row.calendarSources;
+  }
+ }catch(e){memberSources={};lastError=String(e.message||e)}
  for(const url of endpoints){try{payload=await request(url);dataSource='live';break}catch(e){lastError=String(e.message||e)}}
  if(!payload){try{
   const cached=await request(localRoot+'data/austria-events-snapshot.json');
@@ -116,24 +126,49 @@ function render(w){
   }
   leads.append(heading,intro,grid);
  }
- // Facebook is a verified discovery link, not a machine-imported event feed.
- // An empty DORAPP subset must not imply there are no association events.
- const socialUrl=memberId?safeUrl(socialSources[memberId]):'';
+ // Source provenance is distinct from verified event ingestion.
+ // Facebook/Instagram links are links only: no trackers, embeds or scraping.
  let socialNode=w.querySelector('.calendar-social-source');
- if(memberId&&socialUrl&&!socialNode){
-  socialNode=document.createElement('p');socialNode.className='calendar-social-source';
+ const sources=memberId?(memberSources[memberId]||[]):[];
+ const fallback=memberId?safeUrl(socialSources[memberId]):'';
+ if(memberId&&!socialNode){
+  socialNode=document.createElement('section');socialNode.className='calendar-social-source';
+  socialNode.setAttribute('aria-label','Tagszervezeti programforrások');
   const footer=w.querySelector('.calendar-source');
   if(footer)footer.before(socialNode);else w.append(socialNode);
  }
  if(socialNode){
-  socialNode.replaceChildren();socialNode.hidden=!socialUrl;
-  if(socialUrl){
-   socialNode.append('További, nem automatikusan átvett programok: ');
-   const link=document.createElement('a');
-   link.href=socialUrl;link.target='_blank';link.rel='noopener noreferrer';
-   link.textContent='A szervezet hivatalos Facebook-oldala ↗';
-   socialNode.append(link);
-   if(!filter.length)socialNode.append(' · A gépi eseménynaptár hiánya nem jelenti azt, hogy a szervezetnek nincs közelgő rendezvénye.');
+  socialNode.replaceChildren();
+  socialNode.hidden=!(sources.length||fallback);
+  if(!socialNode.hidden){
+   const title=document.createElement('h3');title.textContent='A szervezet programforrásai';
+   const intro=document.createElement('p');
+   intro.textContent='Ellenőrzött forráshivatkozások, nem feltétlenül automatikusan átvett események.';
+   const ul=document.createElement('ul');
+   const items=sources.length?sources:[{url:fallback,label:'A szervezet Facebook-oldala',platform:'facebook',ingestEvents:false}];
+   for(const source of items){
+    const li=document.createElement('li');
+    const url=safeUrl(source.url);
+    const label=source.label||'Programforrás';
+    if(url){
+     const a=document.createElement('a');
+     a.href=url;a.target='_blank';a.rel='noopener noreferrer';
+     a.textContent=label+' ↗';li.append(a);
+    }else{
+     const span=document.createElement('span');
+     span.textContent=label+' (nem biztonságos vagy hibás forrás-URL; ellenőrzendő)';
+     li.append(span);
+    }
+    const status=document.createElement('small');
+    status.textContent=source.ingestEvents===true?' · gépi import engedélyezve':source.scope==='related'||source.scope==='host'?' · kapcsolódó forrás, nem saját eseményfeed':' · forráslink, automatikus import nélkül';
+    li.append(status);ul.append(li);
+   }
+   socialNode.append(title,intro,ul);
+   if(!filter.length){
+    const note=document.createElement('p');
+    note.textContent='A gépi eseménynaptár hiánya nem bizonyítja, hogy a szervezetnek nincs közelgő programja.';
+    socialNode.append(note);
+   }
   }
  }
  if(empty){empty.hidden=filter.length>0;empty.textContent=!loaded?'Naptár betöltése…':!events.length&&!dataSource?'A naptár most nem érhető el. A szervezők hivatalos oldalain ellenőrizhetők a programok.':memberId&&!mappingAvailable?'A tagszervezeti esemény-hozzárendelés jelenleg nem érhető el; a naptár nem tekinthető teljesnek.':memberId?'Ehhez a tagegyesülethez jelenleg nincs külön azonosított, forrásellenőrzött közelgő program a DORAPP naptárában.':'Nincs a szűrésnek megfelelő, forrásellenőrzött közelgő esemény.'}

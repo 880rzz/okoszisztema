@@ -55,6 +55,23 @@ def main():
   assert d.h1==1 and d.canon==[canonical] and canonical in site,id
   assert 'data-member-id="'+id+'"' in html and "kozpontiszovetseg.at/tagszervezetek" in html,id
   assert d.schemas and any(x.get("@type")=="ProfilePage" for x in d.schemas[0].get("@graph",[])),id
+ sources=read("data/member-event-sources.json")
+ assert sources["schemaVersion"]==1 and sources["sourceRepository"]=="880rzz/okoszisztema"
+ assert sources["organizationCount"]==29 and sources["sourceCount"]==sum(len(x["calendarSources"]) for x in sources["members"])
+ assert set(x["memberId"] for x in sources["members"])==set(ids)
+ assert sources["sourceMigration"]["sourceBlobSha"],"Source migration provenance"
+ for x in sources["members"]:
+  assert mapping[x["memberId"]]==x["organizerId"]
+  assert x["calendarSources"],x["memberId"]
+  urls=set()
+  for c in x["calendarSources"]:
+   url=c.get("url") or ""
+   assert urlsplit(url).scheme in ("http","https") and urlsplit(url).netloc,x["memberId"]
+   assert url not in urls,"Repeated source URL for "+x["memberId"]
+   urls.add(url)
+   assert isinstance(c.get("ingestEvents"),bool),x["memberId"]
+   if c.get("ingestEvents"):assert urlsplit(url).scheme=="https","Unsafe automatic ingestion source"
+  assert set(x.get("eventSources") or []).issubset({c["url"] for c in x["calendarSources"] if c["ingestEvents"]}),x["memberId"]
  registry=read("data/member-programs.json")
  assert registry["schemaVersion"]==1 and registry["sourceRepository"]=="880rzz/okoszisztema"
  assert isinstance(registry["verifiedEvents"],list) and isinstance(registry["programCandidates"],list)
@@ -83,7 +100,7 @@ def main():
   assert urlsplit(e.get("sourceUrl","")).scheme=="https"
   datetime.fromisoformat(e["startDate"].replace("Z","+00:00"))
  js=(ROOT/"member-calendar.js").read_text()
- assert "data/member-programs.json" in js and "calendar-program-leads" in js
+ assert "data/member-programs.json" in js and "data/member-event-sources.json" in js and "calendar-program-leads" in js
  result=subprocess.run(["node","--check",str(ROOT/"member-calendar.js")],text=True,capture_output=True)
  assert result.returncode==0,result.stderr
  assert "(scopedId&&scopedId===e.organizerId)" in js and "data/austria-events-snapshot.json" in js
