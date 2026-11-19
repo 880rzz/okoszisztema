@@ -1,4 +1,4 @@
-/* Read-only DORAPP calendar: remote canonical events, local sourced snapshot if unreachable. */
+/* Federated calendar: local authoritative member programs + DORAPP for other Austrian events. */
 (()=>{'use strict';
 const widgets=[...document.querySelectorAll('[data-member-calendar]')];
 if(!widgets.length)return;
@@ -15,7 +15,7 @@ const membersLink='https://www.kozpontiszovetseg.at/tagszervezetek';
 // these are not member associations and are not assigned by name similarity.
 const federationOrgIds=new Set(['kozponti-szovetseg','becsi-magyar-iskola','vipach']);
 const localRoot=widgets[0].dataset.root||'';
-let crosswalk={},socialSources={},events=[],dataSource='',generatedAt='',lastError='',loaded=false,mappingAvailable=false;
+let crosswalk={},socialSources={},programCandidates=[],verifiedMemberEvents=[],events=[],dataSource='',generatedAt='',lastError='',loaded=false,mappingAvailable=false;
 const sourceUrl='https://www.diaszporaterkep.hu/';
 const windowEnd=()=>{const d=new Date();d.setMonth(d.getMonth()+2);return d.getTime()};
 const endAt=e=>{
@@ -32,10 +32,19 @@ async function request(url){
 }
 async function load(){
  let payload=null;
+ programCandidates=[];verifiedMemberEvents=[];
  try{
   const m=await fetch(localRoot+'member-event-map.json',{cache:'no-store'});if(!m.ok)throw Error('Mapping unavailable');
   const mapping=await m.json();crosswalk=mapping.memberToDorappId||{};socialSources=mapping.memberToSocialEventSource||{};mappingAvailable=Object.keys(crosswalk).length===29;
  }catch(e){crosswalk={};socialSources={};mappingAvailable=false;lastError=String(e.message||e)}
+ try{
+  const r=await fetch(localRoot+'data/member-programs.json',{cache:'no-store'});
+  if(!r.ok)throw Error('Member program registry HTTP '+r.status);
+  const registry=await r.json();
+  if(registry.schemaVersion!==1||registry.sourceRepository!=='880rzz/okoszisztema'||!Array.isArray(registry.programCandidates)||!Array.isArray(registry.verifiedEvents))throw Error('Invalid member registry');
+  programCandidates=registry.programCandidates.filter(p=>p&&p.status==='date-unverified'&&crosswalk[p.memberId]===p.organizerId&&p.title&&safeUrl(p.sourceUrl));
+  verifiedMemberEvents=registry.verifiedEvents.filter(e=>e&&e.verificationStatus==='verified'&&clean(e)&&Object.values(crosswalk).includes(e.organizerId));
+ }catch(e){lastError=String(e.message||e)}
  for(const url of endpoints){try{payload=await request(url);dataSource='live';break}catch(e){lastError=String(e.message||e)}}
  if(!payload){try{
   const cached=await request(localRoot+'data/austria-events-snapshot.json');
@@ -56,6 +65,11 @@ async function load(){
  events=[...entries.values()].sort((a,b)=>new Date(a.startDate)-new Date(b.startDate));
  generatedAt=payload.generatedAt||'';
 }
+ // The association registry overrides a mirrored DORAPP event with the same ID.
+ const localIds=new Set(verifiedMemberEvents.map(e=>e.id));
+ events=events.filter(e=>!localIds.has(e.id));
+ events.push(...verifiedMemberEvents.filter(e=>endAt(e)>=Date.now()-60*60*1000&&Date.parse(e.startDate)<=windowEnd()));
+ events.sort((a,b)=>new Date(a.startDate)-new Date(b.startDate));
  loaded=true;renderAll();
 }
 function card(e,memberOf){
@@ -78,6 +92,30 @@ function render(w){
  const scope=w.querySelector('[data-calendar-scope]')?.value||'members';
  const filter=events.filter(e=>(!memberId||(scopedId&&scopedId===e.organizerId))&&(memberId||scope==='all'||(scope==='members'?memberIds.has(e.organizerId):memberIds.has(e.organizerId)||federationOrgIds.has(e.organizerId)))&&(!query||[e.name,e.city,e.venue,e.organizer].join(' ').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().includes(query)));
  list.innerHTML=filter.map(e=>card(e,memberIds)).join('');
+ // Undated Facebook announcements are deliberately separate from verified Events.
+ let leads=w.querySelector('.calendar-program-leads');
+ if(!leads){
+  leads=document.createElement('section');leads.className='calendar-program-leads';
+  leads.setAttribute('aria-label','Ellenőrzésre váró programbejelentések');
+  list.after(leads);
+ }
+ leads.replaceChildren();
+ const matched=programCandidates.filter(p=>(!memberId||p.memberId===memberId)&&(!query||p.title.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().includes(query))&&(memberId||scope!=='federation'));
+ leads.hidden=!matched.length;
+ if(matched.length){
+  const heading=document.createElement('h3');heading.textContent='Programbejelentések – időpont ellenőrzés alatt';
+  const intro=document.createElement('p');intro.textContent='A szervezet által megosztott programhivatkozások. Dátum és helyszín az eredeti forrásban ellenőrizendő; ezek nem megerősített naptáresemények.';
+  const grid=document.createElement('div');grid.className='calendar-events';
+  for(const p of matched){
+   const article=document.createElement('article');article.className='calendar-event';
+   const name=document.createElement('h4');name.textContent=p.title;
+   const state=document.createElement('p');state.textContent='Időpont nincs megerősítve.';
+   const link=document.createElement('a');link.href=safeUrl(p.sourceUrl);link.target='_blank';link.rel='noopener noreferrer';
+   link.textContent='Szervezői programforrás ↗';
+   article.append(name,state,link);grid.append(article);
+  }
+  leads.append(heading,intro,grid);
+ }
  // Facebook is a verified discovery link, not a machine-imported event feed.
  // An empty DORAPP subset must not imply there are no association events.
  const socialUrl=memberId?safeUrl(socialSources[memberId]):'';
