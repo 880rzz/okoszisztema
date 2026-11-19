@@ -1,0 +1,42 @@
+name: Daily federation member program-source audit
+on:
+  schedule:
+    # After DORAPP's 04:17 UTC Austrian program curator.
+    - cron: "43 6 * * *"
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - "scripts/audit_member_program_sources.py"
+      - "data/member-event-sources.json"
+      - "data/member-programs.json"
+      - "member-event-map.json"
+      - ".github/workflows/daily-member-program-sources.yml"
+permissions:
+  contents: read
+concurrency:
+  group: federation-program-source-audit
+  cancel-in-progress: false
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Compile and validate all 29 source mappings
+        run: |
+          python3 -m py_compile scripts/audit_member_program_sources.py
+          python3 scripts/audit_member_program_sources.py --output audit/member-source-health.json
+      - name: Check public official sites, mark social sources for manual review
+        if: github.event_name != 'pull_request'
+        run: python3 scripts/audit_member_program_sources.py --probe --output audit/member-source-health.json
+      - name: Preserve dated audit report without modifying production
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: federation-member-program-sources
+          path: audit/member-source-health.json
+          retention-days: 30
+          if-no-files-found: warn
