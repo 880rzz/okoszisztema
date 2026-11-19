@@ -35,12 +35,12 @@ def load(path):
     return json.loads(path.read_text(encoding="utf-8"))
 
 
-def secure_url(value):
+def secure_url(value, allow_http=False):
     if not isinstance(value, str):
         return False
     try:
         p = urlsplit(value)
-        if p.scheme != "https" or not p.hostname or p.username or p.password or p.port not in (None, 443):
+        if p.scheme not in (("https", "http") if allow_http else ("https",)) or not p.hostname or p.username or p.password or p.port not in (None, 80, 443):
             return False
         if p.hostname in ("localhost", "localhost.localdomain"):
             return False
@@ -68,6 +68,8 @@ def event_day(value):
 
 def inspect_source(row):
     url = row["url"]
+    if urlsplit(url).scheme == "http":
+        return {"status": "legacy-http-review", "reason": "Source uses plain HTTP; not approved for automatic event import."}
     if row.get("platform") in ("facebook", "instagram", "tiktok") or (
         row["kind"].startswith("social-") or urlsplit(url).hostname in SOCIAL
     ):
@@ -116,7 +118,7 @@ def audit(probe=False):
         ingest = set()
         for entry in entries:
             url = entry.get("url")
-            if not secure_url(url) or url in seen or not entry.get("kind") or not entry.get("label"):
+            if not secure_url(url, allow_http=entry.get("ingestEvents") is not True) or url in seen or not entry.get("kind") or not entry.get("label"):
                 raise ValueError("Invalid or duplicate source URL: " + mid)
             if type(entry.get("ingestEvents")) is not bool:
                 raise ValueError("Missing explicit ingestion authorization: " + mid)
@@ -218,7 +220,7 @@ def main():
                f"{programs['membersWithCurrentDated']} members with dated current programs, "
                f"{len(programs['membersMissingCurrentDated'])} without.")
     print(message)
-    for status in ("broken-link", "network-unverified", "request-error", "access-restricted"):
+    for status in ("broken-link", "network-unverified", "request-error", "access-restricted", "legacy-http-review"):
         count = stats["probeStatus"].get(status, 0)
         if count:
             print(f"::warning::{count} program source(s) need review: {status}")
