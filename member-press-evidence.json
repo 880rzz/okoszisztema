@@ -1,7 +1,7 @@
 {
   "documentType": "member-organization-press-evidence",
   "schemaVersion": "2026-09-02-v1",
-  "lastResearched": "2026-10-18",
+  "lastResearched": "2026-11-19",
   "scope": "Press evidence for organizations in the Központi Szövetség member network, prioritizing ORF Magyarok and Rólunk.at. This file supplements but does not replace the official member directory.",
   "sourcePriority": [
     "https://volksgruppen.orf.at/magyarok/",
@@ -138,6 +138,14 @@
       "memberId": "napraforgok",
       "verifiedSummary": "A Napraforgók a bécsi magyar néptánc- és népzenei élet egyik aktív szervezete, felnőtt és gyermek utánpótlással. A Napraforgócskák és további gyermekcsoportok a magyar néptánc átadását szolgálják, a szervezet pedig rendszeresen együttműködik a Bécsi Magyar Iskolával és más bécsi magyar kulturális szereplőkkel.",
       "evidence": [
+        {
+          "publisher": "Központi Szövetség (szervezeti blog)",
+          "date": "2026-11-18",
+          "title": "Több mint ötszázan a XXVII. Bécsi Magyar Táncháztalálkozón",
+          "url": "https://www.kozpontiszovetseg.at/post/xxvii-becsi-magyar-tanchaztalalkozo-2026-telthaz",
+          "sourceVerifiedAt": "2026-11-19",
+          "publicationType": "federation-first-party-organizational-report"
+        },
         {
           "publisher": "Rólunk.at",
           "date": "2026-11-12",
@@ -325,6 +333,14 @@
       "memberId": "salzung",
       "verifiedSummary": "A SalzUng Salzburgban magyar kulturális és közösségi programokat szervez. A sajtóban magyar komolyzenei és népzenei koncertekkel, a Salzburgi magyar sokadalommal, valamint a nyugat-ausztriai magyar szervezetek közötti diaszpóra-együttműködések szervezőjeként jelenik meg.",
       "evidence": [
+        {
+          "publisher": "Központi Szövetség (szervezeti blog)",
+          "date": "2026-11-19",
+          "title": "Népzene, ünnepi koncert és rajzfilmek – három salzburgi magyar közösségi élmény",
+          "url": "https://www.kozpontiszovetseg.at/post/salzung-magyar-nap-mozarteum-koncert-rajzfilmunnep-salzburg-2026",
+          "sourceVerifiedAt": "2026-11-19",
+          "publicationType": "federation-first-party-organizational-report"
+        },
         {
           "publisher": "ORF Magyarok",
           "date": "2022-06-10",

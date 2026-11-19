@@ -7,12 +7,66 @@
   ],
   "publicationPolicy": "Only manually sourced press or explicitly verified citations. Candidate searches are NOT published.",
   "sortPolicy": "Newer full dates first; imprecise month/year dates follow fully dated items within their publication year.",
-  "totalArticles": 131,
-  "totalMemberAssociations": 93,
+  "totalArticles": 133,
+  "totalMemberAssociations": 95,
   "totalInstitutionAssociations": 69,
   "coveredMembers": 29,
   "coveredInstitutions": 7,
   "items": [
+    {
+      "id": "press-17450c84c09855",
+      "url": "https://www.kozpontiszovetseg.at/post/salzung-magyar-nap-mozarteum-koncert-rajzfilmunnep-salzburg-2026",
+      "title": "Népzene, ünnepi koncert és rajzfilmek – három salzburgi magyar közösségi élmény",
+      "publisher": "Központi Szövetség (szervezeti blog)",
+      "date": "2026-11-19",
+      "memberIds": [
+        "salzung"
+      ],
+      "memberNames": [
+        "SalzUng - Salzburgi Magyar Egyesület"
+      ],
+      "summary": "A SalzUNG november 14-i Magyar Napjáról, a november 10-i mozarteumi Pécsi Egyetemi Zenekar-koncertről és a salzburgi Rajzfilmünnepről szóló 2026-os szervezeti beszámoló.",
+      "summaryType": "editorial-summary",
+      "evidenceSources": [
+        "member-press-evidence.json"
+      ],
+      "approval": "curated-source-evidence",
+      "summaryVerifiedAt": "2026-11-19",
+      "institutionIds": [],
+      "institutionNames": [],
+      "pressEvidenceRefs": [
+        "data/member-news.json"
+      ],
+      "year": "2026",
+      "sortKey": "2026-11-193"
+    },
+    {
+      "id": "press-81deddb8eb7a53",
+      "url": "https://www.kozpontiszovetseg.at/post/xxvii-becsi-magyar-tanchaztalalkozo-2026-telthaz",
+      "title": "Több mint ötszázan a XXVII. Bécsi Magyar Táncháztalálkozón",
+      "publisher": "Központi Szövetség (szervezeti blog)",
+      "date": "2026-11-18",
+      "memberIds": [
+        "napraforgok"
+      ],
+      "memberNames": [
+        "Napraforgók Bécsi Magyar Néptánc és Népzene Egyesület"
+      ],
+      "summary": "A Napraforgók 2026. november 7-i, Bécs-Meidlingben rendezett XXVII. Magyar Táncháztalálkozójáról szóló beszámoló több mint ötszáz látogatóról és száznál több fellépőről számol be.",
+      "summaryType": "editorial-summary",
+      "evidenceSources": [
+        "member-press-evidence.json"
+      ],
+      "approval": "curated-source-evidence",
+      "summaryVerifiedAt": "2026-11-19",
+      "institutionIds": [],
+      "institutionNames": [],
+      "pressEvidenceRefs": [
+        "data/member-news.json"
+      ],
+      "year": "2026",
+      "sortKey": "2026-11-183"
+    },
     {
       "id": "press-ab45bf130b3644",
       "url": "https://rolunk.at/kultura/tobb-mint-felezren-roptak-a-tancot/",

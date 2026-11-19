@@ -163,6 +163,9 @@ def build_changes():
         after=re.sub(r'\d+ különböző dokumentált cikk',
                      "%d különböző dokumentált cikk"%len(data),after)
         after=re.sub(r'\d+ dokumentált cikk',"%d dokumentált cikk"%len(data),after)
+        if path=="index.html":
+            after=re.sub(r'<strong>\d+</strong><span>forrásolt sajtócikk',
+                         '<strong>%d</strong><span>forrásolt sajtócikk'%len(data),after)
         output[path]=after
     return output
 
@@ -214,7 +217,8 @@ def semantically_current(path,content,rows):
     if source_urls(path,content)!=[x["url"] for x in expected]:
         return False
     if path=="index.html":
-        return "Teljes sajtóarchívum – "+str(len(rows))+" cikk" in content
+        return ("Teljes sajtóarchívum – "+str(len(rows))+" cikk" in content and
+                "<strong>"+str(len(rows))+"</strong><span>forrásolt sajtócikk" in content)
     block=content.split(START,1)[1].split(END,1)[0]
     years=list(dict.fromkeys(x["year"] for x in rows))
     found=re.findall(r'<h2\s+id="archive-year-(\d{4})"',block)

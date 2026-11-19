@@ -8,13 +8,53 @@
   ],
   "sourceDates": {
     "member-organizations.json": "2026-09-03",
-    "member-press-evidence.json": "2026-10-18",
-    "data/member-news-editorial.json": "2026-10-18"
+    "member-press-evidence.json": "2026-11-19",
+    "data/member-news-editorial.json": "2026-11-19"
   },
-  "totalArticles": 81,
-  "totalMemberAssociations": 93,
+  "totalArticles": 83,
+  "totalMemberAssociations": 95,
   "coveredMembers": 29,
   "items": [
+    {
+      "id": "press-17450c84c09855",
+      "url": "https://www.kozpontiszovetseg.at/post/salzung-magyar-nap-mozarteum-koncert-rajzfilmunnep-salzburg-2026",
+      "title": "Népzene, ünnepi koncert és rajzfilmek – három salzburgi magyar közösségi élmény",
+      "publisher": "Központi Szövetség (szervezeti blog)",
+      "date": "2026-11-19",
+      "memberIds": [
+        "salzung"
+      ],
+      "memberNames": [
+        "SalzUng - Salzburgi Magyar Egyesület"
+      ],
+      "summary": "A SalzUNG november 14-i Magyar Napjáról, a november 10-i mozarteumi Pécsi Egyetemi Zenekar-koncertről és a salzburgi Rajzfilmünnepről szóló 2026-os szervezeti beszámoló.",
+      "summaryType": "editorial-summary",
+      "evidenceSources": [
+        "member-press-evidence.json"
+      ],
+      "approval": "curated-source-evidence",
+      "summaryVerifiedAt": "2026-11-19"
+    },
+    {
+      "id": "press-81deddb8eb7a53",
+      "url": "https://www.kozpontiszovetseg.at/post/xxvii-becsi-magyar-tanchaztalalkozo-2026-telthaz",
+      "title": "Több mint ötszázan a XXVII. Bécsi Magyar Táncháztalálkozón",
+      "publisher": "Központi Szövetség (szervezeti blog)",
+      "date": "2026-11-18",
+      "memberIds": [
+        "napraforgok"
+      ],
+      "memberNames": [
+        "Napraforgók Bécsi Magyar Néptánc és Népzene Egyesület"
+      ],
+      "summary": "A Napraforgók 2026. november 7-i, Bécs-Meidlingben rendezett XXVII. Magyar Táncháztalálkozójáról szóló beszámoló több mint ötszáz látogatóról és száznál több fellépőről számol be.",
+      "summaryType": "editorial-summary",
+      "evidenceSources": [
+        "member-press-evidence.json"
+      ],
+      "approval": "curated-source-evidence",
+      "summaryVerifiedAt": "2026-11-19"
+    },
     {
       "id": "press-ab45bf130b3644",
       "url": "https://rolunk.at/kultura/tobb-mint-felezren-roptak-a-tancot/",

@@ -1,8 +1,20 @@
 {
   "schemaVersion": 1,
   "policy": "Editorial one-sentence factual summaries after direct publisher-source inspection; not copied excerpts. Each exact URL and identity association must already be curated in the first-party federation evidence.",
-  "verifiedAt": "2026-10-18",
+  "verifiedAt": "2026-11-19",
   "items": [
+    {
+      "url": "https://www.kozpontiszovetseg.at/post/salzung-magyar-nap-mozarteum-koncert-rajzfilmunnep-salzburg-2026",
+      "summary": "A SalzUNG november 14-i Magyar Napjáról, a november 10-i mozarteumi Pécsi Egyetemi Zenekar-koncertről és a salzburgi Rajzfilmünnepről szóló 2026-os szervezeti beszámoló.",
+      "sourceVerifiedAt": "2026-11-19",
+      "date": "2026-11-19"
+    },
+    {
+      "url": "https://www.kozpontiszovetseg.at/post/xxvii-becsi-magyar-tanchaztalalkozo-2026-telthaz",
+      "summary": "A Napraforgók 2026. november 7-i, Bécs-Meidlingben rendezett XXVII. Magyar Táncháztalálkozójáról szóló beszámoló több mint ötszáz látogatóról és száznál több fellépőről számol be.",
+      "sourceVerifiedAt": "2026-11-19",
+      "date": "2026-11-18"
+    },
     {
       "url": "https://rolunk.at/kultura/tobb-mint-felezren-roptak-a-tancot/",
       "summary": "A Napraforgók szervezésében november 7-én megtartott 27. Bécsi Magyar Táncháztalálkozón több mint ötszáz résztvevő volt; a programban tánctanítás, gyermekfoglalkozás és gálaműsor is szerepelt.",
