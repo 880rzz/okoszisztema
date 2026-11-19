@@ -65,6 +65,11 @@ def main():
   assert p["status"]=="date-unverified" and p.get("title")
   assert urlsplit(p.get("sourceUrl","")).scheme=="https"
   assert not p.get("startDate") and not p.get("endDate"),"No invented dates for unverified program"
+ migration=registry.get("verifiedEventMigration")
+ if migration:
+  assert migration["fromRepository"]=="880rzz/DORAPP"
+  assert migration["count"]==len(registry["verifiedEvents"])
+  assert migration["sourceSnapshotSha"]
  for e in registry["verifiedEvents"]:
   assert e.get("verificationStatus")=="verified" and e.get("organizerId") in set(mapping.values())
   assert e.get("name") and e.get("id") and e.get("sourceUrl") and e.get("verifiedAt")
