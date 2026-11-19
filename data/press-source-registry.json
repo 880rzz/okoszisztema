@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "lastReviewed": "2026-10-18",
+  "lastReviewed": "2026-11-19",
   "purpose": "Media domain discovery and approved evidence validation. Being on this list does not prove that a news candidate matches any member; content and identity checks remain mandatory.",
   "publishers": [
     {
@@ -127,6 +127,14 @@
       "host": "naturpark.hu",
       "name": "Naturpark",
       "role": "Historical third-party source in existing curated registry",
+      "discovery": false,
+      "memberEvidence": true,
+      "metadata": false
+    },
+    {
+      "host": "www.kozpontiszovetseg.at",
+      "name": "Központi Szövetség (szervezeti blog)",
+      "role": "Federation-operated first-party community reporting; NOT independent newsroom coverage",
       "discovery": false,
       "memberEvidence": true,
       "metadata": false
